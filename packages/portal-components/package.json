@@ -2,6 +2,7 @@
   "name": "portal-components",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://deskpro.github.io/portal-components",
   "dependencies": {
     "formik": "^0.11.11"
   },
