@@ -4,9 +4,10 @@ node_js:
 script:
 - npm run test
 deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GH_TOKEN
-  localdir: storybook-static
-  on:
-    branch: master
+  - provider: pages
+    skip_cleanup: true
+    github_token: $GH_TOKEN
+    keep-history: true
+    localdir: .site
+    on:
+      branch: master
