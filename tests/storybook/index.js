@@ -2,7 +2,8 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 import Yup from 'yup';
-import { withFormik, Form, Field } from 'formik';
+import { withFormik, Field } from 'formik';
+import { Form, Email, Password } from '../../src/Components';
 
 const App = ({
   values,
@@ -11,14 +12,8 @@ const App = ({
   isSubmitting
 }) => (
   <Form>
-    <div>
-      { touched.email && errors.email && <p>{errors.email}</p> }
-      <Field type="email" name="email" placeholder="Email"/>
-    </div>
-    <div>
-      { touched.password && errors.password && <p>{errors.password}</p> }
-      <Field type="password" name="password" placeholder="Password"/>
-    </div>
+    <Email name="email" placeholder="Email" touched={touched} errors={errors}/>
+    <Password name="password" placeholder="Password" touched={touched} errors={errors}/>
     <label>
       <Field type="checkbox" name="newsletter" checked={values.newsletter} />
       Join our newsletter
