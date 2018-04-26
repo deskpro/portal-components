@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>>> Url --- Snapshot +++capturing Snapshot of Url 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <div
+    className="dp-pc_field"
+  >
+    <input
+      errors={Object {}}
+      name="url"
+      onBlur={[Function]}
+      onChange={[Function]}
+      touched={Object {}}
+      type="url"
+      value="www.deskpro.com"
+    />
+  </div>
+</form>
+`;
