@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>>> Number --- Snapshot +++capturing Snapshot of Number 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <div
+    className="dp-pc_field"
+  >
+    <span
+      className="dp-pc_error_message"
+    />
+    <input
+      errors={Object {}}
+      name="number"
+      onBlur={[Function]}
+      onChange={[Function]}
+      touched={Object {}}
+      type="number"
+      value={6}
+    />
+  </div>
+</form>
+`;
