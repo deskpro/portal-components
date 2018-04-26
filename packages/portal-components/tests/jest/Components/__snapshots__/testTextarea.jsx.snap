@@ -1,23 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`>>> Email --- Snapshot +++capturing Snapshot of Email 1`] = `
+exports[`>>> Textarea --- Snapshot +++capturing Snapshot of Textarea 1`] = `
 <form
   onSubmit={[Function]}
 >
   <div
     className="dp-pc_field"
   >
-    <span
-      className="dp-pc_error_message"
-    />
-    <input
+    <textarea
       errors={Object {}}
-      name="email"
+      name="textarea"
       onBlur={[Function]}
       onChange={[Function]}
       touched={Object {}}
-      type="email"
-      value="test@deskpro.com"
+      value="Test textarea"
     />
   </div>
 </form>
