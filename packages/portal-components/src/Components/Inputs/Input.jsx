@@ -1,39 +1,50 @@
-import React from "react";
+import React from 'react';
+import classNames from 'classnames';
 import { Field } from 'formik';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
+import ErrorMessage from '../ErrorMessage';
 
-class Input extends React.Component
-{
+class Input extends React.Component {
   static propTypes = {
-    error:    PropTypes.object,
+    errors:   PropTypes.object,
+    name:     PropTypes.string.isRequired,
+    touched:  PropTypes.object,
     children: PropTypes.node
   };
 
-  getError = () => {
-    const { touched, errors, name } = this.props;
-    if (touched[name] && errors[name]) {
-      return errors[name];
-    }
-    return null;
+  static defaultProps = {
+    errors:   {},
+    touched:  {},
+    children: null,
+  };
+
+  renderField = () => {
+    const {
+      name,
+      children,
+      ...props
+    } = this.props;
+    return (
+      <Field name={name} type={this.type} {...props}>
+        {children}
+      </Field>
+    );
   };
 
   render() {
     const {
-      children,
       errors,
       touched,
-      ...props
+      name,
     } = this.props;
     return (
-      <div>
-        <span className="dp-pc_error">
-          {this.getError()}
+      <div className={classNames('dp-pc_field', { 'dp-pc_error': touched[name] && errors[name] })}>
+        <span className="dp-pc_error_message">
+          <ErrorMessage name={name} />
         </span>
-        <Field type={this.type} {...props}>
-          {children}
-        </Field>
+        {this.renderField()}
       </div>
-    )
+    );
   }
 }
 
