@@ -39,9 +39,7 @@ class Input extends React.Component {
     } = this.props;
     return (
       <div className={classNames('dp-pc_field', { 'dp-pc_error': touched[name] && errors[name] })}>
-        <span className="dp-pc_error_message">
-          <ErrorMessage name={name} />
-        </span>
+        <ErrorMessage name={name} />
         {this.renderField()}
       </div>
     );
