@@ -48,10 +48,10 @@ const FormikApp = withFormik({
     email, password, newsletter, plan
   }) {
     return {
-      email:      email || '',
+      email:      email || 'julien@ducro.fr',
       password:   password || '',
       newsletter: newsletter || false,
-      plan:       plan || 'free'
+      plan:       plan || 'premium',
     };
   },
   validationSchema: Yup.object().shape({

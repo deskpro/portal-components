@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>>> Text --- Snapshot +++capturing Snapshot of Text 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <div
+    className="dp-pc_field"
+  >
+    <span
+      className="dp-pc_error_message"
+    />
+    <input
+      errors={Object {}}
+      name="text"
+      onBlur={[Function]}
+      onChange={[Function]}
+      touched={Object {}}
+      type="text"
+      value="Test text"
+    />
+  </div>
+</form>
+`;
