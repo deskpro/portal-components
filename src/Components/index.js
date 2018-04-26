@@ -2,6 +2,7 @@ import Email from './Inputs/Email';
 import Number from './Inputs/Number';
 import Password from './Inputs/Password';
 import Search from './Inputs/Search';
+import Select from './Inputs/Select';
 import Tel from './Inputs/Tel';
 import Text from './Inputs/Text';
 import Textarea from './Inputs/Textarea';
@@ -15,6 +16,7 @@ export {
   Number,
   Password,
   Search,
+  Select,
   Tel,
   Text,
   Textarea,
@@ -23,5 +25,5 @@ export {
   Col,
   Form,
   Row
-}
+};
 
