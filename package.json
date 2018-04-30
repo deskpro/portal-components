@@ -62,6 +62,7 @@
     "html-webpack-plugin": "2.29.0",
     "husky": "^0.14.3",
     "jest": "20.0.4",
+    "jest-webpack-resolver": "^0.3.0",
     "lint-staged": "^7.0.5",
     "object-assign": "4.1.1",
     "postcss": "^6.0.21",
@@ -109,6 +110,7 @@
       "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
     ],
     "moduleNameMapper": {
+      "Components(.*)$": "<rootDir>/src/Components/$1",
       "^react-native$": "react-native-web"
     },
     "moduleFileExtensions": [

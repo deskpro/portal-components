@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`>>> Number --- Snapshot +++capturing Snapshot of Number 1`] = `
+exports[`>>> Search --- Snapshot +++capturing Snapshot of Search 1`] = `
 <form
   onSubmit={[Function]}
 >
@@ -8,13 +8,11 @@ exports[`>>> Number --- Snapshot +++capturing Snapshot of Number 1`] = `
     className="dp-pc_field"
   >
     <input
-      errors={Object {}}
-      name="number"
+      name="search"
       onBlur={[Function]}
       onChange={[Function]}
-      touched={Object {}}
-      type="number"
-      value={6}
+      type="search"
+      value="Test search"
     />
   </div>
 </form>

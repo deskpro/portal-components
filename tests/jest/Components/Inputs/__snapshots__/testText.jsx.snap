@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`>>> Password --- Snapshot +++capturing Snapshot of Password 1`] = `
+exports[`>>> Text --- Snapshot +++capturing Snapshot of Text 1`] = `
 <form
   onSubmit={[Function]}
 >
@@ -8,13 +8,11 @@ exports[`>>> Password --- Snapshot +++capturing Snapshot of Password 1`] = `
     className="dp-pc_field"
   >
     <input
-      errors={Object {}}
-      name="password"
+      name="text"
       onBlur={[Function]}
       onChange={[Function]}
-      touched={Object {}}
-      type="password"
-      value="password1234"
+      type="text"
+      value="Test text"
     />
   </div>
 </form>
