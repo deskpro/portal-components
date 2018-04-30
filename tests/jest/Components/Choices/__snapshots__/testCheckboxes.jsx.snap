@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <div
+    className="dp-pc_field"
+  >
+    <div>
+      <div>
+        <label
+          htmlFor="id1-first"
+        >
+          <input
+            checked={true}
+            id="id1-first"
+            name="checkboxes"
+            onChange={[Function]}
+            type="checkbox"
+            value="first"
+          />
+           
+          First
+        </label>
+      </div>
+      <div>
+        <label
+          htmlFor="id1-second"
+        >
+          <input
+            checked={false}
+            id="id1-second"
+            name="checkboxes"
+            onChange={[Function]}
+            type="checkbox"
+            value="second"
+          />
+           
+          Second
+        </label>
+      </div>
+      <div>
+        <label
+          htmlFor="id1-last"
+        >
+          <input
+            checked={false}
+            id="id1-last"
+            name="checkboxes"
+            onChange={[Function]}
+            type="checkbox"
+            value="last"
+          />
+           
+          Last
+        </label>
+      </div>
+    </div>
+  </div>
+</form>
+`;
