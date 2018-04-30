@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`>>> Text --- Snapshot +++capturing Snapshot of Text 1`] = `
+exports[`>>> Url --- Snapshot +++capturing Snapshot of Url 1`] = `
 <form
   onSubmit={[Function]}
 >
@@ -8,13 +8,11 @@ exports[`>>> Text --- Snapshot +++capturing Snapshot of Text 1`] = `
     className="dp-pc_field"
   >
     <input
-      errors={Object {}}
-      name="text"
+      name="url"
       onBlur={[Function]}
       onChange={[Function]}
-      touched={Object {}}
-      type="text"
-      value="Test text"
+      type="url"
+      value="www.deskpro.com"
     />
   </div>
 </form>

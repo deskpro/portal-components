@@ -1,4 +1,5 @@
 import Checkboxes from './Choices/Checkboxes';
+import Radio from './Choices/Radio';
 import Select from './Choices/Select';
 
 import Checkbox from './Inputs/Checkbox';
@@ -16,6 +17,7 @@ import Row from './Row';
 
 export {
   Checkboxes,
+  Radio,
   Select,
 
   Checkbox,
