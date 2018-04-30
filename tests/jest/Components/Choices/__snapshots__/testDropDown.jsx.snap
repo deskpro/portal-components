@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`>>> Select --- Snapshot +++capturing Snapshot of Select 1`] = `
+exports[`>>> DropDown --- Snapshot +++capturing Snapshot of DropDown 1`] = `
 <form
   onSubmit={[Function]}
 >
@@ -13,7 +13,7 @@ exports[`>>> Select --- Snapshot +++capturing Snapshot of Select 1`] = `
     >
       <input
         disabled={false}
-        name="select"
+        name="dropDown"
         type="hidden"
         value="first"
       />

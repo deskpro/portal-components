@@ -1,10 +1,10 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { withFormik } from 'formik';
-import { Form, Select } from 'Components';
+import { Form, DropDown } from 'Components';
 
-describe('>>> Select --- Snapshot', () => {
-  it('+++capturing Snapshot of Select', () => {
+describe('>>> DropDown --- Snapshot', () => {
+  it('+++capturing Snapshot of DropDown', () => {
     const options = [
       { value: 'first', label: 'First' },
       { value: 'second', label: 'Second' },
@@ -12,15 +12,15 @@ describe('>>> Select --- Snapshot', () => {
     ];
     const App = () => (
       <Form>
-        <Select name="select" options={options} />
+        <DropDown name="dropDown" options={options} />
       </Form>
     );
     const FormikApp = withFormik({
       mapPropsToValues({
-        select
+        dropDown
       }) {
         return {
-          select: select || 'first'
+          dropDown: dropDown || 'first'
         };
       },
       handleSubmit(values, { setSubmitting }) {
