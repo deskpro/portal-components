@@ -1,8 +1,11 @@
+import Checkboxes from './Choices/Checkboxes';
+import Select from './Choices/Select';
+
+import Checkbox from './Inputs/Checkbox';
 import Email from './Inputs/Email';
 import Number from './Inputs/Number';
 import Password from './Inputs/Password';
 import Search from './Inputs/Search';
-import Select from './Inputs/Select';
 import Tel from './Inputs/Tel';
 import Text from './Inputs/Text';
 import Textarea from './Inputs/Textarea';
@@ -12,11 +15,14 @@ import Form from './Form';
 import Row from './Row';
 
 export {
+  Checkboxes,
+  Select,
+
+  Checkbox,
   Email,
   Number,
   Password,
   Search,
-  Select,
   Tel,
   Text,
   Textarea,

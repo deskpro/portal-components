@@ -1,6 +1,6 @@
-import Input from './Input';
+import Field from '../Field';
 
-class Email extends Input {
+class Email extends Field {
   constructor(props) {
     super(props);
     this.type = 'email';

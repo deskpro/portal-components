@@ -1,8 +1,8 @@
 import React from 'react';
-import { Field } from 'formik';
-import Input from './Input';
+import { Field as FormikField } from 'formik';
+import Field from '../Field';
 
-class Textarea extends Input {
+class Textarea extends Field {
   constructor(props) {
     super(props);
     this.type = 'textarea';
@@ -15,9 +15,9 @@ class Textarea extends Input {
       ...props
     } = this.props;
     return (
-      <Field name={name} component="textarea" {...props}>
+      <FormikField name={name} component="textarea" {...props}>
         {children}
-      </Field>
+      </FormikField>
     );
   };
 }
