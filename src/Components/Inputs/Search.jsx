@@ -1,6 +1,6 @@
-import Input from './Input';
+import Field from '../Field';
 
-class Search extends Input {
+class Search extends Field {
   constructor(props) {
     super(props);
     this.type = 'search';

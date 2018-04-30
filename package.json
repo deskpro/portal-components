@@ -2,9 +2,10 @@
   "name": "portal-components",
   "version": "0.1.0",
   "description": "Deskpro Portal Components",
-  "private": true,
+  "private": false,
   "homepage": "https://deskpro.github.io/portal-components",
   "dependencies": {
+    "@deskpro/js-utils": "^1.0.3",
     "classnames": "^2.2.5",
     "formik": "^0.11.11",
     "react-select": "^1.2.1",
