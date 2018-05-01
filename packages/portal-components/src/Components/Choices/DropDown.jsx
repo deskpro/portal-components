@@ -5,7 +5,7 @@ import ReactSelect from 'react-select';
 
 import Field from '../Field';
 
-class Select extends Field {
+class DropDown extends Field {
   handleBlur = () => {
     // this is going to call setFieldTouched and manually update touched.topcis
     this.props.onBlur('topics', true);
@@ -18,7 +18,7 @@ class Select extends Field {
         value={getIn(form.values, name)}
         name={name}
         onChange={value => form.setFieldValue(name, value)}
-        onBlur={value => form.setFieldTouched(name, value)}
+        onBlur={() => form.setFieldTouched(name, true)}
         options={options}
         {...props}
       />
@@ -26,11 +26,11 @@ class Select extends Field {
   }
 }
 
-Select.propTypes = Object.assign(Field.propTypes, {
+DropDown.propTypes = Object.assign(Field.propTypes, {
   options: PropTypes.arrayOf(PropTypes.shape({
     label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
     value: PropTypes.any.isRequired
   }))
 });
 
-export default Select;
+export default DropDown;

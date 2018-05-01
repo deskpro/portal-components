@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>>> DatePicker --- Snapshot +++capturing Snapshot of DatePicker 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <div
+    className="dp-pc_field"
+  >
+    <div>
+      <div
+        className="react-datepicker-wrapper"
+      >
+        <div
+          className="react-datepicker__input-container"
+        >
+          <input
+            autoComplete={undefined}
+            autoFocus={undefined}
+            className=""
+            disabled={false}
+            id={undefined}
+            name="date"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            placeholder={undefined}
+            readOnly={undefined}
+            required={undefined}
+            tabIndex={undefined}
+            title={undefined}
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+`;
