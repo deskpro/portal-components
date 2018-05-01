@@ -1,8 +1,9 @@
 import Checkboxes from './Choices/Checkboxes';
+import DropDown from './Choices/DropDown';
 import Radio from './Choices/Radio';
-import Select from './Choices/Select';
 
 import Checkbox from './Inputs/Checkbox';
+import DatePicker from './Inputs/DatePicker';
 import Email from './Inputs/Email';
 import Number from './Inputs/Number';
 import Password from './Inputs/Password';
@@ -17,10 +18,11 @@ import Row from './Row';
 
 export {
   Checkboxes,
+  DropDown,
   Radio,
-  Select,
 
   Checkbox,
+  DatePicker,
   Email,
   Number,
   Password,
