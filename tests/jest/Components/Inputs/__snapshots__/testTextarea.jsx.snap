@@ -7,7 +7,14 @@ exports[`>>> Textarea --- Snapshot +++capturing Snapshot of Textarea 1`] = `
   <div
     className="dp-pc_field"
   >
+    <label
+      htmlFor="field_1"
+    >
+      
+    </label>
     <textarea
+      id={null}
+      label=""
       name="textarea"
       onBlur={[Function]}
       onChange={[Function]}

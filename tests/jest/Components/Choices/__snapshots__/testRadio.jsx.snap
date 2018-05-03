@@ -7,14 +7,21 @@ exports[`>>> Radio --- Snapshot +++capturing Snapshot of Radio 1`] = `
   <div
     className="dp-pc_field"
   >
-    <div>
+    <label
+      htmlFor="field_1"
+    >
+      
+    </label>
+    <div
+      label=""
+    >
       <div>
         <label
-          htmlFor="id1-first"
+          htmlFor="null-first"
         >
           <input
             checked={true}
-            id="id1-first"
+            id="null-first"
             name="radio"
             onBlur={[Function]}
             onChange={[Function]}
@@ -27,11 +34,11 @@ exports[`>>> Radio --- Snapshot +++capturing Snapshot of Radio 1`] = `
       </div>
       <div>
         <label
-          htmlFor="id1-second"
+          htmlFor="null-second"
         >
           <input
             checked={false}
-            id="id1-second"
+            id="null-second"
             name="radio"
             onBlur={[Function]}
             onChange={[Function]}
@@ -44,11 +51,11 @@ exports[`>>> Radio --- Snapshot +++capturing Snapshot of Radio 1`] = `
       </div>
       <div>
         <label
-          htmlFor="id1-last"
+          htmlFor="null-last"
         >
           <input
             checked={false}
-            id="id1-last"
+            id="null-last"
             name="radio"
             onBlur={[Function]}
             onChange={[Function]}

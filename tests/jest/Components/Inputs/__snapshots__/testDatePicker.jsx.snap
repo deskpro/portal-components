@@ -7,6 +7,9 @@ exports[`>>> DatePicker --- Snapshot +++capturing Snapshot of DatePicker 1`] = `
   <div
     className="dp-pc_field"
   >
+    <label
+      htmlFor="field_1"
+    />
     <div>
       <div
         className="react-datepicker-wrapper"

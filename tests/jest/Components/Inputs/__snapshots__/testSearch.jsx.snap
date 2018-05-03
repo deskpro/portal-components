@@ -7,7 +7,14 @@ exports[`>>> Search --- Snapshot +++capturing Snapshot of Search 1`] = `
   <div
     className="dp-pc_field"
   >
+    <label
+      htmlFor="field_1"
+    >
+      
+    </label>
     <input
+      id="field_1"
+      label=""
       name="search"
       onBlur={[Function]}
       onChange={[Function]}
