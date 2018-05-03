@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import newid from '@deskpro/js-utils/dist/newid';
 import { FieldArray, getIn } from 'formik';
 import Field from '../Field';
 
@@ -14,10 +13,6 @@ class Checkboxes extends Field {
     const {
       name, id, label, options, ...props
     } = this.props;
-    let htmlId = id;
-    if (typeof htmlId  === 'undefined') {
-      htmlId = newid();
-    }
     return (
       <FieldArray
         name={name}
@@ -25,9 +20,9 @@ class Checkboxes extends Field {
           <div {...props}>
             {options.map(option => (
               <div key={option.value}>
-                <label htmlFor={`${htmlId}-${option.value}`}>
+                <label htmlFor={`${this.id}-${option.value}`}>
                   <input
-                    id={`${htmlId}-${option.value}`}
+                    id={`${this.id}-${option.value}`}
                     name={name}
                     type="checkbox"
                     value={option.value}

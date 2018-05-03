@@ -1,4 +1,5 @@
 var values = require('postcss-modules-values');
+const paths = require('../config/paths');
 
 module.exports = {
   module: {

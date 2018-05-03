@@ -1,28 +1,48 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Field as FormikField, getIn } from 'formik';
-import PropTypes from 'prop-types';
+import newid from '@deskpro/js-utils/dist/newid';
 import ErrorMessage from './ErrorMessage';
 
 class Field extends React.Component {
   static propTypes = {
     name:     PropTypes.string.isRequired,
+    label:    PropTypes.string,
+    id:       PropTypes.string,
     children: PropTypes.node
   };
 
   static defaultProps = {
+    label:    '',
+    id:       null,
     children: null,
   };
+
+  constructor(props) {
+    super(props);
+
+    this.id = props.id;
+    if (!this.id) {
+      this.id = newid('field_');
+    }
+  }
 
   renderField = () => {
     const {
       name,
       children,
+      id,
       ...props
     } = this.props;
 
     return (
-      <FormikField name={name} type={this.type} {...props}>
+      <FormikField
+        id={this.id}
+        name={name}
+        type={this.type}
+        {...props}
+      >
         {children}
       </FormikField>
     );
@@ -31,6 +51,7 @@ class Field extends React.Component {
   render() {
     const {
       name,
+      label
     } = this.props;
     return (
       <FormikField
@@ -40,7 +61,12 @@ class Field extends React.Component {
           const touch = getIn(form.touched, name);
           return (
             <div className={classNames('dp-pc_field', { 'dp-pc_error': touch && error })}>
-              <ErrorMessage name={name} />
+              <label
+                htmlFor={this.id}
+              >
+                {label}
+              </label>
+              <ErrorMessage name={name} form={form} />
               {this.renderField(form)}
             </div>
           );
