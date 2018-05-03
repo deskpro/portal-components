@@ -7,14 +7,19 @@ exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes 1`] = `
   <div
     className="dp-pc_field"
   >
+    <label
+      htmlFor="field_1"
+    >
+      
+    </label>
     <div>
       <div>
         <label
-          htmlFor="id1-first"
+          htmlFor="field_1-first"
         >
           <input
             checked={false}
-            id="id1-first"
+            id="field_1-first"
             name="checkboxes"
             onChange={[Function]}
             type="checkbox"
@@ -26,11 +31,11 @@ exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes 1`] = `
       </div>
       <div>
         <label
-          htmlFor="id1-second"
+          htmlFor="field_1-second"
         >
           <input
             checked={false}
-            id="id1-second"
+            id="field_1-second"
             name="checkboxes"
             onChange={[Function]}
             type="checkbox"
@@ -42,11 +47,11 @@ exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes 1`] = `
       </div>
       <div>
         <label
-          htmlFor="id1-last"
+          htmlFor="field_1-last"
         >
           <input
             checked={false}
-            id="id1-last"
+            id="field_1-last"
             name="checkboxes"
             onChange={[Function]}
             type="checkbox"
@@ -68,6 +73,11 @@ exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes with ex
   <div
     className="dp-pc_field"
   >
+    <label
+      htmlFor="checkbox"
+    >
+      
+    </label>
     <div>
       <div>
         <label

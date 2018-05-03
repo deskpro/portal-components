@@ -7,6 +7,11 @@ exports[`>>> DropDown --- Snapshot +++capturing Snapshot of DropDown 1`] = `
   <div
     className="dp-pc_field"
   >
+    <label
+      htmlFor="field_1"
+    >
+      
+    </label>
     <div
       className="Select has-value is-clearable is-searchable Select--single"
       style={undefined}
