@@ -15,6 +15,7 @@ import Url from './Inputs/Url';
 import Col from './Col';
 import Form from './Form';
 import Row from './Row';
+import TicketForm from './TicketForm';
 
 export {
   Checkboxes,
@@ -34,6 +35,7 @@ export {
 
   Col,
   Form,
-  Row
+  Row,
+  TicketForm
 };
 
