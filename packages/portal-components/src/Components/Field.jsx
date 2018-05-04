@@ -59,11 +59,10 @@ class Field extends React.Component {
         render={({ form }) => {
           const error = getIn(form.errors, name);
           const touch = getIn(form.touched, name);
+          const htmlFor = this.id;
           return (
             <div className={classNames('dp-pc_field', { 'dp-pc_error': touch && error })}>
-              <label
-                htmlFor={this.id}
-              >
+              <label htmlFor={htmlFor}>
                 {label}
               </label>
               <ErrorMessage name={name} form={form} />

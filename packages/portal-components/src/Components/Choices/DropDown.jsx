@@ -26,11 +26,12 @@ class DropDown extends Field {
   }
 }
 
-DropDown.propTypes = Object.assign(Field.propTypes, {
+DropDown.propTypes = {
+  ...Field.propTypes,
   options: PropTypes.arrayOf(PropTypes.shape({
     label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
     value: PropTypes.any.isRequired
   }))
-});
+};
 
 export default DropDown;
