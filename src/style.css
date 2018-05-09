@@ -1,9 +1,11 @@
 :root {
-    --indicator-color: #3d88f3;
+    --primary-color: #3d88f3;
     --error-color: #f5697d;
     --text-color: #7d95aa;
     --divider-color: #dee4eb;
     --valid-label: #4eba5c;
+    --box-shadow-30: rgba(39, 41, 86, 0.3);
+    --option-background: #eff0f2;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Rubik');
@@ -21,13 +23,13 @@
         width: 135px;
         height: 48px;
         border-radius: 4px;
-        background-color: var(--indicator-color);
+        background-color: var(--primary-color);
         font-size: 18px;
         color: white;
         border: 0;
         &:hover, &:focus {
-            background-color: color(var(--indicator-color) alpha(-20%));
-            box-shadow: 4px 4px 6px rgba(39, 41, 86, 0.3);
+            background-color: color(var(--primary-color) alpha(-20%));
+            box-shadow: 4px 4px 6px var(--box-shadow-30);
             outline: none;
         }
         &:active {
@@ -57,14 +59,15 @@
         pointer-events: none;
         left: 10px;
         top: 25px;
-        -moz-transition:0.2s ease all;
-        -webkit-transition:0.2s ease all;
+        transition:0.2s ease all;
     }
     & input:focus ~ label,
-    &:not(.dp-pc_empty) label {
+    &:not(.dp-pc_empty) label,
+    & .Select.is-focused ~ label,
+    & .Select.is-open ~ label {
         top: 11px;
         font-size:10px;
-        color: var(--indicator-color);
+        color: var(--primary-color);
     }
 
     &:not(.dp-pc_empty):not(.dp-pc_error) input:not(:focus) ~ label {
@@ -77,16 +80,15 @@
         height: 48px;
         top: 11px;
     }
-    & .indicator:before, & .indicator:after {
+    & .indicator:before,
+    & .indicator:after {
         content:'';
         height:0;
         width:3px;
         left:1px;
         position:absolute;
-        background: var(--indicator-color);
+        background: var(--primary-color);
         transition:0.2s ease all;
-        -moz-transition:0.2s ease all;
-        -webkit-transition:0.2s ease all;
     }
     & .indicator:before {
         top:50%;
@@ -96,7 +98,10 @@
     }
 
     /* active state */
-    & input:focus ~ .indicator:before, & input:focus ~ .indicator:after {
+    & input:focus ~ .indicator:before,
+    & input:focus ~ .indicator:after,
+    & .Select.is-focused ~ .indicator:before,
+    & .Select.is-focused ~ .indicator:after {
         height: 50%;
     }
     & input:invalid .indicator:before,
@@ -118,32 +123,11 @@
         opacity:0.5;
     }
 
-    /* active state */
-    & input:focus ~ .divider {
-        -webkit-animation:inputDivider 0.3s ease;
-        -moz-animation:inputDivider 0.3s ease;
-        animation:inputDivider 0.3s ease;
-    }
-
-    /* ANIMATIONS ================ */
-    @-webkit-keyframes inputDivider {
-        from { background:#5264AE; }
-        to 	{ width:0; background:transparent; }
-    }
-    @-moz-keyframes inputDivider {
-        from { background:#5264AE; }
-        to 	{ width:0; background:transparent; }
-    }
-    @keyframes inputDivider {
-        from { background:#5264AE; }
-        to 	{ width:0; background:transparent; }
-    }
-
     /* Error Message */
     & .dp-pc_error_message {
         font-size: 12px;
         position: absolute;
-        bottom: 1px;
+        bottom: 5px;
         left: 11px;
         color: var(--error-color);
     }
@@ -159,5 +143,96 @@
     }
     & :-ms-input-placeholder { /* Internet Explorer 10+ */
         color: transparent;
+    }
+
+    & .Select {
+        & .Select-control {
+            border: none;
+            padding:11px 10px 11px 0;
+            margin-left: 10px;
+            height: 70px;
+            width: calc(100% - 20px);
+            font-size:18px;
+            box-shadow: none;
+
+            & .Select-placeholder {
+                color: transparent;
+            }
+            & .Select-value-label {
+                top: 18px;
+                font-size: 18px;
+                position: absolute;
+            }
+            & .Select-input {
+                padding: 0;
+                & > input {
+                    padding-top: 11px;
+                    line-height: normal;
+                    height: 22px;
+                    font-size: 18px;
+                    margin-top: 2px;
+                }
+            }
+            & .Select-arrow {
+                border: none;
+                &:before,
+                &:after {
+                    position: absolute;
+                    left: 0;
+                    top: -14px;
+                    content: ' ';
+                    height: 14px;
+                    width: 2px;
+                    background-color: var(--primary-color);
+                }
+                &:before {
+                    transform: rotate(-45deg);
+                    transition:0.2s ease all;
+                }
+                &:after {
+                    left: 9px;
+                    transform: rotate(45deg);
+                    transition:0.2s ease all;
+                }
+            }
+        }
+        &.Select--single {
+            & > .Select-control .Select-value {
+                padding-left: 0;
+                & .Select-value-label {
+                    color: var(--text-color);
+                }
+            }
+        }
+        &.is-focused:not(.is-open) {
+            & > .Select-control {
+                box-shadow: none;
+            }
+        }
+        &.is-open {
+            & .Select-arrow {
+                top: 0;
+                &:before {
+                    transform: rotate(45deg);
+                }
+                &:after {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+        & .Select-menu-outer {
+            margin-top: -20px;
+            width: calc(100% - 20px);
+            border: none;
+            box-shadow: 4px 4px 6px var(--box-shadow-30);
+            & .Select-option {
+                font-size: 16px;
+                padding: 10px;
+                &.is-focused {
+                    background-color: var(--option-background);
+                    color: var(--primary-color);
+                }
+            }
+        }
     }
 }
