@@ -14,8 +14,10 @@ class Checkbox extends Field {
     const {
       name, id, label, ...props
     } = this.props;
+    /* eslint-disable jsx-a11y/label-has-for */
+    /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
     return (
-      <label htmlFor={id}>
+      <div className="dp-pc_checkbox">
         <FormikField
           id={id}
           type="checkbox"
@@ -23,10 +25,17 @@ class Checkbox extends Field {
           checked={getIn(form.values, name)}
           {...objectKeyFilter(props, Field.propTypes)}
         />
-        {label}
-      </label>
+        <label htmlFor={this.id} tabIndex="0" className="dp-pc_checkbox__checkbox" />
+        <label htmlFor={id} className="dp-pc_checkbox__label">
+          {label}
+        </label>
+      </div>
     );
-  }
+    /* eslint-enable jsx-a11y/label-has-for */
+    /* eslint-enable jsx-a11y/no-noninteractive-tabindex */
+  };
+
+  renderLabel = () => null;
 }
 
 Checkbox.propTypes = Object.assign(Field.propTypes, {

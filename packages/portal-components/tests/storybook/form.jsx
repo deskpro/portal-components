@@ -40,7 +40,7 @@ const FormikApp = withFormik({
     email, password, newsletter, plan
   }) {
     return {
-      email:      email || 'julien.ducro@deskpro.com',
+      email:      email || '',
       password:   password || '',
       newsletter: newsletter || false,
       plan:       plan || 'premium',

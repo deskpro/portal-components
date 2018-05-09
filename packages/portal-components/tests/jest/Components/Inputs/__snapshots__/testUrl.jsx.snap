@@ -9,6 +9,7 @@ exports[`>>> Url --- Snapshot +++capturing Snapshot of Url 1`] = `
     className="dp-pc_field"
   >
     <input
+      className="dp-pc_input"
       id="field_1"
       label=""
       name="url"
@@ -20,10 +21,8 @@ exports[`>>> Url --- Snapshot +++capturing Snapshot of Url 1`] = `
     <span
       className="indicator"
     />
-    <span
-      className="divider"
-    />
     <label
+      className="dp-pc_label"
       htmlFor="field_1"
     >
       
