@@ -2,16 +2,12 @@
 
 exports[`>>> Search --- Snapshot +++capturing Snapshot of Search 1`] = `
 <form
+  className="dp-pc_form"
   onSubmit={[Function]}
 >
   <div
     className="dp-pc_field"
   >
-    <label
-      htmlFor="field_1"
-    >
-      
-    </label>
     <input
       id="field_1"
       label=""
@@ -21,6 +17,17 @@ exports[`>>> Search --- Snapshot +++capturing Snapshot of Search 1`] = `
       type="search"
       value="Test search"
     />
+    <span
+      className="indicator"
+    />
+    <span
+      className="divider"
+    />
+    <label
+      htmlFor="field_1"
+    >
+      
+    </label>
   </div>
 </form>
 `;

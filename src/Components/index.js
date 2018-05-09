@@ -19,6 +19,7 @@ import Url from './Inputs/Url';
 import Col from './Col';
 import Form from './Form';
 import Row from './Row';
+import Submit from './Submit';
 import TicketForm from './TicketForm';
 
 export {
@@ -43,6 +44,7 @@ export {
   Col,
   Form,
   Row,
+  Submit,
   TicketForm
 };
 
