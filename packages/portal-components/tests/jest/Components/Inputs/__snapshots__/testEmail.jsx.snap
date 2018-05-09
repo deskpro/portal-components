@@ -2,16 +2,12 @@
 
 exports[`>>> Email --- Snapshot +++capturing Snapshot of Email 1`] = `
 <form
+  className="dp-pc_form"
   onSubmit={[Function]}
 >
   <div
     className="dp-pc_field"
   >
-    <label
-      htmlFor="field_1"
-    >
-      
-    </label>
     <input
       id="field_1"
       label=""
@@ -21,6 +17,17 @@ exports[`>>> Email --- Snapshot +++capturing Snapshot of Email 1`] = `
       type="email"
       value="test@deskpro.com"
     />
+    <span
+      className="indicator"
+    />
+    <span
+      className="divider"
+    />
+    <label
+      htmlFor="field_1"
+    >
+      
+    </label>
   </div>
 </form>
 `;

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Formik } from 'formik';
 import Yup from 'yup';
 import Form from './Form';
+import Submit from './Submit';
 import TicketField from './TicketField';
 
 class TicketForm extends React.Component {
@@ -54,7 +55,7 @@ class TicketForm extends React.Component {
         render={() => (
           <Form>
             {this.renderFields()}
-            <button>Submit</button>
+            <Submit>Submit</Submit>
           </Form>
         )}
       />

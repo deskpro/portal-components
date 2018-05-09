@@ -1,5 +1,7 @@
-var values = require('postcss-modules-values');
+const cssnext = require('postcss-cssnext');
 const paths = require('../config/paths');
+
+console.log(paths);
 
 module.exports = {
   module: {
@@ -9,16 +11,16 @@ module.exports = {
         use: [
           'style-loader',
           { loader: 'css-loader', options: { /*modules: true, importLoaders: 1 */ } },
-          // {
-          //   loader: 'postcss-loader',
-          //   options: {
-          //     ident: 'postcss',
-          //     plugins: () => [
-          //       values()
-          //     ],
-          //     sourceMap: true,
-          //   },
-          // },
+          {
+            loader: 'postcss-loader',
+            options: {
+              ident: 'postcss',
+              plugins: () => [
+                cssnext(),
+              ],
+              sourceMap: true,
+            },
+          },
         ]
       },
       {

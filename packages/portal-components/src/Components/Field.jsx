@@ -53,25 +53,30 @@ class Field extends React.Component {
       name,
       label
     } = this.props;
+    /* eslint-disable jsx-a11y/label-has-for */
     return (
       <FormikField
         name={name}
         render={({ form }) => {
           const error = getIn(form.errors, name);
           const touch = getIn(form.touched, name);
+          const value = getIn(form.values, name);
           const htmlFor = this.id;
           return (
-            <div className={classNames('dp-pc_field', { 'dp-pc_error': touch && error })}>
+            <div className={classNames('dp-pc_field', { 'dp-pc_error': touch && error, 'dp-pc_empty': !value })}>
+              {this.renderField(form)}
+              <span className="indicator" />
+              <span className="divider" />
+              <ErrorMessage name={name} form={form} />
               <label htmlFor={htmlFor}>
                 {label}
               </label>
-              <ErrorMessage name={name} form={form} />
-              {this.renderField(form)}
             </div>
           );
         }}
       />
     );
+    /* eslint-enable jsx-a11y/label-has-for */
   }
 }
 

@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import Yup from 'yup';
 import { withFormik } from 'formik';
 import 'react-select/dist/react-select.css';
-import { Form, Email, Password, DropDown, Checkbox } from '../../src/Components';
+import { Form, Email, Password, DropDown, Checkbox, Submit } from '../../src/Components';
 
 const options = [
   { value: 'free', label: 'Free' },
@@ -15,15 +15,15 @@ const App = ({
   isSubmitting
 }) => (
   <Form>
-    <Email name="email" placeholder="Email" />
-    <Password name="password" placeholder="Password" />
+    <Email name="email" placeholder="Email" label="Email" />
+    <Password name="password" placeholder="Password" label="Password" />
     <Checkbox
       id="checkbox"
       name="newsletter"
       label="Join our newsletter"
     />
     <DropDown name="plan" options={options} />
-    <button disabled={isSubmitting}>Submit</button>
+    <Submit disabled={isSubmitting}>Submit</Submit>
   </Form>
 );
 
