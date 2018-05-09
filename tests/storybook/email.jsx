@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { Formik } from 'formik';
 import 'react-datepicker/dist/react-datepicker.css';
-import { Form, Text } from '../../src/Components';
+import { Form, Text, Submit } from '../../src/Components';
 
 
 storiesOf('Input', module)
@@ -12,15 +12,13 @@ storiesOf('Input', module)
       initialValues={{ email: '' }}
       onSubmit={action('submit')}
       render={() => (
-        <Form
-          style={{ width: '50%', border: 'solid 1px green' }}
-        >
+        <Form>
           <Text
             name="email"
             label="Email"
             required
           />
-          <button>Submit</button>
+          <Submit>Submit</Submit>
         </Form>
       )}
     />

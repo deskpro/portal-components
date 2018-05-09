@@ -2,6 +2,7 @@
     --primary-color: #3d88f3;
     --error-color: #f5697d;
     --text-color: #7d95aa;
+    --selected-text: #5f768a;
     --divider-color: #dee4eb;
     --valid-label: #4eba5c;
     --box-shadow-30: rgba(39, 41, 86, 0.3);
@@ -27,6 +28,7 @@
         font-size: 18px;
         color: white;
         border: 0;
+        transition:0.2s ease all;
         &:hover, &:focus {
             background-color: color(var(--primary-color) alpha(-20%));
             box-shadow: 4px 4px 6px var(--box-shadow-30);
@@ -101,7 +103,9 @@
     & input:focus ~ .indicator:before,
     & input:focus ~ .indicator:after,
     & .Select.is-focused ~ .indicator:before,
-    & .Select.is-focused ~ .indicator:after {
+    & .Select.is-focused ~ .indicator:after,
+    & .dp-pc_checkbox.focused ~ .indicator:before,
+    & .dp-pc_checkbox.focused ~ .indicator:after {
         height: 50%;
     }
     & input:invalid .indicator:before,
@@ -162,6 +166,7 @@
                 top: 18px;
                 font-size: 18px;
                 position: absolute;
+                color: var(--selected-text);
             }
             & .Select-input {
                 padding: 0;
@@ -232,6 +237,9 @@
                     background-color: var(--option-background);
                     color: var(--primary-color);
                 }
+                &.is-selected {
+                    background-color: color(var(--primary-color) alpha(10%));
+                }
             }
         }
     }
@@ -268,11 +276,16 @@
                 transform: rotate(-45deg);
                 box-sizing: border-box;
             }
+            &:focus {
+                outline: none;
+                border-color: var(--selected-text);
+            }
         }
         & label.dp-pc_checkbox__label {
             margin-left: 5px;
             padding: 10px 10px 11px 0;
             display: inline-block;
+            color: var(--selected-text);
         }
         & input[type=checkbox] {
             visibility: hidden;
