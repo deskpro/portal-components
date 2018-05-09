@@ -8,6 +8,7 @@ import { Form, Email, Password, DropDown, Checkbox, Submit } from '../../src/Com
 
 const options = [
   { value: 'free', label: 'Free' },
+  { value: 'medium', label: 'Medium' },
   { value: 'premium', label: 'Premium' },
 ];
 
