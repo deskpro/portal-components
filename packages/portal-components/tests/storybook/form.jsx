@@ -22,7 +22,7 @@ const App = ({
       name="newsletter"
       label="Join our newsletter"
     />
-    <DropDown name="plan" options={options} />
+    <DropDown name="plan" options={options} label="Plan" />
     <Submit disabled={isSubmitting}>Submit</Submit>
   </Form>
 );
