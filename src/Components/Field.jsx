@@ -41,6 +41,7 @@ class Field extends React.Component {
         id={this.id}
         name={name}
         type={this.type}
+        className="dp-pc_input"
         {...props}
       >
         {children}
@@ -48,12 +49,24 @@ class Field extends React.Component {
     );
   };
 
+  renderLabel = () => {
+    const {
+      label,
+    } = this.props;
+    const htmlFor = this.id;
+    /* eslint-disable jsx-a11y/label-has-for */
+    return (
+      <label className="dp-pc_label" htmlFor={htmlFor}>
+        {label}
+      </label>
+    );
+    /* eslint-enable jsx-a11y/label-has-for */
+  };
+
   render() {
     const {
       name,
-      label
     } = this.props;
-    /* eslint-disable jsx-a11y/label-has-for */
     return (
       <FormikField
         name={name}
@@ -61,22 +74,17 @@ class Field extends React.Component {
           const error = getIn(form.errors, name);
           const touch = getIn(form.touched, name);
           const value = getIn(form.values, name);
-          const htmlFor = this.id;
           return (
             <div className={classNames('dp-pc_field', { 'dp-pc_error': touch && error, 'dp-pc_empty': !value })}>
               {this.renderField(form)}
               <span className="indicator" />
-              <span className="divider" />
               <ErrorMessage name={name} form={form} />
-              <label htmlFor={htmlFor}>
-                {label}
-              </label>
+              {this.renderLabel()}
             </div>
           );
         }}
       />
     );
-    /* eslint-enable jsx-a11y/label-has-for */
   }
 }
 

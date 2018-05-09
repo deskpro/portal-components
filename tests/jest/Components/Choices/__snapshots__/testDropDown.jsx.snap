@@ -126,10 +126,8 @@ exports[`>>> DropDown --- Snapshot +++capturing Snapshot of DropDown 1`] = `
     <span
       className="indicator"
     />
-    <span
-      className="divider"
-    />
     <label
+      className="dp-pc_label"
       htmlFor="field_1"
     >
       
