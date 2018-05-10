@@ -8,7 +8,9 @@ exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes 1`] = `
   <div
     className="dp-pc_field"
   >
-    <div>
+    <div
+      description=""
+    >
       <div>
         <label
           htmlFor="field_1-first"
@@ -61,6 +63,11 @@ exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes 1`] = `
     <span
       className="indicator"
     />
+    <span
+      className="dp-pc_description"
+    >
+      
+    </span>
     <label
       className="dp-pc_label"
       htmlFor="field_1"
@@ -79,7 +86,9 @@ exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes with ex
   <div
     className="dp-pc_field"
   >
-    <div>
+    <div
+      description=""
+    >
       <div>
         <label
           htmlFor="checkbox-first"
@@ -132,6 +141,11 @@ exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes with ex
     <span
       className="indicator"
     />
+    <span
+      className="dp-pc_description"
+    >
+      
+    </span>
     <label
       className="dp-pc_label"
       htmlFor="checkbox"
