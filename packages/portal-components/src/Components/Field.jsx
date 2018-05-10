@@ -7,16 +7,18 @@ import ErrorMessage from './ErrorMessage';
 
 class Field extends React.Component {
   static propTypes = {
-    name:     PropTypes.string.isRequired,
-    label:    PropTypes.string,
-    id:       PropTypes.string,
-    children: PropTypes.node
+    name:        PropTypes.string.isRequired,
+    label:       PropTypes.string,
+    description: PropTypes.string,
+    id:          PropTypes.string,
+    children:    PropTypes.node
   };
 
   static defaultProps = {
-    label:    '',
-    id:       null,
-    children: null,
+    label:       '',
+    description: '',
+    id:          null,
+    children:    null,
   };
 
   constructor(props) {
@@ -32,7 +34,6 @@ class Field extends React.Component {
     const {
       name,
       children,
-      id,
       ...props
     } = this.props;
 
@@ -46,6 +47,16 @@ class Field extends React.Component {
       >
         {children}
       </FormikField>
+    );
+  };
+
+  renderDescription = () => {
+    const {
+      description
+    } = this.props;
+
+    return (
+      <span className="dp-pc_description">{description}</span>
     );
   };
 
@@ -78,7 +89,7 @@ class Field extends React.Component {
             <div className={classNames('dp-pc_field', { 'dp-pc_error': touch && error, 'dp-pc_empty': !value })}>
               {this.renderField(form)}
               <span className="indicator" />
-              <ErrorMessage name={name} form={form} />
+              { touch && error ? <ErrorMessage name={name} form={form} /> : this.renderDescription() }
               {this.renderLabel()}
             </div>
           );

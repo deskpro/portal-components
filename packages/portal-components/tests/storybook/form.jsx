@@ -17,7 +17,12 @@ const App = ({
 }) => (
   <Form>
     <Email name="email" placeholder="Email" label="Email" />
-    <Password name="password" placeholder="Password" label="Password" />
+    <Password
+      name="password"
+      placeholder="Password"
+      label="Password"
+      description="Must have 9 characters minimum"
+    />
     <Checkbox
       id="checkbox"
       name="newsletter"

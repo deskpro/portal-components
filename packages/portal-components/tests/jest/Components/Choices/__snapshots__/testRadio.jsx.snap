@@ -9,6 +9,7 @@ exports[`>>> Radio --- Snapshot +++capturing Snapshot of Radio 1`] = `
     className="dp-pc_field"
   >
     <div
+      description=""
       label=""
     >
       <div>
@@ -66,6 +67,11 @@ exports[`>>> Radio --- Snapshot +++capturing Snapshot of Radio 1`] = `
     <span
       className="indicator"
     />
+    <span
+      className="dp-pc_description"
+    >
+      
+    </span>
     <label
       className="dp-pc_label"
       htmlFor="field_1"

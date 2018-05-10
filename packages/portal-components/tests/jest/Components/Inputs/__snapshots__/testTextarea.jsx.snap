@@ -9,6 +9,7 @@ exports[`>>> Textarea --- Snapshot +++capturing Snapshot of Textarea 1`] = `
     className="dp-pc_field"
   >
     <textarea
+      description=""
       id={null}
       label=""
       name="textarea"
@@ -19,6 +20,11 @@ exports[`>>> Textarea --- Snapshot +++capturing Snapshot of Textarea 1`] = `
     <span
       className="indicator"
     />
+    <span
+      className="dp-pc_description"
+    >
+      
+    </span>
     <label
       className="dp-pc_label"
       htmlFor="field_1"
