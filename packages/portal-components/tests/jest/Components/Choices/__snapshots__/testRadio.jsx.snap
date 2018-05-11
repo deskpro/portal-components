@@ -10,7 +10,6 @@ exports[`>>> Radio --- Snapshot +++capturing Snapshot of Radio 1`] = `
   >
     <div
       className="dp-pc_radios"
-      classNames=""
       description=""
       id={null}
       label=""

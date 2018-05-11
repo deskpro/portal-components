@@ -9,56 +9,82 @@ exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes 1`] = `
     className="dp-pc_field"
   >
     <div
+      className="dp-pc_checkboxes"
       description=""
+      id={null}
     >
-      <div>
-        <label
-          htmlFor="field_1-first"
+      <label
+        className="dp-pc_checkboxes_checkbox"
+        htmlFor="field_1-first"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyPress={[Function]}
+        tabIndex="0"
+      >
+        <input
+          checked={false}
+          id="field_1-first"
+          name="checkboxes"
+          onChange={[Function]}
+          type="checkbox"
+          value="first"
+        />
+        <i />
+         
+        <span
+          className="label"
         >
-          <input
-            checked={false}
-            id="field_1-first"
-            name="checkboxes"
-            onChange={[Function]}
-            type="checkbox"
-            value="first"
-          />
-           
           First
-        </label>
-      </div>
-      <div>
-        <label
-          htmlFor="field_1-second"
+        </span>
+      </label>
+      <label
+        className="dp-pc_checkboxes_checkbox"
+        htmlFor="field_1-second"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyPress={[Function]}
+        tabIndex="0"
+      >
+        <input
+          checked={false}
+          id="field_1-second"
+          name="checkboxes"
+          onChange={[Function]}
+          type="checkbox"
+          value="second"
+        />
+        <i />
+         
+        <span
+          className="label"
         >
-          <input
-            checked={false}
-            id="field_1-second"
-            name="checkboxes"
-            onChange={[Function]}
-            type="checkbox"
-            value="second"
-          />
-           
           Second
-        </label>
-      </div>
-      <div>
-        <label
-          htmlFor="field_1-last"
+        </span>
+      </label>
+      <label
+        className="dp-pc_checkboxes_checkbox"
+        htmlFor="field_1-last"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyPress={[Function]}
+        tabIndex="0"
+      >
+        <input
+          checked={false}
+          id="field_1-last"
+          name="checkboxes"
+          onChange={[Function]}
+          type="checkbox"
+          value="last"
+        />
+        <i />
+         
+        <span
+          className="label"
         >
-          <input
-            checked={false}
-            id="field_1-last"
-            name="checkboxes"
-            onChange={[Function]}
-            type="checkbox"
-            value="last"
-          />
-           
           Last
-        </label>
-      </div>
+        </span>
+      </label>
     </div>
     <span
       className="indicator"
@@ -69,7 +95,7 @@ exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes 1`] = `
       
     </span>
     <label
-      className="dp-pc_label"
+      className="dp-pc_checkboxes_label"
       htmlFor="field_1"
     >
       
@@ -87,56 +113,82 @@ exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes with ex
     className="dp-pc_field"
   >
     <div
+      className="dp-pc_checkboxes"
       description=""
+      id="checkbox"
     >
-      <div>
-        <label
-          htmlFor="checkbox-first"
+      <label
+        className="dp-pc_checkboxes_checkbox"
+        htmlFor="checkbox-first"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyPress={[Function]}
+        tabIndex="0"
+      >
+        <input
+          checked={true}
+          id="checkbox-first"
+          name="checkboxes"
+          onChange={[Function]}
+          type="checkbox"
+          value="first"
+        />
+        <i />
+         
+        <span
+          className="label"
         >
-          <input
-            checked={true}
-            id="checkbox-first"
-            name="checkboxes"
-            onChange={[Function]}
-            type="checkbox"
-            value="first"
-          />
-           
           First
-        </label>
-      </div>
-      <div>
-        <label
-          htmlFor="checkbox-second"
+        </span>
+      </label>
+      <label
+        className="dp-pc_checkboxes_checkbox"
+        htmlFor="checkbox-second"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyPress={[Function]}
+        tabIndex="0"
+      >
+        <input
+          checked={false}
+          id="checkbox-second"
+          name="checkboxes"
+          onChange={[Function]}
+          type="checkbox"
+          value="second"
+        />
+        <i />
+         
+        <span
+          className="label"
         >
-          <input
-            checked={false}
-            id="checkbox-second"
-            name="checkboxes"
-            onChange={[Function]}
-            type="checkbox"
-            value="second"
-          />
-           
           Second
-        </label>
-      </div>
-      <div>
-        <label
-          htmlFor="checkbox-last"
+        </span>
+      </label>
+      <label
+        className="dp-pc_checkboxes_checkbox"
+        htmlFor="checkbox-last"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyPress={[Function]}
+        tabIndex="0"
+      >
+        <input
+          checked={false}
+          id="checkbox-last"
+          name="checkboxes"
+          onChange={[Function]}
+          type="checkbox"
+          value="last"
+        />
+        <i />
+         
+        <span
+          className="label"
         >
-          <input
-            checked={false}
-            id="checkbox-last"
-            name="checkboxes"
-            onChange={[Function]}
-            type="checkbox"
-            value="last"
-          />
-           
           Last
-        </label>
-      </div>
+        </span>
+      </label>
     </div>
     <span
       className="indicator"
@@ -147,7 +199,7 @@ exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes with ex
       
     </span>
     <label
-      className="dp-pc_label"
+      className="dp-pc_checkboxes_label"
       htmlFor="checkbox"
     >
       

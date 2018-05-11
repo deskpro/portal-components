@@ -44,13 +44,6 @@ class Checkbox extends Field {
       <div
         className={classNames('dp-pc_checkbox', { focused: this.state.focused })}
       >
-        <FormikField
-          id={id}
-          type="checkbox"
-          name={name}
-          checked={getIn(form.values, name)}
-          {...objectKeyFilter(props, Field.propTypes)}
-        />
         <label
           htmlFor={this.id}
           tabIndex="0"
@@ -58,9 +51,18 @@ class Checkbox extends Field {
           onKeyPress={e => this.handleKeyPress(e, form)}
           onFocus={this.handleFocus}
           onBlur={this.handleBlur}
-        />
-        <label htmlFor={id} className="dp-pc_checkbox__label">
-          {label}
+        >
+          <FormikField
+            id={id}
+            type="checkbox"
+            name={name}
+            checked={getIn(form.values, name)}
+            {...objectKeyFilter(props, Field.propTypes)}
+          />
+          <i />
+          <span className="dp-pc_checkbox__label">
+            {label}
+          </span>
         </label>
       </div>
     );

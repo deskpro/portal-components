@@ -32,7 +32,6 @@ class Radio extends Field {
     });
   };
 
-
   renderLabel = () => {
     const {
       label,
@@ -104,7 +103,7 @@ Radio.propTypes = {
 
 Radio.defaultProps = {
   ...Field.defaultProps,
-  classNames: ''
+  className: ''
 };
 
 export default Radio;
