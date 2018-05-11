@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { Formik } from 'formik';
-import { Form, Radio } from '../../src/Components';
+import { Form, Radio, Submit } from '../../src/Components';
 
 const options = [
   { value: 'blue', label: 'Blue' },
@@ -24,8 +24,9 @@ storiesOf('Choices', module)
             name="colour"
             options={options}
             label="Colour"
+            description="Pick a colour"
           />
-          <button>Submit</button>
+          <Submit>Submit</Submit>
         </Form>
       )}
     />

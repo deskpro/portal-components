@@ -41,7 +41,9 @@ class Checkbox extends Field {
     /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
     /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
     return (
-      <div className={classNames('dp-pc_checkbox', { focused: this.state.focused })}>
+      <div
+        className={classNames('dp-pc_checkbox', { focused: this.state.focused })}
+      >
         <FormikField
           id={id}
           type="checkbox"
@@ -70,8 +72,9 @@ class Checkbox extends Field {
   renderLabel = () => null;
 }
 
-Checkbox.propTypes = Object.assign(Field.propTypes, {
+Checkbox.propTypes = {
+  ...Field.propTypes,
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.node])
-});
+};
 
 export default Checkbox;

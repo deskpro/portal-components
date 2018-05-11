@@ -24,11 +24,13 @@ class DatePicker extends Field {
   }
 }
 
-DatePicker.propTypes = Object.assign(Field.propTypes, {
+DatePicker.propTypes = {
+  ...Field.propTypes,
   format: PropTypes.string,
-});
+};
 
 DatePicker.defaultProps = {
+  ...Field.defaultProps,
   format: 'DD/MM/Y'
 };
 

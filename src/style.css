@@ -8,6 +8,9 @@
   --valid-label: #4eba5c;
   --box-shadow-30: rgba(39, 41, 86, 0.3);
   --option-background: #eff0f2;
+  --checkbox-border: #dce4eb;
+  --input-padding: 11px 10px 11px 0;
+  --input-height: 70px;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Rubik');
@@ -46,10 +49,10 @@
 
   & input.dp-pc_input {
     font-size: 18px;
-    padding: 11px 10px 11px 0;
+    padding: var(--input-padding);
     margin-left: 10px;
     display: block;
-    height: 70px;
+    height: var(--input-height);
     width: calc(100% - 20px);
     color: var(--text-color);
     border: none;
@@ -107,12 +110,11 @@
   /* active state */
   & input:focus ~ .indicator:before,
   & input:focus ~ .indicator:after,
-  & .Select.is-focused ~ .indicator:before,
-  & .Select.is-focused ~ .indicator:after,
-  & .dp-pc_checkbox.focused ~ .indicator:before,
-  & .dp-pc_checkbox.focused ~ .indicator:after {
+  &:hover input ~ .indicator:before,
+  &:hover input ~ .indicator:after {
     height: 50%;
   }
+
   & input:invalid .indicator:before,
   & input:invalid .indicator:after,
   &.dp-pc_error .indicator:before,
@@ -162,9 +164,9 @@
   & .Select {
     & .Select-control {
       border: none;
-      padding: 11px 10px 11px 0;
+      padding: var(--input-padding);
       margin-left: 10px;
-      height: 70px;
+      height: var(--input-height);
       width: calc(100% - 20px);
       font-size: 18px;
       box-shadow: none;
@@ -254,9 +256,19 @@
     }
   }
 
+  & .Select.is-focused ~ .indicator:before,
+  & .Select.is-focused ~ .indicator:after,
+  &:hover .Select ~ .indicator:before,
+  &:hover .Select ~ .indicator:after {
+    height: 50%;
+  }
+
+  /******************************
+      Input checkbox
+  *******************************/
   & .dp-pc_checkbox {
-    height: 70px;
-    padding: 11px 10px 11px 0;
+    height: var(--input-height);
+    padding: var(--input-padding);
     border-bottom: 1px solid var(--divider-color);
     margin-left: 10px;
     width: calc(100% - 20px);
@@ -268,8 +280,8 @@
       position: absolute;
       top: 25px;
       left: 12px;
-      background: #fcfff4;
-      border: 2px solid #bec4c5;
+      background: #fff;
+      border: 2px solid var(--checkbox-border);
       border-radius: 4px;
       &:after {
         content: '';
@@ -309,5 +321,93 @@
     & label.dp-pc_checkbox__checkbox {
       border-color: var(--error-color);
     }
+  }
+
+  & .dp-pc_checkbox.focused ~ .indicator:before,
+  & .dp-pc_checkbox.focused ~ .indicator:after,
+  &:hover .dp-pc_checkbox ~ .indicator:before,
+  &:hover .dp-pc_checkbox ~ .indicator:after {
+    height: 50%;
+  }
+
+  /******************************
+      Input radio
+  *******************************/
+  & .dp-pc_radios {
+    padding: 23px 10px 11px 0;
+    margin-left: 10px;
+    height: var(--input-height);
+    width: calc(100% - 20px);
+    border-bottom: 1px solid var(--divider-color);
+  }
+  & .dp-pc_radio {
+    margin-top: 5px;
+    display: inline-block;
+    & > input {
+      display: none;
+    }
+    & > i {
+      height: 16px;
+      width: 16px;
+      top: 2px;
+      border-radius: 50%;
+      border: 2px solid var(--checkbox-border);
+      display: inline-block;
+      cursor: pointer;
+      position: relative;
+      margin-right: 3px;
+      background-color: #FFF;
+      &::after {
+        content: '';
+        position: absolute;
+        background-color: var(--primary-color);
+        width: 0;
+        height: 0;
+        top: 50%;
+        left: 50%;
+        border-radius: 50%;
+        transition: 0s;
+      }
+    }
+    & > input:checked + i::after {
+      width: 8px;
+      height: 8px;
+      top: 17%;
+      left: 17%;
+      transition: .2s;
+    }
+    & > input:checked ~ span.label {
+      color: var(--text-color);
+    }
+    & span.label {
+      color: var(--label-color);
+      margin-right: 20px;
+      font-size: 16px;
+    }
+    &:focus {
+      outline: none;
+      & i {
+        border-color: var(--text-color);
+      }
+    }
+  }
+  & .dp-pc_radio_label {
+    position: absolute;
+    top: 7px;
+    font-size: 18px;
+    color: var(--label-color);
+    left: 10px;
+  }
+
+  &.dp-pc_error .dp-pc_radio {
+    & > i {
+      border-color: var(--error-color);
+    }
+  }
+  & .dp-pc_radios.focused ~ .indicator:before,
+  & .dp-pc_radios.focused ~ .indicator:after,
+  &:hover .dp-pc_radios ~ .indicator:before,
+  &:hover .dp-pc_radios ~ .indicator:after {
+    height: 50%;
   }
 }
