@@ -46,11 +46,12 @@ class Checkboxes extends Field {
   }
 }
 
-Checkboxes.propTypes = Object.assign(Field.propTypes, {
+Checkboxes.propTypes = {
+  ...Field.propTypes,
   options: PropTypes.arrayOf(PropTypes.shape({
     label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
     value: PropTypes.any.isRequired
-  }))
-});
+  })),
+};
 
 export default Checkboxes;

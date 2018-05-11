@@ -6,11 +6,6 @@ import ReactSelect from 'react-select';
 import Field from '../Field';
 
 class DropDown extends Field {
-  handleBlur = () => {
-    // this is going to call setFieldTouched and manually update touched.topcis
-    this.props.onBlur('topics', true);
-  };
-
   renderField = (form) => {
     const { name, options, ...props } = this.props;
     return (
