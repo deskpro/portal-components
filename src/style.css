@@ -109,9 +109,7 @@
 
   /* active state */
   & input:focus ~ .indicator:before,
-  & input:focus ~ .indicator:after,
-  &:hover input ~ .indicator:before,
-  &:hover input ~ .indicator:after {
+  & input:focus ~ .indicator:after {
     height: 50%;
   }
 
@@ -257,9 +255,7 @@
   }
 
   & .Select.is-focused ~ .indicator:before,
-  & .Select.is-focused ~ .indicator:after,
-  &:hover .Select ~ .indicator:before,
-  &:hover .Select ~ .indicator:after {
+  & .Select.is-focused ~ .indicator:after {
     height: 50%;
   }
 
@@ -331,9 +327,7 @@
   }
 
   & .dp-pc_checkbox.focused ~ .indicator:before,
-  & .dp-pc_checkbox.focused ~ .indicator:after,
-  &:hover .dp-pc_checkbox ~ .indicator:before,
-  &:hover .dp-pc_checkbox ~ .indicator:after {
+  & .dp-pc_checkbox.focused ~ .indicator:after {
     height: 50%;
   }
   /******************************
@@ -407,9 +401,7 @@
   }
 
   & .dp-pc_checkboxes.focused ~ .indicator:before,
-  & .dp-pc_checkboxes.focused ~ .indicator:after,
-  &:hover .dp-pc_checkboxes ~ .indicator:before,
-  &:hover .dp-pc_checkboxes ~ .indicator:after {
+  & .dp-pc_checkboxes.focused ~ .indicator:after {
     height: 50%;
   }
 
@@ -488,9 +480,23 @@
     }
   }
   & .dp-pc_radios.focused ~ .indicator:before,
-  & .dp-pc_radios.focused ~ .indicator:after,
-  &:hover .dp-pc_radios ~ .indicator:before,
-  &:hover .dp-pc_radios ~ .indicator:after {
+  & .dp-pc_radios.focused ~ .indicator:after {
     height: 50%;
+  }
+}
+.dp-pc_form.show-hover {
+  & .dp-pc_field:hover {
+    & input ~ .indicator:before,
+    & input ~ .indicator:after,
+    & .Select ~ .indicator:before,
+    & .Select ~ .indicator:after,
+    & .dp-pc_checkbox ~ .indicator:before,
+    & .dp-pc_checkbox ~ .indicator:after,
+    & .dp-pc_checkboxes ~ .indicator:before,
+    & .dp-pc_checkboxes ~ .indicator:after,
+    & .dp-pc_radios ~ .indicator:before,
+    & .dp-pc_radios ~ .indicator:after {
+      height: 50%;
+    }
   }
 }

@@ -2,7 +2,7 @@
 
 exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes 1`] = `
 <form
-  className="dp-pc_form"
+  className="dp-pc_form show-hover"
   onSubmit={[Function]}
 >
   <div
@@ -106,7 +106,7 @@ exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes 1`] = `
 
 exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes with existing value 1`] = `
 <form
-  className="dp-pc_form"
+  className="dp-pc_form show-hover"
   onSubmit={[Function]}
 >
   <div

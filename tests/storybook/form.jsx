@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { storiesOf } from '@storybook/react';
+import { withKnobs, boolean } from '@storybook/addon-knobs/react';
 import Yup from 'yup';
 import { withFormik } from 'formik';
 import 'react-select/dist/react-select.css';
@@ -15,7 +16,9 @@ const options = [
 const App = ({
   isSubmitting
 }) => (
-  <Form>
+  <Form
+    showHover={boolean('Show hover', false)}
+  >
     <Email name="email" placeholder="Email" label="Email" />
     <Password
       name="password"
@@ -70,5 +73,6 @@ const FormikApp = withFormik({
 })(App);
 
 storiesOf('Forms', module)
+  .addDecorator(withKnobs)
   .add('Basic form', () =>
     <FormikApp />);
