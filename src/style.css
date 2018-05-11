@@ -273,46 +273,53 @@
     margin-left: 10px;
     width: calc(100% - 20px);
 
-    & label.dp-pc_checkbox__checkbox {
-      width: 14px;
-      height: 14px;
-      cursor: pointer;
-      position: absolute;
-      top: 25px;
-      left: 12px;
-      background: #fff;
-      border: 2px solid var(--checkbox-border);
-      border-radius: 4px;
-      &:after {
-        content: '';
-        width: 9px;
-        height: 5px;
-        position: absolute;
+    & .dp-pc_checkbox__checkbox {
+      margin-top: 5px;
+      display: inline-block;
+      & > i {
+        width: 16px;
+        height: 16px;
         top: 2px;
-        left: 2px;
-        border: 2px solid var(--primary-color);
-        border-top: none;
-        border-right: none;
-        background: transparent;
-        opacity: 0;
-        transform: rotate(-45deg);
-        box-sizing: border-box;
+        border-radius: 4px;
+        border: 2px solid var(--checkbox-border);
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
+        margin-right: 3px;
+        background: #fff;
+        &:after {
+          content: '';
+          width: 11px;
+          height: 6px;
+          position: absolute;
+          top: 2px;
+          left: 1px;
+          border: 2px solid var(--primary-color);
+          border-top: none;
+          border-right: none;
+          background: transparent;
+          opacity: 0;
+          transform: rotate(-60deg);
+          box-sizing: border-box;
+        }
       }
       &:focus {
         outline: none;
-        border-color: var(--text-color);
+        & i {
+          border-color: var(--text-color);
+        }
       }
-    }
-    & label.dp-pc_checkbox__label {
-      margin-left: 5px;
-      padding: 10px 10px 11px 0;
-      display: inline-block;
-      color: var(--text-color);
-    }
-    & input[type=checkbox] {
-      visibility: hidden;
-      &:checked + label.dp-pc_checkbox__checkbox:after {
-        opacity: 1 !important;
+      & .dp-pc_checkbox__label {
+        margin-left: 5px;
+        padding: 10px 10px 11px 0;
+        display: inline-block;
+        color: var(--text-color);
+      }
+      & input[type=checkbox] {
+        display: none;
+        &:checked ~ i::after {
+          opacity: 1 !important;
+        }
       }
     }
   }
@@ -327,6 +334,82 @@
   & .dp-pc_checkbox.focused ~ .indicator:after,
   &:hover .dp-pc_checkbox ~ .indicator:before,
   &:hover .dp-pc_checkbox ~ .indicator:after {
+    height: 50%;
+  }
+  /******************************
+        Input checkboxes
+  *******************************/
+  & .dp-pc_checkboxes {
+    padding: 23px 10px 11px 0;
+    margin-left: 10px;
+    height: var(--input-height);
+    width: calc(100% - 20px);
+    border-bottom: 1px solid var(--divider-color);
+  }
+  & .dp-pc_checkboxes_checkbox {
+    margin-top: 5px;
+    display: inline-block;
+    & > input {
+      display: none;
+    }
+    & > i {
+      width: 16px;
+      height: 16px;
+      top: 2px;
+      border-radius: 4px;
+      border: 2px solid var(--checkbox-border);
+      display: inline-block;
+      cursor: pointer;
+      position: relative;
+      margin-right: 3px;
+      background-color: #FFF;
+      &::after {
+        content: '';
+        width: 11px;
+        height: 6px;
+        position: absolute;
+        top: 2px;
+        left: 1px;
+        border: 2px solid var(--primary-color);
+        border-top: none;
+        border-right: none;
+        background: transparent;
+        opacity: 0;
+        transform: rotate(-60deg);
+        box-sizing: border-box;
+      }
+    }
+    & > input:checked + i::after {
+      opacity: 1 !important;
+      transition: .2s;
+    }
+    & > input:checked ~ span.label {
+      color: var(--text-color);
+    }
+    & span.label {
+      color: var(--label-color);
+      margin-right: 20px;
+      font-size: 16px;
+    }
+    &:focus {
+      outline: none;
+      & i {
+        border-color: var(--text-color);
+      }
+    }
+  }
+  & .dp-pc_checkboxes_label {
+    position: absolute;
+    top: 7px;
+    font-size: 18px;
+    color: var(--label-color);
+    left: 10px;
+  }
+
+  & .dp-pc_checkboxes.focused ~ .indicator:before,
+  & .dp-pc_checkboxes.focused ~ .indicator:after,
+  &:hover .dp-pc_checkboxes ~ .indicator:before,
+  &:hover .dp-pc_checkboxes ~ .indicator:after {
     height: 50%;
   }
 
