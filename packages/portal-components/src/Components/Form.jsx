@@ -5,15 +5,22 @@ import classNames from 'classnames';
 
 const Form = ({
   className,
+  showHover,
   ...props
-}) => <FormikForm className={classNames('dp-pc_form', className)} {...props} />;
+}) => (
+  <FormikForm
+    className={classNames('dp-pc_form', className, { 'show-hover': showHover })}
+    {...props}
+  />);
 
 Form.propTypes = {
   className: PropTypes.string,
+  showHover: PropTypes.bool,
 };
 
 Form.defaultProps = {
-  className: ''
+  className: '',
+  showHover: true,
 };
 
 export default Form;

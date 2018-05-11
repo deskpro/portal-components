@@ -2,7 +2,7 @@
 
 exports[`>>> Text --- Snapshot +++capturing Snapshot of Text 1`] = `
 <form
-  className="dp-pc_form"
+  className="dp-pc_form show-hover"
   onSubmit={[Function]}
 >
   <div
