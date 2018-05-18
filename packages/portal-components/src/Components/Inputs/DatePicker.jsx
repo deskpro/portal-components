@@ -18,6 +18,7 @@ class DatePicker extends Field {
         name={name}
         onChange={value => this.handleChange(value, form)}
         onBlur={() => form.setFieldTouched(name, true)}
+        className="dp-pc_date-picker"
         {...props}
       />
     );

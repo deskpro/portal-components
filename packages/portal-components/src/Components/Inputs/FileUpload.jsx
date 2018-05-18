@@ -1,6 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import DropZone from 'react-dropzone';
+import SVGInline from 'react-svg-inline';
+import { formatFileSize } from '@deskpro/js-utils/dist/numbers';
+import fileIcon from 'assets/file-icon.svg';
+import dndIcon from 'assets/drag-and-drop.svg';
+import deleteIcon from 'assets/delete.svg';
 import { Progress } from '../index';
 
 import Field from '../Field';
@@ -95,10 +100,24 @@ class File extends React.Component {
     file: PropTypes.object.isRequired
   };
 
+  renderRemove = () => (
+    <span className="dp-pc_file-upload_remove-file">
+      <SVGInline svg={deleteIcon} /> remove
+    </span>
+  );
+
+  renderSize = () => {
+    const { file } = this.props;
+    if (file.size) {
+      return `(${formatFileSize(file.size)})`;
+    }
+    return null;
+  };
+
   render() {
     const { file } = this.props;
     return (
-      <li>{file.name}</li>
+      <li>{file.name} {this.renderSize()} {this.renderRemove()}</li>
     );
   }
 }
@@ -144,21 +163,46 @@ class FileUpload extends Field {
     }
   };
 
+  renderLabel = () => {
+    const {
+      label,
+    } = this.props;
+    const htmlFor = this.id;
+    /* eslint-disable jsx-a11y/label-has-for */
+    return (
+      <label className="dp-pc_file-input_label" htmlFor={htmlFor}>
+        {label}
+      </label>
+    );
+    /* eslint-enable jsx-a11y/label-has-for */
+  };
+
+  renderIndicator = () => null;
+
   renderField = (form) => {
     const { multiple } = this.props;
     this.setFieldValue = form.setFieldValue;
     this.setFieldTouched = form.setFieldTouched;
 
     return (
-      <div>
+      <div className="dp-pc_file-upload">
         <DropZone
           onDrop={this.handleDrop}
           multiple={multiple}
+          className="dp-pc_file-upload__dropzone"
           inputProps={{
             id: this.id
           }}
         >
-          Choose {multiple ? 'files' : 'a file'}
+          <div className="choose">
+            <SVGInline svg={fileIcon} />
+            Choose {multiple ? 'files' : 'a file'}
+          </div>
+          <div className="or">or</div>
+          <div className="dnd">
+            <SVGInline svg={dndIcon} />
+            Drag and drop
+          </div>
         </DropZone>
         <Progress progress={this.state.progress} />
         <ul>

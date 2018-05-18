@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { Formik } from 'formik';
-import { Form, FileUpload } from '../../src/Components';
+import { Form, FileUpload, Submit } from '../../src/Components';
 
 function setCookie(name, value, days, domain) {
   let expires = '';
@@ -31,7 +31,7 @@ storiesOf('Input', module)
             multiple
             csrfToken="123456"
           />
-          <button>submit</button>
+          <Submit>submit</Submit>
         </Form>
       )}
     />

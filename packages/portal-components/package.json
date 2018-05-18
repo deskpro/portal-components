@@ -5,14 +5,16 @@
   "private": false,
   "homepage": "https://deskpro.github.io/portal-components",
   "dependencies": {
-    "@deskpro/js-utils": "^1.0.3",
+    "@deskpro/js-utils": "^1.0.4",
     "@storybook/addon-knobs": "^3.4.3",
     "classnames": "^2.2.5",
     "formik": "^0.11.11",
     "moment": "^2.22.1",
+    "raw-loader": "^0.5.1",
     "react-datepicker": "^1.4.1",
     "react-dropzone": "^4.2.9",
     "react-select": "^1.2.1",
+    "react-svg-inline": "^2.1.0",
     "yup": "^0.24.1"
   },
   "scripts": {

@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { Formik } from 'formik';
 import 'react-datepicker/dist/react-datepicker.css';
-import { Form, DatePicker } from '../../src/Components';
+import { Form, DatePicker, Submit } from '../../src/Components';
 
 
 storiesOf('Input', module)
@@ -17,7 +17,7 @@ storiesOf('Input', module)
             name="date"
             label="Date"
           />
-          <button>Submit</button>
+          <Submit>Submit</Submit>
         </Form>
       )}
     />
