@@ -29,6 +29,10 @@ module.exports = {
         options: {
           name: 'fonts/[name].[ext]',
         },
+      },
+      {
+        test: /\.svg$/,
+        loader: 'raw-loader'
       }
     ]
   }

@@ -1,9 +1,10 @@
 :root {
   --primary-color: #3d88f3;
-  --error-color: #f5697d;
+  --error-color: #f16c7c;
   --label-color: #7d95aa;
   --text-color: #5f768a;
   --description-color: #5f768a;
+  --light-grey: #9fb3c4;
   --divider-color: #dee4eb;
   --valid-label: #4eba5c;
   --box-shadow-30: rgba(39, 41, 86, 0.3);
@@ -482,6 +483,97 @@
   & .dp-pc_radios.focused ~ .indicator:before,
   & .dp-pc_radios.focused ~ .indicator:after {
     height: 50%;
+  }
+
+  /******************************
+      File Upload
+  *******************************/
+  & .dp-pc_file-upload {
+    color: var(--text-color);
+    & .dp-pc_file-upload__dropzone {
+      border: 2px dashed var(--checkbox-border);
+      border-radius: 4px;
+      display: inline-block;
+      padding: 10px 23px 10px 10px;
+      margin-top: 25px;
+      white-space: nowrap;
+      cursor: pointer;
+      & .choose {
+        border: 2px solid var(--checkbox-border);
+        border-radius: 4px;
+        padding: 10px;
+        display: inline-block;
+      }
+      & .or {
+        display: inline-block;
+        padding: 16px;
+        font-style: italic;
+      }
+      & .dnd {
+        display: inline-block;
+      }
+      & .SVGInline > svg {
+        height: 17px;
+        margin-right: 8px;
+        margin-bottom: -2px;
+      }
+      &:hover {
+        & .choose {
+          border-color: var(--primary-color);
+          color: var(--primary-color);
+          transition: 0.2s ease all;
+          & .SVGInline > svg .st0 {
+            fill: var(--primary-color);
+            transition: 0.2s ease all;
+          }
+        }
+      }
+    }
+    & > ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+      & > li {
+        margin-top: 8px;
+        font-size: 14px;
+        color: var(--description-color);
+        & .dp-pc_file-upload_remove-file {
+          color: var(--light-grey);
+          font-size: 12px;
+          cursor: pointer;
+          & svg {
+            width: 12px;
+            & .st0 {
+              fill: var(--light-grey);
+            }
+          }
+          &:hover {
+            color: var(--error-color);
+            transition: 0.2s ease all;
+            & svg .st0 {
+              fill: var(--error-color);
+              transition: 0.2s ease all;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.dp-pc_error .dp-pc_file-upload__dropzone {
+    border-color: var(--error-color);
+    & .choose, & .dnd {
+      & svg .st0 {
+        fill: var(--error-color);
+      }
+    }
+  }
+
+  & .dp-pc_file-input_label {
+    position: absolute;
+    top: 3px;
+    font-size: 16px;
+    color: var(--label-color);
+    left: 10px;
   }
 }
 .dp-pc_form.show-hover {

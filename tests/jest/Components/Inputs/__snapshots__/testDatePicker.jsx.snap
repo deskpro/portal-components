@@ -18,7 +18,7 @@ exports[`>>> DatePicker --- Snapshot +++capturing Snapshot of DatePicker 1`] = `
           <input
             autoComplete={undefined}
             autoFocus={undefined}
-            className=""
+            className="dp-pc_date-picker"
             disabled={false}
             id={null}
             name="date"
