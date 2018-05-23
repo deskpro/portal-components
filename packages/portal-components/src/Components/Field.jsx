@@ -11,12 +11,14 @@ class Field extends React.Component {
     label:       PropTypes.string,
     description: PropTypes.string,
     id:          PropTypes.string,
+    className:   PropTypes.string,
     children:    PropTypes.node
   };
 
   static defaultProps = {
     label:       '',
     description: '',
+    className:   '',
     id:          null,
     children:    null,
   };
@@ -34,6 +36,7 @@ class Field extends React.Component {
     const {
       name,
       children,
+      className,
       ...props
     } = this.props;
 
@@ -42,7 +45,7 @@ class Field extends React.Component {
         id={this.id}
         name={name}
         type={this.type}
-        className="dp-pc_input"
+        className={classNames('dp-pc_input', className)}
         {...props}
       >
         {children}

@@ -9,6 +9,7 @@ exports[`>>> Textarea --- Snapshot +++capturing Snapshot of Textarea 1`] = `
     className="dp-pc_field"
   >
     <textarea
+      className=""
       description=""
       id={null}
       label=""
