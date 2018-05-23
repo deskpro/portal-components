@@ -6,13 +6,19 @@ import ReactSelect from 'react-select';
 import Field from '../Field';
 
 class DropDown extends Field {
+  handleChange = (form, value) => {
+    const { name, handleChange } = this.props;
+    form.setFieldValue(name, value.value);
+    handleChange(value.value);
+  };
+
   renderField = (form) => {
     const { name, options, ...props } = this.props;
     return (
       <ReactSelect
         value={getIn(form.values, name)}
         name={name}
-        onChange={value => form.setFieldValue(name, value)}
+        onChange={value => this.handleChange(form, value)}
         onBlur={() => form.setFieldTouched(name, true)}
         options={options}
         {...props}
@@ -26,7 +32,8 @@ DropDown.propTypes = {
   options: PropTypes.arrayOf(PropTypes.shape({
     label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
     value: PropTypes.any.isRequired
-  }))
+  })),
+  handleChange: PropTypes.func,
 };
 
 export default DropDown;

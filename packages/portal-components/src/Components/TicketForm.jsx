@@ -5,26 +5,43 @@ import Yup from 'yup';
 import Form from './Form';
 import Submit from './Submit';
 import TicketField from './TicketField';
+import TicketDepartment from './TicketDepartment';
 
 class TicketForm extends React.Component {
   static propTypes = {
     deskproLayout: PropTypes.object.isRequired,
+    departments:   PropTypes.object.isRequired,
     onSubmit:      PropTypes.func.isRequired,
+    department:    PropTypes.number,
+  };
+
+  static defaultProps = {
+    department: null
   };
 
   constructor(props) {
     super(props);
     this.state = {
-      department: null
+      department: props.department
     };
   }
 
-  getLayout = () => this.props.deskproLayout.find(d => d.get('department') === this.state.department);
+  getLayout = () => {
+    const layout = this.props.deskproLayout.find(d => d.get('department') === this.state.department);
+    if (layout) {
+      return layout;
+    }
+    return this.props.deskproLayout.find(d => d.get('department') === null);
+  };
 
   getInitialValues = () => {
     const initialValues = {};
     this.getLayout().get('fields', []).forEach((field) => {
-      initialValues[field.get('field_id')] = '';
+      if (field.get('field_id') === 'department') {
+        initialValues.department = this.state.department;
+      } else {
+        initialValues[field.get('field_id')] = '';
+      }
     });
     return initialValues;
   };
@@ -44,7 +61,32 @@ class TicketForm extends React.Component {
     return Yup.object().shape(shape);
   };
 
-  renderFields = () => this.getLayout().get('fields', []).map(field => <TicketField key={field.get('field_id')} field={field} />);
+  handleDepartmentChange = (department) => {
+    this.setState({
+      department
+    });
+  };
+
+  renderFields = () => {
+    const { departments } = this.props;
+    return this.getLayout().get('fields', []).map((field) => {
+      if (field.get('field_id') === 'department') {
+        return (
+          <TicketDepartment
+            key="department"
+            departments={departments}
+            handleChange={this.handleDepartmentChange}
+          />
+        );
+      }
+      return (
+        <TicketField
+          key={field.get('field_id')}
+          field={field}
+        />
+      );
+    });
+  };
 
   render() {
     return (

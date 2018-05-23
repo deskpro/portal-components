@@ -12,6 +12,7 @@
   --checkbox-border: #dce4eb;
   --input-padding: 11px 10px 11px 0;
   --input-height: 70px;
+  --textarea-background: #f8fafc;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Rubik');
@@ -58,6 +59,10 @@
     color: var(--text-color);
     border: none;
     border-bottom: 1px solid var(--divider-color);
+  }
+  & input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 50px white inset;
+    -webkit-text-fill-color: var(--text-color) !important;
   }
   & input:focus {
     outline: none;
@@ -159,6 +164,43 @@
   & :-ms-input-placeholder { /* Internet Explorer 10+ */
     color: transparent;
   }
+
+  & textarea.dp-pc_input {
+    font-size: 16px;
+    width: calc(100% - 20px);
+    padding: 10px;
+    line-height: 22px;
+    margin-left: 10px;
+    display: block;
+    color: var(--text-color);
+    border: 1px solid var(--checkbox-border);
+    border-radius: 4px;
+    background-color: var(--textarea-background);
+    margin-top: 30px;
+  }
+  & textarea:focus {
+    outline: none;
+  }
+  & textarea:focus ~ .indicator {
+    height: 100%;
+    top: 0;
+  }
+  & textarea:focus ~ .indicator:before,
+  & textarea:focus ~ .indicator:after {
+    height: 50%;
+  }
+  & textarea ~ .dp-pc_label,
+  &:not(.dp-pc_empty) textarea ~ .dp-pc_label {
+    position: absolute;
+    top: -30px;
+    font-size: 18px;
+    color: var(--label-color);
+    left: 10px;
+  }
+
+  /******************************
+      Dropdown
+  *******************************/
 
   & .Select {
     & .Select-control {
