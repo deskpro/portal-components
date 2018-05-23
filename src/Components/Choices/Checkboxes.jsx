@@ -109,12 +109,6 @@ Checkboxes.propTypes = {
     label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
     value: PropTypes.any.isRequired
   })),
-  className: PropTypes.string,
-};
-
-Checkboxes.defaultProps = {
-  ...Field.defaultProps,
-  className: ''
 };
 
 export default Checkboxes;

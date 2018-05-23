@@ -6,6 +6,7 @@ import Progress from './Elements/Progress';
 
 import Checkbox from './Inputs/Checkbox';
 import DatePicker from './Inputs/DatePicker';
+import DateTimePicker from './Inputs/DateTimePicker';
 import Email from './Inputs/Email';
 import FileUpload from './Inputs/FileUpload';
 import Number from './Inputs/Number';
@@ -31,6 +32,7 @@ export {
 
   Checkbox,
   DatePicker,
+  DateTimePicker,
   Email,
   FileUpload,
   Number,

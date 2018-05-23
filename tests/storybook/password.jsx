@@ -2,19 +2,19 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { Formik } from 'formik';
-import { Form, Text, Submit } from '../../src/Components';
+import { Form, Password, Submit } from '../../src/Components';
 
 
 storiesOf('Input', module)
-  .add('Email', () => (
+  .add('Password', () => (
     <Formik
-      initialValues={{ email: '' }}
+      initialValues={{ password: '' }}
       onSubmit={action('submit')}
       render={() => (
         <Form>
-          <Text
-            name="email"
-            label="Email"
+          <Password
+            name="password"
+            label="Password"
             required
           />
           <Submit>Submit</Submit>

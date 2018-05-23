@@ -98,12 +98,6 @@ Radio.propTypes = {
     label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
     value: PropTypes.any.isRequired
   })),
-  className: PropTypes.string,
-};
-
-Radio.defaultProps = {
-  ...Field.defaultProps,
-  className: ''
 };
 
 export default Radio;

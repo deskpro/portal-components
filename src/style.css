@@ -575,6 +575,55 @@
     color: var(--label-color);
     left: 10px;
   }
+
+  /******************************
+      Date Picker
+  *******************************/
+  & .dp-pc_date-picker {
+    & input.dp-pc_date-picker_input {
+      font-size: 18px;
+      padding: var(--input-padding);
+      margin-left: 10px;
+      display: block;
+      height: var(--input-height);
+      width: calc(100% - 20px);
+      color: var(--text-color);
+      border: none;
+      border-bottom: 1px solid var(--divider-color);
+    }
+    & svg {
+      width: 20px;
+      margin-left: 10px;
+      margin-bottom: -2px;
+    }
+    & .SVGInline + div {
+      display: inline-block;
+    }
+    &.focused {
+      & ~ .indicator:before,
+      & ~ .indicator:after {
+        height: 50%;
+      }
+      & svg .st0 {
+        fill: var(--primary-color);
+      }
+      & ~ .dp-pc_label {
+        top: 11px;
+        left: 10px;
+        font-size: 10px;
+        color: var(--primary-color);
+      }
+    }
+    & .react-datepicker__current-month--hasYearDropdown.react-datepicker__current-month--hasMonthDropdown {
+      display: none;
+    }
+    & .react-datepicker__time-list {
+      -webkit-padding-start: 0;
+    }
+  }
+  & .dp-pc_date-picker_label {
+    left: 40px;
+  }
 }
 .dp-pc_form.show-hover {
   & .dp-pc_field:hover {
