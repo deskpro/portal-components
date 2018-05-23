@@ -9,4 +9,5 @@ import './file_upload';
 import './password';
 import './radio';
 import './text';
+import './textarea';
 import './ticket_form';

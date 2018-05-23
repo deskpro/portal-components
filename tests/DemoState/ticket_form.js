@@ -1062,3 +1062,4 @@ const ticketLayoutRaw = {
 };
 
 export const ticketLayout = fromJS(ticketLayoutRaw.data);
+export const departments = fromJS(ticketLayoutRaw.meta.departments);
