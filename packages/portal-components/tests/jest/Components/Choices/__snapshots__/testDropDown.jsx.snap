@@ -128,15 +128,11 @@ exports[`>>> DropDown --- Snapshot +++capturing Snapshot of DropDown 1`] = `
     />
     <span
       className="dp-pc_description"
-    >
-      
-    </span>
+    />
     <label
       className="dp-pc_label"
       htmlFor="field_1"
-    >
-      
-    </label>
+    />
   </div>
 </form>
 `;

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import DropZone from 'react-dropzone';
 import SVGInline from 'react-svg-inline';
 import { formatFileSize } from '@deskpro/js-utils/dist/numbers';
@@ -128,6 +129,8 @@ class FileUpload extends Field {
     this.state = {
       files:    [],
       progress: -1,
+      focused:  false,
+      hovered:  false,
     };
   }
 
@@ -163,6 +166,37 @@ class FileUpload extends Field {
     }
   };
 
+  handleKeyPress = (e) => {
+    if (e.key === ' ') {
+      e.preventDefault();
+      this.dropZone.open();
+    }
+  };
+
+  handleBlur = () => {
+    this.setState({
+      focused: false
+    });
+  };
+
+  handleFocus = () => {
+    this.setState({
+      focused: true
+    });
+  };
+
+  handleMouseEnter = () => {
+    this.setState({
+      hovered: true
+    });
+  };
+
+  handleMouseLeave = () => {
+    this.setState({
+      hovered: false
+    });
+  };
+
   renderLabel = () => {
     const {
       label,
@@ -177,15 +211,17 @@ class FileUpload extends Field {
     /* eslint-enable jsx-a11y/label-has-for */
   };
 
-  renderIndicator = () => null;
-
   renderField = (form) => {
     const { multiple } = this.props;
     this.setFieldValue = form.setFieldValue;
     this.setFieldTouched = form.setFieldTouched;
 
+    /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
     return (
-      <div className="dp-pc_file-upload">
+      <div className={
+        classNames('dp-pc_file-upload', { focused: this.state.focused, hovered: this.state.hovered })
+      }
+      >
         <DropZone
           onDrop={this.handleDrop}
           multiple={multiple}
@@ -193,8 +229,17 @@ class FileUpload extends Field {
           inputProps={{
             id: this.id
           }}
+          ref={(c) => { this.dropZone = c; }}
+          onMouseEnter={this.handleMouseEnter}
+          onMouseLeave={this.handleMouseLeave}
         >
-          <div className="choose">
+          <div
+            className="choose"
+            tabIndex="0"
+            onKeyPress={this.handleKeyPress}
+            onFocus={this.handleFocus}
+            onBlur={this.handleBlur}
+          >
             <SVGInline svg={fileIcon} />
             Choose {multiple ? 'files' : 'a file'}
           </div>
@@ -210,6 +255,7 @@ class FileUpload extends Field {
         </ul>
       </div>
     );
+    /* eslint-enable jsx-a11y/no-noninteractive-tabindex */
   }
 }
 

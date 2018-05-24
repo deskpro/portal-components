@@ -3,24 +3,80 @@ import PropTypes from 'prop-types';
 import FileUpload from './Inputs/FileUpload';
 import Text from './Inputs/Text';
 import Textarea from './Inputs/Textarea';
+import DatePicker from './Inputs/DatePicker';
+import DateTimePicker from './Inputs/DateTimePicker';
+import Checkboxes from './Choices/Checkboxes';
+import DropDown from './Choices/DropDown';
+import Radio from './Choices/Radio';
 
 class TicketField extends React.Component {
   static propTypes = {
-    field: PropTypes.object.isRequired,
+    field:         PropTypes.object.isRequired,
+    fileUploadUrl: PropTypes.string.isRequired,
+    csrfToken:     PropTypes.string.isRequired,
   };
 
-  renderCustomField = () => 'Custom field';
+  renderCustomField = () => {
+    const { field, fileUploadUrl, csrfToken } = this.props;
+    const name = field.get('field_id');
+    const props = {
+      label: field.getIn(['data', 'title'], name),
+      name
+    };
+    let Component = Text;
+    switch (field.getIn(['data', 'widget_type'])) {
+      case 'date':
+        Component = DatePicker;
+        break;
+      case 'datetime':
+        Component = DateTimePicker;
+        break;
+      case 'checkbox':
+        Component = Checkboxes;
+        props.options = field.getIn(['data', 'choices'], []).toArray().map(option => ({ value: option.get('id'), label: option.get('title') }));
+        break;
+      case 'choice':
+        Component = DropDown;
+        props.options = field.getIn(['data', 'choices'], []).toArray().map(option => ({ value: option.get('id'), label: option.get('title') }));
+        break;
+      case 'radio':
+        Component = Radio;
+        props.options = field.getIn(['data', 'choices'], []).toArray().map(option => ({ value: option.get('id'), label: option.get('title') }));
+        break;
+      case 'file':
+        Component = FileUpload;
+        props.url = fileUploadUrl;
+        props.csrfToken = csrfToken;
+        break;
+      case 'textarea':
+        Component = Textarea;
+        break;
+      case 'text':
+      default:
+        Component = Text;
+    }
+    return <Component {...props} />;
+  };
 
   render() {
-    const { field } = this.props;
+    const { field, fileUploadUrl, csrfToken } = this.props;
     if (field.get('field_id').match(/^ticket_field/)) {
       return this.renderCustomField();
     }
     switch (field.get('field_id')) {
       case 'message':
         return <Textarea name="message" label="Message" />;
+      case 'subject':
+        return <Text name="subject" label="Subject" />;
       case 'attachments':
-        return <FileUpload name="attachments" label="Attachments" />;
+        return (
+          <FileUpload
+            name="attachments"
+            label="Attachments"
+            url={fileUploadUrl}
+            csrfToken={csrfToken}
+          />
+        );
       default:
         return (
           <Text

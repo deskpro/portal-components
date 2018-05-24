@@ -16,6 +16,7 @@ class Radio extends Field {
   handleKeyPress = (e, form, value) => {
     const { name } = this.props;
     if (e.key === ' ') {
+      e.preventDefault();
       form.setFieldValue(name, value);
     }
   };

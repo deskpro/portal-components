@@ -6,7 +6,7 @@ import { Formik } from 'formik';
 import '@deskpro/react-datepicker-hijri/dist/react-datepicker.css';
 import { Form, DatePicker, Submit } from '../../src/Components';
 
-moment.locale('en');
+moment.locale('ar');
 
 
 storiesOf('Input', module)
