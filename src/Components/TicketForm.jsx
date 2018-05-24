@@ -13,10 +13,14 @@ class TicketForm extends React.Component {
     departments:   PropTypes.object.isRequired,
     onSubmit:      PropTypes.func.isRequired,
     department:    PropTypes.number,
+    fileUploadUrl: PropTypes.string.isRequired,
+    csrfToken:     PropTypes.string.isRequired,
+    showHover:     PropTypes.bool,
   };
 
   static defaultProps = {
-    department: null
+    department: null,
+    showHover:  true,
   };
 
   constructor(props) {
@@ -68,34 +72,41 @@ class TicketForm extends React.Component {
   };
 
   renderFields = () => {
-    const { departments } = this.props;
+    const { departments, fileUploadUrl, csrfToken } = this.props;
     return this.getLayout().get('fields', []).map((field) => {
-      if (field.get('field_id') === 'department') {
-        return (
-          <TicketDepartment
-            key="department"
-            departments={departments}
-            handleChange={this.handleDepartmentChange}
-          />
-        );
+      switch (field.get('field_id')) {
+        case 'department':
+          return (
+            <TicketDepartment
+              key="department"
+              departments={departments}
+              handleChange={this.handleDepartmentChange}
+            />
+          );
+        default:
+          return (
+            <TicketField
+              key={field.get('field_id')}
+              field={field}
+              fileUploadUrl={fileUploadUrl}
+              csrfToken={csrfToken}
+            />
+          );
       }
-      return (
-        <TicketField
-          key={field.get('field_id')}
-          field={field}
-        />
-      );
     });
   };
 
   render() {
+    const { showHover } = this.props;
     return (
       <Formik
         initialValues={this.getInitialValues()}
         onSubmit={this.props.onSubmit}
         validationSchema={this.getValidationSchema()}
         render={() => (
-          <Form>
+          <Form
+            showHover={showHover}
+          >
             {this.renderFields()}
             <Submit>Submit</Submit>
           </Form>

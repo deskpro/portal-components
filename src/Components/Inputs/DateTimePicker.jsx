@@ -34,7 +34,7 @@ class DateTimePicker extends DatePicker {
   renderIcon = () => <SVGInline svg={dateTimeIcon} />;
 }
 
-DatePicker.defaultProps = {
+DateTimePicker.defaultProps = {
   ...Field.defaultProps,
   format: 'DD/MM/Y HH:mm'
 };

@@ -15,6 +15,7 @@ class Checkboxes extends Field {
   handleKeyPress = (e, form, arrayHelpers, value) => {
     const { name } = this.props;
     if (e.key === ' ') {
+      e.preventDefault();
       if (!form.values[name].includes(value)) {
         arrayHelpers.push(value);
       } else {

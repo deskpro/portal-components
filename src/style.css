@@ -29,6 +29,8 @@
   & .dp-pc_submit {
     width: 135px;
     height: 48px;
+    margin-top: 10px;
+    margin-left: 10px;
     border-radius: 4px;
     background-color: var(--primary-color);
     font-size: 18px;
@@ -176,12 +178,12 @@
     border: 1px solid var(--checkbox-border);
     border-radius: 4px;
     background-color: var(--textarea-background);
-    margin-top: 30px;
+    margin-top: 40px;
   }
   & textarea:focus {
     outline: none;
   }
-  & textarea:focus ~ .indicator {
+  & textarea ~ .indicator {
     height: 100%;
     top: 0;
   }
@@ -205,6 +207,8 @@
   & .Select {
     & .Select-control {
       border: none;
+      border-bottom: 1px solid var(--divider-color);
+      border-radius: 0;
       padding: var(--input-padding);
       margin-left: 10px;
       height: var(--input-height);
@@ -386,6 +390,7 @@
   & .dp-pc_checkboxes_checkbox {
     margin-top: 5px;
     display: inline-block;
+    cursor: pointer;
     & > input {
       display: none;
     }
@@ -396,7 +401,6 @@
       border-radius: 4px;
       border: 2px solid var(--checkbox-border);
       display: inline-block;
-      cursor: pointer;
       position: relative;
       margin-right: 3px;
       background-color: #FFF;
@@ -428,7 +432,8 @@
       margin-right: 20px;
       font-size: 16px;
     }
-    &:focus {
+    &:focus,
+    &:hover {
       outline: none;
       & i {
         border-color: var(--text-color);
@@ -532,12 +537,13 @@
   *******************************/
   & .dp-pc_file-upload {
     color: var(--text-color);
+    margin-left: 10px;
     & .dp-pc_file-upload__dropzone {
       border: 2px dashed var(--checkbox-border);
       border-radius: 4px;
       display: inline-block;
       padding: 10px 23px 10px 10px;
-      margin-top: 25px;
+      margin-top: 40px;
       white-space: nowrap;
       cursor: pointer;
       & .choose {
@@ -559,15 +565,15 @@
         margin-right: 8px;
         margin-bottom: -2px;
       }
-      &:hover {
-        & .choose {
-          border-color: var(--primary-color);
-          color: var(--primary-color);
+      &:hover .choose,
+      & .choose:focus {
+        outline: none;
+        border-color: var(--primary-color);
+        color: var(--primary-color);
+        transition: 0.2s ease all;
+        & .SVGInline > svg .st0 {
+          fill: var(--primary-color);
           transition: 0.2s ease all;
-          & .SVGInline > svg .st0 {
-            fill: var(--primary-color);
-            transition: 0.2s ease all;
-          }
         }
       }
     }
@@ -600,6 +606,16 @@
         }
       }
     }
+    & ~ .indicator {
+      top: 40px;
+      height: 75px;
+    }
+    &.focused {
+      & ~ .indicator:before,
+      & ~ .indicator:after {
+        height: 50%;
+      }
+    }
   }
   &.dp-pc_error .dp-pc_file-upload__dropzone {
     border-color: var(--error-color);
@@ -612,7 +628,7 @@
 
   & .dp-pc_file-input_label {
     position: absolute;
-    top: 3px;
+    top: 10px;
     font-size: 16px;
     color: var(--label-color);
     left: 10px;
@@ -622,24 +638,33 @@
       Date Picker
   *******************************/
   & .dp-pc_date-picker {
+    border-bottom: 1px solid var(--divider-color);
+    width: calc(100% - 20px);
+    margin-left: 10px;
     & input.dp-pc_date-picker_input {
       font-size: 18px;
       padding: var(--input-padding);
-      margin-left: 10px;
       display: block;
       height: var(--input-height);
-      width: calc(100% - 20px);
       color: var(--text-color);
+      margin-left: 10px;
       border: none;
-      border-bottom: 1px solid var(--divider-color);
+      width: 100%;
     }
     & svg {
       width: 20px;
-      margin-left: 10px;
-      margin-bottom: -2px;
+      margin-left: 0;
+      margin-bottom: -4px;
     }
     & .SVGInline + div {
       display: inline-block;
+      width: calc(100% - 20px);
+    }
+    & .react-datepicker-wrapper {
+      width: 100%;
+    }
+    & .react-datepicker__input-container {
+      width: 100%;
     }
     &.focused {
       & ~ .indicator:before,
@@ -678,7 +703,13 @@
     & .dp-pc_checkboxes ~ .indicator:before,
     & .dp-pc_checkboxes ~ .indicator:after,
     & .dp-pc_radios ~ .indicator:before,
-    & .dp-pc_radios ~ .indicator:after {
+    & .dp-pc_radios ~ .indicator:after,
+    & .dp-pc_file-upload.hovered ~ .indicator:before,
+    & .dp-pc_file-upload.hovered ~ .indicator:after,
+    & .dp-pc_date-picker ~ .indicator:before,
+    & .dp-pc_date-picker ~ .indicator:after,
+    & textarea ~ .indicator:before,
+    & textarea ~ .indicator:after {
       height: 50%;
     }
   }

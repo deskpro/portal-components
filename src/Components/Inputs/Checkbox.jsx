@@ -17,6 +17,7 @@ class Checkbox extends Field {
   handleKeyPress = (e, form) => {
     const { name } = this.props;
     if (e.key === ' ') {
+      e.preventDefault();
       form.setFieldValue(name, !getIn(form.values, name));
     }
   };

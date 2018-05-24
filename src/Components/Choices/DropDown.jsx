@@ -36,4 +36,8 @@ DropDown.propTypes = {
   handleChange: PropTypes.func,
 };
 
+DropDown.defaultProps = {
+  handleChange() {}
+};
+
 export default DropDown;

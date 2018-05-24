@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import moment from 'moment';
+import moment from 'moment-hijri';
 import ReactDatePicker from '@deskpro/react-datepicker-hijri';
 import SVGInline from 'react-svg-inline';
 import { getIn } from 'formik/dist/formik';

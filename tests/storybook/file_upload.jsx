@@ -28,8 +28,8 @@ storiesOf('Input', module)
             label="Attachments"
             name="files"
             url="http://deskpro5.local/en/dpblob"
-            multiple
             csrfToken="123456"
+            multiple
           />
           <Submit>submit</Submit>
         </Form>
