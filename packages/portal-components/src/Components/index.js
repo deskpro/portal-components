@@ -9,6 +9,7 @@ import DatePicker from './Inputs/DatePicker';
 import DateTimePicker from './Inputs/DateTimePicker';
 import Email from './Inputs/Email';
 import FileUpload from './Inputs/FileUpload';
+import LikertScale from './Inputs/LikertScale';
 import Number from './Inputs/Number';
 import Password from './Inputs/Password';
 import Search from './Inputs/Search';
@@ -35,6 +36,7 @@ export {
   DateTimePicker,
   Email,
   FileUpload,
+  LikertScale,
   Number,
   Password,
   Search,

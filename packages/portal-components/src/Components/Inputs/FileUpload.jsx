@@ -197,6 +197,8 @@ class FileUpload extends Field {
     });
   };
 
+  renderDivider = () => null;
+
   renderLabel = () => {
     const {
       label,

@@ -6,7 +6,7 @@
   --description-color: #5f768a;
   --light-grey: #9fb3c4;
   --divider-color: #dee4eb;
-  --valid-label: #4eba5c;
+    --valid-label: #4eba5c;
   --box-shadow-30: rgba(39, 41, 86, 0.3);
   --option-background: #eff0f2;
   --checkbox-border: #dce4eb;
@@ -60,7 +60,6 @@
     width: calc(100% - 20px);
     color: var(--text-color);
     border: none;
-    border-bottom: 1px solid var(--divider-color);
   }
   & input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 50px white inset;
@@ -131,19 +130,16 @@
 
   /* DIVIDER ================================== */
   & .divider {
-    position: absolute;
-    height: 60%;
-    width: 100px;
-    top: 25%;
-    left: 10px;
-    pointer-events: none;
-    opacity: 0.5;
+    margin-left: 10px;
+    width: calc(100% - 20px);
+    height: 1px;
+    background-color: var(--divider-color);
   }
 
   & .dp-pc_error_message,
   & .dp-pc_description {
     font-size: 12px;
-    position: absolute;
+    margin-left: 10px;
     bottom: 5px;
     left: 11px;
     color: var(--label-color);
@@ -207,7 +203,6 @@
   & .Select {
     & .Select-control {
       border: none;
-      border-bottom: 1px solid var(--divider-color);
       border-radius: 0;
       padding: var(--input-padding);
       margin-left: 10px;
@@ -265,6 +260,9 @@
           color: var(--label-color);
         }
       }
+      &.has-value > .Select-control .Select-value .Select-value-label {
+        color: var(--label-color);
+      }
     }
     &.is-focused:not(.is-open) {
       & > .Select-control {
@@ -312,7 +310,6 @@
   & .dp-pc_checkbox {
     height: var(--input-height);
     padding: var(--input-padding);
-    border-bottom: 1px solid var(--divider-color);
     margin-left: 10px;
     width: calc(100% - 20px);
 
@@ -385,10 +382,9 @@
     margin-left: 10px;
     height: var(--input-height);
     width: calc(100% - 20px);
-    border-bottom: 1px solid var(--divider-color);
   }
   & .dp-pc_checkboxes_checkbox {
-    margin-top: 5px;
+    margin-top: 10px;
     display: inline-block;
     cursor: pointer;
     & > input {
@@ -461,10 +457,9 @@
     margin-left: 10px;
     height: var(--input-height);
     width: calc(100% - 20px);
-    border-bottom: 1px solid var(--divider-color);
   }
   & .dp-pc_radio {
-    margin-top: 5px;
+    margin-top: 10px;
     display: inline-block;
     & > input {
       display: none;
@@ -638,7 +633,6 @@
       Date Picker
   *******************************/
   & .dp-pc_date-picker {
-    border-bottom: 1px solid var(--divider-color);
     width: calc(100% - 20px);
     margin-left: 10px;
     & input.dp-pc_date-picker_input {
@@ -691,26 +685,93 @@
   & .dp-pc_date-picker_label {
     left: 40px;
   }
+
+  /******************************
+      Likert scale
+  *******************************/
+  & .dp-pc_likert {
+    margin-left: 10px;
+    width: calc(100% - 20px);
+    padding: 30px 10px 10px 0;
+    & label {
+      cursor: pointer;
+    }
+    & .dp-pc_likert_input {
+      display: inline-block;
+      width: 100px;
+      text-align: center;
+      color: var(--label-color);
+      &:first-child .dp-pc_likert_number {
+        border-left-width: 1px;
+        border-radius: 4px 0 0 4px;
+      }
+      &:last-child .dp-pc_likert_number {
+        border-right-width: 1px;
+        border-radius: 0 4px 4px 0;
+      }
+      &:focus {
+        outline: none;
+        & .dp-pc_likert_number {
+          background-color: var(--primary-color);
+          color: #fff;
+        }
+        & .dp-pc_likert_label {
+          color: var(--primary-color);
+        }
+      }
+    }
+    &.focused ~ .indicator:before,
+    &.focused ~ .indicator:after {
+      height: 50%;
+    }
+    & .dp-pc_likert_number {
+      height: 25px;
+      display: block;
+      font-size: 16px;
+      border-color: var(--checkbox-border);
+      background-color: var(--textarea-background);
+      border-width: 1px 0;
+      border-style: solid;
+      line-height: 25px;
+    }
+    & .dp-pc_likert_label {
+      display: block;
+      font-size: 12px;
+      margin-top: 6px;
+    }
+    & input:checked ~ .dp-pc_likert_number {
+      background-color: var(--valid-label) !important;
+      color: #fff;
+    }
+    & input:checked ~ .dp-pc_likert_label {
+      color: var(--valid-label) !important;
+    }
+    & ~ .indicator {
+      top: 0;
+      height: 72px;
+    }
+  }
+  &:not(.dp-pc_empty) .dp-pc_likert ~ .dp-pc_label,
+  & .dp-pc_likert ~ .dp-pc_label {
+    font-size: inherit;
+    color: var(--label-color);
+    top: 0;
+  }
 }
 .dp-pc_form.show-hover {
   & .dp-pc_field:hover {
-    & input ~ .indicator:before,
-    & input ~ .indicator:after,
-    & .Select ~ .indicator:before,
-    & .Select ~ .indicator:after,
-    & .dp-pc_checkbox ~ .indicator:before,
-    & .dp-pc_checkbox ~ .indicator:after,
-    & .dp-pc_checkboxes ~ .indicator:before,
-    & .dp-pc_checkboxes ~ .indicator:after,
-    & .dp-pc_radios ~ .indicator:before,
-    & .dp-pc_radios ~ .indicator:after,
-    & .dp-pc_file-upload.hovered ~ .indicator:before,
-    & .dp-pc_file-upload.hovered ~ .indicator:after,
-    & .dp-pc_date-picker ~ .indicator:before,
-    & .dp-pc_date-picker ~ .indicator:after,
-    & textarea ~ .indicator:before,
-    & textarea ~ .indicator:after {
+    & .indicator:before,
+    & .indicator:after {
       height: 50%;
+    }
+  }
+  & .dp-pc_likert .dp-pc_likert_input:hover {
+    & .dp-pc_likert_number {
+      background-color: var(--primary-color);
+      color: #fff;
+    }
+    & .dp-pc_likert_label {
+      color: var(--primary-color);
     }
   }
 }
