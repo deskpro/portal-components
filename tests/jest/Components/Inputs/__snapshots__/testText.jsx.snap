@@ -22,17 +22,15 @@ exports[`>>> Text --- Snapshot +++capturing Snapshot of Text 1`] = `
     <span
       className="indicator"
     />
-    <span
-      className="dp-pc_description"
-    >
-      
-    </span>
     <label
       className="dp-pc_label"
       htmlFor="field_1"
     >
       
     </label>
+    <div
+      className="divider"
+    />
   </div>
 </form>
 `;

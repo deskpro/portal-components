@@ -33,15 +33,18 @@ class TicketField extends React.Component {
         break;
       case 'checkbox':
         Component = Checkboxes;
-        props.options = field.getIn(['data', 'choices'], []).toArray().map(option => ({ value: option.get('id'), label: option.get('title') }));
+        props.options = field.getIn(['data', 'choices'], [])
+          .toArray().map(option => ({ value: option.get('id'), label: option.get('title') }));
         break;
       case 'choice':
         Component = DropDown;
-        props.options = field.getIn(['data', 'choices'], []).toArray().map(option => ({ value: option.get('id'), label: option.get('title') }));
+        props.options = field.getIn(['data', 'choices'], [])
+          .toArray().map(option => ({ value: option.get('id'), label: option.get('title') }));
         break;
       case 'radio':
         Component = Radio;
-        props.options = field.getIn(['data', 'choices'], []).toArray().map(option => ({ value: option.get('id'), label: option.get('title') }));
+        props.options = field.getIn(['data', 'choices'], [])
+          .toArray().map(option => ({ value: option.get('id'), label: option.get('title') }));
         break;
       case 'file':
         Component = FileUpload;

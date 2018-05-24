@@ -91,17 +91,21 @@ const ticketLayoutRaw = {
             title:       'Widget Description',
             description: 'A custom  field',
             options:     {
-              default_value: 'Assumenda alias vel recusandae in. Eaque eum excepturi quos nam nam. Similique consequuntur ea suscipit et vero at odit. Asperiores voluptatem illo reprehenderit enim delectus dolorum iure.'
+              default_value: 'Assumenda alias vel recusandae in. Eaque eum excepturi quos nam nam. ' +
+              'Similique consequuntur ea suscipit et vero at odit. ' +
+              'Asperiores voluptatem illo reprehenderit enim delectus dolorum iure.'
             },
             is_user_enabled: true,
             is_enabled:      true,
             display_order:   6,
             is_agent_field:  false,
             choices:         [],
-            default_value:   'Assumenda alias vel recusandae in. Eaque eum excepturi quos nam nam. Similique consequuntur ea suscipit et vero at odit. Asperiores voluptatem illo reprehenderit enim delectus dolorum iure.',
-            widget_type:     'textarea',
-            translations:    {},
-            aliases:         []
+            default_value:   'Assumenda alias vel recusandae in. Eaque eum excepturi quos nam nam. ' +
+            'Similique consequuntur ea suscipit et vero at odit. ' +
+            'Asperiores voluptatem illo reprehenderit enim delectus dolorum iure.',
+            widget_type:  'textarea',
+            translations: {},
+            aliases:      []
           }
         },
         {

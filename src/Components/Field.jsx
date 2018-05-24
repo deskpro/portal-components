@@ -58,9 +58,12 @@ class Field extends React.Component {
       description
     } = this.props;
 
-    return (
-      <span className="dp-pc_description">{description}</span>
-    );
+    if (description) {
+      return (
+        <span className="dp-pc_description">{description}</span>
+      );
+    }
+    return null;
   };
 
   renderLabel = () => {
@@ -79,6 +82,8 @@ class Field extends React.Component {
 
   renderIndicator = () => <span className="indicator" />;
 
+  renderDivider = () => <div className="divider" />;
+
   render() {
     const {
       name,
@@ -96,6 +101,7 @@ class Field extends React.Component {
               {this.renderIndicator()}
               { touch && error ? <ErrorMessage name={name} form={form} /> : this.renderDescription() }
               {this.renderLabel()}
+              {this.renderDivider()}
             </div>
           );
         }}

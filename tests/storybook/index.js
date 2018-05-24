@@ -6,6 +6,7 @@ import './datepicker';
 import './datetimepicker';
 import './email';
 import './file_upload';
+import './likert_scale';
 import './password';
 import './radio';
 import './text';

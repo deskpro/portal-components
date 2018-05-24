@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { Formik } from 'formik';
-import { Form, Checkboxes } from '../../src/Components';
+import { Form, Checkboxes, Submit } from '../../src/Components';
 
 const options = [
   { value: 'bacon', label: 'Bacon' },
@@ -25,7 +25,7 @@ storiesOf('Choices', module)
             options={options}
             label="Filling"
           />
-          <button>Submit</button>
+          <Submit>Submit</Submit>
         </Form>
       )}
     />

@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import AutosizeTextarea from 'react-textarea-autosize';
-import { getIn } from 'formik/dist/formik';
+import { getIn } from 'formik';
 import Field from '../Field';
 
 class Textarea extends Field {
@@ -9,6 +9,8 @@ class Textarea extends Field {
     super(props);
     this.type = 'textarea';
   }
+
+  renderDivider = () => null;
 
   renderField = (form) => {
     const {

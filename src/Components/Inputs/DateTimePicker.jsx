@@ -2,7 +2,7 @@ import React from 'react';
 import SVGInline from 'react-svg-inline';
 import dateTimeIcon from 'assets/date-time.svg';
 import moment from 'moment/moment';
-import { getIn } from 'formik/dist/formik';
+import { getIn } from 'formik';
 import DatePicker from './DatePicker';
 import Field from '../Field';
 

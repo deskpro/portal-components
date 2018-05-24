@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import moment from 'moment-hijri';
 import ReactDatePicker from '@deskpro/react-datepicker-hijri';
 import SVGInline from 'react-svg-inline';
-import { getIn } from 'formik/dist/formik';
+import { getIn } from 'formik';
 import calendarIcon from 'assets/calendar.svg';
 
 import Field from '../Field';
