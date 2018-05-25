@@ -20,7 +20,8 @@ class TicketField extends React.Component {
     const { field, fileUploadUrl, csrfToken } = this.props;
     const name = field.get('field_id');
     const props = {
-      label: field.getIn(['data', 'title'], name),
+      label:       field.getIn(['data', 'title'], name),
+      description: field.getIn(['data', 'description'], ''),
       name
     };
     let Component = Text;

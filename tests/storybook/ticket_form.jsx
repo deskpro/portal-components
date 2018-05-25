@@ -24,7 +24,7 @@ storiesOf('TicketForm', module)
       showHover={boolean('Show hover', false)}
       deskproLayout={ticketLayout}
       departments={departments}
-      department={5}
+      department={7}
       onSubmit={action('submit')}
       fileUploadUrl="http://deskpro5.local/en/dpblob"
       csrfToken="123456"
