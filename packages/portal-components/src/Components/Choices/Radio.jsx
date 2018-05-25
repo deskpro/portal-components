@@ -75,7 +75,7 @@ class Radio extends Field {
               name={name}
               type="radio"
               value={option.value}
-              checked={value === option.value}
+              checked={parseInt(value, 10) === option.value}
               onChange={form.handleChange}
               onBlur={form.handleBlur}
             />

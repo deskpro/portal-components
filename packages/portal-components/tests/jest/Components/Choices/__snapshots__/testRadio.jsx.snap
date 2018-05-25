@@ -23,7 +23,7 @@ exports[`>>> Radio --- Snapshot +++capturing Snapshot of Radio 1`] = `
         tabIndex="0"
       >
         <input
-          checked={true}
+          checked={false}
           id="field_1-first"
           name="radio"
           onBlur={[Function]}

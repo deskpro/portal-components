@@ -44,7 +44,7 @@ class TicketForm extends React.Component {
       if (field.get('field_id') === 'department') {
         initialValues.department = this.state.department;
       } else {
-        initialValues[field.get('field_id')] = '';
+        initialValues[field.get('field_id')] = field.getIn(['data', 'default_value'], '');
       }
     });
     return initialValues;
@@ -54,11 +54,16 @@ class TicketForm extends React.Component {
     // return lazy(obj)
     const shape = {};
     this.getLayout().get('fields', []).forEach((field) => {
-      let validationRule;
-      if (field.get('required', false)) {
-        validationRule = Yup.string().required('Field is required');
-      } else {
-        validationRule = Yup.string();
+      let validationRule = Yup.string();
+      if (field.get('required', false) || field.getIn(['data', 'options', 'validation_type']) === 'required') {
+        validationRule = validationRule.required('Field is required');
+      }
+      const regex = field.getIn(['data', 'options', 'regex']);
+      if (regex) {
+        validationRule = validationRule.matches(new RegExp(regex.split('/')[1]), {
+          message:            'Field is invalid',
+          excludeEmptyString: field.getIn(['data', 'options', 'regex_required'])
+        });
       }
       shape[field.get('field_id')] = validationRule;
     });
@@ -103,7 +108,8 @@ class TicketForm extends React.Component {
         initialValues={this.getInitialValues()}
         onSubmit={this.props.onSubmit}
         validationSchema={this.getValidationSchema()}
-        render={() => (
+      >
+        {() => (
           <Form
             showHover={showHover}
           >
@@ -111,7 +117,7 @@ class TicketForm extends React.Component {
             <Submit>Submit</Submit>
           </Form>
         )}
-      />
+      </Formik>
     );
   }
 }

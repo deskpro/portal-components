@@ -46,36 +46,6 @@ const ticketLayoutRaw = {
         },
         {
           field_type: 'ticket_field',
-          field_id:   'ticket_field_5',
-          options:    {
-            on_newticket:       true,
-            on_viewticket:      true,
-            on_viewticket_mode: 'always',
-            on_editticket:      true,
-            criteria:           null
-          },
-          required: null,
-          data:     {
-            id:          5,
-            parent:      null,
-            title:       'Widget Type',
-            description: 'A custom  field',
-            options:     {
-              default_value: 'distinctio'
-            },
-            is_user_enabled: true,
-            is_enabled:      true,
-            display_order:   5,
-            is_agent_field:  false,
-            choices:         [],
-            default_value:   'distinctio',
-            widget_type:     'text',
-            translations:    {},
-            aliases:         []
-          }
-        },
-        {
-          field_type: 'ticket_field',
           field_id:   'ticket_field_6',
           options:    {
             on_newticket:       true,
@@ -93,7 +63,12 @@ const ticketLayoutRaw = {
             options:     {
               default_value: 'Assumenda alias vel recusandae in. Eaque eum excepturi quos nam nam. ' +
               'Similique consequuntur ea suscipit et vero at odit. ' +
-              'Asperiores voluptatem illo reprehenderit enim delectus dolorum iure.'
+              'Asperiores voluptatem illo reprehenderit enim delectus dolorum iure.',
+              custom_css_classname: '',
+              validation_type:      'regex',
+              clickable_links:      '',
+              regex:                '/^Deskpro/',
+              regex_required:       true
             },
             is_user_enabled: true,
             is_enabled:      true,
@@ -123,7 +98,7 @@ const ticketLayoutRaw = {
             id:          7,
             parent:      null,
             title:       'Desired Sizes',
-            description: 'A custom  field',
+            description: '',
             options:     {
               multiple: true,
               expanded: true
@@ -679,11 +654,19 @@ const ticketLayoutRaw = {
           },
           required: null,
           data:     {
-            id:              24,
-            parent:          null,
-            title:           'Hotdog Kind',
-            description:     'A custom  field',
-            options:         {},
+            id:          24,
+            parent:      null,
+            title:       'Hotdog Kind',
+            description: 'A custom  field',
+            options:     {
+              custom_css_classname: '',
+              validation_type:      'required',
+              multiple:             false,
+              expanded:             false,
+              required:             true,
+              min_length:           '1',
+              max_length:           ''
+            },
             is_user_enabled: true,
             is_enabled:      true,
             display_order:   24,
@@ -752,17 +735,26 @@ const ticketLayoutRaw = {
           },
           required: null,
           data:     {
-            id:              33,
-            parent:          null,
-            title:           'Delivery Time',
-            description:     'A custom  field',
-            options:         {},
+            id:          33,
+            parent:      null,
+            title:       'Delivery Time',
+            description: 'A custom  field',
+            options:     {
+              custom_css_classname: '',
+              default_mode:         'current',
+              required:             false,
+              agent_required:       false,
+              date_valid_type:      'range',
+              date_valid_range1:    5,
+              date_valid_range2:    30,
+              date_valid_timezone:  'Europe/Berlin'
+            },
             is_user_enabled: true,
             is_enabled:      true,
             display_order:   33,
             is_agent_field:  false,
             choices:         [],
-            default_value:   null,
+            default_value:   '2018-05-25 10:40:42',
             widget_type:     'datetime',
             translations:    {},
             aliases:         []
