@@ -4,6 +4,7 @@ import './form';
 import './checkboxes';
 import './datepicker';
 import './datetimepicker';
+import './dropdown';
 import './email';
 import './file_upload';
 import './likert_scale';

@@ -59,11 +59,28 @@ class TicketForm extends React.Component {
         validationRule = validationRule.required('Field is required');
       }
       const regex = field.getIn(['data', 'options', 'regex']);
+      const widgetType = field.getIn(['data', 'widget_type'], null);
       if (regex) {
         validationRule = validationRule.matches(new RegExp(regex.split('/')[1]), {
           message:            'Field is invalid',
           excludeEmptyString: field.getIn(['data', 'options', 'regex_required'])
         });
+      }
+      if (widgetType === 'datetime' || widgetType === 'date') {
+        validationRule = Yup.date();
+        const dateValidType = field.getIn(['data', 'options', 'date_valid_type']);
+        if (dateValidType === 'range') {
+          if (field.getIn(['data', 'options', 'date_valid_range1'])) {
+            const range1 = new Date();
+            range1.setDate(range1.getDate() - field.getIn(['data', 'options', 'date_valid_range1']));
+            validationRule = validationRule.min(range1);
+          }
+          if (field.getIn(['data', 'options', 'date_valid_range2'])) {
+            const range2 = new Date();
+            range2.setDate(range2.getDate() + field.getIn(['data', 'options', 'date_valid_range2']));
+            validationRule = validationRule.max(range2);
+          }
+        }
       }
       shape[field.get('field_id')] = validationRule;
     });
@@ -105,6 +122,7 @@ class TicketForm extends React.Component {
     const { showHover } = this.props;
     return (
       <Formik
+        enableReinitialize
         initialValues={this.getInitialValues()}
         onSubmit={this.props.onSubmit}
         validationSchema={this.getValidationSchema()}

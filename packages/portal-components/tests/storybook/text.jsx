@@ -15,7 +15,7 @@ storiesOf('Input', module)
           <Text
             name="text"
             label="Text"
-            required
+            description="Test description"
           />
           <Submit>Submit</Submit>
         </Form>

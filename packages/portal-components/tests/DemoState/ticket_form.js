@@ -754,7 +754,7 @@ const ticketLayoutRaw = {
             display_order:   33,
             is_agent_field:  false,
             choices:         [],
-            default_value:   '2018-05-25 10:40:42',
+            default_value:   null,
             widget_type:     'datetime',
             translations:    {},
             aliases:         []

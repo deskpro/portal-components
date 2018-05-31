@@ -92,7 +92,7 @@ DatePicker.propTypes = {
 
 DatePicker.defaultProps = {
   ...Field.defaultProps,
-  format: 'DD/MM/Y'
+  format: 'DD/MM/YYYY'
 };
 
 export default DatePicker;
