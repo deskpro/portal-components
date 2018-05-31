@@ -96,7 +96,10 @@ class Field extends React.Component {
           const touch = getIn(form.touched, name);
           const value = getIn(form.values, name);
           return (
-            <div className={classNames('dp-pc_field', { 'dp-pc_error': touch && error, 'dp-pc_empty': !value })}>
+            <div className={classNames('dp-pc_field', {
+              'dp-pc_error': touch && error, 'dp-pc_empty': value === null || value.length === 0
+            })}
+            >
               {this.renderField(form)}
               { touch && error ? <ErrorMessage name={name} form={form} /> : this.renderDescription() }
               {this.renderIndicator()}

@@ -6,7 +6,7 @@ exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="dp-pc_field"
+    className="dp-pc_field dp-pc_empty"
   >
     <div
       className="dp-pc_checkboxes"

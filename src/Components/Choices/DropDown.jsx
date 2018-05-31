@@ -8,8 +8,9 @@ import Field from '../Field';
 class DropDown extends Field {
   handleChange = (form, value) => {
     const { name, handleChange } = this.props;
-    form.setFieldValue(name, value.value);
-    handleChange(value.value);
+    const newValue = value ? value.value : null;
+    form.setFieldValue(name, newValue);
+    handleChange(newValue);
   };
 
   renderField = (form) => {
