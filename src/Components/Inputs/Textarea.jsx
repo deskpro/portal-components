@@ -10,8 +10,6 @@ class Textarea extends Field {
     this.type = 'textarea';
   }
 
-  renderDivider = () => null;
-
   renderField = (form) => {
     const {
       name,

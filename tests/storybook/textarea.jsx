@@ -1,11 +1,13 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
+import { withKnobs, text } from '@storybook/addon-knobs/react';
 import { Formik } from 'formik';
 import { Form, Textarea, Submit } from '../../src/Components';
 
 
 storiesOf('Input', module)
+  .addDecorator(withKnobs)
   .add('Textarea', () => (
     <Formik
       initialValues={{ message: 'Initial message' }}
@@ -15,7 +17,7 @@ storiesOf('Input', module)
           <Textarea
             name="message"
             label="Message"
-            required
+            description={text('Test description')}
           />
           <Submit>Submit</Submit>
         </Form>

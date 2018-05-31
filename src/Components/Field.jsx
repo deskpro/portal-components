@@ -98,8 +98,8 @@ class Field extends React.Component {
           return (
             <div className={classNames('dp-pc_field', { 'dp-pc_error': touch && error, 'dp-pc_empty': !value })}>
               {this.renderField(form)}
-              {this.renderIndicator()}
               { touch && error ? <ErrorMessage name={name} form={form} /> : this.renderDescription() }
+              {this.renderIndicator()}
               {this.renderLabel()}
               {this.renderDivider()}
             </div>
