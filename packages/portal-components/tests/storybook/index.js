@@ -8,6 +8,7 @@ import './dropdown';
 import './email';
 import './file_upload';
 import './likert_scale';
+import './multiple_dropdown';
 import './password';
 import './radio';
 import './text';

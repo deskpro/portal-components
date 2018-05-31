@@ -1,5 +1,6 @@
 import Checkboxes from './Choices/Checkboxes';
 import DropDown from './Choices/DropDown';
+import MultipleDropDown from './Choices/MultipleDropDown';
 import Radio from './Choices/Radio';
 
 import Progress from './Elements/Progress';
@@ -27,6 +28,7 @@ import TicketForm from './TicketForm';
 export {
   Checkboxes,
   DropDown,
+  MultipleDropDown,
   Radio,
 
   Progress,
