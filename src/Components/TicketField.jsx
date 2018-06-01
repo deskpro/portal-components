@@ -7,6 +7,7 @@ import DatePicker from './Inputs/DatePicker';
 import DateTimePicker from './Inputs/DateTimePicker';
 import Checkboxes from './Choices/Checkboxes';
 import DropDown from './Choices/DropDown';
+import MultipleDropDown from './Choices/MultipleDropDown';
 import Radio from './Choices/Radio';
 
 class TicketField extends React.Component {
@@ -54,6 +55,11 @@ class TicketField extends React.Component {
         break;
       case 'textarea':
         Component = Textarea;
+        break;
+      case 'multichoice':
+        Component = MultipleDropDown;
+        props.options = field.getIn(['data', 'choices'], [])
+          .toArray().map(option => ({ value: option.get('id'), label: option.get('title') }));
         break;
       case 'text':
       default:
