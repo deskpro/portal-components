@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { List } from 'immutable';
 import { Formik } from 'formik';
 import Yup from 'yup';
 import Form from './Form';
@@ -44,7 +45,11 @@ class TicketForm extends React.Component {
       if (field.get('field_id') === 'department') {
         initialValues.department = this.state.department;
       } else {
-        initialValues[field.get('field_id')] = field.getIn(['data', 'default_value'], '');
+        let defaultValue = field.getIn(['data', 'default_value'], '');
+        if (defaultValue instanceof List) {
+          defaultValue = defaultValue.toArray();
+        }
+        initialValues[field.get('field_id')] = defaultValue;
       }
     });
     return initialValues;

@@ -530,7 +530,6 @@
   & .dp-pc_radios {
     padding: 23px 10px 11px 0;
     margin-left: 10px;
-    height: var(--input-height);
     width: calc(100% - 20px);
   }
   & .dp-pc_radio {
