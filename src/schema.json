@@ -1,0 +1,133 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Dynamic form configuration for DeskPRO",
+  "description": "JSON Schema of the dynamic form definition with visibility rules, validation criteria, etc",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "rules": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "op": {
+              "type": "string",
+              "enum": [
+                "eq", "gt", "gte", "lt", "lte", "in", "contains"
+              ]
+            },
+            "value": {
+              "type": ["string", "number", "boolean"]
+            }
+          },
+          "required": ["field", "op", "value"]
+        }
+      },
+      "fields": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "choice", "text", "password", "numeric", "date", "datetime", "checkbox", "radio", "file", "textarea", "multichoice"
+              ]
+            },
+            "default_value": {
+              "type": ["string", "number", "object", "boolean"]
+            },
+            "validation": {
+              "type": "array",
+              "items": {
+                "anyOf": [{
+                    "type": "string",
+                    "enum": ["required", "nullable", "max", "min", "length"]
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string",
+                        "const": "regex"
+                      },
+                      "regex": {
+                        "type": "string"
+                      }
+                    },
+                    "required": ["name", "regex"]
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string",
+                        "const": "date_range"
+                      },
+                      "from": {
+                        "type": ["string", "number"]
+                      },
+                      "to": {
+                        "type": ["string", "number"]
+                      }
+                    },
+                    "required": [
+                      "name", "from", "to"
+                    ]
+                  }
+                ]
+              },
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "field", "label", "type"
+          ],
+          "anyOf": [{
+            "properties": {
+              "type": {
+                "enum": [
+                  "choice", "checkbox", "radio", "multichoice"
+                ]
+              },
+              "choices": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": ["string", "number"]
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  },
+                  "required": ["id", "title"]
+                },
+                "minItems": 1
+              }
+            },
+            "required": ["choices"]
+          }]
+        },
+        "minItems": 1
+      }
+    },
+    "required": [
+      "fields"
+    ]
+  }
+}
