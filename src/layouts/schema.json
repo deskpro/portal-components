@@ -96,13 +96,17 @@
           "required": [
             "field", "label", "type"
           ],
-          "anyOf": [{
+          "if": {
             "properties": {
               "type": {
                 "enum": [
                   "choice", "checkbox", "radio", "multichoice"
                 ]
-              },
+              }
+            }
+          },
+          "then": {
+            "properties": {
               "choices": {
                 "type": "array",
                 "items": {
@@ -121,7 +125,7 @@
               }
             },
             "required": ["choices"]
-          }]
+          }
         },
         "minItems": 1
       }
