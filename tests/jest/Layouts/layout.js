@@ -2,7 +2,7 @@ import Ajv from 'ajv';
 
 import ticketFormLayout from '../../../src/layouts/ticketFormLayout';
 import layoutSchema from '../../../src/layouts/schema.json';
-import Layout from '../../../src/layouts/Layout';
+import { LayoutConfig } from '../../../src/layouts/Layout';
 
 describe('>>> Layout Schema — valid', () => {
   const ajv = new Ajv();
@@ -19,20 +19,20 @@ describe('>>> Layout Schema — valid', () => {
 });
 
 describe('>>> Layout helper class', () => {
-  const layout = new Layout(ticketFormLayout);
+  const layouts = new LayoutConfig(ticketFormLayout);
 
   it('should find a layout by matching rules', () => {
-    const match = layout.getMatchingLayout({ department: 5 });
-    expect(match).toEqual(layout.layout[0]);
+    const match = layouts.getMatchingLayout({ department: 5 });
+    expect(match).toEqual(layouts.layouts[0]);
   });
 
   it('should find layout without rules when no rules matched', () => {
-    const match = layout.getMatchingLayout({});
-    expect(match).toEqual(layout.layout[layout.layout.length - 1]);
+    const match = layouts.getMatchingLayout({});
+    expect(match).toEqual(layouts.layouts[layouts.layouts.length - 1]);
   });
 
   it('should get property of the field by path', () => {
-    const match = layout.getMatchingLayout({ department: 7 });
-    expect(match.fields[1].get('choices[0].title')).toEqual('Support');
+    const match = layouts.getMatchingLayout({ department: 7 });
+    expect(match.fields[1].get('options[0].label')).toEqual('Support');
   });
 });
