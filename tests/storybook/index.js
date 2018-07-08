@@ -14,3 +14,4 @@ import './radio';
 import './text';
 import './textarea';
 import './ticket_form';
+import './ticket_form_layout';
