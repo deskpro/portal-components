@@ -32,7 +32,7 @@
         "items": {
           "type": "object",
           "properties": {
-            "field": {
+            "name": {
               "type": "string"
             },
             "label": {
@@ -94,7 +94,7 @@
             }
           },
           "required": [
-            "field", "label", "type"
+            "name", "label", "type"
           ],
           "if": {
             "properties": {
@@ -107,31 +107,42 @@
           },
           "then": {
             "properties": {
-              "choices": {
+              "options": {
                 "type": "array",
                 "items": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": ["string", "number"]
-                    },
-                    "title": {
-                      "type": "string"
-                    }
-                  },
-                  "required": ["id", "title"]
+                  "$ref": "#/definitions/optionItem"
                 },
                 "minItems": 1
               }
             },
-            "required": ["choices"]
+            "required": ["options"]
           }
         },
         "minItems": 1
       }
-    },
-    "required": [
-      "fields"
-    ]
+    }
+  },
+  "required": [
+    "fields"
+  ],
+  "definitions": {
+    "optionItem": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": ["string", "number"]
+        },
+        "label": {
+          "type": "string"
+        },
+        "children": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/optionItem"
+          }
+        }
+      },
+      "required": ["value", "label"]
+    }
   }
 }

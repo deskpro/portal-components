@@ -3,33 +3,33 @@ export default [
     rules:  [{ field: 'department', op: 'eq', value: 5 }],
     fields: [
       {
-        field: 'person',
+        name:  'person',
         label: 'Person',
         type:  'text'
       },
       {
-        field:   'department',
+        name:    'department',
         label:   'Department',
         type:    'choice',
-        choices: [
-          { id: 1, title: 'Support' },
-          { id: 2, title: 'Sales' },
-          { id: 3, title: 'Support' },
-          { id: 4, title: 'Sales' },
-          { id: 5, title: 'Widgets' },
-          { id: 6, title: 'Regulation and Control of Magical Creatures' },
-          { id: 7, title: 'Regulation' },
-          { id: 8, title: 'Control' },
-          { id: 9, title: 'Hotdogs' }
+        options: [
+          { value: 1, label: 'Support' },
+          { value: 2, label: 'Sales' },
+          { value: 3, label: 'Support' },
+          { value: 4, label: 'Sales' },
+          { value: 5, label: 'Widgets' },
+          { value: 6, label: 'Regulation and Control of Magical Creatures' },
+          { value: 7, label: 'Regulation' },
+          { value: 8, label: 'Control' },
+          { value: 9, label: 'Hotdogs' }
         ]
       },
       {
-        field: 'subject',
+        name:  'subject',
         label: 'Subject',
         type:  'text'
       },
       {
-        field:        'ticket_field_6',
+        name:         'ticket_field_6',
         label:        'Widget Description',
         type:         'textarea',
         defaultValue:
@@ -38,25 +38,25 @@ export default [
           'Asperiores voluptatem illo reprehenderit enim delectus dolorum iure.'
       },
       {
-        field:        'ticket_field_7',
+        name:         'ticket_field_7',
         label:        'Desired Sizes',
         type:         'checkbox',
-        choices:      [{ id: 8, title: 'Small' }, { id: 9, title: 'Medium' }, { id: 10, title: 'Large' }],
+        options:      [{ value: 8, label: 'Small' }, { value: 9, label: 'Medium' }, { value: 10, label: 'Large' }],
         defaultValue: [10]
       },
       {
-        field:       'ticket_field_11',
+        name:        'ticket_field_11',
         label:       'Manufacture Date',
         description: 'A custom field',
         type:        'date'
       },
       {
-        field: 'attachments',
+        name:  'attachments',
         label: 'Attachments',
         type:  'file'
       },
       {
-        field: 'labels',
+        name:  'labels',
         label: 'Labels',
         type:  'text'
       }
@@ -66,70 +66,70 @@ export default [
     rules:  [{ field: 'department', op: 'eq', value: 7 }],
     fields: [
       {
-        field: 'person',
+        name:  'person',
         label: 'Person',
         type:  'text'
       },
       {
-        field:   'department',
+        name:    'department',
         label:   'Department',
         type:    'choice',
-        choices: [
-          { id: 1, title: 'Support' },
-          { id: 2, title: 'Sales' },
-          { id: 3, title: 'Support' },
-          { id: 4, title: 'Sales' },
-          { id: 5, title: 'Widgets' },
-          { id: 6, title: 'Regulation and Control of Magical Creatures' },
-          { id: 7, title: 'Regulation' },
-          { id: 8, title: 'Control' },
-          { id: 9, title: 'Hotdogs' }
+        options: [
+          { value: 1, label: 'Support' },
+          { value: 2, label: 'Sales' },
+          { value: 3, label: 'Support' },
+          { value: 4, label: 'Sales' },
+          { value: 5, label: 'Widgets' },
+          { value: 6, label: 'Regulation and Control of Magical Creatures' },
+          { value: 7, label: 'Regulation' },
+          { value: 8, label: 'Control' },
+          { value: 9, label: 'Hotdogs' }
         ]
       },
       {
-        field: 'subject',
+        name:  'subject',
         label: 'Subject',
         type:  'text'
       },
       {
-        field:       'ticket_field_12',
+        name:        'ticket_field_12',
         label:       'Reason for Complaint',
         description: 'A custom  field',
         type:        'radio',
-        choices:     [
-          { id: 13, title: 'Nuisance' },
-          { id: 14, title: 'Dangerous' },
-          { id: 15, title: 'Smelly' },
-          { id: 16, title: 'Ugly' },
-          { id: 17, title: 'Mean' },
-          { id: 18, title: 'Other' }
+        options:     [
+          { value: 13, label: 'Nuisance' },
+          { value: 14, label: 'Dangerous' },
+          { value: 15, label: 'Smelly' },
+          { value: 16, label: 'Ugly' },
+          { value: 17, label: 'Mean' },
+          { value: 18, label: 'Other' }
         ]
       },
       {
-        field:       'ticket_field_19',
+        name:        'ticket_field_19',
         label:       'Suggested Actions',
         description: 'A custom  field',
         type:        'multichoice',
-        choices:     [
-          { id: 20, title: 'Eviction' },
-          { id: 21, title: 'Shun' },
-          { id: 22, title: 'Fire them off to the moon' },
-          { id: 23, title: 'Strongly worded letter' }
+        options:     [
+          { value: 20, label: 'Eviction' },
+          { value: 21, label: 'Shun' },
+          { value: 22, label: 'Fire them off to the moon' },
+          { value: 23, label: 'Strongly worded letter' }
         ],
         defaultValue: [23]
       },
       {
-        field: 'message',
+        name:  'message',
         label: 'Message',
         type:  'textarea'
       },
       {
-        field: 'attachments',
+        name:  'attachments',
         label: 'Attachments',
         type:  'file'
       },
       {
-        field: 'labels',
+        name:  'labels',
         label: 'Labels',
         type:  'text'
       }
@@ -139,70 +139,70 @@ export default [
     rules:  [{ field: 'department', op: 'eq', value: 8 }],
     fields: [
       {
-        field: 'person',
+        name:  'person',
         label: 'Person',
         type:  'text'
       },
       {
-        field:   'department',
+        name:    'department',
         label:   'Department',
         type:    'choice',
-        choices: [
-          { id: 1, title: 'Support' },
-          { id: 2, title: 'Sales' },
-          { id: 3, title: 'Support' },
-          { id: 4, title: 'Sales' },
-          { id: 5, title: 'Widgets' },
-          { id: 6, title: 'Regulation and Control of Magical Creatures' },
-          { id: 7, title: 'Regulation' },
-          { id: 8, title: 'Control' },
-          { id: 9, title: 'Hotdogs' }
+        options: [
+          { value: 1, label: 'Support' },
+          { value: 2, label: 'Sales' },
+          { value: 3, label: 'Support' },
+          { value: 4, label: 'Sales' },
+          { value: 5, label: 'Widgets' },
+          { value: 6, label: 'Regulation and Control of Magical Creatures' },
+          { value: 7, label: 'Regulation' },
+          { value: 8, label: 'Control' },
+          { value: 9, label: 'Hotdogs' }
         ]
       },
       {
-        field: 'subject',
+        name:  'subject',
         label: 'Subject',
         type:  'text'
       },
       {
-        field:       'ticket_field_12',
+        name:        'ticket_field_12',
         label:       'Reason for Complaint',
         description: 'A custom  field',
         type:        'radio',
-        choices:     [
-          { id: 13, title: 'Nuisance' },
-          { id: 14, title: 'Dangerous' },
-          { id: 15, title: 'Smelly' },
-          { id: 16, title: 'Ugly' },
-          { id: 17, title: 'Mean' },
-          { id: 18, title: 'Other' }
+        options:     [
+          { value: 13, label: 'Nuisance' },
+          { value: 14, label: 'Dangerous' },
+          { value: 15, label: 'Smelly' },
+          { value: 16, label: 'Ugly' },
+          { value: 17, label: 'Mean' },
+          { value: 18, label: 'Other' }
         ]
       },
       {
-        field:       'ticket_field_19',
+        name:        'ticket_field_19',
         label:       'Suggested Actions',
         description: 'A custom  field',
         type:        'multichoice',
-        choices:     [
-          { id: 20, title: 'Eviction' },
-          { id: 21, title: 'Shun' },
-          { id: 22, title: 'Fire them off to the moon' },
-          { id: 23, title: 'Strongly worded letter' }
+        options:     [
+          { value: 20, label: 'Eviction' },
+          { value: 21, label: 'Shun' },
+          { value: 22, label: 'Fire them off to the moon' },
+          { value: 23, label: 'Strongly worded letter' }
         ],
         defaultValue: [23]
       },
       {
-        field: 'message',
+        name:  'message',
         label: 'Message',
         type:  'textarea'
       },
       {
-        field: 'attachments',
+        name:  'attachments',
         label: 'Attachments',
         type:  'file'
       },
       {
-        field: 'labels',
+        name:  'labels',
         label: 'Labels',
         type:  'text'
       }
@@ -212,73 +212,73 @@ export default [
     rules:  [{ field: 'department', op: 'eq', value: 9 }],
     fields: [
       {
-        field: 'person',
+        name:  'person',
         label: 'Person',
         type:  'text'
       },
       {
-        field:   'department',
+        name:    'department',
         label:   'Department',
         type:    'choice',
-        choices: [
-          { id: 1, title: 'Support' },
-          { id: 2, title: 'Sales' },
-          { id: 3, title: 'Support' },
-          { id: 4, title: 'Sales' },
-          { id: 5, title: 'Widgets' },
-          { id: 6, title: 'Regulation and Control of Magical Creatures' },
-          { id: 7, title: 'Regulation' },
-          { id: 8, title: 'Control' },
-          { id: 9, title: 'Hotdogs' }
+        options: [
+          { value: 1, label: 'Support' },
+          { value: 2, label: 'Sales' },
+          { value: 3, label: 'Support' },
+          { value: 4, label: 'Sales' },
+          { value: 5, label: 'Widgets' },
+          { value: 6, label: 'Regulation and Control of Magical Creatures' },
+          { value: 7, label: 'Regulation' },
+          { value: 8, label: 'Control' },
+          { value: 9, label: 'Hotdogs' }
         ]
       },
       {
-        field: 'subject',
+        name:  'subject',
         label: 'Subject',
         type:  'text'
       },
       {
-        field:       'ticket_field_24',
+        name:        'ticket_field_24',
         label:       'Hotdog Kind',
         description: 'A custom  field',
         type:        'choice',
-        choices:     [
-          { id: 25, title: 'Normal' },
+        options:     [
+          { value: 25, label: 'Normal' },
           {
-            id:       26,
-            title:    'German',
+            value:    26,
+            label:    'German',
             children: [
-              { id: 28, title: 'Extrawurst' },
+              { value: 28, label: 'Extrawurst' },
               {
-                id:       29,
-                title:    'Frankfurter',
-                children: [{ id: 31, title: 'W\u00fcrstchen' }]
+                value:    29,
+                label:    'Frankfurter',
+                children: [{ value: 31, label: 'W\u00fcrstchen' }]
               }
             ]
           },
-          { id: 27, title: 'Bratwurst' },
-          { id: 30, title: 'Rindswurst' },
-          { id: 32, title: 'Large' }
+          { value: 27, label: 'Bratwurst' },
+          { value: 30, label: 'Rindswurst' },
+          { value: 32, label: 'Large' }
         ]
       },
       {
-        field:       'ticket_field_33',
+        name:        'ticket_field_33',
         label:       'Delivery Time',
         description: 'A custom  field',
         type:        'datetime'
       },
       {
-        field: 'message',
+        name:  'message',
         label: 'Message',
         type:  'textarea'
       },
       {
-        field: 'attachments',
+        name:  'attachments',
         label: 'Attachments',
         type:  'file'
       },
       {
-        field: 'labels',
+        name:  'labels',
         label: 'Labels',
         type:  'text'
       }
@@ -287,73 +287,73 @@ export default [
   {
     fields: [
       {
-        field: 'person',
+        name:  'person',
         label: 'Person',
         type:  'text'
       },
       {
-        field:   'department',
+        name:    'department',
         label:   'Department',
         type:    'choice',
-        choices: [
-          { id: 1, title: 'Support' },
-          { id: 2, title: 'Sales' },
-          { id: 3, title: 'Support' },
-          { id: 4, title: 'Sales' },
-          { id: 5, title: 'Widgets' },
-          { id: 6, title: 'Regulation and Control of Magical Creatures' },
-          { id: 7, title: 'Regulation' },
-          { id: 8, title: 'Control' },
-          { id: 9, title: 'Hotdogs' }
+        options: [
+          { value: 1, label: 'Support' },
+          { value: 2, label: 'Sales' },
+          { value: 3, label: 'Support' },
+          { value: 4, label: 'Sales' },
+          { value: 5, label: 'Widgets' },
+          { value: 6, label: 'Regulation and Control of Magical Creatures' },
+          { value: 7, label: 'Regulation' },
+          { value: 8, label: 'Control' },
+          { value: 9, label: 'Hotdogs' }
         ]
       },
       {
-        field: 'subject',
+        name:  'subject',
         label: 'Subject',
         type:  'text'
       },
       {
-        field:       'ticket_field_24',
+        name:        'ticket_field_24',
         label:       'Hotdog Kind',
         description: 'A custom  field',
         type:        'choice',
-        choices:     [
-          { id: 25, title: 'Normal' },
+        options:     [
+          { value: 25, label: 'Normal' },
           {
-            id:       26,
-            title:    'German',
+            value:    26,
+            label:    'German',
             children: [
-              { id: 28, title: 'Extrawurst' },
+              { value: 28, label: 'Extrawurst' },
               {
-                id:       29,
-                title:    'Frankfurter',
-                children: [{ id: 31, title: 'W\u00fcrstchen' }]
+                value:    29,
+                label:    'Frankfurter',
+                children: [{ value: 31, label: 'W\u00fcrstchen' }]
               }
             ]
           },
-          { id: 27, title: 'Bratwurst' },
-          { id: 30, title: 'Rindswurst' },
-          { id: 32, title: 'Large' }
+          { value: 27, label: 'Bratwurst' },
+          { value: 30, label: 'Rindswurst' },
+          { value: 32, label: 'Large' }
         ]
       },
       {
-        field:       'ticket_field_33',
+        name:        'ticket_field_33',
         label:       'Delivery Time',
         description: 'A custom  field',
         type:        'datetime'
       },
       {
-        field: 'message',
+        name:  'message',
         label: 'Message',
         type:  'textarea'
       },
       {
-        field: 'attachments',
+        name:  'attachments',
         label: 'Attachments',
         type:  'file'
       },
       {
-        field: 'labels',
+        name:  'labels',
         label: 'Labels',
         type:  'text'
       }
