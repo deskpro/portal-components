@@ -20,7 +20,7 @@ class Field extends React.Component {
     description: '',
     className:   '',
     id:          null,
-    children:    null,
+    children:    null
   };
 
   constructor(props) {
@@ -34,10 +34,7 @@ class Field extends React.Component {
 
   renderField = () => {
     const {
-      name,
-      children,
-      className,
-      ...props
+      name, children, className, ...props
     } = this.props;
 
     return (
@@ -54,22 +51,16 @@ class Field extends React.Component {
   };
 
   renderDescription = () => {
-    const {
-      description
-    } = this.props;
+    const { description } = this.props;
 
     if (description) {
-      return (
-        <span className="dp-pc_description">{description}</span>
-      );
+      return <span className="dp-pc_description">{description}</span>;
     }
     return null;
   };
 
   renderLabel = () => {
-    const {
-      label,
-    } = this.props;
+    const { label } = this.props;
     const htmlFor = this.id;
     /* eslint-disable jsx-a11y/label-has-for */
     return (
@@ -85,9 +76,7 @@ class Field extends React.Component {
   renderDivider = () => <div className="divider" />;
 
   render() {
-    const {
-      name,
-    } = this.props;
+    const { name } = this.props;
     return (
       <FormikField
         name={name}
@@ -96,12 +85,14 @@ class Field extends React.Component {
           const touch = getIn(form.touched, name);
           const value = getIn(form.values, name);
           return (
-            <div className={classNames('dp-pc_field', {
-              'dp-pc_error': touch && error, 'dp-pc_empty': value === null || value.length === 0
-            })}
+            <div
+              className={classNames('dp-pc_field', {
+                'dp-pc_error': touch && error,
+                'dp-pc_empty': !value || value === null || value.length === 0
+              })}
             >
               {this.renderField(form)}
-              { touch && error ? <ErrorMessage name={name} form={form} /> : this.renderDescription() }
+              {touch && error ? <ErrorMessage name={name} form={form} /> : this.renderDescription()}
               {this.renderIndicator()}
               {this.renderLabel()}
               {this.renderDivider()}
