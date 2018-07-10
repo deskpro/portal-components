@@ -1,5 +1,7 @@
+import _isEqual from 'lodash/isEqual';
+
 const conditions = {
-  eq:  (a, b) => a === b,
+  eq:  _isEqual,
   gt:  (a, b) => a > b,
   gte: (a, b) => a >= b,
   lt:  (a, b) => a < b,
