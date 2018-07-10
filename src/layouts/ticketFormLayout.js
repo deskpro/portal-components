@@ -287,9 +287,10 @@ export default [
   {
     fields: [
       {
-        name:  'person',
-        label: 'Person',
-        type:  'text'
+        name:       'person',
+        label:      'Person',
+        type:       'text',
+        validation: ['required']
       },
       {
         name:    'department',
@@ -343,9 +344,10 @@ export default [
         type:        'datetime'
       },
       {
-        name:  'message',
-        label: 'Message',
-        type:  'textarea'
+        name:       'message',
+        label:      'Message',
+        type:       'textarea',
+        validation: ['required']
       },
       {
         name:  'attachments',

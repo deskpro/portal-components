@@ -53,42 +53,7 @@
             "validation": {
               "type": "array",
               "items": {
-                "anyOf": [{
-                    "type": "string",
-                    "enum": ["required", "nullable", "max", "min", "length"]
-                  },
-                  {
-                    "type": "object",
-                    "properties": {
-                      "name": {
-                        "type": "string",
-                        "const": "regex"
-                      },
-                      "regex": {
-                        "type": "string"
-                      }
-                    },
-                    "required": ["name", "regex"]
-                  },
-                  {
-                    "type": "object",
-                    "properties": {
-                      "name": {
-                        "type": "string",
-                        "const": "date_range"
-                      },
-                      "from": {
-                        "type": ["string", "number"]
-                      },
-                      "to": {
-                        "type": ["string", "number"]
-                      }
-                    },
-                    "required": [
-                      "name", "from", "to"
-                    ]
-                  }
-                ]
+                "type": "string"
               },
               "uniqueItems": true
             }
