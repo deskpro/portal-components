@@ -4,6 +4,7 @@ import { action } from '@storybook/addon-actions';
 import { Form, Formik } from 'formik';
 
 import FieldLayout from '../../src/Components/FieldLayout';
+import { Submit } from '../../src/Components';
 import { LayoutConfig } from '../../src/layouts/Layout';
 import ticketFormLayout from '../../src/layouts/ticketFormLayout';
 
@@ -17,6 +18,7 @@ const fileFieldProps = {
 const TicketForm = props => (
   <Form>
     <FieldLayout layouts={layouts} {...props} {...fileFieldProps} />
+    <Submit>Save</Submit>
   </Form>
 );
 
