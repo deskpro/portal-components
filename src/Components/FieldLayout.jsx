@@ -1,6 +1,5 @@
 import React, { Fragment, PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { LayoutConfig } from '../layouts/Layout';
 
 import FileUpload from './Inputs/FileUpload';
 import Text from './Inputs/Text';
@@ -11,6 +10,7 @@ import Checkboxes from './Choices/Checkboxes';
 import DropDown from './Choices/DropDown';
 import MultipleDropDown from './Choices/MultipleDropDown';
 import Radio from './Choices/Radio';
+import { LayoutConfig } from '../layouts/Layout';
 
 const components = {
   file:        FileUpload,
@@ -49,6 +49,7 @@ class FieldLayout extends PureComponent {
   state = { activeLayout: null };
 
   componentDidUpdate(_, { activeLayout }) {
+    // Reset form with new defaults when the layout is changed.
     if (activeLayout !== this.state.activeLayout) {
       const defaults = this.state.activeLayout.getDefaultValues();
       this.props.resetForm({ ...defaults, ...this.props.values });
@@ -61,7 +62,12 @@ class FieldLayout extends PureComponent {
       <Fragment>
         {activeLayout.fields.map((field) => {
           const Component = components[field.type];
+          if (!Component) {
+            // Do we need to warn developer that component is not found?
+            return null;
+          }
           const props = { values: this.props.values };
+          // TODO: it looks like a hardcode. Can we move this into schema definition?
           if (field.type === 'file') {
             props.file = this.props.fileUploadUrl;
             props.csrfToken = this.props.csrfToken;
