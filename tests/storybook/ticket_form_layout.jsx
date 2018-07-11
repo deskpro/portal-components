@@ -6,7 +6,7 @@ import { Form, Formik } from 'formik';
 import FieldLayout from '../../src/Components/FieldLayout';
 import { Submit } from '../../src/Components';
 import { LayoutConfig } from '../../src/layouts/Layout';
-import ticketFormLayout from '../../src/layouts/ticketFormLayout';
+import ticketFormLayout from '../DemoState/ticket_form_layout';
 
 const layouts = new LayoutConfig(ticketFormLayout);
 

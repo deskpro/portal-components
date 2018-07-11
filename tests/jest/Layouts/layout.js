@@ -1,6 +1,6 @@
 import Ajv from 'ajv';
 
-import ticketFormLayout from '../../../src/layouts/ticketFormLayout';
+import ticketFormLayout from '../../DemoState/ticket_form_layout';
 import layoutSchema from '../../../src/layouts/schema.json';
 import { LayoutConfig, LayoutField } from '../../../src/layouts/Layout';
 
