@@ -1,0 +1,113 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Dynamic form configuration for DeskPRO",
+  "description": "JSON Schema of the dynamic form definition with visibility rules, validation criteria, etc",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "rules": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "op": {
+              "type": "string",
+              "enum": [
+                "eq", "gt", "gte", "lt", "lte", "in", "contains"
+              ]
+            },
+            "value": {
+              "type": ["string", "number", "boolean"]
+            }
+          },
+          "required": ["field", "op", "value"]
+        }
+      },
+      "fields": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "choice", "text", "password", "numeric", "date", "datetime", "checkbox", "radio", "file", "textarea", "multichoice"
+              ]
+            },
+            "default_value": {
+              "type": ["string", "number", "object", "boolean"]
+            },
+            "validation": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "name", "label", "type"
+          ],
+          "if": {
+            "properties": {
+              "type": {
+                "enum": [
+                  "choice", "checkbox", "radio", "multichoice"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/optionItem"
+                },
+                "minItems": 1
+              }
+            },
+            "required": ["options"]
+          }
+        },
+        "minItems": 1
+      }
+    }
+  },
+  "required": [
+    "fields"
+  ],
+  "definitions": {
+    "optionItem": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": ["string", "number"]
+        },
+        "label": {
+          "type": "string"
+        },
+        "children": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/optionItem"
+          }
+        }
+      },
+      "required": ["value", "label"]
+    }
+  }
+}
