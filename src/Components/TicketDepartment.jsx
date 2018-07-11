@@ -4,8 +4,8 @@ import DropDown from './Choices/DropDown';
 
 class TicketDepartment extends React.Component {
   static propTypes = {
-    departments:  PropTypes.object.isRequired,
-    handleChange: PropTypes.func.isRequired,
+    departments:  PropTypes.array.isRequired,
+    handleChange: PropTypes.func.isRequired
   };
 
   render() {
@@ -14,7 +14,7 @@ class TicketDepartment extends React.Component {
       <DropDown
         name="department"
         label="Department"
-        options={departments.toArray().map(d => ({ label: d.get('title'), value: d.get('id') }))}
+        options={departments}
         handleChange={handleChange}
         clearable={false}
       />

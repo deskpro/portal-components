@@ -79,7 +79,7 @@ class Checkboxes extends Field {
                   name={name}
                   type="checkbox"
                   value={option.value}
-                  checked={form.values[name].includes(option.value)}
+                  checked={!!form.values[name] && form.values[name].includes(option.value)}
                   onChange={(e) => {
                     if (e.target.checked) arrayHelpers.push(option.value);
                     else {
