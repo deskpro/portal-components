@@ -14,7 +14,7 @@ class TicketDepartment extends React.Component {
       <DropDown
         name="department"
         label="Department"
-        options={departments}
+        dataSource={{ getOptions: departments }}
         handleChange={handleChange}
         clearable={false}
       />

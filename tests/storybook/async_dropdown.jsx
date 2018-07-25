@@ -13,16 +13,24 @@ const options = [
   { value: 'pickles', label: 'Pickles' },
 ];
 
+const fakeAPI = (filter, delay, value) => new Promise((resolve) => {
+  setTimeout(() => {
+    const regexp = new RegExp(filter.toLowerCase());
+    const result = value.filter(o => o.label.toLowerCase().match(regexp) || filter === '');
+    resolve(result);
+  }, delay);
+});
+
 storiesOf('Choices', module)
-  .add('Dropdown', () => (
+  .add('Async Dropdown', () => (
     <Formik
       initialValues={{ filling: 'bacon' }}
       onSubmit={action('submit')}
       render={() => (
         <Form>
           <DropDown
-            dataSource={{ getOptions: options }}
             name="filling"
+            dataSource={{ getOptions: filter => fakeAPI(filter, 300, options) }}
             label="Filling"
             multiple
           />

@@ -40,7 +40,8 @@ class TicketField extends React.Component {
         break;
       case 'choice':
         Component = DropDown;
-        props.options = field.getIn(['data', 'choices'], [])
+        props.dataSource = {};
+        props.dataSource.getOptions = field.getIn(['data', 'choices'], [])
           .toArray().map(option => ({ value: option.get('id'), label: option.get('title') }));
         break;
       case 'radio':
@@ -58,7 +59,8 @@ class TicketField extends React.Component {
         break;
       case 'multichoice':
         Component = MultipleDropDown;
-        props.options = field.getIn(['data', 'choices'], [])
+        props.dataSource = {};
+        props.dataSource.getOptions = field.getIn(['data', 'choices'], [])
           .toArray().map(option => ({ value: option.get('id'), label: option.get('title') }));
         break;
       case 'text':

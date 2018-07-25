@@ -1,10 +1,62 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { css } from 'emotion';
 import { getIn } from 'formik';
-import ReactSelect from 'react-select';
+import ReactSelect, { components } from 'react-select';
 
 import Field from '../Field';
+
+const SelectContainer = ({ children, ...props }) => (
+  <components.SelectContainer {...props} className={classNames({ 'react-select__is-focused': props.isFocused })}>
+    {children}
+  </components.SelectContainer>
+);
+
+SelectContainer.propTypes = components.SelectContainer.propTypes;
+
+const Option = (props) => {
+  const {
+    className,
+    cx,
+    getStyles,
+    label,
+    isDisabled,
+    isFocused,
+    isSelected,
+    innerRef,
+    innerProps
+  } = props;
+  return (
+    <div
+      ref={innerRef}
+      className={cx(
+        css(getStyles('option', props)),
+        {
+          option:                true,
+          'option--is-disabled': isDisabled,
+          'option--is-focused':  isFocused,
+          'option--is-selected': isSelected,
+        },
+        'dp-pc_checkbox',
+        className
+      )}
+      {...innerProps}
+    >
+      <span
+        className="dp-pc_checkbox__checkbox"
+      >
+        <input type="checkbox" checked={isSelected} readOnly />
+        <i />
+        <span className="dp-pc_checkbox__label">
+          {label}
+        </span>
+      </span>
+    </div>
+  );
+};
+
+Option.propTypes = components.Option.propTypes;
 
 class MultipleDropDown extends Field {
   handleChange = (form, value) => {
@@ -42,13 +94,16 @@ class MultipleDropDown extends Field {
       <ReactSelect
         value={getIn(form.values, name)}
         name={name}
-        clearable={false}
+        isClearable={false}
         onChange={value => this.handleChange(form, value)}
         onBlur={() => form.setFieldTouched(name, true)}
         options={options}
         removeSelected={false}
+        menuIsOpen
+        components={{ Option, SelectContainer }}
         optionRenderer={option => this.renderOption(option, form)}
-        multi
+        classNamePrefix="react-select"
+        isMulti
         {...props}
       />
     );
