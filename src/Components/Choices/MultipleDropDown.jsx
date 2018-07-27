@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import { css } from 'emotion';
 import { getIn } from 'formik';
 import ReactSelect, { components } from 'react-select';
-
+import AsyncSelect from 'react-select/lib/Async';
 import Field from '../Field';
 
 const SelectContainer = ({ children, ...props }) => (
@@ -59,33 +59,32 @@ const Option = (props) => {
 Option.propTypes = components.Option.propTypes;
 
 class MultipleDropDown extends Field {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: null
+    };
+  }
+
   handleChange = (form, value) => {
     const { name, handleChange } = this.props;
+    this.setState({
+      value
+    });
     const newValue = value ? value.map(e => e.value) : null;
     form.setFieldValue(name, newValue);
     handleChange(newValue);
   };
 
-  renderCheckbox = (checked, label) => (
-    <div
-      className={classNames('dp-pc_checkbox')}
-    >
-      <span
-        className="dp-pc_checkbox__checkbox"
-      >
-        <input type="checkbox" checked={checked} readOnly />
-        <i />
-        <span className="dp-pc_checkbox__label">
-          {label}
-        </span>
-      </span>
-    </div>
-  );
-
-  renderOption = (option, form) => {
-    const { name } = this.props;
-    const checked = form.values[name].includes(option.value);
-    return this.renderCheckbox(checked, option.label);
+  loadOptions = (form, inputValue) => {
+    const { dataSource, name } = this.props;
+    return dataSource.getOptions(inputValue).then((options) => {
+      const value = options.find(o => o.value === getIn(form.values, name));
+      this.setState({
+        value
+      });
+      return options;
+    });
   };
 
   renderField = (form) => {
@@ -100,16 +99,31 @@ class MultipleDropDown extends Field {
           onBlur={() => form.setFieldTouched(name, true)}
           options={dataSource.getOptions}
           hideSelectedOptions={false}
-          menuIsOpen
           components={{ Option, SelectContainer }}
-          optionRenderer={option => this.renderOption(option, form)}
           classNamePrefix="react-select"
           isMulti
           {...props}
         />
       );
     }
-    return null;
+
+    return (
+      <AsyncSelect
+        value={this.state.value}
+        name={name}
+        isClearable={false}
+        onChange={value => this.handleChange(form, value)}
+        onBlur={() => form.setFieldTouched(name, true)}
+        hideSelectedOptions={false}
+        components={{ Option, SelectContainer }}
+        defaultOptions
+        cacheOptions
+        loadOptions={inputValue => this.loadOptions(form, inputValue)}
+        classNamePrefix="react-select"
+        isMulti
+        {...props}
+      />
+    );
   }
 }
 

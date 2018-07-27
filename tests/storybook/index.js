@@ -1,6 +1,7 @@
 import '../../src/style.css';
 
 import './async_dropdown';
+import './async_multiple_dropdown';
 import './form';
 import './checkboxes';
 import './datepicker';

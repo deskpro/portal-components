@@ -68,7 +68,7 @@ class DropDown extends Field {
         value={this.state.value}
         name={name}
         isClearable={isClearable}
-        onChange={(value, action) => this.handleChange(form, value, action)}
+        onChange={value => this.handleChange(form, value)}
         onBlur={() => form.setFieldTouched(name, true)}
         defaultOptions
         cacheOptions
