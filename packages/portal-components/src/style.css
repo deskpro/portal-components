@@ -80,8 +80,7 @@
   }
   & input:focus ~ .dp-pc_label,
   &:not(.dp-pc_empty) .dp-pc_label,
-  & .Select.is-focused ~ .dp-pc_label,
-  & .Select.is-open ~ .dp-pc_label {
+  & .react-select__is-focused ~ .dp-pc_label {
     top: 11px;
     left: 10px;
     font-size: 10px;
@@ -217,43 +216,50 @@
       Dropdown
   *******************************/
 
-  & .Select {
-    & .Select-control {
-      border: none;
-      border-radius: 0;
-      padding: var(--input-padding);
-      margin-left: 10px;
-      height: var(--input-height);
-      width: calc(100% - 20px);
-      font-size: 18px;
-      box-shadow: none;
+  & .react-select__control {
+    border: none;
+    border-radius: 0;
+    padding: var(--input-padding);
+    background-color: transparent;
+    margin-left: 10px;
+    height: var(--input-height);
+    width: calc(100% - 20px);
+    font-size: 18px;
+    box-shadow: none;
 
-      & .Select-placeholder {
-        color: transparent;
-      }
-      & .Select-value-label {
-        top: 18px;
+    & .react-select__placeholder {
+      color: transparent;
+    }
+    & .Select-value-label {
+      top: 18px;
+      font-size: 18px;
+      position: absolute;
+      color: var(--text-color);
+    }
+    & .react-select__input {
+      padding: 0;
+      & > input {
+        padding-top: 11px;
+        line-height: normal;
+        height: 22px;
         font-size: 18px;
-        position: absolute;
-        color: var(--text-color);
+        margin-top: 2px;
       }
-      & .Select-input {
-        padding: 0;
-        & > input {
-          padding-top: 11px;
-          line-height: normal;
-          height: 22px;
-          font-size: 18px;
-          margin-top: 2px;
+    }
+    & .react-select__indicators {
+      & .react-select__indicator-separator {
+        display: none;
+      }
+      & .react-select__dropdown-indicator {
+        position: relative;
+        & svg {
+          display: none;
         }
-      }
-      & .Select-arrow {
-        border: none;
         &:before,
         &:after {
           position: absolute;
           left: 0;
-          top: -14px;
+          top: 0;
           content: ' ';
           height: 14px;
           width: 2px;
@@ -270,25 +276,8 @@
         }
       }
     }
-    &.Select--single {
-      & > .Select-control .Select-value {
-        padding-left: 0;
-        & .Select-value-label {
-          color: var(--label-color);
-        }
-      }
-      &.has-value > .Select-control .Select-value .Select-value-label,
-      &.has-value.is-pseudo-focused > .Select-control .Select-value .Select-value-label {
-        color: var(--label-color);
-      }
-    }
-    &.is-focused:not(.is-open) {
-      & > .Select-control {
-        box-shadow: none;
-      }
-    }
-    &.is-open {
-      & .Select-arrow {
+    &.react-select__control--is-focused {
+      & .react-select__dropdown-indicator {
         top: 0;
         &:before {
           transform: rotate(45deg);
@@ -298,27 +287,40 @@
         }
       }
     }
-    & .Select-menu-outer {
-      margin-top: -20px;
-      width: calc(100% - 20px);
-      border: none;
-      box-shadow: 4px 4px 6px var(--box-shadow-30);
-      & .Select-option {
-        font-size: 16px;
-        padding: 10px;
-        &.is-focused {
-          background-color: var(--option-background);
-          color: var(--primary-color);
-        }
-        &.is-selected {
-          background-color: color(var(--primary-color) alpha(10%));
-        }
+    & .react-select__value-container {
+      padding-left: 0;
+      & .react-select__single-value {
+        color: var(--label-color);
+        margin: 0;
+      }
+    }
+    &.react-select__value-container--has-value > .react-select__single-value,
+    &.has-value.is-pseudo-focused > .Select-control .Select-value .Select-value-label {
+      color: var(--label-color);
+    }
+  }
+  & .react-select__menu {
+    margin-top: -20px;
+    width: calc(100% - 20px);
+    border: none;
+    box-shadow: 4px 4px 6px var(--box-shadow-30);
+    color: var(--text-color);
+    & .react-select__option {
+      font-size: 16px;
+      padding: 10px;
+      &.react-select__option--is-focused {
+        background-color: var(--option-background);
+        color: var(--primary-color);
+      }
+      &.react-select__option--is-selected {
+        color: var(--text-color);
+        background-color: color(var(--primary-color) alpha(10%));
       }
     }
   }
 
-  & .Select.is-focused ~ .indicator:before,
-  & .Select.is-focused ~ .indicator:after {
+  & .react-select__is-focused ~ .indicator:before,
+  & .react-select__is-focused ~ .indicator:after {
     height: 50%;
   }
 
@@ -327,34 +329,36 @@
       Multiple Dropdown
   *******************************/
 
-  & .Select--multi {
-    & .Select-control .Select-value {
-      line-height: 1.2;
-      background-color: var(--option-background);
-      border-color: var(--checkbox-border);
-      color: var(--text-color);
-      border-radius: 4px;
-      border-width: 2px;
-      margin-top: 15px;
+  & .react-select__control {
+    & .react-select__value-container--is-multi {
+      & .react-select__multi-value {
+        line-height: 1.2;
+        background-color: var(--option-background);
+        color: var(--text-color);
+        border-radius: 4px;
+        border: 2px solid var(--checkbox-border);
+        margin-top: 15px;
+      }
     }
-    & .Select-control .Select-value-label {
+    & .react-select__multi-value__label {
       position: static;
       font-size: 12px;
     }
-    & .Select-value-icon {
+    & .react-select__multi-value__remove {
       border-right: none;
       font-size: 18px;
       padding: 0 5px;
     }
-    & .Select-control .Select-input > input {
-      margin-top: 6px;
+    & .react-select__input > input {
+      margin-top: 12px;
     }
-    & .Select-menu-outer {
-      margin-top: -5px;
+  }
+  & .react-select__menu {
+    margin-top: -5px;
+    & .react-select__menu-list--is-multi {
       & .dp-pc_checkbox {
         height: auto;
-        padding: 0;
-        margin-left: 0;
+        padding-left: 0;
         & .dp-pc_checkbox__checkbox {
           margin-top: 0;
           & .dp-pc_checkbox__label {
@@ -363,13 +367,13 @@
           }
         }
       }
-      & .Select-option.is-focused {
+      & .react-select__option--is-focused {
         background: none;
-        & .dp-pc_checkbox i {
+        & .dp-pc_checkbox__checkbox i {
           border-color: var(--text-color);
         }
       }
-      & .Select-option.is-selected {
+      & .react-select__option--is-selected {
         background: none;
         & .dp-pc_checkbox__label {
           padding: 0;
@@ -378,6 +382,7 @@
       }
     }
   }
+
 
   /******************************
       Input checkbox

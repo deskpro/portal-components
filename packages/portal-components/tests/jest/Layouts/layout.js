@@ -1,6 +1,6 @@
 import Ajv from 'ajv';
 
-import ticketFormLayout from '../../DemoState/ticket_form_layout';
+import ticketFormLayout from '../../DemoState/ticketFormLayout';
 import layoutSchema from '../../../src/layouts/schema.json';
 import { LayoutConfig, LayoutField } from '../../../src/layouts/Layout';
 
@@ -33,7 +33,7 @@ describe('>>> Layout helper class', () => {
 
   it('should get property of the field by path', () => {
     const match = layouts.getMatchingLayout({ department: 7 });
-    expect(match.fields[1].get('options[0].label')).toEqual('Support');
+    expect(match.fields[1].get('dataSource.getOptions[0].label')).toEqual('Support');
   });
 });
 

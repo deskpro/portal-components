@@ -22,7 +22,7 @@ storiesOf('Choices', module)
         <Form>
           <MultipleDropDown
             name="filling"
-            options={options}
+            dataSource={{ getOptions: options }}
             label="Filling"
           />
           <Submit>Submit</Submit>
