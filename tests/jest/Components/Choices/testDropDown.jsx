@@ -12,7 +12,7 @@ describe('>>> DropDown --- Snapshot', () => {
     ];
     const App = () => (
       <Form>
-        <DropDown name="dropDown" options={options} />
+        <DropDown name="dropDown" dataSource={{ getOptions: options }} />
       </Form>
     );
     const FormikApp = withFormik({

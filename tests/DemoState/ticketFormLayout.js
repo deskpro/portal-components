@@ -8,20 +8,22 @@ export default [
         type:  'text'
       },
       {
-        name:    'department',
-        label:   'Department',
-        type:    'choice',
-        options: [
-          { value: 1, label: 'Support' },
-          { value: 2, label: 'Sales' },
-          { value: 3, label: 'Support' },
-          { value: 4, label: 'Sales' },
-          { value: 5, label: 'Widgets' },
-          { value: 6, label: 'Regulation and Control of Magical Creatures' },
-          { value: 7, label: 'Regulation' },
-          { value: 8, label: 'Control' },
-          { value: 9, label: 'Hotdogs' }
-        ]
+        name:       'department',
+        label:      'Department',
+        type:       'choice',
+        dataSource: {
+          getOptions: [
+            { value: 1, label: 'Support' },
+            { value: 2, label: 'Sales' },
+            { value: 3, label: 'Support' },
+            { value: 4, label: 'Sales' },
+            { value: 5, label: 'Widgets' },
+            { value: 6, label: 'Regulation and Control of Magical Creatures' },
+            { value: 7, label: 'Regulation' },
+            { value: 8, label: 'Control' },
+            { value: 9, label: 'Hotdogs' }
+          ]
+        }
       },
       {
         name:  'subject',
@@ -71,20 +73,22 @@ export default [
         type:  'text'
       },
       {
-        name:    'department',
-        label:   'Department',
-        type:    'choice',
-        options: [
-          { value: 1, label: 'Support' },
-          { value: 2, label: 'Sales' },
-          { value: 3, label: 'Support' },
-          { value: 4, label: 'Sales' },
-          { value: 5, label: 'Widgets' },
-          { value: 6, label: 'Regulation and Control of Magical Creatures' },
-          { value: 7, label: 'Regulation' },
-          { value: 8, label: 'Control' },
-          { value: 9, label: 'Hotdogs' }
-        ]
+        name:       'department',
+        label:      'Department',
+        type:       'choice',
+        dataSource: {
+          getOptions: [
+            { value: 1, label: 'Support' },
+            { value: 2, label: 'Sales' },
+            { value: 3, label: 'Support' },
+            { value: 4, label: 'Sales' },
+            { value: 5, label: 'Widgets' },
+            { value: 6, label: 'Regulation and Control of Magical Creatures' },
+            { value: 7, label: 'Regulation' },
+            { value: 8, label: 'Control' },
+            { value: 9, label: 'Hotdogs' }
+          ]
+        }
       },
       {
         name:  'subject',
@@ -144,20 +148,22 @@ export default [
         type:  'text'
       },
       {
-        name:    'department',
-        label:   'Department',
-        type:    'choice',
-        options: [
-          { value: 1, label: 'Support' },
-          { value: 2, label: 'Sales' },
-          { value: 3, label: 'Support' },
-          { value: 4, label: 'Sales' },
-          { value: 5, label: 'Widgets' },
-          { value: 6, label: 'Regulation and Control of Magical Creatures' },
-          { value: 7, label: 'Regulation' },
-          { value: 8, label: 'Control' },
-          { value: 9, label: 'Hotdogs' }
-        ]
+        name:       'department',
+        label:      'Department',
+        type:       'choice',
+        dataSource: {
+          getOptions: [
+            { value: 1, label: 'Support' },
+            { value: 2, label: 'Sales' },
+            { value: 3, label: 'Support' },
+            { value: 4, label: 'Sales' },
+            { value: 5, label: 'Widgets' },
+            { value: 6, label: 'Regulation and Control of Magical Creatures' },
+            { value: 7, label: 'Regulation' },
+            { value: 8, label: 'Control' },
+            { value: 9, label: 'Hotdogs' }
+          ]
+        }
       },
       {
         name:  'subject',
@@ -217,20 +223,22 @@ export default [
         type:  'text'
       },
       {
-        name:    'department',
-        label:   'Department',
-        type:    'choice',
-        options: [
-          { value: 1, label: 'Support' },
-          { value: 2, label: 'Sales' },
-          { value: 3, label: 'Support' },
-          { value: 4, label: 'Sales' },
-          { value: 5, label: 'Widgets' },
-          { value: 6, label: 'Regulation and Control of Magical Creatures' },
-          { value: 7, label: 'Regulation' },
-          { value: 8, label: 'Control' },
-          { value: 9, label: 'Hotdogs' }
-        ]
+        name:       'department',
+        label:      'Department',
+        type:       'choice',
+        dataSource: {
+          getOptions: [
+            { value: 1, label: 'Support' },
+            { value: 2, label: 'Sales' },
+            { value: 3, label: 'Support' },
+            { value: 4, label: 'Sales' },
+            { value: 5, label: 'Widgets' },
+            { value: 6, label: 'Regulation and Control of Magical Creatures' },
+            { value: 7, label: 'Regulation' },
+            { value: 8, label: 'Control' },
+            { value: 9, label: 'Hotdogs' }
+          ]
+        }
       },
       {
         name:  'subject',
@@ -242,24 +250,26 @@ export default [
         label:       'Hotdog Kind',
         description: 'A custom  field',
         type:        'choice',
-        options:     [
-          { value: 25, label: 'Normal' },
-          {
-            value:    26,
-            label:    'German',
-            children: [
-              { value: 28, label: 'Extrawurst' },
-              {
-                value:    29,
-                label:    'Frankfurter',
-                children: [{ value: 31, label: 'W\u00fcrstchen' }]
-              }
-            ]
-          },
-          { value: 27, label: 'Bratwurst' },
-          { value: 30, label: 'Rindswurst' },
-          { value: 32, label: 'Large' }
-        ]
+        dataSource:  {
+          getOptions: [
+            { value: 25, label: 'Normal' },
+            {
+              value:    26,
+              label:    'German',
+              children: [
+                { value: 28, label: 'Extrawurst' },
+                {
+                  value:    29,
+                  label:    'Frankfurter',
+                  children: [{ value: 31, label: 'W\u00fcrstchen' }]
+                }
+              ]
+            },
+            { value: 27, label: 'Bratwurst' },
+            { value: 30, label: 'Rindswurst' },
+            { value: 32, label: 'Large' }
+          ]
+        }
       },
       {
         name:        'ticket_field_33',
@@ -293,20 +303,22 @@ export default [
         validation: ['required']
       },
       {
-        name:    'department',
-        label:   'Department',
-        type:    'choice',
-        options: [
-          { value: 1, label: 'Support' },
-          { value: 2, label: 'Sales' },
-          { value: 3, label: 'Support' },
-          { value: 4, label: 'Sales' },
-          { value: 5, label: 'Widgets' },
-          { value: 6, label: 'Regulation and Control of Magical Creatures' },
-          { value: 7, label: 'Regulation' },
-          { value: 8, label: 'Control' },
-          { value: 9, label: 'Hotdogs' }
-        ]
+        name:       'department',
+        label:      'Department',
+        type:       'choice',
+        dataSource: {
+          getOptions: [
+            { value: 1, label: 'Support' },
+            { value: 2, label: 'Sales' },
+            { value: 3, label: 'Support' },
+            { value: 4, label: 'Sales' },
+            { value: 5, label: 'Widgets' },
+            { value: 6, label: 'Regulation and Control of Magical Creatures' },
+            { value: 7, label: 'Regulation' },
+            { value: 8, label: 'Control' },
+            { value: 9, label: 'Hotdogs' }
+          ]
+        }
       },
       {
         name:  'subject',
@@ -318,24 +330,26 @@ export default [
         label:       'Hotdog Kind',
         description: 'A custom  field',
         type:        'choice',
-        options:     [
-          { value: 25, label: 'Normal' },
-          {
-            value:    26,
-            label:    'German',
-            children: [
-              { value: 28, label: 'Extrawurst' },
-              {
-                value:    29,
-                label:    'Frankfurter',
-                children: [{ value: 31, label: 'W\u00fcrstchen' }]
-              }
-            ]
-          },
-          { value: 27, label: 'Bratwurst' },
-          { value: 30, label: 'Rindswurst' },
-          { value: 32, label: 'Large' }
-        ]
+        dataSource:  {
+          getOptions: [
+            { value: 25, label: 'Normal' },
+            {
+              value:    26,
+              label:    'German',
+              children: [
+                { value: 28, label: 'Extrawurst' },
+                {
+                  value:    29,
+                  label:    'Frankfurter',
+                  children: [{ value: 31, label: 'W\u00fcrstchen' }]
+                }
+              ]
+            },
+            { value: 27, label: 'Bratwurst' },
+            { value: 30, label: 'Rindswurst' },
+            { value: 32, label: 'Large' }
+          ]
+        }
       },
       {
         name:        'ticket_field_33',

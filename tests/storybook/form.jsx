@@ -4,7 +4,6 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean } from '@storybook/addon-knobs/react';
 import Yup from 'yup';
 import { withFormik } from 'formik';
-import 'react-select/dist/react-select.css';
 import { Form, Email, Password, DropDown, Checkbox, Submit } from '../../src/Components';
 
 const options = [
@@ -31,7 +30,11 @@ const App = ({
       name="newsletter"
       label="Join our newsletter"
     />
-    <DropDown name="plan" options={options} label="Plan" />
+    <DropDown
+      dataSource={{ getOptions: options }}
+      name="plan"
+      label="Plan"
+    />
     <Submit disabled={isSubmitting}>Submit</Submit>
   </Form>
 );

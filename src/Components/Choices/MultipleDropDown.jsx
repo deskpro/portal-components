@@ -1,27 +1,52 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { css } from 'emotion';
 import { getIn } from 'formik';
-import ReactSelect from 'react-select';
-
+import ReactSelect, { components } from 'react-select';
+import AsyncSelect from 'react-select/lib/Async';
 import Field from '../Field';
 
-class MultipleDropDown extends Field {
-  handleChange = (form, value) => {
-    const { name, handleChange } = this.props;
-    const newValue = value ? value.map(e => e.value) : null;
-    form.setFieldValue(name, newValue);
-    handleChange(newValue);
-  };
+const SelectContainer = ({ children, ...props }) => (
+  <components.SelectContainer {...props} className={classNames({ 'react-select__is-focused': props.isFocused })}>
+    {children}
+  </components.SelectContainer>
+);
 
-  renderCheckbox = (checked, label) => (
+SelectContainer.propTypes = components.SelectContainer.propTypes;
+
+const Option = (props) => {
+  const {
+    className,
+    cx,
+    getStyles,
+    label,
+    isDisabled,
+    isFocused,
+    isSelected,
+    innerRef,
+    innerProps
+  } = props;
+  return (
     <div
-      className={classNames('dp-pc_checkbox')}
+      ref={innerRef}
+      className={cx(
+        css(getStyles('option', props)),
+        {
+          option:                true,
+          'option--is-disabled': isDisabled,
+          'option--is-focused':  isFocused,
+          'option--is-selected': isSelected,
+        },
+        'dp-pc_checkbox',
+        className
+      )}
+      {...innerProps}
     >
       <span
         className="dp-pc_checkbox__checkbox"
       >
-        <input type="checkbox" checked={checked} readOnly />
+        <input type="checkbox" checked={isSelected} readOnly />
         <i />
         <span className="dp-pc_checkbox__label">
           {label}
@@ -29,26 +54,73 @@ class MultipleDropDown extends Field {
       </span>
     </div>
   );
+};
 
-  renderOption = (option, form) => {
-    const { name } = this.props;
-    const checked = form.values[name].includes(option.value);
-    return this.renderCheckbox(checked, option.label);
+Option.propTypes = components.Option.propTypes;
+
+class MultipleDropDown extends Field {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: null
+    };
+  }
+
+  handleChange = (form, value) => {
+    const { name, handleChange } = this.props;
+    this.setState({
+      value
+    });
+    const newValue = value ? value.map(e => e.value) : null;
+    form.setFieldValue(name, newValue);
+    handleChange(newValue);
+  };
+
+  loadOptions = (form, inputValue) => {
+    const { dataSource, name } = this.props;
+    return dataSource.getOptions(inputValue).then((options) => {
+      const value = options.find(o => o.value === getIn(form.values, name));
+      this.setState({
+        value
+      });
+      return options;
+    });
   };
 
   renderField = (form) => {
-    const { name, options, ...props } = this.props;
+    const { name, dataSource, ...props } = this.props;
+    if (Array.isArray(dataSource.getOptions)) {
+      return (
+        <ReactSelect
+          value={dataSource.getOptions.filter(o => getIn(form.values, name).includes(o.value))}
+          name={name}
+          isClearable={false}
+          onChange={value => this.handleChange(form, value)}
+          onBlur={() => form.setFieldTouched(name, true)}
+          options={dataSource.getOptions}
+          hideSelectedOptions={false}
+          components={{ Option, SelectContainer }}
+          classNamePrefix="react-select"
+          isMulti
+          {...props}
+        />
+      );
+    }
+
     return (
-      <ReactSelect
-        value={getIn(form.values, name)}
+      <AsyncSelect
+        value={this.state.value}
         name={name}
-        clearable={false}
+        isClearable={false}
         onChange={value => this.handleChange(form, value)}
         onBlur={() => form.setFieldTouched(name, true)}
-        options={options}
-        removeSelected={false}
-        optionRenderer={option => this.renderOption(option, form)}
-        multi
+        hideSelectedOptions={false}
+        components={{ Option, SelectContainer }}
+        defaultOptions
+        cacheOptions
+        loadOptions={inputValue => this.loadOptions(form, inputValue)}
+        classNamePrefix="react-select"
+        isMulti
         {...props}
       />
     );
@@ -57,10 +129,9 @@ class MultipleDropDown extends Field {
 
 MultipleDropDown.propTypes = {
   ...Field.propTypes,
-  options: PropTypes.arrayOf(PropTypes.shape({
-    label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
-    value: PropTypes.any.isRequired
-  })),
+  dataSource: PropTypes.shape({
+    getOptions: PropTypes.oneOfType([PropTypes.func, PropTypes.array]).isRequired,
+  }).isRequired,
   handleChange: PropTypes.func,
 };
 

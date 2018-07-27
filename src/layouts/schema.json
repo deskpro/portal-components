@@ -4,98 +4,95 @@
   "description": "JSON Schema of the dynamic form definition with visibility rules, validation criteria, etc",
   "type": "array",
   "items": {
-    "type": "object",
-    "properties": {
-      "rules": {
-        "type": "array",
-        "items": {
-          "type": "object",
-          "properties": {
-            "field": {
-              "type": "string"
-            },
-            "op": {
-              "type": "string",
-              "enum": [
-                "eq", "gt", "gte", "lt", "lte", "in", "contains"
-              ]
-            },
-            "value": {
-              "type": ["string", "number", "boolean"]
-            }
-          },
-          "required": ["field", "op", "value"]
-        }
-      },
-      "fields": {
-        "type": "array",
-        "items": {
-          "type": "object",
-          "properties": {
-            "name": {
-              "type": "string"
-            },
-            "label": {
-              "type": "string"
-            },
-            "description": {
-              "type": "string"
-            },
-            "type": {
-              "type": "string",
-              "enum": [
-                "choice", "text", "password", "numeric", "date", "datetime", "checkbox", "radio", "file", "textarea", "multichoice"
-              ]
-            },
-            "default_value": {
-              "type": ["string", "number", "object", "boolean"]
-            },
-            "validation": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              },
-              "uniqueItems": true
-            }
-          },
-          "required": [
-            "name", "label", "type"
-          ],
-          "if": {
-            "properties": {
-              "type": {
-                "enum": [
-                  "choice", "checkbox", "radio", "multichoice"
-                ]
-              }
-            }
-          },
-          "then": {
-            "properties": {
-              "options": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/definitions/optionItem"
-                },
-                "minItems": 1
-              }
-            },
-            "required": ["options"]
+    "$ref": "#/definitions/WelcomeElement"
+  },
+  "definitions": {
+    "WelcomeElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "rules": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Rule"
           }
         },
-        "minItems": 1
-      }
-    }
-  },
-  "required": [
-    "fields"
-  ],
-  "definitions": {
-    "optionItem": {
+        "fields": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Field"
+          }
+        }
+      },
+      "required": [
+        "fields"
+      ],
+      "title": "WelcomeElement"
+    },
+    "Field": {
       "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "dataSource": {
+          "$ref": "#/definitions/DataSource"
+        },
+        "defaultValue": {
+          "$ref": "#/definitions/DefaultValue"
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Option"
+          }
+        },
+        "description": {
+          "type": "string"
+        },
+        "validation": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "label",
+        "name",
+        "type"
+      ],
+      "title": "Field"
+    },
+    "DataSource": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "getOptions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/GetOption"
+          }
+        }
+      },
+      "required": [
+        "getOptions"
+      ],
+      "title": "DataSource"
+    },
+    "GetOption": {
+      "type": "object",
+      "additionalProperties": false,
       "properties": {
         "value": {
-          "type": ["string", "number"]
+          "type": "integer"
         },
         "label": {
           "type": "string"
@@ -103,11 +100,90 @@
         "children": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/optionItem"
+            "$ref": "#/definitions/Child"
           }
         }
       },
-      "required": ["value", "label"]
+      "required": [
+        "label",
+        "value"
+      ],
+      "title": "GetOption"
+    },
+    "Child": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "type": "integer"
+        },
+        "label": {
+          "type": "string"
+        },
+        "children": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Option"
+          }
+        }
+      },
+      "required": [
+        "label",
+        "value"
+      ],
+      "title": "Child"
+    },
+    "Option": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "type": "integer"
+        },
+        "label": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "label",
+        "value"
+      ],
+      "title": "Option"
+    },
+    "Rule": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "field": {
+          "type": "string"
+        },
+        "op": {
+          "type": "string"
+        },
+        "value": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "field",
+        "op",
+        "value"
+      ],
+      "title": "Rule"
+    },
+    "DefaultValue": {
+      "anyOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        {
+          "type": "string"
+        }
+      ],
+      "title": "DefaultValue"
     }
   }
 }
