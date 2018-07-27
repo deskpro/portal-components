@@ -89,33 +89,35 @@ class MultipleDropDown extends Field {
   };
 
   renderField = (form) => {
-    const { name, options, ...props } = this.props;
-    return (
-      <ReactSelect
-        value={getIn(form.values, name)}
-        name={name}
-        isClearable={false}
-        onChange={value => this.handleChange(form, value)}
-        onBlur={() => form.setFieldTouched(name, true)}
-        options={options}
-        removeSelected={false}
-        menuIsOpen
-        components={{ Option, SelectContainer }}
-        optionRenderer={option => this.renderOption(option, form)}
-        classNamePrefix="react-select"
-        isMulti
-        {...props}
-      />
-    );
+    const { name, dataSource, ...props } = this.props;
+    if (Array.isArray(dataSource.getOptions)) {
+      return (
+        <ReactSelect
+          value={dataSource.getOptions.filter(o => getIn(form.values, name).includes(o.value))}
+          name={name}
+          isClearable={false}
+          onChange={value => this.handleChange(form, value)}
+          onBlur={() => form.setFieldTouched(name, true)}
+          options={dataSource.getOptions}
+          hideSelectedOptions={false}
+          menuIsOpen
+          components={{ Option, SelectContainer }}
+          optionRenderer={option => this.renderOption(option, form)}
+          classNamePrefix="react-select"
+          isMulti
+          {...props}
+        />
+      );
+    }
+    return null;
   }
 }
 
 MultipleDropDown.propTypes = {
   ...Field.propTypes,
-  options: PropTypes.arrayOf(PropTypes.shape({
-    label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
-    value: PropTypes.any.isRequired
-  })),
+  dataSource: PropTypes.shape({
+    getOptions: PropTypes.oneOfType([PropTypes.func, PropTypes.array]).isRequired,
+  }).isRequired,
   handleChange: PropTypes.func,
 };
 
