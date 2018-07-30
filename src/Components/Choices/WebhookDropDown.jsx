@@ -55,7 +55,7 @@ class DropDown extends Field {
   };
 
   loadOptions = (form, inputValue) => {
-    const { dataSource } = this.props;
+    const { dataSource, name } = this.props;
     return new Promise((resolve) => {
       if (!dataSource.inputValidation(inputValue)) {
         resolve(false);
@@ -66,9 +66,12 @@ class DropDown extends Field {
           if (response.ok) {
             return response.json();
           }
+          form.setFieldError(name, response.statusText);
           return false;
         })
-        .catch(() => {})
+        .catch((error) => {
+          form.setFieldError(name, error.toString());
+        })
         .then((data) => {
           resolve(dataSource.parseData(data));
         });
