@@ -27,12 +27,14 @@ class Field extends React.Component {
     super(props);
 
     this.id = props.id;
+    this.className = '';
     if (!this.id) {
       this.id = newid('field_');
     }
+    this.renderField = this.renderField.bind(this);
   }
 
-  renderField = () => {
+  renderField() {
     const {
       name, children, className, ...props
     } = this.props;
@@ -48,7 +50,7 @@ class Field extends React.Component {
         {children}
       </FormikField>
     );
-  };
+  }
 
   renderDescription = () => {
     const { description } = this.props;
@@ -86,7 +88,7 @@ class Field extends React.Component {
           const value = getIn(form.values, name);
           return (
             <div
-              className={classNames('dp-pc_field', {
+              className={classNames('dp-pc_field', this.className, {
                 'dp-pc_error': touch && error,
                 'dp-pc_empty': !value || value === null || value.length === 0
               })}

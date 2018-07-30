@@ -13,6 +13,7 @@ import './likert_scale';
 import './multiple_dropdown';
 import './password';
 import './radio';
+import './tel';
 import './text';
 import './textarea';
 import './ticket_form';

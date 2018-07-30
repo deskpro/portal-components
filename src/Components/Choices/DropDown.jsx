@@ -7,8 +7,8 @@ import classNames from 'classnames';
 import Field from '../Field';
 
 
-const SelectContainer = ({ children, ...props }) => (
-  <components.SelectContainer {...props} className={classNames({ 'react-select__is-focused': props.isFocused })}>
+export const SelectContainer = ({ children, ...props }) => (
+  <components.SelectContainer {...props} className={classNames('react-select', { 'react-select__is-focused': props.isFocused })}>
     {children}
   </components.SelectContainer>
 );

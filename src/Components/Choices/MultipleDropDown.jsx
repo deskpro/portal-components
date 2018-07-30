@@ -1,19 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import { css } from 'emotion';
 import { getIn } from 'formik';
 import ReactSelect, { components } from 'react-select';
 import AsyncSelect from 'react-select/lib/Async';
+import { SelectContainer } from './DropDown';
 import Field from '../Field';
-
-const SelectContainer = ({ children, ...props }) => (
-  <components.SelectContainer {...props} className={classNames({ 'react-select__is-focused': props.isFocused })}>
-    {children}
-  </components.SelectContainer>
-);
-
-SelectContainer.propTypes = components.SelectContainer.propTypes;
 
 const Option = (props) => {
   const {
