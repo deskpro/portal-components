@@ -9,7 +9,7 @@ exports[`>>> DropDown --- Snapshot +++capturing Snapshot of DropDown 1`] = `
     className="dp-pc_field"
   >
     <div
-      className="css-10nd86i"
+      className="css-10nd86i react-select"
       id={undefined}
       onKeyDown={[Function]}
     >

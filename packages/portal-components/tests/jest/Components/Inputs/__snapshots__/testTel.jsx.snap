@@ -11,13 +11,23 @@ exports[`>>> Tel --- Snapshot +++capturing Snapshot of Tel 1`] = `
     <input
       className="dp-pc_input"
       description=""
+      excludeCountries={Array []}
       id={null}
       label=""
       name="tel"
       onBlur={[Function]}
       onChange={[Function]}
+      onlyCountries={Array []}
+      placeholder="1234 123456"
+      preferredCountries={
+        Array [
+          "us",
+          "gb",
+        ]
+      }
       type="tel"
       value="0123456789"
+      withIndicator={false}
     />
     <span
       className="indicator"
