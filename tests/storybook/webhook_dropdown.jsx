@@ -5,11 +5,11 @@ import { withKnobs, text } from '@storybook/addon-knobs/react';
 import { Formik } from 'formik';
 import { Form, WebhookDropDown, Submit } from '../../src/Components';
 
-storiesOf('Choices', module)
+storiesOf('Websources choices', module)
   .addDecorator(withKnobs)
-  .add('Webhook Dropdown', () => (
+  .add('Get Address IO', () => (
     <Formik
-      initialValues={{ filling: 'bacon' }}
+      initialValues={{}}
       onSubmit={action('submit')}
       render={() => (
         <Form>
@@ -34,4 +34,33 @@ storiesOf('Choices', module)
         </Form>
       )}
     />
+  ))
+  .add('French postal code', () => (
+    <Formik
+      initialValues={{}}
+      onSubmit={action('submit')}
+      render={() => (
+        <Form>
+          <WebhookDropDown
+            name="address"
+            dataSource={{
+              url:       'https://vicopo.selfbuild.fr/code/__FILTER__',
+              method:    'none',
+              parseData: (data) => {
+                if (data) {
+                  return data.cities.map(city => ({ value: city.city, label: city.city }));
+                }
+                return [];
+              },
+              params:          { headers: {} },
+              inputValidation: input => input.match(/^\d{5}$/g)
+            }}
+            label="Address"
+            multiple
+          />
+          <Submit>Submit</Submit>
+        </Form>
+      )}
+    />
   ));
+
