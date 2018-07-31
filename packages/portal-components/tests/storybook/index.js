@@ -10,6 +10,7 @@ import './dropdown';
 import './email';
 import './file_upload';
 import './likert_scale';
+import './multilevel_dropdown';
 import './multiple_dropdown';
 import './password';
 import './radio';
