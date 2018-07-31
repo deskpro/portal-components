@@ -24,7 +24,6 @@ storiesOf('Choices', module)
             dataSource={{ getOptions: options }}
             name="filling"
             label="Filling"
-            multiple
           />
           <Submit>Submit</Submit>
         </Form>

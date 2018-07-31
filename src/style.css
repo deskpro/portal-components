@@ -308,6 +308,7 @@
     & .react-select__option {
       font-size: 16px;
       padding: 10px;
+      position: relative;
       &.react-select__option--is-focused {
         background-color: var(--option-background);
         color: var(--primary-color);
@@ -315,6 +316,30 @@
       &.react-select__option--is-selected {
         color: var(--text-color);
         background-color: color(var(--primary-color) alpha(10%));
+      }
+    }
+    & .react-select__option--arrow {
+      position: absolute;
+      right: 15px;
+      top: 9px;
+      &:before,
+      &:after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: ' ';
+        height: 12px;
+        width: 2px;
+        background-color: var(--primary-color);
+      }
+      &:before {
+        transform: rotate(-45deg);
+        transition: 0.2s ease all;
+      }
+      &:after {
+        top: 7px;
+        transform: rotate(45deg);
+        transition: 0.2s ease all;
       }
     }
   }
