@@ -26,6 +26,8 @@ import Row from './Row';
 import Submit from './Submit';
 import TicketForm from './TicketForm';
 
+import FieldLayout from './FieldLayout';
+
 export {
   Checkboxes,
   DropDown,
@@ -53,6 +55,8 @@ export {
   Form,
   Row,
   Submit,
-  TicketForm
+  TicketForm,
+
+  FieldLayout
 };
 
