@@ -55,6 +55,7 @@ class Radio extends Field {
     const value = getIn(form.values, name);
     /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
     /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+    console.log(value);
     return (
       <div
         className={classNames('dp-pc_radios', { focused: this.state.focused }, className)}
@@ -75,7 +76,7 @@ class Radio extends Field {
               name={name}
               type="radio"
               value={option.value}
-              checked={parseInt(value, 10) === option.value}
+              checked={value === option.value}
               onChange={form.handleChange}
               onBlur={form.handleBlur}
             />
