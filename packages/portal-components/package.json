@@ -39,7 +39,7 @@
     "lint": "eslint . --cache --cache-location=.cache/eslint --ext .js,.jsx",
     "test": "node scripts/test.js --env=jsdom",
     "travis-test": "npm run test -- --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
-    "storybook": "start-storybook -p 9009 -s public",
+    "storybook": "start-storybook -p 9010 -s public",
     "build-storybook": "build-storybook -c .storybook -o .site",
     "deploy-storybook": "storybook-to-ghpages",
     "precommit": "lint-staged",

@@ -16,7 +16,7 @@ const options = [
 storiesOf('Choices', module)
   .add('Radio', () => (
     <Formik
-      initialValues={{ colour: '' }}
+      initialValues={{ colour: 'pink' }}
       onSubmit={action('submit')}
       render={() => (
         <Form>

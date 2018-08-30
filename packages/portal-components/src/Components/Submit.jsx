@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Submit = ({
   children,
   ...props
-}) => <button className="dp-pc_submit" {...props}>{children}</button>;
+}) => <button type="submit" className="dp-pc_submit" {...props}>{children}</button>;
 
 Submit.propTypes = {
   children: PropTypes.node
