@@ -2,6 +2,15 @@ const path = require('path');
 const pkg = require('../package.json');
 // const nodeExternals = require('webpack-node-externals');
 
+const mapToFolder = (dependencies, folder) =>
+  dependencies.reduce(
+    (acc, dependency) => ({
+      [dependency]: path.resolve(`${folder}/${dependency}`),
+      ...acc
+    }),
+    {}
+  );
+
 module.exports = {
   entry:  path.resolve(__dirname, '../src/index.js'),
   output: {
@@ -10,11 +19,20 @@ module.exports = {
     library:       '',
     libraryTarget: 'commonjs'
   },
+  devtool: 'source-map',
   resolve: {
     modules:    ['node_modules', 'src'],
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx'],
+    alias:      {
+      ...mapToFolder(['react', 'react-dom', 'formik'], './node_modules')
+    },
+    symlinks: false
   },
-  // externals: [nodeExternals()],
+  externals: {
+    react:       'react',
+    'react-dom': 'react-dom',
+    formik:      'formik'
+  },
   module: {
     rules: [
       {
