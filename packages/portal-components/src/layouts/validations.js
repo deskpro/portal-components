@@ -1,79 +1,69 @@
 import moment from 'moment';
 
-export const required = (value) => {
-  let message;
-  if (!value) {
-    message = 'Field is required';
+const formatError = (message, params) => {
+  if (typeof message === 'string') {
+    return message.replace(/\{\s*(\w+)\s*\}/g, (_, key) => params[key]);
   }
   return message;
 };
 
-export const min = (value, minValue) => {
-  let message;
-  if (value && value < minValue) {
-    message = `Value should be greater then ${minValue}`;
-  }
-  return message;
-};
+export const required = (value, _, message = 'Field is required') => !value && formatError(message, { value });
 
-export const max = (value, maxValue) => {
-  let message;
-  if (value && value > maxValue) {
-    message = `Value should be less then ${maxValue}`;
-  }
-  return message;
-};
+export const min = (value, [minValue], message = 'Value should be greater then {minValue}') =>
+  value && value < minValue && formatError(message, { value, minValue });
 
-export const maxLength = (value, lengthValue) => {
+export const max = (value, [maxValue], message = 'Value should be less then {maxValue}') =>
+  value && value > maxValue && formatError(message, { value, maxValue });
+
+export const maxLength = (value, [lengthValue], defaultMessage) => {
   let message;
   if (!value) {
     return message;
   }
   if (Array.isArray(value) && value.length > lengthValue) {
-    message = `You should select maximum ${lengthValue} items`;
+    message = defaultMessage || 'You should select maximum {lengthValue} items';
   } else if (String(value).length > lengthValue) {
-    message = `You should specify up to ${lengthValue} symbols`;
+    message = defaultMessage || 'You should specify up to {lengthValue} symbols';
   }
-  return message;
+  return formatError(message, { value, lengthValue });
 };
 
-export const minLength = (value, lengthValue) => {
+export const minLength = (value, [lengthValue], defaultMessage) => {
   let message;
   if (!value) {
     return message;
   }
   if (Array.isArray(value) && value.length < lengthValue) {
-    message = `You should select at least ${lengthValue} items`;
+    message = defaultMessage || 'You should select at least {lengthValue} items';
   } else if (String(value).length < lengthValue) {
-    message = `You should specify at least ${lengthValue} symbols`;
+    message = defaultMessage || 'You should specify at least {lengthValue} symbols';
   }
-  return message;
+  return formatError(message, { value, lengthValue });
 };
 
-export const regex = (value, pattern) => {
-  let message;
-  if (value && !new RegExp(pattern).test(String(value))) {
-    message = `Value does not match the pattern "${pattern}"`;
-  }
-  return message;
-};
+export const regex = (value, [pattern], message = 'Value does not match the pattern "{pattern}"') =>
+  value && !new RegExp(pattern).test(String(value)) && formatError(message, { value, pattern });
 
-export const dateRange = (value, from, to, ...args) => {
+export const dateRange = (value, [from, to, ...args], defaultMessage) => {
   let message;
   if (!value) {
     return message;
   }
+  const params = { value, from, to };
   if (from && to) {
     if (!moment(value).isBetween(from, to, ...args)) {
-      message = `Date should be between ${from} and ${to}`;
+      message = defaultMessage || 'Date should be between {from} and {to}';
     }
   } else if (to) {
     if (!moment(value).isBefore(to, ...args)) {
-      message = `Date should be before ${to}`;
+      message = defaultMessage || 'Date should be before {to}';
     }
   } else if (!moment(value).isAfter(from, ...args)) {
-    message = `Date should be after ${from || 'now'}`;
+    message = defaultMessage || 'Date should be after {from}';
+    if (!from) {
+      params.from = 'now';
+    }
   }
 
-  return message;
+  return formatError(message, params);
 };

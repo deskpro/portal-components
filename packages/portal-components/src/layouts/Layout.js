@@ -28,9 +28,15 @@ export class LayoutField {
   validate(value) {
     if (Array.isArray(this.validation) && this.validation.length) {
       for (let i = 0; i < this.validation.length; i++) {
-        const [ruleName, ...args] = this.validation[i].split(':');
+        const validationDef = this.validation[i];
+        let rule = validationDef;
+        let message;
+        if (typeof validationDef === 'object') {
+          ({ rule, message } = validationDef);
+        }
+        const [ruleName, ...args] = rule.split(':');
         if (ruleName in validations) {
-          const error = validations[ruleName](value, ...args);
+          const error = validations[ruleName](value, args, message);
           if (error) {
             return error;
           }
