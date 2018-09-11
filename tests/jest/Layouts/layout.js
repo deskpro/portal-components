@@ -112,4 +112,22 @@ describe('>>> Layout Field validations', () => {
     expect(field.validate('2018-10-10')).toBe('Date should be before 2018-01-01');
     expect(field.validate('1989-06-04')).toBeUndefined();
   });
+
+  it('should validate with custom message', () => {
+    const field = new LayoutField({
+      name:       'field',
+      type:       'date',
+      validation: [{ rule: 'dateRange', message: 'The date should be in a future' }]
+    });
+    expect(field.validate('1989-06-04')).toBe('The date should be in a future');
+  });
+
+  it('should validate with custom message containing params', () => {
+    const field = new LayoutField({
+      name:       'password',
+      type:       'password',
+      validation: [{ rule: 'regex:[0-9A-Za-z]{6,}', message: 'Value "{value}" does not match the pattern "{pattern}"' }]
+    });
+    expect(field.validate('some')).toBe('Value "some" does not match the pattern "[0-9A-Za-z]{6,}"');
+  });
 });

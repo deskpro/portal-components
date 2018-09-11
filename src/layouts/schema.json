@@ -60,7 +60,24 @@
         "validation": {
           "type": "array",
           "items": {
-            "type": "string"
+            "oneOf": [{
+                "type": "object",
+                "properties": {
+                  "rule": {
+                    "type": "string"
+                  },
+                  "message": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "name"
+                ]
+              },
+              {
+                "type": "string"
+              }
+            ]
           }
         }
       },
@@ -172,8 +189,7 @@
       "title": "Rule"
     },
     "DefaultValue": {
-      "anyOf": [
-        {
+      "anyOf": [{
           "type": "array",
           "items": {
             "type": "integer"
