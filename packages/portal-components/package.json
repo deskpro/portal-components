@@ -42,7 +42,7 @@
     "build-storybook": "build-storybook -c .storybook -o .site",
     "deploy-storybook": "storybook-to-ghpages",
     "precommit": "lint-staged",
-    "prepublish": "npm run dist"
+    "prepare": "npm run dist"
   },
   "repository": {
     "type": "git",
