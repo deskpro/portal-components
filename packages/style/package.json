@@ -1,0 +1,47 @@
+{
+  "name": "style",
+  "version": "0.0.0",
+  "description": "Styling for for Deskpro Portal Interface",
+  "author": "DeskPRO <support@deskpro.com>",
+  "homepage": "",
+  "license": "SEE LICENSE IN LICENSE",
+  "main": "dist/style.css",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "yarn postcss-build && concurrently --kill-others 'yarn:postcss-watch' 'yarn:init-website-watch' 'yarn:docs-server'",
+    "build-lib": "yarn postcss-build",
+    "prepare": "yarn postcss-prod",
+    "build": "yarn postcss-build && yarn init-website-build && yarn docs-build",
+    "postcss-watch": "postcss \"src/**/*.css\" --base src --dir dist --verbose -m -w --env development",
+    "postcss-build": "postcss \"src/**/*.css\" --base src --dir dist --verbose --env development -m",
+    "postcss-prod": "postcss \"src/**/*.css\" --base src --dir dist --verbose --env production -m",
+    "init-website-watch": "cpx dist/style.css website/static/css --watch",
+    "init-website-build": "cpx dist/style.css website/static/css",
+    "docs-server": "cd website && yarn start",
+    "docs-build": "cd website && yarn build",
+    "lint": "stylelint \"src/**/*.css\"",
+    "lint-tryfix": "stylelint \"src/**/*.css\" --fix",
+    "test": "stylelint \"src/**/*.css\"",
+    "postinstall": "[ ! -d website ] || (cd website && yarn install)"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "contrast": "^1.0.1",
+    "cpx": "^1.5.0",
+    "postcss": "^7.0.16",
+    "postcss-autoreset": "^2.0.2",
+    "postcss-cli": "^6.1.2",
+    "postcss-extend-rule": "^2.0.0",
+    "postcss-flexbugs-fixes": "^4.1.0",
+    "postcss-import": "^12.0.1",
+    "postcss-inline-svg": "^3.1.1",
+    "postcss-preset-env": "^6.6.0",
+    "postcss-svgo": "^4.0.2",
+    "stylelint": "^10.0.1",
+    "stylelint-config-suitcss": "^14.0.0",
+    "stylelint-selector-bem-pattern": "^2.1.0"
+  }
+}

@@ -3,5 +3,10 @@
   "private": true,
   "devDependencies": {
     "lerna": "^3.2.1"
+  },
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "test": "lerna run --stream test",
+    "dev": "lerna run dev --parallel"
   }
 }

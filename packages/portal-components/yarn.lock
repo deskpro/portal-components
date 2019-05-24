@@ -10213,6 +10213,11 @@ style-loader@^0.20.3:
     loader-utils "^1.1.0"
     schema-utils "^0.4.5"
 
+style@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/style/-/style-0.0.3.tgz#a2d7989a9e010101f2bc4d287cff3b45cfbb5837"
+  integrity sha1-oteYmp4BAQHyvE0ofP87Rc+7WDc=
+
 stylis-rule-sheet@^0.0.10:
   version "0.0.10"
   resolved "https://registry.yarnpkg.com/stylis-rule-sheet/-/stylis-rule-sheet-0.0.10.tgz#44e64a2b076643f4b52e5ff71efc04d8c3c4a430"
