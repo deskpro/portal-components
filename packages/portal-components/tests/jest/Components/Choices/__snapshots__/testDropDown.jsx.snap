@@ -9,25 +9,25 @@ exports[`>>> DropDown --- Snapshot +++capturing Snapshot of DropDown 1`] = `
     className="dp-pc_field"
   >
     <div
-      className="css-10nd86i react-select"
+      className="css-1pcexqc-container react-select"
       id={undefined}
       onKeyDown={[Function]}
     >
       <div
-        className="css-1aya2g8 react-select__control"
+        className="css-bg1rzq-control react-select__control"
         onMouseDown={[Function]}
         onTouchEnd={[Function]}
       >
         <div
-          className="css-1rtrksz react-select__value-container react-select__value-container--has-value"
+          className="css-1hwfws3 react-select__value-container react-select__value-container--has-value"
         >
           <div
-            className="css-va7pk8 react-select__single-value"
+            className="css-dvua67-singleValue react-select__single-value"
           >
             First
           </div>
           <div
-            className="css-rsyb7x"
+            className="css-1g6gooi"
           >
             <div
               className="react-select__input"
@@ -58,6 +58,7 @@ exports[`>>> DropDown --- Snapshot +++capturing Snapshot of DropDown 1`] = `
                     "boxSizing": "content-box",
                     "color": "inherit",
                     "fontSize": "inherit",
+                    "label": "input",
                     "opacity": 1,
                     "outline": 0,
                     "padding": 0,
@@ -91,7 +92,7 @@ exports[`>>> DropDown --- Snapshot +++capturing Snapshot of DropDown 1`] = `
         >
           <div
             aria-hidden="true"
-            className="css-1ep9fjw react-select__indicator react-select__clear-indicator"
+            className="css-16pqwjk-indicatorContainer react-select__indicator react-select__clear-indicator"
             onMouseDown={[Function]}
             onTouchEnd={[Function]}
           >
@@ -109,11 +110,11 @@ exports[`>>> DropDown --- Snapshot +++capturing Snapshot of DropDown 1`] = `
             </svg>
           </div>
           <span
-            className="css-d8oujb react-select__indicator-separator"
+            className="css-bgvzuu-indicatorSeparator react-select__indicator-separator"
           />
           <div
             aria-hidden="true"
-            className="css-1ep9fjw react-select__indicator react-select__dropdown-indicator"
+            className="css-16pqwjk-indicatorContainer react-select__indicator react-select__dropdown-indicator"
             onMouseDown={[Function]}
             onTouchEnd={[Function]}
           >

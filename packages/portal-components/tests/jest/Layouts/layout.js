@@ -37,6 +37,10 @@ describe('>>> Layout helper class', () => {
   });
 });
 
+const futureDate = new Date();
+futureDate.setDate(futureDate.getDate() + 10);
+const formattedFutureDate = `${futureDate.getFullYear()}-${futureDate.getMonth() + 1}-${futureDate.getDate()}`;
+
 describe('>>> Layout Field validations', () => {
   it('should validate required fields', () => {
     const field = new LayoutField({
@@ -99,7 +103,7 @@ describe('>>> Layout Field validations', () => {
       type:       'date',
       validation: ['dateRange']
     });
-    expect(field.validate('2018-10-10')).toBeUndefined();
+    expect(field.validate(formattedFutureDate)).toBeUndefined();
     expect(field.validate('1989-06-04')).toBe('Date should be after now');
   });
 
@@ -109,7 +113,7 @@ describe('>>> Layout Field validations', () => {
       type:       'date',
       validation: ['dateRange::2018-01-01']
     });
-    expect(field.validate('2018-10-10')).toBe('Date should be before 2018-01-01');
+    expect(field.validate(formattedFutureDate)).toBe('Date should be before 2018-01-01');
     expect(field.validate('1989-06-04')).toBeUndefined();
   });
 
