@@ -1,5 +1,13 @@
 {
   "docs": {
-    "Getting Started": ["intro"]
+    "Getting Started": [
+    	"intro",
+    	"test"
+    ],
+    "Elements": [
+    	"elements/dp-po-Labels",
+    	"elements/dp-po-Buttons",
+        "elements/dp-po-Dividers"
+    ]
   }
 }
