@@ -5,6 +5,7 @@ before_script:
   - yarn bootstrap
 script:
   - npm run travis-test
+  - yarn build
   - 'if [ "${TRAVIS_BRANCH}" == "develop" ] && [ "${TRAVIS_PULL_REQUEST}" == "false" ]; then ./bin/travis-prep-website.sh; else echo "site building is only enabled on the develop branch"; fi'
 cache:
   yarn: true
