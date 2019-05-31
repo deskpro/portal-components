@@ -87,7 +87,10 @@ class Tel extends Field {
     return [
       <ReactSelect
         key="indicator"
-        value={this.loadCountries().find(indicator => indicator.country === this.state.country && indicator.value === this.state.indicator)}
+        value={
+          this.loadCountries().find(indicator =>
+            indicator.country === this.state.country
+            && indicator.value === this.state.indicator)}
         name={name}
         isClearable={false}
         filterOption={Tel.filterIndicator}
