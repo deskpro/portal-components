@@ -8,6 +8,9 @@
     	"elements/dp-po-Labels",
     	"elements/dp-po-Buttons",
         "elements/dp-po-Dividers"
+    ],
+    "Components": [
+        "components/dp-po-Tables"
     ]
   }
 }
