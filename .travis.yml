@@ -14,8 +14,6 @@ cache:
     - node_modules
     - packages/style/website/node_modules
     - packages/style/node_modules
-before_deploy:
-  - npm run build-storybook
 deploy:
   - provider: pages
     skip_cleanup: true

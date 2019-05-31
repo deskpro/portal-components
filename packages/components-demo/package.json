@@ -27,10 +27,14 @@
   },
   "dependencies": {
     "@deskpro/portal-components": "^0.2.6",
+    "@deskpro/react-datepicker-hijri": "^1.5.0",
     "@storybook/addon-knobs": "^5.0.11",
     "formik": "^1.5.7",
+    "immutable": "^4.0.0-rc.12",
+    "moment": "^2.24.0",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "yup": "^0.27.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
