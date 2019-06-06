@@ -1,8 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { Formik } from 'formik';
-import { Form, MultipleDropDown, Submit } from '@deskpro/portal-components';
+import { Formik, Form, MultipleDropDown, Submit } from '@deskpro/portal-components';
 
 const options = [
   { value: 'bacon', label: 'Bacon' },

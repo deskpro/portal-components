@@ -1,8 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { Formik } from 'formik';
-import { Form, Tel, Submit } from '@deskpro/portal-components';
+import { Form, Tel, Submit, Formik } from '@deskpro/portal-components';
 
 
 storiesOf('Input', module)

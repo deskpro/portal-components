@@ -2,9 +2,8 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import moment from 'moment';
 import { action } from '@storybook/addon-actions';
-import { Formik } from 'formik';
 import '@deskpro/react-datepicker-hijri/dist/react-datepicker.css';
-import { Form, DatePicker, Submit } from '@deskpro/portal-components';
+import { Form, DatePicker, Submit, Formik } from '@deskpro/portal-components';
 
 moment.locale('ar');
 

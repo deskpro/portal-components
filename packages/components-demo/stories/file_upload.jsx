@@ -1,8 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { Formik } from 'formik';
-import { Form, FileUpload, Submit } from '@deskpro/portal-components';
+import { Form, FileUpload, Submit, Formik } from '@deskpro/portal-components';
 
 function setCookie(name, value, days, domain) {
   let expires = '';

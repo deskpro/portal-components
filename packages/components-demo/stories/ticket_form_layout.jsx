@@ -1,11 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { Form, Formik } from 'formik';
 
-import { FieldLayout } from '@deskpro/portal-components';
-import { Submit } from '@deskpro/portal-components';
-import { LayoutConfig } from '@deskpro/portal-components';
+import { FieldLayout, Submit, LayoutConfig, Formik, Form } from '@deskpro/portal-components';
+
+
 import ticketFormLayout from '../DemoState/ticketFormLayout';
 
 const layouts = new LayoutConfig(ticketFormLayout);

@@ -3,9 +3,8 @@ import PropTypes from 'prop-types';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean } from '@storybook/addon-knobs/react';
 import * as Yup from 'yup';
-import { withFormik } from 'formik';
 import {
-  Form, Email, Password, DropDown, Checkbox, Submit
+  Form, Email, Password, DropDown, Checkbox, Submit, withFormik
 } from '@deskpro/portal-components';
 
 const options = [

@@ -1,8 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { Formik } from 'formik';
-import { Form, Radio, Submit } from '@deskpro/portal-components';
+import { Form, Radio, Submit, Formik } from '@deskpro/portal-components';
 
 const options = [
   { value: 'blue', label: 'Blue' },
