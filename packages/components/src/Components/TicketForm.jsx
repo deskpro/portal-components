@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { List } from 'immutable';
 import { Formik } from 'formik';
-import Yup from 'yup';
+import * as Yup from 'yup';
 import Form from './Form';
 import Submit from './Submit';
 import TicketField from './TicketField';

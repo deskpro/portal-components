@@ -1,36 +1,19 @@
 const cssnext = require('postcss-preset-env');
 
-module.exports = {
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          { loader: 'css-loader', options: { /*modules: true, importLoaders: 1 */ } },
-          {
-            loader: 'postcss-loader',
-            options: {
-              ident: 'postcss',
-              plugins: () => [
-                cssnext(),
-              ],
-              sourceMap: true,
-            },
-          },
-        ]
-      },
-      {
-        test: /\.(ttf|eot|woff|woff2)$/,
-        loader: 'file-loader',
-        options: {
-          name: 'fonts/[name].[ext]',
-        },
-      },
-      {
-        test: /\.svg$/,
-        loader: 'raw-loader'
-      }
-    ]
-  }
+module.exports = async ({ config }) => {
+
+  config.module.rules.push({
+    test: /\.(ttf|eot|woff|woff2)$/,
+    loader: 'file-loader',
+    options: {
+      name: 'fonts/[name].[ext]',
+    },
+  });
+  config.module.rules.push({
+    test: /\.svg$/,
+    loader: 'raw-loader'
+  });
+
+  // Return the altered config
+  return config;
 };
