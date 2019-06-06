@@ -3,6 +3,7 @@
 exports[`>>> Url --- Snapshot +++capturing Snapshot of Url 1`] = `
 <form
   className="dp-pc_form show-hover"
+  onReset={[Function]}
   onSubmit={[Function]}
 >
   <div
