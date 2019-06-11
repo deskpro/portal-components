@@ -2,12 +2,23 @@
   "name": "root",
   "private": true,
   "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-import-resolver-babel-module": "^5.1.0",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-flowtype": "^3.9.1",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.13.0",
     "lerna": "^3.2.1"
   },
   "scripts": {
     "bootstrap": "lerna bootstrap",
+    "dev": "lerna run dev --parallel",
+    "build": "lerna run --stream build",
     "test": "lerna run --stream test",
-    "test-travis": "lerna run --stream test-travis",
-    "dev": "lerna run dev --parallel"
+    "lint": "eslint . --cache --cache-location=.cache/eslint --ext .js,.jsx",
+    "travis-test": "lerna run --stream travis-test"
   }
 }

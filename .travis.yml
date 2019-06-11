@@ -1,18 +1,27 @@
 language: node_js
 node_js:
-- '8'
+  - '8'
+before_script:
+  - yarn bootstrap
 script:
-- npm run travis-test
-before_deploy:
-- npm run build-storybook
+  - npm run travis-test
+  - yarn build
+  - 'if [ "${TRAVIS_BRANCH}" == "develop" ] && [ "${TRAVIS_PULL_REQUEST}" == "false" ]; then ./bin/travis-prep-website.sh; else echo "site building is only enabled on the develop branch"; fi'
+cache:
+  yarn: true
+  directories:
+    - .npm
+    - node_modules
+    - packages/style/website/node_modules
+    - packages/style/node_modules
 deploy:
   - provider: pages
     skip_cleanup: true
     github_token: $GH_TOKEN
     keep-history: true
-    local-dir: .site
+    local-dir: target/gh-pages
     on:
-      branch: master
+      branch: develop
   - provider: npm
     email: julien.ducro@deskpro.com
     api_key:

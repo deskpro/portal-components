@@ -9,16 +9,16 @@
 // site configuration options.
 
 const siteConfig = {
-  title: 'Portal Style', // Title for your website.
+  title:   'Portal Style', // Title for your website.
   tagline: 'Styles for Deskpro Portal Interface',
-  url: 'https://deskpro.github.io/portal-components/style', // Your website URL
-  baseUrl: '/', // Base URL for your project */
+  url:     'https://deskpro.github.io/portal-components/style', // Your website URL
+  baseUrl: '/portal-components/style/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
 
   // Used for publishing and more
-  projectName: 'style',
+  projectName:      'style',
   organizationName: 'Deskpro',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
@@ -26,16 +26,16 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'intro', label: 'Docs'},
+    { doc: 'intro', label: 'Docs' },
   ],
 
   headerIcon: 'img/dp-logo-white.svg',
   footerIcon: 'img/dp-logo.svg',
-  favicon: 'img/favicon.png',
+  favicon:    'img/favicon.png',
 
   /* Colors for website */
   colors: {
-    primaryColor: '#4195d1',
+    primaryColor:   '#4195d1',
     secondaryColor: '#205C3B',
   },
 
@@ -67,10 +67,10 @@ const siteConfig = {
   // On page navigation for the current documentation page.
   onPageNav: 'separate',
   // No .html extensions for paths.
-  cleanUrl: true,
+  cleanUrl:  true,
 
   // Open Graph and Twitter card images.
-  ogImage: 'img/undraw_online.svg',
+  ogImage:      'img/undraw_online.svg',
   twitterImage: 'img/undraw_tweetstorm.svg',
 
   // Show documentation's last contributor's name.
