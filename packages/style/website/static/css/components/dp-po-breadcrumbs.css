@@ -1,0 +1,95 @@
+/*breadcrumbs*/
+
+.dp-po-Breadcrumbs {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 2px solid var(--grey-light);
+  padding: 5px 10px 5px 0;
+  position: relative;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+}
+
+.dp-po-Breadcrumb-item {
+  margin: 0;
+  margin-right: 25px;
+  position: relative;
+  font: var(--p-xxl-semibold);
+  display: flex;
+}
+
+.dp-po-Breadcrumb-item:not(:first-child)::before {
+  background-color: var(--grey);
+  content: "";
+  display: block;
+  height: 8px;
+  position: absolute;
+  left: -14px;
+  top: calc(50% - 6px);
+  transform: rotate(-45deg);
+  width: 1px;
+}
+
+.dp-po-Breadcrumb-item:not(:first-child)::after {
+  background-color: var(--grey);
+  bottom: calc(50% - 8px);
+  content: "";
+  display: block;
+  height: 8px;
+  position: absolute;
+  left: -14px;
+  transform: rotate(45deg);
+  width: 1px;
+}
+
+.dp-po-Breadcrumb-item.is-selected:not(:first-child)::before,
+.dp-po-Breadcrumb-item.is-selected:not(:first-child)::after {
+  background-color: var(--brand-primary);
+}
+
+.dp-po-Breadcrumb-item:last-child .dp-po-Breadcrumb-link:after {
+	position: absolute;
+	content: "";
+	left: 0;
+	top: calc(100% + 5px);
+	width: 100%;
+	height: 2px;
+	background-color: var(--brand-primary);
+}
+
+.dp-po-Breadcrumb-link {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  font-size: 15px;
+  line-height: 16px;
+  text-decoration: none;
+  position: relative;
+  font: var(--p-xxl-semibold);
+  color: var(--grey-darkest);
+}
+
+.dp-po-Breadcrumb-item .dp-po-Breadcrumb-link {
+  color: var(--grey);
+}
+
+.dp-po-Breadcrumb-item:hover .dp-po-Breadcrumb-link {
+	color: var(--brand-primary);
+}
+
+.dp-po-Breadcrumb-item:hover + .dp-po-Breadcrumb-item:before,
+.dp-po-Breadcrumb-item:hover + .dp-po-Breadcrumb-item:after {
+  background-color: var(--brand-primary);
+} 
+
+.dp-po-Breadcrumb-item:hover:not(:first-child)::before,
+.dp-po-Breadcrumb-item:hover:not(:first-child)::after {
+	background-color: var(--brand-primary);
+}
+
+.dp-po-Breadcrumb-item:first-child .dp-po-Breadcrumb-link,
+.dp-po-Breadcrumb-item.is-selected .dp-po-Breadcrumb-link {
+	color: var(--grey-darkest);
+}

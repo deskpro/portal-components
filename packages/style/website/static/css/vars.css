@@ -1,0 +1,126 @@
+:root {
+
+  --font-family-open-sans: "Open Sans", sans-serif;
+  --font-family-base: var(--font-family-open-sans);
+  --font-size-base: 16px;
+  --line-height-base: 1.2;
+
+  --border-radius-button: calc(var(--border-radius) * 0.75);
+  --border-radius: 0.25rem; /* 4px based on 16px document */
+  --border-radius-small: calc(var(--border-radius) * 0.5); /* 4px based on 16px document */
+  --border-radius-comment: 0.25rem;
+  --border-radius-button: 5px;
+
+  --animation-speed: 0.2s;
+
+  --bg-app-panel: #edeff1;
+  --bg-app-panel-hover: #e6e7e7;
+  --border-color-light: #d2dce4;
+  --border-color-dark: #b2c2ce;
+  --border-color: #cecece;
+  --normal-font-size: 1rem;
+  --border-color-input: #cecece;
+
+  --height-icon: 15px;
+  --width-icon: 15px;
+
+  --card-border: 2px;
+  --card-padding: 4px;
+  --card-element-margin: 13px;
+  --framework-margin: 10px;
+  --button-padding: 10px;
+
+  --height-menu: 46px;
+  --height-search-snippet: calc(-1px - var(--height-menu));
+  --height-search-control: 45px;
+  --padding-tabbar: 5px 25px 7px 10px;
+  --padding-tabs: 5px 10px;
+  --padding-drop-down: 3.5px 10px;
+  --padding-message-container: 10px;
+  --padding-message-color-container: 20px 10px 10px;
+
+  /* Deskpro Colours */
+  --white: #fff;
+  --black: #000;
+  --text-color: var(--black);
+
+  --brand-primary: #3a8dde;
+  --primary-light: #e9f7ff;
+
+  --grey-darkest: #4c4f50;
+  --grey-dark: #8b9293;
+  --grey: #a9b0b0;
+  --grey-light: #d3d6d7;
+  --grey-lighter: #eff0f0;
+  --grey-lightest: #f7f7f7;
+
+  --danger: #e84954;
+  --warning: #ec6c4e;
+  --neutral: #f8af3c;
+  --success: #54b162;
+  --info: #4b93cf;
+  --pink: #df5e9c;
+  --purple: #9384bd;
+
+  --danger-light: #fbe1e3;
+  --warning-light: #f9e6e1;
+  --neutral-light: #fff8e1;
+  --success-light: #efd;
+  --info-light: #e1eefb;
+  --pink-light: #fae8f0;
+  --purple-light: #ebe4f2;
+
+  /* Fonts */
+
+  --is-regular: 400;
+  --is-semibold: 600;
+  --is-bold: 700;
+  --is-uppercase: uppercase;
+  --is-italic: italic;
+
+  --font-Title-XL: 16px;
+  --font-Title-L: 14px;
+  --font-Title-N: 13px;
+  --font-Title-S: 12px;
+
+  --font-Text-XXL: 15px;
+  --font-Text-L: 11px;
+  --font-Text-N: 10px;
+  --font-Text-S: 9px;
+
+  --font-Text-XS: 7px;
+
+  /* New Fonts */
+  --h-xl: var(--is-regular) var(--font-Title-XL)/var(--line-height-base) "Open Sans", sans-serif;
+  --h-l-semibold: var(--is-semibold) var(--font-Title-L)/var(--line-height-base) "Open Sans", sans-serif;
+  --h-l-bold: var(--is-bold) var(--font-Title-L)/var(--line-height-base) "Open Sans", sans-serif;
+  --h-n-semibold: var(--is-semibold) var(--font-Title-N)/var(--line-height-base) "Open Sans", sans-serif;
+  --h-s-semibold: var(--is-semibold) var(--font-Title-S)/var(--line-height-base) "Open Sans", sans-serif;
+
+  --p-xxl: var(--is-regular) var(--font-Text-XXL)/var(--line-height-base) "Open Sans", sans-serif;
+  --p-xxl-semibold: var(--is-semibold) var(--font-Text-XXL)/var(--line-height-base) "Open Sans", sans-serif;
+  --p-xl: var(--is-regular) var(--font-Title-S)/var(--line-height-base) "Open Sans", sans-serif;
+  --p-xl-italic: var(--is-regular) var(--is-italic) var(--font-Title-S)/var(--line-height-base) "Open Sans", sans-serif;
+
+  --p-l: var(--is-regular) var(--font-Text-L)/var(--line-height-base) "Open Sans", sans-serif;
+  --p-l-semibold: var(--is-semibold) var(--font-Text-L)/var(--line-height-base) "Open Sans", sans-serif;
+
+  --p-n: var(--is-regular) var(--font-Text-N)/var(--line-height-base) "Open Sans", sans-serif;
+  --p-n-semibold-caps: var(--is-semibold) var(--font-Text-N)/var(--line-height-base) "Open Sans", sans-serif;
+  --p-n-semibold: var(--is-semibold) var(--font-Text-N)/var(--line-height-base) "Open Sans", sans-serif;
+  --p-n-caps: var(--is-regular) var(--font-Text-N)/var(--line-height-base) "Open Sans", sans-serif;
+
+  --p-s: var(--is-regular) var(--font-Text-S)/var(--line-height-base) "Open Sans", sans-serif;
+  --p-s-semibold: var(--is-semibold) var(--font-Text-S)/var(--line-height-base) "Open Sans", sans-serif;
+
+  --l-n: var(--is-regular) var(--font-Text-XS)/var(--line-height-base) "Open Sans", sans-serif;
+  --l-n-semibold: var(--is-semibold) var(--font-Text-XS)/var(--line-height-base) "Open Sans", sans-serif;
+
+  /* Deskpro Shadows */
+  --shadow-bottom: 0 5px 5px rgba(0, 0, 0, 0.15);
+  --shadow-top-inset: inset 0 5px 5px 0 rgba(0, 0, 0, 0.15);
+  --shadow-bottom-left: -5px 5px 5px rgba(0, 0, 0, 0.15);
+  --shadow-bottom-right: 5px 5px 5px rgba(0, 0, 0, 0.15);
+  --shadow-left: -5px 0 5px rgba(0, 0, 0, 0.15);
+  --shadow-right: 5px 0 5px rgba(0, 0, 0, 0.15);
+}

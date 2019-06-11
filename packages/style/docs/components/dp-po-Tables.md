@@ -7,26 +7,20 @@ sidebar_label: Tables
 <h4>tables/ticket-header</h4>
 <div class="dp-po-TableWrapper demo-TableWrapper">
 	<div class="dp-po-Tableview is-hoverable">
-		<div class="dp-po-TableRow dp-TableControl">
-<!-- 			<div class="dp-po-TableItem">
-				<span class="dp-po-CustomCheckbox dp-po-EmptyCheckbox">
-					<input type="checkbox" class="dp-ControlInput" id="tableview-1"></input>
-					<label for="tableview-1"></label>
-				</span>
-			</div> -->
+		<div class="dp-po-TableRow dp-po-TableControl">
 			<div class="dp-po-TableItem">
-				Ticket ID
+				ID
 			</div>
-			<div class="dp-po-TableItem dp-po-TableSubject">
+			<div class="dp-po-TableItem">
 				Subject
 			</div>
 			<div class="dp-po-TableItem">
 				Department
-				<span class="dp-po-Icon Icon--sort Icon--primary"></span>
+				<span class="dp-po-Icon Icon--sort"></span>
 			</div>
 			<div class="dp-po-TableItem">
 				Created
-				<span class="dp-po-Icon Icon--sort Icon--primary"></span>
+				<span class="dp-po-Icon Icon--sort"></span>
 			</div>
 			<div class="dp-po-TableItem">
 				Last activity
@@ -40,22 +34,38 @@ sidebar_label: Tables
 		<div class="dp-po-TableRow">
 			<div class="dp-po-TableItem dp-po-ticket">
 				<span class="dp-po-ticket-Icon"></span>
-				ALVM-6732-XRKJ
+				XXXX-XXXX-XXXX
 			</div>
-			<div class="dp-po-TableItem dp-po-TableSubject">
-				Craft sync not working with updated photoshop CC 2018
+			<div class="dp-po-TableItem">
+				Subject title
 			</div>
 			<div class="dp-po-TableItem">
 				Support
 			</div>
 			<div class="dp-po-TableItem">
-				01-03-2018
+				DD-MM-YYYY
 			</div>
 			<div class="dp-po-TableItem">
-				10 mins ago
+				00 mins ago
 			</div>
 			<div class="dp-po-TableItem">
-				Rating
+				<img class="dp-po-Avatar-icon" src="/img/docs/avatar-circular.png" alt="">
+				<img class="dp-po-Avatar-icon Avatar--smile" src="/img/docs/smile.svg" alt="">
+			</div>
+		</div>
+		<!-- tables/chat-row -->
+		<div class="dp-po-TableRow TableRow--chat">
+			<div class="dp-po-TableItem">
+				Angel investor leverage freemium iteration analytics ecosystem innovator network effects direct ...
+			</div>
+			<div class="dp-po-TableItem">
+				<span class="dp-po-Avatar Avatar--small">
+					<img class="dp-po-Avatar-icon" src="/img/docs/avatar.png" alt="">
+					<span class="dp-po-Avatar-name">Name Surname</span>
+				</span>
+			</div>
+			<div class="dp-po-TableItem">
+				DD-MM-YYYYY
 			</div>
 		</div>
 	</div>

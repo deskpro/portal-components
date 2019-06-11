@@ -1,0 +1,40 @@
+.dp-po-card-atom {
+	border: 2px solid var(--grey-light);
+	border-radius: 6px;
+	max-width: 300px;
+}
+
+.dp-po-card-atom:hover {
+	border-color: var(--brand-primary);
+	box-shadow: var(--shadow-bottom-right);
+}
+
+.dp-po-card-title {
+	font-size: 19px;
+	background-color: var(--grey-lightest);
+	border-bottom: 1px solid var(--grey-light);
+	padding: 15px;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+
+.dp-po-card-content {
+	padding: 15px;
+}
+
+.dp-po-content-txt {
+	font: var(--p-xxl);
+	color: var(--grey-darkest);
+	margin-bottom: 15px;
+}
+
+.dp-po-content-txt.content-txt--large {
+	font-size: 17px;
+	font-weight: 600;
+}
+
+/*card-atom--long*/
+
+.dp-po-card-atom.card-atom--long {
+	max-width: 100%;
+}
