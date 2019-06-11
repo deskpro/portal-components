@@ -1,0 +1,5 @@
+.dp-po-Tabs-item.is-hover {
+	border-bottom: 2px solid var(--grey-dark);
+	color: var(--grey-dark);
+	margin-bottom: -2px;
+}

@@ -1,0 +1,53 @@
+.dp-po-Tabs, .dp-po-Tabs .dp-po-Tabs-item {
+    display: flex;
+}
+
+.dp-po-Tabs {
+	padding: 0;
+	margin: 0;
+	border-bottom: 2px solid var(--grey-light);
+}
+
+.dp-po-Tabs-item {
+	color: var(--grey);
+	font: var(--p-xxl-semibold);
+	cursor: pointer;
+	margin-right: 20px;
+	margin-top: 0;
+	padding: 5px 0;
+	position: relative;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+}
+
+.dp-po-Tabs-item.is-selected {
+	color: var(--grey-darkest);
+	border-bottom: 2px solid var(--brand-primary);
+	margin-bottom: -2px;
+}
+
+.dp-po-Tabs-item:hover {
+	margin-bottom: -2px;
+	border-bottom: 2px solid var(--grey-dark);
+	color: var(--grey-dark);
+}
+
+.dp-po-Tabs-item .dp-po-qt {
+	margin-left: 5px;
+}
+
+.dp-po-Tabs-item .dp-po-Icon {
+	margin-right: 10px;
+}
+
+.dp-po-Tabs.Tabs--Large .dp-po-Tabs-item {
+	font-size: 23px;
+	font-weight: 400;
+	margin-right: 40px;
+}
+
+
+.dp-po-Tabs.Tabs--Small .dp-po-Tabs-item {
+	font: var(--p-xxl-semibold);
+}

@@ -1,0 +1,22 @@
+.dp-po-Info {
+	display: flex;
+	font-size: 18px;
+	color: var(--grey-darkest);
+	border: 1px solid var(--brand-primary);
+	border-left: 5px solid var(--brand-primary);
+	background-color: var(--grey-lightest);
+	border-radius: 6px;
+	width: 100%;
+	max-width: 670px;
+	padding: 15px;
+}
+
+.dp-po-Info .dp-po-info-txt {
+	padding-left: 15px;
+}
+
+.dp-po-Info.Info--danger {
+	border: 1px solid var(--danger);
+	border-left: 5px solid var(--danger);
+	font: var(--p-xxl);
+}

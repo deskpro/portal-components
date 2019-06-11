@@ -1,5 +1,28 @@
 {
   "docs": {
-    "Getting Started": ["intro"]
+    "Getting Started": [
+    	"intro"
+    ],
+    "Components": [
+        "components/dp-po-Avatars",
+        "components/dp-po-Buttons",
+        "components/dp-po-Breadcrumbs",
+        "components/dp-po-Calender",
+        "components/dp-po-Cards",
+        "components/dp-po-Dropdown",
+        "components/dp-po-Dividers",
+        "components/dp-po-Information",
+        "components/dp-po-Icontext",
+        "components/dp-po-Links",
+        "components/dp-po-Lists",
+    	"components/dp-po-Labels",
+        "components/dp-po-Pagination",
+        "components/dp-po-Popups",
+        "components/dp-po-Progressbar",
+        "components/dp-po-Tables",
+        "components/dp-po-Tabs",
+        "components/dp-po-Tooltips",
+        "components/dp-po-Scrollbar"
+    ]
   }
 }

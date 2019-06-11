@@ -1,0 +1,13 @@
+.dp-po-Breadcrumb-item.Breadcrumb-item-demo {
+	margin-left: 15px;
+	margin-right: 0;
+}
+
+.Breadcrumbs-demo .dp-po-Breadcrumb-item.is-hover .dp-po-Breadcrumb-link {
+	color: var(--brand-primary);
+}
+
+.Breadcrumbs-demo .dp-po-Breadcrumb-item.is-hover + .dp-po-Breadcrumb-item:before,
+.Breadcrumbs-demo .dp-po-Breadcrumb-item.is-hover + .dp-po-Breadcrumb-item:after {
+  background-color: var(--brand-primary);
+} 

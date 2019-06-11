@@ -1,0 +1,156 @@
+/* Pagination */
+
+.dp-po-Pagination-container {
+  display: flex;
+  padding: 10px 0;
+}
+
+.dp-po-Pagination-container .dp-po-Pagination {
+  align-items: center;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dp-po-Pagination-container .dp-po-Pagination li {
+  margin: 0;
+}
+
+.dp-po-PageNumber {
+  align-items: center;
+  background: var(--white);
+  border: solid 1px var(--grey-light);
+  border-radius: 2px;
+  color: var(--grey-darkest);
+  display: flex;
+  font: var(--p-n);
+  justify-content: center;
+  margin-right: 2px;
+  min-height: 20px;
+  min-width: 20px;
+  text-decoration: none;
+}
+
+.dp-po-BreakPagination {
+  display: flex;
+  justify-content: center;
+  margin-top: -6px;
+  min-height: 20px;
+  min-width: 20px;
+}
+
+.dp-po-PageNumber.is-hover,
+.dp-po-PageNumber:hover,
+.dp-po-PageNumber.gradient:hover {
+  background-color: var(--primary-light);
+  border: 1px solid var(--brand-primary);
+  color: var(--brand-primary);
+  cursor: pointer;
+}
+
+.dp-po-PageNumber.is-active {
+  background: var(--brand-primary);
+  border: none;
+  color: var(--white);
+}
+
+.dp-po-PageNumber.is-disabled {
+  background: var(--grey-light);
+  color: var(--white);
+  border: none;
+}
+
+.dp-po-PaginationArrows {
+  outline: none;
+}
+
+.dp-po-PaginationArrows {
+  outline: none;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dp-po-Pagination-container a:hover {
+  cursor: pointer;
+}
+
+.dp-po-PageJump {
+  align-items: center;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  padding-left: 16px;
+  position: relative;
+}
+
+.dp-po-PageJump::after {
+  background-color: var(--grey-light);
+  content: "";
+  height: 100%;
+  left: 5px;
+  position: absolute;
+  top: 0;
+  width: 1px;
+}
+
+.dp-po-PageJump .dp-po-PageJump-label {
+  color: var(--grey-darkest);
+  font: var(--p-n);
+  user-select: none;
+}
+
+.dp-po-PageJump .dp-po-PageJump-page {
+  background-color: var(--white);
+  border: 1px solid var(--grey-light);
+  border-radius: 2px;
+  color: var(--grey-darkest);
+  font: var(--p-n);
+  height: 20px;
+  margin-left: 10px;
+  margin-right: 5px;
+  max-width: 34px;
+  position: relative;
+  text-align: center;
+  line-height: 2;
+  outline: none;
+}
+
+.dp-po-PageJump .dp-po-PageJump-page:focus {
+  border: 1px solid var(--brand-primary);
+}
+
+.dp-po-PageJump-button:focus {
+  outline: none;
+}
+
+.dp-po-PageJump .dp-po-Button.dp-po-PageJump-button {
+  background-color: var(--grey-light);
+  border: 1px solid var(--grey-light);
+  border-radius: 3px;
+  color: var(--white);
+  font: var(--p-n);
+  max-width: 25px;
+  max-height: 20px;
+  padding: 3px 4px;
+  width: auto;
+}
+
+.dp-po-PageJump .dp-po-Button.Button--grey {
+  background-color: var(--grey-light);
+  border: 1px solid var(--grey-light);
+}
+
+.dp-po-PageJump .dp-po-Button.Button--primary {
+  background-color: var(--brand-primary);
+  border: 1px solid var(--brand-primary);
+}
+
+.dp-po-PageJump .dp-po-Button.dp-po-PageJump-button:hover {
+  background-color: var(--brand-primary);
+  border: 1px solid var(--brand-primary);
+  opacity: 1;
+}

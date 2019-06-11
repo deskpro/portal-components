@@ -1,0 +1,31 @@
+.dp-po-Forms.is-focus input {
+	border-color: var(--brand-primary);
+}
+
+.dp-po-Forms.dp-po-Search-bar.is-focus input {
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+}
+
+.dp-po-Forms.dp-po-Search-bar.is-focus input::placeholder {
+	color: var(--grey-darkest);
+}
+
+.dp-po-Forms.is-focus input::placeholder,
+.dp-po-Forms.dp-po-Textarea.is-focus textarea::placeholder {
+	color: var( --grey-darkest);
+}
+
+.dp-po-Forms.Forms--login.is-focus:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -15px;
+	width: 4px;
+	height: 100%;
+	background-color: var(--brand-primary);
+}
+
+.dp-po-Forms.Forms--login.is-focus input:focus + .dp-po-login-title,
+.dp-po-Forms.Forms--login.is-focus .dp-po-login-title {
+	color: var(--brand-primary);
+}
