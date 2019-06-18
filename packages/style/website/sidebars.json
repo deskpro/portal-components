@@ -7,7 +7,7 @@
         "components/dp-po-Avatars",
         "components/dp-po-Buttons",
         "components/dp-po-Breadcrumbs",
-        "components/dp-po-Calender",
+        "components/dp-po-Date",
         "components/dp-po-Cards",
         "components/dp-po-Dropdown",
         "components/dp-po-Dividers",

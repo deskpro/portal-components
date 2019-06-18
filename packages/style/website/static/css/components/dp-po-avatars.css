@@ -4,7 +4,8 @@
 }
 
 .dp-po-Avatar-icon {
-	width: 22px;
+	width: 23px;
+	height: 23px;
 }
 
 .dp-po-Avatar-name {
@@ -28,7 +29,7 @@
 
 /*Avatar--small*/
 
-.dp-po-Avatar.Avatar--small .dp-po-Avatar-icon {
+.dp-po-Avatar.Avatar--circle.Avatar--small .dp-po-Avatar-icon {
 	width: 25px;
 	height: 25px;
 }
@@ -41,4 +42,6 @@
 
 .dp-po-Avatar.Avatar--circle .dp-po-Avatar-icon {
 	border-radius: 50%;
+	width: 30px;
+	height: 30px;
 }

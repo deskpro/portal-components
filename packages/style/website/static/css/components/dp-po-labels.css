@@ -33,8 +33,8 @@
 .dp-po-label.label--large {
     height: 22px;
     padding: 4px 15px;
-    text-transform: uppercase;
     font: var(--h-s-semibold);
+    /*text-transform: uppercase;*/
 }
 
 .dp-po-label:hover { background: var(--grey-light); }
@@ -145,8 +145,8 @@
 }
 
 .dp-po-label.label--warning {
-    background: #f18b44;
-    border: 1px solid #f18b44;
+    background: var(--warning);
+    border: 1px solid var(--warning);
     color: var(--white);
 }
 

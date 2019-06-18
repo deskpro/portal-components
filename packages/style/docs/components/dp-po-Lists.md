@@ -7,7 +7,7 @@ sidebar_label: Lists
 <h4>title-list-item</h4>
 <form class="dp-po-list dp-po-title-list-item">
 	<span class="dp-po-title-item">Title</span>
-	<span class="dp-po-subtitle">
+	<span class="dp-po-subtitle ">
 		<span class="dp-po-Avatar"><img class="dp-po-Avatar-icon" src="/img/docs/avatar.png"></span>
 		Name Surname
 		<span class="dp-po-Icon Icon--ticket-created"></span>
@@ -21,7 +21,7 @@ sidebar_label: Lists
 <h4>small-title-list-item</h4>
 <form class="dp-po-list dp-po-title-list-item small--title-list-item">
 	<span class="dp-po-title-item">
-		<span>
+		<span class="label-knowledgebase">
 			<span class="dp-po-Icon Icon--knowledgebase"></span>
 			Content
 		</span>

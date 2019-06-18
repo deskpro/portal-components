@@ -46,6 +46,7 @@
   font-size: 17px;
   width: 240px;
   height: 39px;
+  color: var(--grey-darkest);
   background-color: var(--grey-light);
 }
 
@@ -130,6 +131,9 @@
   font: var(--p-xxl);
   color: var(--grey-dark);
   max-height: 24px;
+  border: none;
+  border-radius: 2px;
+  background-color: var(--grey-lighter);
 }
 
 .dp-po-Button.Button--small.Button--icon:hover {
@@ -145,7 +149,7 @@
   color: var(--grey-darkest);
   width: max-content;
   height: 44px;
-  min-width: 135px;
+  min-width: 160px;
   justify-content: space-between;
   padding: 0 12px;
 }
@@ -254,4 +258,41 @@
 [disabled] {
   cursor: not-allowed;
   opacity: 0.5;
+}
+
+/* Forms/radiobutton */
+
+.dp-po-RadioWrapper .dp-po-RadioItem {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.dp-po-RadioWrapper input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-clip: content-box;
+  background-color: var(--white);
+  border: 2px solid var(--grey);
+  border-radius: 100%;
+  content: "";
+  display: inline-block;
+  margin: 0;
+  outline: none;
+  padding: 2px;
+  height: 16px;
+  width: 16px;
+}
+
+.dp-po-RadioWrapper input[type="radio"]:checked {
+  background-color: var(--brand-primary);
+}
+
+.dp-po-RadioWrapper [type="radio"]:checked + label,
+.dp-po-RadioWrapper [type="radio"]:not(:checked) + label {
+  cursor: pointer;
+  font: var(--h-xl);
+  padding-left: 10px;
+  color: var(--grey-darkest);
 }

@@ -5,7 +5,7 @@
 .dp-po-Tabs {
 	padding: 0;
 	margin: 0;
-	border-bottom: 2px solid var(--grey-light);
+	/*border-bottom: 2px solid var(--grey-light);*/
 }
 
 .dp-po-Tabs-item {
@@ -21,16 +21,26 @@
 	align-items: center;
 }
 
-.dp-po-Tabs-item.is-selected {
-	color: var(--grey-darkest);
-	border-bottom: 2px solid var(--brand-primary);
-	margin-bottom: -2px;
+.Tabs--Large .dp-po-Tabs-item {
+	border-bottom: 2px solid var(--grey-lighter);
 }
 
-.dp-po-Tabs-item:hover {
-	margin-bottom: -2px;
-	border-bottom: 2px solid var(--grey-dark);
+
+.Tabs--Large .dp-po-Tabs-item:hover {
+	color: var(--grey);
+	border-bottom: 2px solid var(--grey);
+}
+
+.Tabs--Small .dp-po-Tabs-item:hover {
 	color: var(--grey-dark);
+}
+
+.dp-po-Tabs-item.is-selected {
+	color: var(--grey-darkest);
+}
+
+.Tabs--Large .dp-po-Tabs-item.is-selected {
+	border-bottom: 2px solid var(--brand-primary);
 }
 
 .dp-po-Tabs-item .dp-po-qt {

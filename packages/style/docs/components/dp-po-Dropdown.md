@@ -8,7 +8,7 @@ sidebar_label: Dropdown
 <div class="dp-po-Dropdown-container">
 	<span class="dp-po-dropdown-atom">
 		Placeholder Text
-		<button class="dp-po-arrow arrow--brand-primary"></button>
+		<button class="dp-po-arrow arrow--bottom arrow--brand-primary"></button>
 	</span>
 	<ul class="dp-po-dropdown-menu">
 		<li class="dp-po-dropdown-menu-item">Option 1</li>
@@ -24,7 +24,7 @@ sidebar_label: Dropdown
 <div class="dp-po-Dropdown-container">
 	<span class="dp-po-dropdown-atom">
 		Placeholder Text
-		<button class="dp-po-arrow arrow--brand-primary"></button>
+		<button class="dp-po-arrow arrow--bottom arrow--brand-primary"></button>
 	</span>
 	<ul class="dp-po-dropdown-menu">
 		<li class="dp-po-dropdown-menu-item">Option 1</li>
@@ -40,7 +40,7 @@ sidebar_label: Dropdown
 <div class="dp-po-Dropdown-container">
 	<span class="dp-po-dropdown-atom is-active">
 		Placeholder Text
-		<button class="dp-po-arrow arrow--brand-primary"></button>
+		<button class="dp-po-arrow arrow--bottom arrow--brand-primary"></button>
 	</span>
 	<ul class="dp-po-dropdown-menu">
 		<li class="dp-po-dropdown-menu-item">Option 1</li>
@@ -56,7 +56,7 @@ sidebar_label: Dropdown
 <div class="dp-po-Dropdown-container">
 	<span class="dp-po-dropdown-atom is-active">
 		Placeholder Text
-		<button class="dp-po-arrow arrow--brand-primary"></button>
+		<button class="dp-po-arrow arrow--bottom arrow--brand-primary"></button>
 	</span>
 	<ul class="dp-po-dropdown-menu">
 		<li class="dp-po-dropdown-menu-item">Option 1</li>
