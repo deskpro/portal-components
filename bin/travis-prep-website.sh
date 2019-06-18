@@ -23,7 +23,7 @@ mv ./packages/components-demo/storybook-static ./target/gh-pages/demo
 cat << EOF > ./target/gh-pages/index.html
 <html>
 <head>
-  <title>Deskpro Agent Interface</title>
+  <title>Deskpro Portal Components</title>
   <link rel="stylesheet" href="style/css/main.css" />
 </head>
 <body>
@@ -31,7 +31,7 @@ cat << EOF > ./target/gh-pages/index.html
     <div class="homeSplashFade">
       <div class="wrapper homeWrapper">
         <div class="inner">
-          <h2 class="projectTitle">Agent Interface</h2>
+          <h2 class="projectTitle">Portal Components</h2>
 
           <div class="section promoSection">
             <div class="promoRow">
@@ -44,7 +44,7 @@ cat << EOF > ./target/gh-pages/index.html
                 </div>
 
                 <div class="pluginWrapper buttonWrapper">
-                  <a class="button" href="https://github.com/deskpro/agent-interface">GitHub</a>
+                  <a class="button" href="https://github.com/deskpro/portal-components">GitHub</a>
                 </div>
               </div>
             </div>
