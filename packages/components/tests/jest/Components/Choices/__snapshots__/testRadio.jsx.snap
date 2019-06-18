@@ -3,6 +3,7 @@
 exports[`>>> Radio --- Snapshot +++capturing Snapshot of Radio 1`] = `
 <form
   className="dp-pc_form show-hover"
+  onReset={[Function]}
   onSubmit={[Function]}
 >
   <div

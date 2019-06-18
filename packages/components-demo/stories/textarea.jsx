@@ -2,8 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, text } from '@storybook/addon-knobs/react';
-import { Formik } from 'formik';
-import { Form, Textarea, Submit } from '@deskpro/portal-components';
+import { Form, Textarea, Submit, Formik } from '@deskpro/portal-components';
 
 
 storiesOf('Input', module)

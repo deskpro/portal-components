@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean } from '@storybook/addon-knobs/react';
-import Yup from 'yup';
-import { withFormik } from 'formik';
-import { Form, Email, Password, DropDown, Checkbox, Submit } from '@deskpro/portal-components';
+import * as Yup from 'yup';
+import {
+  Form, Email, Password, DropDown, Checkbox, Submit, withFormik
+} from '@deskpro/portal-components';
 
 const options = [
   { value: 'free', label: 'Free' },
@@ -77,5 +78,4 @@ const FormikApp = withFormik({
 
 storiesOf('Forms', module)
   .addDecorator(withKnobs)
-  .add('Basic form', () =>
-    <FormikApp />);
+  .add('Basic form', () => <FormikApp />);
