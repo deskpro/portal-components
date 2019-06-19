@@ -9,8 +9,7 @@
 }
 
 .dp-po-Avatar-name {
-	/*font: var(--p-xxl);*/
-	font: var(--h-xl);
+	font: var(--h-6);
 	color: var(--grey-darkest);
 	margin-left: 10px;
 }
@@ -23,8 +22,7 @@
 }
 
 .dp-po-Avatar.Avatar--medium .dp-po-Avatar-name {
-	font-weight: 600;
-	font-size: 17px;
+	font: var(--h-5-medium);
 }
 
 /*Avatar--small*/

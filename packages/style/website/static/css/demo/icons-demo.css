@@ -127,7 +127,7 @@ background-image: url('data:image/svg+xml,<svg width="17" height="17" viewBox="0
 .Icon--Exclamation {
   background-image: url('data:image/svg+xml,<svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.7518 4.40143H13.0385V10.3529L12.7461 13.6084H11.0443L10.7518 10.3529V4.40143ZM10.7518 15.3887H13.0385V17.9829H10.7518V15.3887Z" fill="%23A9B0B0"/><path d="M11.8951 0.179443C5.54022 0.179443 0.381836 5.11355 0.381836 11.1922C0.381836 17.2708 5.54022 22.2049 11.8951 22.2049C18.25 22.2049 23.4084 17.2708 23.4084 11.1922C23.4084 5.11355 18.25 0.179443 11.8951 0.179443ZM19.287 18.2627C17.3194 20.1448 14.687 21.1875 11.8685 21.1875C9.05004 21.1875 6.44426 20.1448 4.45004 18.2627C2.509 16.3806 1.41883 13.8627 1.41883 11.1922C1.41883 8.52164 2.509 5.97829 4.47663 4.09621C6.44426 2.21413 9.07663 1.17135 11.8951 1.17135C14.7136 1.17135 17.3194 2.21413 19.287 4.09621C21.2547 5.97829 22.3448 8.49621 22.3448 11.1922C22.3448 13.8881 21.2813 16.3806 19.287 18.2627Z" fill="%23A9B0B0"/></svg>');
 	height: 22px;
-	width: 32px;
+	min-width: 22px;
 	background-size: 22px;
 }
 
@@ -154,29 +154,29 @@ background-image: url('data:image/svg+xml,<svg width="17" height="17" viewBox="0
 }
 
 .dp-po-Icon.Icon--getting-started {
-  background-image: url(../../img/docs/getting-started.svg);
+  background-image: url(../img/docs/getting-started.svg);
   background-size: 42px;
   background-position: 30% 60%;
 }
 
 .dp-po-Icon.Icon--guides {
-  background-image: url(../../img/docs/guides-1.svg);
+  background-image: url(../img/docs/guides-1.svg);
   background-size: 24px 22px;
 }
 
 .Icon--small .dp-po-Icon.Icon--guides {
-  background-image: url(../../img/docs/guides-2.svg);
+  background-image: url(../img/docs/guides-2.svg);
   background-size: 24px 22px;
 }
 
 .dp-po-Icon.Icon--elephant {
-  background-image: url(../../img/docs/elephant.svg);
+  background-image: url(../img/docs/elephant.svg);
   background-size: 42px;
   background-position: 70% 70%;
 }
 
 .dp-po-Icon.Icon--article {
-  background-image: url(../../img/docs/article.svg);
+  background-image: url(../img/docs/article.svg);
   width: 21px;
   height: 26px;
 }
@@ -184,28 +184,28 @@ background-image: url('data:image/svg+xml,<svg width="17" height="17" viewBox="0
 /*tabs*/
 
 .dp-po-Tabs-item .dp-po-Icon.Icon--knowledgebase {
-  background-image: url(../../img/docs/knowledgebase-selected.svg);
+  background-image: url(../img/docs/knowledgebase-selected.svg);
   background-size: 15px 20px;
   width: 15px;
   height: 20px;
 }
 
 .dp-po-Tabs-item .dp-po-Icon.Icon--guides {
-  background-image: url(../../img/docs/guides-2.svg);
+  background-image: url(../img/docs/guides-2.svg);
   background-size: 21px;
   width: 21px;
   height: 20px;
 }
 
 .dp-po-Tabs-item .dp-po-Icon.Icon--feedback {
-  background-image: url(../../img/docs/feedback.svg);
+  background-image: url(../img/docs/feedback.svg);
   background-size: 21px;
   width: 21px;
   height: 21px;
 }
 
 .dp-po-Tabs-item .dp-po-Icon.Icon--news {
-  background-image: url(../../img/docs/news.svg);
+  background-image: url(../img/docs/news.svg);
   background-size: 21px;
   width: 21px;
   height: 21px;

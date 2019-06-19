@@ -1,6 +1,6 @@
 .dp-po-Info {
 	display: flex;
-	font-size: 18px;
+	font: var(--p-1);
 	color: var(--grey-darkest);
 	border: 1px solid var(--brand-primary);
 	border-left: 5px solid var(--brand-primary);
@@ -18,5 +18,4 @@
 .dp-po-Info.Info--danger {
 	border: 1px solid var(--danger);
 	border-left: 5px solid var(--danger);
-	font: var(--p-xxl);
 }

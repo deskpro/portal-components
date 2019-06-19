@@ -9,15 +9,16 @@
 
 .dp-po-TableRow.dp-po-TableControl {
 	color: var(--grey-dark);
-	font-size: 15px;
-	font-weight: 600;
+}
+
+.dp-po-TableControl .dp-po-TableItem {
+	font: var(--p-2-bold);
 }
 
 .dp-po-TableRow {
 	align-items: center;
 	display: flex;
 	color: var(--grey-darkest);
-	font: 15px;
 }
 
 .dp-po-TableRow > div {
@@ -32,6 +33,7 @@
 
 .dp-po-TableItem {
 	position: relative;
+	font: var(--p-1);
 }
 
 .dp-po-TableItem .dp-po-Icon {
@@ -41,7 +43,7 @@
 }
 
 .dp-po-ticket {
-	font-weight: 600;
+	font: var(--p-2-bold);
 }
 
 .dp-po-ticket-Icon {

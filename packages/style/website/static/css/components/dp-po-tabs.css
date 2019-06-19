@@ -5,12 +5,11 @@
 .dp-po-Tabs {
 	padding: 0;
 	margin: 0;
-	/*border-bottom: 2px solid var(--grey-light);*/
 }
 
 .dp-po-Tabs-item {
 	color: var(--grey);
-	font: var(--p-xxl-semibold);
+	font: var(--h-2);
 	cursor: pointer;
 	margin-right: 20px;
 	margin-top: 0;
@@ -24,7 +23,6 @@
 .Tabs--Large .dp-po-Tabs-item {
 	border-bottom: 2px solid var(--grey-lighter);
 }
-
 
 .Tabs--Large .dp-po-Tabs-item:hover {
 	color: var(--grey);
@@ -57,7 +55,6 @@
 	margin-right: 40px;
 }
 
-
 .dp-po-Tabs.Tabs--Small .dp-po-Tabs-item {
-	font: var(--p-xxl-semibold);
+	font: var(--p-2-bold);
 }

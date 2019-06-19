@@ -73,6 +73,7 @@
   /* Fonts */
 
   --is-regular: 400;
+  --is-medium: 500;
   --is-semibold: 600;
   --is-bold: 700;
   --is-uppercase: uppercase;
@@ -90,7 +91,6 @@
 
   --font-Text-XS: 7px;
 
-  /* New Fonts */
   --h-xl: var(--is-regular) var(--font-Title-XL)/var(--line-height-base) "Open Sans", sans-serif;
   --h-l-semibold: var(--is-semibold) var(--font-Title-L)/var(--line-height-base) "Open Sans", sans-serif;
   --h-l-bold: var(--is-bold) var(--font-Title-L)/var(--line-height-base) "Open Sans", sans-serif;
@@ -115,6 +115,54 @@
 
   --l-n: var(--is-regular) var(--font-Text-XS)/var(--line-height-base) "Open Sans", sans-serif;
   --l-n-semibold: var(--is-semibold) var(--font-Text-XS)/var(--line-height-base) "Open Sans", sans-serif;
+
+/*Header sizes*/
+
+  --font-H1: 36px;
+  --font-H2: 23px;
+  --font-H3: 19px;
+  --font-H5: 17px;
+  --font-H6: 16px;
+
+  --h-1: var(--is-regular) var(--font-H1)/var(--line-height-base) "Rubik", sans-serif;
+  --h-2: var(--is-regular) var(--font-H2)/var(--line-height-base) "Rubik", sans-serif;
+  --h-3: var(--is-regular) var(--font-H3)/var(--line-height-base) "Rubik", sans-serif;
+  --h-3--medium: var(--is-medium) var(--font-H3)/var(--line-height-base) "Rubik", sans-serif;
+  --h-4: var(--is-medium) var(--font-H4)/var(--line-height-base) "Rubik", sans-serif;
+  --h-5: var(--is-regular) var(--font-H5)/var(--line-height-base) "Rubik", sans-serif;
+  --h-5-medium: var(--is-medium) var(--font-H5)/var(--line-height-base) "Rubik", sans-serif;
+  --h-6: var(--is-regular) var(--font-H5)/var(--line-height-base) "Rubik", sans-serif;
+
+/*Body sizes*/
+
+--font-p1: 18px;
+--font-p2: 15px;
+--font-p3: 12px;
+
+--p-1: var(--is-regular) var(--font-p1)/var(--line-height-base) "Lato", sans-serif;
+--p-2: var(--is-regular) var(--font-p2)/var(--line-height-base) "Lato", sans-serif;
+--p-2-medium: var(--is-medium) var(--font-p2)/var(--line-height-base) "Lato", sans-serif;
+--p-2-bold: var(--is-bold) var(--font-p2)/var(--line-height-base) "Lato", sans-serif;
+--p-3-semibold: var(--is-semibold) var(--font-p3)/var(--line-height-base) "Lato", sans-serif;
+
+/*Button sizes*/
+
+--font-b1: 14px;
+--font-b2: 12px;
+--font-b3: 10px;
+
+--b-1-semibold: var(--is-semibold) var(--font-b1)/var(--line-height-base) "Lato", sans-serif;
+--b-2: var(--is-regular) var(--font-b2)/var(--line-height-base) "Lato", sans-serif;
+--b-2-semibold: var(--is-semibold) var(--font-b2)/var(--line-height-base) "Lato", sans-serif;
+--b-3: var(--is-regular) var(--font-b3)/var(--line-height-base) "Open Sans", sans-serif;
+--b-3-semibold: var(--is-semibold) var(--font-b3)/var(--line-height-base) "Open Sans", sans-serif;
+
+/*Inline Text*/
+
+--font-s2: 12px;
+
+--s-2: var(--is-regular) var(--font-s2)/var(--line-height-base) "Lato", sans-serif;
+
 
   /* Deskpro Shadows */
   --shadow-bottom: 0 5px 5px rgba(0, 0, 0, 0.15);

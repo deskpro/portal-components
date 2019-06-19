@@ -32,4 +32,5 @@
 	display: flex;
 	padding-left: 20px;
 	background-color: var(--white);
+	font: var(--b-1-semibold);
 }

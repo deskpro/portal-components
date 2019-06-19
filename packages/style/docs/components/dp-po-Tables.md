@@ -49,8 +49,8 @@ sidebar_label: Tables
 				00 mins ago
 			</div>
 			<div class="dp-po-TableItem">
-				<img class="dp-po-Avatar-icon" src="/img/docs/avatar-circular.png" alt="">
-				<img class="dp-po-Avatar-icon Avatar--smile" src="/img/docs/smile.svg" alt="">
+				<img class="dp-po-Avatar-icon" src="../../img/docs/avatar-circular.png" alt="">
+				<img class="dp-po-Avatar-icon Avatar--smile" src="../../img/docs/smile.svg" alt="">
 			</div>
 		</div>
 		<!-- tables/chat-row -->

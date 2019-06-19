@@ -17,7 +17,7 @@
 /*Button--small*/
 
 .dp-po-Button.Button--small {
-  font: var(--p-xxl-semibold);
+  font: var(--p-2-bold);
   color: var(--white);
   background-color: var(--brand-primary);
   width: 125px;
@@ -43,7 +43,7 @@
 /*Button--medium*/
 
 .dp-po-Button.Button--medium {
-  font-size: 17px;
+  font: var(--h-5);
   width: 240px;
   height: 39px;
   color: var(--grey-darkest);
@@ -57,7 +57,7 @@
 /*Button--large*/
 
 .dp-po-Button.Button--large {
-  font: var(--p-xxl-semibold);
+  font: var(--p-2-bold);
   background: var(--brand-primary);
   color: var(--white);
   max-height: 44px;
@@ -108,8 +108,7 @@
   background-color: var(--white);
   border: 1.5px solid var(--grey-lighter);
   color: var(--grey-dark);
-  font-size: 17px;
-  font-weight: 400;
+  font: var(--h-5);
   justify-content: flex-start;
   padding: 0;
   height: 44px;
@@ -128,7 +127,7 @@
 /*button/icon-text/small*/
 
 .dp-po-Button.Button--small.Button--icon {
-  font: var(--p-xxl);
+  font: var(--font-p1);
   color: var(--grey-dark);
   max-height: 24px;
   border: none;
@@ -145,7 +144,7 @@
 
 .dp-po-Button.Button--texticon {
   background-color: var(--grey-light);
-  font: var(--p-xxl-semibold);
+  font: var(--p-2-bold);
   color: var(--grey-darkest);
   width: max-content;
   height: 44px;
@@ -292,7 +291,7 @@
 .dp-po-RadioWrapper [type="radio"]:checked + label,
 .dp-po-RadioWrapper [type="radio"]:not(:checked) + label {
   cursor: pointer;
-  font: var(--h-xl);
+  font: var(--h-6);
   padding-left: 10px;
   color: var(--grey-darkest);
 }

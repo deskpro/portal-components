@@ -5,7 +5,7 @@
 }
 
 .dp-po-list .dp-po-title-item {
-	font-size: 23px;
+	font: var(--h-2);
 	color: var(--grey-darkest);
 	margin-bottom: 10px;
 	display: flex;
@@ -17,7 +17,7 @@
 	outline: none;
 	padding: 10px 0;
 	color: var(--grey-darkest);
-	font-size: 18px;
+	font: var(--p-1);
 }
 
 .dp-po-list input::placeholder {
@@ -27,6 +27,7 @@
 .dp-po-subtitle {
 	display: flex;
 	align-items: center;
+	font: var(--p-2-bold);
 }
 
 .dp-po-subtitle .dp-po-Avatar {
@@ -84,7 +85,7 @@
 /*small-title-list-item*/
 
 .small--title-list-item .dp-po-title-item {
-	font: var(--p-xxl-semibold);
+	font: var(--p-2-bold);
 	justify-content: space-between;
 }
 
@@ -103,7 +104,7 @@ input.dp-po-input-avatar {
 
 .dp-po-list.large--title-list-item .dp-po-title-item {
 	margin-bottom: 0;
-	font-size: 19px;
+	font: var(--h-3);
 	line-height: 1;
 }
 
@@ -154,8 +155,7 @@ input.dp-po-input-avatar {
 
 .dp-po-list.flagged--item .dp-po-subtitle {
 	color: var(--grey-darkest);
-	font-size: 17px;
-	font-weight: 500;
+	font: var(--h-5-medium);
 	justify-content: space-between;
 }
 

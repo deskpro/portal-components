@@ -1,0 +1,23 @@
+
+.dp-calendar {
+    border: 1px solid var(--grey-light);
+    background-color: var(--grey-lighter);
+    border-radius: 4px;
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dp-calendar li {
+    color: var(--grey-darkest);
+    font: var(--h-3);
+    text-align: center;
+    margin: 0;
+    line-height: 1.2;
+    padding: 5px;
+}
+
+.dp-calendar li:first-child {
+    border-bottom: 1px solid var(--grey-light);
+}

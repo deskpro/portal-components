@@ -2,11 +2,10 @@
 
 .dp-po-Popup.Popup--icon {
 	color: var(--grey-dark);
-	font: var(--p-xxl);
+	font: var(--p-2-bold);
 	box-shadow: var(--shadow-bottom-right);
 	background-color: var(--grey-lightest);
 	border-radius: 3px;
-	font: var(--p-xxl-semibold);
 	align-items: center;
 	position: relative;
 	display: flex;

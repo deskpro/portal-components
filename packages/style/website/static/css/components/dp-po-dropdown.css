@@ -10,7 +10,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	font: var(--p-xxl);
+	font: var(--p-1);
 	position: relative;
 	background-color: var(--grey-lighter);
 	border-radius: 4px;
@@ -52,6 +52,7 @@
 	margin: 0;
 	padding: 5px 10px;
 	cursor: pointer;
+	font: var(--p-2);
 }
 
 .dp-po-dropdown-menu .dp-po-dropdown-menu-item:hover {

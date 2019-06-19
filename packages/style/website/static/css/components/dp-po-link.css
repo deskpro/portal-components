@@ -16,7 +16,7 @@
 }
 
 .dp-po-Link.Link--small {
-	font: var(--h-l-semibold);
+	font: var(--b-1-semibold);
 	color: var(--brand-primary);
 	width: 100%;
 	max-width: 120px;
@@ -25,10 +25,10 @@
 }
 
 .dp-po-Link.Link--medium {
-	font: var(--p-xxl-semibold);
+	font: var(--p-2-bold);
 	color: var(--brand-primary);
 }
 
 .dp-po-Link.Link--large {
-	font-size: 19px;
+	font: var(--h-3);
 }

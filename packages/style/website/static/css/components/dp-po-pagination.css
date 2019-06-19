@@ -24,7 +24,7 @@
   border-radius: 2px;
   color: var(--grey-darkest);
   display: flex;
-  font: var(--p-n);
+  font: var(--b-2-semibold);
   justify-content: center;
   margin-right: 2px;
   min-height: 20px;
@@ -99,7 +99,7 @@
 
 .dp-po-PageJump .dp-po-PageJump-label {
   color: var(--grey-darkest);
-  font: var(--p-n);
+  font: var(--b-2-semibold);
   user-select: none;
 }
 
@@ -132,7 +132,7 @@
   border: 1px solid var(--grey-light);
   border-radius: 3px;
   color: var(--white);
-  font: var(--p-n);
+  font: var(--b-2-semibold);
   max-width: 25px;
   max-height: 20px;
   padding: 3px 4px;

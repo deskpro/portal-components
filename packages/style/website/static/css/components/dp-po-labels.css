@@ -6,7 +6,7 @@
 .dp-po-label {
     background: var(--white);
     color: var(--grey-darkest);
-    font: var(--p-n);
+    font: var(--b-3);
     border-radius: 2px;
     cursor: pointer;
     line-height: 1;
@@ -21,19 +21,20 @@
 
 .dp-po-label.label--small {
     height: 15px;
-    font: var(--p-n-semibold);
+    font: var(--b-3-semibold);
     text-transform: uppercase;
 }
 
 .dp-po-label.label--medium {
     height: 22px;
+    font: var(--p-3-semibold);
     padding: 4px 10px;
 }
 
 .dp-po-label.label--large {
     height: 22px;
     padding: 4px 15px;
-    font: var(--h-s-semibold);
+    font: var(--p-3-semibold);
     /*text-transform: uppercase;*/
 }
 
@@ -180,7 +181,7 @@
 
 .dp-po-label.label--time-box {
     background-color: var(--grey-lighter);
-    font: var(--h-l-semibold);
+    font: var(--b-1-semibold);
 }
 
 .label--time .dp-po-Icon,
@@ -189,7 +190,7 @@
 }
 
 .dp-po-label.label--time {
-    font-size: 15px;
+    font: var(--b-2-semibold);
     font-weight: 400;
     padding: 0;
 }
@@ -199,7 +200,7 @@
 .dp-po-filter {
     border: 1px solid var(--grey-light);
     color: var(--grey-dark);
-    font: var(--p-xl);
+    font: var(--b-2);
     cursor: pointer;
     padding: 0 30px 0 20px;
     border-radius: 2px;
@@ -235,14 +236,13 @@
 }
 
 .dp-po-Badge.Badge--large {
-    font-size: 19px;
-    font-weight: 500;
+    font: var(--h-3--medium);
     height: 34px;
     width: 34px;
 }
 
 .dp-po-Badge.Badge--small {
-    font: var(--p-n-semibold);
+    font: var(--b-2-semibold);
     height: 22px;
     width: 22px;
 }

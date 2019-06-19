@@ -8,7 +8,7 @@ sidebar_label: Lists
 <form class="dp-po-list dp-po-title-list-item">
 	<span class="dp-po-title-item">Title</span>
 	<span class="dp-po-subtitle ">
-		<span class="dp-po-Avatar"><img class="dp-po-Avatar-icon" src="/img/docs/avatar.png"></span>
+		<span class="dp-po-Avatar"><img class="dp-po-Avatar-icon" src="../../img/docs/avatar.png"></span>
 		Name Surname
 		<span class="dp-po-Icon Icon--ticket-created"></span>
 		DD MMM YYYY

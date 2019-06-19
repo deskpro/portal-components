@@ -8,13 +8,13 @@
 	align-items: center;
 	color: var(--grey-darkest);
 	border-bottom: 2px solid var(--brand-primary);
-	font-size: 23px;
+	font: var(--h-2);
 	margin-bottom: -2px;
 }
 
 .dp-po-divider-link {
 	color: var(--brand-primary);
-	font: var(--h-l-semibold);
+	font: var(--b-1-semibold);
 	display: flex;
 	align-items: flex-end;
 	line-height: 1;

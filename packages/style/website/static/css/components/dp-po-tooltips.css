@@ -1,6 +1,6 @@
 .dp-po-Tooltip {
 	color: var(--grey-dark);
-	font-size: 18px;
+	font: var(--p-1);
 	box-shadow: var(--shadow-bottom-right);
 	position: relative;
 	display: flex;

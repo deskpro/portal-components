@@ -10,7 +10,7 @@
 }
 
 .dp-po-card-title {
-	font-size: 19px;
+	font: var(--h-3);
 	background-color: var(--grey-lightest);
 	border-bottom: 1px solid var(--grey-light);
 	padding: 15px;
@@ -23,14 +23,13 @@
 }
 
 .dp-po-content-txt {
-	font: var(--p-xxl);
+	font: var(--p-1);
 	color: var(--grey-darkest);
 	margin-bottom: 15px;
 }
 
 .dp-po-content-txt.content-txt--large {
-	font-size: 17px;
-	font-weight: 600;
+	font: var(--h-5-medium);
 }
 
 /*card-atom--long*/
