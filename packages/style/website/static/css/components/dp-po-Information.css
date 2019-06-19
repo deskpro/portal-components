@@ -1,6 +1,6 @@
 .dp-po-Info {
 	display: flex;
-	font: var(--p-1);
+	font: var(--p-2-bold);
 	color: var(--grey-darkest);
 	border: 1px solid var(--brand-primary);
 	border-left: 5px solid var(--brand-primary);
