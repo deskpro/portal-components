@@ -4,6 +4,11 @@
 
 .dp-po-Forms.dp-po-Search-bar.is-focus input {
 	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+	padding-left: 10px;
+}
+
+.dp-po-Forms.dp-po-Search-bar.is-focus input + .dp-po-Icon {
+	display: none;
 }
 
 .dp-po-Forms.dp-po-Search-bar.is-focus input::placeholder {
@@ -15,17 +20,17 @@
 	color: var( --grey-darkest);
 }
 
-.dp-po-Forms.Forms--login.is-focus:after {
+.dp-po-Forms .Forms--item-login.is-focus:after {
 	content: "";
 	position: absolute;
 	top: 0;
-	left: -15px;
+	left: -20px;
 	width: 4px;
 	height: 100%;
 	background-color: var(--brand-primary);
 }
 
-.dp-po-Forms.Forms--login.is-focus input:focus + .dp-po-login-title,
-.dp-po-Forms.Forms--login.is-focus .dp-po-login-title {
+.dp-po-Forms .Forms--item-login.is-focus input:focus + .dp-po-login-title,
+.dp-po-Forms .Forms--item-login.is-focus .dp-po-login-title {
 	color: var(--brand-primary);
 }

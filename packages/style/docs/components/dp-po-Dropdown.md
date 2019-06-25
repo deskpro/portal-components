@@ -74,7 +74,7 @@ sidebar_label: Dropdown
 <span class="dp-po-dropdown-atom dp-po-search-expand">
 	<span class="dp-po-txt">Ticket/item</span>
 	<span class="dp-po-Icon-wrapper Icon--small">
-		<span class="dp-po-Icon Icon--clock Icon--primary"></span>
+		<span class="dp-po-Icon Icon--history Icon--primary"></span>
 		text
 	</span>
 </span>
@@ -84,7 +84,7 @@ sidebar_label: Dropdown
 <span class="dp-po-dropdown-atom dp-po-search-expand is-hover">
 	<span class="dp-po-txt">Ticket/item</span>
 	<span class="dp-po-Icon-wrapper Icon--small">
-		<span class="dp-po-Icon Icon--clock Icon--primary"></span>
+		<span class="dp-po-Icon Icon--history Icon--primary"></span>
 		text
 	</span>
 </span>

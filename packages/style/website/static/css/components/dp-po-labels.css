@@ -35,10 +35,9 @@
     height: 22px;
     padding: 4px 15px;
     font: var(--p-3-semibold);
-    /*text-transform: uppercase;*/
 }
 
-.dp-po-label:hover { background: var(--grey-light); }
+/*.dp-po-label:hover { background: var(--grey-light); }*/
 
 .dp-po-label.label--brand-primary {
     background-color: var(--brand-primary);
@@ -232,7 +231,9 @@
     font: var(--p-n-semibold);
     cursor: pointer;
     border-radius: 50%;
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.1)
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.1);
+    width: 22px;
+    height: 22px;
 }
 
 .dp-po-Badge.Badge--large {
@@ -257,13 +258,13 @@
 
 .dp-po-Badge.Badge--bottom {
     position: absolute;
-    bottom: -2px;
+    bottom: 0;
     right: 0;
 }
 
-.dp-po-Icon .dp-po-Badge.Badge--top {
+.dp-po-Badge.Badge--top {
     position: absolute;
-    top: -2px;
+    top: 0;
     right: 0;
 }
 

@@ -94,7 +94,7 @@
   --h-4: var(--is-medium) var(--font-H4)/var(--line-height-base) "Rubik", sans-serif;
   --h-5: var(--is-regular) var(--font-H5)/var(--line-height-base) "Rubik", sans-serif;
   --h-5-medium: var(--is-medium) var(--font-H5)/var(--line-height-base) "Rubik", sans-serif;
-  --h-6: var(--is-regular) var(--font-H5)/var(--line-height-base) "Rubik", sans-serif;
+  --h-6: var(--is-regular) var(--font-H6)/var(--line-height-base) "Rubik", sans-serif;
 
 /*Body sizes*/
 
@@ -106,6 +106,7 @@
 --p-2: var(--is-regular) var(--font-p2)/var(--line-height-base) "Lato", sans-serif;
 --p-2-medium: var(--is-medium) var(--font-p2)/var(--line-height-base) "Lato", sans-serif;
 --p-2-bold: var(--is-bold) var(--font-p2)/var(--line-height-base) "Lato", sans-serif;
+--p-3: var(--is-regular) var(--font-p3)/var(--line-height-base) "Lato", sans-serif;
 --p-3-semibold: var(--is-semibold) var(--font-p3)/var(--line-height-base) "Lato", sans-serif;
 
 /*Button sizes*/
@@ -126,12 +127,78 @@
 
 --s-2: var(--is-regular) var(--font-s2)/var(--line-height-base) "Lato", sans-serif;
 
+/* Mobile fonts */
 
-  /* Deskpro Shadows */
-  --shadow-bottom: 0 5px 5px rgba(0, 0, 0, 0.15);
-  --shadow-top-inset: inset 0 5px 5px 0 rgba(0, 0, 0, 0.15);
-  --shadow-bottom-left: -5px 5px 5px rgba(0, 0, 0, 0.15);
-  --shadow-bottom-right: 5px 5px 5px rgba(0, 0, 0, 0.15);
-  --shadow-left: -5px 0 5px rgba(0, 0, 0, 0.15);
-  --shadow-right: 5px 0 5px rgba(0, 0, 0, 0.15);
+/*Header sizes*/
+
+  --font-MH1: 26px;
+  --font-MH2: 22px;
+  --font-MH3: 18px;
+
+  --mh-1: var(--is-regular) var(--font-MH1)/var(--line-height-base) "Rubik", sans-serif;
+  --mh-2: var(--is-regular) var(--font-MH2)/var(--line-height-base) "Rubik", sans-serif;
+  --mh-3: var(--is-regular) var(--font-MH3)/var(--line-height-base) "Rubik", sans-serif;
+  --mh-3-medium: var(--is-medium) var(--font-MH3)/var(--line-height-base) "Rubik", sans-serif;
+
+/*Body sizes*/
+
+--font-mp1: 16px;
+--font-mp2: 15px;
+
+--mp-1: var(--is-regular) var(--font-mp1)/var(--line-height-base) "Lato", sans-serif;
+--mp-1-bold: var(--is-bold) var(--font-mp2)/var(--line-height-base) "Lato", sans-serif;
+--mp-2-medium: var(--is-medium) var(--font-mp2)/var(--line-height-base) "Lato", sans-serif;
+
+/*Messenger Typography*/
+
+/*Header sizes*/
+
+--m-H1: 28px;
+--m-H2: 18px;
+--m-H3: 16px;
+
+--messenger-h-1: var(--is-regular) var(--m-H1)/var(--line-height-base) "Rubik", sans-serif;
+--messenger-h-2: var(--is-regular) var(--m-H2)/var(--line-height-base) "Rubik", sans-serif;
+--messenger-h-3-medium: var(--is-medium) var(--m-H3)/var(--line-height-base) "Rubik", sans-serif;
+
+/*Messenger Body sizes*/
+
+--m-p1: 16px;
+--m-p2: 14px;
+--m-p3: 12px;
+
+--messenger-p-1: var(--is-regular) var(--m-p1)/var(--line-height-base) "Rubik", sans-serif;
+--messenger-p-2: var(--is-regular) var(--m-p2)/var(--line-height-base) "Rubik", sans-serif;
+--messenger-p-2-medium: var(--is-medium) var(--m-p2)/var(--line-height-base) "Rubik", sans-serif;
+--messenger-p-3: var(--is-regular) var(--m-p3)/var(--line-height-base) "Rubik", sans-serif;
+
+/*Messenger Button sizes*/
+
+--m-b1: 16px;
+--m-b2: 14px;
+--m-b3: 12px;
+
+--messenger-b-1: var(--is-regular) var(--m-b1)/var(--line-height-base) "Rubik", sans-serif;
+--messenger-b-2: var(--is-regular) var(--m-b2)/var(--line-height-base) "Rubik", sans-serif;
+--messenger-b-3: var(--is-regular) var(--m-b3)/var(--line-height-base) "Rubik", sans-serif;
+
+/*Messenger Inline Text and Captions*/
+
+--it-small: 16px;
+
+--messenger-it-small: var(--is-regular) var(--it-small)/var(--line-height-base) "Rubik", sans-serif;
+
+/*Messenger Suggeted text*/
+
+--m-s1: 16px;
+
+--messenger-s-1: var(--is-regular) var(--m-s1)/var(--line-height-base) "Rubik", sans-serif;
+
+/* Deskpro Shadows */
+--shadow-bottom: 0 5px 5px rgba(0, 0, 0, 0.15);
+--shadow-top-inset: inset 0 5px 5px 0 rgba(0, 0, 0, 0.15);
+--shadow-bottom-left: -5px 5px 5px rgba(0, 0, 0, 0.15);
+--shadow-bottom-right: 5px 5px 5px rgba(0, 0, 0, 0.15);
+--shadow-left: -5px 0 5px rgba(0, 0, 0, 0.15);
+--shadow-right: 5px 0 5px rgba(0, 0, 0, 0.15);
 }

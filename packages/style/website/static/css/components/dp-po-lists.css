@@ -34,18 +34,18 @@
 	margin-right: 10px;
 }
 
-.dp-po-Icon.Icon--ticket-created {
+.dp-po-Icon.Icon--date {
 	margin-left: 20px;
 	position: relative;
 }
 
-.dp-po-Icon.Icon--text-created {
+.dp-po-Icon.Icon--comment {
 	margin-left: 20px;
 	position: relative;
 }
 
-.dp-po-list .dp-po-subtitle .dp-po-Icon.Icon--ticket-created:after,
-.dp-po-list .dp-po-subtitle .dp-po-Icon.dp-po-Icon.Icon--text-created:after {
+.dp-po-list .dp-po-subtitle .dp-po-Icon.Icon--date:after,
+.dp-po-list .dp-po-subtitle .dp-po-Icon.Icon--comment:after {
 	content: '';
 	position: absolute;
 	width: 1px;
@@ -116,44 +116,4 @@ input.dp-po-input-avatar {
 
 .dp-po-large-input {
 	display: flex;
-}
-
-/*flagged-list-item*/
-
-.dp-po-list.flagged--item {
-	border-left: 2px solid var(--danger);
-	padding-left: 10px;
-}
-
-.dp-po-list.flagged--item .dp-po-title-item {
-	color: var(--white);
-	font: var(--p-n-semibold-caps);
-	background-color: var(--danger);
-	padding: 5px;
-	border-radius: 2px;
-	width: 100%;
-	max-width: 150px;
-	margin-bottom: 8px;
-}
-
-.dp-po-list.flagged--item .dp-po-subtitle {
-	color: var(--grey-darkest);
-	font: var(--h-5-medium);
-	justify-content: space-between;
-}
-
-.flagged--item .dp-po-username {
-	display: flex;
-	align-items: center;
-}
-
-.flagged--item .label--time-box {
-	margin-bottom: 5px;
-}
-
-.dp-po-list.flagged--item input {
-	background-color: var(--grey-lightest);
-	border: 0;
-	padding: 10px;
-	margin-left: 40px;
 }

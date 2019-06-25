@@ -36,10 +36,8 @@
 	font: var(--p-1);
 }
 
-.dp-po-TableItem .dp-po-Icon {
+.dp-po-TableControl .dp-po-TableItem .dp-po-Icon {
 	margin-left: 10px;
-	width: 17px;
-	height: 15px;
 }
 
 .dp-po-ticket {
@@ -56,8 +54,9 @@
 	height: 12px;
 }
 
-.dp-po-TableItem .dp-po-Avatar-icon + .Avatar--smile {
+.dp-po-TableItem .dp-po-Avatar-icon + .dp-po-Icon {
 	margin-left: -5px;
+	background-color: var(--white);
 }
 
 .dp-po-TableRow.TableRow--chat > div:first-child {

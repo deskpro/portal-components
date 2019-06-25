@@ -10,9 +10,9 @@ sidebar_label: Lists
 	<span class="dp-po-subtitle ">
 		<span class="dp-po-Avatar"><img class="dp-po-Avatar-icon" src="../../img/docs/avatar.png"></span>
 		Name Surname
-		<span class="dp-po-Icon Icon--ticket-created"></span>
+		<span class="dp-po-Icon Icon--date Icon--grey"></span>
 		DD MMM YYYY
-		<span class="dp-po-Icon Icon--text-created"></span>
+		<span class="dp-po-Icon Icon--comment Icon--grey"></span>
 		00
 	</span>
 	<input type="" name="" placeholder="Text">
@@ -22,11 +22,11 @@ sidebar_label: Lists
 <form class="dp-po-list dp-po-title-list-item small--title-list-item">
 	<span class="dp-po-title-item">
 		<span class="label-knowledgebase">
-			<span class="dp-po-Icon Icon--knowledgebase"></span>
+			<span class="dp-po-Icon Icon--knowledgebase Icon--grey"></span>
 			Content
 		</span>
 		<span class="dp-po-label label--time">
-			<span class="dp-po-Icon Icon--clock Icon--primary"></span>
+			<span class="dp-po-Icon Icon--history Icon--primary"></span>
 			text
 		</span>
 	</span>
@@ -36,14 +36,14 @@ sidebar_label: Lists
 <h4>large-icon-list-item</h4>
 <form class="dp-po-list dp-po-title-list-item large--title-list-item">
 	<a href="#" download=""  class="dp-po-zip">
-		<img src="../../img/docs/zip-file.svg" alt="download"/>
+		<span class="dp-po-Icon Icon--zip-file-left"></span>
 	</a>
 	<span>
 		<span class="dp-po-title-item">Title</span>
 		<span class="dp-po-large-input">
 			<input type="" name="" placeholder="Name Surname" class="dp-po-input-avatar">
 			<span class="dp-po-label label--time-box">
-				<span class="dp-po-Icon Icon--clock Icon--primary"></span>
+				<span class="dp-po-Icon Icon--history Icon--primary"></span>
 				00 hrs
 			</span>
 		</span>
@@ -63,7 +63,7 @@ sidebar_label: Lists
 			Name Surnam
 		</span>
 		<span class="dp-po-label label--time-box">
-			<span class="dp-po-Icon Icon--clock Icon--primary"></span>
+			<span class="dp-po-Icon Icon--history Icon--primary"></span>
 			00 hrs
 		</span>
 	</span>

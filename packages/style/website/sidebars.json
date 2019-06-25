@@ -1,7 +1,10 @@
 {
   "docs": {
     "Getting Started": [
-    	"intro"
+    	"intro",
+        "colours",
+        "portal-typography",
+        "messenger-typography"
     ],
     "Components": [
         "components/dp-po-Avatars",
@@ -23,6 +26,20 @@
         "components/dp-po-Tabs",
         "components/dp-po-Tooltips",
         "components/dp-po-Scrollbar"
+    ],
+    "Messenger Components": [
+        "messenger-components/dp-po-Buttons",
+        "messenger-components/dp-po-Cards",
+        "messenger-components/dp-po-Avatars",
+        "messenger-components/dp-po-Badges",
+        "messenger-components/dp-po-Initiators"
+    ],
+    "Elements": [
+        "elements/dp-po-Icons",
+        "elements/dp-po-Messenger-Icons"
+    ],
+    "Forms": [
+        "forms/dp-po-Forms"
     ]
   }
 }

@@ -50,11 +50,14 @@
 }
 
 .dp-po-Tabs.Tabs--Large .dp-po-Tabs-item {
-	font-size: 23px;
-	font-weight: 400;
 	margin-right: 40px;
+	font: var(--h-2);
 }
 
 .dp-po-Tabs.Tabs--Small .dp-po-Tabs-item {
 	font: var(--p-2-bold);
+}
+
+.dp-po-Tabs-item .dp-po-Icon.Icon--knowledgebase {
+	background-size: 15px 20px;
 }

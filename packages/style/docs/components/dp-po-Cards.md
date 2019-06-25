@@ -4,8 +4,6 @@ title: Cards
 sidebar_label: Cards
 ---
 
-<h2>CARDS</h2>
-
 <h4>.card-atom</h4>
 
 <div class="dp-po-card-atom card-atom--demo"></div>
@@ -21,7 +19,6 @@ sidebar_label: Cards
 		<div class="dp-po-content-txt">Content</div>
 	</div>
 </div>
-
 
 <h4>Hover</h4>
 

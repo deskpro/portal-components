@@ -1,0 +1,79 @@
+.dp-po-card.Card--messenger {
+	padding: 20px;
+	background-color: var(--white);
+	box-shadow: var(--shadow-bottom);
+	border-radius: 4px;
+}
+
+.Card--messenger .dp-po-card-title {
+	border-radius: 0;
+	background-color: transparent;
+	font: var(--messenger-h-2);
+	border-bottom: 2px solid var(--brand-primary);
+}
+
+.Card--messenger.Card-medium .dp-po-card-title {
+	border-bottom: 2px solid var(--grey);
+}
+
+.dp-po-Main-frame {
+	display: flex;
+	background-color: var(--grey-lightest);
+	box-shadow: var(--shadow-bottom);
+	border-radius: 4px;
+	width: 100%;
+	max-width: 380px;
+	height: 540px;
+}
+
+.dp-po-frame-copyright {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	color: var(--grey-dark);
+	font: var(--messenger-p-3);
+	margin: auto auto 0;
+	width: 80%;
+}
+
+.dp-po-frame-copyright:before,
+.dp-po-frame-copyright:after {
+	content: '';
+	position: absolute;
+	display: block;
+	top: 7.5px;
+	width: 68px;
+	height: 1px;
+	background-color: var(--grey-light);
+}
+
+.dp-po-frame-copyright:before {
+	left: 0;
+}
+
+.dp-po-frame-copyright:after {
+	right: 0;
+}
+
+.dp-po-frame-copyright .dp-po-Icon {
+	width: 20px;
+	height: 20px;
+	background-size: 19px 20px;
+}
+
+.dp-po-copyright-deskpro {
+	color: #1D3E55;
+	display: flex;
+	position: relative;
+	padding-left: 20px;
+}
+
+.dp-po-copyright-deskpro:after {
+	position: absolute;
+	content: '';
+	left: 10px;
+	top: 0;
+	width: 1px;
+	height: 80%;
+	background-color: var(--grey-light);
+}

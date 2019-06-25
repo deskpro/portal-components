@@ -61,7 +61,7 @@
   background: var(--brand-primary);
   color: var(--white);
   max-height: 44px;
-  width: 254px;
+  min-width: 254px;
   padding: 14px 0;
 }
 
@@ -114,6 +114,12 @@
   height: 44px;
 }
 
+.Button--large.Button--icon .dp-po-Icon {
+  width: 28px;
+  height: 27px;
+  background-size: 28px 27px;
+}
+
 .dp-po-Button.Button--icon:hover {
   background-color: var(--info-light);
   color: var(--brand-primary);
@@ -138,6 +144,12 @@
 .dp-po-Button.Button--small.Button--icon:hover {
   color: var(--white);
   background-color: var(--brand-primary);
+}
+
+.Button--small.Button--icon .dp-po-Icon {
+  width: 7px;
+  height: 13px;
+  background-size: 7px 13px;
 }
 
 /*button/text-icon*/

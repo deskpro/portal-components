@@ -66,6 +66,7 @@
 	background-color: transparent;
 	border-bottom: 1px solid var(--grey-lighter);
 	border-radius: 0;
+	padding: 6px 0;
 }
 
 .dp-po-search-expand:hover > .dp-po-txt {

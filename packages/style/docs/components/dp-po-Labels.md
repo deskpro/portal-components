@@ -15,7 +15,7 @@ sidebar_label: Labels & Badges
 
 <h4>label/time-ago</h4>
 <span class="dp-po-label label--time">
-	<span class="dp-po-Icon Icon--clock Icon--primary"></span>
+	<span class="dp-po-Icon Icon--history Icon--primary"></span>
 	text
 </span>
 

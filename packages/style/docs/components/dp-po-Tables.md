@@ -16,15 +16,15 @@ sidebar_label: Tables
 			</div>
 			<div class="dp-po-TableItem">
 				Department
-				<span class="dp-po-Icon Icon--sort"></span>
+				<span class="dp-po-Icon Icon--sort Icon--primary"></span>
 			</div>
 			<div class="dp-po-TableItem">
 				Created
-				<span class="dp-po-Icon Icon--sort"></span>
+				<span class="dp-po-Icon Icon--sort Icon--primary"></span>
 			</div>
 			<div class="dp-po-TableItem">
 				Last activity
-				<span class="dp-po-Icon Icon--sort"></span>
+				<span class="dp-po-Icon Icon--sort Icon--primary"></span>
 			</div>
 			<div class="dp-po-TableItem">
 				Rating
@@ -50,7 +50,7 @@ sidebar_label: Tables
 			</div>
 			<div class="dp-po-TableItem">
 				<img class="dp-po-Avatar-icon" src="../../img/docs/avatar-circular.png" alt="">
-				<img class="dp-po-Avatar-icon Avatar--smile" src="../../img/docs/smile.svg" alt="">
+				<span class="dp-po-Icon Icon--face-smile Icon--success"></span>
 			</div>
 		</div>
 		<!-- tables/chat-row -->

@@ -39,16 +39,11 @@
 	height: 43px;
 }
 
-.dp-po-Icon-wrapper.Icon--small .dp-po-Icon {
-	width: 24px;
-	height: 22px;
-}
-
-.dp-po-Icon-wrapper .Icon--light-primary.dp-po-Icon:after {
+.dp-po-Icon-wrapper.Wrapper--light-primary .dp-po-Icon:after {
 	background: rgba(58, 141, 222, 0.35);
 }
 
-.dp-po-Icon-wrapper .Icon--brand-primary.dp-po-Icon:after {
+.dp-po-Icon-wrapper.Wrapper--brand-primary .dp-po-Icon:after {
 	background: var(--brand-primary);
 }
 
@@ -77,4 +72,12 @@
 
 .dp-po-Icon-wrapper.Icon--centred-stacked .dp-po-Icon {
 	margin: 0 0 5px;
+}
+
+.dp-po-Icon-wrapper.Icon--centred-stacked .dp-po-Icon.Icon--elephant {
+	background-position: 70% 70%;
+}
+
+.dp-po-Icon-wrapper.Icon--centred-stacked .dp-po-Icon.Icon--article {
+	background-size: 21px 26px;
 }

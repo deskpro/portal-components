@@ -17,11 +17,11 @@ sidebar_label: Buttons
 	<div class="dp-po-ButtonItem-demo Large--ButtonItem-demo">
 		<span class="dp-po-ButtonTitle-demo">button/icon-text/large</span>
 		<button class="dp-po-Button Button--large Button--icon">
-			<span class="dp-po-Icon Icon--submit"></span>
+			<span class="dp-po-Icon Icon--submit Icon--primary"></span>
 			<span>text</span>
 		</button>
 		<button class="dp-po-Button Button--large Button--icon is-hover">
-			<span class="dp-po-Icon Icon--submit"></span>
+			<span class="dp-po-Icon Icon--submit Icon--primary"></span>
 			<span>text</span>
 		</button>
 	</div>
@@ -53,11 +53,11 @@ sidebar_label: Buttons
 	<div class="dp-po-ButtonItem-demo">
 		<div class="dp-po-ButtonTitle-demo">icon-text/small</div>
 		<button class="dp-po-Button Button--small Button--icon">
-			<span class="dp-po-Icon Icon--bolt"></span>
+			<span class="dp-po-Icon Icon--bolt Icon--grey"></span>
 			text
 		</button>
 		<button class="dp-po-Button Button--small Button--icon is-hover">
-			<span class="dp-po-Icon Icon--bolt"></span>
+			<span class="dp-po-Icon Icon--bolt Icon--grey"></span>
 			text
 		</button>
 	</div>
