@@ -26,14 +26,18 @@ sidebar_label: Forms
 <h2>input/search-bar</h2>
 <h4>Static</h4>
 <form class="dp-po-Forms dp-po-Search-bar">
-	<input type="" name="" placeholder="How can we help you today?">
-	<span class="dp-po-Icon Icon--find Icon--primary"></span>
+	<div class="dp-po-Searchbar-wrap">
+		<input type="" name="" placeholder="How can we help you today?">
+		<span class="dp-po-Icon Icon--find Icon--primary"></span>
+	</div>
 </form>
 
 <h4>Focus<h4>
 <form class="dp-po-Forms dp-po-Search-bar is-focus">
-	<input type="" name="" placeholder="How can we help you today?">
-	<span class="dp-po-Icon Icon--find Icon--primary"></span>
+	<div class="dp-po-Searchbar-wrap">
+		<input type="" name="" placeholder="How can we help you today?">
+		<span class="dp-po-Icon Icon--find Icon--primary"></span>
+	</div>
 </form>
 
 <h2>input/search-bar/small</h2>
