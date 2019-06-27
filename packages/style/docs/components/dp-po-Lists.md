@@ -55,7 +55,7 @@ sidebar_label: Lists
 </form>
 
 <h4>flagged-list-item</h4>
-<form class="dp-po-list dp-po-title-list-item flagged--item">
+<form class="dp-po-list dp-po-title-list-item flagged--item comment--item">
 	<span class="dp-po-title-item">TEXT</span>
 	<span class="dp-po-subtitle">
 		<span class="dp-po-username">

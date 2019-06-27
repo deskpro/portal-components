@@ -40,6 +40,11 @@
     ],
     "Forms": [
         "forms/dp-po-Forms"
+    ],
+    "Patterns": [
+        "patterns/dp-po-Filters",
+        "patterns/dp-po-News",
+        "patterns/dp-po-Guides"
     ]
   }
 }

@@ -16,7 +16,7 @@
 }
 
 .dp-po-Forms.is-focus input::placeholder,
-.dp-po-Forms.dp-po-Textarea.is-focus textarea::placeholder {
+.dp-po-Forms .dp-po-Textarea.is-focus textarea::placeholder {
 	color: var( --grey-darkest);
 }
 

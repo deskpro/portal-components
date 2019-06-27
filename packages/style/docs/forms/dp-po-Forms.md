@@ -51,21 +51,32 @@ sidebar_label: Forms
 
 <h2>input/comment-box</h2>
 <h4>Static</h4>
-<form class="dp-po-Forms dp-po-Textarea">
-	<textarea name="text" placeholder="Your comment"></textarea>
+
+<form class="dp-po-Forms Forms--Textarea">
+	<div class="dp-po-Textarea">
+		<span class="dp-po-Icon-resizer"></span>
+		<textarea name="text" placeholder="Your comment"></textarea>
+	</div>
 </form>
 
 <h4>Focus</h4>
-<form class="dp-po-Forms dp-po-Textarea is-focus">
-	<textarea name="text" placeholder="Your comment"></textarea>
+<form class="dp-po-Forms Forms--Textarea">
+	<div class="dp-po-Textarea is-focus">
+		<span class="dp-po-Icon-resizer"></span>
+		<textarea name="text" placeholder="Your comment"></textarea>
+	</div>
 </form>
 
 <h4>Validation</h4>
-<form class="dp-po-Forms dp-po-Textarea is-valid">
-	<textarea name="text" placeholder="Your comment"></textarea>
+<form class="dp-po-Forms Forms--Textarea">
+	<div class="dp-po-Textarea is-valid">
+		<span class="dp-po-Icon-resizer"></span>
+		<textarea name="text" placeholder="Your comment"></textarea>
+	</div>
 </form>
 
 <h2>login-2/item</h2>
+
 <h4>Static</h4>
 <form class="dp-po-Forms">
 	<span class="Forms--item-login">
@@ -132,37 +143,37 @@ sidebar_label: Forms
 
 <h4>Static</h4>
 <span class="dp-po-CustomCheckbox CustomCheckbox--medium">
-    <input type="checkbox" class="dp-po-ControlInput" id="DemoMediumCheckbox-03"></input>
-    <label for="DemoMediumCheckbox-03">Text</label>
-    <span class="dp-po-Checkbox-description">only</span>
+	<input type="checkbox" class="dp-po-ControlInput" id="DemoMediumCheckbox-03"></input>
+	<label for="DemoMediumCheckbox-03">Text</label>
+	<span class="dp-po-Checkbox-description">only</span>
 </span>
 
 <h4>Success</h4>
 <span class="dp-po-CustomCheckbox CustomCheckbox--medium">
-    <input type="checkbox" class="dp-po-ControlInput" id="DemoMediumCheckbox-04" checked></input>
-    <label for="DemoMediumCheckbox-04">Text</label>
-    <span class="dp-po-Checkbox-description">only</span>
+	<input type="checkbox" class="dp-po-ControlInput" id="DemoMediumCheckbox-04" checked></input>
+	<label for="DemoMediumCheckbox-04">Text</label>
+	<span class="dp-po-Checkbox-description">only</span>
 </span>
 
 <h4>Hover</h4>
 <span class="dp-po-CustomCheckbox CustomCheckbox--medium is-hover">
-    <input type="checkbox" class="dp-po-ControlInput" id="DemoMediumCheckbox-05"></input>
-    <label for="DemoMediumCheckbox-05">Text</label>
-    <span class="dp-po-Checkbox-description">only</span>
+	<input type="checkbox" class="dp-po-ControlInput" id="DemoMediumCheckbox-05"></input>
+	<label for="DemoMediumCheckbox-05">Text</label>
+	<span class="dp-po-Checkbox-description">only</span>
 </span>
 
 <h4>checkbox-text/small</h4>
 
 <h4>Static</h4>
 <span class="dp-po-CustomCheckbox">
-    <input type="checkbox" class="dp-po-ControlInput" id="DemoSmallCheckbox-01"></input>
-    <label for="DemoSmallCheckbox-01">Text</label>
+	<input type="checkbox" class="dp-po-ControlInput" id="DemoSmallCheckbox-01"></input>
+	<label for="DemoSmallCheckbox-01">Text</label>
 </span>
 
 <h4>Success</h4>
 <span class="dp-po-CustomCheckbox">
-    <input type="checkbox" class="dp-po-ControlInput" id="DemoSmallCheckbox-02" checked></input>
-    <label for="DemoSmallCheckbox-02">Text</label>
+	<input type="checkbox" class="dp-po-ControlInput" id="DemoSmallCheckbox-02" checked></input>
+	<label for="DemoSmallCheckbox-02">Text</label>
 </span>
 
 <h4>button/radio</h4>
@@ -243,7 +254,8 @@ sidebar_label: Forms
 
 <h4>comment-history</h4>
 
-<form class="dp-po-list flagged--item">
+<!-- <form class="dp-po-list flagged--item"> -->
+<form class="dp-po-list comment--item">
 	<span class="dp-po-subtitle">
 		<span class="dp-po-username">
 			<span class="dp-po-Icon Icon--medium-avatar"></span>
@@ -259,17 +271,17 @@ sidebar_label: Forms
 
 <h4>user-comment</h4>
 
-<form class="dp-po-list flagged--item">
+<form class="dp-po-list comment--item">
 	<span class="dp-po-subtitle">
 		<span class="dp-po-username">
-			<span class="dp-po-Icon Icon--medium-avatar"></span>
+			<img class="dp-po-Avatar-icon" src="../../img/docs/avatar.png" alt="">
 			Name Surname
 		</span>
 	</span>
-	<span class="dp-po-Forms dp-po-Textarea">
-		<textarea name="text" placeholder="Your comment"></textarea>
+	<span class="dp-po-Forms Forms--Textarea">
+		<div class="dp-po-Textarea">
+			<span class="dp-po-Icon-resizer"></span>
+			<textarea name="text" placeholder="Your comment"></textarea>
+		</div>
 	</span>
 </form>
-
-
-

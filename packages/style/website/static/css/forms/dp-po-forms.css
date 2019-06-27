@@ -11,9 +11,10 @@
 	box-sizing: border-box;
 	border-radius: 4px;
 	padding: 10px;
-	color: var(--grey);
 	font: var(--p-2);
 	outline: none;
+	/*color: var(--grey);*/
+	color: var(--grey-darkest);
 }
 
 .dp-po-Forms input:focus {
@@ -96,9 +97,11 @@
 	padding-left: 10px;
 }
 
-.dp-po-Forms.dp-po-Textarea textarea {
+/*Textarea*/
+
+.dp-po-Forms .dp-po-Textarea textarea {
 	border: 2px solid var(--grey);
-	font: var(--p-xxl);
+	font: var(--p-2);
 	background-color: var(--grey-lightest);
 	border-radius: 4px;
 	outline: none;
@@ -108,34 +111,52 @@
 	color: var(--grey);
 }
 
-.dp-po-Forms.dp-po-Textarea.is-valid textarea {
+.dp-po-Forms .dp-po-Textarea.is-valid textarea {
 	border-color: var(--danger);
 	color: var(--grey-darkest);
 }
 
-.dp-po-Forms.dp-po-Textarea.is-valid textarea::placeholder,
-.dp-po-Forms.dp-po-Textarea textarea:focus::placeholder {
+.dp-po-Forms .dp-po-Textarea textarea::placeholder {
+	color: var(--grey);
+}
+
+.dp-po-Forms .dp-po-Textarea.is-valid textarea::placeholder,
+.dp-po-Forms .dp-po-Textarea textarea:focus::placeholder {
 	color: var(--grey-darkest);
 }
 
-.dp-po-Textarea {
-	position: relative;
-	width: 100%;
-	max-width: 563px;
+.dp-po-Textarea.is-valid:before,
+.dp-po-Textarea.is-valid:after{
+	background-color: var(--danger);
+}
+
+.Forms--Textarea {
+	max-width: 560px;
 	min-height: 56px;
 }
 
+.dp-po-Forms .dp-po-Textarea {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+}
+
+.dp-po-Forms .dp-po-Textarea textarea {
+	position: relative;
+	z-index: 1;
+}
+
 .dp-po-Textarea:before{
-    content:"";
-    -webkit-transform: rotate(-45deg);
-    z-index: 1;
-    width: 25px;
-    height: 2px;
-    background-color: var(--grey-light);
-    position: absolute;
-    right: 6px;
-    bottom: 25px;
-    pointer-events: none;
+	content:"";
+	-webkit-transform: rotate(-45deg);
+	z-index: 2;
+	width: 25px;
+	height: 2px;
+	background-color: var(--grey-light);
+	position: absolute;
+	right: 10px;
+	bottom: 25px;
+	pointer-events: none;
 }
 
 .dp-po-Textarea:after {
@@ -145,24 +166,29 @@
 	-webkit-transform: rotate(-45deg);
 	position: absolute;
 	width: 11px;
-    height: 2px;
-    background-color: var(--grey-light);
+	height: 2px;
+	background-color: var(--grey-light);
 	bottom: 20px;
-	right: 8px;
+	right: 12px;
 	pointer-events: none;
 	z-index: 2;
 	position: absolute;
 }
-
-.dp-po-Textarea.is-valid:before,
-.dp-po-Textarea.is-valid:after{
-	background-color: var(--danger);
+.dp-po-Icon-resizer {
+	height: 10px;
+	width: 10px;
+	background-color: var(--grey-lightest);
+	position: absolute;
+	bottom: 9px;
+	right: 2px;
+	pointer-events: none;
+	z-index: 2;
 }
 
-/* transparent resizer */
-::-webkit-resizer{ background-color:transparent; }
 
-::-webkit-resizer { display: none; }
+
+
+
 
 /*login-2/item*/
 
@@ -543,40 +569,24 @@
 
 /*flagged-list-item*/
 
-/*.dp-po-list.flagged--item {
-	border-left: 2px solid var(--danger);
-	padding-left: 10px;
-}*/
-
-/*.dp-po-list.flagged--item .dp-po-title-item {
-	color: var(--white);
-	font: var(--p-n-semibold-caps);
-	background-color: var(--danger);
-	padding: 5px;
-	border-radius: 2px;
-	width: 100%;
-	max-width: 150px;
-	margin-bottom: 8px;
-}*/
-
-.dp-po-list.flagged--item .dp-po-subtitle {
+.dp-po-list.comment--item .dp-po-subtitle {
 	color: var(--grey-darkest);
 	font: var(--h-5-medium);
 	justify-content: space-between;
 }
 
-.flagged--item .dp-po-username {
+.comment--item .dp-po-username {
 	display: flex;
 	align-items: center;
 	color: var(--grey-darkest);
 	font: var(--h-5-medium);
 }
 
-.flagged--item .label--time-box {
+.comment--item .label--time-box {
 	margin-bottom: 5px;
 }
 
-.dp-po-list.flagged--item input {
+.dp-po-list.comment--item input {
 	background-color: var(--grey-lightest);
 	border: 0;
 	padding: 10px;
@@ -593,6 +603,30 @@
 	color: var(--grey-dark);
 }
 
-.flagged--item .dp-po-Textarea textarea {
+.comment--item .dp-po-Textarea {
 	margin-left: 40px;
+}
+
+.comment--item .dp-po-Avatar-icon {
+	width: 30px;
+	height: 30px;
+	margin-right: 10px;
+}
+
+/*flagged-list-item*/
+
+.dp-po-list.flagged--item {
+	border-left: 2px solid var(--danger);
+	padding-left: 10px;
+}
+
+.dp-po-list.flagged--item .dp-po-title-item {
+	color: var(--white);
+	font: var(--p-n-semibold-caps);
+	background-color: var(--danger);
+	padding: 5px;
+	border-radius: 2px;
+	width: 100%;
+	max-width: 150px;
+	margin-bottom: 8px;
 }

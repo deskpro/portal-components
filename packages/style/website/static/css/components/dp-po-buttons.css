@@ -20,7 +20,8 @@
   font: var(--p-2-bold);
   color: var(--white);
   background-color: var(--brand-primary);
-  width: 125px;
+  min-width: 125px;
+  max-width: max-content;
   height: 39px;
 }
 

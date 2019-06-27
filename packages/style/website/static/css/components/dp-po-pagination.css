@@ -137,6 +137,7 @@
   max-height: 20px;
   padding: 3px 4px;
   width: auto;
+  min-width: auto;
 }
 
 .dp-po-PageJump .dp-po-Button.Button--grey {
