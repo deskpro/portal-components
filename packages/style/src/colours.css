@@ -1,21 +1,21 @@
 .dp-Bg-ColorDemonstration {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap
 }
 
 .dp-Bg-ColorDemonstration > div {
-  align-items: center;
-  color: #050505;
-  display: flex;
   flex: 0 0 14%;
+  display: flex;
+  align-items: center;
   font: var(--s-2);
+  color: #050505;
 }
 
 .dp-Bg-ColorDemonstration div > div {
-  border-radius: 3px;
-  height: 40px;
-  margin: 6px;
   min-width: 40px;
+  height: 40px;
+  border-radius: 3px;
+  margin: 6px;
 }
 
 .dp-Bg-ColorDemonstration h4 {
@@ -120,43 +120,43 @@
 /* background color */
 
 .Bg-Gradients--fusia {
-  background: linear-gradient(270deg, #e16aff 0.91%, #dc68f8 14.56%, #ce61e5 34.18%, #b856c6 57.4%, #99469b 83.16%, #833b7c 99.46%);
+  background: linear-gradient(270deg, #E16AFF 0.91%, #DC68F8 14.56%, #CE61E5 34.18%, #B856C6 57.4%, #99469B 83.16%, #833B7C 99.46%);
 }
 
 .Bg-Gradients--violet {
-  background: linear-gradient(270deg, #9e8ef1 0.87%, #9788e6 15.36%, #8477c9 40.73%, #665c9a 73.72%, #4b4471 99.5%);
+  background: linear-gradient(270deg, #9E8EF1 0.87%, #9788E6 15.36%, #8477C9 40.73%, #665C9A 73.72%, #4B4471 99.5%);
 }
 
 .Bg-Gradients--indigo {
-  background: linear-gradient(270deg, #6f88fc 0.87%, #6c85f8 20.01%, #617eec 39.44%, #5071d7 59.01%, #3760bb 78.67%, #184a97 98.24%, #164894 99.5%);
+  background: linear-gradient(270deg, #6F88FC 0.87%, #6C85F8 20.01%, #617EEC 39.44%, #5071D7 59.01%, #3760BB 78.67%, #184A97 98.24%, #164894 99.5%);
 }
 
 .Bg-Gradients--blue {
-  background: linear-gradient(90deg, #3467a4 0%, #3a8dde 49.48%, #77b5e7 100%);
+  background: linear-gradient(90deg, #3467A4 0%, #3A8DDE 49.48%, #77B5E7 100%);
 }
 
 .Bg-Gradients--cyan {
-  background: linear-gradient(270deg, #2fb1db 0.87%, #2971ae 99.5%);
+  background: linear-gradient(270deg, #2FB1DB 0.87%, #2971AE 99.5%);
 }
 
 .Bg-Gradients--sea {
-  background: linear-gradient(270deg, #8af0fc 0.87%, #6ec6cf 31.41%, #2a5e5e 99.5%);
+  background: linear-gradient(270deg, #8AF0FC 0.87%, #6EC6CF 31.41%, #2A5E5E 99.5%);
 }
 
 .Bg-Gradients--grass {
-  background: linear-gradient(270deg, #31eaa6 0.91%, #34e59f 23.4%, #3dd88c 55.7%, #4bc36d 93.77%, #4dbf68 99.42%);
+  background: linear-gradient(270deg, #31EAA6 0.91%, #34E59F 23.4%, #3DD88C 55.7%, #4BC36D 93.77%, #4DBF68 99.42%);
 }
 
 .Bg-Gradients--yellow {
-  background: linear-gradient(270deg, #f5d16d 0.91%, #f5cc66 18.72%, #f4bd53 44.31%, #f3a534 74.44%, #f28d15 99.5%);
+  background: linear-gradient(270deg, #F5D16D 0.91%, #F5CC66 18.72%, #F4BD53 44.31%, #F3A534 74.44%, #F28D15 99.5%);
 }
 
 .Bg-Gradients--rust {
-  background: linear-gradient(270deg, #ff8f6d 0.91%, #fb8966 19.14%, #f07953 45.33%, #de5f34 76.18%, #cd4718 99.5%);
+  background: linear-gradient(270deg, #FF8F6D 0.91%, #FB8966 19.14%, #F07953 45.33%, #DE5F34 76.18%, #CD4718 99.5%);
 }
 
 .Bg-Gradients--rose {
-  background: linear-gradient(270deg, #ff4c85 0.99%, #f8497f 21.34%, #e5416d 50.57%, #c6334f 85.01%, #b72c41 99.5%);
+  background: linear-gradient(270deg, #FF4C85 0.99%, #F8497F 21.34%, #E5416D 50.57%, #C6334F 85.01%, #B72C41 99.5%);
 }
 
 /* color */

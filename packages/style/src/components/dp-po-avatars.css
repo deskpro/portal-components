@@ -1,45 +1,59 @@
 .dp-po-Avatar {
-  align-items: center;
-  display: flex;
+	display: flex;
+	align-items: center;
 }
 
 .dp-po-Avatar-icon {
-  height: 23px;
-  width: 23px;
+	width: 23px;
+	height: 23px;
+	cursor: pointer;
 }
 
 .dp-po-Avatar-name {
-  color: var(--grey-darkest);
-  font: var(--h-6);
-  margin-left: 10px;
+	font: var(--h-6);
+	color: var(--grey-darkest);
+	margin-left: 10px;
 }
 
-/* Avatar--medium */
+/*Avatar--medium*/
 
 .dp-po-Avatar.Avatar--medium .dp-po-Avatar-icon {
-  height: 28px;
-  width: 28px;
+	width: 28px;
+	height: 28px;
 }
 
 .dp-po-Avatar.Avatar--medium .dp-po-Avatar-name {
-  font: var(--h-5-medium);
+	font: var(--h-5-medium);
 }
 
-/* Avatar--small */
+/*Avatar--small*/
 
 .dp-po-Avatar.Avatar--circle.Avatar--small .dp-po-Avatar-icon {
-  height: 25px;
-  width: 25px;
+	width: 25px;
+	height: 25px;
 }
 
 .dp-po-Avatar-name + .dp-po-arrow {
-  margin-left: 10px;
+	margin-left: 10px;
 }
 
-/* avatar/circular */
+/*avatar/circular*/
 
 .dp-po-Avatar.Avatar--circle .dp-po-Avatar-icon {
-  border-radius: 50%;
-  height: 30px;
-  width: 30px;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+}
+
+/*Avatar name*/
+
+.Avatar--name {
+	color: var(--white);
+	font: var(--p-2-bold);
+	text-transform: uppercase;
+	background-color: var(--grey);
+	border-radius: 50%;
+	min-width: 30px;
+	height: 30px;
+	justify-content: center;
 }

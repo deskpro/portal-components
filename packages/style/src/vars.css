@@ -79,7 +79,7 @@
   --is-uppercase: uppercase;
   --is-italic: italic;
 
-  /* Header sizes */
+/*Header sizes*/
 
   --font-H1: 36px;
   --font-H2: 23px;
@@ -97,41 +97,41 @@
   --h-5-semibold: var(--is-semibold) var(--font-H5)/var(--line-height-base) "Rubik", sans-serif;
   --h-6: var(--is-regular) var(--font-H6)/var(--line-height-base) "Rubik", sans-serif;
 
-  /* Body sizes */
+/*Body sizes*/
 
-  --font-p1: 18px;
-  --font-p2: 15px;
-  --font-p3: 12px;
+--font-p1: 18px;
+--font-p2: 15px;
+--font-p3: 12px;
 
-  --p-1: var(--is-regular) var(--font-p1)/var(--line-height-base) "Lato", sans-serif;
-  --p-2: var(--is-regular) var(--font-p2)/var(--line-height-base) "Lato", sans-serif;
-  --p-2-medium: var(--is-medium) var(--font-p2)/var(--line-height-base) "Lato", sans-serif;
-  --p-2-bold: var(--is-bold) var(--font-p2)/var(--line-height-base) "Lato", sans-serif;
-  --p-3: var(--is-regular) var(--font-p3)/var(--line-height-base) "Lato", sans-serif;
-  --p-3-semibold: var(--is-semibold) var(--font-p3)/var(--line-height-base) "Lato", sans-serif;
-  --p-3-bold: var(--is-bold) var(--font-p3)/var(--line-height-base) "Lato", sans-serif;
+--p-1: var(--is-regular) var(--font-p1)/var(--line-height-base) "Lato", sans-serif;
+--p-2: var(--is-regular) var(--font-p2)/var(--line-height-base) "Lato", sans-serif;
+--p-2-medium: var(--is-medium) var(--font-p2)/var(--line-height-base) "Lato", sans-serif;
+--p-2-bold: var(--is-bold) var(--font-p2)/var(--line-height-base) "Lato", sans-serif;
+--p-3: var(--is-regular) var(--font-p3)/var(--line-height-base) "Lato", sans-serif;
+--p-3-semibold: var(--is-semibold) var(--font-p3)/var(--line-height-base) "Lato", sans-serif;
+--p-3-bold: var(--is-bold) var(--font-p3)/var(--line-height-base) "Lato", sans-serif;
 
-  /* Button sizes */
+/*Button sizes*/
 
-  --font-b1: 14px;
-  --font-b2: 12px;
-  --font-b3: 10px;
+--font-b1: 14px;
+--font-b2: 12px;
+--font-b3: 10px;
 
-  --b-1-semibold: var(--is-semibold) var(--font-b1)/var(--line-height-base) "Lato", sans-serif;
-  --b-2: var(--is-regular) var(--font-b2)/var(--line-height-base) "Lato", sans-serif;
-  --b-2-semibold: var(--is-semibold) var(--font-b2)/var(--line-height-base) "Lato", sans-serif;
-  --b-3: var(--is-regular) var(--font-b3)/var(--line-height-base) "Open Sans", sans-serif;
-  --b-3-semibold: var(--is-semibold) var(--font-b3)/var(--line-height-base) "Open Sans", sans-serif;
+--b-1-semibold: var(--is-semibold) var(--font-b1)/var(--line-height-base) "Lato", sans-serif;
+--b-2: var(--is-regular) var(--font-b2)/var(--line-height-base) "Lato", sans-serif;
+--b-2-semibold: var(--is-semibold) var(--font-b2)/var(--line-height-base) "Lato", sans-serif;
+--b-3: var(--is-regular) var(--font-b3)/var(--line-height-base) "Open Sans", sans-serif;
+--b-3-semibold: var(--is-semibold) var(--font-b3)/var(--line-height-base) "Open Sans", sans-serif;
 
-  /* Inline Text */
+/*Inline Text*/
 
-  --font-s2: 12px;
+--font-s2: 12px;
 
-  --s-2: var(--is-regular) var(--font-s2)/var(--line-height-base) "Lato", sans-serif;
+--s-2: var(--is-regular) var(--font-s2)/var(--line-height-base) "Lato", sans-serif;
 
-  /* Mobile fonts */
+/* Mobile fonts */
 
-  /* Header sizes */
+/*Header sizes*/
 
   --font-MH1: 26px;
   --font-MH2: 22px;
@@ -142,68 +142,68 @@
   --mh-3: var(--is-regular) var(--font-MH3)/var(--line-height-base) "Rubik", sans-serif;
   --mh-3-medium: var(--is-medium) var(--font-MH3)/var(--line-height-base) "Rubik", sans-serif;
 
-  /* Body sizes */
+/*Body sizes*/
 
-  --font-mp1: 16px;
-  --font-mp2: 15px;
+--font-mp1: 16px;
+--font-mp2: 15px;
 
-  --mp-1: var(--is-regular) var(--font-mp1)/var(--line-height-base) "Lato", sans-serif;
-  --mp-1-bold: var(--is-bold) var(--font-mp2)/var(--line-height-base) "Lato", sans-serif;
-  --mp-2-medium: var(--is-medium) var(--font-mp2)/var(--line-height-base) "Lato", sans-serif;
+--mp-1: var(--is-regular) var(--font-mp1)/var(--line-height-base) "Lato", sans-serif;
+--mp-1-bold: var(--is-bold) var(--font-mp2)/var(--line-height-base) "Lato", sans-serif;
+--mp-2-medium: var(--is-medium) var(--font-mp2)/var(--line-height-base) "Lato", sans-serif;
 
-  /* Messenger Typography */
+/*Messenger Typography*/
 
-  /* Header sizes */
+/*Header sizes*/
 
-  --m-H1: 28px;
-  --m-H2: 18px;
-  --m-H3: 16px;
+--m-H1: 28px;
+--m-H2: 18px;
+--m-H3: 16px;
 
-  --messenger-h-1: var(--is-regular) var(--m-H1)/var(--line-height-base) "Rubik", sans-serif;
-  --messenger-h-2: var(--is-regular) var(--m-H2)/var(--line-height-base) "Rubik", sans-serif;
-  --messenger-h-3-medium: var(--is-medium) var(--m-H3)/var(--line-height-base) "Rubik", sans-serif;
+--messenger-h-1: var(--is-regular) var(--m-H1)/var(--line-height-base) "Rubik", sans-serif;
+--messenger-h-2: var(--is-regular) var(--m-H2)/var(--line-height-base) "Rubik", sans-serif;
+--messenger-h-3-medium: var(--is-medium) var(--m-H3)/var(--line-height-base) "Rubik", sans-serif;
 
-  /* Messenger Body sizes */
+/*Messenger Body sizes*/
 
-  --m-p1: 16px;
-  --m-p2: 14px;
-  --m-p3: 12px;
+--m-p1: 16px;
+--m-p2: 14px;
+--m-p3: 12px;
 
-  --messenger-p-1: var(--is-regular) var(--m-p1)/var(--line-height-base) "Rubik", sans-serif;
-  --messenger-p-2: var(--is-regular) var(--m-p2)/var(--line-height-base) "Rubik", sans-serif;
-  --messenger-p-2-medium: var(--is-medium) var(--m-p2)/var(--line-height-base) "Rubik", sans-serif;
-  --messenger-p-3: var(--is-regular) var(--m-p3)/var(--line-height-base) "Rubik", sans-serif;
+--messenger-p-1: var(--is-regular) var(--m-p1)/var(--line-height-base) "Rubik", sans-serif;
+--messenger-p-2: var(--is-regular) var(--m-p2)/var(--line-height-base) "Rubik", sans-serif;
+--messenger-p-2-medium: var(--is-medium) var(--m-p2)/var(--line-height-base) "Rubik", sans-serif;
+--messenger-p-3: var(--is-regular) var(--m-p3)/var(--line-height-base) "Rubik", sans-serif;
 
-  /* Messenger Button sizes */
+/*Messenger Button sizes*/
 
-  --m-b1: 16px;
-  --m-b2: 14px;
-  --m-b3: 12px;
+--m-b1: 16px;
+--m-b2: 14px;
+--m-b3: 12px;
 
-  --messenger-b-1: var(--is-regular) var(--m-b1)/var(--line-height-base) "Rubik", sans-serif;
-  --messenger-b-2: var(--is-regular) var(--m-b2)/var(--line-height-base) "Rubik", sans-serif;
-  --messenger-b-3: var(--is-regular) var(--m-b3)/var(--line-height-base) "Rubik", sans-serif;
+--messenger-b-1: var(--is-regular) var(--m-b1)/var(--line-height-base) "Rubik", sans-serif;
+--messenger-b-2: var(--is-regular) var(--m-b2)/var(--line-height-base) "Rubik", sans-serif;
+--messenger-b-3: var(--is-regular) var(--m-b3)/var(--line-height-base) "Rubik", sans-serif;
 
-  /* Messenger Inline Text and Captions */
+/*Messenger Inline Text and Captions*/
 
-  --it-small: 16px;
+--it-small: 16px;
 
-  --messenger-it-small: var(--is-regular) var(--it-small)/var(--line-height-base) "Rubik", sans-serif;
+--messenger-it-small: var(--is-regular) var(--it-small)/var(--line-height-base) "Rubik", sans-serif;
 
-  /* Messenger Suggeted text */
+/*Messenger Suggeted text*/
 
-  --m-s1: 16px;
+--m-s1: 16px;
 
-  --messenger-s-1: var(--is-regular) var(--m-s1)/var(--line-height-base) "Rubik", sans-serif;
+--messenger-s-1: var(--is-regular) var(--m-s1)/var(--line-height-base) "Rubik", sans-serif;
 
-  /* Deskpro Shadows */
-  --shadow-bottom: 0 5px 5px rgba(0, 0, 0, 0.15);
-  --shadow-top-inset: inset 0 5px 5px 0 rgba(0, 0, 0, 0.15);
-  --shadow-bottom-left: -5px 5px 5px rgba(0, 0, 0, 0.15);
-  --shadow-bottom-right: 5px 5px 5px rgba(0, 0, 0, 0.15);
-  --shadow-left: -5px 0 5px rgba(0, 0, 0, 0.15);
-  --shadow-right: 5px 0 5px rgba(0, 0, 0, 0.15);
+/* Deskpro Shadows */
+--shadow-bottom: 0 5px 5px rgba(0, 0, 0, 0.15);
+--shadow-top-inset: inset 0 5px 5px 0 rgba(0, 0, 0, 0.15);
+--shadow-bottom-left: -5px 5px 5px rgba(0, 0, 0, 0.15);
+--shadow-bottom-right: 5px 5px 5px rgba(0, 0, 0, 0.15);
+--shadow-left: -5px 0 5px rgba(0, 0, 0, 0.15);
+--shadow-right: 5px 0 5px rgba(0, 0, 0, 0.15);
 
-  /* gradient */
-  --brand-primary-gradient: linear-gradient(90deg, #3467a4 0%, #3a8dde 49.48%, #77b5e7 100%);
+/*gradient*/
+--brand-primary-gradient: linear-gradient(90deg, #3467A4 0%, #3A8DDE 49.48%, #77B5E7 100%);
 }

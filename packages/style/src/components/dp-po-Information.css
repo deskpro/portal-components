@@ -1,26 +1,26 @@
 .dp-po-Info {
-  background-color: var(--grey-lightest);
-  border: 1px solid var(--brand-primary);
-  border-left: 5px solid var(--brand-primary);
-  border-radius: 6px;
-  color: var(--grey-darkest);
-  display: flex;
-  font: var(--p-2-bold);
-  max-width: 670px;
-  padding: 15px;
-  width: 100%;
+	display: flex;
+	font: var(--p-2-bold);
+	color: var(--grey-darkest);
+	border: 1px solid var(--brand-primary);
+	border-left: 5px solid var(--brand-primary);
+	background-color: var(--grey-lightest);
+	border-radius: 6px;
+	width: 100%;
+	max-width: 670px;
+	padding: 15px;
 }
 
 .dp-po-Info .dp-po-info-txt {
-  padding-left: 15px;
+	padding-left: 15px;
 }
 
 .dp-po-Info.Info--danger {
-  border: 1px solid var(--danger);
-  border-left: 5px solid var(--danger);
+	border: 1px solid var(--danger);
+	border-left: 5px solid var(--danger);
 }
 
 .dp-po-Info .dp-po-Icon {
-  height: 23px;
-  min-width: 23px;
+	min-width: 23px;
+	height: 23px;
 }

@@ -1,63 +1,63 @@
 .dp-po-Tabs, .dp-po-Tabs .dp-po-Tabs-item {
-  display: flex;
+    display: flex;
 }
 
 .dp-po-Tabs {
-  margin: 0;
-  padding: 0;
+	padding: 0;
+	margin: 0;
 }
 
 .dp-po-Tabs-item {
-  align-items: center;
-  color: var(--grey);
-  cursor: pointer;
-  cursor: pointer;
-  display: flex;
-  font: var(--h-2);
-  margin-right: 20px;
-  margin-top: 0;
-  padding: 5px 0;
-  position: relative;
+	color: var(--grey);
+	font: var(--h-2);
+	cursor: pointer;
+	margin-right: 20px;
+	margin-top: 0;
+	padding: 5px 0;
+	position: relative;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
 }
 
 .Tabs--Large .dp-po-Tabs-item {
-  border-bottom: 2px solid var(--grey-lighter);
+	border-bottom: 2px solid var(--grey-lighter);
 }
 
 .Tabs--Large .dp-po-Tabs-item:hover {
-  border-bottom: 2px solid var(--grey);
-  color: var(--grey);
+	color: var(--grey);
+	border-bottom: 2px solid var(--grey);
 }
 
 .Tabs--Small .dp-po-Tabs-item:hover {
-  color: var(--grey-dark);
+	color: var(--grey-dark);
 }
 
 .dp-po-Tabs-item.is-selected {
-  color: var(--grey-darkest);
+	color: var(--grey-darkest);
 }
 
 .Tabs--Large .dp-po-Tabs-item.is-selected {
-  border-bottom: 2px solid var(--brand-primary);
+	border-bottom: 2px solid var(--brand-primary);
 }
 
 .dp-po-Tabs-item .dp-po-qt {
-  margin-left: 5px;
+	margin-left: 5px;
 }
 
 .dp-po-Tabs-item .dp-po-Icon {
-  margin-right: 10px;
+	margin-right: 10px;
 }
 
 .dp-po-Tabs.Tabs--Large .dp-po-Tabs-item {
-  font: var(--h-2);
-  margin-right: 40px;
+	margin-right: 40px;
+	font: var(--h-2);
 }
 
 .dp-po-Tabs.Tabs--Small .dp-po-Tabs-item {
-  font: var(--p-2-bold);
+	font: var(--p-2-bold);
 }
 
 .dp-po-Tabs-item .dp-po-Icon.Icon--knowledgebase {
-  background-size: 15px 20px;
+	background-size: 15px 20px;
 }

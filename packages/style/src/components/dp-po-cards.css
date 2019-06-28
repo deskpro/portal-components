@@ -1,39 +1,39 @@
 .dp-po-card-atom {
-  border: 2px solid var(--grey-light);
-  border-radius: 6px;
-  max-width: 300px;
+	border: 2px solid var(--grey-light);
+	border-radius: 6px;
+	max-width: 300px;
 }
 
 .dp-po-card-atom:hover {
-  border-color: var(--brand-primary);
-  box-shadow: var(--shadow-bottom-right);
+	border-color: var(--brand-primary);
+	box-shadow: var(--shadow-bottom-right);
 }
 
 .dp-po-card-title {
-  background-color: var(--grey-lightest);
-  border-bottom: 1px solid var(--grey-light);
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
-  font: var(--h-3);
-  padding: 15px;
+	font: var(--h-3);
+	background-color: var(--grey-lightest);
+	border-bottom: 1px solid var(--grey-light);
+	padding: 15px;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
 }
 
 .dp-po-card-content {
-  padding: 15px;
+	padding: 15px;
 }
 
 .dp-po-content-txt {
-  color: var(--grey-darkest);
-  font: var(--p-1);
-  margin-bottom: 15px;
+	font: var(--p-1);
+	color: var(--grey-darkest);
+	margin-bottom: 15px;
 }
 
 .dp-po-content-txt.content-txt--large {
-  font: var(--h-5-medium);
+	font: var(--h-5-medium);
 }
 
-/* card-atom--long */
+/*card-atom--long*/
 
 .dp-po-card-atom.card-atom--long {
-  max-width: 100%;
+	max-width: 100%;
 }

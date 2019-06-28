@@ -1,14 +1,13 @@
 @import "arrows.css";
 @import "colours.css";
 @import "custom.css";
-@import "dp-Icons.css";
 @import "fonts.css";
 @import "Icons.css";
 @import "vars.css";
 @import "components/dp-po-avatars.css";
 @import "components/dp-po-breadcrumbs.css";
 @import "components/dp-po-buttons.css";
-@import "components/dp-po-calendar.css";
+@import "components/dp-po-calender.css";
 @import "components/dp-po-cards.css";
 @import "components/dp-po-date.css";
 @import "components/dp-po-dividers.css";

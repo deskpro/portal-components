@@ -1,74 +1,76 @@
 .dp-po-Dropdown-container {
-  max-width: 236px;
-  position: relative;
-  width: 100%;
+	position: relative;
+	width: 100%;
+	max-width: 236px;
 }
 
 .dp-po-dropdown-atom {
-  align-items: center;
-  background-color: var(--grey-lighter);
-  border-radius: 4px;
-  color: var(--grey-darkest);
-  cursor: pointer;
-  display: flex;
-  font: var(--p-1);
-  justify-content: space-between;
-  padding: 6px 10px;
-  position: relative;
+	color: var(--grey-darkest);
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font: var(--p-1);
+	position: relative;
+	background-color: var(--grey-lighter);
+	border-radius: 4px;
+	padding: 6px 10px;
 }
 
 .dp-po-dropdown-atom .dp-po-arrow {
-  background-color: transparent;
-  border: 0;
+	border: 0;
+	background-color: transparent
 }
 
 .dp-po-dropdown-atom + .dp-po-dropdown-menu {
-  display: none;
+	display: none;
 }
 
 .dp-po-dropdown-atom.is-active + .dp-po-dropdown-menu {
-  display: block;
+	display: block;
 }
 
 .dp-po-dropdown-atom.is-active {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
 }
 
 .dp-po-dropdown-atom.is-active .dp-po-arrow {
-  transform: rotate(-90deg);
+	transform: rotate(-90deg);
 }
 
 .dp-po-dropdown-menu {
-  background-color: var(--grey-lighter);
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  list-style: none;
-  margin-bottom: 0;
-  padding: 0;
+	list-style: none;
+	padding: 0;
+	background-color: var(--grey-lighter);
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	margin-bottom: 0;
 }
 
 .dp-po-dropdown-menu .dp-po-dropdown-menu-item {
-  cursor: pointer;
-  font: var(--p-2);
-  margin: 0;
-  padding: 5px 10px;
+	margin: 0;
+	padding: 5px 10px;
+	cursor: pointer;
+	font: var(--p-2);
+	display: flex;
+	align-items: center;
 }
 
 .dp-po-dropdown-menu .dp-po-dropdown-menu-item:hover {
-  background-color: var(--info-light);
-  color: var(--brand-primary);
+	color: var(--brand-primary);
+	background-color: var(--info-light);
 }
 
-/* dropdown/search-expand/text-icon */
+/*dropdown/search-expand/text-icon*/
 
 .dp-po-dropdown-atom.dp-po-search-expand {
-  background-color: transparent;
-  border-bottom: 1px solid var(--grey-lighter);
-  border-radius: 0;
-  padding: 6px 0;
+	background-color: transparent;
+	border-bottom: 1px solid var(--grey-lighter);
+	border-radius: 0;
+	padding: 6px 0;
 }
 
 .dp-po-search-expand:hover > .dp-po-txt {
-  color: var(--brand-primary);
+	color: var(--brand-primary);
 }
