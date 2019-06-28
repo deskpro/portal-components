@@ -1,8 +1,0 @@
-.dp-po-dropdown-menu .dp-po-dropdown-menu-item.is-hover {
-	color: var(--brand-primary);
-	background-color: var(--info-light);
-}
-
-.dp-po-search-expand.is-hover > .dp-po-txt {
-	color: var(--brand-primary);
-}

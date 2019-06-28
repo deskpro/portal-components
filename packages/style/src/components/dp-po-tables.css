@@ -1,0 +1,64 @@
+.dp-po-TableWrapper {
+  display: block;
+  position: relative;
+}
+
+.dp-po-Tableview {
+  display: block;
+}
+
+.dp-po-TableRow.dp-po-TableControl {
+  color: var(--grey-dark);
+}
+
+.dp-po-TableControl .dp-po-TableItem {
+  font: var(--p-2-bold);
+}
+
+.dp-po-TableRow {
+  align-items: center;
+  color: var(--grey-darkest);
+  display: flex;
+}
+
+.dp-po-TableRow > div {
+  align-items: center;
+  display: flex;
+  padding: 6px 13px;
+}
+
+.dp-po-TableRow > div:first-child {
+  padding: 6px 13px 6px 35px;
+}
+
+.dp-po-TableItem {
+  font: var(--p-1);
+  position: relative;
+}
+
+.dp-po-TableControl .dp-po-TableItem .dp-po-Icon {
+  margin-left: 10px;
+}
+
+.dp-po-ticket {
+  font: var(--p-2-bold);
+}
+
+.dp-po-ticket-Icon {
+  background-color: var(--danger);
+  border-radius: 50%;
+  height: 12px;
+  left: 10px;
+  position: absolute;
+  top: calc(50% - 6px);
+  width: 12px;
+}
+
+.dp-po-TableItem .dp-po-Avatar-icon + .dp-po-Icon {
+  background-color: var(--white);
+  margin-left: -5px;
+}
+
+.dp-po-TableRow.TableRow--chat > div:first-child {
+  padding: 6px 13px;
+}

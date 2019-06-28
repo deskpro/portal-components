@@ -1,0 +1,15 @@
+.demo-pagination {
+  align-items: center;
+  display: flex;
+}
+
+.demo-pagination-title {
+  color: var(--black);
+  font: var(--p-xxl);
+  max-width: 170px;
+  width: 100%;
+}
+
+.demo-pagination:last-child .demo-pagination-title {
+  max-width: 165px;
+}

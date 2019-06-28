@@ -1,8 +1,0 @@
-.card-atom--demo {
-	height: 44px;
-}
-
-.dp-po-card-atom.is-hover {
-	border-color: var(--brand-primary);
-	box-shadow: var(--shadow-bottom-right);
-}

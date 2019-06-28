@@ -1,0 +1,63 @@
+/* arrow */
+
+.dp-po-arrow {
+  cursor: pointer;
+  display: inline-block;
+  height: 12px;
+  position: relative;
+  width: 8px;
+}
+
+.dp-po-arrow::before,
+.dp-po-arrow::after {
+  background-color: var(--grey);
+  content: "";
+  height: 7px;
+  position: absolute;
+  width: 1px;
+}
+
+.dp-po-arrow.arrow--brand-primary::before,
+.dp-po-arrow.arrow--brand-primary::after {
+  background-color: var(--brand-primary);
+}
+
+.dp-po-arrow::before {
+  left: 50%;
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.dp-po-arrow::after {
+  bottom: 0;
+  left: 50%;
+  transform: rotate(45deg);
+}
+
+.dp-po-arrow.arrow--left {
+  transform: rotate(180deg);
+}
+
+.dp-po-arrow.arrow--bottom {
+  transform: rotate(90deg);
+}
+
+.dp-po-arrow.arrow--top {
+  transform: rotate(-90deg);
+}
+
+/* arrow avatars */
+
+.dp-po-Avatar .dp-po-arrow {
+  height: 15px;
+  width: 10px;
+}
+
+.dp-po-Avatar .dp-po-arrow::before,
+.dp-po-Avatar .dp-po-arrow::after {
+  height: 10px;
+}
+
+.dp-po-Avatar .dp-po-arrow::before {
+  top: -2px;
+}

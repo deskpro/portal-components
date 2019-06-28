@@ -1,0 +1,34 @@
+.dp-po-Link {
+  align-items: center;
+  color: var(--grey-darkest);
+  display: flex;
+  line-height: 1;
+  position: relative;
+  text-decoration: none;
+}
+
+.dp-po-Link .dp-po-arrow {
+  margin: 0 5px;
+}
+
+.dp-po-Link:hover {
+  color: var(--info);
+}
+
+.dp-po-Link.Link--small {
+  color: var(--brand-primary);
+  display: flex;
+  font: var(--b-1-semibold);
+  justify-content: space-between;
+  max-width: 120px;
+  width: 100%;
+}
+
+.dp-po-Link.Link--medium {
+  color: var(--brand-primary);
+  font: var(--p-2-bold);
+}
+
+.dp-po-Link.Link--large {
+  font: var(--h-3);
+}

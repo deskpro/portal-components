@@ -1,0 +1,45 @@
+.dp-po-Avatar {
+  align-items: center;
+  display: flex;
+}
+
+.dp-po-Avatar-icon {
+  height: 23px;
+  width: 23px;
+}
+
+.dp-po-Avatar-name {
+  color: var(--grey-darkest);
+  font: var(--h-6);
+  margin-left: 10px;
+}
+
+/* Avatar--medium */
+
+.dp-po-Avatar.Avatar--medium .dp-po-Avatar-icon {
+  height: 28px;
+  width: 28px;
+}
+
+.dp-po-Avatar.Avatar--medium .dp-po-Avatar-name {
+  font: var(--h-5-medium);
+}
+
+/* Avatar--small */
+
+.dp-po-Avatar.Avatar--circle.Avatar--small .dp-po-Avatar-icon {
+  height: 25px;
+  width: 25px;
+}
+
+.dp-po-Avatar-name + .dp-po-arrow {
+  margin-left: 10px;
+}
+
+/* avatar/circular */
+
+.dp-po-Avatar.Avatar--circle .dp-po-Avatar-icon {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+}

@@ -1,0 +1,20 @@
+.dp-po-scrollbar {
+  background-color: var(--grey-lighter);
+  border-radius: 6px;
+  display: block;
+  height: 100%;
+  position: relative;
+  width: 6px;
+}
+
+.dp-po-dragger {
+  background-color: var(--grey-dark);
+  border-radius: 6px;
+  cursor: pointer;
+  height: 15%;
+  left: 0;
+  min-height: 95px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

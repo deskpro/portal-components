@@ -1,0 +1,119 @@
+.dp-po-list {
+  color: var(--grey);
+  display: flex;
+  flex-direction: column;
+}
+
+.dp-po-list .dp-po-title-item {
+  color: var(--grey-darkest);
+  display: flex;
+  font: var(--h-2);
+  margin-bottom: 10px;
+}
+
+.dp-po-list input {
+  border: none;
+  border-bottom: 1px solid var(--grey-light);
+  color: var(--grey-darkest);
+  font: var(--p-1);
+  outline: none;
+  padding: 10px 0;
+}
+
+.dp-po-list input::placeholder {
+  color: var(--grey);
+}
+
+.dp-po-subtitle {
+  align-items: center;
+  display: flex;
+  font: var(--p-2-bold);
+}
+
+.dp-po-subtitle .dp-po-Avatar {
+  margin-right: 10px;
+}
+
+.dp-po-Icon.Icon--date {
+  margin-left: 20px;
+  position: relative;
+}
+
+.dp-po-Icon.Icon--comment {
+  margin-left: 20px;
+  position: relative;
+}
+
+.dp-po-list .dp-po-subtitle .dp-po-Icon.Icon--date::after,
+.dp-po-list .dp-po-subtitle .dp-po-Icon.Icon--comment::after {
+  background-color: var(--grey);
+  content: "";
+  height: 100%;
+  left: -10px;
+  position: absolute;
+  top: 0;
+  width: 1px;
+}
+
+.dp-po-list .dp-po-subtitle .dp-po-Icon {
+  margin-right: 10px;
+}
+
+.label-knowledgebase {
+  align-items: center;
+  display: flex;
+}
+
+.label-knowledgebase .dp-po-Icon {
+  margin-right: 5px;
+}
+
+/* small-title-list-item */
+
+.small--title-list-item .dp-po-title-item {
+  font: var(--p-2-bold);
+  justify-content: space-between;
+}
+
+input.dp-po-input-avatar {
+  padding-left: 30px;
+}
+
+/* large-icon-list-item */
+
+.dp-po-list.large--title-list-item {
+  flex-direction: row;
+}
+
+.dp-po-list.large--title-list-item .dp-po-title-item {
+  font: var(--h-3);
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+.dp-po-list.large--title-list-item input {
+  border-bottom: none;
+  border-right: 2px solid var(--grey-lighter);
+  margin-right: 25px;
+  max-width: 185px;
+  padding: 0 10px 0 30px;
+}
+
+.dp-po-Button.Button--texticon {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.dp-po-zip {
+  align-items: center;
+  background-color: var(--grey-lighter);
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  margin-right: 20px;
+  padding: 5px 10px;
+}
+
+.dp-po-large-input {
+  display: flex;
+}

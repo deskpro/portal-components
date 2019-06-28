@@ -1,0 +1,191 @@
+/* Header sizes */
+
+.h-1 {
+  font: var(--h-1);
+}
+
+.h-2 {
+  font: var(--h-2);
+}
+
+.h-3 {
+  font: var(--h-3);
+}
+
+.h-3-medium {
+  font: var(--h-3--medium);
+}
+
+.h-4 {
+  font: var(--h-4);
+}
+
+.h-5 {
+  font: var(--h-5);
+}
+
+.h-5-medium {
+  font: var(--h-5-medium);
+}
+
+.h-6 {
+  font: var(--h-6);
+}
+
+/* Body sizes */
+
+.p-1 {
+  font: var(--p-1);
+}
+
+.p-2-bold {
+  font: var(--p-2-bold);
+}
+
+.p-3-semibold {
+  font: var(--p-3-semibold);
+}
+
+/* Button sizes */
+
+.b-1-semibold {
+  font: var(--b-1-semibold);
+}
+
+.b-2-semibold-caps {
+  font: var(--b-2-semibold);
+  text-transform: uppercase;
+}
+
+.b-3-semibold-caps {
+  font: var(--b-3-semibold);
+  text-transform: uppercase;
+}
+
+/* Inline Text */
+
+.s-2 {
+  font: var(--font-s2);
+}
+
+/* Mobile Header sizes */
+
+.mh-1 {
+  font: var(--mh-1);
+}
+
+.mh-2 {
+  font: var(--mh-2);
+}
+
+.mh-3 {
+  font: var(--mh-3);
+}
+
+.mh-3-medium {
+  font: var(--mh-3-medium);
+}
+
+/* Mobile Body sizes */
+
+.mp1 {
+  font: var(--mp-1);
+}
+
+.mp-1--bold {
+  font: var(--mp-1-bold);
+}
+
+.mp3 {
+  font: var(--mp-3);
+}
+
+/* Messenger Typography */
+
+.Messenger-h-1 {
+  font: var(--messenger-h-1);
+}
+
+.Messenger-h-2 {
+  font: var(--messenger-h-2);
+}
+
+.Messenger-h-3 {
+  font: var(--messenger-h-3-medium);
+}
+
+.Messenger-p-1 {
+  font: var(--messenger-p-1);
+}
+
+.Messenger-p-2 {
+  font: var(--messenger-p-2);
+}
+
+.Messenger-p-2-medium {
+  font: var(--messenger-p-2-medium);
+}
+
+.Messenger-p-3 {
+  font: var(--messenger-p-3);
+}
+
+.Messenger-b-1 {
+  font: var(--messenger-b-1);
+}
+
+.Messenger-b-2 {
+  font: var(--messenger-b-2);
+}
+
+.Messenger-b-3 {
+  color: var(--brand-primary);
+  font: var(--messenger-b-3);
+}
+
+.Messenger-it-small {
+  font: var(--messenger-it-small);
+  font-style: italic;
+}
+
+.Messenger-s-1 {
+  color: var(--grey-dark);
+  font: var(--messenger-s-1);
+}
+
+/* main DEMO style */
+
+.dp-po-FontsDemonstration {
+  color: var(--grey-darkest);
+}
+
+.dp-po-FontsDemonstration .dp-po-Title {
+  border: none;
+  color: var(--black);
+  font: var(--p-2);
+}
+
+.dp-po-FontsDemonstration > * {
+  align-items: center;
+  border-bottom: 1px solid var(--grey-light);
+  display: flex;
+  height: 75px;
+}
+
+.dp-po-FontsDemonstration > div {
+  display: flex;
+}
+
+.dp-po-FontsDemonstration > div > * {
+  flex: 0 0 40%;
+}
+
+.dp-po-FontsDemonstration h1,
+.dp-po-FontsDemonstration h2,
+.dp-po-FontsDemonstration h3,
+.dp-po-FontsDemonstration h4,
+.dp-po-FontsDemonstration h5,
+.dp-po-FontsDemonstration h6,
+.dp-po-FontsDemonstration p {
+  margin: 0;
+}

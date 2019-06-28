@@ -1,0 +1,209 @@
+:root {
+
+  --font-family-open-sans: "Open Sans", sans-serif;
+  --font-family-base: var(--font-family-open-sans);
+  --font-size-base: 16px;
+  --line-height-base: 1.2;
+
+  --border-radius-button: calc(var(--border-radius) * 0.75);
+  --border-radius: 0.25rem; /* 4px based on 16px document */
+  --border-radius-small: calc(var(--border-radius) * 0.5); /* 4px based on 16px document */
+  --border-radius-comment: 0.25rem;
+  --border-radius-button: 5px;
+
+  --animation-speed: 0.2s;
+
+  --bg-app-panel: #edeff1;
+  --bg-app-panel-hover: #e6e7e7;
+  --border-color-light: #d2dce4;
+  --border-color-dark: #b2c2ce;
+  --border-color: #cecece;
+  --normal-font-size: 1rem;
+  --border-color-input: #cecece;
+
+  --height-icon: 15px;
+  --width-icon: 15px;
+
+  --card-border: 2px;
+  --card-padding: 4px;
+  --card-element-margin: 13px;
+  --framework-margin: 10px;
+  --button-padding: 10px;
+
+  --height-menu: 46px;
+  --height-search-snippet: calc(-1px - var(--height-menu));
+  --height-search-control: 45px;
+  --padding-tabbar: 5px 25px 7px 10px;
+  --padding-tabs: 5px 10px;
+  --padding-drop-down: 3.5px 10px;
+  --padding-message-container: 10px;
+  --padding-message-color-container: 20px 10px 10px;
+
+  /* Deskpro Colours */
+  --white: #fff;
+  --black: #000;
+  --text-color: var(--black);
+
+  --brand-primary: #3a8dde;
+  --primary-light: #e9f7ff;
+
+  --grey-darkest: #4c4f50;
+  --grey-dark: #8b9293;
+  --grey: #a9b0b0;
+  --grey-light: #d3d6d7;
+  --grey-lighter: #eff0f0;
+  --grey-lightest: #f7f7f7;
+
+  --danger: #e84954;
+  --warning: #ec6c4e;
+  --neutral: #f8af3c;
+  --success: #54b162;
+  --info: #4b93cf;
+  --pink: #df5e9c;
+  --purple: #9384bd;
+
+  --danger-light: #fbe1e3;
+  --warning-light: #f9e6e1;
+  --neutral-light: #fff8e1;
+  --success-light: #efd;
+  --info-light: #e1eefb;
+  --pink-light: #fae8f0;
+  --purple-light: #ebe4f2;
+
+  /* Fonts */
+
+  --is-regular: 400;
+  --is-medium: 500;
+  --is-semibold: 600;
+  --is-bold: 700;
+  --is-uppercase: uppercase;
+  --is-italic: italic;
+
+  /* Header sizes */
+
+  --font-H1: 36px;
+  --font-H2: 23px;
+  --font-H3: 19px;
+  --font-H5: 17px;
+  --font-H6: 16px;
+
+  --h-1: var(--is-regular) var(--font-H1)/var(--line-height-base) "Rubik", sans-serif;
+  --h-2: var(--is-regular) var(--font-H2)/var(--line-height-base) "Rubik", sans-serif;
+  --h-3: var(--is-regular) var(--font-H3)/var(--line-height-base) "Rubik", sans-serif;
+  --h-3--medium: var(--is-medium) var(--font-H3)/var(--line-height-base) "Rubik", sans-serif;
+  --h-4: var(--is-medium) var(--font-H4)/var(--line-height-base) "Rubik", sans-serif;
+  --h-5: var(--is-regular) var(--font-H5)/var(--line-height-base) "Rubik", sans-serif;
+  --h-5-medium: var(--is-medium) var(--font-H5)/var(--line-height-base) "Rubik", sans-serif;
+  --h-5-semibold: var(--is-semibold) var(--font-H5)/var(--line-height-base) "Rubik", sans-serif;
+  --h-6: var(--is-regular) var(--font-H6)/var(--line-height-base) "Rubik", sans-serif;
+
+  /* Body sizes */
+
+  --font-p1: 18px;
+  --font-p2: 15px;
+  --font-p3: 12px;
+
+  --p-1: var(--is-regular) var(--font-p1)/var(--line-height-base) "Lato", sans-serif;
+  --p-2: var(--is-regular) var(--font-p2)/var(--line-height-base) "Lato", sans-serif;
+  --p-2-medium: var(--is-medium) var(--font-p2)/var(--line-height-base) "Lato", sans-serif;
+  --p-2-bold: var(--is-bold) var(--font-p2)/var(--line-height-base) "Lato", sans-serif;
+  --p-3: var(--is-regular) var(--font-p3)/var(--line-height-base) "Lato", sans-serif;
+  --p-3-semibold: var(--is-semibold) var(--font-p3)/var(--line-height-base) "Lato", sans-serif;
+  --p-3-bold: var(--is-bold) var(--font-p3)/var(--line-height-base) "Lato", sans-serif;
+
+  /* Button sizes */
+
+  --font-b1: 14px;
+  --font-b2: 12px;
+  --font-b3: 10px;
+
+  --b-1-semibold: var(--is-semibold) var(--font-b1)/var(--line-height-base) "Lato", sans-serif;
+  --b-2: var(--is-regular) var(--font-b2)/var(--line-height-base) "Lato", sans-serif;
+  --b-2-semibold: var(--is-semibold) var(--font-b2)/var(--line-height-base) "Lato", sans-serif;
+  --b-3: var(--is-regular) var(--font-b3)/var(--line-height-base) "Open Sans", sans-serif;
+  --b-3-semibold: var(--is-semibold) var(--font-b3)/var(--line-height-base) "Open Sans", sans-serif;
+
+  /* Inline Text */
+
+  --font-s2: 12px;
+
+  --s-2: var(--is-regular) var(--font-s2)/var(--line-height-base) "Lato", sans-serif;
+
+  /* Mobile fonts */
+
+  /* Header sizes */
+
+  --font-MH1: 26px;
+  --font-MH2: 22px;
+  --font-MH3: 18px;
+
+  --mh-1: var(--is-regular) var(--font-MH1)/var(--line-height-base) "Rubik", sans-serif;
+  --mh-2: var(--is-regular) var(--font-MH2)/var(--line-height-base) "Rubik", sans-serif;
+  --mh-3: var(--is-regular) var(--font-MH3)/var(--line-height-base) "Rubik", sans-serif;
+  --mh-3-medium: var(--is-medium) var(--font-MH3)/var(--line-height-base) "Rubik", sans-serif;
+
+  /* Body sizes */
+
+  --font-mp1: 16px;
+  --font-mp2: 15px;
+
+  --mp-1: var(--is-regular) var(--font-mp1)/var(--line-height-base) "Lato", sans-serif;
+  --mp-1-bold: var(--is-bold) var(--font-mp2)/var(--line-height-base) "Lato", sans-serif;
+  --mp-2-medium: var(--is-medium) var(--font-mp2)/var(--line-height-base) "Lato", sans-serif;
+
+  /* Messenger Typography */
+
+  /* Header sizes */
+
+  --m-H1: 28px;
+  --m-H2: 18px;
+  --m-H3: 16px;
+
+  --messenger-h-1: var(--is-regular) var(--m-H1)/var(--line-height-base) "Rubik", sans-serif;
+  --messenger-h-2: var(--is-regular) var(--m-H2)/var(--line-height-base) "Rubik", sans-serif;
+  --messenger-h-3-medium: var(--is-medium) var(--m-H3)/var(--line-height-base) "Rubik", sans-serif;
+
+  /* Messenger Body sizes */
+
+  --m-p1: 16px;
+  --m-p2: 14px;
+  --m-p3: 12px;
+
+  --messenger-p-1: var(--is-regular) var(--m-p1)/var(--line-height-base) "Rubik", sans-serif;
+  --messenger-p-2: var(--is-regular) var(--m-p2)/var(--line-height-base) "Rubik", sans-serif;
+  --messenger-p-2-medium: var(--is-medium) var(--m-p2)/var(--line-height-base) "Rubik", sans-serif;
+  --messenger-p-3: var(--is-regular) var(--m-p3)/var(--line-height-base) "Rubik", sans-serif;
+
+  /* Messenger Button sizes */
+
+  --m-b1: 16px;
+  --m-b2: 14px;
+  --m-b3: 12px;
+
+  --messenger-b-1: var(--is-regular) var(--m-b1)/var(--line-height-base) "Rubik", sans-serif;
+  --messenger-b-2: var(--is-regular) var(--m-b2)/var(--line-height-base) "Rubik", sans-serif;
+  --messenger-b-3: var(--is-regular) var(--m-b3)/var(--line-height-base) "Rubik", sans-serif;
+
+  /* Messenger Inline Text and Captions */
+
+  --it-small: 16px;
+
+  --messenger-it-small: var(--is-regular) var(--it-small)/var(--line-height-base) "Rubik", sans-serif;
+
+  /* Messenger Suggeted text */
+
+  --m-s1: 16px;
+
+  --messenger-s-1: var(--is-regular) var(--m-s1)/var(--line-height-base) "Rubik", sans-serif;
+
+  /* Deskpro Shadows */
+  --shadow-bottom: 0 5px 5px rgba(0, 0, 0, 0.15);
+  --shadow-top-inset: inset 0 5px 5px 0 rgba(0, 0, 0, 0.15);
+  --shadow-bottom-left: -5px 5px 5px rgba(0, 0, 0, 0.15);
+  --shadow-bottom-right: 5px 5px 5px rgba(0, 0, 0, 0.15);
+  --shadow-left: -5px 0 5px rgba(0, 0, 0, 0.15);
+  --shadow-right: 5px 0 5px rgba(0, 0, 0, 0.15);
+
+  /* gradient */
+  --brand-primary-gradient: linear-gradient(90deg, #3467a4 0%, #3a8dde 49.48%, #77b5e7 100%);
+}

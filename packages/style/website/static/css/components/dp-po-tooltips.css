@@ -1,8 +1,0 @@
-.dp-po-Tooltip {
-	color: var(--grey-dark);
-	font: var(--p-1);
-	box-shadow: var(--shadow-bottom-right);
-	position: relative;
-	display: flex;
-	padding: 15px;
-}
