@@ -1,28 +1,28 @@
 .dp-po-divider {
-	display: flex;
-	border-bottom: 2px solid var(--grey-light);
+  border-bottom: 2px solid var(--grey-light);
+  display: flex;
 }
 
 .dp-po-divider-title {
-	display: flex;
-	align-items: center;
-	color: var(--grey-darkest);
-	border-bottom: 2px solid var(--brand-primary);
-	font: var(--h-2);
-	margin-bottom: -2px;
+  align-items: center;
+  border-bottom: 2px solid var(--brand-primary);
+  color: var(--grey-darkest);
+  display: flex;
+  font: var(--h-2);
+  margin-bottom: -2px;
 }
 
 .dp-po-divider-link {
-	color: var(--brand-primary);
-	font: var(--b-1-semibold);
-	display: flex;
-	align-items: flex-end;
-	line-height: 1;
-	background-color: var(--white);
-	margin: 0 0 -8px auto;
-	padding-left: 5px;
+  align-items: flex-end;
+  background-color: var(--white);
+  color: var(--brand-primary);
+  display: flex;
+  font: var(--b-1-semibold);
+  line-height: 1;
+  margin: 0 0 -8px auto;
+  padding-left: 5px;
 }
 
 .dp-po-divider-link .dp-po-arrow {
-	margin-left: 5px;
+  margin-left: 5px;
 }

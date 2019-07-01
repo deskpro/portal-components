@@ -10,12 +10,12 @@
 </head>
 <body>
     <a href="../../pages/en">Back</a>
-      <div className="dp-Template">
+    <div className="dp-Template">
         <header>
             <ul class="dp-po-nav">
                 <li class="dp-po-Logo-wrap">
                     <span class="dp-po-Icon Icon-Tech-company"></span>
-                    Support Center
+                    <span class="dp-po-Logo-descript">Support Center</span>
                 </li>
                 <li class="dp-po-nav-control">
                     <ul>
@@ -51,7 +51,7 @@
             <div class="dp-po-container">
                 <ul class="dp-po-Breadcrumbs">
                     <li class="dp-po-Breadcrumb-item"><span class="dp-po-Icon Icon-Tech-company"></span></li>
-                    <li class="dp-po-Breadcrumb-item"><a href="" class="dp-po-Breadcrumb-link">Support Centre</a></li>
+                    <li class="dp-po-Breadcrumb-item dp-po-support-centre"><a href="" class="dp-po-Breadcrumb-link">Support Centre</a></li>
                     <li class="dp-po-Breadcrumb-item"><a href="" class="dp-po-Breadcrumb-link">Knowledgbase</a></li>
                     <li class="dp-po-Breadcrumb-item"><a href="" class="dp-po-Breadcrumb-link">Getting started</a></li>
                     <li class="dp-po-Breadcrumb-item is-selected"><a href="" class="dp-po-Breadcrumb-link">Deskpro for IT Teams</a></li>
@@ -149,14 +149,59 @@
                             <span class="dp-po-description">9 out of 10 people found this article helpful</span>
                         </div>
 
-                        <div class="dp-po-comments">
+                        <div class="dp-po-comments is-active">
                             Add comment <span class="dp-po-Icon Icon--caret-down Icon--primary"></span>
+                        </div>
+                        <div class="dp-po-comments-wrap">
+
+                            <form class="dp-po-list comment--item">
+                                <span class="dp-po-subtitle">
+                                    <span class="dp-po-username">
+                                        <img class="dp-po-Avatar-icon" src="../img/docs/avatar.png" alt="">
+                                        Nick Green
+                                    </span>
+                                </span>
+                                <span class="dp-po-Forms Forms--Textarea">
+                                    <div class="dp-po-Textarea">
+                                         <span class="dp-po-comment-subtitle">Your comment*</span>
+                                        <span class="dp-po-Icon-resizer"></span>
+                                        <textarea name="text" placeholder="Enter comment"></textarea>
+                                    </div>
+                                </span>
+
+                                <div class="dp-po-Upload-wrapper">
+                                    <span class="dp-po-comment-subtitle">Add attachment</span>
+                                    <span class="dp-po-Upload">
+                                        <span class="dp-po-Upload-item dp-po-Choose-btn">
+                                            <label for="file-upload">
+                                            <span class="dp-po-Icon Icon--file Icon--grey-dark"></span>
+                                                Choose a file
+                                            </label>
+                                            <input id="file-upload" type="file"/>
+                                        </span>
+                                        or
+                                        <span class="dp-po-Upload-item dp-po-Dragdrop-btn">
+                                            <span class="dp-po-Icon Icon--dragdrop"></span>
+                                            Drag and drop
+                                        </span>
+                                    </span>
+                                </div>
+
+                                <div class="dp-po-button-wrap">
+                                    <button class="dp-po-Button Button--small">Publish</button>
+                                    <span class="dp-po-CustomCheckbox CustomCheckbox--medium">
+                                        <input type="checkbox" class="dp-po-ControlInput" id="DemoPublishCheckbox-03"></input>
+                                        <label for="DemoPublishCheckbox-03">Subscribe</label>
+                                    </span>
+                                </div>
+
+                            </form>
                         </div>
 
                     </div>
                     <div class="dp-po-col-3">
                         <div class="dp-po-Sidebar Sidebar--right">
-                            <div class="dp-po-Dropdown-container">
+                            <div class="dp-po-Dropdown-container subscribe--dropdown">
                                 <span class="dp-po-dropdown-atom">
                                     <span class="dp-po-Icon Icon--subscribe"></span>
                                     Subscribe
@@ -191,15 +236,30 @@
                             </div>
 
                             <div class="dp-po-wrap-item dp-po-related-wrap">
-                                <span class="dp-po-title">Share</span>
-                                <ul class="dp-po-share-list">
-                                    <li><span class="dp-po-Icon Icon--linkedin"></span></li>
-                                    <li><span class="dp-po-Icon Icon--fb"></span></li>
-                                    <li><span class="dp-po-Icon Icon--tw"></span></li>
-                                    <li><span class="dp-po-Icon Icon--whatsapp"></span></li>
-                                    <li><span class="dp-po-Icon Icon--ticket"></span></li>
-                                    <li><span class="dp-po-Icon Icon--share"></span></li>
-                                </ul>
+                                <div class="dp-po-Dropdown-container">
+                                    <span class="dp-po-title">Share</span>
+                                    <ul class="dp-po-dropdown-atom dp-po-share-list">
+                                        <li><span class="dp-po-Icon Icon--linkedin"></span></li>
+                                        <li><span class="dp-po-Icon Icon--fb"></span></li>
+                                        <li><span class="dp-po-Icon Icon--tw"></span></li>
+                                        <li><span class="dp-po-Icon Icon--whatsapp"></span></li>
+                                        <li><span class="dp-po-Icon Icon--ticket"></span></li>
+                                        <li class="dp-po-share"><span class="dp-po-Icon Icon--share"></span></li>
+                                        <li>
+                                            <ul class="dp-po-dropdown-menu">
+                                                <li class="dp-po-dropdown-menu-item dp-po-title-list">Share this on</li>
+                                                <li class="dp-po-dropdown-menu-item"><span class="dp-po-Icon Icon--linkedin"></span>Linkedin</li>
+                                                <li class="dp-po-dropdown-menu-item"><span class="dp-po-Icon Icon--fb"></span>Facebook</li>
+                                                <li class="dp-po-dropdown-menu-item"><span class="dp-po-Icon Icon--tw"></span>Twitter</li>
+                                                <li class="dp-po-dropdown-menu-item"><span class="dp-po-Icon Icon--whatsapp"></span>Whats app</li>
+                                                <li class="dp-po-dropdown-menu-item"><span class="dp-po-Icon Icon--Instagram"></span>Instagram</li>
+                                                <li class="dp-po-dropdown-menu-item"><span class="dp-po-Icon Icon--Pinterest"></span>Pinterest</li>
+                                                <li class="dp-po-dropdown-menu-item"><span class="dp-po-Icon Icon--Messenger"></span>Messenger</li>
+                                                <li class="dp-po-dropdown-menu-item"><a href="" class="dp-po-support-btn">www.support.deskpro.com</a><span class="dp-po-Icon Icon--copy"></span></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
 
                             <div class="dp-po-wrap-item dp-po-related-wrap">
@@ -213,26 +273,31 @@
                                     <li class="dp-po-title">Custom Field X</li>
                                     <li>Value Y</li>
 
-                                    <li class="">
+                                    <li class="dp-po-space-between">
                                         <span class="dp-po-title">Translations</span>
-                                        <span>Updated</span>
+                                        <span class="dp-po-time-status">Updated</span>
                                     </li>
-                                    <li>
+
+                                    <li class="dp-po-space-between">
                                         <span>
                                             <span class="dp-po-Icon Icon--FR"></span>
                                             French
                                         </span>
-                                        <span>23 days</span>
+                                        <span class="dp-po-time-status is-success">23 days</span>
                                     </li>
-                                    <li>
+
+                                    <li class="dp-po-space-between">
                                         <span>
                                             <span class="dp-po-Icon Icon--GB"></span>
                                             German
                                         </span>
-                                        <span>2 weeks</span>
+                                        <span class="dp-po-time-status">2 weeks</span>
                                     </li>
-                                </ul>
 
+                                    <li class="dp-po-title">Unpublished date<span class="dp-po-tooltip-wrap"> <span class="dp-po-Icon Icon--info Icon--primary"></span><span class="dp-po-tooltip">Viewed by agents only</span></span></li>
+                                    <li>26 June 2020</li>
+
+                                </ul>
                             </div>
 
                         </div>
@@ -241,7 +306,10 @@
             </div>
         </div>
 
-      </div>
+        <footer class="dp-po-footer">
+            <div class="dp-po-frame-copyright">Powered by <span class="dp-po-copyright-deskpro"><span class="dp-po-Icon Icon--elephant Icon--primary"></span>Deskpro</span></div>
+        </footer>
 
+    </div>
 </body>
 </html>

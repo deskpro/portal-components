@@ -10,9 +10,9 @@
 
 .dp-po-ButtonItem-demo {
   display: flex;
-  width: 254px;
   flex-direction: column;
   margin: 0 30px 30px 0;
+  width: 254px;
 }
 
 .Small--ButtonItem-demo {
@@ -40,7 +40,7 @@
 }
 
 .dp-po-StateWrapper-demo + .dp-po-ButtonItem-demo {
-  margin-top: 30px; 
+  margin-top: 30px;
 }
 
 .dp-po-ButtonState {
@@ -50,7 +50,7 @@
   margin-right: 10px;
 }
 
-/*Hover*/
+/* Hover */
 
 .dp-po-Button.Button--small.is-hover {
   background-color: rgba(58, 141, 222, 0.6);
@@ -74,18 +74,18 @@
 
 .dp-po-Button.Button--icon.is-hover {
   background-color: var(--info-light);
-  color: var(--brand-primary);
   border-color: var(--brand-primary);
+  color: var(--brand-primary);
 }
 
 .dp-po-Button.Button--small.Button--icon.is-hover {
-  color: var(--white);
   background-color: var(--brand-primary);
+  color: var(--white);
 }
 
 .dp-po-Button.Button--texticon.is-hover {
+  background-color: var(--brand-primary);
   color: var(--white);
-  background-color: var(--brand-primary); 
 }
 
 .split-button.is-hover li:first-child {

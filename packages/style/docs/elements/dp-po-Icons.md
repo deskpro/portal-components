@@ -4,7 +4,7 @@ title: Icons
 sidebar_label: Icons
 ---
 
-<div class="dp-IconsWrapper">
+<div class="dp-po-IconsWrapper Icons-Demo">
     <span><span class="dp-po-Icon Icon--history"></span>history</span>
     <span><span class="dp-po-Icon Icon--ticket"></span>ticket</span>
     <span><span class="dp-po-Icon Icon--check"></span>check</span>

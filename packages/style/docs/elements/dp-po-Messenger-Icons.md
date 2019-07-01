@@ -3,8 +3,7 @@ id: dp-po-Messenger-Icons
 title: Messenger-Icons
 sidebar_label: Messenger-Icons
 ---
-
-<div class="dp-IconsWrapper Messenger-Icons">
+<div class="dp-po-IconsWrapper Icons-Demo Messenger-Icons">
 	<span><span class="dp-po-Icon Icon--search"></span>search</span>
 	<span><span class="dp-po-Icon Icon--go-primary"></span>go to primary</span>
 	<span><span class="dp-po-Icon Icon--face-smile"></span>insert emoticon</span>

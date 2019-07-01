@@ -1,66 +1,66 @@
 /* main buttons style */
 
 .dp-po-Button {
+  align-items: center;
   background-repeat: no-repeat;
-  border-radius: 4px;
   border: none;
+  border-radius: 4px;
   cursor: pointer;
+  display: flex;
+  height: 100%;
+  justify-content: center;
   line-height: 100%;
   position: relative;
   width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-/*Button--small*/
+/* Button--small */
 
 .dp-po-Button.Button--small {
-  font: var(--p-2-bold);
-  color: var(--white);
   background-color: var(--brand-primary);
-  min-width: 125px;
-  max-width: max-content;
+  color: var(--white);
+  font: var(--p-2-bold);
   height: 39px;
+  max-width: max-content;
+  min-width: 125px;
 }
 
 .dp-po-Button.Button--small:hover {
   background-color: rgba(58, 141, 222, 0.6);
 }
 
-/*button/small/secondary*/
+/* button/small/secondary */
 
 .dp-po-Button.Button--secondary {
   background-color: var(--white);
-  color: var(--grey-dark);
   border: 2px solid var(--grey-light);
+  color: var(--grey-dark);
 }
 
 .dp-po-Button.Button--secondary:hover {
   background-color: var(--grey-lighter);
 }
 
-/*Button--medium*/
+/* Button--medium */
 
 .dp-po-Button.Button--medium {
-  font: var(--h-5);
-  width: 240px;
-  height: 39px;
-  color: var(--grey-darkest);
   background-color: var(--grey-light);
+  color: var(--grey-darkest);
+  font: var(--h-5);
+  height: 39px;
+  width: 240px;
 }
 
 .dp-po-Button.Button--medium:hover {
   background-color: rgba(211, 214, 215, 0.6);
 }
 
-/*Button--large*/
+/* Button--large */
 
 .dp-po-Button.Button--large {
-  font: var(--p-2-bold);
   background: var(--brand-primary);
   color: var(--white);
+  font: var(--p-2-bold);
   max-height: 44px;
   min-width: 254px;
   padding: 14px 0;
@@ -70,18 +70,18 @@
   background-color: rgba(58, 141, 222, 0.6);
 }
 
-/*Button--large-icon*/
+/* Button--large-icon */
 
 .dp-po-Button.Button--large-icon {
-  max-width: max-content;
   justify-content: space-between;
+  max-width: max-content;
 }
 
 .dp-po-Button.Button--large-icon .dp-po-Icon {
   margin: 0 0 0 25px;
 }
 
-/*Button--xlarge*/
+/* Button--xlarge */
 
 .dp-po-Button.Button--xlarge {
   max-width: 254px;
@@ -93,94 +93,94 @@
   border-radius: 2px;
   color: var(--grey-dark);
   font: var(--p-xl);
-  max-width: 74px;
-  max-height: 18px;
-  padding: 1px 5px;
   justify-content: flex-start;
+  max-height: 18px;
+  max-width: 74px;
+  padding: 1px 5px;
 }
 
 .Button--filter:hover {
   background-color: var(--grey-lightest);
 }
 
-/*button/icon-text/large*/
+/* button/icon-text/large */
 
 .dp-po-Button.Button--icon {
   background-color: var(--white);
   border: 1.5px solid var(--grey-lighter);
   color: var(--grey-dark);
   font: var(--h-5);
+  height: 44px;
   justify-content: flex-start;
   padding: 0;
-  height: 44px;
 }
 
 .Button--large.Button--icon .dp-po-Icon {
-  width: 28px;
-  height: 27px;
   background-size: 28px 27px;
+  height: 27px;
+  width: 28px;
 }
 
 .dp-po-Button.Button--icon:hover {
   background-color: var(--info-light);
-  color: var(--brand-primary);
   border-color: var(--brand-primary);
+  color: var(--brand-primary);
 }
 
 .dp-po-Button.Button--icon .dp-po-Icon {
   margin: 0 10px;
 }
 
-/*button/icon-text/small*/
+/* button/icon-text/small */
 
 .dp-po-Button.Button--small.Button--icon {
-  font: var(--font-p1);
-  color: var(--grey-dark);
-  max-height: 24px;
+  background-color: var(--grey-lighter);
   border: none;
   border-radius: 2px;
-  background-color: var(--grey-lighter);
+  color: var(--grey-dark);
+  font: var(--font-p1);
+  max-height: 24px;
 }
 
 .dp-po-Button.Button--small.Button--icon:hover {
-  color: var(--white);
   background-color: var(--brand-primary);
+  color: var(--white);
 }
 
 .Button--small.Button--icon .dp-po-Icon {
-  width: 7px;
-  height: 13px;
   background-size: 7px 13px;
+  height: 13px;
+  width: 7px;
 }
 
-/*button/text-icon*/
+/* button/text-icon */
 
 .dp-po-Button.Button--texticon {
   background-color: var(--grey-light);
-  font: var(--p-2-bold);
   color: var(--grey-darkest);
-  width: max-content;
+  font: var(--p-2-bold);
   height: 44px;
-  min-width: 160px;
   justify-content: space-between;
+  min-width: 160px;
   padding: 0 12px;
+  width: max-content;
 }
 
 .dp-po-Button.Button--texticon:hover {
+  background-color: var(--brand-primary);
   color: var(--white);
-  background-color: var(--brand-primary); 
 }
 
 .dp-po-Button:hover .dp-po-Icon svg {
   fill: var(--white);
 }
 
-/*button/votes*/
+/* button/votes */
 
 .split-button {
-  display: flex;
   align-items: center;
   border-radius: 2px;
+  display: flex;
   list-style: none;
   padding: 0;
   text-transform: uppercase;
@@ -195,48 +195,48 @@
 }
 
 .split-button li {
-  color: var(--white);
-  background-color: var(--brand-primary);
-  display: flex;
   align-items: center;
+  background: rgba(58, 141, 222, 0.6);
+  background-color: var(--brand-primary);
+  color: var(--white);
+  cursor: pointer;
+  display: flex;
+  font: var(--h-s-semibold);
   justify-content: center;
   margin: 0;
+  max-height: 24px;
   padding: 5px 10px;
   text-align: center;
-  background: rgba(58, 141, 222, 0.6);
-  font: var(--h-s-semibold);
-  max-height: 24px;
-  cursor: pointer;
 }
 
 .split-button li:first-child {
-  font: var(--h-l-semibold);
   background-color: var(--brand-primary);
-  border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
   border-right: 1px solid var(--white);
+  border-top-left-radius: 3px;
+  font: var(--h-l-semibold);
   padding: 5px 15px;
 }
 
 .split-button li:last-child {
-  border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
 }
 
-/*button/icon-text*/
+/* button/icon-text */
 
 .dp-po-Button.Button--icon-text {
   background-color: var(--grey-lighter);
   border-radius: 2px;
   color: var(--grey-dark);
   font: var(--h-l-semibold);
-  max-width: max-content;
   max-height: 24px;
+  max-width: max-content;
 }
 
 .Button--icon-text:hover {
-  color: var(--white);
   background-color: var(--brand-primary);
+  color: var(--white);
 }
 
 .Button--icon-text:hover svg {
@@ -275,14 +275,12 @@
 /* Forms/radiobutton */
 
 .dp-po-RadioWrapper .dp-po-RadioItem {
-  margin-bottom: 15px;
-  display: flex;
   align-items: center;
+  display: flex;
+  margin-bottom: 15px;
 }
 
 .dp-po-RadioWrapper input[type="radio"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   background-clip: content-box;
   background-color: var(--white);
@@ -290,10 +288,10 @@
   border-radius: 100%;
   content: "";
   display: inline-block;
+  height: 16px;
   margin: 0;
   outline: none;
   padding: 2px;
-  height: 16px;
   width: 16px;
 }
 
@@ -303,8 +301,8 @@
 
 .dp-po-RadioWrapper [type="radio"]:checked + label,
 .dp-po-RadioWrapper [type="radio"]:not(:checked) + label {
+  color: var(--grey-darkest);
   cursor: pointer;
   font: var(--h-6);
   padding-left: 10px;
-  color: var(--grey-darkest);
 }

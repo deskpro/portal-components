@@ -21,10 +21,12 @@ sidebar_label: Breadcrumbs
 </ul> -->
 
 <h4>Hover</h4>
-<ul class="dp-po-Breadcrumbs Breadcrumbs-demo">
-	<li class="dp-po-Breadcrumb-item is-hover"><a href="" class="dp-po-Breadcrumb-link">Text</a></li>
-	<li class="dp-po-Breadcrumb-item"><a href="" class="dp-po-Breadcrumb-link">Article</a></li>
-</ul>
+<div class="dp-po-Breadcrumbs-wrap">
+	<ul class="dp-po-Breadcrumbs Breadcrumbs-demo">
+		<li class="dp-po-Breadcrumb-item is-hover"><a href="" class="dp-po-Breadcrumb-link">Text</a></li>
+		<li class="dp-po-Breadcrumb-item"><a href="" class="dp-po-Breadcrumb-link">Article</a></li>
+	</ul>
+</div>
 
 <!-- 
 <h4>Hover</h4>
