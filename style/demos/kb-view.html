@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/portal-components/style/css/main.css">
     <title>KB View</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="/portal-components/style/js/script.js"></script>
 </head>
 <body>
     <a href="../../pages/en">Back</a>
@@ -68,25 +70,29 @@
                             <li>
                                 <span class="dp-po-Avatar Avatar--circle">
                                     <img class="dp-po-Avatar-icon" src="/portal-components/style/img/docs/avatar-circular.png" alt=""></img>
+                                    <span class="dp-po-Avatar-tooltip">Nicholas Green</span>
                                 </span>
                             </li>
                             <li>
                                 <span class="dp-po-Avatar Avatar--circle">
                                     <img class="dp-po-Avatar-icon" src="/portal-components/style/img/docs/avatar-circular.png" alt=""></img>
+                                    <span class="dp-po-Avatar-tooltip">Nicholas Green</span>
                                 </span>
                             </li>
                             <li>
                                 <span class="dp-po-Avatar Avatar--circle">
                                     <img class="dp-po-Avatar-icon" src="/portal-components/style/img/docs/avatar-circular.png" alt=""></img>
+                                    <span class="dp-po-Avatar-tooltip">Nicholas Green</span>
                                 </span>
                             </li>
                             <li>
                                 <span class="dp-po-Avatar Avatar--circle">
                                     <img class="dp-po-Avatar-icon" src="/portal-components/style/img/docs/avatar-circular.png" alt=""></img>
+                                    <span class="dp-po-Avatar-tooltip">Nicholas Green</span>
                                 </span>
                             </li>
                             <li>
-                                <span class="dp-po-Avatar Avatar--circle Avatar--name">NG</span>
+                                <span class="dp-po-Avatar Avatar--circle Avatar--name">NG<span class="dp-po-Avatar-tooltip">Nicholas Green</span></span>
                             </li>
                         </ul>
 
@@ -135,7 +141,7 @@
 
                         </div>
 
-                        <div class="dp-po-article-wrap">
+                        <div class="dp-po-article-wrap Voting-section">
                             <div class="dp-po-buttons-wrap">
                                 <button class="dp-po-Button Button--small Button--success">
                                     <span class="dp-po-Icon Icon--check Icon--success"></span>
@@ -146,7 +152,7 @@
                                     Unhelpful
                                 </button>
                             </div>
-                            <span class="dp-po-description">9 out of 10 people found this article helpful</span>
+                            <span class="dp-po-description"><span class="dp-po-Calc-Like">9 &nbsp;</span> out of 10 people found this article helpful</span>
                         </div>
 
                         <div class="dp-po-comments is-active">
@@ -203,9 +209,11 @@
                         <div class="dp-po-Sidebar Sidebar--right">
                             <div class="dp-po-Dropdown-container subscribe--dropdown">
                                 <span class="dp-po-dropdown-atom">
-                                    <span class="dp-po-Icon Icon--subscribe"></span>
-                                    Subscribe
-                                    <span class="dp-po-Icon Icon--check Icon--success"></span>
+                                    <span class="dp-po-dropdown-Title">
+                                        <span class="dp-po-Icon Icon--subscribe"></span>
+                                        Subscribe
+                                        <span class="dp-po-Icon Icon--check Icon--success"></span>
+                                    </span>
                                 </span>
                                 <ul class="dp-po-dropdown-menu">
                                     <li class="dp-po-dropdown-menu-item is-disabled"><span class="dp-po-Icon Icon--subscribe-article"></span>Article<span class="dp-po-Icon Icon--check Icon--success"></span></li>
@@ -239,13 +247,13 @@
                                 <div class="dp-po-Dropdown-container">
                                     <span class="dp-po-title">Share</span>
                                     <ul class="dp-po-dropdown-atom dp-po-share-list">
-                                        <li><span class="dp-po-Icon Icon--linkedin"></span></li>
-                                        <li><span class="dp-po-Icon Icon--fb"></span></li>
-                                        <li><span class="dp-po-Icon Icon--tw"></span></li>
-                                        <li><span class="dp-po-Icon Icon--whatsapp"></span></li>
-                                        <li><span class="dp-po-Icon Icon--ticket"></span></li>
-                                        <li class="dp-po-share"><span class="dp-po-Icon Icon--share"></span></li>
-                                        <li>
+                                        <li><a href="#"><span class="dp-po-Icon Icon--linkedin"></span></a></li>
+                                        <li><a href="#"><span class="dp-po-Icon Icon--fb"></span></a></li>
+                                        <li><a href="#"><span class="dp-po-Icon Icon--tw"></span></a></li>
+                                        <li><a href="#"><span class="dp-po-Icon Icon--whatsapp"></span></a></li>
+                                        <li><a href="#"><span class="dp-po-Icon Icon--ticket"></span></a></li>
+                                        <li class="dp-po-share">
+                                            <a href="#"><span class="dp-po-Icon Icon--share"></span></a>
                                             <ul class="dp-po-dropdown-menu">
                                                 <li class="dp-po-dropdown-menu-item dp-po-title-list">Share this on</li>
                                                 <li class="dp-po-dropdown-menu-item"><span class="dp-po-Icon Icon--linkedin"></span>Linkedin</li>
