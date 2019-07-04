@@ -55,7 +55,7 @@ const siteConfig = {
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
   copyright:   `Copyright © ${new Date().getFullYear()} Deskpro`,
-  separateCss: ['../dist/style.css'],
+  separateCss: ['static/css/style.css'],
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.

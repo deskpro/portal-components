@@ -7,6 +7,15 @@
 
 const React = require('react');
 
+const styleCssCode = `
+<link rel="stylesheet" href="/portal-components/style/css/style.css">
+<script>
+    if (location.host === "localhost:3000") {
+        document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +':35729/livereload.js?snipver=1"></' + 'script>');
+    }
+</script>
+`;
+
 class Footer extends React.Component {
   docUrl(doc, language) {
     const baseUrl = this.props.config.baseUrl;
@@ -96,6 +105,7 @@ class Footer extends React.Component {
           />
         </a>
         <section className="copyright">{this.props.config.copyright}</section>
+        <div dangerouslySetInnerHTML={{__html: styleCssCode}}></div>
       </footer>
     );
   }
