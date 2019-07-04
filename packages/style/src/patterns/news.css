@@ -102,14 +102,46 @@
 
 .dp-po-article-wrap .Button--success {
   background-color: transparent;
-  border: 1.5px solid var(--success);
+  border: 1.5px solid var(--grey-light);
   color: var(--success);
+  outline: none!important;
 }
 
 .dp-po-article-wrap .Button--danger {
   background-color: transparent;
-  border: 1.5px solid var(--danger);
+  border: 1.5px solid var(--grey-light);
   color: var(--danger);
+  outline: none!important;
+}
+
+.dp-po-article-wrap.is-like .Button--success {
+  background-color: var(--success);
+  border-color: var(--success);
+  color: var(--white);
+}
+
+.dp-po-article-wrap.is-dislike .Button--danger {
+  background-color: var(--danger);
+  border-color: var(--danger);
+  color: var(--white);
+}
+
+.dp-po-article-wrap .Button--success:hover {
+  border-color: var(--success);
+  color: var(--success);
+}
+
+.dp-po-article-wrap .Button--danger:hover {
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+.dp-po-article-wrap.is-dislike .dp-po-Calc-Like {
+  color: var(--danger);
+}
+
+.dp-po-article-wrap.is-like .dp-po-Calc-Like {
+  color: var(--success);
 }
 
 .dp-po-article-wrap .dp-po-Button .dp-po-Icon {
