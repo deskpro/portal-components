@@ -1,7 +1,7 @@
 .dp-po-nav {
   justify-content: space-between;
   margin: 0;
-  padding: 10px 0;
+  padding: 14px 0 18px;
 }
 
 .dp-po-nav,
@@ -21,7 +21,11 @@
 
 .dp-po-nav li,
 .dp-po-nav-control li {
-  margin: 0 30px 0 0;
+  margin: 0 58px 0 0;
+}
+
+.dp-po-nav-control li:last-child {
+  margin-right: 12px;
 }
 
 .dp-po-nav .dp-po-Avatar-icon {
@@ -34,7 +38,8 @@
 }
 
 .dp-po-Logo-wrap .dp-po-Icon {
-  margin-right: 55px;
+  margin-right: 60px;
+  margin-left: 30px;
   position: relative;
 }
 
@@ -48,13 +53,17 @@
   content: "";
   height: 100%;
   position: absolute;
-  right: -15px;
+  right: -32px;
   top: 0;
   width: 1px;
 }
 
 .dp-po-Logo-wrap .dp-po-Icon::after {
-  right: -25px;
+  right: -30px;
+}
+
+.dp-po-Logo-descript {
+  font: var(--h-3);
 }
 
 .dp-po-Header-container {
