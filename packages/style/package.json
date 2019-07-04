@@ -10,14 +10,13 @@
     "dist"
   ],
   "scripts": {
-    "dev": "yarn postcss-build && concurrently --kill-others 'yarn:postcss-watch' 'yarn:init-website-watch' 'yarn:docs-server'",
+    "dev": "concurrently --kill-others 'yarn:postcss-watch' 'yarn:docs-server'",
     "build-lib": "yarn postcss-build",
     "prepare": "yarn postcss-prod",
     "build": "yarn postcss-build && yarn init-website-build && yarn docs-build",
-    "postcss-watch": "postcss \"src/**/*.css\" --base src --dir dist --verbose -m -w --env development",
+    "postcss-watch": "postcss \"src/style.css\" --base src --dir website/static/css --verbose -m -w --env development",
     "postcss-build": "postcss \"src/**/*.css\" --base src --dir dist --verbose --env development -m",
     "postcss-prod": "postcss \"src/**/*.css\" --base src --dir dist --verbose --env production -m",
-    "init-website-watch": "cpx dist/style.css website/static/css --watch",
     "init-website-build": "cpx dist/style.css website/static/css",
     "docs-server": "cd website && yarn start",
     "docs-build": "cd website && yarn build",
