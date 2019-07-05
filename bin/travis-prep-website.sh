@@ -11,16 +11,16 @@ if [ ! -d ./packages/style/website/build/style ]; then
   exit 1
 fi
 
-if [ -d ./target/gh-pages ]; then
-  rm -rf ./target/gh-pages
+if [ -d ./target/portal-components ]; then
+  rm -rf ./target/portal-components
 fi
 
-mkdir -p ./target/gh-pages
+mkdir -p ./target/portal-components
 
-mv ./packages/style/website/build/style ./target/gh-pages/style
-mv ./packages/components-demo/storybook-static ./target/gh-pages/demo
+mv ./packages/style/website/build/style ./target/portal-components/style
+mv ./packages/components-demo/storybook-static ./target/portal-components/demo
 
-cat << EOF > ./target/gh-pages/index.html
+cat << EOF > ./target/portal-components/index.html
 <html>
 <head>
   <title>Deskpro Portal Components</title>
@@ -58,5 +58,5 @@ cat << EOF > ./target/gh-pages/index.html
 EOF
 
 echo ""
-echo "target/gh-pages directory is ready for publishing"
+echo "target/portal-components directory is ready for publishing"
 echo ""
