@@ -207,6 +207,7 @@
 .dp-po-List.List--avatars {
   width: max-content;
   margin-bottom: 3px;
+  padding-left: 7px;
 }
 
 .dp-po-List.List--avatars:hover li {
@@ -327,10 +328,6 @@
   margin-bottom: 15px;
 }
 
-.dp-po-tex-wrap {
-  margin-left: 10px;
-}
-
 .dp-po-tex-wrap .dp-po-title {
   font: var(--h-2);
 }
@@ -359,7 +356,7 @@
   cursor: pointer;
   display: flex;
   font: var(--h-2);
-  margin: 30px 0 15px;
+  margin: 30px 0 10px;
 }
 
 .dp-po-comments-wrap {
@@ -388,7 +385,7 @@
   color: var(--grey-dark);
   display: block;
   font: var(--p-2-bold);
-  margin: 10px 0;
+  margin: 10px 0 5px;
 }
 
 .dp-po-comments-wrap .Forms--Textarea {
@@ -579,7 +576,7 @@
   border-width: 8px 0 8px 8px;
   content: "";
   height: 0;
-  left: -18px;
+  left: -15px;
   position: absolute;
   top: calc(50% - 8px);
   width: 0;
