@@ -264,8 +264,8 @@
 }
 
 .dp-po-publish-date {
-  border: 2px solid var(--danger);
-  border-radius: 1px;
+  border: 1px solid var(--danger);
+  border-radius: 2px;
   display: flex;
   margin: 23px 0 20px;
 }
@@ -281,7 +281,7 @@
 
 .dp-po-publish-date .dp-po-description {
   background-color: var(--danger-light);
-  border-left: 2px solid var(--danger);
+  border-left: 1px solid var(--danger);
   color: var(--grey-darkest);
   font: var(--p-1);
   padding: 12px 20px;
@@ -487,7 +487,7 @@
 
 .dp-po-Sidebar.Sidebar--right .dp-po-dropdown-Title {
   background-color: var(--white);
-  border: 1.5px solid var(--grey-lighter);
+  border: 1px solid var(--grey-dark);
   color: var(--grey-dark);
   font: var(--h-2);
   height: 46px;
