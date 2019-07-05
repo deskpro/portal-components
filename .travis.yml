@@ -6,7 +6,8 @@ before_script:
 script:
   - npm run travis-test
   - yarn build
-  - 'if [ "${TRAVIS_BRANCH}" == "develop" ] && [ "${TRAVIS_PULL_REQUEST}" == "false" ]; then ./bin/travis-prep-website.sh; else echo "site building is only enabled on the develop branch"; fi'
+  - ./bin/travis-prep-website.sh
+  - 'if [ "${TRAVIS_BRANCH}" == "develop" ] && [ "${TRAVIS_PULL_REQUEST}" == "false" ]; then yarn snapshots; else echo "snapshots are only enabled on the develop branch"; fi'
 cache:
   yarn: true
   directories:
@@ -19,7 +20,7 @@ deploy:
     skip_cleanup: true
     github_token: $GH_TOKEN
     keep-history: true
-    local-dir: target/gh-pages
+    local-dir: target/portal-components
     on:
       branch: develop
   - provider: npm
