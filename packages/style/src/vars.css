@@ -3,7 +3,7 @@
   --font-family-open-sans: "Open Sans", sans-serif;
   --font-family-base: var(--font-family-open-sans);
   --font-size-base: 16px;
-  --line-height-base: 1.2;
+  --line-height-base: 1.5;
 
   --border-radius-button: calc(var(--border-radius) * 0.75);
   --border-radius: 0.25rem; /* 4px based on 16px document */
@@ -82,12 +82,14 @@
   /* Header sizes */
 
   --font-H1: 36px;
+  --font-Title-Page: 30px;
   --font-H2: 23px;
   --font-H3: 19px;
   --font-H5: 17px;
   --font-H6: 16px;
 
   --h-1: var(--is-regular) var(--font-H1)/var(--line-height-base) "Rubik", sans-serif;
+  --Title-Page: var(--is-regular) var(--font-Title-Page)/var(--line-height-base) "Rubik", sans-serif;
   --h-2: var(--is-regular) var(--font-H2)/var(--line-height-base) "Rubik", sans-serif;
   --h-3: var(--is-regular) var(--font-H3)/var(--line-height-base) "Rubik", sans-serif;
   --h-3--medium: var(--is-medium) var(--font-H3)/var(--line-height-base) "Rubik", sans-serif;

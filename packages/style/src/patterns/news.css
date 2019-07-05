@@ -146,7 +146,7 @@
 
 .dp-po-article-wrap .dp-po-Button .dp-po-Icon {
   background-size: 12px;
-  margin-right: 5px;
+  margin-right: 8px;
 }
 
 .dp-po-article-wrap .dp-po-Button:hover {
@@ -163,6 +163,11 @@
   font: var(--p-2);
   justify-content: center;
   padding: 20px 0 0;
+}
+
+.dp-po-article-wrap .dp-po-Button {
+  min-width: 1px;
+  padding: 0 15px;
 }
 
 .dp-po-article-title ~ .dp-po-Link {
