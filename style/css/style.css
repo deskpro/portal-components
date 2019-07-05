@@ -3882,8 +3882,8 @@ input.dp-po-input-avatar {
 }
 
 .dp-po-publish-date {
-  border: 2px solid #e84954;
-  border-radius: 1px;
+  border: 1px solid #e84954;
+  border-radius: 2px;
   display: flex;
   margin: 23px 0 20px;
 }
@@ -3899,7 +3899,7 @@ input.dp-po-input-avatar {
 
 .dp-po-publish-date .dp-po-description {
   background-color: #fbe1e3;
-  border-left: 2px solid #e84954;
+  border-left: 1px solid #e84954;
   color: #4c4f50;
   font: 400 18px/1.5 "Lato", sans-serif;
   padding: 12px 20px;
@@ -4109,7 +4109,7 @@ input.dp-po-input-avatar {
 
 .dp-po-Sidebar.Sidebar--right .dp-po-dropdown-Title {
   background-color: #fff;
-  border: 1.5px solid #eff0f0;
+  border: 1px solid #8b9293;
   color: #8b9293;
   font: 400 23px/1.5 "Rubik", sans-serif;
   height: 46px;
