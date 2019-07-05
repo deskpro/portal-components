@@ -373,8 +373,15 @@
 
 .dp-po-comments-wrap .dp-po-Upload-wrapper,
 .dp-po-comments-wrap .dp-po-button-wrap {
-  margin-top: 20px;
   padding-left: 40px;
+}
+
+.dp-po-comments-wrap .dp-po-Upload-wrapper {
+  margin-top: 5px;
+}
+
+.dp-po-comments-wrap .dp-po-button-wrap {
+  margin-top: 30px;
 }
 
 .dp-po-comments-wrap .dp-po-button-wrap {
@@ -390,6 +397,12 @@
 
 .dp-po-comments-wrap .Forms--Textarea {
   max-width: 100%;
+}
+
+.dp-po-comments-wrap .Forms--Textarea .dp-po-Textarea textarea {
+  height: 150px;
+  font-size: 18px;
+  padding: 8px 8px 8px 14px;
 }
 
 .dp-po-comments .dp-po-Icon {
