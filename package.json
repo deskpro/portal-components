@@ -21,8 +21,7 @@
     "lint": "eslint . --cache --cache-location=.cache/eslint --ext .js,.jsx",
     "travis-test": "lerna run --stream travis-test",
     "presnapshots": "http-server target/ -s -p 8000 &",
-    "snapshots": "percy exec -- node snapshots.js",
-    "postsnapshots": "pkill -f 'http-server target/ -s -p 8000'"
+    "snapshots": "percy exec -- node snapshots.js"
   },
   "dependencies": {
     "@percy/script": "^1.0.0",
