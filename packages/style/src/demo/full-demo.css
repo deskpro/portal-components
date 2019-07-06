@@ -367,6 +367,28 @@
   padding: 30px;
 }
 
+.dp-po-comments-wrap .dp-po-Button {
+  width: 140px;
+  padding: 11px 0 12px;
+  background: var(--brand-primary);
+  color: var(--white);
+  font: var(--p-2-2);
+  max-height: 44px;
+}
+
+.dp-po-comments-wrap .dp-po-CustomCheckbox.CustomCheckbox--medium {
+  padding: 8px 10px 7px 29px;
+  letter-spacing: -1px;
+}
+
+.dp-po-comments-wrap .dp-po-CustomCheckbox input[type="checkbox"] + label::before {
+  top: 3px;
+}
+
+.dp-po-comments-wrap .dp-po-CustomCheckbox input[type="checkbox"] + label::after {
+  top: 3px;
+}
+
 .dp-po-comments.is-active + .dp-po-comments-wrap {
   /* display: block; */
 }
@@ -399,14 +421,42 @@
   max-width: 100%;
 }
 
+
+.dp-po-comments-wrap .dp-po-Choose-btn {
+  margin-right: 7px;
+}
+
 .dp-po-comments-wrap .Forms--Textarea .dp-po-Textarea textarea {
   height: 150px;
   font-size: 18px;
   padding: 8px 8px 8px 14px;
 }
 
-.dp-po-comments .dp-po-Icon {
-  margin-left: 10px;
+.dp-po-comments-wrap .dp-po-Upload-item label {
+  font: var(--p-1);
+  padding: 5px 12px 6px 8px;
+}
+
+.dp-po-comments-wrap .dp-po-Choose-btn .dp-po-Icon {
+  background-size: contain;
+  height: 19px;
+  width: 15px;
+}
+
+.dp-po-comments-wrap .dp-po-Upload {
+  padding: 17px;
+  font: var(--p-3);
+}
+
+.dp-po-comments-wrap .dp-po-Dragdrop-btn {
+  font-size: var(--font-p1);
+}
+
+.dp-po-comments-wrap .dp-po-Upload-item .dp-po-Icon {
+  margin-right: 8px;
+}
+.dp-po-comments-wrap .Icon--dragdrop {
+  margin-left: 6px;
 }
 
 .dp-po-tex-wrap .dp-po-tooltip-wrap {
