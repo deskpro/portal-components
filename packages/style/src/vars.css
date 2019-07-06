@@ -103,9 +103,11 @@
 
   --font-p1: 18px;
   --font-p2: 15px;
+  --font-p2-2: 14px;
   --font-p3: 12px;
 
   --p-1: var(--is-regular) var(--font-p1)/var(--line-height-base) "Lato", sans-serif;
+  --p-2-2: var(--is-regular) var(--font-p2-2)/var(--line-height-base) "Lato", sans-serif;
   --p-2: var(--is-regular) var(--font-p2)/var(--line-height-base) "Lato", sans-serif;
   --p-2-medium: var(--is-medium) var(--font-p2)/var(--line-height-base) "Lato", sans-serif;
   --p-2-bold: var(--is-bold) var(--font-p2)/var(--line-height-base) "Lato", sans-serif;
