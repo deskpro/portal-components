@@ -182,7 +182,11 @@
 }
 
 .dp-po-main .dp-po-Sidebar {
-  padding-top: 120px;
+  padding-top: 60px;
+  margin-top: 60px;
+  padding-bottom: 20px;
+  position:  sticky;
+  top: 0;
 }
 
 .dp-po-Sidebar-title {
