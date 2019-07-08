@@ -77,7 +77,6 @@
 }
 
 .dp-po-Searchbar-wrap {
-  margin: auto;
   max-width: 750px;
   position: relative;
   width: 100%;
@@ -184,7 +183,7 @@
 
 .dp-po-Icon-resizer {
   background-color: var(--grey-lightest);
-  bottom: 9px;
+  bottom: 8px;
   height: 10px;
   pointer-events: none;
   position: absolute;
@@ -466,6 +465,14 @@
   max-width: max-content;
   min-width: 345px;
   padding: 11px 19px;
+}
+
+.dp-po-Upload:hover {
+  border: 2px dashed var(--brand-primary);
+}
+
+.dp-po-Upload:hover .dp-po-Dragdrop-btn {
+  color: var(--brand-primary);
 }
 
 .dp-po-Upload-item {
