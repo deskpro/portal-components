@@ -55,5 +55,8 @@
   height: 30px;
   justify-content: center;
   min-width: 30px;
-  text-transform: uppercase;
+}
+
+.Avatar--name .dp-po-Avatar-tooltip {
+  top: 5px;
 }
