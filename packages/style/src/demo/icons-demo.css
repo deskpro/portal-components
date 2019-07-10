@@ -698,3 +698,9 @@ input.dp-po-input-avatar {
   width: 20px;
   height: 24px;
 }
+
+.Icon--back {
+  background-image: url('data:image/svg+xml,<?xml version="1.0" encoding="iso-8859-1"?><svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.2305 9L1.31829 9" stroke="#8B9293" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 1L1 9L9 17" stroke="#8B9293" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  width: 19px;
+  height: 18px;
+}
