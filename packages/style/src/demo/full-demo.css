@@ -2,6 +2,10 @@ body {
 	color: var(--grey-darkest);
 }
 
+a:hover {
+  opacity: 0.8;
+}
+
 .dp-Template {
 	position: relative;
 }
@@ -851,7 +855,7 @@ body {
 }
 
 .subscribe--dropdown .dp-po-dropdown-atom .dp-po-Icon {
-  margin: 0 15px;
+  margin: 0 15px 0 19px;
 }
 
 .subscribe--dropdown .dp-po-dropdown-atom.is-onselected .Icon--check {
@@ -987,12 +991,17 @@ body {
 .dp-po-List-question {
   color: var(--grey-dark);
   list-style: none;
-  margin: 20px 0 25px 15px;
+  margin: 20px 0 25px 20px;
   padding: 0;
 }
 
 .dp-po-List-question li a {
   color: var(--grey-dark);
+}
+
+.dp-po-List-question li a:hover {
+  color: var(--brand-primary);
+  opacity: 0.8;
 }
 
 .dp-po-List-question li:hover {
@@ -1015,7 +1024,7 @@ body {
   border-width: 8px 0 8px 8px;
   content: "";
   height: 0;
-  left: -15px;
+  left: -20px;
   position: absolute;
   top: calc(50% - 8px);
   width: 0;
@@ -1255,7 +1264,17 @@ body {
 }
 
 .dp-po-sort.is-active .dp-po-dropdown-menu.Menu--tick {
-	display: block;
+  display: block;
+}
+
+.dp-po-sort .Icon--caret-up.Icon--primary {
+  transform: rotate(180deg);
+  transition: transform .2s;
+}
+
+.dp-po-sort.is-active .Icon--caret-up.Icon--primary {
+  transform: rotate(0deg);
+  transition: transform .2s;
 }
 
 .dp-po-dropdown-menu.Menu--tick .dp-po-dropdown-menu-item {

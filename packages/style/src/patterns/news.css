@@ -169,6 +169,7 @@
   min-width: 1px;
   padding: 0 15px;
   background-color: var(--white);
+  font: var(--p-2-bold);
 }
 
 .dp-po-article-title ~ .dp-po-Link {
