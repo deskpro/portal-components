@@ -67,7 +67,7 @@ $(document).ready(function(){
 	})
 
 	$('body').on('click', '.dp-po-vote .dp-po-item-vote', function(event) {
-		$(this).addClass('is-active')
+		$(this).toggleClass('is-active')
 	})
 	
 	// Reply comment
