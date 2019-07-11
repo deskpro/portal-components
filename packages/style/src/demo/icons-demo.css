@@ -508,10 +508,16 @@
   width: 39px;
 }
 
-.Icon--medium-avatar {
+/*.Icon--medium-avatar {
   background-color: var(--grey-light);
   background-image: url('data:image/svg+xml,<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 11.7857C14.2545 11.7857 16.8928 9.14739 16.8928 5.89286C16.8928 2.63832 14.2545 0 11 0C7.74544 0 5.10712 2.63832 5.10712 5.89286C5.10712 9.14739 7.74544 11.7857 11 11.7857Z" fill="white"/><path d="M22 22C22 21.9607 22 21.9411 22 21.9018C22 16.6375 17.0696 12.375 11 12.375C4.93036 12.375 0 16.6375 0 21.9018C0 21.9411 0 21.9607 0 22H22Z" fill="white"/></svg>');
   border-radius: 3px;
+  height: 30px;
+  width: 30px;
+}*/
+
+.Icon--empty-avatar {
+  background-image: url('data:image/svg+xml,<svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg"><rect y="0.929688" width="30" height="29.6652" rx="3" fill="%23D3D6D7"/><path d="M15 16.5394C18.2546 16.5394 20.8929 13.9306 20.8929 10.7123C20.8929 7.49413 18.2546 4.88525 15 4.88525C11.7455 4.88525 9.10718 7.49413 9.10718 10.7123C9.10718 13.9306 11.7455 16.5394 15 16.5394Z" fill="white"/><path d="M26 26.6397C26 26.6008 26 26.5814 26 26.5425C26 21.337 21.0696 17.1221 15 17.1221C8.93036 17.1221 4 21.337 4 26.5425C4 26.5814 4 26.6008 4 26.6397H26Z" fill="white"/></svg>');
   height: 30px;
   width: 30px;
 }

@@ -100,6 +100,23 @@
   justify-content: center;
 }
 
+.dp-po-article-wrap.Voting-section .dp-po-Button {
+  padding: 0px 12px;
+  border-radius: 5px;
+}
+
+.dp-po-article-wrap.Voting-section .dp-po-Button.Button--danger {
+  padding: 0px 10px 0 8px;
+}
+
+.dp-po-article-wrap.Voting-section .dp-po-Button.Button--success .dp-po-Icon {
+  background-size: 14px 12px;
+}
+
+.dp-po-article-wrap.Voting-section .dp-po-Button.Button--danger .dp-po-Icon {
+  background-size: 12px 12px;
+}
+
 .dp-po-article-wrap .Button--success {
   background-color: transparent;
   border: 1.5px solid var(--grey-light);
