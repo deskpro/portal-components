@@ -18,7 +18,7 @@
 </head>
 <body>
     <!-- <a href="../../pages/en">Back</a> -->
-    <div className="dp-Template">
+    <div class="dp-Template">
         <header>
             <ul class="dp-po-nav">
                 <li class="dp-po-Logo-wrap">
@@ -78,7 +78,7 @@
             <div class="dp-po-container">
                 <div class="dp-po-row">
                     <div class="dp-po-col-9 dp-po-md-12">
-                        <h2 class="dp-po-Title-page"><span class="dp-po-Icon Icon--book"></span>Deskpro for IT teams</h2>
+                        <h2 class="dp-po-Title-page"><span class="dp-po-Icon Icon--book dp-po-hidden-md"></span>Deskpro for IT teams</h2>
                         <ul class="dp-po-List List--avatars">
                             <li>
                                 <span class="dp-po-Avatar Avatar--circle">
@@ -141,27 +141,6 @@
                                 </ul>
                             </div>
 
-<!--                             <div class="dp-po-wrap-item dp-po-related-wrap mobileCutShare">
-                                <div class="dp-po-Dropdown-container Dropdown-share">
-                                    <ul class="dp-po-dropdown-atom dp-po-share-list">
-                                        <li class="dp-po-share">
-                                            <a href="#"><span class="dp-po-Icon Icon--share"></span></a>
-                                            <ul class="dp-po-dropdown-menu">
-                                                <li class="dp-po-dropdown-menu-item dp-po-title-list">Share this on</li>
-                                                <li class="dp-po-dropdown-menu-item"><span class="dp-po-Icon Icon--linkedin"></span>Linkedin</li>
-                                                <li class="dp-po-dropdown-menu-item"><span class="dp-po-Icon Icon--fb"></span>Facebook</li>
-                                                <li class="dp-po-dropdown-menu-item"><span class="dp-po-Icon Icon--tw"></span>Twitter</li>
-                                                <li class="dp-po-dropdown-menu-item"><span class="dp-po-Icon Icon--whatsapp"></span>Whats app</li>
-                                                <li class="dp-po-dropdown-menu-item"><span class="dp-po-Icon Icon--Instagram"></span>Instagram</li>
-                                                <li class="dp-po-dropdown-menu-item"><span class="dp-po-Icon Icon--Pinterest"></span>Pinterest</li>
-                                                <li class="dp-po-dropdown-menu-item"><span class="dp-po-Icon Icon--Messenger"></span>Messenger</li>
-                                                <li class="dp-po-dropdown-menu-item"><a href="" class="dp-po-support-btn">www.support.deskpro.com</a><span class="dp-po-Icon Icon--copy"></span></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div> -->
-
                         </div>
 
                         <div class="dp-po-publish-date">
@@ -201,6 +180,7 @@
                         </div>
 
                         <div class="dp-po-article-wrap Voting-section">
+                            <div class="dp-po-title">Rate this article</div>
                             <div class="dp-po-buttons-wrap">
                                 <button class="dp-po-Button Button--small Button--success">
                                     <span class="dp-po-Icon Icon--check Icon--success"></span>
@@ -214,49 +194,26 @@
                             <span class="dp-po-description"><span class="dp-po-Calc-Like">9 &nbsp;</span> out of 10 people found this article helpful</span>
                         </div>
 
-
-                        <div class="dp-po-comments comments-list is-active">
-                            <span>Comments <span class="dp-po-qt">(2)</span></span>
-                            <span class="dp-po-sort">
-                                Sort by <span class="dp-po-Icon Icon--caret-up Icon--primary"></span>
-                                <ul class="dp-po-dropdown-menu Menu--tick">
-                                    <li class="dp-po-dropdown-menu-item">Helpfulness</li>
-                                    <li class="dp-po-dropdown-menu-item">Date</li>
-                                </ul>
-                            </span>
-                        </div>
-
-                        <div class="dp-po-comments-wrap">
-                            <div class="dp-po-comments-item">
-                                <div class="dp-po-subtitle">
-                                    <span class="dp-po-username">
-                                        <img class="dp-po-Icon Icon--medium-avatar">
-                                        Melinda Stanley
-                                    </span>
-                                    <span class="dp-po-label label--time">
-                                        <span class="dp-po-Icon Icon--history Icon--primary"></span> 2 days
-                                        <span class="dp-po-Icon Icon--Dots"></span>
-                                        <ul class="dp-po-dropdown-menu">
-                                            <li class="dp-po-dropdown-menu-item">Permalink</li>
-                                            <li class="dp-po-dropdown-menu-item addReplyComment">Reply to this comment</li>
+                        <div class="dp-po-wrap-collapse-md">
+                            
+                            <div class="dp-po-md-collapse dp-po-comments-collapse">
+                                <div class="dp-po-comments comments-list dp-po-md-collapse-title dp-po-title">
+                                    <span>Comments <span class="dp-po-qt">(2)</span></span>
+                                    <span class="dp-po-sort">
+                                        Sort by <span class="dp-po-Icon Icon--caret-up Icon--primary"></span>
+                                        <ul class="dp-po-dropdown-menu Menu--tick">
+                                            <li class="dp-po-dropdown-menu-item">Helpfulness</li>
+                                            <li class="dp-po-dropdown-menu-item">Date</li>
                                         </ul>
                                     </span>
+                                    <span class="dp-po-Icon Icon--caret-down Icon--primary dp-po-hidden-md-up"></span>
                                 </div>
-                                <p class="dp-po-comment-subtitle">Product market fit customer development acquihire technical cofounder.</p>
-                                <div class="dp-po-vote">
-                                    <span class="dp-po-item-vote is-like"><span class="dp-po-Icon Icon--caret-up Icon--primary"></span> 2 </span>
-                                    <span class="dp-po-item-vote is-dislike"><span class="dp-po-Icon Icon--caret-down Icon--danger"></span> 0 </span>
-                                </div>
-
-                                <!-- dots dropdown -->
-                                <ul class="dp-po-dropdown-menu">
-                                    <!-- 1 -->
-                                    <li class="dp-po-comments-item">
+                                <div class="dp-po-comments-wrap dp-po-md-collapse-content">
+                                    <div class="dp-po-comments-item">
                                         <div class="dp-po-subtitle">
-                                            <span class="dp-po-Avatar">
-                                                <img class="dp-po-Avatar-icon" src="../img/docs/avatar.png" alt="">
-                                                <span class="dp-po-Avatar-name">Nick Green</span>
-                                                <span class="dp-po-label label--small label--brand-primary">Agent</span>
+                                            <span class="dp-po-username">
+                                                <img class="dp-po-Icon Icon--medium-avatar">
+                                                Melinda Stanley
                                             </span>
                                             <span class="dp-po-label label--time">
                                                 <span class="dp-po-Icon Icon--history Icon--primary"></span> 2 days
@@ -267,15 +224,60 @@
                                                 </ul>
                                             </span>
                                         </div>
-                                        <p class="dp-po-comment-subtitle">Hi Melinda, partnership seed money user experience social proof z entrepreneur social media investor gen-z graphical user interface</p>
-                                    </li>
-                                    <!-- 2 -->
-                                    <li class="dp-po-comments-item">
+                                        <p class="dp-po-comment-subtitle">Product market fit customer development acquihire technical cofounder.</p>
+                                        <div class="dp-po-vote">
+                                            <span class="dp-po-item-vote is-like"><span class="dp-po-Icon Icon--caret-up Icon--primary"></span> 2 </span>
+                                            <span class="dp-po-item-vote is-dislike"><span class="dp-po-Icon Icon--caret-down Icon--danger"></span> 0 </span>
+                                        </div>
+
+                                        <!-- dots dropdown -->
+                                        <ul class="dp-po-dropdown-menu">
+                                            <!-- 1 -->
+                                            <li class="dp-po-comments-item">
+                                                <div class="dp-po-subtitle">
+                                                    <span class="dp-po-Avatar">
+                                                        <img class="dp-po-Avatar-icon" src="../img/docs/avatar.png" alt="">
+                                                        <span class="dp-po-Avatar-name">Nick Green</span>
+                                                        <span class="dp-po-label label--small label--brand-primary">Agent</span>
+                                                    </span>
+                                                    <span class="dp-po-label label--time">
+                                                        <span class="dp-po-Icon Icon--history Icon--primary"></span> 2 days
+                                                        <span class="dp-po-Icon Icon--Dots"></span>
+                                                        <ul class="dp-po-dropdown-menu">
+                                                            <li class="dp-po-dropdown-menu-item">Permalink</li>
+                                                            <li class="dp-po-dropdown-menu-item addReplyComment">Reply to this comment</li>
+                                                        </ul>
+                                                    </span>
+                                                </div>
+                                                <p class="dp-po-comment-subtitle">Hi Melinda, partnership seed money user experience social proof z entrepreneur social media investor gen-z graphical user interface</p>
+                                            </li>
+                                            <!-- 2 -->
+                                            <li class="dp-po-comments-item">
+                                                <div class="dp-po-subtitle">
+                                                    <span class="dp-po-Avatar">
+                                                        <img class="dp-po-Avatar-icon" src="../img/docs/avatar.png" alt="">
+                                                        <span class="dp-po-Avatar-name">Wendy pride</span>
+                                                        <span class="dp-po-label label--small label--brand-primary">Agent</span>
+                                                    </span>
+                                                    <span class="dp-po-label label--time">
+                                                        <span class="dp-po-Icon Icon--history Icon--primary"></span> 2 days
+                                                        <span class="dp-po-Icon Icon--Dots"></span>
+                                                        <ul class="dp-po-dropdown-menu">
+                                                            <li class="dp-po-dropdown-menu-item">Permalink</li>
+                                                            <li class="dp-po-dropdown-menu-item addReplyComment">Reply to this comment</li>
+                                                        </ul>
+                                                    </span>
+                                                </div>
+                                                <p class="dp-po-comment-subtitle">Nick, Wendy, this is a great idea. Partnership seed money user experience social proof z entrepreneur social media investor gen-z graphical user interface.</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="dp-po-comments-item">
                                         <div class="dp-po-subtitle">
-                                            <span class="dp-po-Avatar">
-                                                <img class="dp-po-Avatar-icon" src="../img/docs/avatar.png" alt="">
-                                                <span class="dp-po-Avatar-name">Wendy pride</span>
-                                                <span class="dp-po-label label--small label--brand-primary">Agent</span>
+                                            <span class="dp-po-username">
+                                                <img class="dp-po-Icon Icon--medium-avatar">
+                                                Nick Green
                                             </span>
                                             <span class="dp-po-label label--time">
                                                 <span class="dp-po-Icon Icon--history Icon--primary"></span> 2 days
@@ -286,111 +288,98 @@
                                                 </ul>
                                             </span>
                                         </div>
-                                        <p class="dp-po-comment-subtitle">Nick, Wendy, this is a great idea. Partnership seed money user experience social proof z entrepreneur social media investor gen-z graphical user interface.</p>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="dp-po-comments-item">
-                                <div class="dp-po-subtitle">
-                                    <span class="dp-po-username">
-                                        <img class="dp-po-Icon Icon--medium-avatar">
-                                        Nick Green
-                                    </span>
-                                    <span class="dp-po-label label--time">
-                                        <span class="dp-po-Icon Icon--history Icon--primary"></span> 2 days
-                                        <span class="dp-po-Icon Icon--Dots"></span>
-                                        <ul class="dp-po-dropdown-menu">
-                                            <li class="dp-po-dropdown-menu-item">Permalink</li>
-                                            <li class="dp-po-dropdown-menu-item addReplyComment">Reply to this comment</li>
-                                        </ul>
-                                    </span>
-                                </div>
-                                <p class="dp-po-comment-subtitle">Partnership seed money user experience social proof z entrepreneur social media investor gen-z graphical user interface.</p>
-                                <div class="dp-po-vote">
-                                    <span class="dp-po-item-vote is-like"><span class="dp-po-Icon Icon--caret-up Icon--primary"></span> 3 </span>
-                                    <span class="dp-po-item-vote is-dislike"><span class="dp-po-Icon Icon--caret-down Icon--danger"></span> 0 </span>
-                                </div>
-                            </div>
-
-                            <!-- Attachments in a comment -->
-                            <div class="dp-po-comments-item">
-                                <div class="dp-po-subtitle">
-                                    <span class="dp-po-username">
-                                        <img class="dp-po-Icon Icon--medium-avatar">
-                                        Melinda Stanley
-                                    </span>
-                                    <span class="dp-po-label label--time">
-                                        <span class="dp-po-Icon Icon--history Icon--primary"></span> 2 days
-                                    </span>
-                                </div>
-                                <p class="dp-po-comment-subtitle">Product market fit customer development acquihire technical cofounder.</p>
-                                <div class="dp-po-attachments">
-                                    <h6 class="dp-po-title">Attachments</h6>
-                                    <a href="craft-sync-user-guide.pdf" target="_blank" download="" class="dp-po-attachment-item">
-                                        <span class="dp-po-Icon Icon--pdf"></span>
-                                        <span class="dp-po-descript-pdf">craft-sync-user-guide.pdf <span class="dp-po-file-size">(220 kB)</span></span>
-                                    </a>
-                                    <a href="craft-sync-photoshop-help.pdf" target="_blank" download="" class="dp-po-attachment-item">
-                                        <span class="dp-po-Icon Icon--pdf"></span>
-                                        <span class="dp-po-descript-pdf">craft-sync-photoshop-help.pdf <span class="dp-po-file-size">(112 kB)</span></span>
-                                    </a>
-                                </div>
-                                <div class="dp-po-vote">
-                                    <span class="dp-po-item-vote is-like"><span class="dp-po-Icon Icon--caret-up Icon--primary"></span> 2 </span>
-                                    <span class="dp-po-item-vote is-dislike"><span class="dp-po-Icon Icon--caret-down Icon--danger"></span> 0 </span>
-                                </div>
-                            </div>
-
-                            <!-- Reply to this comment -->
-                            <div class="dp-po-comments-wrap dp-po-reply-comment">
-                                <form class="dp-po-list comment--item">
-                                    <span class="dp-po-subtitle">
-                                        <span class="dp-po-username">
-                                            <img class="dp-po-Avatar-icon" src="../img/docs/avatar.png" alt="">
-                                            Nick Green
-                                        </span>
-                                        <span class="dp-po-Button Button--small Button--secondary dp-po-reply-comment-close">Cancel</span>
-                                    </span>
-                                    <span class="dp-po-Forms Forms--Textarea">
-                                        <div class="dp-po-Textarea">
-                                             <span class="dp-po-comment-subtitle">Your comment<i class="Color--primary">*</i></span>
-                                            <span class="dp-po-Icon-resizer"></span>
-                                            <textarea name="text" placeholder="Enter comment"></textarea>
+                                        <p class="dp-po-comment-subtitle">Partnership seed money user experience social proof z entrepreneur social media investor gen-z graphical user interface.</p>
+                                        <div class="dp-po-vote">
+                                            <span class="dp-po-item-vote is-like"><span class="dp-po-Icon Icon--caret-up Icon--primary"></span> 3 </span>
+                                            <span class="dp-po-item-vote is-dislike"><span class="dp-po-Icon Icon--caret-down Icon--danger"></span> 0 </span>
                                         </div>
-                                    </span>
-
-                                    <div class="dp-po-Upload-wrapper">
-                                        <span class="dp-po-comment-subtitle">Add attachment</span>
-                                        <span class="dp-po-Upload">
-                                            <span class="dp-po-Upload-item dp-po-Choose-btn">
-                                                <label for="file-upload">
-                                                <span class="dp-po-Icon Icon--file Icon--grey-dark"></span>
-                                                    Choose a file
-                                                </label>
-                                                <input id="file-upload" type="file"/>
-                                            </span>
-                                            or
-                                            <span class="dp-po-Upload-item dp-po-Dragdrop-btn">
-                                                <span class="dp-po-Icon Icon--dragdrop"></span>
-                                                Drag and drop
-                                            </span>
-                                        </span>
                                     </div>
 
-                                    <div class="dp-po-button-wrap">
-                                        <button class="dp-po-Button">Publish</button>
-                                        <span class="dp-po-CustomCheckbox CustomCheckbox--medium">
-                                            <input type="checkbox" class="dp-po-ControlInput" id="DemoPublishCheckbox-03"></input>
-                                            <label for="DemoPublishCheckbox-03">Subscribe</label>
-                                        </span>
+                                    <!-- Attachments in a comment -->
+                                    <div class="dp-po-comments-item">
+                                        <div class="dp-po-subtitle">
+                                            <span class="dp-po-username">
+                                                <img class="dp-po-Icon Icon--medium-avatar">
+                                                Melinda Stanley
+                                            </span>
+                                            <span class="dp-po-label label--time">
+                                                <span class="dp-po-Icon Icon--history Icon--primary"></span> 2 days
+                                            </span>
+                                        </div>
+                                        <p class="dp-po-comment-subtitle">Product market fit customer development acquihire technical cofounder.</p>
+                                        <div class="dp-po-attachments">
+                                            <h6 class="dp-po-title">Attachments</h6>
+                                            <a href="craft-sync-user-guide.pdf" target="_blank" download="" class="dp-po-attachment-item">
+                                                <span class="dp-po-Icon Icon--pdf"></span>
+                                                <span class="dp-po-descript-pdf">craft-sync-user-guide.pdf <span class="dp-po-file-size">(220 kB)</span></span>
+                                            </a>
+                                            <a href="craft-sync-photoshop-help.pdf" target="_blank" download="" class="dp-po-attachment-item">
+                                                <span class="dp-po-Icon Icon--pdf"></span>
+                                                <span class="dp-po-descript-pdf">craft-sync-photoshop-help.pdf <span class="dp-po-file-size">(112 kB)</span></span>
+                                            </a>
+                                        </div>
+                                        <div class="dp-po-vote">
+                                            <span class="dp-po-item-vote is-like"><span class="dp-po-Icon Icon--caret-up Icon--primary"></span> 2 </span>
+                                            <span class="dp-po-item-vote is-dislike"><span class="dp-po-Icon Icon--caret-down Icon--danger"></span> 0 </span>
+                                        </div>
                                     </div>
-                                </form>
+
+                                    <div class="dp-po-show-more dp-po-hidden-md-up">
+                                        <p class="dp-po-description">Show more comments</p>
+                                    </div>
+
+                                    <!-- Reply to this comment -->
+                                    <div class="dp-po-comments-wrap dp-po-reply-comment">
+                                        <form class="dp-po-list comment--item">
+                                            <span class="dp-po-subtitle">
+                                                <span class="dp-po-username">
+                                                    <img class="dp-po-Avatar-icon" src="../img/docs/avatar.png" alt="">
+                                                    Nick Green
+                                                </span>
+                                                <span class="dp-po-Button Button--small Button--secondary dp-po-reply-comment-close">Cancel</span>
+                                            </span>
+                                            <span class="dp-po-Forms Forms--Textarea">
+                                                <div class="dp-po-Textarea">
+                                                     <span class="dp-po-comment-subtitle">Your comment<i class="Color--primary">*</i></span>
+                                                    <span class="dp-po-Icon-resizer"></span>
+                                                    <textarea name="text" placeholder="Enter comment"></textarea>
+                                                </div>
+                                            </span>
+
+                                            <div class="dp-po-Upload-wrapper">
+                                                <span class="dp-po-comment-subtitle">Add attachment</span>
+                                                <span class="dp-po-Upload">
+                                                    <span class="dp-po-Upload-item dp-po-Choose-btn">
+                                                        <label for="file-upload">
+                                                        <span class="dp-po-Icon Icon--file Icon--grey-dark"></span>
+                                                            Choose a file
+                                                        </label>
+                                                        <input id="file-upload" type="file"/>
+                                                    </span>
+                                                    or
+                                                    <span class="dp-po-Upload-item dp-po-Dragdrop-btn">
+                                                        <span class="dp-po-Icon Icon--dragdrop"></span>
+                                                        Drag and drop
+                                                    </span>
+                                                </span>
+                                            </div>
+
+                                            <div class="dp-po-button-wrap">
+                                                <button class="dp-po-Button">Publish</button>
+                                                <span class="dp-po-CustomCheckbox CustomCheckbox--medium">
+                                                    <input type="checkbox" class="dp-po-ControlInput" id="DemoPublishCheckbox-03"></input>
+                                                    <label for="DemoPublishCheckbox-03">Subscribe</label>
+                                                </span>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
+
                         </div>
 
                         <div class="dp-po-comments dp-po-add-comments is-active">
-                            Add comment <span class="dp-po-Icon Icon--caret-down Icon--primary"></span>
+                            Add comment <span class="dp-po-Icon Icon--caret-down Icon--primary dp-po-hidden-md"></span>
                         </div>
                         <div class="dp-po-comments-wrap ">
 
@@ -437,9 +426,9 @@
 
                             </form>
                         </div>
-
                     </div>
-                    <div class="dp-po-col-3 dp-po-hidden-md">
+
+                    <div class="dp-po-col-3 dp-po-md-12">
                         <div class="dp-po-Sidebar Sidebar--right">
                             <div class="dp-po-Dropdown-container subscribe--dropdown">
                                 <span class="dp-po-dropdown-atom">
@@ -456,99 +445,112 @@
                                     <li class="dp-po-dropdown-menu-item"><a href="">All your subscriptions</a></li>
                                 </ul>
                             </div>
-                            <span class="dp-po-Sidebar-title">Contents</span>
-                            <ul class="dp-po-List-question">
-                                <li><a href="">Deskpro for IT Teams</a></li>
-                                <li><a href="">Creating Effective New Ticket Contact Forms</a></li>
-                                <li class="is-active"><a href="">How do I get started with Deskpro?</a></li>
-                                <li><a href="">What documentation is available for Deskpro?</a></li>
-                                <li><a href="">Setting up a Custom Email Address with Deskpro Cloud</a></li>
-                            </ul>
-                            <div class="dp-po-wrap-item dp-po-labels-wrap">
-                                <span class="dp-po-title">Labels</span>
-                                <span class="dp-po-label label--large label--success">Getting started</span>
+                            <div class="dp-po-md-collapse dp-po-hidden-md">
+                                <span class="dp-po-md-collapse-title dp-po-Sidebar-title">Contents</span>
+                                <div class="dp-po-md-collapse-content">
+                                    <ul class="dp-po-List-question">
+                                        <li><a href="">Deskpro for IT Teams</a></li>
+                                        <li><a href="">Creating Effective New Ticket Contact Forms</a></li>
+                                        <li class="is-active"><a href="">How do I get started with Deskpro?</a></li>
+                                        <li><a href="">What documentation is available for Deskpro?</a></li>
+                                        <li><a href="">Setting up a Custom Email Address with Deskpro Cloud</a></li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="dp-po-wrap-item dp-po-related-wrap">
-                                <span class="dp-po-title">Related content</span>
-                                <ul class="dp-po-related-list">
-                                    <li><a href=""><span class="dp-po-Icon Icon--news"></span>Deskpro 5.14.0, 5.14.1, 5.14.2, Release</a></li>
-                                    <li><a href=""><span class="dp-po-Icon Icon--book"></span>How we handle feature requests</a></li>
-                                    <li><a href=""><span class="dp-po-Icon Icon--guides"></span>Personalize your helpdesk</a></li>
-                                </ul>
+                            <div class="dp-po-md-collapse dp-po-wrap-item dp-po-labels-wrap">
+                                <span class="dp-po-md-collapse-title dp-po-title">Labels<span class="dp-po-Icon Icon--caret-down Icon--primary dp-po-hidden-md-up"></span></span>
+                                <div class="dp-po-md-collapse-content">
+                                    <span class="dp-po-label label--large label--success">Getting started</span>
+                                </div>
                             </div>
-
-                            <div class="dp-po-wrap-item Dropdown-share dp-po-related-wrap mobileCutShare">
-                                <div class="dp-po-Dropdown-container">
-                                    <span class="dp-po-title">Share</span>
-                                    <ul class="dp-po-dropdown-atom dp-po-share-list">
-                                        <li><a href="#"><span class="dp-po-Icon Icon--linkedin"></span></a></li>
-                                        <li><a href="#"><span class="dp-po-Icon Icon--fb"></span></a></li>
-                                        <li><a href="#"><span class="dp-po-Icon Icon--tw"></span></a></li>
-                                        <li><a href="#"><span class="dp-po-Icon Icon--whatsapp"></span></a></li>
-                                        <li><a href="#"><span class="dp-po-Icon Icon--ticket"></span></a></li>
-                                        <li class="dp-po-share">
-                                            <a href="#"><span class="dp-po-Icon Icon--share"></span></a>
-                                            <ul class="dp-po-dropdown-menu">
-                                                <li class="dp-po-dropdown-menu-item dp-po-title-list">Share this on</li>
-                                                <li class="dp-po-dropdown-menu-item"><span class="dp-po-Icon Icon--linkedin"></span>Linkedin</li>
-                                                <li class="dp-po-dropdown-menu-item"><span class="dp-po-Icon Icon--fb"></span>Facebook</li>
-                                                <li class="dp-po-dropdown-menu-item"><span class="dp-po-Icon Icon--tw"></span>Twitter</li>
-                                                <li class="dp-po-dropdown-menu-item"><span class="dp-po-Icon Icon--whatsapp"></span>Whats app</li>
-                                                <li class="dp-po-dropdown-menu-item"><span class="dp-po-Icon Icon--Instagram"></span>Instagram</li>
-                                                <li class="dp-po-dropdown-menu-item"><span class="dp-po-Icon Icon--Pinterest"></span>Pinterest</li>
-                                                <li class="dp-po-dropdown-menu-item"><span class="dp-po-Icon Icon--Messenger"></span>Messenger</li>
-                                                <li class="dp-po-dropdown-menu-item"><a href="" class="dp-po-support-btn">www.support.deskpro.com</a><span class="dp-po-Icon Icon--copy"></span></li>
-                                            </ul>
-                                        </li>
+                            <div class="dp-po-md-collapse dp-po-wrap-item dp-po-related-wrap">
+                                <span class="dp-po-md-collapse-title dp-po-title">Related content<span class="dp-po-Icon Icon--caret-down Icon--primary dp-po-hidden-md-up"></span></span>
+                                <div class="dp-po-md-collapse-content">
+                                    <ul class="dp-po-related-list">
+                                        <li><a href=""><span class="dp-po-Icon Icon--news"></span>Deskpro 5.14.0, 5.14.1, 5.14.2, Release</a></li>
+                                        <li><a href=""><span class="dp-po-Icon Icon--book"></span>How we handle feature requests</a></li>
+                                        <li><a href=""><span class="dp-po-Icon Icon--guides"></span>Personalize your helpdesk</a></li>
                                     </ul>
                                 </div>
                             </div>
 
-                            <div class="dp-po-wrap-item dp-po-related-wrap">
-                                <ul class="dp-po-List List--col dp-po-user-list">
-                                    <li>
-                                        <span class="dp-po-title">Created by</span>
-                                        <span>Nicholas Green</span>
-                                    </li>
-                                    <li>
-                                        <span class="dp-po-title">First published</span>
-                                        <span>12 Jun 2019</span>
-                                    </li>
-                                    <li>
-                                        <span class="dp-po-title">Custom Field X</span>
-                                        <span>Value Y</span>
-                                    </li>
-                                    <li class="dp-po-space-between">
-                                        <span class="dp-po-title">Translations</span>
-                                        <span class="dp-po-time-status">Updated</span>
-                                    </li>
+                            <div class="dp-po-md-collapse dp-po-wrap-item Dropdown-share dp-po-related-wrap dp-po-hidden-md">
+                                <div class="dp-po-Dropdown-container">
+                                    <span class="dp-po-md-collapse-title dp-po-title">Share</span>
+                                    <div class="dp-po-md-collapse-content">
+                                        <ul class="dp-po-dropdown-atom dp-po-share-list">
+                                            <li><a href="#"><span class="dp-po-Icon Icon--linkedin"></span></a></li>
+                                            <li><a href="#"><span class="dp-po-Icon Icon--fb"></span></a></li>
+                                            <li><a href="#"><span class="dp-po-Icon Icon--tw"></span></a></li>
+                                            <li><a href="#"><span class="dp-po-Icon Icon--whatsapp"></span></a></li>
+                                            <li><a href="#"><span class="dp-po-Icon Icon--ticket"></span></a></li>
+                                            <li class="dp-po-share">
+                                                <a href="#"><span class="dp-po-Icon Icon--share"></span></a>
+                                                <ul class="dp-po-dropdown-menu">
+                                                    <li class="dp-po-dropdown-menu-item dp-po-title-list">Share this on</li>
+                                                    <li class="dp-po-dropdown-menu-item"><span class="dp-po-Icon Icon--linkedin"></span>Linkedin</li>
+                                                    <li class="dp-po-dropdown-menu-item"><span class="dp-po-Icon Icon--fb"></span>Facebook</li>
+                                                    <li class="dp-po-dropdown-menu-item"><span class="dp-po-Icon Icon--tw"></span>Twitter</li>
+                                                    <li class="dp-po-dropdown-menu-item"><span class="dp-po-Icon Icon--whatsapp"></span>Whats app</li>
+                                                    <li class="dp-po-dropdown-menu-item"><span class="dp-po-Icon Icon--Instagram"></span>Instagram</li>
+                                                    <li class="dp-po-dropdown-menu-item"><span class="dp-po-Icon Icon--Pinterest"></span>Pinterest</li>
+                                                    <li class="dp-po-dropdown-menu-item"><span class="dp-po-Icon Icon--Messenger"></span>Messenger</li>
+                                                    <li class="dp-po-dropdown-menu-item"><a href="" class="dp-po-support-btn">www.support.deskpro.com</a><span class="dp-po-Icon Icon--copy"></span></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
 
-                                    <li class="dp-po-space-between dp-po-Flag-item-list">
-                                        <span class="dp-po-Flag-wrap">
-                                            <span class="dp-po-Icon Icon--FR"></span>
-                                            French
-                                        </span>
-                                        <span class="dp-po-time-status is-success">23 days</span>
-                                    </li>
-
-                                    <li class="dp-po-space-between dp-po-Flag-item-list">
-                                        <span class="dp-po-Flag-wrap">
-                                            <span class="dp-po-Icon Icon--GB"></span>
-                                            German
-                                        </span>
-                                        <span class="dp-po-time-status">2 weeks</span>
-                                    </li>
-
-                                    <li class="dp-po-Tooltip-article-info">
-                                        <span class="dp-po-title">Unpublished date
-                                            <span class="dp-po-tooltip-wrap"> 
-                                                <span class="dp-po-Icon Icon--info Icon--primary"></span>
-                                                <span class="dp-po-tooltip">Viewed by agents only</span>
+                            <div class="dp-po-md-collapse dp-po-wrap-item dp-po-article-details-wrap">
+                                <div class="dp-po-md-collapse-title dp-po-title dp-po-hidden-md-up">Article details<span class="dp-po-Icon Icon--caret-down Icon--primary dp-po-hidden-md-up"></span></div>
+                                <div class="dp-po-md-collapse-content">
+                                    <ul class="dp-po-List List--col dp-po-user-list">
+                                        <li>
+                                            <span class="dp-po-title">Created by</span>
+                                            <span>Nicholas Green</span>
+                                        </li>
+                                        <li>
+                                            <span class="dp-po-title">First published</span>
+                                            <span>12 Jun 2019</span>
+                                        </li>
+                                        <li>
+                                            <span class="dp-po-title">Custom Field X</span>
+                                            <span>Value Y</span>
+                                        </li>
+                                        <li class="dp-po-space-between">
+                                            <span class="dp-po-title">Translations</span>
+                                            <span class="dp-po-time-status">Updated</span>
+                                        </li>
+                                    
+                                        <li class="dp-po-space-between dp-po-Flag-item-list">
+                                            <span class="dp-po-Flag-wrap">
+                                                <span class="dp-po-Icon Icon--FR"></span>
+                                                French
                                             </span>
-                                        </span>
-                                        <span>26 June 2020</span>
-                                    </li>
-                                </ul>
+                                            <span class="dp-po-time-status is-success">23 days</span>
+                                        </li>
+                                    
+                                        <li class="dp-po-space-between dp-po-Flag-item-list">
+                                            <span class="dp-po-Flag-wrap">
+                                                <span class="dp-po-Icon Icon--GB"></span>
+                                                German
+                                            </span>
+                                            <span class="dp-po-time-status">2 weeks</span>
+                                        </li>
+                                    
+                                        <li class="dp-po-Tooltip-article-info">
+                                            <span class="dp-po-title">Unpublished date
+                                                <span class="dp-po-tooltip-wrap"> 
+                                                    <span class="dp-po-Icon Icon--info Icon--primary"></span>
+                                                    <span class="dp-po-tooltip">Viewed by agents only</span>
+                                                </span>
+                                            </span>
+                                            <span>26 June 2020</span>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
 
                         </div>
