@@ -1102,6 +1102,7 @@ a:hover {
   height: 20px;
   min-width: 25px;
   margin-right: 6px;
+  margin-top: 3px;
 }
 
 .dp-po-related-list li {
@@ -1565,6 +1566,7 @@ a:hover {
 	border: 0;
 	max-width: 100%;
 	padding: 14px 29px;
+	margin-bottom: 39px;
 }
 
 .dp-Template .dp-po-Info-wrap .dp-po-info-txt {
@@ -1584,7 +1586,7 @@ a:hover {
 }
 
 .dp-po-form-registration .dp-po-title-tab,
-.dp-po-list.comment--item,
+/*.dp-po-autorization-wrap .dp-po-list.comment--item,*/
 .dp-po-d-none {
 	display: none;
 }
@@ -1595,11 +1597,17 @@ a:hover {
 	display: flex;
 }
 
-.dp-po-comments-wrap .dp-po-list.comment--item {
+/*.dp-po-comments-wrap .dp-po-list.comment--item {
 	padding-top: 40px;
-}
+}*/
 
 /* mobile -v */
+
+@media (max-width: 1280px) {
+	.subscribe--dropdown .dp-po-dropdown-atom .dp-po-Icon {
+		margin: 0 10px 0 15px;
+	}
+}
 
 @media (max-width: 992px) {
   .dp-po-nav .dp-po-Logo-descript,
@@ -1968,6 +1976,14 @@ a:hover {
 
   .dp-po-comments.comments-list + .dp-po-comments-wrap .label--time {
   	margin: 0;
+  }
+
+  .dp-po-comments.comments-list .dp-po-sort {
+	display: none;
+  }
+
+  .dp-po-comments.comments-list.is-active .dp-po-sort {
+	display: block;
   }
 
   .dp-po-md-collapse-content {
