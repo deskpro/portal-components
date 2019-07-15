@@ -99,31 +99,14 @@ $(document).ready(function(){
 	  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 	  return re.test(email);
 	}
-	$('body').on('click', '.Resend--Link', function(event) {
-		var form = $(this).attr('data-form-display');
-		// console.log(form);
-		$('.dp-po-Info.Info--danger').addClass('dp-po-d-none');
-		$('.dp-po-title-tab').addClass('is-active');
-		$(form).addClass('is-active');
-		return false;
-	});
-	$('body').on('submit', '.Form--login', function(event) {
-		$(this).removeClass('is-active');
-		var email    = $(this).find('[name="email"]').val();
-		var is_valid_email    = validateEmail(email);
-		var password = $(this).find('[name="password"]').val();
-		$('.dp-po-Info.Info--success').addClass('dp-po-d-none');
-		$('.dp-po-Info.Info--danger').addClass('dp-po-d-none');
-		$('.dp-po-title-tab').removeClass('is-active');
-		if(is_valid_email == true && password.trim() != ''){
-			$('.dp-po-Info.Info--success').removeClass('dp-po-d-none');
-			$('.comment--item').addClass('is-active');
-		}else{
-			$('.dp-po-Info.Info--danger a').attr('data-form-display','.Form--login');
-			$('.dp-po-Info.Info--danger').removeClass('dp-po-d-none');
-		}
-		return false;
-	});
+	// $('body').on('click', '.Resend--Link', function(event) {
+	// 	var form = $(this).attr('data-form-display');
+	// 	// console.log(form);
+	// 	$('.dp-po-Info.Info--danger').addClass('dp-po-d-none');
+	// 	$('.dp-po-title-tab').addClass('is-active');
+	// 	$(form).addClass('is-active');
+	// 	return false;
+	// });
 	$('body').on('click', '.dp-po-Dropdown-container .dp-po-dropdown-atom', function(event) {
 		$(this).toggleClass('is-active');
 	});
@@ -166,32 +149,30 @@ $(document).ready(function(){
 		var email    = $(this).find('[name="email"]').val();
 		var is_valid_email    = validateEmail(email);
 		var password = $(this).find('[name="password"]').val();
-		$('.dp-po-Info.Info--success').addClass('dp-po-d-none');
-		$('.dp-po-Info.Info--danger').addClass('dp-po-d-none');
-		$('.dp-po-title-tab').removeClass('is-active');
 		if(is_valid_email == true && password.trim() != ''){
+			$('.dp-po-Info.Info--success').addClass('dp-po-d-none');
+			$('.dp-po-Info.Info--danger').addClass('dp-po-d-none');
+			$('.dp-po-title-tab').removeClass('is-active');
 			$('.dp-po-Info.Info--success').removeClass('dp-po-d-none');
 			$('.comment--item').addClass('is-active');
-		}else{
-			$('.dp-po-Info.Info--danger a').attr('data-form-display','.Form--login');
-			$('.dp-po-Info.Info--danger').removeClass('dp-po-d-none');
+		// }else{
 		}
 		return false;
 	});
 	$('body').on('submit', '.Form--Registration', function(event) {
 		$(this).removeClass('is-active');
 		var email    = $(this).find('[name="email"]').val();
-		var is_valid_email    = validateEmail(email);
 		var password = $(this).find('[name="password"]').val();
 		$('.dp-po-Info.Info--success').addClass('dp-po-d-none');
 		$('.dp-po-Info.Info--danger').addClass('dp-po-d-none');
-		$('.dp-po-title-tab').removeClass('is-active');
-		if(is_valid_email == true && password.trim() != ''){
-			$('.dp-po-Info.Info--success').removeClass('dp-po-d-none');
-			$('.comment--item').addClass('is-active');
-		}else{
-			$('.dp-po-Info.Info--danger a').attr('data-form-display','.Form--Registration');
+		if(email.trim() != '' && password.trim() != ''){
+			$('.dp-po-title-tab').removeClass('is-active');
+			// $('.dp-po-Info.Info--danger a').attr('data-form-display','.Form--login');
 			$('.dp-po-Info.Info--danger').removeClass('dp-po-d-none');
+			//$('.dp-po-Info.Info--success.dp-po-d-none').removeClass('dp-po-d-none');
+		//}else{
+			// $('.dp-po-Info.Info--danger a').attr('data-form-display','.Form--Registration');
+			// $('.dp-po-Info.Info--danger').removeClass('dp-po-d-none');
 		}
 		return false;
 	});
@@ -239,12 +220,14 @@ $(document).ready(function(){
 		$(this).find('.dp-po-dropdown-menu').slideDown(200);
 	})
 
-	$('body').on('click', '.dp-po-share-btn', function(event) {
+	$('body').on('click', '.dp-po-share', function(event) {
 		$('body').find('.Dropdown-share .dp-po-dropdown-menu').addClass('is-active');
+		return false;
 	})
 
 	$('body').on('click', '.dp-po-dropdown-menu .dp-po-back-btn', function(event) {
 		$('body').find('.Dropdown-share .dp-po-dropdown-menu').removeClass('is-active');
+		return false;
 	})
 	$('body').on('click', '.dp-po-md-collapse-title', function(event) {
 		if($('body').outerWidth() < 992){
