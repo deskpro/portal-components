@@ -95,10 +95,129 @@ $(document).ready(function(){
 		$('body').find('.dp-po-comments.dp-po-add-comments').addClass('is-active');
 		$('body').find('.dp-po-comments.dp-po-add-comments').removeClass('is-disabled');
 	})
+	function validateEmail(email) {
+	  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	  return re.test(email);
+	}
+	$('body').on('click', '.Resend--Link', function(event) {
+		var form = $(this).attr('data-form-display');
+		// console.log(form);
+		$('.dp-po-Info.Info--danger').addClass('dp-po-d-none');
+		$('.dp-po-title-tab').addClass('is-active');
+		$(form).addClass('is-active');
+		return false;
+	});
+	$('body').on('submit', '.Form--login', function(event) {
+		$(this).removeClass('is-active');
+		var email    = $(this).find('[name="email"]').val();
+		var is_valid_email    = validateEmail(email);
+		var password = $(this).find('[name="password"]').val();
+		$('.dp-po-Info.Info--success').addClass('dp-po-d-none');
+		$('.dp-po-Info.Info--danger').addClass('dp-po-d-none');
+		$('.dp-po-title-tab').removeClass('is-active');
+		if(is_valid_email == true && password.trim() != ''){
+			$('.dp-po-Info.Info--success').removeClass('dp-po-d-none');
+			$('.comment--item').addClass('is-active');
+		}else{
+			$('.dp-po-Info.Info--danger a').attr('data-form-display','.Form--login');
+			$('.dp-po-Info.Info--danger').removeClass('dp-po-d-none');
+		}
+		return false;
+	});
+	$('body').on('click', '.dp-po-Dropdown-container .dp-po-dropdown-atom', function(event) {
+		$(this).toggleClass('is-active');
+	});
+	$('body').on('click', '.dp-po-Dropdown-container .dp-po-dropdown-menu-item', function(event) {
+		event.preventDefault();
+		var is_selected = (typeof $(this).attr('data-selected') != 'undefined') ? true : false;
+		var value = $(this).attr('data-value');
+		if(!is_selected){
+			$(this).closest('.dp-po-Dropdown-container').find('select options').prop('selected', false );
+			$(this).closest('.dp-po-Dropdown-container').find('select').find('option[value="'+value+'"]').prop('selected', true );
+			$(this).closest('.dp-po-Dropdown-container').find('.dp-po-dropdown-menu-item').removeAttr('data-selected');
+			$(this).closest('.dp-po-Dropdown-container').find('.dp-po-dropdown-menu-item').removeClass('is-selected');
+			var label_selected = $(this).text();
+			$(this).attr('data-selected','selected');
+			$(this).addClass('is-selected');
+			$(this).closest('.dp-po-Dropdown-container').find('.placeholder').html(label_selected);
+			$('.dp-po-Dropdown-container').find('.dp-po-dropdown-atom').removeClass('is-active');
+		}
+	});
+	$('body').find('.as-dp-po-Dropdown-container').each(function(index, el) {
+		var placeholder = $(el).attr('placeholder');
+		$(el).css('display','none');
+		$html = '<span class="dp-po-dropdown-atom"><span class="placeholder"></span><a class="dp-po-arrow arrow--bottom arrow--brand-primary"></a></span><ul class="dp-po-dropdown-menu">';
+			var label_selected = placeholder;
+		$('option',el).each(function(indexOpt, elOpt) {
+			var value = $(elOpt).attr('value');
+			var label = $(elOpt).text();
+			if(typeof $(elOpt).attr('selected') != 'undefined'){
+				label_selected = label;
+			}
+			$html += '<li class="dp-po-dropdown-menu-item'+( (typeof $(elOpt).attr('selected') != 'undefined') ? ' is-selected' : '')+'" data-value="'+value+'" '+( (typeof $(elOpt).attr('selected') != 'undefined') ? 'data-selected="selected"' : '')+'>'+label+'</li>';
+		});
+		$html += '</ul>';
+		$(el).wrap('<div class="dp-po-Dropdown-container"></div>');
+		$(el).closest('.dp-po-Dropdown-container').append($html);
+		$(el).closest('.dp-po-Dropdown-container').find('.placeholder').html(label_selected);
+	});
+	$('body').on('submit', '.Form--login', function(event) {
+		$(this).removeClass('is-active');
+		var email    = $(this).find('[name="email"]').val();
+		var is_valid_email    = validateEmail(email);
+		var password = $(this).find('[name="password"]').val();
+		$('.dp-po-Info.Info--success').addClass('dp-po-d-none');
+		$('.dp-po-Info.Info--danger').addClass('dp-po-d-none');
+		$('.dp-po-title-tab').removeClass('is-active');
+		if(is_valid_email == true && password.trim() != ''){
+			$('.dp-po-Info.Info--success').removeClass('dp-po-d-none');
+			$('.comment--item').addClass('is-active');
+		}else{
+			$('.dp-po-Info.Info--danger a').attr('data-form-display','.Form--login');
+			$('.dp-po-Info.Info--danger').removeClass('dp-po-d-none');
+		}
+		return false;
+	});
+	$('body').on('submit', '.Form--Registration', function(event) {
+		$(this).removeClass('is-active');
+		var email    = $(this).find('[name="email"]').val();
+		var is_valid_email    = validateEmail(email);
+		var password = $(this).find('[name="password"]').val();
+		$('.dp-po-Info.Info--success').addClass('dp-po-d-none');
+		$('.dp-po-Info.Info--danger').addClass('dp-po-d-none');
+		$('.dp-po-title-tab').removeClass('is-active');
+		if(is_valid_email == true && password.trim() != ''){
+			$('.dp-po-Info.Info--success').removeClass('dp-po-d-none');
+			$('.comment--item').addClass('is-active');
+		}else{
+			$('.dp-po-Info.Info--danger a').attr('data-form-display','.Form--Registration');
+			$('.dp-po-Info.Info--danger').removeClass('dp-po-d-none');
+		}
+		return false;
+	});
+	$('body').on('click', '.dp-po-form-registration .dp-po-title-tab a[data-toggle]', function(event) {
+		var parent = $(this).attr('data-parent');
+		var toggle = $(this).attr('data-toggle');
+		$(parent).removeClass('is-active');
+		$(toggle).addClass('is-active');
+		$(this).closest('.dp-po-title-tab').find('li.is-active').removeClass('is-active');
+		$(this).closest('li').addClass('is-active');
+		return false;
+	});
 	$('body').on('click', '.dp-po-comments.dp-po-add-comments', function(event) {
+		$(this).nextAll('.dp-po-comments-wrap').removeClass('is-hidden-md');
 		if(!$(this).hasClass('is-disabled')){
-			$(this).toggleClass('is-active');
-			$(this).nextAll('.dp-po-comments-wrap').slideToggle(200);
+			if(!$(this).hasClass('is-active')){
+				$(this).addClass('is-active');
+				$(this).nextAll('.dp-po-comments-wrap').addClass('is-show');
+				$(this).nextAll('.dp-po-comments-wrap').removeClass('is-hide');
+			}else{
+				$(this).removeClass('is-active');
+				$(this).nextAll('.dp-po-comments-wrap').removeClass('is-show');
+				$(this).nextAll('.dp-po-comments-wrap').addClass('is-hide');
+				// $(this).nextAll('.dp-po-comments-wrap').addClass('is-hidden');
+				// $(this).nextAll('.dp-po-comments-wrap').slideUp(200);
+			}
 		}
 	})
 
