@@ -204,9 +204,9 @@
                             <div class="dp-po-md-collapse dp-po-comments-collapse">
                                 <div class="dp-po-comments comments-list dp-po-md-collapse-title dp-po-title">
                                     <span>Comments <span class="dp-po-qt">(2)</span></span>
-                                    <span class="dp-po-sort">
+                                    <span class="dp-po-sort is-active">
                                         Sort by <span class="dp-po-Icon Icon--caret-up Icon--primary"></span>
-                                        <ul class="dp-po-dropdown-menu Menu--tick">
+                                        <ul class="dp-po-dropdown-menu Menu--tick" style="display:none;">
                                             <li class="dp-po-dropdown-menu-item">Helpfulness</li>
                                             <li class="dp-po-dropdown-menu-item">Date</li>
                                         </ul>
@@ -383,11 +383,22 @@
 
                         </div>
 
-                        <div class="dp-po-comments dp-po-add-comments is-active">
+                        <div class="dp-po-comments dp-po-add-comments">
                             Add comment <span class="dp-po-Icon Icon--caret-down Icon--primary dp-po-hidden-md"></span>
                         </div>
-                        <div class="dp-po-comments-wrap ">
+                        <div class="dp-po-comments-wrap">
 
+                            <!-- valid tooltip -->
+                            <div class="dp-po-registration-step dp-po-Info-wrap">
+                                <div class="dp-po-Info Info--success dp-po-d-none">
+                                    <span class="dp-po-Icon Icon--check Icon--success"></span>
+                                    <span class="dp-po-info-txt">Thank you for validating your email address, you are now ready to add your comment.</span>
+                                </div>
+                                <div class="dp-po-Info Info--danger dp-po-d-none">
+                                    <span class="dp-po-Icon Icon--warning Icon--danger"></span>
+                                    <span class="dp-po-info-txt">Please validate your email address by following the link in the email sent to you. <a href="#" class="Resend--Link">Resend link?</a></span>
+                                </div>
+                            </div>
                             <form class="dp-po-list comment--item">
                                 <span class="dp-po-subtitle">
                                     <span class="dp-po-username">
@@ -428,8 +439,81 @@
                                         <label for="DemoPublishCheckbox-04">Subscribe</label>
                                     </span>
                                 </div>
-
                             </form>
+
+                        <!-- </div> -->
+
+                            <!-- Registration form -->
+                            <div class="dp-po-form-wrapper dp-po-form-registration">
+                                <ul class="dp-po-title-tab is-active">
+                                    <li class="is-active dp-po-hidden-md"><a href="#" data-parent=".dp-po-registration-step" data-toggle=".dp-po-step-one">Log-in</a></li>
+                                    <li>
+                                        <a href="#" data-parent=".dp-po-registration-step" data-toggle=".dp-po-step-two" class="dp-po-hidden-md">Register</a>
+                                        <span class="dp-po-hidden-md-up">
+                                            New to Deskpro?
+                                            <a href="#" data-parent=".dp-po-registration-step" data-toggle=".dp-po-step-two">Register for an account</a>
+                                        </span>
+                                    </li>
+                                </ul>
+                                <div class="dp-po-Forms Forms--login">
+                                    <!-- step one -->
+                                    <form class="dp-po-registration-step dp-po-step-one Form--login is-active">
+                                        <div class="dp-po-input-wrap">
+                                            <input type="email" name="email" placeholder="Email">
+                                            <input type="password" name="password" placeholder="Password">
+                                            <span class="dp-po-CustomCheckbox">
+                                                <input type="checkbox" class="dp-po-ControlInput" id="loginCheckbox-01"></input>
+                                                <label for="loginCheckbox-01">Stay logged in</label>
+                                            </span>
+                                            <button class="dp-po-Button Button--large">Log in</button>
+                                            <a href="" class="dp-po-description">Need a password reminder?</a>
+                                        </div>
+                                        <div class="dp-po-separete">
+                                            <span class="dp-po-text-separete">or</span>
+                                        </div>
+                                        <div class="dp-po-social-wrap">
+                                            <button class="dp-po-Button Button--large Button--facebook">Log-in with facebook</button>
+                                            <button class="dp-po-Button Button--large Button--linkedin">Log-in with Linkedin</button>
+                                        </div>
+                                    </form>
+                                    <!-- step two -->
+                                    <form class="dp-po-registration-step dp-po-step-two Form--Registration">
+
+                                        <h4 class="dp-po-title dp-po-hidden-md-up">Register</h4>
+                                        <div class="dp-po-input-wrap">
+                                            <label class="dp-po-hidden-md-up">Name</label>
+                                            <input type="" name="" placeholder="Name">
+                                            <label class="dp-po-hidden-md-up">Email</label>
+                                            <input type="email" name="" placeholder="Email">
+                                            <label class="dp-po-hidden-md-up">Password</label>
+                                            <input type="password" name="" placeholder="Password">
+                                            <label class="dp-po-hidden-md-up">Confirm password</label>
+                                            <input type="password" name="" placeholder="Confirm password">
+
+                                            <label class="dp-po-hidden-md-up">Timezone</label>
+                                            <select name="timezone" class="as-dp-po-Dropdown-container" placeholder="Select timezone">
+                                                <option value="1" selected>Option 1</option>
+                                                <option value="2">Option 2</option>
+                                                <option value="3">Option 3</option>
+                                                <option value="4">Option 4</option>
+                                                <option value="5">Option 5</option>
+                                            </select>
+
+                                            <label>Captcha</label>
+                                            <div class="dp-po-captcha">
+                                                <input type="" name="" placeholder="" class="dp-po-textarea-captcha">
+                                                <span class="dp-po-Icon Icon--refresh Icon--primary"></span>
+                                                <input type="" name="" placeholder="Insert text" class="dp-po-text-captcha">
+                                            </div>
+
+                                            <a href="" class="dp-po-description">To prove you are human, please insert the text you can see in the box above.</a>
+                                            <button class="dp-po-Button Button--large">Register</button>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+
                         </div>
                     </div>
 

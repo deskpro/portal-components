@@ -73,6 +73,7 @@
 
 .dp-po-Breadcrumb-item .dp-po-Breadcrumb-link {
   color: var(--grey);
+  text-decoration: none;
 }
 
 .dp-po-Breadcrumb-item:hover .dp-po-Breadcrumb-link {

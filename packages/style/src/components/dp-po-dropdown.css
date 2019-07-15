@@ -26,6 +26,7 @@
   background-color: transparent;
   border: 0;
   margin-left: auto;
+  outline: none;
 }
 
 .dp-po-dropdown-atom + .dp-po-dropdown-menu {

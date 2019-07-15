@@ -269,7 +269,6 @@
 /* Version 1 */
 
 .dp-po-Forms.Forms--login {
-  background: var(--white);
   border: 1.5px solid var(--grey-light);
   border-radius: 4px;
   box-shadow: var(--shadow-bottom-right);
@@ -279,6 +278,10 @@
 
 .dp-po-Forms.Forms--login input {
   margin-bottom: 20px;
+}
+
+.dp-po-Forms.Forms--login .dp-po-captcha input {
+  margin: 0;
 }
 
 .dp-po-Forms .dp-po-Button {
@@ -295,7 +298,7 @@
 }
 
 .dp-po-Forms.Forms--login .dp-po-CustomCheckbox {
-  margin: 0 0 10px;
+  margin: 0 0 15px;
 }
 
 .dp-po-Forms.Forms--login .Forms--item-login input {
