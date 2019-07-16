@@ -16,9 +16,9 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="/portal-components/style/js/script.js"></script>
 </head>
-<body>
+<body class="dp-Template">
     <!-- <a href="../../pages/en">Back</a> -->
-    <div class="dp-Template">
+    <div>
         <header>
             <ul class="dp-po-nav">
                 <li class="dp-po-Logo-wrap">
@@ -352,7 +352,8 @@
                                             </span>
 
                                             <div class="dp-po-Upload-wrapper">
-                                                <span class="dp-po-comment-subtitle">Add attachment</span>
+                                                <span class="dp-po-Icon Icon--attach dp-po-hidden-md-up"></span>
+                                                <span class="dp-po-comment-subtitle subtitle--attachment">Add attachment</span>
                                                 <span class="dp-po-Upload">
                                                     <span class="dp-po-Upload-item dp-po-Choose-btn">
                                                         <label for="file-upload">
@@ -399,49 +400,6 @@
                                     <span class="dp-po-info-txt">Please validate your email address by following the link in the email sent to you. <a href="#" class="Resend--Link">Resend link?</a></span>
                                 </div>
                             </div>
-<!--                             <form class="dp-po-list comment--item">
-                                <span class="dp-po-subtitle">
-                                    <span class="dp-po-username">
-                                        <img class="dp-po-Avatar-icon" src="../img/docs/avatar.png" alt="">
-                                        Nick Green
-                                    </span>
-                                </span>
-                                <span class="dp-po-Forms Forms--Textarea">
-                                    <div class="dp-po-Textarea">
-                                         <span class="dp-po-comment-subtitle">Your comment<i class="Color--primary">*</i></span>
-                                        <span class="dp-po-Icon-resizer"></span>
-                                        <textarea name="text" placeholder="Enter comment"></textarea>
-                                    </div>
-                                </span>
-
-                                <div class="dp-po-Upload-wrapper">
-                                    <span class="dp-po-comment-subtitle">Add attachment</span>
-                                    <span class="dp-po-Upload">
-                                        <span class="dp-po-Upload-item dp-po-Choose-btn">
-                                            <label for="file-upload">
-                                            <span class="dp-po-Icon Icon--file Icon--grey-dark"></span>
-                                                Choose a file
-                                            </label>
-                                            <input id="file-upload" type="file"/>
-                                        </span>
-                                        or
-                                        <span class="dp-po-Upload-item dp-po-Dragdrop-btn">
-                                            <span class="dp-po-Icon Icon--dragdrop"></span>
-                                            Drag and drop
-                                        </span>
-                                    </span>
-                                </div>
-
-                                <div class="dp-po-button-wrap">
-                                    <button class="dp-po-Button">Publish</button>
-                                    <span class="dp-po-CustomCheckbox CustomCheckbox--medium">
-                                        <input type="checkbox" class="dp-po-ControlInput" id="DemoPublishCheckbox-04"></input>
-                                        <label for="DemoPublishCheckbox-04">Subscribe</label>
-                                    </span>
-                                </div>
-                            </form> -->
-
-                        <!-- </div> -->
 
                             <!-- Registration form -->
                             <div class="dp-po-form-wrapper dp-po-form-registration">
@@ -512,12 +470,13 @@
                                     </form>
 
                                     <!-- Demo -->
-                                    <form class="dp-po-list comment--item">
+<!--                                     <form class="dp-po-list comment--item">
                                         <span class="dp-po-subtitle">
                                             <span class="dp-po-username">
                                                 <img class="dp-po-Avatar-icon" src="../img/docs/avatar.png" alt="">
                                                 Nick Green
                                             </span>
+                                            <span class="dp-po-Button Button--small Button--secondary dp-po-reply-comment-close">Cancel</span>
                                         </span>
                                         <span class="dp-po-Forms Forms--Textarea">
                                             <div class="dp-po-Textarea">
@@ -528,6 +487,7 @@
                                         </span>
 
                                         <div class="dp-po-Upload-wrapper">
+                                            <span class="dp-po-Icon Icon--attach dp-po-hidden-md-up"></span>
                                             <span class="dp-po-comment-subtitle">Add attachment</span>
                                             <span class="dp-po-Upload">
                                                 <span class="dp-po-Upload-item dp-po-Choose-btn">
@@ -552,12 +512,61 @@
                                                 <label for="DemoPublishCheckbox-04">Subscribe</label>
                                             </span>
                                         </div>
-                                    </form>
+                                    </form> -->
 
                                 </div>
                             </div>
 
                         </div>
+
+                        <div class="dp-po-comments-wrap">
+                            <!-- Demo -->
+                            <form class="dp-po-list comment--item">
+                                <span class="dp-po-subtitle">
+                                    <span class="dp-po-username">
+                                        <img class="dp-po-Avatar-icon" src="../img/docs/avatar.png" alt="">
+                                        Nick Green
+                                    </span>
+                                    <span class="dp-po-Button Button--small Button--secondary dp-po-reply-comment-close">Cancel</span>
+                                </span>
+                                <span class="dp-po-Forms Forms--Textarea">
+                                    <div class="dp-po-Textarea">
+                                         <span class="dp-po-comment-subtitle">Your comment<i class="Color--primary">*</i></span>
+                                        <span class="dp-po-Icon-resizer"></span>
+                                        <textarea name="text" placeholder="Enter comment"></textarea>
+                                    </div>
+                                </span>
+
+                                <div class="dp-po-Upload-wrapper">
+                                    <span class="dp-po-Icon Icon--attach dp-po-hidden-md-up"></span>
+                                    <span class="dp-po-comment-subtitle">Add attachment</span>
+                                    <span class="dp-po-Upload">
+                                        <span class="dp-po-Upload-item dp-po-Choose-btn">
+                                            <label for="file-upload">
+                                            <span class="dp-po-Icon Icon--file Icon--grey-dark"></span>
+                                                Choose a file
+                                            </label>
+                                            <input id="file-upload" type="file"/>
+                                        </span>
+                                        or
+                                        <span class="dp-po-Upload-item dp-po-Dragdrop-btn">
+                                            <span class="dp-po-Icon Icon--dragdrop"></span>
+                                            Drag and drop
+                                        </span>
+                                    </span>
+                                </div>
+
+                                <div class="dp-po-button-wrap">
+                                    <button class="dp-po-Button">Publish</button>
+                                    <span class="dp-po-CustomCheckbox CustomCheckbox--medium">
+                                        <input type="checkbox" class="dp-po-ControlInput" id="DemoPublishCheckbox-04"></input>
+                                        <label for="DemoPublishCheckbox-04">Subscribe</label>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+
+
                     </div>
 
                     <div class="dp-po-col-3 dp-po-md-12">
