@@ -345,6 +345,10 @@ a:hover {
   padding: 23px 30px 35px 30px;
 }
 
+.dp-po-tex-wrap p:first-child {
+  font-weight: 300;
+}
+
 .dp-po-tex-wrap p {
   margin-bottom: 15px;
 }
