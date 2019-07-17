@@ -1651,6 +1651,11 @@ a:hover {
   	margin-right: 0;
   }
 
+  .dp-po-nav {
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  	padding: 15px 0;
+  }
+
   .dp-po-nav-control ul {
   	margin-right: 8px;
   }
@@ -1725,10 +1730,6 @@ a:hover {
 
   .dp-po-Breadcrumbs-wrap .dp-po-Breadcrumbs .dp-po-Breadcrumb-item:first-child {
     display: none;
-  }
-
-  .dp-po-nav {
-  	box-shadow: var(--shadow-bottom);
   }
 
   .dp-po-nav .dp-po-back-home {
@@ -2053,7 +2054,6 @@ a:hover {
 	bottom: 0;
 	right: 0;
 	z-index: 1;
-    /*max-width: 300px;*/
     height: 100%;
     flex: 0 0 48%;
     max-width: 48%;
@@ -2081,7 +2081,6 @@ a:hover {
   	font: var(--mp-1);
   	margin: 18px 0 20px;
     max-width: 100%;
-    /*padding-left: 40px;*/
   }
 
   .dp-po-comments-item .dp-po-attachments {
@@ -2129,7 +2128,7 @@ a:hover {
 	padding: 11px 0 12px;
 	width: 200px;
 	border-radius: 4px;
-	margin: 35px auto 60px;
+	margin: 35px auto;
   }
 
   .dp-po-comments {
@@ -2203,7 +2202,6 @@ a:hover {
   }
 
   .dp-Template .dp-po-comments-wrap .comment--item .dp-po-Button {
-	/*max-width: 170px;*/
 	max-width: 300px;
 	flex: 0 0 48%;	
   }
@@ -2298,20 +2296,38 @@ a:hover {
   }
 
   .dp-po-tex-wrap p {
-  	margin-bottom: 25px;
+  	margin-bottom: 15px;
+  	position: relative;
   }
 
   .dp-po-tex-wrap ul {
   	margin-bottom: 25px;
+  	padding-left: 15px;
+  }
+
+  .dp-po-tooltip-wrap .dp-po-tooltip {
+  	left: calc(50% - 136px);
+  	right: 0;
+  }
+
+  .dp-po-tex-wrap .dp-po-tooltip-wrap {
+	position: initial;
+	margin: 0 5px;
+  }
+
+  .dp-po-tex-wrap .dp-po-tooltip-wrap .dp-po-Icon {
+  	display: none;
   }
 
 }
 
 @media (max-width: 576px) {
+
   .Dropdown-share .dp-po-dropdown-menu {
 	/*height: 115%;*/
 	height: 725px;
   }
+
 }
 
 @media (min-width: 992px) {

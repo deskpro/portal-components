@@ -716,3 +716,9 @@ input.dp-po-input-avatar {
   width: 19px;
   height: 18px;
 }
+
+.Icon--article-notification {
+  background-image: url('data:image/svg+xml,<?xml version="1.0" encoding="iso-8859-1"?><svg width="24" height="32" viewBox="0 0 24 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.8 19H5.80005V21H13.8V19Z" fill="%23E84954"/><path d="M13.8 11H5.80005V13H13.8V11Z" fill="%23E84954"/><path d="M17.8 7H5.80005V9H17.8V7Z" fill="%23E84954"/><path d="M17.8 15H5.80005V17H17.8V15Z" fill="%23E84954"/><path d="M22.1 30.2H20.9V31.7H22.9C23.3 31.7 23.7 31.4 23.7 30.9V28.9H22.2V30.2H22.1Z" fill="%23E84954"/><path d="M13.6 30.2001H10V31.7001H13.6V30.2001Z" fill="%23E84954"/><path d="M8.19998 30.2001H4.59998V31.7001H8.19998V30.2001Z" fill="%23E84954"/><path d="M19 30.2001H15.4V31.7001H19V30.2001Z" fill="%23E84954"/><path d="M1.5 28.9H0V30.9C0 31.3 0.3 31.7 0.8 31.7H2.8V30.2H1.5V28.9Z" fill="%23E84954"/><path d="M1.5 17H0V21H1.5V17Z" fill="%23E84954"/><path d="M1.5 23H0V27H1.5V23Z" fill="%23E84954"/><path d="M1.5 11H0V15H1.5V11Z" fill="%23E84954"/><path d="M1.5 5H0V9H1.5V5Z" fill="%23E84954"/><path d="M0 1.10005V3.10005H1.5V1.80005H2.7V0.300049H0.7C0.3 0.300049 0 0.600049 0 1.10005Z" fill="%23E84954"/><path d="M13.6 0.300049H10V1.80005H13.6V0.300049Z" fill="%23E84954"/><path d="M19 0.300049H15.4V1.80005H19V0.300049Z" fill="%23E84954"/><path d="M8.19998 0.300049H4.59998V1.80005H8.19998V0.300049Z" fill="%23E84954"/><path d="M22.8 0.300049H20.8V1.80005H22V3.00005H23.5V1.00005C23.6 0.600049 23.2 0.300049 22.8 0.300049Z" fill="%23E84954"/><path d="M23.6 5H22.1V9H23.6V5Z" fill="%23E84954"/><path d="M23.6 17H22.1V21H23.6V17Z" fill="%23E84954"/><path d="M23.6 23H22.1V27H23.6V23Z" fill="%23E84954"/><path d="M23.6 11H22.1V15H23.6V11Z" fill="%23E84954"/></svg>');
+  width: 24px;
+  height: 31px;
+}
