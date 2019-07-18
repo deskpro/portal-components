@@ -46,6 +46,7 @@
 .dp-po-pdf .dp-po-tex-wrap p a {
 	color: var(--grey-dark);
 	position: relative;
+	display: inline-flex;
 }
 
 .dp-po-pdf .dp-po-tex-wrap ul {
@@ -82,7 +83,7 @@
 }
 
 .dp-po-pdf .dp-po-Image-knowledgabse {
-	flex-direction: column;
+	/*flex-direction: column;*/
 	border: 1px solid var(--grey);
 }
 
@@ -124,8 +125,13 @@
 	margin-bottom: 10px;
 }
 
+.dp-po-link-wrapper a {
+	font: var(--p-1);
+}
+
 .dp-po-pdf .dp-po-glossary-item {
-	display: flex;
+	/*display: flex;*/
+	display: inline-block;
 	align-items: center;
 	font: var(--p-1);
 	margin-bottom: 10px;
@@ -138,6 +144,7 @@
 	line-height: 1;
 	padding: 0 5px 3px;
 	margin-right: 8px;
+	display: inline-block;
 }
 
 .dp-po-pdf a .dp-po-num {
@@ -171,9 +178,13 @@
 		border: 0;
 		border-top: 1px solid var(--grey-light);
 		border-radius: 0;
-		padding: 23px 0 35px 0;
+		padding: 23px 0 32px 0;
 		margin-bottom: 0;
 		margin-top: 27px;
+	}
+
+	.dp-po-pdf .dp-po-comments.comments-list + .dp-po-comments-wrap > .dp-po-comments-item .dp-po-comment-subtitle {
+		margin: 18px 0 12px;
 	}
 
 	.dp-po-pdf .dp-po-title.dp-po-copy-clipboard {
@@ -193,15 +204,19 @@
 	}
 
 	.dp-po-pdf .dp-po-Image-knowledgabse img {
-		margin: 0;
+		margin: 0 auto;
 	}
 
 	.dp-po-pdf .dp-po-md-collapse-content {
 		display: block !important;
 	}
 
-	.dp-po-pdf .dp-po-glossary {
+/*	.dp-po-pdf .dp-po-glossary {
 		border-bottom: 0;
+	}*/
+
+	.dp-po-pdf .dp-po-glossary .dp-po-label {
+		margin-right: 5px;
 	}
 
 	.dp-po-pdf .dp-po-md-collapse-title.dp-po-title .dp-po-Icon {
@@ -210,21 +225,21 @@
 
 	.dp-po-pdf .dp-po-comments.comments-list + .dp-po-comments-wrap {
 		border: none;
-		padding: 0;
+		padding: 0 0 10px;
 	}
 
 	.dp-po-pdf .dp-po-comments-item {
 		padding: 20px 0 0;
 	}
 
-	.dp-po-pdf .dp-po-link-wrapper {
+/*	.dp-po-pdf .dp-po-link-wrapper {
 		display: none;
-	}
-
+	}*/
+/*
 	.dp-po-pdf .dp-po-glossary .dp-po-glossary-item,
 	.dp-po-pdf .dp-po-glossary .dp-po-label {
 		display: inline-block;
-	}
+	}*/
 
 	.dp-po-pdf .dp-po-footer {
 		border-top: 1.5px solid var(--grey-light);
@@ -246,14 +261,14 @@
 		display: none;
 	}
 
-/*	.dp-po-pdf .dp-po-main .dp-po-Title-page {
-		margin-top: 20px;
-		margin-bottom: 10px;
+	.dp-po-pdf .dp-po-main .dp-po-Title-page {
+		margin-top: 18px;
+		/*margin-bottom: 10px;*/
 	}
 
 	.dp-po-pdf .dp-po-Breadcrumbs {
 		padding: 10px 0 5px 0;
-	}*/
+	}
 
 	.dp-po-pdf .dp-po-List.List--avatars + .dp-po-description-wrap .dp-po-description {
 		line-height: 1;
@@ -263,7 +278,7 @@
 		max-height: 167px;
 		width: auto;
 		margin: 0 auto;
-		border: 5px solid #eff0f0;
+		border: 5px solid var(--grey-lighter);
 	}
 
 }
@@ -274,11 +289,24 @@
 		background-color: var(--white);
 	}
 
+	.dp-po-num-wrapper {
+		position: relative;
+		display: inline-block;
+		width: 15px;
+		height: 15px;
+	}
+
+	.dp-po-pdf .dp-po-num {
+		position: absolute;
+		top: -2px;
+		left: 2px;
+	}
+
 	.dp-po-pdf a .dp-po-num {
-		text-transform: capitalize;
+		/*text-transform: capitalize;*/
 		color: var(--grey-darkest);
 		font: var(--p-3-semibold);
-		display: contents;
+		display: inline-block;
 	}
 
 	.dp-po-pdf .dp-po-nav-control {
@@ -304,6 +332,10 @@
 	.dp-po-pdf .dp-po-footer {
 		background-color: var(--white);
 		padding: 25px 0 50px;
+	}
+
+	.dp-po-pdf .dp-po-Image-knowledgabse {
+		flex-direction: column;
 	}
 
 }
