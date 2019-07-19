@@ -5127,7 +5127,8 @@ a:hover {
 	max-width: 100%;
 	justify-content: space-between;
 	margin-bottom: 25px;
-	/*display: flex;*/
+	
+	display: flex;
 }
 
 .dp-po-input-wrap {
@@ -5325,8 +5326,10 @@ a:hover {
 	position: relative;
 }
 
-.dp-po-form-registration .dp-po-title-tab,
+/*.dp-po-form-registration .dp-po-title-tab,*/
+
 /*.dp-po-autorization-wrap .dp-po-list.comment--item,*/
+
 .dp-po-d-none {
 	display: none;
 }
