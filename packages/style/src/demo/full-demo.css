@@ -1132,13 +1132,17 @@ a:hover {
 }
 
 .dp-po-related-list .dp-po-Icon {
-  background-position: 0 0;
+  background-position: 50% 0;
   background-size: 19px 20px;
   display: flex;
   height: 20px;
   min-width: 25px;
-  margin-right: 6px;
+  margin-right: 5px;
   margin-top: 3px;
+}
+
+.dp-po-related-list .dp-po-Icon.Icon--knowledgebase-1 {
+	background-size: 26px 20px;
 }
 
 .dp-po-related-list li {
