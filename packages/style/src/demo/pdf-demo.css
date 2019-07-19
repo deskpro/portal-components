@@ -48,7 +48,7 @@
 .dp-po-pdf .dp-po-tex-wrap p a {
 	color: var(--grey-dark);
 	position: relative;
-	display: inline-flex;
+	/*display: inline-flex;*/
 }
 
 .dp-po-pdf .dp-po-tex-wrap ul {

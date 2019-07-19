@@ -1,0 +1,9 @@
+.dp-po-news-post .dp-po-Image-knowledgabse {
+	border: none;
+}
+
+.dp-po-news-post .dp-po-Image-knowledgabse img {
+	border: 10px solid var(--grey-lighter);
+	margin: 0 auto;
+}
+
