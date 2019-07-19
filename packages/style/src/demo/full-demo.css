@@ -1429,7 +1429,7 @@ a:hover {
 	max-width: 100%;
 	justify-content: space-between;
 	margin-bottom: 25px;
-	
+
 	display: flex;
 }
 
@@ -1710,7 +1710,7 @@ a:hover {
   }
 
   .dp-po-hidden-md {
-  	display: none;
+  	display: none!important;
   }
 
   .dp-po-Logo-wrap .dp-po-Icon {
@@ -2410,6 +2410,7 @@ a:hover {
   	right: 0;
 	max-width: 359px;
 	border-radius: 4px;
+	top: calc(100% + 5px);
   }
 
   .dp-po-tex-wrap .dp-po-tooltip-wrap {
@@ -2459,6 +2460,12 @@ a:hover {
   }
 
 }
+
+/*@media (max-width: 700px) {
+	.dp-po-tooltip-wrap .dp-po-tooltip {
+	    top: calc(100% - 19px);
+	}
+}*/
 
 @media (max-width: 576px) {
 
@@ -2511,6 +2518,52 @@ a:hover {
 
 }
 
+@media screen and (min-device-width: 632px) and (max-device-width: 700px) { 
+
+	.txt--dealing .dp-po-tooltip-wrap .dp-po-tooltip {
+		top: calc(100% - 19px);
+	}
+
+}
+
+@media screen and (min-device-width: 500px) and (max-device-width: 526px) { 
+
+	.txt--dealing .dp-po-tooltip-wrap .dp-po-tooltip {
+		top: calc(100% - 19px);
+	}
+
+}
+
+@media screen and (min-device-width: 399px) and (max-device-width: 427px) { 
+
+	.txt--dealing .dp-po-tooltip-wrap .dp-po-tooltip {
+		top: calc(100% - 19px);
+	}
+}
+
+@media (max-width: 410px) {
+	.txt--define .dp-po-tooltip-wrap .dp-po-tooltip {
+		top: calc(100% - 19px);
+	}
+}
+
+@media (max-width: 400px) {
+
+	.txt--dealing .dp-po-tooltip-wrap .dp-po-tooltip,
+	.txt--define .dp-po-tooltip-wrap .dp-po-tooltip {
+		max-width: 100%;
+		left: 0;
+	}
+
+}
+
+@media (max-width: 321px) {
+	.txt--dealing .dp-po-tooltip-wrap .dp-po-tooltip {
+		top: calc(100% - 19px);
+	}
+}
+
+
 @media (min-width: 992px) {
 
   .dp-po-main {
@@ -2523,6 +2576,10 @@ a:hover {
 
   .dp-po-hidden-md-up {
   	display: none;
+  }
+
+  .dp-po-show-md {
+  	display: block;
   }
 
 }

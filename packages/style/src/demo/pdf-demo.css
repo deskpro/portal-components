@@ -12,7 +12,9 @@
 }
 
 .dp-po-pdf .dp-po-main .dp-po-Sidebar {
-	margin-top: 103px;
+	/*margin-top: 103px;*/
+	margin-top: 173px;
+	position: relative;
 }
 
 .dp-po-pdf .dp-po-List.List--avatars {
@@ -147,8 +149,27 @@
 	display: inline-block;
 }
 
-.dp-po-pdf a .dp-po-num {
+/*.dp-po-pdf a .dp-po-num {
 	display: none;
+}*/
+
+.dp-po-num-wrapper {
+	position: relative;
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+}
+
+.dp-po-pdf .dp-po-num {
+	position: absolute;
+	top: -2px;
+	left: 2px;
+}
+
+.dp-po-pdf a .dp-po-num {
+	color: var(--grey-darkest);
+	font: var(--p-3-semibold);
+	display: inline-block;
 }
 
 .dp-po-pdf .dp-po-tex-wrap .dp-po-pdf-txt {
@@ -289,7 +310,7 @@
 		background-color: var(--white);
 	}
 
-	.dp-po-num-wrapper {
+/*	.dp-po-num-wrapper {
 		position: relative;
 		display: inline-block;
 		width: 15px;
@@ -303,11 +324,10 @@
 	}
 
 	.dp-po-pdf a .dp-po-num {
-		/*text-transform: capitalize;*/
 		color: var(--grey-darkest);
 		font: var(--p-3-semibold);
 		display: inline-block;
-	}
+	}*/
 
 	.dp-po-pdf .dp-po-nav-control {
 		display: none;
