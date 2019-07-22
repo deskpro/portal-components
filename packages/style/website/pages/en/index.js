@@ -72,6 +72,7 @@ class HomeSplash extends React.Component {
           <ul>
             <li><a href={pageUrl('demos/kb-view.html')}>KB View</a></li>
             <li><a href={pageUrl('demos/kb-view-pdf.html')}>KB View PDF</a></li>
+            <li><a href={pageUrl('demos/kb-view-news.html')}>KB View News - Post</a></li>
           </ul>
         </Demos>
       </div>

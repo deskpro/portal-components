@@ -713,8 +713,8 @@ a:hover {
   min-width: 273px;
   position: absolute;
   right: 0;
-  /*top: calc(100% + 12px);*/
-  top: 56px;
+  top: calc(100% + 12px);
+  /*top: 56px;*/
   width: max-content;
   z-index: 3;
 }
@@ -2504,6 +2504,7 @@ a:hover {
 
 	.dp-po-comments.comments-list + .dp-po-comments-wrap .label--time .dp-po-dropdown-menu {
 		width: 100%;
+		top: 56px;
 	}
 
 	.dp-Template .dp-po-captcha .dp-po-Icon {
