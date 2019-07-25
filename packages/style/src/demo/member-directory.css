@@ -1,0 +1,125 @@
+.dp-po-member-directory .dp-po-member-wrapper {
+	background-color: var(--white);
+	box-shadow: var(--shadow-bottom);
+	padding: 40px 40px 25px;
+}
+
+.dp-po-member-container {
+	padding: 0;
+}
+
+.dp-po-member-directory .dp-po-main .dp-po-Title-page {
+	margin: 0;
+	padding: 38px 0 28px;
+}
+
+.dp-po-member-directory .dp-po-member-wrapper .dp-po-search-container {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.dp-po-member-directory .dp-po-member-wrapper .dp-po-search-container .dp-po-Icon {
+	cursor: pointer;
+}
+
+.dp-po-member-directory .dp-po-member-wrapper .dp-po-Searchbar-wrap {
+	max-width: 100%;
+}
+
+.dp-po-member-directory .dp-po-member-wrapper .dp-po-Search-bar input {
+	border: 1px solid var(--grey-light);
+	max-height: 39px;
+	max-width: 400px;
+	box-shadow: none;
+	padding-left: 40px;
+	font: var(--p-2-bold);
+}
+
+.dp-po-member-directory .dp-po-member-wrapper .dp-po-Search-bar input::placeholder {
+	color: var(--grey);
+}
+
+.dp-po-member-wrapper .dp-po-Search-bar input:focus + .dp-po-Icon {
+	display: block;
+}
+
+.dp-po-member-directory .dp-po-member-wrapper .dp-po-Search-bar .dp-po-Icon {
+	width: 21px;
+	height: 21px;
+	background-size: 21px;
+	top: calc(50% - 10.5px);
+}
+
+.dp-po-member-table .dp-po-table-row {
+	display: flex;
+	align-items: center;
+}
+
+.dp-po-member-table .dp-po-table-row:nth-child(even) {
+	background-color: var(--grey-lightest);
+}
+
+.dp-po-member-table .dp-po-table-row:hover {
+	background-color: var(--info-light);
+}
+
+.dp-po-member-table .dp-po-table-item {
+	padding: 11px 15px;
+	display: flex;
+	align-items: center;
+	font: var(--p-1);
+}
+
+.dp-po-member-table .dp-po-Avatar.Avatar--circle.Avatar--small .dp-po-Avatar-icon {
+	width: 35px;
+	height: 35px;
+}
+
+.dp-po-member-table .dp-po-Avatar-name {
+	font: var(--p-1);
+}
+
+.dp-po-member-table .dp-po-table-name {
+	flex: 0 0 250px;
+	max-width: 250px;
+}
+
+.dp-po-member-table .dp-po-table-name .dp-po-Icon {
+	margin-left: 20px;
+	cursor: pointer;
+}
+
+.dp-po-member-table .dp-po-table-mail {
+	flex: 0 0 325px;
+	max-width: 325px;
+}
+
+.dp-po-member-table .dp-po-table-phone {
+	flex: 0 0 204px;
+	max-width: 204px;
+}
+
+.dp-po-member-table .dp-po-table-company {
+	flex: 0 0 320px;
+	max-width: 320px;
+}
+
+.dp-po-member-table .dp-po-table-message {
+	flex: 0 0 91px;
+	max-width: 91px;
+	justify-content: flex-end;;
+}
+
+.dp-po-table-message .dp-po-Icon {
+	cursor: pointer;
+}
+
+.dp-po-member-table .dp-po-title-row {
+	font: var(--p-2-bold);
+	color: var(--grey-dark);
+}
+
+.dp-po-member-directory .demo-pagination {
+	padding: 15px 0 50px;
+}

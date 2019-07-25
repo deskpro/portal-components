@@ -129,6 +129,10 @@
   color: var(--grey-darkest);
 }
 
+.dp-po-label.label--purple.Color--purple {
+  color: var(--purple);
+}
+
 .dp-po-label.label--pink {
   background: var(--pink);
   border: 1px solid var(--pink);

@@ -154,6 +154,7 @@
   --font-mp2: 15px;
 
   --mp-1: var(--is-regular) var(--font-mp1)/var(--line-height-base) "Lato", sans-serif;
+  --mp-1-semibold: var(--is-semibold) var(--font-mp1)/var(--line-height-base) "Lato", sans-serif;
   --mp-1-bold: var(--is-bold) var(--font-mp2)/var(--line-height-base) "Lato", sans-serif;
   --mp-2-medium: var(--is-medium) var(--font-mp2)/var(--line-height-base) "Lato", sans-serif;
 

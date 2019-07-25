@@ -180,6 +180,23 @@
 	color: var(--grey);
 }
 
+/*direction-rtl*/
+
+.dp-po-direction-rtl.dp-po-pdf .dp-po-Logo-wrap .dp-po-Icon {
+	margin-right: 0;
+	margin-left: 60px;
+}
+
+.dp-po-direction-rtl.dp-po-pdf .dp-po-glossary .dp-po-label {
+	margin-right: 0;
+	margin-left: 8px;
+}
+
+.dp-po-direction-rtl.dp-po-pdf .dp-po-link-wrapper ol {
+	padding-left: 0;
+	padding-right: 20px;
+}
+
 @media (max-width: 992px) {
 
 	.dp-po-pdf .dp-po-Breadcrumbs-wrap .dp-po-Breadcrumbs .dp-po-Breadcrumb-item:first-child {

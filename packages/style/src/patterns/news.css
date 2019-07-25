@@ -131,13 +131,15 @@
   outline: none !important;
 }
 
-.dp-po-article-wrap.is-like .Button--success {
+.dp-po-article-wrap.is-like .Button--success,
+.dp-po-article-wrap.is-like .Button--success:hover {
   background-color: var(--success);
   border-color: var(--success);
   color: var(--white);
 }
 
-.dp-po-article-wrap.is-dislike .Button--danger {
+.dp-po-article-wrap.is-dislike .Button--danger,
+.dp-po-article-wrap.is-dislike .Button--danger:hover {
   background-color: var(--danger);
   border-color: var(--danger);
   color: var(--white);
