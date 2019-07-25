@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/portal-components/style/css/main.css">
+    <link rel="stylesheet" href="/portal-components/style/css/style.css">
+    <script>
+        if (location.host === "localhost:3000") {
+            document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +':35729/livereload.js?snipver=1"></' + 'script>');
+        }
+    </script>
+    <title>KB View</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="/portal-components/style/js/script.js"></script>
+</head>
+<body class="dp-Template dp-po-member-directory">
+
+    <header>
+        <ul class="dp-po-nav">
+            <li class="dp-po-Logo-wrap">
+                <span class="dp-po-Icon Icon-Tech-company"></span>
+                <span class="dp-po-Logo-descript">Support Center</span>
+            </li>
+            <li class="dp-po-nav-control">
+                <ul>
+                    <li class="dp-po-Select-Language">
+                        <span class="dp-po-Icon Icon--UK"></span>
+                        English
+                        <span class="dp-po-arrow arrow--bottom arrow--brand-primary"></span>
+                    </li>
+                    <li>
+                        <button class="dp-po-Button Button--small">Contact us</button>
+                    </li>
+                    <li class="dp-po-back-home">
+                        <span class="dp-po-Icon Icon--Home"></span>
+                    </li>
+                    <li>
+                        <span class="dp-po-Avatar">
+                            <img src="/portal-components/style/img/docs/avatar.png" class="dp-po-Avatar-icon" alt=""></img>
+                            <span class="dp-po-arrow arrow--bottom arrow--brand-primary"></span>
+                        </span>
+
+                        <span class="dp-po-Avatar Avatar--circle">
+                            <img class="dp-po-Avatar-icon" src="/portal-components/style/img/docs/avatar-circular.png" alt="">
+                        </span>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+
+    <section class="dp-po-Header-container">
+        <form class="dp-po-Forms dp-po-Search-bar">
+            <div class="dp-po-Searchbar-wrap">
+                <input type="" name="" placeholder="How can we help you today?"></input>
+                <span class="dp-po-Icon Icon--find Icon--primary"></span>
+            </div>
+        </form>
+    </section>
+
+    <section class="dp-po-Breadcrumbs-wrap">
+        <div class="dp-po-container">
+            <ul class="dp-po-Breadcrumbs Breadcrumbs--custom">
+                <li class="dp-po-Breadcrumb-item"><span class="dp-po-Icon Icon-Tech-company"></span></li>
+                <li class="dp-po-Breadcrumb-item dp-po-support-centre"><a href="" class="dp-po-Breadcrumb-link">Support Centre</a></li>
+                <li class="dp-po-Breadcrumb-item is-selected"><a href="" class="dp-po-Breadcrumb-link">Member Directory</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="dp-po-main">
+        <div class="dp-po-container dp-po-member-container">
+            <h2 class="dp-po-Title-page"><span class="dp-po-Icon Icon--member-directory"></span>Member Directory</h2>
+
+            <div class="dp-po-member-wrapper">
+
+                <div class="dp-po-search-container">
+                    <form class="dp-po-Forms dp-po-Search-bar">
+                        <div class="dp-po-Searchbar-wrap">
+                            <input type="" name="" placeholder="Search"></input>
+                            <span class="dp-po-Icon Icon--find Icon--primary"></span>
+                        </div>
+                    </form>
+                    <span class="dp-po-Icon Icon--member-filter"></span>
+                </div>
+
+                <div class="dp-po-member-table">
+                    <div class="dp-po-table-row dp-po-title-row">
+                        <span class="dp-po-table-item dp-po-table-name">Name<span class="dp-po-Icon Icon--sort Icon--primary"></span></span>
+                        <span class="dp-po-table-item dp-po-table-mail">Email</span>
+                        <span class="dp-po-table-item dp-po-table-phone">Phone Number</span>
+                        <span class="dp-po-table-item dp-po-table-company">Job Title & Company</span>
+                        <span class="dp-po-table-item"></span>
+                    </div>
+                    <div class="dp-po-table-row">
+                        <span class="dp-po-table-item dp-po-table-name">
+                            <span class="dp-po-Avatar Avatar--small Avatar--circle">
+                                <img class="dp-po-Avatar-icon" src="../img/docs/avatar-circular.png" alt="">
+                                <span class="dp-po-Avatar-name">Artem Berdyshev</span>
+                            </span>
+                        </span>
+                        <span class="dp-po-table-item dp-po-table-mail">artem.berdyshev@deskpro.com</span>
+                        <span class="dp-po-table-item dp-po-table-phone">+441234567890</span>
+                        <span class="dp-po-table-item dp-po-table-company">Design Lead, Deskpro</span>
+                        <span class="dp-po-table-item dp-po-table-message">
+
+                            <span class="dp-po-Icon Icon--member-message"></span>
+                            <span class="dp-po-tooltip-wrap">
+                                <span class="dp-po-Icon Icon--info Icon--primary"></span>
+                                <span class="dp-po-tooltip">Send direct message</span>
+                            </span>
+
+                        </span>
+                    </div>
+                    <div class="dp-po-table-row">
+                        <span class="dp-po-table-item dp-po-table-name">
+                            <span class="dp-po-Avatar Avatar--small Avatar--circle">
+                                <img class="dp-po-Avatar-icon" src="../img/docs/avatar-circular.png" alt="">
+                                <span class="dp-po-Avatar-name">Bogdan M</span>
+                            </span>
+                        </span>
+                        <span class="dp-po-table-item dp-po-table-mail">bogdan.m@deskpro.com</span>
+                        <span class="dp-po-table-item dp-po-table-phone">+441234567890</span>
+                        <span class="dp-po-table-item dp-po-table-company">Developer, Deskpro</span>
+                        <span class="dp-po-table-item dp-po-table-message"><span class="dp-po-Icon Icon--member-message"></span></span>
+                    </div>
+                    <div class="dp-po-table-row">
+                        <span class="dp-po-table-item dp-po-table-name">
+                            <span class="dp-po-Avatar Avatar--small Avatar--circle">
+                                <img class="dp-po-Avatar-icon" src="../img/docs/avatar-circular.png" alt="">
+                                <span class="dp-po-Avatar-name">Colin Dunn</span>
+                            </span>
+                        </span>
+                        <span class="dp-po-table-item dp-po-table-mail">colin.dunn@deskpro.com</span>
+                        <span class="dp-po-table-item dp-po-table-phone">+441234567890</span>
+                        <span class="dp-po-table-item dp-po-table-company">CEO, Apple</span>
+                        <span class="dp-po-table-item dp-po-table-message"><span class="dp-po-Icon Icon--member-message"></span></span>
+                    </div>
+                    <div class="dp-po-table-row">
+                        <span class="dp-po-table-item dp-po-table-name">
+                            <span class="dp-po-Avatar Avatar--small Avatar--circle">
+                                <img class="dp-po-Avatar-icon" src="../img/docs/avatar-circular.png" alt="">
+                                <span class="dp-po-Avatar-name">Giada Bobbera</span>
+                            </span>
+                        </span>
+                        <span class="dp-po-table-item dp-po-table-mail">giada.bobbera@deskpro.com</span>
+                        <span class="dp-po-table-item dp-po-table-phone">+441234567890</span>
+                        <span class="dp-po-table-item dp-po-table-company">Credit manager</span>
+                        <span class="dp-po-table-item dp-po-table-message"><span class="dp-po-Icon Icon--member-message"></span></span>
+                    </div>
+                    <div class="dp-po-table-row">
+                        <span class="dp-po-table-item dp-po-table-name">
+                            <span class="dp-po-Avatar Avatar--small Avatar--circle">
+                                <img class="dp-po-Avatar-icon" src="../img/docs/avatar-circular.png" alt="">
+                                <span class="dp-po-Avatar-name">Grace Howlett</span>
+                            </span>
+                        </span>
+                        <span class="dp-po-table-item dp-po-table-mail">grace.howlett@deskpro.com</span>
+                        <span class="dp-po-table-item dp-po-table-phone">+441234567890</span>
+                        <span class="dp-po-table-item dp-po-table-company">Hedge fund trader</span>
+                        <span class="dp-po-table-item dp-po-table-message"><span class="dp-po-Icon Icon--member-message"></span></span>
+                    </div>
+                    <div class="dp-po-table-row">
+                        <span class="dp-po-table-item dp-po-table-name">
+                            <span class="dp-po-Avatar Avatar--small Avatar--circle">
+                                <img class="dp-po-Avatar-icon" src="../img/docs/avatar-circular.png" alt="">
+                                <span class="dp-po-Avatar-name">Hannah Scott</span>
+                            </span>
+                        </span>
+                        <span class="dp-po-table-item dp-po-table-mail">hannah.scott@deskpro.com</span>
+                        <span class="dp-po-table-item dp-po-table-phone">+441234567890</span>
+                        <span class="dp-po-table-item dp-po-table-company">Marketing technologist</span>
+                        <span class="dp-po-table-item dp-po-table-message"><span class="dp-po-Icon Icon--member-message"></span></span>
+                    </div>
+                    <div class="dp-po-table-row">
+                        <span class="dp-po-table-item dp-po-table-name">
+                            <span class="dp-po-Avatar Avatar--small Avatar--circle">
+                                <img class="dp-po-Avatar-icon" src="../img/docs/avatar-circular.png" alt="">
+                                <span class="dp-po-Avatar-name">Hugo Pinto</span>
+                            </span>
+                        </span>
+                        <span class="dp-po-table-item dp-po-table-mail">hugo.pinto@deskpro.com</span>
+                        <span class="dp-po-table-item dp-po-table-phone">+441234567890</span>
+                        <span class="dp-po-table-item dp-po-table-company">Insurance claims examiner</span>
+                        <span class="dp-po-table-item dp-po-table-message"><span class="dp-po-Icon Icon--member-message"></span></span>
+                    </div>
+                    <div class="dp-po-table-row">
+                        <span class="dp-po-table-item dp-po-table-name">
+                            <span class="dp-po-Avatar Avatar--small Avatar--circle">
+                                <img class="dp-po-Avatar-icon" src="../img/docs/avatar-circular.png" alt="">
+                                <span class="dp-po-Avatar-name">Jerome Indefenzo</span>
+                            </span>
+                        </span>
+                        <span class="dp-po-table-item dp-po-table-mail">jerome.indefenzo@deskpro.com</span>
+                        <span class="dp-po-table-item dp-po-table-phone">+441234567890</span>
+                        <span class="dp-po-table-item dp-po-table-company">Commercial real estate agent</span>
+                        <span class="dp-po-table-item dp-po-table-message"><span class="dp-po-Icon Icon--member-message"></span></span>
+                    </div>
+                    <div class="dp-po-table-row">
+                        <span class="dp-po-table-item dp-po-table-name">
+                            <span class="dp-po-Avatar Avatar--small Avatar--circle">
+                                <img class="dp-po-Avatar-icon" src="../img/docs/avatar-circular.png" alt="">
+                                <span class="dp-po-Avatar-name">Julien Micah</span>
+                            </span>
+                        </span>
+                        <span class="dp-po-table-item dp-po-table-mail">julien.micah@deskpro.com</span>
+                        <span class="dp-po-table-item dp-po-table-phone">+441234567890</span>
+                        <span class="dp-po-table-item dp-po-table-company">Software engineer</span>
+                        <span class="dp-po-table-item dp-po-table-message"><span class="dp-po-Icon Icon--member-message"></span></span>
+                    </div>
+                    <div class="dp-po-table-row">
+                        <span class="dp-po-table-item dp-po-table-name">
+                            <span class="dp-po-Avatar Avatar--small Avatar--circle">
+                                <img class="dp-po-Avatar-icon" src="../img/docs/avatar-circular.png" alt="">
+                                <span class="dp-po-Avatar-name">Kate Nightingale</span>
+                            </span>
+                        </span>
+                        <span class="dp-po-table-item dp-po-table-mail">kate.nightingale@deskpro.com</span>
+                        <span class="dp-po-table-item dp-po-table-phone">+441234567890</span>
+                        <span class="dp-po-table-item dp-po-table-company">Social media manager, Spotify</span>
+                        <span class="dp-po-table-item dp-po-table-message"><span class="dp-po-Icon Icon--member-message"></span></span>
+                    </div>
+
+                </div>
+                
+            </div>
+
+            <div class="demo-pagination">
+                <div class="dp-po-Pagination-container">
+                    <ul class="dp-po-Pagination">
+                        <li><a href="#" class="dp-po-PaginationArrows"><span class="dp-po-arrow arrow--left"></span></a>
+                        <li><a href="#" class="dp-po-PageNumber is-active">1</a></li>
+                        <li><a href="#" class="dp-po-PageNumber">2</a></li>
+                        <li><a href="#" class="dp-po-PageNumber">3</a></li>
+                        <li><a href="#" class="dp-po-PageNumber">4</a></li>
+                        <li><a href="#" class="dp-po-PageNumber">5</a></li>
+                        <li><a href="#" class="dp-po-PageNumber">6</a></li>
+                        <li><a href="#" class="dp-po-PageNumber">7</a></li>
+                        <li><span class="dp-po-BreakPagination">...</span></li>
+                        <li><a href="#" class="dp-po-PageNumber">75</a></li>
+                        <li><a href="#" class="dp-po-PaginationArrows"><span class="dp-po-arrow"></span></a></li>
+                    </ul>
+                    <span class="dp-po-PageJump">
+                        <label class="dp-po-PageJump-label">
+                            Go to page
+                            <input type="number" min="1" max="75" class="dp-Input dp-po-PageJump-page" value="" />
+                        </label>
+                        <button type="button" class="dp-po-Button Button--small dp-po-PageJump-button">Go</button>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="dp-po-footer">
+        <div class="dp-po-frame-copyright">Powered by <span class="dp-po-copyright-deskpro"><span class="dp-po-Icon Icon--elephant Icon--primary"></span>Deskpro</span></div>
+    </footer>
+
+</body>
+</html>

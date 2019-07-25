@@ -69,7 +69,21 @@ $(document).ready(function(){
 	$('body').on('click', '.dp-po-vote .dp-po-item-vote', function(event) {
 		$(this).toggleClass('is-active')
 	})
-	
+
+	$('body').on('click', '.calendar--community .dp-po-vote-calendar', function(event) {
+		$(this).closest('.calendar--community').toggleClass('is-active')
+	})
+
+	$('body').on('click', '.calendar--community .dp-po-date', function(event) {
+		$('body').find('.dp-po-registration-popup').toggleClass('is-active');
+		$('body').find('.dp-po-calendar-wrapper.calendar--community').toggleClass('is-logged');
+		$('body').toggleClass('is-open');
+	})
+
+	$('body').on('click', '.dp-po-user-status .dp-po-dropdown-atom', function(event) {
+		$(this).toggleClass('is-active')
+	})
+
 	// Reply comment
 
 	$('body').on('click', '.addReplyComment', function(event) {
@@ -99,14 +113,14 @@ $(document).ready(function(){
 	  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 	  return re.test(email);
 	}
-	// $('body').on('click', '.Resend--Link', function(event) {
-	// 	var form = $(this).attr('data-form-display');
-	// 	// console.log(form);
-	// 	$('.dp-po-Info.Info--danger').addClass('dp-po-d-none');
-	// 	$('.dp-po-title-tab').addClass('is-active');
-	// 	$(form).addClass('is-active');
-	// 	return false;
-	// });
+	$('body').on('click', '.Resend--Link', function(event) {
+		var form = $(this).attr('data-form-display');
+		// console.log(form);
+		$('.dp-po-Info.Info--danger').addClass('dp-po-d-none');
+		$('.dp-po-title-tab').addClass('is-active');
+		$(form).addClass('is-active');
+		return false;
+	});
 	$('body').on('click', '.dp-po-Dropdown-container .dp-po-dropdown-atom', function(event) {
 		$(this).toggleClass('is-active');
 	});
