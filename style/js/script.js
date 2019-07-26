@@ -53,8 +53,18 @@ $(document).ready(function(){
 		$(this).data('sitertohide',timer);
 	})
 
+	$('html').on('click', 'body.is-open .dp-po-overlay', function(event) {
+		$('body').removeClass('is-open');
+		$('.dp-po-registration-popup.is-active').removeClass('is-active');
+		$('.dp-po-calendar-wrapper.calendar--community.is-logged').removeClass('is-logged');
+	});
 	$('body').on('click', '.label--time .Icon--Dots', function(event) {
-		$(this).toggleClass("is-active");
+		if($(this).hasClass("is-active")){
+			$(this).removeClass("is-active");
+		}else{
+			$(this).closest('.dp-po-comments-wrap').find('.label--time .Icon--Dots').removeClass('is-active');
+			$(this).addClass("is-active");
+		}
 	})
 
 	$('body').on('click', '.Button--success', function(event) {
