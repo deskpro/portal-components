@@ -111,8 +111,21 @@
 	justify-content: flex-end;;
 }
 
-.dp-po-table-message .dp-po-Icon {
-	cursor: pointer;
+.dp-po-table-message .dp-po-tooltip-wrap {
+	padding: 0;
+	margin: 0;
+}
+
+.dp-po-table-message .dp-po-tooltip-wrap .dp-po-Icon {
+	background-size: 20px 17px;
+	position: relative;
+	left: auto;
+	right: auto;
+}
+
+.dp-po-table-message .dp-po-tooltip-wrap .dp-po-tooltip {
+	font: var(--p-1);
+	color: var(--grey-dark);
 }
 
 .dp-po-member-table .dp-po-title-row {
