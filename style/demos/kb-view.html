@@ -17,7 +17,6 @@
     <script src="/portal-components/style/js/script.js"></script>
 </head>
 <body class="dp-Template">
-<!-- <body class="dp-Template dp-po-direction-rtl"> -->
     <!-- <a href="../../pages/en">Back</a> -->
     <div>
         <header>
@@ -456,15 +455,19 @@
                                 </ul>
                                 <div class="dp-po-Forms Forms--login">
                                     <!-- step one -->
-                                    <form class="dp-po-registration-step dp-po-step-one Form--login is-active">
+                                    <form class="dp-po-registration-step dp-po-step-one Forms--login is-active">
                                         <div class="dp-po-input-wrap">
-                                            <input type="email" required name="email" placeholder="Email">
-                                            <input type="password" required name="password" placeholder="Password">
+                                            <div class="dp-po-form-group">
+                                                <input type="email" name="email" placeholder="Email">
+                                            </div>
+                                            <div class="dp-po-form-group">
+                                                <input type="password" name="password" placeholder="Password" class="passValid">
+                                            </div>
                                             <span class="dp-po-CustomCheckbox">
                                                 <input type="checkbox" class="dp-po-ControlInput" id="loginCheckbox-01"></input>
                                                 <label for="loginCheckbox-01">Stay logged in</label>
                                             </span>
-                                            <button class="dp-po-Button Button--large">Log in</button>
+                                            <button  class="dp-po-Button Button--large">Log in</button>
                                             <a href="" class="dp-po-description">Need a password reminder?</a>
                                         </div>
                                         <div class="dp-po-separete">
@@ -480,29 +483,43 @@
 
                                         <h4 class="dp-po-title dp-po-hidden-md-up">Register</h4>
                                         <div class="dp-po-input-wrap">
-                                            <label class="dp-po-hidden-md-up">Name</label>
-                                            <input type="" name="name" required placeholder="Name">
-                                            <label class="dp-po-hidden-md-up">Email</label>
-                                            <input type="email" required name="email" placeholder="Email">
-                                            <label class="dp-po-hidden-md-up">Password</label>
-                                            <input type="password" required name="password" placeholder="Password">
-                                            <label class="dp-po-hidden-md-up">Confirm password</label>
-                                            <input type="password" required name="passwordconfirm" placeholder="Confirm password">
+                                            <div class="dp-po-form-group">
+                                                <label class="dp-po-hidden-md-up">Name</label>
+                                                <input type="" name="name" required placeholder="Name">
+                                            </div>
+                                            <div class="dp-po-form-group">
+                                                <label class="dp-po-hidden-md-up">Email</label>
+                                                <input type="email" required name="email" placeholder="Email" class="dp-po-error">
+                                                <!-- text validation -->
+                                                <div class="dp-po-validation-text">Please fill in this filed</div>
+                                            </div>
+                                            <div class="dp-po-form-group">
+                                                <label class="dp-po-hidden-md-up">Password</label>
+                                                <input type="password" required name="password" placeholder="Password">
+                                            </div>
+                                            <div class="dp-po-form-group">
+                                                <label class="dp-po-hidden-md-up">Confirm password</label>
+                                                <input type="password" required name="passwordconfirm" placeholder="Confirm password">
+                                            </div>
+                                            
+                                            <div class="dp-po-form-group">
+                                                <label class="dp-po-hidden-md-up">Timezone</label>
+                                                <select name="timezone" class="as-dp-po-Dropdown-container" placeholder="Select timezone">
+                                                    <option value="1" selected>Option 1</option>
+                                                    <option value="2">Option 2</option>
+                                                    <option value="3">Option 3</option>
+                                                    <option value="4">Option 4</option>
+                                                    <option value="5">Option 5</option>
+                                                </select>
+                                            </div>
 
-                                            <label class="dp-po-hidden-md-up">Timezone</label>
-                                            <select name="timezone" class="as-dp-po-Dropdown-container" placeholder="Select timezone">
-                                                <option value="1" selected>Option 1</option>
-                                                <option value="2">Option 2</option>
-                                                <option value="3">Option 3</option>
-                                                <option value="4">Option 4</option>
-                                                <option value="5">Option 5</option>
-                                            </select>
-
-                                            <label>Captcha</label>
-                                            <div class="dp-po-captcha">
-                                                <input type="" name="captcha1" placeholder="" class="dp-po-textarea-captcha">
-                                                <span class="dp-po-Icon Icon--refresh Icon--primary"></span>
-                                                <input type="" name="captcha2" placeholder="Insert text" class="dp-po-text-captcha">
+                                            <div class="dp-po-form-group">
+                                                <label>Captcha</label>
+                                                <div class="dp-po-captcha">
+                                                    <input type="" name="captcha1" placeholder="" class="dp-po-textarea-captcha">
+                                                    <span class="dp-po-Icon Icon--refresh Icon--primary"></span>
+                                                    <input type="" name="captcha2" placeholder="Insert text" class="dp-po-text-captcha">
+                                                </div>
                                             </div>
 
                                             <a href="" class="dp-po-description">To prove you are human, please insert the text you can see in the box above.</a>
