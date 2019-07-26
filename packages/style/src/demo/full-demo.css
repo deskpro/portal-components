@@ -1352,6 +1352,11 @@ a:hover {
   width: 14px;
 }
 
+.dp-po-article-details-wrap .dp-po-user-list .dp-po-tooltip-wrap .dp-po-Icon {
+	top: 5px;
+	left: 7px;
+}
+
 .dp-po-time-status {
   color: var(--grey-dark);
   font: var(--messenger-b-2);
@@ -2134,6 +2139,31 @@ a:hover {
 .dp-po-direction-rtl .dp-po-subtitle .dp-po-Avatar {
 	margin-right: 0;
 	margin-left: 10px;
+}
+
+/*validate*/
+
+.dp-po-form-group {
+	position: relative;
+}
+
+.dp-po-Forms.Forms--login input.dp-po-error {
+	border: 2px solid var(--danger);
+	margin-bottom: 39px;
+}
+
+.dp-po-validation-text {
+	color: var(--danger);
+	font: var(--p-3);
+	position: absolute;
+	bottom: 18px;
+	left: 0;
+	z-index: 1;
+	display: none;
+}
+
+.dp-po-Forms .dp-po-error + .dp-po-validation-text {
+	display: block;
 }
 
 /* mobile -v */
@@ -2930,6 +2960,10 @@ a:hover {
 	padding-bottom: 20px;
   }
 
+  .dp-po-article-details-wrap .dp-po-user-list .dp-po-tooltip-wrap .dp-po-Icon {
+	left: 0px;
+  }
+
   /*direction-rtl*/
 
   .dp-po-direction-rtl .dp-po-Header-container .dp-po-Forms.dp-po-Search-bar input {
@@ -3012,6 +3046,9 @@ a:hover {
   	margin-right: 15px;
   }
 
+  .dp-po-direction-rtl .dp-po-tooltip-wrap {
+	margin: 0 10px 0 5px;
+  }
 
 }
 

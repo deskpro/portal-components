@@ -94,11 +94,15 @@
 	margin: 0;
 }
 */
+
+.dp-po-community .dp-po-tex-wrap .dp-po-comments-item .dp-po-comment-subtitle {
+	padding-left: 40px;
+}
+
 .dp-po-community .dp-po-comment-subtitle {
 	font: var(--p-1);
 	margin: 15px 0;
 	max-width: 90%;
-	padding-left: 40px;
 }
 
 .dp-po-comments-item .dp-po-comments-status {
