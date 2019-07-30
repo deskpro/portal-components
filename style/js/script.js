@@ -53,11 +53,6 @@ $(document).ready(function(){
 		$(this).data('sitertohide',timer);
 	})
 
-	$('html').on('click', 'body.is-open .dp-po-overlay', function(event) {
-		$('body').removeClass('is-open');
-		$('.dp-po-registration-popup.is-active').removeClass('is-active');
-		$('.dp-po-calendar-wrapper.calendar--community.is-logged').removeClass('is-logged');
-	});
 	$('body').on('click', '.label--time .Icon--Dots', function(event) {
 		if($(this).hasClass("is-active")){
 			$(this).removeClass("is-active");
@@ -100,12 +95,44 @@ $(document).ready(function(){
 		$('body').toggleClass('is-open');
 	})
 
+	$('html').on('click', 'body.is-open .dp-po-overlay', function(event) {
+		$('body').removeClass('is-open');
+		$('.dp-po-registration-popup.is-active').removeClass('is-active');
+		$('.dp-po-calendar-wrapper.calendar--community.is-logged').removeClass('is-logged');
+	});
+
+	// Send a new message
+	$('body').on('click', '.dp-po-table-message .dp-po-tooltip-wrap .dp-po-Icon', function(event) {
+		$('body').find('.popup--message.dp-po-Popup').toggleClass('is-active');
+		$('body').toggleClass('is-open');
+	})
+
+	$('html').on('click', 'body.is-open .popup--message .dp-po-popup-title .Icon--close', function(event) {
+		$('body').removeClass('is-open');
+		$('.popup--message.dp-po-Popup.is-active').removeClass('is-active');
+	});
+
+	$('html').on('click', 'body.is-open .dp-po-overlay', function(event) {
+		$('body').removeClass('is-open');
+		$('.popup--message.dp-po-Popup.is-active').removeClass('is-active');
+	});
+
+	// 
 	$('body').on('click', '.dp-po-user-status .dp-po-dropdown-atom', function(event) {
 		$(this).toggleClass('is-active')
 	})
 
-	// Reply comment
+	// 
+	$('body').on('click', '.dp-po-wrapper-container .Icon--find', function(event) {
+		$('body').find('.dp-po-member-wrapper .dp-po-search-container').toggleClass('is-active');
+		// $('body').find('.dp-po-member-wrapper .dp-po-search-container .dp-po-Button').removeClass('is-active');
+	})
 
+	$('body').on('click', '.dp-po-member-wrapper .dp-po-Searchbar-wrap .dp-po-Button', function(event) {
+		$('body').find('.dp-po-member-wrapper .dp-po-search-container.is-active').removeClass('is-active');
+	})
+
+	// Reply comment
 	$('body').on('click', '.addReplyComment', function(event) {
 		$('.dp-po-comments-item').find('.dp-po-comments-wrap.dp-po-reply-comment').remove();
 		if($(this).closest('.dp-po-comments-item').find('.dp-po-comments-wrap.dp-po-reply-comment').length < 1){
@@ -226,6 +253,7 @@ $(document).ready(function(){
 		$(el).closest('.dp-po-Dropdown-container').append($html);
 		$(el).closest('.dp-po-Dropdown-container').find('.placeholder').html(label_selected);
 	});
+	// $('body').on('submit', '.Form--login', function(event) {
 	$('body').on('submit', '.Form--login', function(event) {
 		$(this).removeClass('is-active');
 		var email    = $(this).find('[name="email"]').val();
@@ -375,11 +403,33 @@ function filterView_collapse(){
     }
 }
 
+// cut function dp-po-member-directory
+
+function filterView_dropdownName(){
+    if (window.matchMedia('(max-width: 992px)').matches) {
+        $('.dp-po-member-directory .dp-po-sort.dp-po-Dropdown-container').detach().appendTo('.dp-po-member-directory .dp-po-Title-page .dp-po-wrapper-container');
+    }else{  
+        $('.dp-po-member-directory .dp-po-Title-page .dp-po-wrapper-container .dp-po-sort.dp-po-Dropdown-container').detach().prependTo('.dp-po-member-directory .dp-po-table-row.dp-po-title-row');
+    }
+}
+
+function filterView_dropdownFilter(){
+    if (window.matchMedia('(max-width: 992px)').matches) {
+        $('.dp-po-member-directory .Dropdown--filter').detach().appendTo('.dp-po-member-directory .dp-po-Title-page .dp-po-wrapper-container');
+    }else{  
+        $('.dp-po-member-directory .dp-po-Title-page .dp-po-wrapper-container .Dropdown--filter').detach().appendTo('.dp-po-member-directory .dp-po-search-container');
+    }
+}
+
 $(document).ready(function() {
     filterView_subscribe();
     filterView_collapse();
+    filterView_dropdownFilter();
+    filterView_dropdownName();
     $(window).resize(function() {
         filterView_subscribe();
         filterView_collapse();
+        filterView_dropdownFilter();
+        filterView_dropdownName();
     });
 });
