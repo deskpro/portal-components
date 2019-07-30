@@ -819,3 +819,9 @@ input.dp-po-input-avatar {
   min-width: 24px;
   height: 24px;
 }
+
+.Icon--my-tickets {
+  background-image: url('data:image/svg+xml,<?xml version="1.0" encoding="iso-8859-1"?><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.75 10.1899H27.7C28.42 10.1899 29 10.6799 29 11.2799V28.1299C29 28.6099 28.54 28.9999 27.96 28.9999H2.04C1.47 28.9999 1 28.6099 1 28.1299V11.0599C1 10.5799 1.46 10.1899 2.04 10.1899H6.25" stroke="%233A8DDE" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round"/><path d="M1 10.3999L15 22.2199L29 10.3999" stroke="%233A8DDE" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round"/><path d="M20.0898 17.2699L28.9998 28.6699" stroke="%233A8DDE" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round"/><path d="M1 28.99L9.91 17.58" stroke="%233A8DDE" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round"/><path d="M6.25 14.64V2.31C6.25 1.59 6.84 1 7.56 1H22.43C23.15 1 23.74 1.59 23.74 2.31V14.64" stroke="%233A8DDE" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round"/><path d="M14 6.25H20.09" stroke="#60B6AF" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.75 10.62H20.09" stroke="#60B6AF" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.75 15H20.09" stroke="#60B6AF" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.6401 7.75C11.4686 7.75 12.1401 7.07843 12.1401 6.25C12.1401 5.42157 11.4686 4.75 10.6401 4.75C9.81171 4.75 9.14014 5.42157 9.14014 6.25C9.14014 7.07843 9.81171 7.75 10.6401 7.75Z" fill="%23A480AF"/></svg>');
+  min-width: 30px;
+  height: 30px;
+}

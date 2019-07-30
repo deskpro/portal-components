@@ -2,7 +2,12 @@ body {
 	color: var(--grey-darkest);
 }
 
+a {
+	color: var(--brand-primary);
+}
+
 a:hover {
+  color: var(--brand-primary);
   opacity: 0.8;
   text-decoration: underline;
 }
