@@ -54,5 +54,23 @@ The demo pages are full static pages. The source for the demos is at [`packages/
 For example:
 
 * [`.../static/demos/kb-view.html`](https://github.com/deskpro/portal-components/blob/develop/packages/style/website/static/demos/kb-view.html) -- static HTML for the KB View page
-* [`http://.../demos/kb-view.html](https://deskpro.github.io/portal-components/style/demos/kb-view.html) -- built demo page
+* [`http://.../demos/kb-view.html`](https://deskpro.github.io/portal-components/style/demos/kb-view.html) -- built demo page
   * When you're working on your computer, that'd be [localhost](http://localhost:3000/portal-components/style/demos/kb-view.html) instead.
+
+
+# Browser Requirements
+
+* Google Chrome: latest two versions
+* Mozilla Firefox: latest two versions
+* Apple Safari: latest two versions
+* Microsoft Internet Explorer: latest version only. The pages need to generally work, however it is acceptable to have minor differences, use polyfills, etc. For example, we might decide that a certain effect or animation doesn't work in IE because the work involved to get it working would not be worth it.
+* Microsoft Edge: latest two versions
+
+# Naming Standards / Coding Standards
+
+* We adhere loosely to the BEM naming convention.
+* All CSS classnames must begin with the namespace `dp-po-`.
+  * This is necessary because our customers tend to modify our HTML templates and CSS, and we need to ensure that any custom code they add does not conflict with ours. For example, it's quite common for a customer to copy+paste a "header" from their website.
+* No global CSS (for the same reason as above).
+* Prefer classes over element selectors. For example, it's better to have `.dp-po-foo .dp-po-myheading` than `.dp-po-foo > h3`.
+* Prefer variables over hard-coded values for things like colours, fonts, etc. Ultimately our goal is to create a set of variables that you can change in one place, which would allow easy theming.
