@@ -207,7 +207,8 @@
   --shadow-bottom: 0 5px 5px rgba(0, 0, 0, 0.15);
   --shadow-top-inset: inset 0 5px 5px 0 rgba(0, 0, 0, 0.15);
   --shadow-bottom-left: -5px 5px 5px rgba(0, 0, 0, 0.15);
-  --shadow-bottom-right: 5px 5px 5px rgba(0, 0, 0, 0.15);
+  --shadow-bottom-right: 3px 3px 5px rgba(0, 0, 0, 0.15);
+  /*--shadow-bottom-right: 5px 5px 5px rgba(0, 0, 0, 0.15);*/
   --shadow-left: -5px 0 5px rgba(0, 0, 0, 0.15);
   --shadow-right: 5px 0 5px rgba(0, 0, 0, 0.15);
 

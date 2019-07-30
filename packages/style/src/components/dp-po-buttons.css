@@ -12,6 +12,7 @@
   line-height: 100%;
   position: relative;
   width: 100%;
+  outline: none;
 }
 
 /* Button--small */

@@ -246,20 +246,6 @@
 	display: none;
 }
 
-.dp-po-community.dp-Template.is-open .dp-po-overlay:after {
-	display: block;
-	content: '';
-	background: rgba(139, 146, 147, .4);
-	bottom: 0;
-	left: 0;
-	right: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 2;
-	position: fixed;
-}
-
 .dp-po-community .dp-po-description-wrap .dp-IconsWrapper {
 	margin-top: -6px;
 }
