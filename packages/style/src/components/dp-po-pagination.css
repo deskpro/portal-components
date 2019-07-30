@@ -156,3 +156,15 @@
   border: 1px solid var(--brand-primary);
   opacity: 1;
 }
+
+/*direction-rtl*/
+
+.dp-po-direction-rtl .dp-po-PageJump {
+  padding-left: 0;
+  padding-right: 16px;
+}
+
+.dp-po-direction-rtl .dp-po-PageJump::after {
+  left: auto;
+  right: 5px;
+}

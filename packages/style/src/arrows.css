@@ -66,3 +66,14 @@
 .dp-Template .dp-po-arrow::after {
   width: 2px;
 }
+
+/* direction-rtl 
+*/
+
+.dp-po-direction-rtl .dp-po-arrow::before {
+  transform: rotate(45deg);
+}
+
+.dp-po-direction-rtl .dp-po-arrow::after {
+  transform: rotate(-45deg);  
+}
