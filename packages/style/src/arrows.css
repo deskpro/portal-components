@@ -61,3 +61,8 @@
 .dp-po-Avatar .dp-po-arrow::before {
   top: -2px;
 }
+
+.dp-Template .dp-po-arrow::before, 
+.dp-Template .dp-po-arrow::after {
+  width: 2px;
+}
