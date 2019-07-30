@@ -169,6 +169,11 @@
   top: -2px;
 }
 
+.dp-Template .dp-po-arrow::before, 
+.dp-Template .dp-po-arrow::after {
+  width: 2px;
+}
+
 .dp-Bg-ColorDemonstration {
   display: -webkit-box;
   display: flex;
