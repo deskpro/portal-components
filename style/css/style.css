@@ -4772,6 +4772,12 @@ input.dp-po-input-avatar {
   height: 24px;
 }
 
+.Icon--my-tickets {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='30' height='30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M23.75 10.19h3.95c.72 0 1.3.49 1.3 1.09v16.85c0 .48-.46.87-1.04.87H2.04C1.47 29 1 28.61 1 28.13V11.06c0-.48.46-.87 1.04-.87h4.21' stroke='%233A8DDE' stroke-width='1.5' stroke-miterlimit='10' stroke-linejoin='round'/%3E%3Cpath d='M1 10.4l14 11.82L29 10.4M20.09 17.27L29 28.67M1 28.99l8.91-11.41' stroke='%233A8DDE' stroke-width='1.5' stroke-miterlimit='10' stroke-linejoin='round'/%3E%3Cpath d='M6.25 14.64V2.31c0-.72.59-1.31 1.31-1.31h14.87c.72 0 1.31.59 1.31 1.31v12.33' stroke='%233A8DDE' stroke-width='1.5' stroke-miterlimit='10' stroke-linejoin='round'/%3E%3Cpath d='M14 6.25h6.09M9.75 10.62h10.34M9.75 15h10.34' stroke='%2360B6AF' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.64 7.75a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z' fill='%23A480AF'/%3E%3C/svg%3E");
+  min-width: 30px;
+  height: 30px;
+}
+
 .dp-po-filter.is-hover {
   background-color: #f7f7f7;
 }
@@ -5738,7 +5744,12 @@ body {
 	color: #4c4f50;
 }
 
+a {
+	color: #3a8dde;
+}
+
 a:hover {
+  color: #3a8dde;
   opacity: 0.8;
   text-decoration: underline;
 }
