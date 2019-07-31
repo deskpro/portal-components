@@ -1,0 +1,50 @@
+{
+  "docs": {
+    "Getting Started": [
+    	"intro",
+        "colours",
+        "portal-typography",
+        "messenger-typography"
+    ],
+    "Components": [
+        "components/dp-po-Avatars",
+        "components/dp-po-Buttons",
+        "components/dp-po-Breadcrumbs",
+        "components/dp-po-Date",
+        "components/dp-po-Cards",
+        "components/dp-po-Dropdown",
+        "components/dp-po-Dividers",
+        "components/dp-po-Information",
+        "components/dp-po-Icontext",
+        "components/dp-po-Links",
+        "components/dp-po-Lists",
+    	"components/dp-po-Labels",
+        "components/dp-po-Pagination",
+        "components/dp-po-Popups",
+        "components/dp-po-Progressbar",
+        "components/dp-po-Tables",
+        "components/dp-po-Tabs",
+        "components/dp-po-Tooltips",
+        "components/dp-po-Scrollbar"
+    ],
+    "Messenger Components": [
+        "messenger-components/dp-po-Buttons",
+        "messenger-components/dp-po-Cards",
+        "messenger-components/dp-po-Avatars",
+        "messenger-components/dp-po-Badges",
+        "messenger-components/dp-po-Initiators"
+    ],
+    "Elements": [
+        "elements/dp-po-Icons",
+        "elements/dp-po-Messenger-Icons"
+    ],
+    "Forms": [
+        "forms/dp-po-Forms"
+    ],
+    "Patterns": [
+        "patterns/dp-po-Filters",
+        "patterns/dp-po-News",
+        "patterns/dp-po-Guides"
+    ]
+  }
+}
