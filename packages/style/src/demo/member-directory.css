@@ -466,6 +466,15 @@
 		box-shadow: none;
 	}
 
+	.dp-po-Popup.popup--message .dp-po-Avatar-icon {
+		width: 22px;
+		height: 22px;
+	}
+
+	.dp-po-Popup.popup--message .dp-po-Upload-wrapper .dp-po-comment-subtitle {
+		font: var(--p-2);
+	}
+
 	.dp-po-member-directory .demo-pagination {
 		padding: 20px 0;
 		justify-content: center;
@@ -534,6 +543,17 @@
 		justify-content: flex-start;
 	}
 
+/*	.dp-po-member-directory .dp-po-member-wrapper {
+		position: inherit;
+	}*/
+
+	.dp-po-title-txt {
+		overflow: hidden;
+		white-space: nowrap;
+		display: inline-block;
+		text-overflow: ellipsis;
+	}
+
 	/*direction-rtl*/
 
 	.dp-po-direction-rtl.dp-po-member-directory .dp-po-main .dp-po-Title-page .dp-po-Icon {
@@ -541,22 +561,57 @@
 		margin-right: 14px;
 	}
 
-	.dp-po-member-directory .dp-po-main .dp-po-Title-page .dp-po-Icon.Icon--member-filter {
+	.dp-po-direction-rtl.dp-po-member-directory .dp-po-main .dp-po-Title-page .dp-po-Icon.Icon--member-filter {
 		margin-left: 0;
 	}
 
-	.dp-po-member-directory .dp-po-member-table .dp-po-table-item.dp-po-table-message {
+	.dp-po-direction-rtl.dp-po-member-directory .dp-po-member-table .dp-po-table-item.dp-po-table-message {
 		right: auto;
 		left: 0;
 	}
 
-	.dp-po-member-directory .dp-po-member-table .dp-po-table-item:not(:first-child) {
+	.dp-po-direction-rtl.dp-po-member-directory .dp-po-member-table .dp-po-table-item:not(:first-child) {
 		margin-left: 0;
 		margin-right: 32px;
 	}
 
 	.dp-po-direction-rtl.dp-po-member-directory .demo-pagination {
 		padding: 20px 0;
+	}
+
+}
+
+@media (max-width: 768px) {
+
+	.popup--message.dp-po-Popup {
+		top: -100px;
+		height: 100vh;
+	}
+
+	.dp-po-member-directory .dp-po-member-wrapper {
+		position: initial;
+	}
+
+	.dp-Template.dp-po-member-directory.is-open .dp-po-overlay:after {
+		display: none;
+	}
+
+	.popup--message.dp-po-Popup {
+		padding: 15px 10px 20px;
+	}
+
+	.dp-po-Popup .dp-po-button-wrap .dp-po-Button {
+		flex: 0 0 48%;
+		max-width: 48%;
+		min-width: 48%;
+	}
+
+	.dp-po-Popup .dp-po-button-wrap .dp-po-Button:first-child {
+		margin-right: 10px;
+	}
+
+	.dp-po-Popup .dp-po-button-wrap {
+		justify-content: space-between;
 	}
 
 }
