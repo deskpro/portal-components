@@ -12,54 +12,53 @@
             document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +':35729/livereload.js?snipver=1"></' + 'script>');
         }
     </script>
-    <title>KB View</title>
+    <title>${props.title}</title>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="/portal-components/style/js/script.js"></script>
 </head>
-<body class="dp-Template dp-po-member-directory">
+<body class="dp-Template dp-po-member-directory dp-po-tickets">
 
     <header>
-        <ul class="dp-po-nav">
-            <li class="dp-po-Logo-wrap">
-                <span class="dp-po-Icon Icon-Tech-company"></span>
-                <span class="dp-po-Logo-descript">Support Center</span>
-            </li>
-            <li class="dp-po-nav-control">
-                <ul>
-                    <li class="dp-po-Select-Language">
-                        <span class="dp-po-Icon Icon--UK"></span>
-                        English
+    <ul class="dp-po-nav">
+        <li class="dp-po-Logo-wrap">
+            <span class="dp-po-Icon Icon-Tech-company"></span>
+            <span class="dp-po-Logo-descript">Support Center</span>
+        </li>
+        <li class="dp-po-nav-control">
+            <ul>
+                <li class="dp-po-Select-Language">
+                    <span class="dp-po-Icon Icon--UK"></span>
+                    English
+                    <span class="dp-po-arrow arrow--bottom arrow--brand-primary"></span>
+                </li>
+                <li>
+                    <button class="dp-po-Button Button--small">Contact us</button>
+                </li>
+                <li class="dp-po-back-home">
+                    <span class="dp-po-Icon Icon--Home"></span>
+                </li>
+                <li>
+                    <span class="dp-po-Avatar">
+                        <img src="/portal-components/style/img/docs/avatar.png" class="dp-po-Avatar-icon" alt=""></img>
                         <span class="dp-po-arrow arrow--bottom arrow--brand-primary"></span>
-                    </li>
-                    <li>
-                        <button class="dp-po-Button Button--small">Contact us</button>
-                    </li>
-                    <li class="dp-po-back-home">
-                        <span class="dp-po-Icon Icon--Home"></span>
-                    </li>
-                    <li>
-                        <span class="dp-po-Avatar">
-                            <img src="/portal-components/style/img/docs/avatar.png" class="dp-po-Avatar-icon" alt=""></img>
-                            <span class="dp-po-arrow arrow--bottom arrow--brand-primary"></span>
-                        </span>
+                    </span>
 
-                        <span class="dp-po-Avatar Avatar--circle">
-                            <img class="dp-po-Avatar-icon" src="/portal-components/style/img/docs/avatar-circular.png" alt="">
-                        </span>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </header>
-
+                    <span class="dp-po-Avatar Avatar--circle">
+                        <img class="dp-po-Avatar-icon" src="/portal-components/style/img/docs/avatar-circular.png" alt="">
+                    </span>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</header>
     <section class="dp-po-Header-container">
-        <form class="dp-po-Forms dp-po-Search-bar">
-            <div class="dp-po-Searchbar-wrap">
-                <input type="" name="" placeholder="How can we help you today?"></input>
-                <span class="dp-po-Icon Icon--find Icon--primary"></span>
-            </div>
-        </form>
-    </section>
+    <form class="dp-po-Forms dp-po-Search-bar">
+        <div class="dp-po-Searchbar-wrap">
+            <input type="" name="" placeholder="How can we help you today?"></input>
+            <span class="dp-po-Icon Icon--find Icon--primary"></span>
+        </div>
+    </form>
+</section>
 
     <section class="dp-po-Breadcrumbs-wrap">
         <div class="dp-po-container">
@@ -74,8 +73,8 @@
     <section class="dp-po-main">
         <div class="dp-po-container dp-po-member-container">
             <h2 class="dp-po-Title-page">
-                <span class="dp-po-Icon Icon--member-directory dp-po-hidden-md"></span>
-                Member Directory
+                <span class="dp-po-Icon Icon--my-tickets dp-po-hidden-md"></span>
+                My tickets
                 <span class="dp-po-wrapper-container dp-po-hidden-md-up">
                     <span class="dp-po-Icon Icon--find Icon--primary"></span>
                     
@@ -87,7 +86,7 @@
                 <div class="dp-po-search-container">
                     <form class="dp-po-Forms dp-po-Search-bar">
                         <div class="dp-po-Searchbar-wrap">
-                            <input type="" name="" placeholder="Search"></input>
+                            <input type="" name="" placeholder="Search tickets"></input>
                             <span class="dp-po-Icon Icon--find Icon--primary dp-po-hidden-md"></span>
                         </div>
                         <button class="dp-po-Button Button--small dp-po-hidden-md-up">Cancel</button>
@@ -96,7 +95,7 @@
                     <div class="dp-po-Dropdown-container Dropdown--filter">
                         <span class="dp-po-dropdown-atom"><span class="dp-po-Icon Icon--member-filter"></span></span>
                         <ul class="dp-po-dropdown-menu">
-                            <li class="dp-po-dropdown-menu-item dp-po-title-list">Show</li>
+                            <!-- <li class="dp-po-dropdown-menu-item dp-po-title-list">Show</li> -->
                             <li class="dp-po-dropdown-menu-item">
                                 <span class="dp-po-CustomCheckbox CustomCheckbox--medium">
                                     <input type="checkbox" class="dp-po-ControlInput" id="Email-01"></input>
@@ -135,11 +134,13 @@
                     <div class="dp-po-table-row dp-po-title-row dp-po-hidden-md">
 
                         <span class="dp-po-table-item dp-po-sort dp-po-Dropdown-container">
-                            <span class="dp-po-dropdown-atom"><span class="dp-po-hidden-md">Name</span><span class="dp-po-Icon Icon--sort Icon--primary"></span></span>
-                            <ul class="dp-po-dropdown-menu">
+                            <span class="dp-po-dropdown-atom"><span class="dp-po-hidden-md">Ticket ID</span>
+                                <span class="dp-po-Icon Icon--sort Icon--primary"></span>
+                            </span>
+<!--                             <ul class="dp-po-dropdown-menu">
                                 <li class="dp-po-dropdown-menu-item">First Name</li>
                                 <li class="dp-po-dropdown-menu-item">Last Name</li>
-                            </ul>
+                            </ul> -->
                         </span>
 
                         <span class="dp-po-table-item dp-po-table-mail">Email</span>
@@ -390,8 +391,8 @@
     <div class="dp-po-overlay"></div>
 
     <footer class="dp-po-footer">
-        <div class="dp-po-frame-copyright">Powered by <span class="dp-po-copyright-deskpro"><span class="dp-po-Icon Icon--elephant Icon--primary"></span>Deskpro</span></div>
-    </footer>
+    <div class="dp-po-frame-copyright">Powered by <span class="dp-po-copyright-deskpro"><span class="dp-po-Icon Icon--elephant Icon--primary"></span>Deskpro</span></div>
+</footer>
 
 </body>
 </html>
