@@ -69,16 +69,59 @@ class HomeSplash extends React.Component {
         </SplashContainer>
         <Demos>
           <h2>Demos</h2>
-          <ul>
-            <li><a href={pageUrl('demos/kb-view.html')}>KB View</a></li>
-            <li><a href={pageUrl('demos/kb-view-rtl.html')}>KB View - RTL</a></li>
-            <li><a href={pageUrl('demos/kb-view-pdf.html')}>KB View PDF</a></li>
-            <li><a href={pageUrl('demos/kb-view-news.html')}>KB View News</a></li>
-            <li><a href={pageUrl('demos/kb-view-сommunity.html')}>KB View Community</a></li>
-            <li><a href={pageUrl('demos/kb-view-downloads-eula.html')}>KB View Downloads: EULA</a></li>
-            <li><a href={pageUrl('demos/kb-view-member-directory.html')}>KB View Member Directory: Home</a></li>
-            <li><a href={pageUrl('demos/kb-view-tickets.html')}>KB View My Tickets</a></li>
-          </ul>
+          <ol>
+            <li>Knowledgebase
+              <ol>
+                <li>Home</li>
+                <li><a href={pageUrl('demos/knowledgebase-article.html')}>Article</a></li>
+                <li><a href={pageUrl('demos/knowledgebase-article-rtl.html')}>Article-RTL</a></li>
+                <li><a href={pageUrl('demos/knowledgebase-article-pdf.html')}>Article-PDF</a></li>
+              </ol>
+            </li>
+            <li>News
+              <ol>
+                <li>Home</li>
+                <li><a href={pageUrl('demos/news-post.html')}>Post</a></li>
+              </ol>
+            </li>
+            <li>Community
+              <ol>
+                <li>Home</li>
+                <li><a href={pageUrl('demos/community-topic.html')}>Topic</a></li>
+                <li>Create Topic</li>
+              </ol>
+            </li>
+            <li>Downloads
+              <ol>
+                <li>Home</li>
+                <li><a href={pageUrl('demos/downloads-eula.html')}>EULA</a></li>
+                <li>File</li>
+              </ol>
+            </li>
+            <li>Tickets
+              <ol>
+                <li><a href={pageUrl('demos/tickets-home.html')}>Home</a></li>
+                <li>View Ticket</li>
+                <li>Create Ticket</li>
+                <li>Edit Ticket</li>
+              </ol>
+            </li>
+            <li>Account
+              <ol>
+                <li><a href={pageUrl('demos/account-register.html')}>Register</a></li>
+                <li>Forgotton Password</li>
+                <li>Profile</li>
+              </ol>
+            </li>
+            <li>Chat
+              <ol>
+                <li>Home</li>
+                <li>View Log</li>
+              </ol>
+            </li>
+            <li><a href={pageUrl('demos/member-directory.html')}>Member Directory</a></li>
+            <li>Direct Messages</li>
+          </ol>
         </Demos>
       </div>
     );

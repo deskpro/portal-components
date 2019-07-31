@@ -10,7 +10,7 @@
     "dist"
   ],
   "scripts": {
-    "dev": "concurrently --kill-others 'yarn:postcss-watch' 'yarn:docs-server'",
+    "dev": "concurrently --kill-others-on-fail 'npm:compile' 'yarn:postcss-watch' 'yarn:docs-server'",
     "build-lib": "yarn postcss-build",
     "prepare": "yarn postcss-prod",
     "build": "yarn postcss-build && yarn init-website-build && yarn docs-build",
@@ -23,13 +23,15 @@
     "lint": "stylelint \"src/**/*.css\"",
     "lint-tryfix": "stylelint \"src/**/*.css\" --fix",
     "test": "stylelint \"src/**/*.css\"",
-    "postinstall": "[ ! -d website ] || (cd website && yarn install)"
+    "postinstall": "[ ! -d website ] || (cd website && yarn install)",
+    "compile": "html-includes --src 'website/static/includes/' --dest 'website/static/demos/' --watch"
   },
   "dependencies": {},
   "devDependencies": {
     "concurrently": "^4.1.0",
     "contrast": "^1.0.1",
     "cpx": "^1.5.0",
+    "html-includes": "^4.2.0",
     "postcss": "^7.0.16",
     "postcss-autoreset": "^2.0.2",
     "postcss-cli": "^6.1.2",
