@@ -71,291 +71,293 @@
 </section>
 
     <section class="dp-po-main">
-        <div class="dp-po-container dp-po-tickets-container">
+        <div class="dp-po-container dp-po-member-container">
             <h2 class="dp-po-Title-page">
                 <span class="dp-po-Icon Icon--my-tickets dp-po-hidden-md"></span>
                 My tickets
                 <span class="dp-po-wrapper-container dp-po-hidden-md-up">
                     <span class="dp-po-Icon Icon--find Icon--primary"></span>
+                    
                 </span>
-                <button class="dp-po-Button Button--large">Submit a ticket</button>
             </h2>
 
-            <div class="dp-po-row">
-                <div class="dp-po-col-3 dp-po-md-12">
-                    <div class="dp-po-Sidebar Sidebar--left">
-                        <ul class="dp-po-list dp-po-list-title">
-                            <li>My tickets</li>
-                            <li>Tickets i’m CC’d on</li>
-                            <li>Techco tickets</li>
-                            <li>My chats</li>
-                        </ul>
+            <div class="dp-po-member-wrapper">
 
+                <div class="dp-po-search-container">
+                    <form class="dp-po-Forms dp-po-Search-bar">
+                        <div class="dp-po-Searchbar-wrap">
+                            <input type="" name="" placeholder="Search tickets"></input>
+                            <span class="dp-po-Icon Icon--find Icon--primary dp-po-hidden-md"></span>
+                        </div>
+                        <button class="dp-po-Button Button--small dp-po-hidden-md-up">Cancel</button>
+                    </form>
+
+                    <div class="dp-po-Dropdown-container Dropdown--filter">
+                        <span class="dp-po-dropdown-atom"><span class="dp-po-Icon Icon--member-filter"></span></span>
                         <ul class="dp-po-dropdown-menu">
-                            <li class="dp-po-title-list">Filter by</li>
+                            <!-- <li class="dp-po-dropdown-menu-item dp-po-title-list">Show</li> -->
                             <li class="dp-po-dropdown-menu-item">
                                 <span class="dp-po-CustomCheckbox CustomCheckbox--medium">
-                                    <input type="checkbox" class="dp-po-ControlInput" id="id-01"></input>
-                                    <label for="id-01">ID</label>
+                                    <input type="checkbox" class="dp-po-ControlInput" id="Email-01"></input>
+                                    <label for="Email-01">Email</label>
                                 </span>
                             </li>
                             <li class="dp-po-dropdown-menu-item">
                                 <span class="dp-po-CustomCheckbox CustomCheckbox--medium">
-                                    <input type="checkbox" class="dp-po-ControlInput" id="Subject-02"></input>
-                                    <label for="Subject-02">Subject</label>
+                                    <input type="checkbox" class="dp-po-ControlInput" id="Number-02"></input>
+                                    <label for="Number-02">Phone Number</label>
                                 </span>
                             </li>
                             <li class="dp-po-dropdown-menu-item">
                                 <span class="dp-po-CustomCheckbox CustomCheckbox--medium">
-                                    <input type="checkbox" class="dp-po-ControlInput" id="Department-03"></input>
-                                    <label for="Department-03">Department</label>
+                                    <input type="checkbox" class="dp-po-ControlInput" id="job-title-03"></input>
+                                    <label for="job-title-03">Job Title</label>
                                 </span>
                             </li>
                             <li class="dp-po-dropdown-menu-item">
                                 <span class="dp-po-CustomCheckbox CustomCheckbox--medium">
-                                    <input type="checkbox" class="dp-po-ControlInput" id="user-04"></input>
-                                    <label for="user-04">User</label>
+                                    <input type="checkbox" class="dp-po-ControlInput" id="job-title-04"></input>
+                                    <label for="job-title-04">Company</label>
                                 </span>
                             </li>
-                            <li class="dp-po-dropdown-menu-item">
-                                <span class="dp-po-CustomCheckbox CustomCheckbox--medium">
-                                    <input type="checkbox" class="dp-po-ControlInput" id="user-05"></input>
-                                    <label for="user-05">Assigned agent</label>
-                                </span>
-                            </li>
-                            <li class="dp-po-dropdown-menu-item">
-                                <span class="dp-po-CustomCheckbox CustomCheckbox--medium">
-                                    <input type="checkbox" class="dp-po-ControlInput" id="user-06"></input>
-                                    <label for="user-06">Date created</label>
-                                </span>
-                            </li>
-                            <li class="dp-po-dropdown-menu-item">
-                                <span class="dp-po-CustomCheckbox CustomCheckbox--medium">
-                                    <input type="checkbox" class="dp-po-ControlInput" id="user-07"></input>
-                                    <label for="user-07">Last action</label>
-                                </span>
-                            </li>
-                            <li class="dp-po-dropdown-menu-item">
-                                <span class="dp-po-CustomCheckbox CustomCheckbox--medium">
-                                    <input type="checkbox" class="dp-po-ControlInput" id="user-08"></input>
-                                    <label for="user-08">Last user reply</label>
-                                </span>
-                            </li>
-                            <li class="dp-po-dropdown-menu-item">
-                                <span class="dp-po-CustomCheckbox CustomCheckbox--medium">
-                                    <input type="checkbox" class="dp-po-ControlInput" id="user-09"></input>
-                                    <label for="user-09">Last agent reply</label>
-                                </span>
-                            </li>
-                            <li class="dp-po-dropdown-menu-item">
-                                <span class="dp-po-CustomCheckbox CustomCheckbox--medium">
-                                    <input type="checkbox" class="dp-po-ControlInput" id="user-10"></input>
-                                    <label for="user-10">Rating</label>
-                                </span>
+
+                            <li class="dp-po-dropdown-menu-item dp-po-button-wrap">
+                                <button class=" dp-po-Button Button--small">Apply</button>
+                                <button class="dp-po-Button Button--small Button--secondary dp-po-reply-comment-close">Cancel</button>
                             </li>
                         </ul>
+                    </div>
 
+                </div>
+
+                <div class="dp-po-member-table">
+                    <div class="dp-po-table-row dp-po-title-row dp-po-hidden-md">
+
+                        <span class="dp-po-table-item dp-po-sort dp-po-Dropdown-container">
+                            <span class="dp-po-dropdown-atom"><span class="dp-po-hidden-md">Ticket ID</span>
+                                <span class="dp-po-Icon Icon--sort Icon--primary"></span>
+                            </span>
+<!--                             <ul class="dp-po-dropdown-menu">
+                                <li class="dp-po-dropdown-menu-item">First Name</li>
+                                <li class="dp-po-dropdown-menu-item">Last Name</li>
+                            </ul> -->
+                        </span>
+
+                        <span class="dp-po-table-item dp-po-table-mail">Email</span>
+                        <span class="dp-po-table-item dp-po-table-phone">Phone Number</span>
+                        <span class="dp-po-table-item dp-po-table-company">Job Title & Company</span>
+                        <span class="dp-po-table-item"></span>
+                    </div>
+                    <div class="dp-po-table-row">
+                        <span class="dp-po-table-item dp-po-sort">
+                            <span class="dp-po-Avatar Avatar--small Avatar--circle">
+                                <img class="dp-po-Avatar-icon" src="../img/docs/avatar-circular.png" alt="">
+                                <span class="dp-po-Avatar-name">Artem Berdyshev</span>
+                            </span>
+                        </span>
+                        <span class="dp-po-table-item dp-po-table-mail">artem.berdyshev@deskpro.com</span>
+                        <span class="dp-po-table-item dp-po-table-phone">+441234567890</span>
+                        <span class="dp-po-table-item dp-po-table-company">Design Lead, Deskpro</span>
+                        <!-- Icon tooltip -->
+                        <span class="dp-po-table-item dp-po-table-message">
+                            <span class="dp-po-tooltip-wrap">
+                                <span class="dp-po-Icon Icon--member-dir-home"></span>
+                                <span class="dp-po-tooltip">Send direct message</span>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="dp-po-table-row">
+                        <span class="dp-po-table-item dp-po-sort">
+                            <span class="dp-po-Avatar Avatar--small Avatar--circle">
+                                <img class="dp-po-Avatar-icon" src="../img/docs/avatar-circular.png" alt="">
+                                <span class="dp-po-Avatar-name">Bogdan M</span>
+                            </span>
+                        </span>
+                        <span class="dp-po-table-item dp-po-table-mail">bogdan.m@deskpro.com</span>
+                        <span class="dp-po-table-item dp-po-table-phone">+441234567890</span>
+                        <span class="dp-po-table-item dp-po-table-company">Developer, Deskpro</span>
+                        <!-- Icon tooltip -->
+                        <span class="dp-po-table-item dp-po-table-message">
+                            <span class="dp-po-tooltip-wrap">
+                                <span class="dp-po-Icon Icon--member-dir-home"></span>
+                                <span class="dp-po-tooltip">Send direct message</span>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="dp-po-table-row">
+                        <span class="dp-po-table-item dp-po-sort">
+                            <span class="dp-po-Avatar Avatar--small Avatar--circle">
+                                <img class="dp-po-Avatar-icon" src="../img/docs/avatar-circular.png" alt="">
+                                <span class="dp-po-Avatar-name">Colin Dunn</span>
+                            </span>
+                        </span>
+                        <span class="dp-po-table-item dp-po-table-mail">colin.dunn@deskpro.com</span>
+                        <span class="dp-po-table-item dp-po-table-phone">+441234567890</span>
+                        <span class="dp-po-table-item dp-po-table-company">CEO, Apple</span>
+                        <!-- Icon tooltip -->
+                        <span class="dp-po-table-item dp-po-table-message">
+                            <span class="dp-po-tooltip-wrap">
+                                <span class="dp-po-Icon Icon--member-dir-home"></span>
+                                <span class="dp-po-tooltip">Send direct message</span>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="dp-po-table-row">
+                        <span class="dp-po-table-item dp-po-sort">
+                            <span class="dp-po-Avatar Avatar--small Avatar--circle">
+                                <img class="dp-po-Avatar-icon" src="../img/docs/avatar-circular.png" alt="">
+                                <span class="dp-po-Avatar-name">Giada Bobbera</span>
+                            </span>
+                        </span>
+                        <span class="dp-po-table-item dp-po-table-mail">giada.bobbera@deskpro.com</span>
+                        <span class="dp-po-table-item dp-po-table-phone">+441234567890</span>
+                        <span class="dp-po-table-item dp-po-table-company">Credit manager</span>
+                        <!-- Icon tooltip -->
+                        <span class="dp-po-table-item dp-po-table-message">
+                            <span class="dp-po-tooltip-wrap">
+                                <span class="dp-po-Icon Icon--member-dir-home"></span>
+                                <span class="dp-po-tooltip">Send direct message</span>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="dp-po-table-row">
+                        <span class="dp-po-table-item dp-po-sort">
+                            <span class="dp-po-Avatar Avatar--small Avatar--circle">
+                                <img class="dp-po-Avatar-icon" src="../img/docs/avatar-circular.png" alt="">
+                                <span class="dp-po-Avatar-name">Grace Howlett</span>
+                            </span>
+                        </span>
+                        <span class="dp-po-table-item dp-po-table-mail">grace.howlett@deskpro.com</span>
+                        <span class="dp-po-table-item dp-po-table-phone">+441234567890</span>
+                        <span class="dp-po-table-item dp-po-table-company">Hedge fund trader</span>
+                        <!-- Icon tooltip -->
+                        <span class="dp-po-table-item dp-po-table-message">
+                            <span class="dp-po-tooltip-wrap">
+                                <span class="dp-po-Icon Icon--member-dir-home"></span>
+                                <span class="dp-po-tooltip">Send direct message</span>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="dp-po-table-row">
+                        <span class="dp-po-table-item dp-po-sort">
+                            <span class="dp-po-Avatar Avatar--small Avatar--circle">
+                                <img class="dp-po-Avatar-icon" src="../img/docs/avatar-circular.png" alt="">
+                                <span class="dp-po-Avatar-name">Hannah Scott</span>
+                            </span>
+                        </span>
+                        <span class="dp-po-table-item dp-po-table-mail">hannah.scott@deskpro.com</span>
+                        <span class="dp-po-table-item dp-po-table-phone">+441234567890</span>
+                        <span class="dp-po-table-item dp-po-table-company">Marketing technologist</span>
+                        <!-- Icon tooltip -->
+                        <span class="dp-po-table-item dp-po-table-message">
+                            <span class="dp-po-tooltip-wrap">
+                                <span class="dp-po-Icon Icon--member-dir-home"></span>
+                                <span class="dp-po-tooltip">Send direct message</span>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="dp-po-table-row">
+                        <span class="dp-po-table-item dp-po-sort">
+                            <span class="dp-po-Avatar Avatar--small Avatar--circle">
+                                <img class="dp-po-Avatar-icon" src="../img/docs/avatar-circular.png" alt="">
+                                <span class="dp-po-Avatar-name">Hugo Pinto</span>
+                            </span>
+                        </span>
+                        <span class="dp-po-table-item dp-po-table-mail">hugo.pinto@deskpro.com</span>
+                        <span class="dp-po-table-item dp-po-table-phone">+441234567890</span>
+                        <span class="dp-po-table-item dp-po-table-company">Insurance claims examiner</span>
+                        <!-- Icon tooltip -->
+                        <span class="dp-po-table-item dp-po-table-message">
+                            <span class="dp-po-tooltip-wrap">
+                                <span class="dp-po-Icon Icon--member-dir-home"></span>
+                                <span class="dp-po-tooltip">Send direct message</span>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="dp-po-table-row">
+                        <span class="dp-po-table-item dp-po-sort">
+                            <span class="dp-po-Avatar Avatar--small Avatar--circle">
+                                <img class="dp-po-Avatar-icon" src="../img/docs/avatar-circular.png" alt="">
+                                <span class="dp-po-Avatar-name">Jerome Indefenzo</span>
+                            </span>
+                        </span>
+                        <span class="dp-po-table-item dp-po-table-mail">jerome.indefenzo@deskpro.com</span>
+                        <span class="dp-po-table-item dp-po-table-phone">+441234567890</span>
+                        <span class="dp-po-table-item dp-po-table-company">Commercial real estate agent</span>
+                        <!-- Icon tooltip -->
+                        <span class="dp-po-table-item dp-po-table-message">
+                            <span class="dp-po-tooltip-wrap">
+                                <span class="dp-po-Icon Icon--member-dir-home"></span>
+                                <span class="dp-po-tooltip">Send direct message</span>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="dp-po-table-row">
+                        <span class="dp-po-table-item dp-po-sort">
+                            <span class="dp-po-Avatar Avatar--small Avatar--circle">
+                                <img class="dp-po-Avatar-icon" src="../img/docs/avatar-circular.png" alt="">
+                                <span class="dp-po-Avatar-name">Julien Micah</span>
+                            </span>
+                        </span>
+                        <span class="dp-po-table-item dp-po-table-mail">julien.micah@deskpro.com</span>
+                        <span class="dp-po-table-item dp-po-table-phone">+441234567890</span>
+                        <span class="dp-po-table-item dp-po-table-company">Software engineer</span>
+                        <!-- Icon tooltip -->
+                        <span class="dp-po-table-item dp-po-table-message">
+                            <span class="dp-po-tooltip-wrap">
+                                <span class="dp-po-Icon Icon--member-dir-home"></span>
+                                <span class="dp-po-tooltip">Send direct message</span>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="dp-po-table-row">
+                        <span class="dp-po-table-item dp-po-sort">
+                            <span class="dp-po-Avatar Avatar--small Avatar--circle">
+                                <img class="dp-po-Avatar-icon" src="../img/docs/avatar-circular.png" alt="">
+                                <span class="dp-po-Avatar-name">Kate Nightingale</span>
+                            </span>
+                        </span>
+                        <span class="dp-po-table-item dp-po-table-mail">kate.nightingale@deskpro.com</span>
+                        <span class="dp-po-table-item dp-po-table-phone">+441234567890</span>
+                        <span class="dp-po-table-item dp-po-table-company">Social media manager, Spotify</span>
+                        <!-- Icon tooltip -->
+                        <span class="dp-po-table-item dp-po-table-message">
+                            <span class="dp-po-tooltip-wrap">
+                                <span class="dp-po-Icon Icon--member-dir-home"></span>
+                                <span class="dp-po-tooltip">Send direct message</span>
+                            </span>
+                        </span>
                     </div>
                 </div>
 
-                <div class="dp-po-col-9 dp-po-md-12">
+                <!-- pop-up -->
+                <div class="dp-po-Popup popup--message">
+                    <div class="dp-po-form-wrapper">
+                        <form class="dp-po-Forms">
+                            <h2 class="dp-po-popup-title">
+                                <span>Send a new message</span>
+                                <span class="dp-po-Icon Icon--close"></span>
+                            </h2>
 
-                    <div class="dp-po-member-wrapper">
+                            <span class="dp-po-username">
+                                To:<img class="dp-po-Avatar-icon" src="/portal-components/style/img/docs/avatar-circular.png" alt=""></img>
+                                <span class="dp-po-Name">Artem Berdyshev</span>
+                            </span>
 
-                        <div class="dp-po-search-container">
-                            <form class="dp-po-Forms dp-po-Search-bar">
-                                <div class="dp-po-Searchbar-wrap">
-                                    <input type="" name="" placeholder="Search tickets"></input>
-                                    <span class="dp-po-Icon Icon--find Icon--primary dp-po-hidden-md"></span>
-                                </div>
-                                <button class="dp-po-Button Button--small dp-po-hidden-md-up">Cancel</button>
-                            </form>
-
-                            <div class="dp-po-Dropdown-container Dropdown--filter">
-                                <span class="dp-po-dropdown-atom"><span class="dp-po-Icon Icon--member-filter"></span></span>
-                                <ul class="dp-po-dropdown-menu">
-                                    <li class="dp-po-dropdown-menu-item">
-                                        <span class="dp-po-CustomCheckbox CustomCheckbox--medium">
-                                            <input type="checkbox" class="dp-po-ControlInput" id="id-01"></input>
-                                            <label for="id-01">ID</label>
-                                        </span>
-                                    </li>
-                                    <li class="dp-po-dropdown-menu-item">
-                                        <span class="dp-po-CustomCheckbox CustomCheckbox--medium">
-                                            <input type="checkbox" class="dp-po-ControlInput" id="Subject-02"></input>
-                                            <label for="Subject-02">Subject</label>
-                                        </span>
-                                    </li>
-                                    <li class="dp-po-dropdown-menu-item">
-                                        <span class="dp-po-CustomCheckbox CustomCheckbox--medium">
-                                            <input type="checkbox" class="dp-po-ControlInput" id="Department-03"></input>
-                                            <label for="Department-03">Department</label>
-                                        </span>
-                                    </li>
-                                    <li class="dp-po-dropdown-menu-item">
-                                        <span class="dp-po-CustomCheckbox CustomCheckbox--medium">
-                                            <input type="checkbox" class="dp-po-ControlInput" id="user-04"></input>
-                                            <label for="user-04">User</label>
-                                        </span>
-                                    </li>
-                                    <li class="dp-po-dropdown-menu-item">
-                                        <span class="dp-po-CustomCheckbox CustomCheckbox--medium">
-                                            <input type="checkbox" class="dp-po-ControlInput" id="user-04"></input>
-                                            <label for="user-04">Assigned agent</label>
-                                        </span>
-                                    </li>
-                                    <li class="dp-po-dropdown-menu-item">
-                                        <span class="dp-po-CustomCheckbox CustomCheckbox--medium">
-                                            <input type="checkbox" class="dp-po-ControlInput" id="user-04"></input>
-                                            <label for="user-04">Date created</label>
-                                        </span>
-                                    </li>
-                                    <li class="dp-po-dropdown-menu-item">
-                                        <span class="dp-po-CustomCheckbox CustomCheckbox--medium">
-                                            <input type="checkbox" class="dp-po-ControlInput" id="user-04"></input>
-                                            <label for="user-04">Last action</label>
-                                        </span>
-                                    </li>
-                                    <li class="dp-po-dropdown-menu-item">
-                                        <span class="dp-po-CustomCheckbox CustomCheckbox--medium">
-                                            <input type="checkbox" class="dp-po-ControlInput" id="user-04"></input>
-                                            <label for="user-04">Last user reply</label>
-                                        </span>
-                                    </li>
-                                    <li class="dp-po-dropdown-menu-item">
-                                        <span class="dp-po-CustomCheckbox CustomCheckbox--medium">
-                                            <input type="checkbox" class="dp-po-ControlInput" id="user-04"></input>
-                                            <label for="user-04">Last agent reply</label>
-                                        </span>
-                                    </li>
-                                    <li class="dp-po-dropdown-menu-item">
-                                        <span class="dp-po-CustomCheckbox CustomCheckbox--medium">
-                                            <input type="checkbox" class="dp-po-ControlInput" id="user-04"></input>
-                                            <label for="user-04">Rating</label>
-                                        </span>
-                                    </li>
-                                </ul>
+                            <div class="dp-po-Textarea">
+                                <span class="dp-po-Icon-resizer"></span>
+                                <label>Message*</label>
+                                <textarea name="text" placeholder="Your message"></textarea>
                             </div>
 
-                        </div>
-
-                        <div class="dp-po-member-table">
-                            <div class="dp-po-table-row dp-po-title-row dp-po-hidden-md">
-                                <span class="dp-po-table-item dp-po-sort">Ticket ID</span>
-                                <span class="dp-po-table-item dp-po-table-mail">Subject</span>
-                                <span class="dp-po-table-item dp-po-table-phone">Department<span class="dp-po-Icon Icon--sort Icon--primary"></span></span>
-                                <span class="dp-po-table-item dp-po-table-company">Created<span class="dp-po-Icon Icon--sort Icon--primary"></span></span>
-                                <span class="dp-po-table-item dp-po-table-company">Last activity<span class="dp-po-Icon Icon--sort Icon--primary"></span></span>
-                                <span class="dp-po-table-item dp-po-table-company">Rating</span>
+                            <div class="dp-po-button-wrap">
+                                <button class="dp-po-Button Button--small">Send message</button>
+                                <button class="dp-po-Button Button--small Button--secondary dp-po-reply-comment-close">Cancel</button>
                             </div>
-
-                            <div class="dp-po-table-row">
-                                <span class="dp-po-table-item dp-po-sort">
-                                    <span class="dp-po-ticket-Icon"></span>
-                                    <span class="dp-po-Avatar-name">ALVM-6732-XRKJ</span>
-                                </span>
-                                <span class="dp-po-table-item dp-po-table-mail">Craft sync not working with updated photoshop creative cloud suite...</span>
-                                <span class="dp-po-table-item dp-po-table-phone">Support</span>
-                                <span class="dp-po-table-item dp-po-table-company">01-03-2018</span>
-                            </div>
-                            <div class="dp-po-table-row">
-                                <span class="dp-po-table-item dp-po-sort">
-                                    <span class="dp-po-Avatar Avatar--small Avatar--circle">
-                                        <span class="dp-po-ticket-Icon"></span>
-                                        <span class="dp-po-Avatar-name">ALVM-6732-XRKJ</span>
-                                    </span>
-                                </span>
-                                <span class="dp-po-table-item dp-po-table-mail">Craft sync not working with updated photoshop creative cloud suite...</span>
-                                <span class="dp-po-table-item dp-po-table-phone">Support</span>
-                                <span class="dp-po-table-item dp-po-table-company">01-03-2018</span>
-                            </div>
-                            <div class="dp-po-table-row">
-                                <span class="dp-po-table-item dp-po-sort">
-                                    <span class="dp-po-ticket-Icon"></span>
-                                    <span class="dp-po-Avatar-name">ALVM-6732-XRKJ</span>
-                                </span>
-                                <span class="dp-po-table-item dp-po-table-mail">Craft sync not working with updated photoshop creative cloud suite...</span>
-                                <span class="dp-po-table-item dp-po-table-phone">Support</span>
-                                <span class="dp-po-table-item dp-po-table-company">01-03-2018</span>
-                            </div>
-                            <div class="dp-po-table-row">
-                                <span class="dp-po-table-item dp-po-sort">
-                                    <span class="dp-po-ticket-Icon"></span>
-                                    <span class="dp-po-Avatar-name">ALVM-6732-XRKJ</span>
-                                </span>
-                                <span class="dp-po-table-item dp-po-table-mail">Craft sync not working with updated photoshop creative cloud suite...</span>
-                                <span class="dp-po-table-item dp-po-table-phone">Support</span>
-                                <span class="dp-po-table-item dp-po-table-company">01-03-2018</span>
-                            </div>
-                            <div class="dp-po-table-row">
-                                <span class="dp-po-table-item dp-po-sort">
-                                    <span class="dp-po-Avatar Avatar--small Avatar--circle">
-                                        <span class="dp-po-ticket-Icon"></span>
-                                        <span class="dp-po-Avatar-name">ALVM-6732-XRKJ</span>
-                                    </span>
-                                </span>
-                                <span class="dp-po-table-item dp-po-table-mail">Craft sync not working with updated photoshop creative cloud suite...</span>
-                                <span class="dp-po-table-item dp-po-table-phone">Support</span>
-                                <span class="dp-po-table-item dp-po-table-company">01-03-2018</span>
-                            </div>
-                            <div class="dp-po-table-row">
-                                <span class="dp-po-table-item dp-po-sort">
-                                    <span class="dp-po-Avatar Avatar--small Avatar--circle">
-                                        <span class="dp-po-ticket-Icon"></span>
-                                        <span class="dp-po-Avatar-name">ALVM-6732-XRKJ</span>
-                                    </span>
-                                </span>
-                                <span class="dp-po-table-item dp-po-table-mail">Craft sync not working with updated photoshop creative cloud suite...</span>
-                                <span class="dp-po-table-item dp-po-table-phone">Support</span>
-                                <span class="dp-po-table-item dp-po-table-company">01-03-2018</span>
-                            </div>
-                            <div class="dp-po-table-row">
-                                <span class="dp-po-table-item dp-po-sort">
-                                    <span class="dp-po-Avatar Avatar--small Avatar--circle">
-                                        <span class="dp-po-ticket-Icon"></span>
-                                        <span class="dp-po-Avatar-name">ALVM-6732-XRKJ</span>
-                                    </span>
-                                </span>
-                                <span class="dp-po-table-item dp-po-table-mail">Craft sync not working with updated photoshop creative cloud suite...</span>
-                                <span class="dp-po-table-item dp-po-table-phone">Support</span>
-                                <span class="dp-po-table-item dp-po-table-company">01-03-2018</span>
-                            </div>
-                            <div class="dp-po-table-row">
-                                <span class="dp-po-table-item dp-po-sort">
-                                    <span class="dp-po-Avatar Avatar--small Avatar--circle">
-                                        <span class="dp-po-ticket-Icon"></span>
-                                        <span class="dp-po-Avatar-name">ALVM-6732-XRKJ</span>
-                                    </span>
-                                </span>
-                                <span class="dp-po-table-item dp-po-table-mail">Craft sync not working with updated photoshop creative cloud suite...</span>
-                                <span class="dp-po-table-item dp-po-table-phone">Support</span>
-                                <span class="dp-po-table-item dp-po-table-company">01-03-2018</span>
-                            </div>
-                            <div class="dp-po-table-row">
-                                <span class="dp-po-table-item dp-po-sort">
-                                    <span class="dp-po-Avatar Avatar--small Avatar--circle">
-                                        <span class="dp-po-ticket-Icon"></span>
-                                        <span class="dp-po-Avatar-name">ALVM-6732-XRKJ</span>
-                                    </span>
-                                </span>
-                                <span class="dp-po-table-item dp-po-table-mail">Craft sync not working with updated photoshop creative cloud suite...</span>
-                                <span class="dp-po-table-item dp-po-table-phone">Support</span>
-                                <span class="dp-po-table-item dp-po-table-company">01-03-2018</span>
-                            </div>
-                            <div class="dp-po-table-row">
-                                <span class="dp-po-table-item dp-po-sort">
-                                    <span class="dp-po-Avatar Avatar--small Avatar--circle">
-                                        <span class="dp-po-ticket-Icon"></span>
-                                        <span class="dp-po-Avatar-name">ALVM-6732-XRKJ</span>
-                                    </span>
-                                </span>
-                                <span class="dp-po-table-item dp-po-table-mail">Craft sync not working with updated photoshop creative cloud suite...</span>
-                                <span class="dp-po-table-item dp-po-table-phone">Support</span>
-                                <span class="dp-po-table-item dp-po-table-company">01-03-2018</span>
-                            </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
+                
             </div>
 
             <div class="demo-pagination">
