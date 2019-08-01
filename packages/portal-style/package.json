@@ -1,6 +1,6 @@
 {
   "name": "style",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Styling for for Deskpro Portal Interface",
   "author": "DeskPRO <support@deskpro.com>",
   "homepage": "",
@@ -10,7 +10,7 @@
     "dist"
   ],
   "scripts": {
-    "dev": "concurrently --kill-others-on-fail 'npm:compile' 'yarn:postcss-watch' 'yarn:docs-server'",
+    "dev": "concurrently --kill-others-on-fail 'npm:compile' 'yarn:docs-server' 'gulp'",
     "build-lib": "yarn postcss-build",
     "prepare": "yarn postcss-prod",
     "build": "yarn postcss-build && yarn init-website-build && yarn docs-build",
@@ -28,9 +28,18 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "autoprefixer": "^9.6.0",
     "concurrently": "^4.1.0",
     "contrast": "^1.0.1",
     "cpx": "^1.5.0",
+    "cssnano": "^4.1.10",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
     "html-includes": "^4.2.0",
     "postcss": "^7.0.16",
     "postcss-autoreset": "^2.0.2",

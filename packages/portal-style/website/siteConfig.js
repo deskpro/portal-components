@@ -25,9 +25,10 @@ const siteConfig = {
   //   organizationName: 'JoelMarcey'
 
   // For no header links in the top nav bar -> headerLinks: [],
-  headerLinks: [
-    {doc: 'intro', label: 'Docs'},
-  ],
+  headerLinks: [{
+    doc: 'intro',
+    label: 'Docs'
+  }, ],
 
   headerIcon: 'img/dp-logo-white.svg',
   footerIcon: 'img/dp-logo.svg',
@@ -54,7 +55,7 @@ const siteConfig = {
   */
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
-  copyright:   `Copyright © ${new Date().getFullYear()} Deskpro`,
+  copyright: `Copyright © ${new Date().getFullYear()} Deskpro`,
   separateCss: ['static/css/style.css'],
 
   highlight: {
