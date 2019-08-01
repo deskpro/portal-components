@@ -1,4 +1,4 @@
-const React = require('react');
+const React = require("react");
 
 class Button extends React.Component {
   render() {
@@ -13,7 +13,7 @@ class Button extends React.Component {
 }
 
 Button.defaultProps = {
-  target: '_self',
+  target: "_self"
 };
 
 class Demo extends React.Component {
@@ -23,22 +23,28 @@ class Demo extends React.Component {
         <header>
           <ul className="dp-po-nav">
             <li className="dp-po-Logo-wrap">
-              <span className="dp-po-Icon Icon-Tech-company"/>
-                Support Center
+              <span className="dp-po-Icon Icon-Tech-company" />
+              Support Center
             </li>
             <li className="dp-po-nav-control">
               <ul>
                 <li className="dp-po-Select-Language">
                   <span className="dp-po-Icon dp-icon-UK" />
-                    English
+                  English
                   <span className="dp-po-arrow arrow--bottom arrow--brand-primary" />
                 </li>
                 <li>
-                  <button className="dp-po-Button Button--small">Contact us</button>
+                  <button className="dp-po-Button Button--small">
+                    Contact us
+                  </button>
                 </li>
                 <li>
                   <span className="dp-po-Avatar">
-                    <img src="/portal-components/style/img/docs/avatar.png" className="dp-po-Avatar-icon" alt="" />
+                    <img
+                      src="/portal-components/style/img/docs/avatar.png"
+                      className="dp-po-Avatar-icon"
+                      alt=""
+                    />
                     <span className="dp-po-arrow arrow--bottom arrow--brand-primary" />
                   </span>
                 </li>
@@ -61,9 +67,10 @@ class Demo extends React.Component {
           <li className="dp-po-Breadcrumb-item">Support Centre</li>
           <li className="dp-po-Breadcrumb-item">Knowledgbase</li>
           <li className="dp-po-Breadcrumb-item">Getting started</li>
-          <li className="dp-po-Breadcrumb-item is-active">Deskpro for IT Teams</li>
+          <li className="dp-po-Breadcrumb-item is-active">
+            Deskpro for IT Teams
+          </li>
         </ul>
-
       </div>
     );
   }
