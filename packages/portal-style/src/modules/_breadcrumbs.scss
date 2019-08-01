@@ -1,0 +1,25 @@
+.dp-po-breadcrumbs {
+  border-bottom: 2px solid #d3d6d7;
+
+  &-list {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    align-items: center;
+    padding: 0;
+
+
+  }
+
+  &-item {
+    list-style: none;
+  }
+
+  &-link {
+    list-style: none;
+    font-weight: bold;
+    font-size: 15px;
+  }
+}

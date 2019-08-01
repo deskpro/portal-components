@@ -1,0 +1,42 @@
+.dp-po-footer {
+  text-align: center;
+  background: #EFF0F0;
+  border-top: 1.5px solid #D3D6D7;
+
+  &-copyright {
+    display: inline-flex;
+    justify-content: center;
+    height: 50px;
+    align-items: center;
+    position: relative;
+
+    &:before,
+    &:after {
+      content: "";
+      width: 100px;
+      position: absolute;
+      height: 2px;
+      background: #d3d6d7;
+      left: -120px;
+      top: 24px;
+    }
+
+    &:after {
+      left: auto;
+      right: -120px;
+    }
+  }
+
+  &-powered {
+    font-size: 12px;
+    color: #8B9293;
+    margin-right: 10px;
+  }
+
+  &-deskpro {
+    img {
+      width: 95px;
+    }
+
+  }
+}

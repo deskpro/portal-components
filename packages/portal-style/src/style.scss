@@ -6,17 +6,24 @@
 /**************************
 ******* MODULES ********
 **************************/
+@import "modules/fonts";
 @import "modules/layout";
 @import "modules/header";
 @import "modules/footer";
+@import "modules/search";
+@import "modules/breadcrumbs";
+@import "modules/block";
+@import "modules/comments";
 
 /**************************
 ******* COMPONENTS ********
 **************************/
 @import "components/forms";
 @import "components/buttons";
+@import "components/icons";
 
 /**************************
-********** PAGES **********
+******** ELEMENTS *********
 **************************/
-//@import "pages/kb-artile";
+@import "elements/title";
+@import "elements/avatar";

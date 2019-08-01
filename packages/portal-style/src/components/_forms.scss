@@ -1,0 +1,118 @@
+.dp-po-form {
+  $self: &;
+
+  &-element {
+    margin: 0 0 20px;
+  }
+
+  &-label {
+    font-size: 15px;
+    color: #8B9293;
+    margin: 0 0 10px;
+    display: block;
+  }
+
+  &-textarea,
+  &-text {
+    width: 100%;
+    background: #F7F7F7;
+    border: 2px solid #D3D6D7;
+    border-radius: 2px;
+    padding: 15px;
+    font-size: 18px;
+    outline: none;
+    transition: 0.3s all;
+    color: #4C4F50;
+
+    &:focus {
+      border-color: #3A8DDE;
+    }
+
+  }
+
+  &-text {
+    padding: 10px 15px;
+  }
+
+  &-textarea {
+    min-height: 150px;
+  }
+
+  &-checkbox {
+    #{ $self }-label {
+      position: relative;
+      margin: 0;
+      padding: 0 0 0 30px;
+      line-height: 21px;
+      display: inline-block;
+
+      &:before {
+        background-color: #f7f7f7;
+        border: 1px solid #d3d6d7;
+        border-radius: 0.5px;
+        content: "";
+        display: block;
+        height: 20px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 20px;
+        border-radius: 4px;
+      }
+
+      &:after {
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.21 4.81a.602.602 0 0 1 0-.751l.097-.112a.423.423 0 0 1 .65 0l1.688 1.95 4.43-5.12a.423.423 0 0 1 .65 0l.097.112a.602.602 0 0 1 0 .752L2.645 7.625.21 4.811z' fill='%233a8dde'/%3E%3C/svg%3E");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 12px;
+        content: "";
+        display: block;
+        height: 20px;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        width: 20px;
+      }
+    }
+
+    input[type="checkbox"] {
+      height: 0;
+      opacity: 0;
+      position: absolute;
+      width: 0;
+
+      &:checked {
+        &+#{ $self }-label:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &-helptext {
+    font-size: 12px;
+  }
+
+  &-error {
+    border-color: #E84954;
+    color: #E84954;
+
+    &+.dp-po-form-helptext {
+      color: #E84954;
+    }
+  }
+
+  &-success {
+    border-color: #54B162;
+    color: #54B162;
+
+    &+.dp-po-form-helptext {
+      color: #54B162;
+    }
+  }
+}
+
+::placeholder {
+  color: #A9B0B0;
+}

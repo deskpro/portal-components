@@ -29,6 +29,7 @@ function scssTask() {
     .pipe(postcss([autoprefixer(), cssnano()])) // PostCSS plugins
     .pipe(sourcemaps.write('.')) // write sourcemaps file in current directory
     .pipe(dest('dist')) // put final CSS in dist folder
+    .pipe(dest('website/static/css')) // put final CSS in dist folder
 }
 
 // Watch task: watch SCSS and JS files for changes

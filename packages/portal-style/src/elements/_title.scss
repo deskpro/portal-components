@@ -1,0 +1,25 @@
+.dp-po-title {
+  display: inline-flex;
+  align-items: center;
+  $self: &;
+
+  &-icon {
+    margin: 0 10px 0 0;
+  }
+
+  &-text {
+    font-family: Rubik;
+    font-weight: 300;
+    font-size: 30px;
+    color: #4C4F50;
+    margin: 0;
+
+    &#{$self}-small {
+      font-size: 23px;
+    }
+  }
+
+  &+.dp-po-block {
+    margin-top: 15px;
+  }
+}
