@@ -1,0 +1,23 @@
+.dp-po-sidebar {
+  background: #FFFFFF;
+  border: 1px solid #D3D6D7;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 20px;
+  margin: 0 0 20px;
+
+  &-title {
+    font-size: 19px;
+    color: #8B9293;
+    margin: 0 0 15px;
+    font-weight: 400;
+    font-family: 'Rubik', sans-serif;
+  }
+
+  &-subtitle {
+    font-size: 15px;
+    color: #8B9293;
+    margin: 0;
+    font-weight: 700;
+  }
+}
