@@ -7,36 +7,36 @@
   display: block;
 }
 
-.dp-po-TableRow.dp-po-TableControl {
+.dp-po-table-row.dp-po-title-row  {
   color: var(--grey-dark);
 }
 
-.dp-po-TableControl .dp-po-TableItem {
+.dp-po-title-row  .dp-po-table-item {
   font: var(--p-2-bold);
 }
 
-.dp-po-TableRow {
+.dp-po-table-row {
   align-items: center;
   color: var(--grey-darkest);
   display: flex;
 }
 
-.dp-po-TableRow > div {
+.dp-po-table-row > div {
   align-items: center;
   display: flex;
   padding: 6px 13px;
 }
 
-.dp-po-TableRow > div:first-child {
+.dp-po-table-row > div:first-child {
   padding: 6px 13px 6px 35px;
 }
 
-.dp-po-TableItem {
+.dp-po-table-item {
   font: var(--p-1);
   position: relative;
 }
 
-.dp-po-TableControl .dp-po-TableItem .dp-po-Icon {
+.dp-po-title-row  .dp-po-table-item .dp-po-Icon {
   margin-left: 10px;
 }
 
@@ -54,11 +54,11 @@
   width: 12px;
 }
 
-.dp-po-TableItem .dp-po-Avatar-icon + .dp-po-Icon {
+.dp-po-table-item .dp-po-Avatar-icon + .dp-po-Icon {
   background-color: var(--white);
   margin-left: -5px;
 }
 
-.dp-po-TableRow.TableRow--chat > div:first-child {
+.dp-po-table-row.TableRow--chat > div:first-child {
   padding: 6px 13px;
 }

@@ -124,12 +124,12 @@ $(document).ready(function(){
 
 	// 
 	$('body').on('click', '.dp-po-wrapper-container .Icon--find', function(event) {
-		$('body').find('.dp-po-member-wrapper .dp-po-search-container').toggleClass('is-active');
-		// $('body').find('.dp-po-member-wrapper .dp-po-search-container .dp-po-Button').removeClass('is-active');
+		$('body').find('.dp-po-table-wrapper .dp-po-search-container').toggleClass('is-active');
+		// $('body').find('.dp-po-table-wrapper .dp-po-search-container .dp-po-Button').removeClass('is-active');
 	})
 
-	$('body').on('click', '.dp-po-member-wrapper .dp-po-Searchbar-wrap .dp-po-Button', function(event) {
-		$('body').find('.dp-po-member-wrapper .dp-po-search-container.is-active').removeClass('is-active');
+	$('body').on('click', '.dp-po-table-wrapper .dp-po-Searchbar-wrap .dp-po-Button', function(event) {
+		$('body').find('.dp-po-table-wrapper .dp-po-search-container.is-active').removeClass('is-active');
 	})
 
 	// Reply comment
