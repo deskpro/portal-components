@@ -10,9 +10,8 @@
   }
 
   .dp-po-brand-name {
-    font-family: Rubik;
+    @extend .dp-po-h3;
     color: $grey-darkest;
-    font-size: 19px;
     position: relative;
     padding: 0 0 0 50px;
 

@@ -8,9 +8,8 @@
   }
 
   &-text {
-    font-family: Rubik;
-    font-weight: 300;
-    font-size: 30px;
+    font-family: $headings-font-family;
+    font-size: $font-size-base * 1.666; // 30px at standard size
     color: $grey-darkest;
     margin: 0;
 
