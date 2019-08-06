@@ -12,12 +12,52 @@
   }
 
   &-item {
+    &:first-child {
+      padding-left: 0;
+    }
+
     list-style: none;
+    font-size: $p2-font-size;
+    padding: 7px;
+
+    color: $gray-500;
+    &--active {
+      color: $body-color;
+    }
+  }
+
+  &-arrow {
+    list-style: none;
+    border: solid $gray-500;
+    border-width: 0 2px 2px 0;
+    padding: 4px;
+    transform: rotate(-45deg);
+    position: relative;
+    top: 1px;
+    margin-right: 4px;
+  }
+
+  &-logo {
+    display: block;
+    list-style: none;
+    border-right: 1px solid #d3d6d7;
+    img {
+      height: 28px;
+      width: 28px;
+    }
   }
 
   &-link {
-    list-style: none;
     font-weight: bold;
-    font-size: 15px;
+    color: $gray-500;
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+      color: $body-color;
+    }
+
+    &--active {
+      color: $body-color;
+    }
   }
 }
