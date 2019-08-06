@@ -16,3 +16,46 @@ body {
 .dp-po-section {
   margin: 0 0 40px;
 }
+
+.dp-po-tab {
+  margin: 0 0 20px;
+  padding: 0;
+
+  &-item {
+    display: inline-block;
+    position: relative;
+    margin: 0 40px 0 0;
+
+    &:after {
+      content: '';
+      width: 2px;
+      height: 100%;
+      position: absolute;
+      right: -21px;
+      top: 0;
+      background: #D3D6D7;
+    }
+
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  &-link {
+    color: #8B9293;
+
+    font-family: Rubik;
+    font-size: 19px;
+
+    &.active {
+      color: #4C4F50;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: #4C4F50;
+    }
+  }
+}
