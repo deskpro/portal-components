@@ -14,6 +14,8 @@
     color: $grey-darkest;
     position: relative;
     padding: 0 0 0 50px;
+    margin: 0;
+    line-height: 1.5;
 
     &:before {
       position: absolute;
