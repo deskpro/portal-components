@@ -28,3 +28,16 @@ $button-font-family:          $font-family-sans-serif;
 $button1-font-size:           $font-size-base * 0.777 !default; // 14px
 $button2-font-size:           $font-size-base * 0.666 !default; // 12px
 $button3-font-size:           $font-size-base * 0.555 !default; // 10px
+
+// Breadcrumbs
+
+$breadcrumb-padding-y:              0;
+$breadcrumb-padding-x:              0;
+$breadcrumb-item-padding:           0;
+$breadcrumb-margin-bottom:          0;
+$breadcrumb-bg:                     #fff;
+$breadcrumb-divider-color:          $grey !default;
+$breadcrumb-inactive-color:         $grey !default;
+$breadcrumb-active-color:           $grey-darkest !default;
+$breadcrumb-divider:                quote(">") !default;
+$breadcrumb-border-radius:          0;

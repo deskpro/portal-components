@@ -1,63 +1,28 @@
-.dp-po-breadcrumbs {
+.breadcrumb-outer {
   border-bottom: 2px solid $grey-light;
+}
 
-  &-list {
-    display: flex;
-    justify-content: flex-start;
-    position: relative;
-    width: 100%;
-    margin: 0;
-    align-items: center;
-    padding: 0;
-  }
-
+.breadcrumb {
   &-item {
-    &:first-child {
+    color: $breadcrumb-inactive-color;
+    font-weight: bold;
+    font-size: $p2-font-size;
+    a {
+      padding: 7px;
+      display: inline-block;
+      text-decoration: none;
+      color: $breadcrumb-inactive-color;
+    }
+
+    &:first-child a {
       padding-left: 0;
     }
-
-    list-style: none;
-    font-size: $p2-font-size;
-    padding: 7px;
-
-    color: $gray-500;
-    &--active {
-      color: $body-color;
-    }
   }
 
-  &-arrow {
-    list-style: none;
-    border: solid $gray-500;
-    border-width: 0 2px 2px 0;
-    padding: 4px;
-    transform: rotate(-45deg);
-    position: relative;
-    top: 1px;
-    margin-right: 4px;
-  }
-
-  &-logo {
-    display: block;
-    list-style: none;
-    border-right: 1px solid #d3d6d7;
-    img {
-      height: 28px;
-      width: 28px;
-    }
-  }
-
-  &-link {
-    font-weight: bold;
-    color: $gray-500;
-    text-decoration: none;
-    &:hover {
-      text-decoration: none;
-      color: $body-color;
-    }
-
-    &--active {
-      color: $body-color;
+  &-item.active, &-item:hover {
+    color: $breadcrumb-active-color;
+    a {
+      color: $breadcrumb-active-color;
     }
   }
 }
