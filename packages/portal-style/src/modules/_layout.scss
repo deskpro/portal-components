@@ -59,3 +59,30 @@ body {
     }
   }
 }
+
+.dp-po-divider {
+  display: inline-block;
+
+  &-text {
+    font-size: 15px;
+    color: #4C4F50;
+    position: relative;
+    margin-top: 50px;
+
+    &:before,
+    &:after {
+      width: 2px;
+      height: 43px;
+      background: #D3D6D7;
+      content: '';
+      position: absolute;
+      top: -50px;
+      left: 6px;
+    }
+
+    &:after {
+      top: auto;
+      bottom: -50px;
+    }
+  }
+}
