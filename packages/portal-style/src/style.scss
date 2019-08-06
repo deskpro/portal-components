@@ -4,44 +4,51 @@
 @import "variables/colors";
 @import "variables/vars";
 
-/**************************
-******* LIBRARIES ********
-**************************/
-@import "vendor/bootstrap/bootstrap";
-@import "vendor/fontawesome/all.css";
+.dp-po {
+  /**************************
+  ******* LIBRARIES ********
+  **************************/
+  @import "vendor/bootstrap/bootstrap";
+  @import "vendor/fontawesome/all.css";
 
-/**************************
-******* MODULES ********
-**************************/
-@import "modules/fonts";
-@import "modules/layout";
-@import "modules/header";
-@import "modules/footer";
-@import "modules/search";
-@import "modules/breadcrumbs";
-@import "modules/content";
-@import "modules/block";
-@import "modules/comments";
-@import "modules/sidebar";
-
-
-/**************************
-******* COMPONENTS ********
-**************************/
-@import "components/forms";
-@import "components/buttons";
-@import "components/icons";
-@import "components/labels";
-
-/**************************
-******** ELEMENTS *********
-**************************/
-@import "elements/title";
-@import "elements/avatar";
-@import "elements/subscribe";
+  /**************************
+  ******* MODULES ********
+  **************************/
+  @import "modules/type";
+  @import "modules/layout";
+  @import "modules/header";
+  @import "modules/footer";
+  @import "modules/search";
+  @import "modules/breadcrumbs";
+  @import "modules/block";
+  @import "modules/comments";
+  @import "modules/sidebar";
 
 
-/**************************
-******** PAGES *********
-**************************/
-@import "pages/kb-article";
+  /**************************
+  ******* COMPONENTS ********
+  **************************/
+  @import "components/forms";
+  @import "components/buttons";
+  @import "components/icons";
+  @import "components/labels";
+
+  /**************************
+  ******** ELEMENTS *********
+  **************************/
+  @import "elements/title";
+  @import "elements/avatar";
+  @import "elements/subscribe";
+
+
+  /**************************
+  ******** PAGES *********
+  **************************/
+  @import "pages/kb-article";
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: $font-size-base;
+}
