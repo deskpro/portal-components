@@ -1,6 +1,6 @@
 body {
   font-size: 18px;
-  color: #4C4F50;
+  color: $grey-darkest;
 
 }
 
@@ -9,7 +9,7 @@ body {
 }
 
 .dp-po-main {
-  background: #F7F7F7;
+  background: $grey-lightest;
   padding: 50px 0;
 }
 
@@ -33,7 +33,7 @@ body {
       position: absolute;
       right: -21px;
       top: 0;
-      background: #D3D6D7;
+      background: $grey-light;
     }
 
     &:last-child {
@@ -44,18 +44,18 @@ body {
   }
 
   &-link {
-    color: #8B9293;
+    color: $grey-dark;
 
     font-family: Rubik;
     font-size: 19px;
 
     &.active {
-      color: #4C4F50;
+      color: $grey-darkest;
     }
 
     &:hover {
       text-decoration: none;
-      color: #4C4F50;
+      color: $grey-darkest;
     }
   }
 }
@@ -65,15 +65,15 @@ body {
 
   &-text {
     font-size: 15px;
-    color: #4C4F50;
+    color: $grey-darkest;
     position: relative;
-    margin-top: 50px;
+    margin-top: 43px;
 
     &:before,
     &:after {
       width: 2px;
       height: 43px;
-      background: #D3D6D7;
+      background: $grey-light;
       content: '';
       position: absolute;
       top: -50px;
@@ -84,5 +84,15 @@ body {
       top: auto;
       bottom: -50px;
     }
+  }
+}
+
+.dp-po-social-login {
+  display: flex;
+  align-items: start;
+  justify-content: space-around;
+
+  .dp-po-button {
+    margin-bottom: 20px;
   }
 }

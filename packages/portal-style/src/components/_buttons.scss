@@ -1,22 +1,48 @@
 .dp-po-button {
   $self: &;
-  background: #3A8DDE;
+  background: $brand-primary;
   border-radius: 4px;
   display: inline-block;
   font-size: 15px;
   font-weight: 700;
-  color: #fff;
+  color: $white;
   padding: 10px 25px;
   text-decoration: none;
   transition: 0.3s all;
 
   &:hover {
     background: rgba(58, 141, 222, 0.6);
-    color: #fff;
+    color: $white;
     text-decoration: none;
   }
 
   &#{$self}-large {
     width: 250px;
+  }
+
+  &#{$self}-oauth {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    width: 254px;
+
+    .fab {
+      font-size: 26px;
+      padding: 9px 10px;
+      border-right: 1px solid $grey-light;
+    }
+
+    span {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &#{$self}-facebook {
+    background: $facebook;
+  }
+
+  &#{$self}-linkedin {
+    background: $linkedin;
   }
 }

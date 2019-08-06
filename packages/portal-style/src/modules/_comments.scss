@@ -9,7 +9,7 @@
 
   &-wrap {
     margin: 0 -30px;
-    border-bottom: 1px solid #EFF0F0;
+    border-bottom: 1px solid $grey-lighter;
 
     &:first-child {
       &>#{$self}-item {
@@ -33,12 +33,13 @@
   &-reply {
     margin: 0 0 0 70px;
     padding: 0;
-    border-top: 1px solid #eff0f0;
+    border-top: 1px solid $grey-lighter;
+    ;
 
     #{$self}-item {
       position: relative;
       padding: 20px 30px 20px 0;
-      border-bottom: 1px solid #EFF0F0;
+      border-bottom: 1px solid $grey-lighter;
 
       &:before {
         content: '';
@@ -47,7 +48,7 @@
         position: absolute;
         top: 0;
         left: -12px;
-        background: #A9B0B0;
+        background: $grey;
       }
     }
 
@@ -67,7 +68,7 @@
 
     .dp-po-icon {
       border-radius: 50%;
-      border: 1px solid #eff0f0;
+      border: 1px solid $grey-lighter;
       padding: 11px;
       background-position: center;
       background-size: 9px auto;
@@ -78,19 +79,19 @@
   &-upvote {
     display: inline-flex;
     align-items: center;
-    color: #8B9293;
+    color: $grey-dark;
     font-size: 15px;
     margin: 0 20px 0 0;
 
     .dp-po-icon {}
 
     &:hover {
-      color: #3A8DDE;
+      color: $brand-primary;
       text-decoration: none;
 
       .dp-po-icon {
-        background: #3A8DDE;
-        border-color: #3A8DDE;
+        background: $brand-primary;
+        border-color: $brand-primary;
       }
     }
   }
@@ -98,18 +99,18 @@
   &-downvote {
     display: inline-flex;
     align-items: center;
-    color: #8B9293;
+    color: $grey-dark;
     font-size: 15px;
 
     .dp-po-icon {}
 
     &:hover {
-      color: #E84954;
+      color: $danger;
       text-decoration: none;
 
       .dp-po-icon {
-        background: #E84954;
-        border-color: #E84954;
+        background: $danger;
+        border-color: $danger;
       }
     }
   }
@@ -139,15 +140,14 @@
 
     &-list {
       position: absolute;
-      background: #FFFFFF;
-      border: 1px solid #D3D6D7;
+      background: $white;
+      border: 1px solid $grey-light;
       box-sizing: border-box;
       border-radius: 4px;
       padding: 5px 0;
       margin: 0;
       left: 0;
       box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
-
     }
 
     &-item {
@@ -157,27 +157,27 @@
     &-link {
       font-size: 18px;
       padding: 10px 20px;
-      color: #4C4F50;
+      color: $grey-darkest;
       font-family: Rubik;
       display: block;
       white-space: nowrap;
 
       &:hover {
-        background: #E1EEFB;
-        color: #3A8DDE;
+        background: $info-light;
+        color: $brand-primary;
         text-decoration: none;
       }
     }
   }
 
   &-attachments {
-    background: #f7f7f7;
+    background: $grey-lightest;
     border-radius: 4px;
     padding: 20px;
     margin: 10px 0 0 40px;
 
     &-title {
-      color: #8B9293;
+      color: $grey-dark;
       font-size: 15px;
       margin: 0 0 15px;
     }
@@ -195,10 +195,10 @@
     &-link {
       display: inline-flex;
       align-items: center;
-      color: #3A8DDE;
+      color: $brand-primary;
 
       &:hover {
-        color: #3A8DDE;
+        color: $brand-primary;
       }
 
       .dp-po-icon {
