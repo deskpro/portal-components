@@ -14,9 +14,9 @@
       background: #fff;
       border: 1px solid #3A8DDE;
       border-radius: 4px;
-      font-family: Rubik;
       padding: 10px 60px;
-      font-size: 23px;
+      font-family: $headings-font-family;
+      font-size: $font-size-base * 1.277; // 23px at standard base size
       color: #8B9293;
       outline: none;
     }

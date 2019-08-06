@@ -1,3 +1,5 @@
+@import "vars";
+
 /**************************
 ******* LIBRARIES ********
 **************************/
@@ -13,6 +15,7 @@
 @import "modules/footer";
 @import "modules/search";
 @import "modules/breadcrumbs";
+@import "modules/content";
 @import "modules/block";
 @import "modules/comments";
 @import "modules/sidebar";
