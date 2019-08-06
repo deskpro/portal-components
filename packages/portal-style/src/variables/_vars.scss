@@ -12,7 +12,7 @@ $font-weight-base:            $font-weight-normal !default;
 $line-height-base:            1.5 !default;
 
 $headings-font-family:        "Rubik", $font-family-sans-serif;
-$headings-font-weight:        "normal";
+$headings-font-weight:        normal;
 $h1-font-size:                $font-size-base * 2 !default; // 36px
 $h2-font-size:                $font-size-base * 1.277 !default; // 23px
 $h3-font-size:                $font-size-base * 1.055 !default; // 19px
@@ -29,6 +29,11 @@ $button-font-family:          $font-family-sans-serif;
 $button1-font-size:           $font-size-base * 0.777 !default; // 14px
 $button2-font-size:           $font-size-base * 0.666 !default; // 12px
 $button3-font-size:           $font-size-base * 0.555 !default; // 10px
+
+$primary:       $brand-primary !default;
+$secondary:     $grey-darkest !default;
+$light:         $grey-light !default;
+$dark:          $grey-darkest !default;
 
 // Breadcrumbs
 
