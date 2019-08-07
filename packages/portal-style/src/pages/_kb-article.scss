@@ -94,3 +94,23 @@
     }
   }
 }
+
+
+.dp-po-social {
+  &-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-item {
+    list-style: none;
+  }
+
+  &-link {
+    i {
+      font-size: 28px;
+    }
+  }
+}
