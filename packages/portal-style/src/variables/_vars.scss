@@ -1,49 +1,94 @@
-$font-family-sans-serif:      Lato, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$font-family-base:            $font-family-sans-serif !default;
+$font-family-sans-serif: Lato,
+"Helvetica Neue",
+Arial,
+"Noto Sans",
+sans-serif,
+"Apple Color Emoji",
+"Segoe UI Emoji",
+"Segoe UI Symbol",
+"Noto Color Emoji" !default;
+$font-family-monospace: SFMono-Regular,
+Menlo,
+Monaco,
+Consolas,
+"Liberation Mono",
+"Courier New",
+monospace !default;
+$font-family-base: $font-family-sans-serif !default;
 
-$font-size-base:              1rem * 1.125 !default; // 18px based on default browser size (typically 16px)
+$font-size-base: 1rem * 1.125 !default; // 18px based on default browser size (typically 16px)
 
-$font-weight-normal:          normal !default;
-$font-weight-medium:          500 !default;
-$font-weight-bold:            bold !default;
+$font-weight-normal: normal !default;
+$font-weight-medium: 500 !default;
+$font-weight-bold: bold !default;
 
-$font-weight-base:            $font-weight-normal !default;
-$line-height-base:            1.5 !default;
+$font-weight-base: $font-weight-normal !default;
+$line-height-base: 1.5 !default;
 
-$headings-font-family:        "Rubik", $font-family-sans-serif;
-$headings-font-weight:        normal;
-$h1-font-size:                $font-size-base * 2 !default; // 36px
-$h2-font-size:                $font-size-base * 1.277 !default; // 23px
-$h3-font-size:                $font-size-base * 1.055 !default; // 19px
-$h4-font-size:                $font-size-base * 1.055 !default; // 19px
-$h5-font-size:                $font-size-base * 0.944 !default; // 17px
-$h6-font-size:                $font-size-base * 0.888 !default; // 17px
+$headings-font-family: "Rubik",
+$font-family-sans-serif;
+$headings-font-weight: normal;
+$h1-font-size: $font-size-base * 2 !default; // 36px
+$h2-font-size: $font-size-base * 1.277 !default; // 23px
+$h3-font-size: $font-size-base * 1.055 !default; // 19px
+$h4-font-size: $font-size-base * 1.055 !default; // 19px
+$h5-font-size: $font-size-base * 0.944 !default; // 17px
+$h6-font-size: $font-size-base * 0.888 !default; // 17px
 
-$p1-font-size:                $font-size-base * 1 !default; // 18px
-$p2-font-size:                $font-size-base * 0.833 !default; // 15px
-$p3-font-size:                $font-size-base * 0.833 !default; // 15px
-$p4-font-size:                $font-size-base * 0.666 !default; // 12px
+$p1-font-size: $font-size-base * 1 !default; // 18px
+$p2-font-size: $font-size-base * 0.833 !default; // 15px
+$p3-font-size: $font-size-base * 0.833 !default; // 15px
+$p4-font-size: $font-size-base * 0.666 !default; // 12px
 
-$button-font-family:          $font-family-sans-serif;
-$button1-font-size:           $font-size-base * 0.777 !default; // 14px
-$button2-font-size:           $font-size-base * 0.666 !default; // 12px
-$button3-font-size:           $font-size-base * 0.555 !default; // 10px
+$button-font-family: $font-family-sans-serif;
+$button1-font-size: $font-size-base * 0.777 !default; // 14px
+$button2-font-size: $font-size-base * 0.666 !default; // 12px
+$button3-font-size: $font-size-base * 0.555 !default; // 10px
 
-$primary:       $brand-primary !default;
-$secondary:     $grey-darkest !default;
-$light:         $grey-light !default;
-$dark:          $grey-darkest !default;
+$primary: $brand-primary !default;
+$secondary: $grey-darkest !default;
+$light: $grey-light !default;
+$dark: $grey-darkest !default;
 
 // Breadcrumbs
 
-$breadcrumb-padding-y:              0;
-$breadcrumb-padding-x:              0;
-$breadcrumb-item-padding:           0;
-$breadcrumb-margin-bottom:          0;
-$breadcrumb-bg:                     #fff;
-$breadcrumb-divider-color:          $grey !default;
-$breadcrumb-inactive-color:         $grey !default;
-$breadcrumb-active-color:           $grey-darkest !default;
-$breadcrumb-divider:                quote(">") !default;
-$breadcrumb-border-radius:          0;
+$breadcrumb-padding-y: 0;
+$breadcrumb-padding-x: 0;
+$breadcrumb-item-padding: 0;
+$breadcrumb-margin-bottom: 0;
+$breadcrumb-bg: #fff;
+$breadcrumb-divider-color: $grey !default;
+$breadcrumb-inactive-color: $grey !default;
+$breadcrumb-active-color: $grey-darkest !default;
+$breadcrumb-divider: quote(">") !default;
+$breadcrumb-border-radius: 0;
+
+// Dropdowns
+//
+// Dropdown menu container and contents.
+$dropdown-font-size: $p1-font-size;
+$dropdown-link-hover-bg: $info-light !default;
+$dropdown-link-color: $grey-darkest !default;
+$dropdown-link-hover-color: $brand-primary !default;
+$dropdown-item-padding-y: .60rem !default;
+$dropdown-item-padding-x: 1.25rem !default;
+$dropdown-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15) !default;
+$dropdown-border-radius: 4px !default;
+$dropdown-border-color: $grey-light !default;
+
+
+// Buttons
+$btn-font-size: $button1-font-size;
+$btn-font-weight: 600;
+$btn-padding-x: 20px;
+$btn-padding-y: 11px;
+
+
+$btn-padding-y-lg: 11px;
+$btn-padding-x-lg: 20px;
+$btn-font-size-lg: $p2-font-size;
+
+
+$btn-border-radius: 4px;
+$btn-border-radius-lg: 4px;
+$btn-border-radius-sm: 4px;

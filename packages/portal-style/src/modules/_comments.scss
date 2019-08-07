@@ -136,6 +136,8 @@
 
   &-options {
     margin: 0 0 0 20px;
+
+    /*
     height: 17px;
 
     &-list {
@@ -167,6 +169,11 @@
         color: $brand-primary;
         text-decoration: none;
       }
+    }
+    */
+    & [data-toggle="dropdown"] {
+      font-size: 28px;
+      color: $grey;
     }
   }
 

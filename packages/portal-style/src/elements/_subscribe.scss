@@ -1,3 +1,4 @@
+/*
 .dp-po-subscribe {
   margin: 0 0 20px;
 
@@ -62,5 +63,87 @@
 
   &-linkall {
     margin: 0;
+  }
+}
+
+*/
+
+.dp-po-subscribe {
+  .dropdown-menu {
+    width: 100%;
+    border-color: $brand-primary;
+  }
+
+  .btn {
+    text-align: left;
+    position: relative;
+  }
+
+  .show {
+    .btn {
+      background: $brand-primary;
+      color: $white;
+
+      &:after {
+        content: "\f00c";
+        font-family: "Font Awesome 5 Pro";
+        position: absolute;
+        right: 20px;
+        top: 0;
+        font-size: 26px;
+      }
+    }
+  }
+
+  .dropdown-item {
+    position: relative;
+    font-family: $headings-font-family;
+    display: flex;
+    align-items: center;
+
+    i {
+      font-size: 26px;
+      margin: 0 10px 0 0;
+      color: $grey-dark;
+    }
+
+    &:hover {
+      background: none;
+
+      i {
+        color: $brand-primary;
+      }
+
+      &:after {
+        content: "\f00c";
+        font-family: "Font Awesome 5 Pro";
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        font-size: 26px;
+        color: $success;
+      }
+    }
+
+    &:last-child {
+      color: $brand-primary;
+      font-size: $button1-font-size;
+      font-family: $font-family-sans-serif;
+      font-weight: 600;
+
+      &:hover {
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    &.disabled {
+      color: $grey;
+
+      i {
+        color: $grey;
+      }
+    }
   }
 }
