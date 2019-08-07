@@ -23,16 +23,15 @@
 
     button[type="submit"] {
       position: absolute;
-      left: 0;
-      top: 0;
-      text-indent: -9999px;
       border: none;
-      background-size: 32px 32px;
       height: 32px;
       left: 16px;
       position: absolute;
       top: calc(50% - 16px);
       width: 32px;
+      font-size: 26px;
+      padding: 0;
+      color: $brand-primary;
     }
   }
 }
