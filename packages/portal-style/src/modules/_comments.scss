@@ -66,12 +66,13 @@
     padding: 0 0 0 40px;
     margin: 10px 0 0;
 
-    .dp-po-icon {
+    .fal {
       border-radius: 50%;
       border: 1px solid $grey-lighter;
-      padding: 11px;
-      background-position: center;
-      background-size: 9px auto;
+      width: 24px;
+      height: 24px;
+      font-size: 22px;
+      text-align: center;
       margin: 0 10px 0 0;
     }
   }
@@ -83,15 +84,14 @@
     font-size: 15px;
     margin: 0 20px 0 0;
 
-    .dp-po-icon {}
-
     &:hover {
       color: $brand-primary;
       text-decoration: none;
 
-      .dp-po-icon {
+      .fal {
         background: $brand-primary;
         border-color: $brand-primary;
+        color: $white;
       }
     }
   }
@@ -102,15 +102,14 @@
     color: $grey-dark;
     font-size: 15px;
 
-    .dp-po-icon {}
-
     &:hover {
       color: $danger;
       text-decoration: none;
 
-      .dp-po-icon {
+      .fal {
         background: $danger;
         border-color: $danger;
+        color: $white;
       }
     }
   }
@@ -127,10 +126,11 @@
     font-size: 14px;
     font-weight: 600;
 
-    .dp-po-icon {
-      margin-right: 10px;
-      width: 14px;
-      height: 14px;
+    .far {
+      margin-right: 7px;
+      color: #3a8dde;
+      position: relative;
+      top: 1px;
     }
   }
 
@@ -196,7 +196,7 @@
 
     &-item {
       list-style: none;
-      margin-top: 5px;
+      margin-top: 12px;
     }
 
     &-link {
@@ -208,8 +208,10 @@
         color: $brand-primary;
       }
 
-      .dp-po-icon {
+      i {
         margin: 0 10px 0 0;
+        font-size: 26px;
+        color: $grey-darkest;
       }
     }
   }
