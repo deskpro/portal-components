@@ -1,5 +1,5 @@
 {
-  "name": "style",
+  "name": "portal-style",
   "version": "0.0.1",
   "description": "Styling for for Deskpro Portal Interface",
   "author": "DeskPRO <support@deskpro.com>",
@@ -10,20 +10,13 @@
     "dist"
   ],
   "scripts": {
-    "dev": "concurrently --kill-others-on-fail 'npm:compile' 'yarn:docs-server' 'gulp'",
-    "build-lib": "yarn postcss-build",
-    "prepare": "yarn postcss-prod",
-    "build": "yarn postcss-build && yarn init-website-build && yarn docs-build",
-    "postcss-watch": "postcss \"src/style.css\" --base src --dir website/static/css --verbose -m -w --env development",
-    "postcss-build": "postcss \"src/**/*.css\" --base src --dir dist --verbose --env development -m",
-    "postcss-prod": "postcss \"src/**/*.css\" --base src --dir dist --verbose --env production -m",
+    "dev": "concurrently --kill-others-on-fail 'npm:compile' 'npm:docs-server' 'gulp'",
+    "prepare": "gulp build",
+    "build": "gulp build && npm run init-website-build && npm run docs-build",
     "init-website-build": "cpx dist/style.css website/static/css",
-    "docs-server": "cd website && yarn start",
-    "docs-build": "cd website && yarn build",
-    "lint": "stylelint \"src/**/*.css\"",
-    "lint-tryfix": "stylelint \"src/**/*.css\" --fix",
-    "test": "stylelint \"src/**/*.css\"",
-    "postinstall": "[ ! -d website ] || (cd website && yarn install)",
+    "docs-server": "cd website && npm run start",
+    "docs-build": "cd website && npm run build",
+    "postinstall": "[ ! -d website ] || (cd website && npm install)",
     "compile": "html-includes --src 'website/static/includes/' --dest 'website/static/demos/' --watch"
   },
   "dependencies": {},

@@ -2,14 +2,14 @@ language: node_js
 node_js:
   - '8'
 before_script:
-  - yarn bootstrap
+  - npm install -g lerna gulp
+  - lerna bootstrap
 script:
   - npm run travis-test
-  - yarn build
+  - npm run build
   - ./bin/travis-prep-website.sh
-  - 'if [ "${TRAVIS_BRANCH}" == "develop" ] && [ "${TRAVIS_PULL_REQUEST}" == "false" ]; then yarn snapshots; else echo "snapshots are only enabled on the develop branch"; fi'
+  - 'if [ "${TRAVIS_BRANCH}" == "develop" ] && [ "${TRAVIS_PULL_REQUEST}" == "false" ]; then npm run snapshots; else echo "snapshots are only enabled on the develop branch"; fi'
 cache:
-  yarn: true
   directories:
     - .npm
     - node_modules

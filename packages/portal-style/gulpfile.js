@@ -45,3 +45,7 @@ exports.default = series(
   parallel(scssTask),
   watchTask
 );
+
+exports.build = series(
+  parallel(scssTask)
+);
