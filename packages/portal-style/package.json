@@ -11,9 +11,7 @@
   "scripts": {
     "dev": "gulp dev",
     "prepare": "gulp",
-    "build": "npm run build:lib && npm run build:website",
-    "build:website": "html-includes --src 'website' --dest '.build/website'",
-    "build:lib": "gulp"
+    "build": "gulp"
   },
   "dependencies": {
     "bootstrap": "^4.3.1"
