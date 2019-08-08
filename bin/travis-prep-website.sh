@@ -5,8 +5,8 @@ set -e
 DIR_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/.."
 cd $DIR_ROOT
 
-if [ ! -d ./packages/portal-style/website/build/style ]; then
-  echo "Missing: packages/portal-style/website/build/style"
+if [ ! -d ./packages/portal-style/.build ]; then
+  echo "Missing: packages/portal-style/.build"
   echo "Did you build first?"
   exit 1
 fi
@@ -24,7 +24,7 @@ fi
 mkdir -p ./target/portal-components
 
 mv ./packages/style/website/build/style ./target/portal-components/style
-mv ./packages/portal-style/website/build/style ./target/portal-components/portal-style
+mv ./packages/portal-style/.build/portal-components/portal-style ./target/portal-components/portal-style
 mv ./packages/components-demo/storybook-static ./target/portal-components/demo
 
 cat << EOF > ./target/portal-components/index.html

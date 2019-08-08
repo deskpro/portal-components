@@ -3,23 +3,21 @@
   "version": "0.0.1",
   "description": "Styling for for Deskpro Portal Interface",
   "author": "DeskPRO <support@deskpro.com>",
-  "homepage": "",
   "license": "SEE LICENSE IN LICENSE",
   "main": "dist/style.css",
   "files": [
     "dist"
   ],
   "scripts": {
-    "dev": "concurrently --kill-others-on-fail 'npm:compile' 'npm:docs-server' 'gulp'",
-    "prepare": "gulp build",
-    "build": "gulp build && npm run init-website-build && npm run docs-build",
-    "init-website-build": "cpx dist/style.css website/static/css",
-    "docs-server": "cd website && npm run start",
-    "docs-build": "cd website && npm run build",
-    "postinstall": "[ ! -d website ] || (cd website && npm install)",
-    "compile": "html-includes --src 'website/static/includes/' --dest 'website/static/demos/' --watch"
+    "dev": "gulp dev",
+    "prepare": "gulp",
+    "build": "npm run build:lib && npm run build:website",
+    "build:website": "html-includes --src 'website' --dest '.build/website'",
+    "build:lib": "gulp"
   },
-  "dependencies": {},
+  "dependencies": {
+    "bootstrap": "^4.3.1"
+  },
   "devDependencies": {
     "autoprefixer": "^9.6.0",
     "concurrently": "^4.1.0",
@@ -30,21 +28,11 @@
     "eslint-config-airbnb-base": "^13.2.0",
     "eslint-plugin-import": "^2.18.2",
     "gulp": "^4.0.2",
+    "gulp-connect": "^5.7.0",
+    "gulp-ejs": "^4.1.1",
     "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.5",
-    "html-includes": "^4.2.0",
-    "postcss": "^7.0.16",
-    "postcss-autoreset": "^2.0.2",
-    "postcss-cli": "^6.1.2",
-    "postcss-extend-rule": "^2.0.0",
-    "postcss-flexbugs-fixes": "^4.1.0",
-    "postcss-import": "^12.0.1",
-    "postcss-inline-svg": "^3.1.1",
-    "postcss-preset-env": "^6.6.0",
-    "postcss-svgo": "^4.0.2",
-    "stylelint": "^10.0.1",
-    "stylelint-config-suitcss": "^14.0.0",
-    "stylelint-selector-bem-pattern": "^2.1.0"
+    "gulp-sourcemaps": "^2.6.5"
   }
 }
