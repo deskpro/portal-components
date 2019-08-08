@@ -5,6 +5,12 @@ set -e
 DIR_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/.."
 cd $DIR_ROOT
 
+if [ ! -d ./packages/portal-style/website/build/style ]; then
+  echo "Missing: packages/portal-style/website/build/style"
+  echo "Did you build first?"
+  exit 1
+fi
+
 if [ ! -d ./packages/style/website/build/style ]; then
   echo "Missing: packages/style/website/build/style"
   echo "Did you build first?"
@@ -18,6 +24,7 @@ fi
 mkdir -p ./target/portal-components
 
 mv ./packages/style/website/build/style ./target/portal-components/style
+mv ./packages/portal-style/website/build/style ./target/portal-components/portal-style
 mv ./packages/components-demo/storybook-static ./target/portal-components/demo
 
 cat << EOF > ./target/portal-components/index.html
@@ -37,7 +44,7 @@ cat << EOF > ./target/portal-components/index.html
             <div class="promoRow">
               <div class="pluginRowBlock">
                 <div class="pluginWrapper buttonWrapper">
-                  <a class="button" href="./style/">CSS and Styling</a>
+                  <a class="button" href="./portal-style/">CSS and Styling</a>
                 </div>
                 <div class="pluginWrapper buttonWrapper">
                   <a class="button" href="./demo/">React Components Demo</a>
