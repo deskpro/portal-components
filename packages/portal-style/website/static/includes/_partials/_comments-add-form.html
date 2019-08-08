@@ -4,9 +4,13 @@
     <strong>Nick Green</strong>
   </div>
   <form class="dp-po-form">
-    <div class="dp-po-form-element">
-      <label class="dp-po-form-label">Your comment<sup>*</sup></label>
-      <textarea class="dp-po-form-textarea" placeholder="Enter Comment"></textarea>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Your comment *</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Enter Comment"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlFile1">Add attachment</label>
+      <input type="file" class="form-control-file" id="exampleFormControlFile1">
     </div>
     <div class="dp-po-form-element">
       <label class="dp-po-form-label">Add attachment</label>
@@ -22,12 +26,10 @@
         </div>
       </div>
     </div>
-    <div class="dp-po-form-element">
-      <div class="dp-po-form-checkbox">
-        <input type="checkbox" id="customCheckbox">
-        <label class="dp-po-form-label" for="customCheckbox">Subscribe</label>
-      </div>
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Subscribe</label>
     </div>
-    <input type="submit" class="dp-po-button" value="Publish" />
+    <input type="submit" class="btn btn-primary" value="Publish" />
   </form>
 </div>

@@ -334,9 +334,13 @@
     <strong>Nick Green</strong>
   </div>
   <form class="dp-po-form">
-    <div class="dp-po-form-element">
-      <label class="dp-po-form-label">Your comment<sup>*</sup></label>
-      <textarea class="dp-po-form-textarea" placeholder="Enter Comment"></textarea>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Your comment *</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Enter Comment"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlFile1">Add attachment</label>
+      <input type="file" class="form-control-file" id="exampleFormControlFile1">
     </div>
     <div class="dp-po-form-element">
       <label class="dp-po-form-label">Add attachment</label>
@@ -352,13 +356,11 @@
         </div>
       </div>
     </div>
-    <div class="dp-po-form-element">
-      <div class="dp-po-form-checkbox">
-        <input type="checkbox" id="customCheckbox">
-        <label class="dp-po-form-label" for="customCheckbox">Subscribe</label>
-      </div>
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Subscribe</label>
     </div>
-    <input type="submit" class="dp-po-button" value="Publish" />
+    <input type="submit" class="btn btn-primary" value="Publish" />
   </form>
 </div>
 
@@ -443,9 +445,13 @@
     <strong>Nick Green</strong>
   </div>
   <form class="dp-po-form">
-    <div class="dp-po-form-element">
-      <label class="dp-po-form-label">Your comment<sup>*</sup></label>
-      <textarea class="dp-po-form-textarea" placeholder="Enter Comment"></textarea>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Your comment *</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Enter Comment"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlFile1">Add attachment</label>
+      <input type="file" class="form-control-file" id="exampleFormControlFile1">
     </div>
     <div class="dp-po-form-element">
       <label class="dp-po-form-label">Add attachment</label>
@@ -461,13 +467,11 @@
         </div>
       </div>
     </div>
-    <div class="dp-po-form-element">
-      <div class="dp-po-form-checkbox">
-        <input type="checkbox" id="customCheckbox">
-        <label class="dp-po-form-label" for="customCheckbox">Subscribe</label>
-      </div>
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Subscribe</label>
     </div>
-    <input type="submit" class="dp-po-button" value="Publish" />
+    <input type="submit" class="btn btn-primary" value="Publish" />
   </form>
 </div>
 
@@ -492,19 +496,18 @@
       <div class="col-sm-6">
         <section class="dp-po-loginform">
   <form class="do-po-form">
-    <div class="dp-po-form-element">
-      <input type="email" class="dp-po-form-text" placeholder="Email Address" />
+    <div class="form-group">
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+        placeholder="Email Address">
     </div>
-    <div class="dp-po-form-element">
-      <input type="password" class="dp-po-form-text" placeholder="Password" />
+    <div class="form-group">
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
     </div>
-    <div class="dp-po-form-element">
-      <div class="dp-po-form-checkbox">
-        <input type="checkbox" id="stayLogin">
-        <label class="dp-po-form-label" for="stayLogin">Stay logged in</label>
-      </div>
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="loginForm">
+      <label class="form-check-label" for="loginForm">Stay logged in</label>
     </div>
-    <input type="submit" class="dp-po-button dp-po-button-large" value="Log in" />
+    <button type="submit" class="btn btn-primary">Log in</button>
   </form>
 </section>
 
@@ -550,22 +553,23 @@
       <div class="col-sm-6">
         <section class="dp-po-loginform">
   <form class="do-po-form">
-    <div class="dp-po-form-element">
-      <input type="text" class="dp-po-form-text dp-po-form-success" placeholder="Name" value="Success Text" />
-      <span class="dp-po-form-helptext">HelpText or Success Message</span>
+    <div class="form-group">
+      <input type="text" class="form-control form-success" id="exampleInputEmail1" aria-describedby="emailHelp"
+        placeholder="Name">
+      <small id="emailHelp" class="form-text text-success">HelpText or Success Message</small>
     </div>
-    <div class="dp-po-form-element">
-      <input type="email" class="dp-po-form-text dp-po-form-error" placeholder="Email" value="Error Text" />
-      <span class="dp-po-form-helptext">HelpText or Error Message</span>
+    <div class="form-group">
+      <input type="email" class="form-control form-error" id="exampleInputEmail1" aria-describedby="emailHelp"
+        placeholder="Email Address">
+      <small id="emailHelp" class="form-text text-danger">HelpText or Success Message</small>
     </div>
-    <div class="dp-po-form-element">
-      <input type="password" class="dp-po-form-text" placeholder="Password" />
-      <span class="dp-po-form-helptext">HelpText generic</span>
+    <div class="form-group">
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
     </div>
-    <div class="dp-po-form-element">
-      <input type="password" class="dp-po-form-text" placeholder="Confirm Password" />
+    <div class="form-group">
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm Password">
     </div>
-    <input type="submit" class="dp-po-button" value="Register" />
+    <button type="submit" class="btn btn-primary">Register</button>
   </form>
 </section>
 
