@@ -9,4 +9,41 @@
       line-height: 0;
     }
   }
+
+  &-lg {
+    width: 254px;
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  &-brand {
+    position: relative;
+    color: $white;
+
+    .dp-po-icon {
+      position: absolute;
+      left: 0;
+      height: 100%;
+      border-right: 1px solid $grey-light;
+      padding: 8px;
+      font-size: 26px;
+    }
+
+    span {
+      margin-left: 40px;
+    }
+
+    &:hover {
+      color: $white;
+      opacity: 0.8;
+    }
+  }
+
+  &-fb {
+    background: $facebook;
+  }
+
+  &-li {
+    background: $linkedin;
+  }
 }

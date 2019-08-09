@@ -3,6 +3,14 @@
     <h2 class="dp-po-title-text dp-po-title-small">Add Comment</h2>
   </div>
   <div class="dp-po-block">
+    <div class="alert alert-icon alert-danger" role="alert">
+      <i class="dp-po-icon far fa-envelope"></i> Please validate your email address by following the link in the
+      email sent to you. <a href="#" class="alert-link"> Resend link?</a>
+    </div>
+    <div class="alert alert-icon alert-success" role="alert">
+      <i class="dp-po-icon far fa-check"></i> Thank you for validating your email address, you are now ready to
+      add your comment. Long content testing with some <a href="#" class="alert-link">links</a> in between
+    </div>
     <%- include('_comments-add-form.ejs'); %>
   </div>
 </div>

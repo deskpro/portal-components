@@ -2,8 +2,16 @@
   $self: '.dp-po-comments';
 
   &-add {
+    position: relative;
+
     .dp-po-form {
       padding: 0 0 0 40px;
+    }
+
+    &-cancel {
+      position: absolute;
+      right: 0;
+      top: 0;
     }
   }
 

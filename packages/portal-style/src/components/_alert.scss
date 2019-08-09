@@ -1,6 +1,4 @@
 .alert {
-  display: flex;
-  align-items: center;
   border-width: 2px;
 
   &.alert-icon {
@@ -8,7 +6,7 @@
 
     .dp-po-icon {
       margin: 0 10px 0 0;
-      display: inline-block;
+      display: inline-flex;
       background: #fff;
       border: 1px solid;
       position: absolute;
@@ -21,6 +19,8 @@
       border-bottom-left-radius: 4px;
       font-size: 22px;
       padding: 10px 0px;
+      justify-content: center;
+      align-items: center;
     }
   }
 }

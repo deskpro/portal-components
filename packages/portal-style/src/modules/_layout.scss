@@ -92,8 +92,12 @@ body {
   align-items: start;
   justify-content: space-around;
 
-  .dp-po-button {
+  .btn {
     margin-bottom: 20px;
+  }
+
+  .dp-po-oauth {
+    margin: 0 30px;
   }
 }
 
