@@ -95,7 +95,6 @@
   }
 }
 
-
 .dp-po-social {
   &-list {
     margin: 0;
@@ -114,11 +113,6 @@
     }
   }
 }
-
-
-/**************************
-******** KB AVATARS *******
-***************************/
 
 .dp-po-kbavatars {
   $self: '.dp-po-kbavatars';
@@ -267,5 +261,89 @@
   &-count {
     margin-top: 20px;
     color: $grey-dark;
+  }
+}
+
+.dp-po-tab {
+  margin: 0 0 20px;
+  padding: 0;
+
+  &-item {
+    display: inline-block;
+    position: relative;
+    margin: 0 40px 0 0;
+
+    &:after {
+      content: '';
+      width: 2px;
+      height: 100%;
+      position: absolute;
+      right: -21px;
+      top: 0;
+      background: $grey-light;
+    }
+
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  &-link {
+    color: $grey-dark;
+
+    font-family: Rubik;
+    font-size: 19px;
+
+    &.active {
+      color: $grey-darkest;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: $grey-darkest;
+    }
+  }
+}
+
+.dp-po-divider {
+  display: inline-block;
+
+  &-text {
+    font-size: 15px;
+    color: $grey-darkest;
+    position: relative;
+    margin-top: 43px;
+
+    &:before,
+    &:after {
+      width: 2px;
+      height: 43px;
+      background: $grey-light;
+      content: '';
+      position: absolute;
+      top: -50px;
+      left: 6px;
+    }
+
+    &:after {
+      top: auto;
+      bottom: -50px;
+    }
+  }
+}
+
+.dp-po-social-login {
+  display: flex;
+  align-items: start;
+  justify-content: space-around;
+
+  .btn {
+    margin-bottom: 20px;
+  }
+
+  .dp-po-oauth {
+    margin: 0 30px;
   }
 }
