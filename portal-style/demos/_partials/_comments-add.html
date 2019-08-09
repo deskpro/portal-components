@@ -3,7 +3,18 @@
     <h2 class="dp-po-title-text dp-po-title-small">Add Comment</h2>
   </div>
   <div class="dp-po-block">
+    <div class="alert alert-icon alert-danger" role="alert">
+      <i class="dp-po-icon far fa-envelope"></i> Please validate your email address by following the link in the
+      email sent to you. <a href="#" class="alert-link"> Resend link?</a>
+    </div>
+    <div class="alert alert-icon alert-success" role="alert">
+      <i class="dp-po-icon far fa-check"></i> Thank you for validating your email address, you are now ready to
+      add your comment. Long content testing with some <a href="#" class="alert-link">links</a> in between
+    </div>
     <div class="dp-po-comments-add">
+  <div class="dp-po-comments-add-cancel">
+    <a href="javascript:voic(0)" class="btn btn-outline-secondary">Cancel</a>
+  </div>
   <div class="dp-po-avatar">
     <img src="/portal-components/portal-style/static/img/docs/avatar.png" />
     <strong>Nick Green</strong>
@@ -13,29 +24,34 @@
       <label for="exampleFormControlTextarea1">Your comment *</label>
       <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Enter Comment"></textarea>
     </div>
-    <div class="form-group">
+    <div class="form-group dp-po-form-upload">
       <label for="exampleFormControlFile1">Add attachment</label>
-      <input type="file" class="form-control-file" id="exampleFormControlFile1">
-    </div>
-    <div class="dp-po-form-element">
-      <label class="dp-po-form-label">Add attachment</label>
-      <div class="dp-po-form-upload">
-        <div class="dp-po-button">
-          <i class="fal fa-file-alt"></i>
+      <!--<input type="file" class="form-control-file" id="exampleFormControlFile1">-->
+      <div class="dp-po-form-upload-wrap">
+        <div class="btn btn-icon btn-outline-secondary">
+          <i class="dp-po-icon fal fa-file-alt"></i>
           Choose a file
         </div>
         <span>or</span>
         <div class="dp-po-drag">
-          <i class="fal fa-box-up"></i>
+          <i class="dp-po-icon far fa-expand-arrows"></i>
           Drag and drop
         </div>
       </div>
     </div>
-    <div class="form-group form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-      <label class="form-check-label" for="exampleCheck1">Subscribe</label>
+    <div class="row align-items-center">
+      <div class="col-sm-2">
+        <input type="submit" class="btn btn-primary" value="Publish" />
+      </div>
+      <div class="col-sm-4">
+        <div class="form-group dp-po-form-check mb-0">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Subscribe</label>
+        </div>
+      </div>
     </div>
-    <input type="submit" class="btn btn-primary" value="Publish" />
+
+
   </form>
 </div>
 
@@ -67,11 +83,11 @@
     <div class="form-group">
       <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
     </div>
-    <div class="form-group form-check">
-      <input type="checkbox" class="form-check-input" id="loginForm">
-      <label class="form-check-label" for="loginForm">Stay logged in</label>
+    <div class="form-group dp-po-form-check">
+      <input type="checkbox" class="form-check-input" id="loginCheck">
+      <label class="form-check-label" for="loginCheck">Stay logged in</label>
     </div>
-    <button type="submit" class="btn btn-primary">Log in</button>
+    <button type="submit" class="btn btn-primary btn-lg">Log in</button>
   </form>
 </section>
 
@@ -84,12 +100,12 @@
   </div>
 
   <div class="dp-po-oauth">
-    <a href="" class="dp-po-button dp-po-button-oauth dp-po-button-facebook">
-      <i class="fab fa-facebook-square"></i>
+    <a href="" class="btn btn-icon btn-fb btn-lg btn-brand">
+      <i class="dp-po-icon fab fa-facebook-square"></i>
       <span>Log-in with facebook</span>
     </a>
-    <a href="" class="dp-po-button dp-po-button-oauth dp-po-button-linkedin">
-      <i class="fab fa-linkedin"></i>
+    <a href="" class="btn btn-icon btn-li btn-lg btn-brand">
+      <i class="dp-po-icon fab fa-linkedin"></i>
       <span>Log-in with linkedin</span>
     </a>
   </div>
@@ -133,7 +149,23 @@
     <div class="form-group">
       <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm Password">
     </div>
-    <button type="submit" class="btn btn-primary">Register</button>
+    <div class="form-group dp-po-form-captcha">
+      <div class="row align-items-center no-gutters">
+        <div class="col-sm-5">
+          <div class="dp-po-form-captcha-text"></div>
+        </div>
+        <div class="col-sm-2 text-center">
+          <a href="" class="dp-po-form-captcha-reload"><i class="dp-po-icon far fa-sync"></i></a>
+        </div>
+        <div class="col-sm-5">
+          <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Insert text">
+        </div>
+      </div>
+      <small id="emailHelp" class="form-text">To prove you are human, please insert the text you can see in the box
+        above.</small>
+
+    </div>
+    <button type="submit" class="btn btn-primary btn-lg">Register</button>
   </form>
 </section>
 
