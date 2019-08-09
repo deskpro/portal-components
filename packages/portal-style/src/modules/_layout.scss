@@ -96,3 +96,15 @@ body {
     margin-bottom: 20px;
   }
 }
+
+.dp-po-icon {
+  svg {
+    vertical-align: -.125em;
+
+    .fa-secondary,
+    .fa-primary {
+      fill: $brand-primary;
+    }
+  }
+
+}

@@ -22,7 +22,7 @@ const cssnano = require('cssnano');
 const files = {
   scssPath: 'src/**/*.scss',
   srcAssetsPath: 'src/assets/**/*',
-  websitePath: 'website/**/[^_]*.ejs',
+  websitePath: 'website/**/*.ejs',
   websiteStaticPath: 'website/static/**/*'
 };
 
@@ -50,7 +50,9 @@ function styleAssetsTask() {
 function ejsTask() {
   return src(files.websitePath)
     .pipe(ejs())
-    .pipe(rename({ extname: '.html' }))
+    .pipe(rename({
+      extname: '.html'
+    }))
     .pipe(dest('.build/portal-components/portal-style'))
     .pipe(connect.reload());
 }

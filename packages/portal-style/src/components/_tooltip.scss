@@ -3,9 +3,7 @@
   position: relative;
   padding: 3px 5px;
 
-  &:after {
-    content: "\f05a";
-    font-family: "Font Awesome 5 Pro";
+  .dp-po-icon {
     position: absolute;
     right: 0;
     top: 0;
@@ -21,12 +19,13 @@
   border-radius: 4px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
   padding: 10px;
-  width: 250px;
+  max-width: 250px;
   border: 1px solid $grey-light;
   font-family: $font-family-sans-serif;
   color: $grey-darkest;
   font-size: 12px;
   line-height: 1.5;
+  display: inline-block;
 
   p {
     margin: 0 0 5px;

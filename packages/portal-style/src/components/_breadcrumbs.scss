@@ -1,0 +1,53 @@
+.breadcrumb-outer {
+  border-bottom: 2px solid $grey-light;
+}
+
+.breadcrumb {
+  margin-left: -7px;
+
+  &-item {
+    color: $breadcrumb-inactive-color;
+    font-weight: bold;
+    font-size: $p2-font-size;
+    position: relative;
+
+    a {
+      padding: 7px;
+      display: inline-block;
+      text-decoration: none;
+      color: $breadcrumb-inactive-color;
+
+      &:after {
+        content: '';
+        width: calc(100% - 14px);
+        height: 2px;
+        background: $brand-primary;
+        position: absolute;
+        bottom: -2px;
+        left: 7px;
+        opacity: 0;
+      }
+    }
+  }
+
+  &-item.active,
+  &-item:hover {
+    color: $breadcrumb-active-color;
+
+    a {
+      color: $breadcrumb-active-color;
+      position: relative;
+
+      &:after {
+        opacity: 1;
+      }
+
+    }
+
+    &:before {
+      color: $brand-primary;
+    }
+
+
+  }
+}

@@ -1,10 +1,12 @@
 .dp-po-title {
   display: inline-flex;
   align-items: center;
-  $self: &;
+  margin-bottom: 1rem;
+  $self: '.dp-po-title';
 
-  &-icon {
+  .dp-po-icon {
     margin: 0 10px 0 0;
+    font-size: $font-size-base * 1.666;
   }
 
   &-text {
@@ -16,9 +18,5 @@
     &#{$self}-small {
       font-size: 23px;
     }
-  }
-
-  &+.dp-po-block {
-    margin-top: 15px;
   }
 }

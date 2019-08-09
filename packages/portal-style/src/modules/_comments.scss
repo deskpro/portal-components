@@ -1,5 +1,5 @@
 .dp-po-comments {
-  $self: &;
+  $self: '.dp-po-comments';
 
   &-add {
     .dp-po-form {
@@ -66,7 +66,7 @@
     padding: 0 0 0 40px;
     margin: 10px 0 0;
 
-    .fal {
+    .dp-po-icon svg {
       border-radius: 50%;
       border: 1px solid $grey-lighter;
       width: 24px;
@@ -88,7 +88,7 @@
       color: $brand-primary;
       text-decoration: none;
 
-      .fal {
+      .dp-po-icon svg {
         background: $brand-primary;
         border-color: $brand-primary;
         color: $white;
@@ -106,7 +106,7 @@
       color: $danger;
       text-decoration: none;
 
-      .fal {
+      .dp-po-icon svg {
         background: $danger;
         border-color: $danger;
         color: $white;
@@ -126,7 +126,7 @@
     font-size: 14px;
     font-weight: 600;
 
-    .far {
+    .dp-po-icon {
       margin-right: 7px;
       color: #3a8dde;
       position: relative;
@@ -137,40 +137,6 @@
   &-options {
     margin: 0 0 0 20px;
 
-    /*
-    height: 17px;
-
-    &-list {
-      position: absolute;
-      background: $white;
-      border: 1px solid $grey-light;
-      box-sizing: border-box;
-      border-radius: 4px;
-      padding: 5px 0;
-      margin: 0;
-      left: 0;
-      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
-    }
-
-    &-item {
-      list-style: none;
-    }
-
-    &-link {
-      font-size: 18px;
-      padding: 10px 20px;
-      color: $grey-darkest;
-      font-family: Rubik;
-      display: block;
-      white-space: nowrap;
-
-      &:hover {
-        background: $info-light;
-        color: $brand-primary;
-        text-decoration: none;
-      }
-    }
-    */
     & [data-toggle="dropdown"] {
       font-size: 28px;
       color: $grey;
@@ -208,7 +174,7 @@
         color: $brand-primary;
       }
 
-      i {
+      .dp-po-icon {
         margin: 0 10px 0 0;
         font-size: 26px;
         color: $grey-darkest;

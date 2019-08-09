@@ -4,4 +4,11 @@
   line-height: $line-height-base;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: $grey-darkest;
+
+  p,
+  ul,
+  ol {
+    margin-bottom: 1.5rem;
+  }
 }

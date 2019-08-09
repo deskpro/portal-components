@@ -1,0 +1,17 @@
+.dp-po-clipboard {
+  &-link {
+    display: inline-block;
+  }
+
+  .dp-po-icon {
+    color: $brand-primary;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  &:hover {
+    .dp-po-icon {
+      opacity: 1;
+    }
+  }
+}
