@@ -1,0 +1,19 @@
+.badge {
+  border-radius: 2px;
+  padding: 7px 10px;
+  font-size: $p4-font-size;
+  font-weight: 600;
+  text-decoration: none;
+  margin: 0 0px 2px 0;
+
+  &:hover {
+    opacity: 0.8;
+    text-decoration: none;
+    color: $white;
+  }
+
+  &-small {
+    font-size: $button3-font-size;
+    padding: 3px 5px;
+  }
+}
