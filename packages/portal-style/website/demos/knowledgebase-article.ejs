@@ -163,41 +163,21 @@
 
             <div class="dp-po-subscribe">
               <div class="dropdown">
-                <button class="btn btn-lg btn-outline-primary btn-block" type="button" id="dropdownMenu2"
-                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="0,10">
-                  <i class="fal fa-envelope"></i> Subscribe
+                <!--class : dp-po-subscribe-activebtn -->
+                <button class="dp-po-subscribe-btn" type="button" id="dropdownMenu2" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false" data-offset="0,10">
+                  <i class="dp-po-icon fal fa-envelope"></i> Subscribe <i class="dp-po-icon far fa-check"></i>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                  <a class="dropdown-item disabled" href="#"><i class="dp-po-icon fal fa-file-alt"></i> Article</a>
-                  <a class="dropdown-item" href="#"><i class="dp-po-icon fal fa-file-spreadsheet"></i> Category</a>
-                  <a class="dropdown-item" href="#"><i class="dp-po-icon fal fa-file-chart-line"></i> Knowledgebase</a>
+                  <a class="dropdown-item disabled" href="#"><i class="dp-po-icon fal fa-file-alt"></i> Article <i
+                      class="dp-po-icon far fa-check"></i></a>
+                  <a class="dropdown-item" href="#"><i class="dp-po-icon fal fa-file-spreadsheet"></i> Category <i
+                      class="dp-po-icon far fa-check"></i></a>
+                  <a class="dropdown-item" href="#"><i class="dp-po-icon fal fa-file-chart-line"></i> Knowledgebase <i
+                      class="dp-po-icon far fa-check"></i></a>
                   <a class="dropdown-item" href="#">All your subscriptions</a>
                 </div>
               </div>
-              <!--
-              <a href="" class="dp-po-subscribe-button">
-                <span class="dp-po-icon dp-po-icon-subscribe"></span>
-                Subscribe
-                <span class="dp-po-icon dp-po-icon-check"></span>
-              </a>
-              <div class="dp-po-subscribe-dropdown">
-                <ul class="dp-po-subscribe-list">
-                  <li class="dp-po-subscribe-item">
-                    <a href="" class="dp-po-subscribe-link">
-                      <span class="dp-po-icon dp-po-icon-subscribe-article"></span>Article</a>
-                  </li>
-                  <li class="dp-po-subscribe-item">
-                    <a href="" class="dp-po-subscribe-link">
-                      <span class="dp-po-icon dp-po-icon-subscribe-category"></span>Category</a>
-                  </li>
-                  <li class="dp-po-subscribe-item">
-                    <a href="" class="dp-po-subscribe-link">
-                      <span class="dp-po-icon dp-po-icon-subscribe-knowledgebase"></span>Knowledgebase</a>
-                  </li>
-                </ul>
-                <p class="dp-po-subscribe-linkall"><a href="">All your subscriptions</a></p>
-              </div>
-              -->
             </div>
 
             <div class="dp-po-contents">
@@ -311,14 +291,33 @@
               </ul>
             </div>
 
-            <div class="dp-po-sidebar dp-po-article-meta">
-              <h3 class="dp-po-sidebar-subtitle">Created by</h3>
+            <div class="dp-po-kbmeta">
+              <h3 class="dp-po-kbmeta-title">Created by</h3>
               <p>Nicholas Green</p>
-              <h3 class="dp-po-sidebar-subtitle">First published</h3>
+              <h3 class="dp-po-kbmeta-title">First published</h3>
               <p>12 Jun 2019</p>
-              <h3 class="dp-po-sidebar-subtitle">Custom Field X</h3>
+              <h3 class="dp-po-kbmeta-title">Custom Field X</h3>
               <p>Value Y</p>
-              <h3 class="dp-po-sidebar-subtitle">Unpublished date</h3>
+              <table class="table table-borderless">
+                <tr>
+                  <td>
+                    <h3 class="dp-po-kbmeta-title">Translations</h3>
+                  </td>
+                  <td class="text-right">
+                    <h3 class="dp-po-kbmeta-title">Updated</h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td>French</td>
+                  <td class="text-right text-success">23 days</td>
+                </tr>
+                <tr>
+                  <td>German</td>
+                  <td class="text-right">2 weeks</td>
+                </tr>
+              </table>
+              <h3 class="dp-po-kbmeta-title">Unpublished date <i class="dp-po-icon fal fa-info-circle text-primary"
+                  data-toggle="tooltip" title="Viewed by agents only" data-placement="right"></i></h3>
               <p>26 June 2020</p>
             </div>
           </div>

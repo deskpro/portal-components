@@ -1,4 +1,5 @@
 .dp-po-subscribe {
+  $self: '.dp-po-subscribe';
   margin: 0 0 20px;
 
   .dropdown-menu {
@@ -6,23 +7,68 @@
     border-color: $brand-primary;
   }
 
-  .btn {
+  &-btn {
     text-align: left;
     position: relative;
-  }
+    background: $white;
+    padding: 8px 20px;
+    color: $brand-primary;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 1px solid $brand-primary;
+    border-radius: 4px;
+    font-size: $h2-font-size;
+    font-family: $headings-font-family;
+    position: relative;
+    outline: none;
 
-  .show {
-    .btn {
+    .dp-po-icon {
+      margin-right: 10px;
+
+      .fa-check {
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        display: none;
+      }
+    }
+
+    &:hover {
       background: $brand-primary;
       color: $white;
 
-      &:after {
-        content: "\f00c";
-        font-family: "Font Awesome 5 Pro";
-        position: absolute;
-        right: 20px;
-        top: 0;
-        font-size: 26px;
+      .dp-po-icon {
+        .fa-check {
+          display: block;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  &-activebtn {
+    border-color: $grey-dark;
+    color: $grey-dark;
+
+    .dp-po-icon {
+      .fa-check {
+        display: block;
+        color: $success;
+      }
+    }
+  }
+
+  .show {
+    #{$self}-btn {
+      background: $brand-primary;
+      color: $white;
+
+      .dp-po-icon {
+        .fa-check {
+          display: block;
+          color: $white;
+        }
       }
     }
   }
@@ -33,27 +79,30 @@
     display: flex;
     align-items: center;
 
-    i {
+    .dp-po-icon {
       font-size: 26px;
       margin: 0 10px 0 0;
       color: $grey-dark;
+
+      .fa-check {
+
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        display: none;
+      }
     }
 
     &:hover {
       background: none;
 
-      i {
+      .dp-po-icon {
         color: $brand-primary;
-      }
 
-      &:after {
-        content: "\f00c";
-        font-family: "Font Awesome 5 Pro";
-        position: absolute;
-        right: 20px;
-        top: 10px;
-        font-size: 26px;
-        color: $success;
+        .fa-check {
+          display: block;
+          color: $success;
+        }
       }
     }
 
@@ -62,12 +111,6 @@
       font-size: $button1-font-size;
       font-family: $font-family-sans-serif;
       font-weight: 600;
-
-      &:hover {
-        &:after {
-          display: none;
-        }
-      }
     }
 
     &.disabled {
