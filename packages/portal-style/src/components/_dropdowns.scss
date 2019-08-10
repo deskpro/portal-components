@@ -1,3 +1,12 @@
 .dropdown-menu {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
 }
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+
+  .dp-po-icon {
+    margin-right: 10px;
+  }
+}

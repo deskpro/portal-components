@@ -105,8 +105,80 @@
   }
 
   &-link {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .dp-po-icon {
+    font-size: 28px;
+
+    svg {
+      color: $grey-dark;
+    }
+
+    .fa-linkedin {
+      color: $linkedin;
+    }
+
+    .fa-facebook-square {
+      color: $facebook;
+    }
+
+    .fa-twitter {
+      color: $twitter;
+    }
+
+    .fa-whatsapp {
+      color: $whatsapp;
+    }
+  }
+
+  .dropdown-item,
+  .dropdown-item-text {
+    font-size: 17px;
+
     .dp-po-icon {
-      font-size: 28px;
+      font-size: 22px;
+    }
+  }
+}
+
+.dp-po-kbextras {
+  &-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &-item {
+    list-style: none;
+  }
+
+  &-link {
+    display: block;
+    width: 44px;
+    height: 44px;
+    border: 1px solid $grey-light;
+    background: $white;
+    border-radius: 50%;
+    text-align: center;
+    padding: 6px 0;
+    margin-left: 10px;
+
+    .dp-po-icon {
+      color: $grey-dark;
+      font-size: 24px;
+    }
+
+    &:hover {
+
+      border-color: $brand-primary;
+
+      .dp-po-icon {
+        color: $brand-primary;
+      }
     }
   }
 }
@@ -115,7 +187,7 @@
   $self: '.dp-po-kbavatars';
 
   &-list {
-    margin-bottom: 1rem;
+    margin-bottom: 0;
     padding: 0;
     display: inline-block;
 
@@ -185,7 +257,6 @@
 .dp-po-kbdate {
   color: $grey-dark;
   font-size: $p2-font-size;
-  margin-bottom: 1rem;
 
   p {
     margin: 0
