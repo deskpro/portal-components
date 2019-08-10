@@ -15,14 +15,67 @@ ${require('_partials/_head.ejs') title="Account: Register" }
         </div>
         <div class="col-sm-6">
           <div class="dp-po-header-right">
-            <div class="dp-po-country-selector">
-
+            <div class="dp-po-language">
+              <a class="dp-po-language-link" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="/portal-components/portal-style/static/img/docs/flag-uk.jpg" /> English
+                <i class="dp-po-icon far fa-angle-down"></i>
+              </a>
+              <div class="dropdown-menu dropdown-menu-left">
+                <a class="dropdown-item" href="#">
+                  <img class="dp-po-icon" src="/portal-components/portal-style/static/img/docs/flag-germany.jpg" />
+                  German
+                </a>
+                <a class="dropdown-item" href="#">
+                  <img class="dp-po-icon" src="/portal-components/portal-style/static/img/docs/flag-france.jpg" />
+                  French
+                </a>
+              </div>
             </div>
             <div class="dp-po-header-button">
               <a href="javascript:void(0)" class="btn btn-primary" title="Contact Us">Contact us</a>
             </div>
-            <div class="dp-po-user-dropdown">
+            <div class="dp-po-user">
+              <a href="javascript:void(0)" class="dp-po-user-login" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">Login</a>
+              <div class="dropdown-menu dropdown-menu-right dp-po-user-dropdown">
+                <h4 class="dropdown-item-text dp-po-user-dropdown-title">New to Deskpro? <a href="">Register for an
+                    account</a></h4>
+                <section class="dp-po-loginform">
+  <form class="do-po-form">
+    <div class="form-group">
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+        placeholder="Email Address">
+    </div>
+    <div class="form-group">
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+    <div class="form-group dp-po-form-check">
+      <input type="checkbox" class="form-check-input" id="loginCheck">
+      <label class="form-check-label" for="loginCheck">Stay logged in</label>
+    </div>
+    <button type="submit" class="btn btn-primary btn-lg">Log in</button>
+    <a href="" class="dp-po-form-btntext">Need a password reminder?</a>
+  </form>
+</section>
 
+                <section class="dp-po-social-login">
+  <div class="dp-po-divider">
+    <div class="dp-po-divider-text">or</div>
+  </div>
+
+  <div class="dp-po-oauth">
+    <a href="" class="btn btn-icon btn-fb btn-lg btn-brand">
+      <i class="dp-po-icon fab fa-facebook-square"></i>
+      <span>Log-in with facebook</span>
+    </a>
+    <a href="" class="btn btn-icon btn-li btn-lg btn-brand">
+      <i class="dp-po-icon fab fa-linkedin"></i>
+      <span>Log-in with linkedin</span>
+    </a>
+  </div>
+</section>
+
+              </div>
             </div>
           </div>
 
