@@ -3,8 +3,6 @@
 }
 
 .breadcrumb {
-  margin-left: -7px;
-
   &-item {
     color: $breadcrumb-inactive-color;
     font-weight: bold;
@@ -46,6 +44,26 @@
 
     &:before {
       color: $brand-primary;
+    }
+  }
+
+  &-image {
+    position: relative;
+
+    img {
+      max-width: 20px;
+      margin-right: 10px;
+    }
+
+    &:after {
+      width: 2px;
+      height: 34px;
+      content: '';
+      background: $grey-light;
+      right: -1px;
+      top: -4px;
+      display: block;
+      position: absolute;
     }
   }
 }
