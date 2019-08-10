@@ -142,5 +142,16 @@
     height: 40px;
     border-radius: 4px;
   }
+}
 
+.dp-po-form-btntext {
+  color: $grey-darkest;
+  font-size: $p4-font-size;
+  display: table;
+  margin-top: 10px;
+
+  &:hover {
+    text-decoration: none;
+    color: $brand-primary;
+  }
 }

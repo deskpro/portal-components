@@ -12,14 +12,34 @@
         </div>
         <div class="col-sm-6">
           <div class="dp-po-header-right">
-            <div class="dp-po-country-selector">
-
+            <div class="dp-po-language">
+              <a class="dp-po-language-link" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="/portal-components/portal-style/static/img/docs/flag-uk.jpg" /> English
+                <i class="dp-po-icon far fa-angle-down"></i>
+              </a>
+              <div class="dropdown-menu dropdown-menu-left">
+                <a class="dropdown-item" href="#">
+                  <img class="dp-po-icon" src="/portal-components/portal-style/static/img/docs/flag-germany.jpg" />
+                  German
+                </a>
+                <a class="dropdown-item" href="#">
+                  <img class="dp-po-icon" src="/portal-components/portal-style/static/img/docs/flag-france.jpg" />
+                  French
+                </a>
+              </div>
             </div>
             <div class="dp-po-header-button">
               <a href="javascript:void(0)" class="btn btn-primary" title="Contact Us">Contact us</a>
             </div>
-            <div class="dp-po-user-dropdown">
-
+            <div class="dp-po-user">
+              <a href="javascript:void(0)" class="dp-po-user-login" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">Login</a>
+              <div class="dropdown-menu dropdown-menu-right dp-po-user-dropdown">
+                <h4 class="dropdown-item-text dp-po-user-dropdown-title">New to Deskpro? <a href="">Register for an
+                    account</a></h4>
+                <%- include('_form-login.ejs'); %>
+                <%- include('_form-login-social.ejs'); %>
+              </div>
             </div>
           </div>
 
