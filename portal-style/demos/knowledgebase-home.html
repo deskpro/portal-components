@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/portal-components/portal-style/dist/style.css">
+  <script src="/portal-components/portal-style/dist/assets/vendor/fontawesome-pro-5.10.0-web/js/all.min.js"
+    data-auto-replace-svg="nest" async></script>
+  <script>
+    if (location.host === "localhost:3000") {
+      document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+        ':35729/livereload.js?snipver=1"></' + 'script>');
+    }
+
+  </script>
+  <title></title>
+  <!--
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+    $('[data-toggle="popover"]').popover();
+    $('.dropdown-toggle').dropdown();
+  });
+  </script>
+  -->
+</head>
+
+
+<body>
+  <div class="dp-po">
+  <header class="dp-po-header">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="dp-po-brand-left">
+            <a href="/portal-components/portal-style/" class="dp-po-homelink">
+              <img src="/portal-components/portal-style/static/img/brand/logo.svg" />
+              <span class="dp-po-brand-name">Support Center</span>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="dp-po-header-right">
+            <div class="dp-po-language">
+              <a class="dp-po-language-link" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="/portal-components/portal-style/static/img/docs/flag-uk.jpg" /> English
+                <i class="dp-po-icon far fa-angle-down"></i>
+              </a>
+              <div class="dropdown-menu dropdown-menu-left">
+                <a class="dropdown-item" href="#">
+                  <img class="dp-po-icon" src="/portal-components/portal-style/static/img/docs/flag-germany.jpg" />
+                  German
+                </a>
+                <a class="dropdown-item" href="#">
+                  <img class="dp-po-icon" src="/portal-components/portal-style/static/img/docs/flag-france.jpg" />
+                  French
+                </a>
+              </div>
+            </div>
+            <div class="dp-po-header-button">
+              <a href="javascript:void(0)" class="btn btn-primary" title="Contact Us">Contact us</a>
+            </div>
+            <div class="dp-po-user">
+              <a href="javascript:void(0)" class="dp-po-user-login" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">Login</a>
+              <div class="dropdown-menu dropdown-menu-right dp-po-user-dropdown">
+                <h4 class="dropdown-item-text dp-po-user-dropdown-title">New to Deskpro? <a href="">Register for an
+                    account</a></h4>
+                <section class="dp-po-loginform">
+  <form class="do-po-form">
+    <div class="form-group">
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+        placeholder="Email Address">
+    </div>
+    <div class="form-group">
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+    <div class="form-group dp-po-form-check">
+      <input type="checkbox" class="form-check-input" id="loginCheck">
+      <label class="form-check-label" for="loginCheck">Stay logged in</label>
+    </div>
+    <button type="submit" class="btn btn-primary btn-lg">Log in</button>
+    <a href="" class="dp-po-form-btntext">Need a password reminder?</a>
+  </form>
+</section>
+
+                <section class="dp-po-social-login">
+  <div class="dp-po-divider">
+    <div class="dp-po-divider-text">or</div>
+  </div>
+
+  <div class="dp-po-oauth">
+    <a href="" class="btn btn-icon btn-fb btn-lg btn-brand">
+      <i class="dp-po-icon fab fa-facebook-square"></i>
+      <span>Log-in with facebook</span>
+    </a>
+    <a href="" class="btn btn-icon btn-li btn-lg btn-brand">
+      <i class="dp-po-icon fab fa-linkedin"></i>
+      <span>Log-in with linkedin</span>
+    </a>
+  </div>
+</section>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--
+  <ul class="dp-po-nav">
+    <li class="dp-po-Logo-wrap">
+      <span class="dp-po-Icon Icon-Tech-company"></span>
+      <span class="dp-po-Logo-descript">Support Center</span>
+    </li>
+    <li class="dp-po-nav-control">
+      <ul>
+        <li class="dp-po-Select-Language">
+          <span class="dp-po-Icon Icon--UK"></span>
+          English
+          <span class="dp-po-arrow arrow--bottom arrow--brand-primary"></span>
+        </li>
+        <li>
+          <button class="dp-po-Button Button--small">Contact us</button>
+        </li>
+        <li class="dp-po-back-home">
+          <span class="dp-po-Icon Icon--Home"></span>
+        </li>
+        <li>
+          <span class="dp-po-Avatar">
+            <img src="/portal-components/style/img/docs/avatar.png" class="dp-po-Avatar-icon" alt=""></img>
+            <span class="dp-po-arrow arrow--bottom arrow--brand-primary"></span>
+          </span>
+
+          <span class="dp-po-Avatar Avatar--circle">
+            <img class="dp-po-Avatar-icon" src="/portal-components/style/img/docs/avatar-circular.png" alt="">
+          </span>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  -->
+</div>
+
+  <div class="dp-po">
+  <section class="dp-po-search">
+    <form class="dp-po-search-form">
+      <input type="text" name="" placeholder="How can we help you today?"></input>
+      <button type="submit"> <i class="dp-po-icon far fa-search"></i></button>
+    </form>
+  </section>
+</div>
+
+  <div class="dp-po">
+  <nav class="breadcrumb-outer" aria-label="breadcrumb">
+    <div class="container d-flex align-items-center">
+      <div class="breadcrumb-image">
+        <img src="/portal-components/portal-style/static/img/brand/logo.jpg" />
+      </div>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Support Centre</a></li>
+        <li class="breadcrumb-item"><a href="#">Super Parent</a></li>
+        <li class="breadcrumb-item"><a href="#">Parent</a></li>
+        <li class="breadcrumb-item active" aria-current="page"><a href="#">Child</a></li>
+      </ol>
+    </div>
+  </nav>
+</div>
+
+
+  <div class="dp-po">
+    <main class="dp-po-main dp-po-knowledgebase">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-9">
+            <div class="dp-po-title">
+              <i class="dp-po-icon fad fa-lightbulb-on"></i>
+              <h2 class="dp-po-title-text">Knowledgebase</h2>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="dp-po-subscribe">
+  <div class="dropdown">
+    <!--class : dp-po-subscribe-activebtn -->
+    <button class="dp-po-subscribe-btn" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+      aria-expanded="false" data-offset="0,10">
+      <i class="dp-po-icon fal fa-envelope"></i> Subscribe <i class="dp-po-icon far fa-check"></i>
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+      <a class="dropdown-item disabled" href="#"><i class="dp-po-icon fal fa-file-alt"></i> Article <i
+          class="dp-po-icon far fa-check"></i></a>
+      <a class="dropdown-item" href="#"><i class="dp-po-icon fal fa-file-spreadsheet"></i> Category <i
+          class="dp-po-icon far fa-check"></i></a>
+      <a class="dropdown-item" href="#"><i class="dp-po-icon fal fa-file-chart-line"></i> Knowledgebase <i
+          class="dp-po-icon far fa-check"></i></a>
+      <a class="dropdown-item" href="#">All your subscriptions</a>
+    </div>
+  </div>
+</div>
+
+          </div>
+        </div>
+        <div class="dp-po-section dp-po-block">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="dp-po-kb-category">
+  <div class="dp-po-category-title">
+    <i class="dp-po-icon far fa-rocket text-danger"></i>
+    <h2 class="dp-po-category-title-text">Getting Started (5)</h2>
+  </div>
+  <ul class="dp-po-kb-category-list">
+    <li class="dp-po-kb-category-item">
+      <a href="" class="dp-po-kb-category-link">Creating Effective New Ticket Contact Forms
+        <span class="badge badge-warning badge-small">ANYTHING</span>
+      </a>
+    </li>
+    <li class="dp-po-kb-category-item">
+      <a href="" class="dp-po-kb-category-link">Setting up Departments <span
+          class="badge badge-success badge-small">PUBLISHED</span></a>
+    </li>
+    <li class="dp-po-kb-category-item">
+      <a href="" class="dp-po-kb-category-link">How do I get started with Deskpro? <span
+          class="badge badge-primary badge-small">NEW</span></a>
+    </li>
+    <li class="dp-po-kb-category-item">
+      <a href="" class="dp-po-kb-category-link dp-po-kb-category-link-draft">What documentation is available for
+        Deskpro? <span class="badge badge-dark badge-small">DRAFT</span></a>
+    </li>
+    <li class="dp-po-kb-category-item">
+      <a href="" class="dp-po-kb-category-link">I’m having trouble with an error: “Connection timed out”</a>
+    </li>
+  </ul>
+  <div class="dp-po-kb-category-all">
+    <a class="dp-po-kb-category-alllink" href="">View all <i class="dp-po-icon far fa-angle-right"></i></a>
+  </div>
+</div>
+
+            </div>
+            <div class="col-sm-6">
+              <div class="dp-po-kb-category">
+  <div class="dp-po-category-title">
+    <i class="dp-po-icon far fa-rocket text-danger"></i>
+    <h2 class="dp-po-category-title-text">Getting Started (5)</h2>
+  </div>
+  <ul class="dp-po-kb-category-list">
+    <li class="dp-po-kb-category-item">
+      <a href="" class="dp-po-kb-category-link">Creating Effective New Ticket Contact Forms
+        <span class="badge badge-warning badge-small">ANYTHING</span>
+      </a>
+    </li>
+    <li class="dp-po-kb-category-item">
+      <a href="" class="dp-po-kb-category-link">Setting up Departments <span
+          class="badge badge-success badge-small">PUBLISHED</span></a>
+    </li>
+    <li class="dp-po-kb-category-item">
+      <a href="" class="dp-po-kb-category-link">How do I get started with Deskpro? <span
+          class="badge badge-primary badge-small">NEW</span></a>
+    </li>
+    <li class="dp-po-kb-category-item">
+      <a href="" class="dp-po-kb-category-link dp-po-kb-category-link-draft">What documentation is available for
+        Deskpro? <span class="badge badge-dark badge-small">DRAFT</span></a>
+    </li>
+    <li class="dp-po-kb-category-item">
+      <a href="" class="dp-po-kb-category-link">I’m having trouble with an error: “Connection timed out”</a>
+    </li>
+  </ul>
+  <div class="dp-po-kb-category-all">
+    <a class="dp-po-kb-category-alllink" href="">View all <i class="dp-po-icon far fa-angle-right"></i></a>
+  </div>
+</div>
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="dp-po-kb-category">
+  <div class="dp-po-category-title">
+    <i class="dp-po-icon far fa-rocket text-danger"></i>
+    <h2 class="dp-po-category-title-text">Getting Started (5)</h2>
+  </div>
+  <ul class="dp-po-kb-category-list">
+    <li class="dp-po-kb-category-item">
+      <a href="" class="dp-po-kb-category-link">Creating Effective New Ticket Contact Forms
+        <span class="badge badge-warning badge-small">ANYTHING</span>
+      </a>
+    </li>
+    <li class="dp-po-kb-category-item">
+      <a href="" class="dp-po-kb-category-link">Setting up Departments <span
+          class="badge badge-success badge-small">PUBLISHED</span></a>
+    </li>
+    <li class="dp-po-kb-category-item">
+      <a href="" class="dp-po-kb-category-link">How do I get started with Deskpro? <span
+          class="badge badge-primary badge-small">NEW</span></a>
+    </li>
+    <li class="dp-po-kb-category-item">
+      <a href="" class="dp-po-kb-category-link dp-po-kb-category-link-draft">What documentation is available for
+        Deskpro? <span class="badge badge-dark badge-small">DRAFT</span></a>
+    </li>
+    <li class="dp-po-kb-category-item">
+      <a href="" class="dp-po-kb-category-link">I’m having trouble with an error: “Connection timed out”</a>
+    </li>
+  </ul>
+  <div class="dp-po-kb-category-all">
+    <a class="dp-po-kb-category-alllink" href="">View all <i class="dp-po-icon far fa-angle-right"></i></a>
+  </div>
+</div>
+
+            </div>
+            <div class="col-sm-6">
+              <div class="dp-po-kb-category">
+  <div class="dp-po-category-title">
+    <i class="dp-po-icon far fa-rocket text-danger"></i>
+    <h2 class="dp-po-category-title-text">Getting Started (5)</h2>
+  </div>
+  <ul class="dp-po-kb-category-list">
+    <li class="dp-po-kb-category-item">
+      <a href="" class="dp-po-kb-category-link">Creating Effective New Ticket Contact Forms
+        <span class="badge badge-warning badge-small">ANYTHING</span>
+      </a>
+    </li>
+    <li class="dp-po-kb-category-item">
+      <a href="" class="dp-po-kb-category-link">Setting up Departments <span
+          class="badge badge-success badge-small">PUBLISHED</span></a>
+    </li>
+    <li class="dp-po-kb-category-item">
+      <a href="" class="dp-po-kb-category-link">How do I get started with Deskpro? <span
+          class="badge badge-primary badge-small">NEW</span></a>
+    </li>
+    <li class="dp-po-kb-category-item">
+      <a href="" class="dp-po-kb-category-link dp-po-kb-category-link-draft">What documentation is available for
+        Deskpro? <span class="badge badge-dark badge-small">DRAFT</span></a>
+    </li>
+    <li class="dp-po-kb-category-item">
+      <a href="" class="dp-po-kb-category-link">I’m having trouble with an error: “Connection timed out”</a>
+    </li>
+  </ul>
+  <div class="dp-po-kb-category-all">
+    <a class="dp-po-kb-category-alllink" href="">View all <i class="dp-po-icon far fa-angle-right"></i></a>
+  </div>
+</div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="dp-po-title">
+          <h2 class="dp-po-title-text">FAQs</h2>
+        </div>
+
+        <div class="dp-po-section dp-po-block">
+          <div class="dp-po-article">
+            <ul class="dp-po-article-list">
+              <li class="dp-po-article-item">
+                <div class="row">
+                  <div class="col-sm-9">
+                    <a href="" class="dp-po-article-linktitle">I’m having trouble with an error: "Connection timed
+                      out"</a>
+                    <div class="dp-po-article-extras">
+                      <div class="dp-po-article-author">
+                        <a href="" class="dp-po-article-linkauthor">
+                          <div class="dp-po-avatar dp-po-avatar-round">
+                            <img src="/portal-components/portal-style/static/img/docs/avatar.png">
+                            <strong>Nick Green</strong>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="dp-po-article-date">
+                        <p>Published: <span>23, June 2019</span></p>
+                      </div>
+                      <div class="dp-po-article-comments">
+                        <i class="dp-po-icon far fa-comment-alt-lines"></i> 28
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="dp-po-article-time">
+                      <i class="dp-po-icon far fa-clock"></i>
+                      18 Jul 2019
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="dp-po-article-item">
+                <div class="row">
+                  <div class="col-sm-9">
+                    <a href="" class="dp-po-article-linktitle">Providing us access to your Deskpro server that is
+                      behind a firewall (Linux)</a>
+                    <div class="dp-po-article-extras">
+                      <div class="dp-po-article-author">
+                        <a href="" class="dp-po-article-linkauthor">
+                          <div class="dp-po-avatar dp-po-avatar-round">
+                            <img src="/portal-components/portal-style/static/img/docs/avatar.png">
+                            <strong>Nick Green</strong>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="dp-po-article-date">
+                        <p>Published: <span>23, June 2019</span></p>
+                      </div>
+                      <div class="dp-po-article-comments">
+                        <i class="dp-po-icon far fa-comment-alt-lines"></i> 28
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="dp-po-article-time">
+                      <i class="dp-po-icon far fa-clock"></i>
+                      18 Jul 2019
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dp-po-pagination">
+  <nav aria-label="...">
+    <ul class="pagination">
+      <li class="page-item page-item-icon disabled">
+        <a class="page-link" href="#" tabindex="-1" aria-disabled="true"><i
+            class="dp-po-icon far fa-angle-left"></i></a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item active" aria-current="page">
+        <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">4</a></li>
+      <li class="page-item"><a class="page-link" href="#">5</a></li>
+      <li class="page-item"><a class="page-link" href="#">6</a></li>
+      <li class="page-item"><a class="page-link" href="#">7</a></li>
+      <li class="page-item"><a class="page-link" href="#">8</a></li>
+      <li class="page-item"><a class="page-link" href="#">9</a></li>
+      <li class="page-item"><a class="page-link" href="#">10</a></li>
+      <li class="page-item"><a class="page-link" href="#">11</a></li>
+      <li class="page-item page-item-dots"><a class="page-link" href="javascript:void(0)">...</a></li>
+      <li class="page-item"><a class="page-link" href="#">75</a></li>
+      <li class="page-item page-item-icon">
+        <a class="page-link" href="#"><i class="dp-po-icon far fa-angle-right"></i></a>
+      </li>
+    </ul>
+  </nav>
+  <div class="dp-po-pagination-goto">
+    <form>
+      <span>Go to page</span>
+      <input type="text" class="dp-po-pagination-goto-text" />
+      <input type="submit" class="dp-po-pagination-goto-button" value="Go">
+    </form>
+  </div>
+
+</div>
+
+
+      </div>
+    </main>
+  </div>
+
+  <div class="dp-po-overlay"></div>
+
+  <div class="dp-po">
+  <footer class="dp-po-footer">
+    <div class="container">
+      <div class="dp-po-footer-copyright">
+        <span class="dp-po-footer-powered">Powered by</span>
+        <a href="javascript:void(0)" class="dp-po-footer-deskpro"><img
+            src="/portal-components/portal-style/static/img/dp-logo.svg" />
+        </a>
+      </div>
+    </div>
+  </footer>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script type="text/javascript">
+  $(function () {
+    var toolOptions = {
+      'template': '<div class="tooltip dp-po-tip" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
+    }
+    $('[data-toggle="tooltip"]').tooltip(toolOptions);
+    $('[data-toggle="popover"]').popover();
+    $('.dropdown-toggle').dropdown();
+  });
+
+</script>
+
+
+</body>
+
+</html>
