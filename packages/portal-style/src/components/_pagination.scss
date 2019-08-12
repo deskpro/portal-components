@@ -1,0 +1,121 @@
+.dp-po-pagination {
+  display: flex;
+  align-items: center;
+
+  .pagination {
+    margin: 0;
+
+    .page-item {
+      margin: 0 2px;
+
+      .page-link {
+        border-radius: 2px;
+        border: 1px solid $grey-light;
+        color: $grey-darkest;
+        font-size: $p4-font-size;
+        font-weight: 600;
+        padding: 4px 8px;
+      }
+
+      &.active {
+        .page-link {
+          border-color: $brand-primary;
+          background: $brand-primary;
+          color: $white;
+        }
+      }
+
+      &:hover {
+        .page-link {
+          border-color: $grey-light;
+          background: $grey-light;
+          color: $white;
+        }
+
+        &.page-item-dots {
+          .page-link {
+            background: none;
+            color: $grey-darkest;
+          }
+        }
+      }
+
+      &.page-item-dots {
+        .page-link {
+          background: none;
+          border: none;
+          cursor: default;
+
+        }
+      }
+
+      &.page-item-icon {
+        &.disabled {
+          .page-link {
+            color: $grey-light;
+          }
+
+          &:hover {
+            .page-link {
+              color: $grey-light;
+            }
+          }
+        }
+
+        &:hover {
+          .page-link {
+            color: $brand-primary;
+          }
+        }
+
+        .page-link {
+          background: none !important;
+          border: none !important;
+          font-size: 20px;
+          line-height: 0;
+          align-items: center;
+          display: flex;
+          height: 24px;
+          color: $grey;
+        }
+      }
+    }
+  }
+
+  &-goto {
+    form {
+      display: flex;
+      align-items: center;
+      border-left: 1px solid $grey-light;
+      font-size: $p4-font-size;
+      padding: 0 0 0 10px;
+    }
+
+    &-text {
+      border: 1px solid $grey-light;
+      border-radius: 2px;
+      width: 34px;
+      margin-left: 10px;
+      padding: 2px 5px;
+      outline: none;
+      font-size: $p4-font-size;
+      text-align: center;
+    }
+
+    &-button {
+      background: $grey-light;
+      border: none;
+      color: $white;
+      padding: 2px 5px;
+      width: 34px;
+      text-align: center;
+      border: 1px solid $grey-light;
+      border-radius: 2px;
+      margin-left: 10px;
+
+      &:hover {
+        background: $grey;
+      }
+    }
+  }
+}

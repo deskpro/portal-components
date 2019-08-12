@@ -1,0 +1,123 @@
+<%- include('_partials/_head.ejs'); %>
+
+<body>
+  <%- include('_partials/_header.ejs'); %>
+  <%- include('_partials/_search.ejs'); %>
+  <%- include('_partials/_breadcrumbs.ejs'); %>
+
+  <div class="dp-po">
+    <main class="dp-po-main dp-po-knowledgebase">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-9">
+            <div class="dp-po-title">
+              <i class="dp-po-icon fad fa-lightbulb-on"></i>
+              <h2 class="dp-po-title-text">Knowledgebase</h2>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <%- include('_partials/_subscribe.ejs'); %>
+          </div>
+        </div>
+        <div class="dp-po-section dp-po-block">
+          <div class="row">
+            <div class="col-sm-6">
+              <%- include('_partials/_kb-categories.ejs'); %>
+            </div>
+            <div class="col-sm-6">
+              <%- include('_partials/_kb-categories.ejs'); %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <%- include('_partials/_kb-categories.ejs'); %>
+            </div>
+            <div class="col-sm-6">
+              <%- include('_partials/_kb-categories.ejs'); %>
+            </div>
+          </div>
+        </div>
+
+        <div class="dp-po-title">
+          <h2 class="dp-po-title-text">FAQs</h2>
+        </div>
+
+        <div class="dp-po-section dp-po-block">
+          <div class="dp-po-article">
+            <ul class="dp-po-article-list">
+              <li class="dp-po-article-item">
+                <div class="row">
+                  <div class="col-sm-9">
+                    <a href="" class="dp-po-article-linktitle">I’m having trouble with an error: "Connection timed
+                      out"</a>
+                    <div class="dp-po-article-extras">
+                      <div class="dp-po-article-author">
+                        <a href="" class="dp-po-article-linkauthor">
+                          <div class="dp-po-avatar dp-po-avatar-round">
+                            <img src="/portal-components/portal-style/static/img/docs/avatar.png">
+                            <strong>Nick Green</strong>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="dp-po-article-date">
+                        <p>Published: <span>23, June 2019</span></p>
+                      </div>
+                      <div class="dp-po-article-comments">
+                        <i class="dp-po-icon far fa-comment-alt-lines"></i> 28
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="dp-po-article-time">
+                      <i class="dp-po-icon far fa-clock"></i>
+                      18 Jul 2019
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="dp-po-article-item">
+                <div class="row">
+                  <div class="col-sm-9">
+                    <a href="" class="dp-po-article-linktitle">Providing us access to your Deskpro server that is
+                      behind a firewall (Linux)</a>
+                    <div class="dp-po-article-extras">
+                      <div class="dp-po-article-author">
+                        <a href="" class="dp-po-article-linkauthor">
+                          <div class="dp-po-avatar dp-po-avatar-round">
+                            <img src="/portal-components/portal-style/static/img/docs/avatar.png">
+                            <strong>Nick Green</strong>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="dp-po-article-date">
+                        <p>Published: <span>23, June 2019</span></p>
+                      </div>
+                      <div class="dp-po-article-comments">
+                        <i class="dp-po-icon far fa-comment-alt-lines"></i> 28
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="dp-po-article-time">
+                      <i class="dp-po-icon far fa-clock"></i>
+                      18 Jul 2019
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <%- include('_partials/_pagination.ejs'); %>
+
+      </div>
+    </main>
+  </div>
+
+  <%- include('_partials/_overlay.ejs'); %>
+  <%- include('_partials/_footer.ejs'); %>
+</body>
+
+</html>

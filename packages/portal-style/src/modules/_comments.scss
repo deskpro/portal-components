@@ -92,13 +92,17 @@
     font-size: 15px;
     margin: 0 20px 0 0;
 
+    .dp-po-icon {
+      color: $success;
+    }
+
     &:hover {
-      color: $brand-primary;
+      color: $success;
       text-decoration: none;
 
       .dp-po-icon svg {
-        background: $brand-primary;
-        border-color: $brand-primary;
+        background: $success;
+        border-color: $success;
         color: $white;
       }
     }
@@ -109,6 +113,10 @@
     align-items: center;
     color: $grey-dark;
     font-size: 15px;
+
+    .dp-po-icon {
+      color: $danger;
+    }
 
     &:hover {
       color: $danger;
@@ -136,7 +144,7 @@
 
     .dp-po-icon {
       margin-right: 7px;
-      color: #3a8dde;
+      color: $brand-primary;
       position: relative;
       top: 1px;
     }

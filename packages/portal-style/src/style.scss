@@ -41,6 +41,7 @@
   @import "components/breadcrumbs";
   @import "components/clipboard";
   @import "components/badge";
+  @import "components/pagination";
 
   /**************************
   ******** ELEMENTS *********
@@ -54,6 +55,7 @@
   ******** PAGES *********
   **************************/
   @import "pages/kb-article";
+  @import "pages/kb-home";
 }
 
 body {

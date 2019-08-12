@@ -10,4 +10,10 @@
   .badge {
     margin: 0 0 0 10px;
   }
+
+  &-round {
+    img {
+      border-radius: 50%;
+    }
+  }
 }
