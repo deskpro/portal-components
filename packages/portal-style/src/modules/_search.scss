@@ -6,8 +6,9 @@
   justify-content: center;
 
   &-form {
-    width: 750px;
+    max-width: 750px;
     position: relative;
+    width: 100%;
 
     input[type="text"] {
       width: 100%;

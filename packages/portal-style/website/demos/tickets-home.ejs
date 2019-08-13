@@ -6,324 +6,206 @@
   <%- include('_partials/_search.ejs'); %>
   <%- include('_partials/_breadcrumbs.ejs'); %>
 
-  <section class="dp-po-main">
-    <div class="dp-po-container dp-po-member-container">
-      <h2 class="dp-po-Title-page">
-        <span class="dp-po-Icon Icon--my-tickets dp-po-hidden-md"></span>
-        My tickets
-        <span class="dp-po-wrapper-container dp-po-hidden-md-up">
-          <span class="dp-po-Icon Icon--find Icon--primary"></span>
-
-        </span>
-      </h2>
-
-      <div class="dp-po-member-wrapper">
-
-        <div class="dp-po-search-container">
-          <form class="dp-po-Forms dp-po-Search-bar">
-            <div class="dp-po-Searchbar-wrap">
-              <input type="" name="" placeholder="Search tickets"></input>
-              <span class="dp-po-Icon Icon--find Icon--primary dp-po-hidden-md"></span>
+  <div class="dp-po">
+    <main class="dp-po-main dp-po-knowledgebase">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="dp-po-title">
+              <i class="dp-po-icon fad fa-envelope-open-text"></i>
+              <h2 class="dp-po-title-text">My Tickets</h2>
             </div>
-            <button class="dp-po-Button Button--small dp-po-hidden-md-up">Cancel</button>
-          </form>
-
-          <div class="dp-po-Dropdown-container Dropdown--filter">
-            <span class="dp-po-dropdown-atom"><span class="dp-po-Icon Icon--member-filter"></span></span>
-            <ul class="dp-po-dropdown-menu">
-              <!-- <li class="dp-po-dropdown-menu-item dp-po-title-list">Show</li> -->
-              <li class="dp-po-dropdown-menu-item">
-                <span class="dp-po-CustomCheckbox CustomCheckbox--medium">
-                  <input type="checkbox" class="dp-po-ControlInput" id="Email-01"></input>
-                  <label for="Email-01">Email</label>
-                </span>
-              </li>
-              <li class="dp-po-dropdown-menu-item">
-                <span class="dp-po-CustomCheckbox CustomCheckbox--medium">
-                  <input type="checkbox" class="dp-po-ControlInput" id="Number-02"></input>
-                  <label for="Number-02">Phone Number</label>
-                </span>
-              </li>
-              <li class="dp-po-dropdown-menu-item">
-                <span class="dp-po-CustomCheckbox CustomCheckbox--medium">
-                  <input type="checkbox" class="dp-po-ControlInput" id="job-title-03"></input>
-                  <label for="job-title-03">Job Title</label>
-                </span>
-              </li>
-              <li class="dp-po-dropdown-menu-item">
-                <span class="dp-po-CustomCheckbox CustomCheckbox--medium">
-                  <input type="checkbox" class="dp-po-ControlInput" id="job-title-04"></input>
-                  <label for="job-title-04">Company</label>
-                </span>
-              </li>
-
-              <li class="dp-po-dropdown-menu-item dp-po-button-wrap">
-                <button class=" dp-po-Button Button--small">Apply</button>
-                <button class="dp-po-Button Button--small Button--secondary dp-po-reply-comment-close">Cancel</button>
-              </li>
-            </ul>
           </div>
-
-        </div>
-
-        <div class="dp-po-member-table">
-          <div class="dp-po-table-row dp-po-title-row dp-po-hidden-md">
-
-            <span class="dp-po-table-item dp-po-sort dp-po-Dropdown-container">
-              <span class="dp-po-dropdown-atom"><span class="dp-po-hidden-md">Ticket ID</span>
-                <span class="dp-po-Icon Icon--sort Icon--primary"></span>
-              </span>
-              <!--                             <ul class="dp-po-dropdown-menu">
-                                <li class="dp-po-dropdown-menu-item">First Name</li>
-                                <li class="dp-po-dropdown-menu-item">Last Name</li>
-                            </ul> -->
-            </span>
-
-            <span class="dp-po-table-item dp-po-table-mail">Email</span>
-            <span class="dp-po-table-item dp-po-table-phone">Phone Number</span>
-            <span class="dp-po-table-item dp-po-table-company">Job Title & Company</span>
-            <span class="dp-po-table-item"></span>
+          <div class="col-sm-6">
+            <a href="" class="btn btn-primary">Submit a ticket</a>
           </div>
-          <div class="dp-po-table-row">
-            <span class="dp-po-table-item dp-po-sort">
-              <span class="dp-po-Avatar Avatar--small Avatar--circle">
-                <img class="dp-po-Avatar-icon" src="../img/docs/avatar-circular.png" alt="">
-                <span class="dp-po-Avatar-name">Artem Berdyshev</span>
-              </span>
-            </span>
-            <span class="dp-po-table-item dp-po-table-mail">artem.berdyshev@deskpro.com</span>
-            <span class="dp-po-table-item dp-po-table-phone">+441234567890</span>
-            <span class="dp-po-table-item dp-po-table-company">Design Lead, Deskpro</span>
-            <!-- Icon tooltip -->
-            <span class="dp-po-table-item dp-po-table-message">
-              <span class="dp-po-tooltip-wrap">
-                <span class="dp-po-Icon Icon--member-dir-home"></span>
-                <span class="dp-po-tooltip">Send direct message</span>
-              </span>
-            </span>
-          </div>
-          <div class="dp-po-table-row">
-            <span class="dp-po-table-item dp-po-sort">
-              <span class="dp-po-Avatar Avatar--small Avatar--circle">
-                <img class="dp-po-Avatar-icon" src="../img/docs/avatar-circular.png" alt="">
-                <span class="dp-po-Avatar-name">Bogdan M</span>
-              </span>
-            </span>
-            <span class="dp-po-table-item dp-po-table-mail">bogdan.m@deskpro.com</span>
-            <span class="dp-po-table-item dp-po-table-phone">+441234567890</span>
-            <span class="dp-po-table-item dp-po-table-company">Developer, Deskpro</span>
-            <!-- Icon tooltip -->
-            <span class="dp-po-table-item dp-po-table-message">
-              <span class="dp-po-tooltip-wrap">
-                <span class="dp-po-Icon Icon--member-dir-home"></span>
-                <span class="dp-po-tooltip">Send direct message</span>
-              </span>
-            </span>
-          </div>
-          <div class="dp-po-table-row">
-            <span class="dp-po-table-item dp-po-sort">
-              <span class="dp-po-Avatar Avatar--small Avatar--circle">
-                <img class="dp-po-Avatar-icon" src="../img/docs/avatar-circular.png" alt="">
-                <span class="dp-po-Avatar-name">Colin Dunn</span>
-              </span>
-            </span>
-            <span class="dp-po-table-item dp-po-table-mail">colin.dunn@deskpro.com</span>
-            <span class="dp-po-table-item dp-po-table-phone">+441234567890</span>
-            <span class="dp-po-table-item dp-po-table-company">CEO, Apple</span>
-            <!-- Icon tooltip -->
-            <span class="dp-po-table-item dp-po-table-message">
-              <span class="dp-po-tooltip-wrap">
-                <span class="dp-po-Icon Icon--member-dir-home"></span>
-                <span class="dp-po-tooltip">Send direct message</span>
-              </span>
-            </span>
-          </div>
-          <div class="dp-po-table-row">
-            <span class="dp-po-table-item dp-po-sort">
-              <span class="dp-po-Avatar Avatar--small Avatar--circle">
-                <img class="dp-po-Avatar-icon" src="../img/docs/avatar-circular.png" alt="">
-                <span class="dp-po-Avatar-name">Giada Bobbera</span>
-              </span>
-            </span>
-            <span class="dp-po-table-item dp-po-table-mail">giada.bobbera@deskpro.com</span>
-            <span class="dp-po-table-item dp-po-table-phone">+441234567890</span>
-            <span class="dp-po-table-item dp-po-table-company">Credit manager</span>
-            <!-- Icon tooltip -->
-            <span class="dp-po-table-item dp-po-table-message">
-              <span class="dp-po-tooltip-wrap">
-                <span class="dp-po-Icon Icon--member-dir-home"></span>
-                <span class="dp-po-tooltip">Send direct message</span>
-              </span>
-            </span>
-          </div>
-          <div class="dp-po-table-row">
-            <span class="dp-po-table-item dp-po-sort">
-              <span class="dp-po-Avatar Avatar--small Avatar--circle">
-                <img class="dp-po-Avatar-icon" src="../img/docs/avatar-circular.png" alt="">
-                <span class="dp-po-Avatar-name">Grace Howlett</span>
-              </span>
-            </span>
-            <span class="dp-po-table-item dp-po-table-mail">grace.howlett@deskpro.com</span>
-            <span class="dp-po-table-item dp-po-table-phone">+441234567890</span>
-            <span class="dp-po-table-item dp-po-table-company">Hedge fund trader</span>
-            <!-- Icon tooltip -->
-            <span class="dp-po-table-item dp-po-table-message">
-              <span class="dp-po-tooltip-wrap">
-                <span class="dp-po-Icon Icon--member-dir-home"></span>
-                <span class="dp-po-tooltip">Send direct message</span>
-              </span>
-            </span>
-          </div>
-          <div class="dp-po-table-row">
-            <span class="dp-po-table-item dp-po-sort">
-              <span class="dp-po-Avatar Avatar--small Avatar--circle">
-                <img class="dp-po-Avatar-icon" src="../img/docs/avatar-circular.png" alt="">
-                <span class="dp-po-Avatar-name">Hannah Scott</span>
-              </span>
-            </span>
-            <span class="dp-po-table-item dp-po-table-mail">hannah.scott@deskpro.com</span>
-            <span class="dp-po-table-item dp-po-table-phone">+441234567890</span>
-            <span class="dp-po-table-item dp-po-table-company">Marketing technologist</span>
-            <!-- Icon tooltip -->
-            <span class="dp-po-table-item dp-po-table-message">
-              <span class="dp-po-tooltip-wrap">
-                <span class="dp-po-Icon Icon--member-dir-home"></span>
-                <span class="dp-po-tooltip">Send direct message</span>
-              </span>
-            </span>
-          </div>
-          <div class="dp-po-table-row">
-            <span class="dp-po-table-item dp-po-sort">
-              <span class="dp-po-Avatar Avatar--small Avatar--circle">
-                <img class="dp-po-Avatar-icon" src="../img/docs/avatar-circular.png" alt="">
-                <span class="dp-po-Avatar-name">Hugo Pinto</span>
-              </span>
-            </span>
-            <span class="dp-po-table-item dp-po-table-mail">hugo.pinto@deskpro.com</span>
-            <span class="dp-po-table-item dp-po-table-phone">+441234567890</span>
-            <span class="dp-po-table-item dp-po-table-company">Insurance claims examiner</span>
-            <!-- Icon tooltip -->
-            <span class="dp-po-table-item dp-po-table-message">
-              <span class="dp-po-tooltip-wrap">
-                <span class="dp-po-Icon Icon--member-dir-home"></span>
-                <span class="dp-po-tooltip">Send direct message</span>
-              </span>
-            </span>
-          </div>
-          <div class="dp-po-table-row">
-            <span class="dp-po-table-item dp-po-sort">
-              <span class="dp-po-Avatar Avatar--small Avatar--circle">
-                <img class="dp-po-Avatar-icon" src="../img/docs/avatar-circular.png" alt="">
-                <span class="dp-po-Avatar-name">Jerome Indefenzo</span>
-              </span>
-            </span>
-            <span class="dp-po-table-item dp-po-table-mail">jerome.indefenzo@deskpro.com</span>
-            <span class="dp-po-table-item dp-po-table-phone">+441234567890</span>
-            <span class="dp-po-table-item dp-po-table-company">Commercial real estate agent</span>
-            <!-- Icon tooltip -->
-            <span class="dp-po-table-item dp-po-table-message">
-              <span class="dp-po-tooltip-wrap">
-                <span class="dp-po-Icon Icon--member-dir-home"></span>
-                <span class="dp-po-tooltip">Send direct message</span>
-              </span>
-            </span>
-          </div>
-          <div class="dp-po-table-row">
-            <span class="dp-po-table-item dp-po-sort">
-              <span class="dp-po-Avatar Avatar--small Avatar--circle">
-                <img class="dp-po-Avatar-icon" src="../img/docs/avatar-circular.png" alt="">
-                <span class="dp-po-Avatar-name">Julien Micah</span>
-              </span>
-            </span>
-            <span class="dp-po-table-item dp-po-table-mail">julien.micah@deskpro.com</span>
-            <span class="dp-po-table-item dp-po-table-phone">+441234567890</span>
-            <span class="dp-po-table-item dp-po-table-company">Software engineer</span>
-            <!-- Icon tooltip -->
-            <span class="dp-po-table-item dp-po-table-message">
-              <span class="dp-po-tooltip-wrap">
-                <span class="dp-po-Icon Icon--member-dir-home"></span>
-                <span class="dp-po-tooltip">Send direct message</span>
-              </span>
-            </span>
-          </div>
-          <div class="dp-po-table-row">
-            <span class="dp-po-table-item dp-po-sort">
-              <span class="dp-po-Avatar Avatar--small Avatar--circle">
-                <img class="dp-po-Avatar-icon" src="../img/docs/avatar-circular.png" alt="">
-                <span class="dp-po-Avatar-name">Kate Nightingale</span>
-              </span>
-            </span>
-            <span class="dp-po-table-item dp-po-table-mail">kate.nightingale@deskpro.com</span>
-            <span class="dp-po-table-item dp-po-table-phone">+441234567890</span>
-            <span class="dp-po-table-item dp-po-table-company">Social media manager, Spotify</span>
-            <!-- Icon tooltip -->
-            <span class="dp-po-table-item dp-po-table-message">
-              <span class="dp-po-tooltip-wrap">
-                <span class="dp-po-Icon Icon--member-dir-home"></span>
-                <span class="dp-po-tooltip">Send direct message</span>
-              </span>
-            </span>
-          </div>
-        </div>
-
-        <!-- pop-up -->
-        <div class="dp-po-Popup popup--message">
-          <div class="dp-po-form-wrapper">
-            <form class="dp-po-Forms">
-              <h2 class="dp-po-popup-title">
-                <span>Send a new message</span>
-                <span class="dp-po-Icon Icon--close"></span>
-              </h2>
-
-              <span class="dp-po-username">
-                To:<img class="dp-po-Avatar-icon" src="/portal-components/style/img/docs/avatar-circular.png"
-                  alt=""></img>
-                <span class="dp-po-Name">Artem Berdyshev</span>
-              </span>
-
-              <div class="dp-po-Textarea">
-                <span class="dp-po-Icon-resizer"></span>
-                <label>Message*</label>
-                <textarea name="text" placeholder="Your message"></textarea>
-              </div>
-
-              <div class="dp-po-button-wrap">
-                <button class="dp-po-Button Button--small">Send message</button>
-                <button class="dp-po-Button Button--small Button--secondary dp-po-reply-comment-close">Cancel</button>
-              </div>
-            </form>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="demo-pagination">
-        <div class="dp-po-Pagination-container">
-          <ul class="dp-po-Pagination">
-            <li><a href="#" class="dp-po-PaginationArrows"><span class="dp-po-arrow arrow--left"></span></a>
-            <li><a href="#" class="dp-po-PageNumber is-active">1</a></li>
-            <li><a href="#" class="dp-po-PageNumber">2</a></li>
-            <li><a href="#" class="dp-po-PageNumber">3</a></li>
-            <li><a href="#" class="dp-po-PageNumber">4</a></li>
-            <li><a href="#" class="dp-po-PageNumber">5</a></li>
-            <li><a href="#" class="dp-po-PageNumber">6</a></li>
-            <li><a href="#" class="dp-po-PageNumber">7</a></li>
-            <li><span class="dp-po-BreakPagination">...</span></li>
-            <li><a href="#" class="dp-po-PageNumber">75</a></li>
-            <li><a href="#" class="dp-po-PaginationArrows"><span class="dp-po-arrow"></span></a></li>
-          </ul>
-          <span class="dp-po-PageJump dp-po-hidden-md">
-            <label class="dp-po-PageJump-label">
-              Go to page
-              <input type="number" min="1" max="75" class="dp-Input dp-po-PageJump-page" value="" />
-            </label>
-            <button type="button" class="dp-po-Button Button--small dp-po-PageJump-button">Go</button>
-          </span>
         </div>
       </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3">
+            <div class="dp-po-ticket-sidebar">
+              <div class="dp-po-filter">
+                <h4 class="dp-po-filter-title">Filter by</h4>
+                <ul class="dp-po-filter-list">
+                  <li class="dp-po-filter-item">
+                    <div class="form-group dp-po-form-check">
+                      <input type="checkbox" class="form-check-input" id="departmentCheck" checked>
+                      <label class="form-check-label" for="departmentCheck">Department</label>
+                    </div>
+                    <ul class="dp-po-filter-list">
+                      <li class="dp-po-filter-item">
+                        <div class="form-group dp-po-form-check">
+                          <input type="checkbox" class="form-check-input" id="supportCheck">
+                          <label class="form-check-label" for="supportCheck">Support</label>
+                        </div>
+                      </li>
+                      <li class="dp-po-filter-item">
+                        <div class="form-group dp-po-form-check">
+                          <input type="checkbox" class="form-check-input" id="hrCheck">
+                          <label class="form-check-label" for="hrCheck">HR</label>
+                        </div>
+                      </li>
+                      <li class="dp-po-filter-item">
+                        <div class="form-group dp-po-form-check">
+                          <input type="checkbox" class="form-check-input" id="rndCheck" checked>
+                          <label class="form-check-label" for="rndCheck">R&D</label>
+                        </div>
+                      </li>
+                      <li class="dp-po-filter-item">
+                        <div class="form-group dp-po-form-check">
+                          <input type="checkbox" class="form-check-input" id="salesCheck">
+                          <label class="form-check-label" for="salesCheck">Sales</label>
+                        </div>
+                      </li>
+                      <li class="dp-po-filter-item">
+                        <div class="form-group dp-po-form-check">
+                          <input type="checkbox" class="form-check-input" id="customerCheck">
+                          <label class="form-check-label" for="customerCheck">Customer Success</label>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dp-po-filter-item">
+                    <div class="form-group dp-po-form-check">
+                      <input type="checkbox" class="form-check-input" id="userCheck">
+                      <label class="form-check-label" for="userCheck">User</label>
+                    </div>
+                  </li>
+                  <li class="dp-po-filter-item">
+                    <div class="form-group dp-po-form-check">
+                      <input type="checkbox" class="form-check-input" id="activityCheck" checked>
+                      <label class="form-check-label" for="activityCheck">Last Activity</label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-9">
+            <div class="dp-po-section dp-po-block">
+              <div class="row">
+                <div class="col-sm-4">
+                  <div class="dp-po-ticketbadge dp-po-ticketbadge-danger">
+                    <span class="dp-po-ticketbadge-number">12</span>You need to respond
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <form class="dp-po-ticket-search">
+                    <input type="text" name="" placeholder="Search Tickets"></input>
+                    <button type="submit"> <i class="dp-po-icon far fa-search"></i></button>
+                  </form>
+                </div>
+                <div class="col-sm-1">
+                  <div class="dp-po-columnfilter">
+                    <a href="javascript:void(0)" class="dp-po-columnfilter-link" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false"><i class="dp-po-icon far fa-ballot-check"></i></a>
+                    <div class="dropdown-menu dropdown-menu-right dp-po-columnfilter-dropdown">
+                      <ul class="dp-po-columnfilter-list">
+                        <li class="dp-po-columnfilter-item">
+                          <div class="form-group dp-po-form-check">
+                            <input type="checkbox" class="form-check-input" id="idCheck">
+                            <label class="form-check-label" for="idCheck">ID</label>
+                          </div>
+                        </li>
+                        <li class="dp-po-columnfilter-item">
+                          <div class="form-group dp-po-form-check">
+                            <input type="checkbox" class="form-check-input" id="SubjectCheck">
+                            <label class="form-check-label" for="SubjectCheck">Subject</label>
+                          </div>
+                        </li>
+                        <li class="dp-po-columnfilter-item">
+                          <div class="form-group dp-po-form-check">
+                            <input type="checkbox" class="form-check-input" id="DepartmentCheck" checked>
+                            <label class="form-check-label" for="DepartmentCheck">Department</label>
+                          </div>
+                        </li>
+                        <li class="dp-po-columnfilter-item">
+                          <div class="form-group dp-po-form-check">
+                            <input type="checkbox" class="form-check-input" id="UserCheck">
+                            <label class="form-check-label" for="UserCheck">User</label>
+                          </div>
+                        </li>
+                        <li class="dp-po-columnfilter-item">
+                          <div class="form-group dp-po-form-check">
+                            <input type="checkbox" class="form-check-input" id="agentCheck">
+                            <label class="form-check-label" for="agentCheck">Assigned agent</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-    </div>
-  </section>
+              <div class="dp-po-ticket-table dp-po-ticket-table-danger">
+                <div class="dp-po-ticket-row dp-po-ticket-row-head">
+                  <span class="dp-po-ticket-cell dp-po-ticket-cell-icon"></span>
+                  <span class="dp-po-ticket-cell">Ticket ID</span>
+                  <span class="dp-po-ticket-cell dp-po-ticket-cell-large">Subject</span>
+                  <span class="dp-po-ticket-cell">Department <a href="javascript:void(0)"><i
+                        class="dp-po-icon far fa-sort"></i></a></span>
+                  <span class="dp-po-ticket-cell">Created <a href="javascript:void(0)"><i
+                        class="dp-po-icon far fa-sort"></i></a></span>
+                  <span class="dp-po-ticket-cell">Last Activity <a href="javascript:void(0)"><i
+                        class="dp-po-icon far fa-sort"></i></a></span>
+                  <span class="dp-po-ticket-cell">Rating</span>
+                </div>
+                <%- include('_partials/_ticket-row.ejs'); %>
+                <%- include('_partials/_ticket-row.ejs'); %>
+                <%- include('_partials/_ticket-row.ejs'); %>
+              </div>
+
+              <div class="dp-po-ticketbadge dp-po-ticketbadge-neutral">
+                <span class="dp-po-ticketbadge-number">53</span>Our agent will respond
+              </div>
+
+              <div class="dp-po-ticket-table dp-po-ticket-table-neutral">
+                <div class="dp-po-ticket-row dp-po-ticket-row-head">
+                  <span class="dp-po-ticket-cell dp-po-ticket-cell-icon"></span>
+                  <span class="dp-po-ticket-cell">Ticket ID</span>
+                  <span class="dp-po-ticket-cell dp-po-ticket-cell-large">Subject</span>
+                  <span class="dp-po-ticket-cell">Department <a href="javascript:void(0)"><i
+                        class="dp-po-icon far fa-sort"></i></a></span>
+                  <span class="dp-po-ticket-cell">Created <a href="javascript:void(0)"><i
+                        class="dp-po-icon far fa-sort"></i></a></span>
+                  <span class="dp-po-ticket-cell">Last Activity <a href="javascript:void(0)"><i
+                        class="dp-po-icon far fa-sort"></i></a></span>
+                  <span class="dp-po-ticket-cell">Rating</span>
+                </div>
+                <%- include('_partials/_ticket-row.ejs'); %>
+                <%- include('_partials/_ticket-row.ejs'); %>
+                <%- include('_partials/_ticket-row.ejs'); %>
+              </div>
+
+              <div class="dp-po-ticketbadge dp-po-ticketbadge-success">
+                <span class="dp-po-ticketbadge-number">80</span>Resolved
+              </div>
+
+              <div class="dp-po-ticket-table dp-po-ticket-table-success">
+                <div class="dp-po-ticket-row dp-po-ticket-row-head">
+                  <span class="dp-po-ticket-cell dp-po-ticket-cell-icon"></span>
+                  <span class="dp-po-ticket-cell">Ticket ID</span>
+                  <span class="dp-po-ticket-cell dp-po-ticket-cell-large">Subject</span>
+                  <span class="dp-po-ticket-cell">Department <a href="javascript:void(0)"><i
+                        class="dp-po-icon far fa-sort"></i></a></span>
+                  <span class="dp-po-ticket-cell">Created <a href="javascript:void(0)"><i
+                        class="dp-po-icon far fa-sort"></i></a></span>
+                  <span class="dp-po-ticket-cell">Last Activity <a href="javascript:void(0)"><i
+                        class="dp-po-icon far fa-sort"></i></a></span>
+                  <span class="dp-po-ticket-cell">Rating</span>
+                </div>
+                <%- include('_partials/_ticket-row.ejs'); %>
+                <%- include('_partials/_ticket-row.ejs'); %>
+                <%- include('_partials/_ticket-row.ejs'); %>
+              </div>
+            </div>
+            <%- include('_partials/_pagination.ejs'); %>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
 
   <%- include('_partials/_overlay.ejs'); %>
 
