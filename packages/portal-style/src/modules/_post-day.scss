@@ -1,0 +1,33 @@
+.dp-po-post-day {
+  background: $white;
+  border: 1px solid $grey-light;
+  border-radius: 4px;
+  width: 60px;
+  text-align: center;
+  left: -60px;
+  top: 0;
+  position: absolute;
+
+  span {
+    display: block;
+  }
+
+  &-month {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: $h6-font-size;
+    padding: 5px 0;
+  }
+
+  &-date {
+    font-family: $headings-font-family;
+    font-size: 26px;
+  }
+
+  &-year {
+    border-top: 1px solid $grey-light;
+    font-weight: 700;
+    font-size: $h6-font-size;
+    padding: 5px 0;
+  }
+}

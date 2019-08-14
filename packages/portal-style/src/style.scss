@@ -33,6 +33,7 @@
   @import "modules/post-rating";
   @import "modules/post-info";
   @import "modules/post-extra";
+  @import "modules/post-day";
 
   /**************************
   ******* COMPONENTS ********
@@ -57,6 +58,7 @@
   @import "pages/kb-article";
   @import "pages/kb-home";
   @import "pages/ticket-home";
+  @import "pages/news-post";
 }
 
 body {

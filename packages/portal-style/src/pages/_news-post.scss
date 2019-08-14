@@ -1,0 +1,99 @@
+.dp-po-news-recent {
+  $self: '.dp-po-news-recent';
+
+  &-list {
+    margin: 0 -20px;
+    padding: 0;
+  }
+
+  &-item {
+    display: block;
+    list-style: none;
+    margin-bottom: 7px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &.active {
+      #{$self}-link {
+        color: $grey-darkest;
+
+        &-date {
+          background: $white;
+          color: $grey-darkest;
+        }
+      }
+    }
+  }
+
+  &-link {
+    display: block;
+    align-items: center;
+    white-space: nowrap;
+    color: $grey;
+    font-weight: 700;
+    font-size: $p3-font-size;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 3px 20px;
+
+    &-date {
+      background: $grey-lighter;
+      border: 1px solid $grey-light;
+      margin: 0 10px 0 0;
+      border-radius: 4px;
+      font-size: $p4-font-size;
+      padding: 3px 8px;
+      font-weight: 600;
+      color: $grey-dark;
+      display: inline-block;
+      width: 60px;
+      text-align: center;
+    }
+
+    &:hover {
+      background: $info-light;
+      text-decoration: none;
+      color: $grey-dark;
+    }
+  }
+
+  &-all {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background: $grey-light;
+      left: 0;
+      top: 20px;
+    }
+  }
+
+  &-alllink {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: $button1-font-size;
+    color: $brand-primary;
+    background: $white;
+    padding: 10px;
+    z-index: 1;
+
+    &:hover {
+      text-decoration: none;
+      opacity: 0.8;
+    }
+
+    .dp-po-icon {
+      font-size: 19px;
+      margin-left: 10px;
+      line-height: 0;
+    }
+  }
+}
