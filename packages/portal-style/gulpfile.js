@@ -78,7 +78,8 @@ function serverTask() {
   connect.server({
     port: 3000,
     livereload: true,
-    root: ".build"
+    root: ".build",
+    localhost: 'localhost'
   });
 }
 

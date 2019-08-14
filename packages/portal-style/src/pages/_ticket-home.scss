@@ -106,7 +106,7 @@
       }
 
       .dp-po-icon {
-        color: $success;
+
         font-size: 20px;
         position: relative;
         left: -5px;
@@ -115,6 +115,18 @@
         width: 20px;
         height: 20px;
         line-height: 0;
+
+        .fa-smile {
+          color: $success;
+        }
+
+        .fa-frown {
+          color: $danger;
+        }
+
+        .fa-meh {
+          color: $neutral;
+        }
       }
 
       &-link {

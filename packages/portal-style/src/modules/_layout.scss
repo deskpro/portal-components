@@ -16,3 +16,9 @@ body {
 .dp-po-section {
   margin: 0 0 40px;
 }
+
+button {
+  &:focus {
+    outline: none;
+  }
+}
