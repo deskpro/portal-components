@@ -1,0 +1,51 @@
+.dp-po-post-share {
+  &-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-item {
+    list-style: none;
+  }
+
+  &-link {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .dp-po-icon {
+    font-size: 28px;
+
+    svg {
+      color: $grey-dark;
+    }
+
+    .fa-linkedin {
+      color: $linkedin;
+    }
+
+    .fa-facebook-square {
+      color: $facebook;
+    }
+
+    .fa-twitter {
+      color: $twitter;
+    }
+
+    .fa-whatsapp {
+      color: $whatsapp;
+    }
+  }
+
+  .dropdown-item,
+  .dropdown-item-text {
+    font-size: 17px;
+
+    .dp-po-icon {
+      font-size: 22px;
+    }
+  }
+}

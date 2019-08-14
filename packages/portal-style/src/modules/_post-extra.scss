@@ -1,0 +1,38 @@
+.dp-po-post-extra {
+  &-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &-item {
+    list-style: none;
+  }
+
+  &-link {
+    display: block;
+    width: 44px;
+    height: 44px;
+    border: 1px solid $grey-light;
+    background: $white;
+    border-radius: 50%;
+    text-align: center;
+    padding: 6px 0;
+    margin-left: 10px;
+
+    .dp-po-icon {
+      color: $grey-dark;
+      font-size: 24px;
+    }
+
+    &:hover {
+
+      border-color: $brand-primary;
+
+      .dp-po-icon {
+        color: $brand-primary;
+      }
+    }
+  }
+}

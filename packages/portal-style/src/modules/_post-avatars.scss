@@ -1,0 +1,70 @@
+.dp-po-post-avatars {
+  $self: '.dp-po-post-avatars';
+
+  &-list {
+    margin-bottom: 0;
+    padding: 0;
+    display: inline-block;
+
+    &:hover {
+
+      #{$self}-image,
+      #{$self}-name {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &-item {
+    list-style: none;
+    display: inline-block;
+    margin: 0 0 0 -15px;
+    border: 3px solid $grey-lightest;
+    border-radius: 50%;
+
+    &:first-child {
+      margin: 0 0 0 -6px;
+    }
+
+    &:hover {
+      #{$self}-link {
+        border-color: $brand-primary;
+        z-index: 9;
+        position: relative;
+        text-decoration: none;
+
+        #{$self}-image,
+        #{$self}-name {
+          opacity: 1 !important;
+        }
+      }
+    }
+
+  }
+
+  &-link {
+    display: block;
+    border-radius: 50%;
+    border: 2px solid $grey-lightest;
+  }
+
+  &-image {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+
+  &-name {
+    background: $grey;
+    color: $white;
+    text-transform: uppercase;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: block;
+    font-weight: 700;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 15px;
+  }
+}

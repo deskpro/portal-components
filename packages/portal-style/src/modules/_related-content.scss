@@ -1,0 +1,32 @@
+.dp-po-related-content {
+  &-list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &-item {
+    list-style: none;
+    margin: 0 0 15px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &-link {
+    display: flex;
+    align-items: center;
+    font-size: $p2-font-size;
+
+    .dp-po-icon {
+      width: 30px;
+      margin-right: 10px;
+      font-size: 26px;
+      color: $grey;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

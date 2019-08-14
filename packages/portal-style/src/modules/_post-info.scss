@@ -1,0 +1,33 @@
+.dp-po-post-info {
+  &-list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &-item {
+    display: inline-block;
+    vertical-align: middle;
+    list-style: none;
+    position: relative;
+    color: $grey-dark;
+    font-size: $p2-font-size;
+    padding-right: 10px;
+    margin-right: 8px;
+
+    &:after {
+      content: '';
+      width: 1px;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      background: $grey;
+    }
+
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+  }
+}

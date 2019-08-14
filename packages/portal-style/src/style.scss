@@ -21,13 +21,18 @@
   @import "modules/header";
   @import "modules/footer";
   @import "modules/search";
-
   @import "modules/block";
   @import "modules/comments";
   @import "modules/sidebar";
   @import "modules/type";
-  @import "modules/user-content";
-
+  @import "modules/related-content";
+  @import "modules/post-content";
+  @import "modules/post-label";
+  @import "modules/post-avatars";
+  @import "modules/post-share";
+  @import "modules/post-rating";
+  @import "modules/post-info";
+  @import "modules/post-extra";
 
   /**************************
   ******* COMPONENTS ********
@@ -42,14 +47,9 @@
   @import "components/clipboard";
   @import "components/badge";
   @import "components/pagination";
-
-  /**************************
-  ******** ELEMENTS *********
-  **************************/
-  @import "elements/title";
-  @import "elements/avatar";
-  @import "elements/subscribe";
-
+  @import "components/title";
+  @import "components/avatar";
+  @import "components/subscribe";
 
   /**************************
   ******** PAGES *********
