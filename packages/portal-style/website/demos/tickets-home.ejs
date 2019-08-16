@@ -7,7 +7,7 @@
   <%- include('_partials/_breadcrumbs.ejs'); %>
 
   <div class="dp-po">
-    <main class="dp-po-main dp-po-knowledgebase">
+    <main class="dp-po-main dp-po-tickets-home">
       <div class="container">
         <div class="row">
           <div class="col-sm-6">
@@ -16,8 +16,8 @@
               <h2 class="dp-po-title-text">My Tickets</h2>
             </div>
           </div>
-          <div class="col-sm-6">
-            <a href="" class="btn btn-primary">Submit a ticket</a>
+          <div class="col-sm-6 text-right">
+            <a href="" class="btn btn-primary mb-4">Submit a ticket</a>
           </div>
         </div>
       </div>
@@ -25,46 +25,65 @@
         <div class="row">
           <div class="col-sm-3">
             <div class="dp-po-ticket-sidebar">
+              <div class="dp-po-filter-pages">
+
+              </div>
+
               <div class="dp-po-filter">
-                <h4 class="dp-po-filter-title">Filter by</h4>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <h4 class="dp-po-filter-title">Filter by</h4>
+                  </div>
+                  <div class="col-sm-6 text-right">
+                    <a href="" class="dp-po-filter-clearall">Clear all</a>
+                  </div>
+                </div>
+
                 <ul class="dp-po-filter-list">
                   <li class="dp-po-filter-item">
                     <div class="form-group dp-po-form-check">
                       <input type="checkbox" class="form-check-input" id="departmentCheck" checked>
                       <label class="form-check-label" for="departmentCheck">Department</label>
                     </div>
-                    <ul class="dp-po-filter-list">
-                      <li class="dp-po-filter-item">
-                        <div class="form-group dp-po-form-check">
-                          <input type="checkbox" class="form-check-input" id="supportCheck">
-                          <label class="form-check-label" for="supportCheck">Support</label>
-                        </div>
-                      </li>
-                      <li class="dp-po-filter-item">
-                        <div class="form-group dp-po-form-check">
-                          <input type="checkbox" class="form-check-input" id="hrCheck">
-                          <label class="form-check-label" for="hrCheck">HR</label>
-                        </div>
-                      </li>
-                      <li class="dp-po-filter-item">
-                        <div class="form-group dp-po-form-check">
-                          <input type="checkbox" class="form-check-input" id="rndCheck" checked>
-                          <label class="form-check-label" for="rndCheck">R&D</label>
-                        </div>
-                      </li>
-                      <li class="dp-po-filter-item">
-                        <div class="form-group dp-po-form-check">
-                          <input type="checkbox" class="form-check-input" id="salesCheck">
-                          <label class="form-check-label" for="salesCheck">Sales</label>
-                        </div>
-                      </li>
-                      <li class="dp-po-filter-item">
-                        <div class="form-group dp-po-form-check">
-                          <input type="checkbox" class="form-check-input" id="customerCheck">
-                          <label class="form-check-label" for="customerCheck">Customer Success</label>
-                        </div>
-                      </li>
-                    </ul>
+                    <a class="" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+                      aria-controls="collapseExample">
+                      <i class="far fa-angle-down"></i>
+                    </a>
+                    <div class="collapse" id="collapseExample">
+                      <ul class="dp-po-filter-list">
+                        <li class="dp-po-filter-item">
+                          <div class="form-group dp-po-form-check">
+                            <input type="checkbox" class="form-check-input" id="supportCheck">
+                            <label class="form-check-label" for="supportCheck">Support</label>
+                          </div>
+                        </li>
+                        <li class="dp-po-filter-item">
+                          <div class="form-group dp-po-form-check">
+                            <input type="checkbox" class="form-check-input" id="hrCheck">
+                            <label class="form-check-label" for="hrCheck">HR</label>
+                          </div>
+                        </li>
+                        <li class="dp-po-filter-item">
+                          <div class="form-group dp-po-form-check">
+                            <input type="checkbox" class="form-check-input" id="rndCheck" checked>
+                            <label class="form-check-label" for="rndCheck">R&D</label>
+                          </div>
+                        </li>
+                        <li class="dp-po-filter-item">
+                          <div class="form-group dp-po-form-check">
+                            <input type="checkbox" class="form-check-input" id="salesCheck">
+                            <label class="form-check-label" for="salesCheck">Sales</label>
+                          </div>
+                        </li>
+                        <li class="dp-po-filter-item">
+                          <div class="form-group dp-po-form-check">
+                            <input type="checkbox" class="form-check-input" id="customerCheck">
+                            <label class="form-check-label" for="customerCheck">Customer Success</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
                   </li>
                   <li class="dp-po-filter-item">
                     <div class="form-group dp-po-form-check">

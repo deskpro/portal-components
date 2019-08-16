@@ -1,0 +1,110 @@
+.dp-po-navigation-block {
+  $self: '.dp-po-navigation-block';
+
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 -30px 0 0;
+    padding: 0;
+  }
+
+  &-item {
+    list-style: none;
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+
+  &-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $white;
+    padding: 20px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    border: 1.5px solid $grey-light;
+    flex-wrap: wrap;
+    color: $grey-darkest;
+    height: 140px;
+    margin: 0 30px 0 0;
+
+    &:hover {
+      text-decoration: none;
+      color: $brand-primary;
+      border-color: $brand-primary;
+
+      #{$self}-title {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &-figure {
+    margin: 0;
+    min-height: 48px;
+    flex: 0 0 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-svg {
+    border-radius: 4px;
+  }
+
+  &-title {
+    @include typo($s19, 400, 'head');
+    margin-top: 15px;
+  }
+
+  &-desc {
+    display: none;
+  }
+
+  &#{$self}-wide {
+    #{$self}-link {
+      flex-wrap: nowrap;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
+    #{$self}-figure {
+      background: $grey-lightest;
+      border-radius: 4px;
+      flex: 0 0 30%;
+      height: 100%;
+    }
+
+    #{$self}-title {
+      color: $brand-primary;
+      margin: 0;
+      display: block;
+    }
+
+    #{$self}-right {
+      flex: 0 0 70%;
+      padding-left: 20px;
+      justify-content: space-around;
+      flex-direction: column;
+      display: flex;
+      height: 100%;
+    }
+
+    #{$self}-desc {
+      color: $grey-darkest;
+      display: block;
+      position: relative;
+      padding-right: 10px;
+
+      .dp-po-icon {
+        color: $brand-primary;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+
+}
