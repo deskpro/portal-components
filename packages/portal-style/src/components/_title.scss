@@ -4,9 +4,8 @@
   margin-bottom: 1rem;
   $self: '.dp-po-title';
 
-  .dp-po-icon {
+  &-svg {
     margin: 0 10px 0 0;
-    font-size: $font-size-base * 1.666;
   }
 
   &-text {
