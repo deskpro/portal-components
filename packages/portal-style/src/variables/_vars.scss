@@ -92,3 +92,36 @@ $btn-font-size-lg: $p2-font-size;
 $btn-border-radius: 4px;
 $btn-border-radius-lg: 4px;
 $btn-border-radius-sm: 4px;
+
+
+$s36: $font-size-base * 2.000 !default; // 36px
+$s23: $font-size-base * 1.277 !default; // 23px
+$s19: $font-size-base * 1.055 !default; // 19px
+$s18: $font-size-base * 1.000 !default; // 18px
+$s17: $font-size-base * 0.944 !default; // 17px
+$s16: $font-size-base * 0.889 !default; // 16px
+$s15: $font-size-base * 0.833 !default; // 15px
+$s14: $font-size-base * 0.777 !default; // 14px
+$s12: $font-size-base * 0.666 !default; // 12px
+$s10: $font-size-base * 0.555 !default; // 10px
+
+
+$head-font: 'Rubik',
+sans-serif;
+$body-font: 'Lato',
+sans-serif;
+
+@mixin typo($size, $weight : 400, $family : 'body') {
+  @if $family=='head' {
+    font-family: $head-font;
+  }
+
+  @if $family=='body' {
+    font-family: $body-font;
+  }
+
+  font-size: $size;
+  font-weight: $weight;
+}
+
+//@include typo($s36, 400, 'body');

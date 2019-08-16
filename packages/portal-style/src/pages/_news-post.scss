@@ -45,24 +45,22 @@
     align-items: center;
     white-space: nowrap;
     color: $grey;
-    font-weight: 700;
-    font-size: $p3-font-size;
     overflow: hidden;
     text-overflow: ellipsis;
     padding: 3px 20px;
+    @include typo($s15, 700);
 
     &-date {
       background: $grey-lighter;
       border: 1px solid $grey-light;
       margin: 0 10px 0 0;
       border-radius: 4px;
-      font-size: $p4-font-size;
       padding: 3px 8px;
-      font-weight: 600;
       color: $grey-dark;
       display: inline-block;
       width: 60px;
       text-align: center;
+      @include typo($s14, 600);
     }
 
     &:hover {
@@ -91,12 +89,11 @@
   &-alllink {
     display: flex;
     align-items: center;
-    font-weight: 600;
-    font-size: $button1-font-size;
     color: $brand-primary;
     background: $white;
     padding: 10px;
     z-index: 1;
+    @include typo($s14, 600);
 
     &:hover {
       text-decoration: none;
@@ -104,7 +101,7 @@
     }
 
     .dp-po-icon {
-      font-size: 19px;
+      @include typo($s19);
       margin-left: 10px;
       line-height: 0;
     }
