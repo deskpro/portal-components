@@ -1,0 +1,40 @@
+.dp-po-kb-featured {
+  &-list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &-item {
+    display: block;
+    list-style: none;
+  }
+
+  &-link {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: $grey-darkest;
+    margin-bottom: 30px;
+    @include typo($s19, 400, 'head');
+    white-space: nowrap;
+
+    &:hover {
+      text-decoration: none;
+      color: $brand-primary;
+    }
+  }
+
+  &-number {
+    display: inline-flex;
+    margin: 0 20px 0 0;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: $info-light;
+    color: $brand-primary;
+    flex: 0 0 30px;
+  }
+}
