@@ -1,0 +1,78 @@
+.dp-po-like {
+  $self: '.dp-po-like';
+
+  text-align: center;
+  width: 40px;
+  display: inline-flex;
+  flex-wrap: wrap;
+
+  &:hover {
+    text-decoration: none;
+
+    #{$self}-count {
+      color: $brand-primary;
+    }
+
+    #{$self}-icon {
+      background: $info-light;
+
+      .dp-po-icon {
+        color: $brand-primary;
+      }
+    }
+  }
+
+  &-count {
+    @include typo($s19, 400, 'head');
+    background: $grey-lightest;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    display: block;
+    color: $grey-darkest;
+    height: 40px;
+    padding: 9px 0;
+    flex: 0 0 100%;
+  }
+
+  &-icon {
+    background: $brand-primary;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    display: block;
+    height: 40px;
+    padding: 9px 0;
+    flex: 0 0 100%;
+
+    .dp-po-icon {
+      color: $white;
+    }
+  }
+
+  &-small {
+    flex-wrap: nowrap;
+    width: auto;
+
+    #{$self}-count {
+      border-radius: 0;
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+      font-size: $s17;
+      height: auto;
+      padding: 4px 0px;
+      width: 40px;
+      text-align: center;
+      flex: none;
+    }
+
+    #{$self}-icon {
+      border-radius: 0;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+      height: auto;
+      padding: 3px 0;
+      width: 40px;
+      text-align: center;
+      flex: none;
+    }
+  }
+}

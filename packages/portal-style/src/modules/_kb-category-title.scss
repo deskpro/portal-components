@@ -1,0 +1,32 @@
+.dp-po-category-title {
+  .dp-po-icon {
+    background: $grey-lightest;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    font-size: 26px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 0 20px 0 0;
+  }
+
+  &-text {
+    font-family: $headings-font-family;
+    font-size: $h2-font-size;
+    color: $brand-primary;
+    margin: 0;
+  }
+
+  &-link {
+    display: inline-flex;
+    align-items: center;
+    margin: 20px 0 0;
+
+    &:hover {
+      .dp-po-icon {
+        background: $info-light;
+      }
+    }
+  }
+}

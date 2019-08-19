@@ -1,0 +1,45 @@
+.dp-po-community-status {
+  &-title {
+    @include typo($s23, 400, 'head');
+    color: $grey-darkest;
+  }
+
+  &-list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &-item {
+    list-style: none;
+    margin: 20px 0 0;
+    height: 28px;
+  }
+
+  &-link {
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: $grey-darkest;
+
+    &:hover {
+      text-decoration: none;
+      color: $brand-primary;
+
+      .dp-po-status-ribbon {
+        &-from {
+          background: $info-light;
+          color: $brand-primary;
+
+          &:after {
+            border-left-color: $info-light;
+          }
+        }
+      }
+    }
+  }
+
+  .dp-po-status-ribbon {
+    margin-right: 10px;
+  }
+}

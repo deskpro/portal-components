@@ -1,0 +1,104 @@
+.dp-po-status-ribbon {
+  $self: '.dp-po-status-ribbon';
+  color: $white;
+  display: inline-flex;
+  align-items: center;
+  font-size: $s12;
+  text-transform: uppercase;
+
+  &-from {
+    background: #C4C4C4;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    padding: 4px 9px;
+    position: relative;
+    margin-right: 20px;
+
+    &:after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-top: 11px solid transparent;
+      border-bottom: 12px solid transparent;
+      border-left: 11px solid #C4C4C4;
+      position: absolute;
+      right: -11px;
+      top: 0;
+    }
+  }
+
+  &-to {
+    background: $success;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    padding: 0 9px;
+    padding: 4px 9px;
+    position: relative;
+
+    &:after,
+    &:before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-top: 0px solid transparent;
+      border-bottom: 12px solid transparent;
+      border-left: 12px solid $success;
+      position: absolute;
+      left: -12px;
+      top: 0;
+      transform: rotate(90deg);
+    }
+
+    &:before {
+      top: auto;
+      bottom: 0;
+      transform: rotate(180deg);
+    }
+
+    &#{$self}-to-success {
+      background: $success;
+
+      &:after,
+      &:before {
+        border-left-color: $success;
+      }
+    }
+
+    &#{$self}-to-neutral {
+      background: $neutral;
+
+      &:after,
+      &:before {
+        border-left-color: $neutral;
+      }
+    }
+
+    &#{$self}-to-purple {
+      background: $purple;
+
+      &:after,
+      &:before {
+        border-left-color: $purple;
+      }
+    }
+
+    &#{$self}-to-info {
+      background: $info;
+
+      &:after,
+      &:before {
+        border-left-color: $info;
+      }
+    }
+
+    &#{$self}-to-grey {
+      background: $grey-dark;
+
+      &:after,
+      &:before {
+        border-left-color: $grey-dark;
+      }
+    }
+
+  }
+}

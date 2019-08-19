@@ -1,5 +1,9 @@
 .dp-po-kb-category {
-  margin-bottom: 40px;
+  .dp-po-category-title {
+    &-link {
+      margin: 0 0 20px;
+    }
+  }
 
   &-list {
     margin: 0;
@@ -11,10 +15,6 @@
     margin-bottom: 15px;
     position: relative;
     padding-left: 15px;
-
-    &:last-child {
-      //margin: 0;
-    }
 
     &:before {
       content: "\25A0";
@@ -50,68 +50,6 @@
     &-draft {
       color: $grey-dark;
     }
-  }
-
-  &-all {
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
-
-    &:before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 1px;
-      background: $grey-light;
-      left: 0;
-      top: 20px;
-    }
-  }
-
-  &-alllink {
-    display: flex;
-    align-items: center;
-    font-weight: 600;
-    font-size: $button1-font-size;
-    color: $brand-primary;
-    background: $white;
-    padding: 10px;
-    z-index: 1;
-
-    &:hover {
-      text-decoration: none;
-      opacity: 0.8;
-    }
-
-    .dp-po-icon {
-      font-size: 19px;
-      margin-left: 10px;
-      line-height: 0;
-    }
-  }
-}
-
-.dp-po-category-title {
-  display: flex;
-  align-items: center;
-  margin: 0 0 15px;
-
-  .dp-po-icon {
-    background: $grey-lightest;
-    width: 58px;
-    height: 58px;
-    border-radius: 50%;
-    font-size: 26px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    margin: 0 20px 0 0;
-  }
-
-  &-text {
-    font-family: $headings-font-family;
-    font-size: $h2-font-size;
-    color: $brand-primary;
   }
 }
 

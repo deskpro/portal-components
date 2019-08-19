@@ -15,6 +15,26 @@
   @import "vendor/bootstrap";
 
   /**************************
+  ******* COMPONENTS ********
+  **************************/
+  @import "components/forms";
+  @import "components/buttons";
+  @import "components/icons";
+  @import "components/dropdowns";
+  @import "components/tooltip";
+  @import "components/alert";
+  @import "components/breadcrumbs";
+  @import "components/clipboard";
+  @import "components/badge";
+  @import "components/pagination";
+  @import "components/title";
+  @import "components/avatar";
+  @import "components/subscribe";
+  @import "components/viewlink";
+  @import "components/like";
+  @import "components/status-ribbon";
+
+  /**************************
   ******* MODULES ********
   **************************/
   @import "modules/layout";
@@ -36,23 +56,9 @@
   @import "modules/post-day";
   @import "modules/navigation-block";
   @import "modules/kb-featured";
-
-  /**************************
-  ******* COMPONENTS ********
-  **************************/
-  @import "components/forms";
-  @import "components/buttons";
-  @import "components/icons";
-  @import "components/dropdowns";
-  @import "components/tooltip";
-  @import "components/alert";
-  @import "components/breadcrumbs";
-  @import "components/clipboard";
-  @import "components/badge";
-  @import "components/pagination";
-  @import "components/title";
-  @import "components/avatar";
-  @import "components/subscribe";
+  @import "modules/kb-category-title";
+  @import "modules/community-featured";
+  @import "modules/community-status";
 
   /**************************
   ******** PAGES *********

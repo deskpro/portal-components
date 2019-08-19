@@ -1,0 +1,25 @@
+.dp-po-community-featured {
+  &-title {
+    @include typo($s23, 400, 'head');
+    color: $grey-darkest;
+  }
+
+  &-list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    margin: 20px 0 0;
+  }
+
+  &-link {
+    color: $grey-darkest;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 0 0 0 10px;
+  }
+}
