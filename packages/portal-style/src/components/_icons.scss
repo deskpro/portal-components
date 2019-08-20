@@ -1,10 +1,82 @@
 .dp-po-icon {
+  $self: '.dp-po-icon';
+
   svg {
     vertical-align: -.125em;
 
     .fa-secondary,
     .fa-primary {
       fill: $brand-primary;
+    }
+  }
+
+  &#{$self}-danger {
+    svg {
+
+      .fa-secondary,
+      .fa-primary {
+        fill: $danger;
+      }
+    }
+  }
+
+  &#{$self}-purple {
+    svg {
+
+      .fa-secondary,
+      .fa-primary {
+        fill: $purple;
+      }
+    }
+  }
+
+  &#{$self}-neutral {
+    svg {
+
+      .fa-secondary,
+      .fa-primary {
+        fill: $neutral;
+      }
+    }
+  }
+
+  &#{$self}-warning {
+    svg {
+
+      .fa-secondary,
+      .fa-primary {
+        fill: $warning;
+      }
+    }
+  }
+
+  &#{$self}-success {
+    svg {
+
+      .fa-secondary,
+      .fa-primary {
+        fill: $success;
+      }
+    }
+  }
+
+  &#{$self}-info {
+    svg {
+
+      .fa-secondary,
+      .fa-primary {
+        fill: $info;
+      }
+    }
+  }
+
+  &#{$self}-pink {
+    svg {
+
+      .fa-secondary,
+      .fa-primary {
+        fill: $pink;
+      }
     }
   }
 }

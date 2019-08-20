@@ -1,4 +1,6 @@
 .dp-po-community-channel {
+  $self: '.dp-po-community-channel';
+
   &-list {
     margin: 0;
     padding: 0;
@@ -21,6 +23,10 @@
 
     &:hover {
       text-decoration: none;
+
+      #{$self}-name {
+        text-decoration: underline;
+      }
     }
   }
 
@@ -28,7 +34,7 @@
     flex: 0 0 140px;
     width: 140px;
     height: 140px;
-    background: $purple-light;
+    background: $info-light;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -36,6 +42,30 @@
 
     .dp-po-icon {
       font-size: 70px;
+    }
+
+    &-purple {
+      background: $purple-light;
+    }
+
+    &-neutral {
+      background: $neutral-light;
+    }
+
+    &-warning {
+      background: $warning-light;
+    }
+
+    &-success {
+      background: $success-light;
+    }
+
+    &-pink {
+      background: $pink-light;
+    }
+
+    &-danger {
+      background: $danger-light;
     }
   }
 
@@ -57,6 +87,60 @@
       color: $brand-primary;
       font-size: 24px;
       margin-left: 10px;
+    }
+  }
+
+  &-right {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &#{$self}-blocks {
+    #{$self}-list {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+
+    #{$self}-item {
+      box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+      border-radius: 4px;
+      padding: 30px;
+      background: $white;
+      flex-grow: inherit;
+      flex: 0 0 31.7%;
+      margin: 0 30px 30px 0;
+
+      &:nth-child(3n) {
+        margin: 0;
+      }
+    }
+
+    #{$self}-link {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      display: flex;
+    }
+
+    #{$self}-icon {
+      flex: 0 0 110px;
+      width: 110px;
+      height: 110px;
+    }
+
+    #{$self}-name {
+      font-size: $s23;
+      padding: 0;
+      align-self: center;
+    }
+
+    #{$self}-topics {
+      justify-content: flex-start;
+      align-self: center;
+    }
+
+    #{$self}-right {
+      text-align: left;
+      flex: 0 0 60%;
     }
   }
 }
