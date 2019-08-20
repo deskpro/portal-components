@@ -1,0 +1,92 @@
+.dp-po-guides {
+  $self: '.dp-po-guides';
+
+  &-item {
+    margin-bottom: 30px;
+  }
+
+  &-link {
+    display: flex;
+    color: $grey-darkest;
+
+    &:hover {
+      text-decoration: none;
+
+      #{$self}-content {
+        color: $grey-darkest;
+      }
+
+      #{$self}-title {
+        text-decoration: underline;
+      }
+
+      #{$self}-btn {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &-left {
+    text-align: center;
+    flex: 0 0 50%;
+  }
+
+  &-right {
+    flex: 0 0 50%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &-icon {
+    flex: 0 0 140px;
+    width: 140px;
+    height: 140px;
+    background: $info-light;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+    .dp-po-icon {
+      font-size: 70px;
+    }
+
+    &-purple {
+      background: $purple-light;
+    }
+
+    &-neutral {
+      background: $neutral-light;
+    }
+
+    &-warning {
+      background: $warning-light;
+    }
+
+    &-success {
+      background: $success-light;
+    }
+
+    &-pink {
+      background: $pink-light;
+    }
+
+    &-danger {
+      background: $danger-light;
+    }
+  }
+
+  &-title {
+    margin: 25px 0 0;
+  }
+
+  &-content {
+    line-height: 1.5;
+  }
+
+  &-btn {
+    align-self: flex-end;
+  }
+
+}
