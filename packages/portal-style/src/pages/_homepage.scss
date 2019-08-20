@@ -1,0 +1,36 @@
+.dp-po-community-channel-tags {
+  &-list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &-item {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px 10px 0;
+  }
+
+  &-link {
+    border: 1px solid $grey-light;
+    background: $white;
+    @include typo($s19, 400, 'head');
+    color: $brand-primary;
+    text-decoration: none;
+    border-radius: 15px;
+    padding: 2px 20px;
+    display: inline-flex;
+    align-items: center;
+
+    &:hover {
+      background: $brand-primary;
+      color: $white;
+      text-decoration: none;
+      border-color: $brand-primary;
+    }
+  }
+
+  &-count {
+    @include typo($s12, 600, 'body');
+    margin-left: 5px;
+  }
+}

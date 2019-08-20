@@ -18,4 +18,14 @@
       font-size: 23px;
     }
   }
+
+  &-link {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+
+    #{$self}-text {
+      color: $brand-primary;
+    }
+  }
 }
