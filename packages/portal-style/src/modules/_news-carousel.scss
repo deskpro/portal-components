@@ -104,6 +104,15 @@
   &-desc {
     font-size: $s16;
     margin: 0;
+    position: relative;
+
+    .dp-po-icon {
+      color: $brand-primary;
+      font-size: 22px;
+      position: absolute;
+      right: 0;
+
+    }
   }
 
   &-avatar {
