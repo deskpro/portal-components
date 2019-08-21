@@ -115,4 +115,43 @@
     bottom: 12px;
   }
 
+  &-item-seeall {
+    &:hover {
+      border-color: $brand-primary;
+
+      #{$self}-allink {
+        color: $brand-primary;
+        text-decoration: underline;
+      }
+    }
+
+    text-align: center;
+
+    #{$self}-link {
+      align-items: center;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    #{$self}-wrap {
+      background: $grey-lightest;
+      border-radius: 4px;
+      padding: 40px;
+      display: inline-block;
+    }
+
+    #{$self}-allink {
+      @include typo($s19, 400, 'head');
+      display: flex;
+      align-items: center;
+      margin: 20px 0 0;
+
+      .dp-po-icon {
+        color: $brand-primary;
+        margin-left: 5px;
+      }
+    }
+
+  }
+
 }
