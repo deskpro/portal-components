@@ -3,32 +3,40 @@
 }
 
 .breadcrumb {
+  padding: 0 0 0 5px;
+
   &-item {
     color: $breadcrumb-inactive-color;
     font-weight: bold;
     font-size: $p2-font-size;
     position: relative;
+    display: flex;
+    align-items: center;
 
     a {
-      padding: 7px;
+      padding: 7px 10px;
       display: inline-block;
       text-decoration: none;
       color: $breadcrumb-inactive-color;
 
       &:after {
         content: '';
-        width: calc(100% - 14px);
+        width: calc(100% - 20px);
         height: 2px;
         background: $brand-primary;
         position: absolute;
         bottom: -2px;
-        left: 7px;
+        left: 10px;
         opacity: 0;
       }
     }
+
+    .dp-po-icon {
+      font-size: 25px;
+      margin: 0;
+    }
   }
 
-  &-item.active,
   &-item:hover {
     color: $breadcrumb-active-color;
 
@@ -42,7 +50,24 @@
 
     }
 
+    .dp-po-icon {
+      color: $breadcrumb-inactive-color;
+    }
+
     &:before {
+      color: $brand-primary;
+    }
+  }
+
+  &-item.active {
+    color: $breadcrumb-active-color;
+
+    a {
+      color: $breadcrumb-active-color;
+      position: relative;
+    }
+
+    .dp-po-icon {
       color: $brand-primary;
     }
   }
