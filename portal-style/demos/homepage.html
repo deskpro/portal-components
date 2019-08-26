@@ -315,12 +315,41 @@
 </section>
 
         <div class="dp-po-section">
-          <div class="dp-po-title">
-            <a href="" class="dp-po-title-link">
-              <img class="dp-po-title-svg" src="/portal-components/portal-style/static/img/page-icons/news.svg">
-              <h2 class="dp-po-title-text">News</h2>
-            </a>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="dp-po-title">
+                <a href="" class="dp-po-title-link">
+                  <img class="dp-po-title-svg" src="/portal-components/portal-style/static/img/page-icons/news.svg">
+                  <h2 class="dp-po-title-text">News</h2>
+                </a>
+              </div>
+
+            </div>
+            <div class="col-sm-6 d-flex justify-content-end">
+              <div class="dp-po-subscribe">
+  <div class="dropdown">
+    <!--class : dp-po-subscribe-activebtn -->
+    <button class="dp-po-subscribe-btn" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+      aria-expanded="false" data-offset="0,10">
+      <i class="dp-po-icon fad fa-envelope"></i> Subscribe <i class="dp-po-icon far fa-check"></i>
+    </button>
+    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
+      <div class="dp-po-subscribe-dropitem">
+        <a class="dropdown-item" href="#"> All <i class="dp-po-icon far fa-check"></i></a>
+        <span class="dp-po-subscribe-divider"></span>
+        <a class="dropdown-item disabled" href="#">Blog <i class="dp-po-icon far fa-check"></i></a>
+        <a class="dropdown-item active" href="#">Product <i class="dp-po-icon far fa-check"></i></a>
+        <a class="dropdown-item" href="#">Release <i class="dp-po-icon far fa-check"></i></a>
+        <span class="dp-po-subscribe-divider"></span>
+        <a class="dropdown-item dp-po-subscribe-manage" href="#">Manage your subscriptions</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+            </div>
           </div>
+
           <div class="dp-po-block">
             <div class="dp-po-news-carousel">
   <button class="dp-po-news-carousel-arrow dp-po-news-carousel-arrow-left">
@@ -395,7 +424,6 @@
 </div>
 
           </div>
-
         </div>
 
         <div class="dp-po-section">
