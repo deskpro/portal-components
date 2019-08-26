@@ -72,7 +72,8 @@
   &-name {
     flex: 0 0 100%;
     padding: 20px 0;
-    word-break: break-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
     @include typo($s28, 300, 'head');
   }
 
@@ -93,6 +94,7 @@
   &-right {
     display: flex;
     flex-wrap: wrap;
+    max-width: 230px;
   }
 
   &#{$self}-blocks {
@@ -141,6 +143,7 @@
     #{$self}-right {
       text-align: left;
       flex: 0 0 60%;
+      max-width: 200px;
     }
   }
 }

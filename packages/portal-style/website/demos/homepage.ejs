@@ -11,16 +11,24 @@
       <div class="container">
         <%- include('_partials/_navigation-block.ejs'); %>
         <div class="dp-po-section">
-          <div class="dp-po-title">
-            <a href="" class="dp-po-title-link">
-              <img class="dp-po-title-svg" src="/portal-components/portal-style/static/img/page-icons/news.svg">
-              <h2 class="dp-po-title-text">News</h2>
-            </a>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="dp-po-title">
+                <a href="" class="dp-po-title-link">
+                  <img class="dp-po-title-svg" src="/portal-components/portal-style/static/img/page-icons/news.svg">
+                  <h2 class="dp-po-title-text">News</h2>
+                </a>
+              </div>
+
+            </div>
+            <div class="col-sm-6 d-flex justify-content-end">
+              <%- include('_partials/_subscribe-1.ejs'); %>
+            </div>
           </div>
+
           <div class="dp-po-block">
             <%- include('_partials/_news-carousel.ejs'); %>
           </div>
-
         </div>
 
         <div class="dp-po-section">

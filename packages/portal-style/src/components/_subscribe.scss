@@ -3,34 +3,33 @@
   margin: 0 0 20px;
 
   .dropdown-menu {
-    width: 100%;
     border-color: $brand-primary;
+    padding: 0;
   }
 
   &-btn {
     text-align: left;
     position: relative;
     background: $white;
-    padding: 8px 20px;
+    padding: 8px 10px;
     color: $brand-primary;
     display: flex;
     align-items: center;
-    width: 100%;
     border: 1px solid $brand-primary;
     border-radius: 4px;
-    font-size: $h2-font-size;
-    font-family: $headings-font-family;
-    position: relative;
     outline: none;
+    min-width: 150px;
+    @include typo($s14, 600, 'body');
 
     .dp-po-icon {
       margin-right: 10px;
+      font-size: 20px;
 
       .fa-check {
         position: absolute;
-        right: 20px;
+        right: 10px;
         top: 10px;
-        display: none;
+        color: $success;
       }
     }
 
@@ -42,6 +41,11 @@
         .fa-check {
           display: block;
           color: $white;
+        }
+
+        svg .fa-primary,
+        svg .fa-secondary {
+          fill: $white;
         }
       }
     }
@@ -65,9 +69,16 @@
       color: $white;
 
       .dp-po-icon {
+        color: $white;
+
         .fa-check {
           display: block;
           color: $white;
+        }
+
+        svg .fa-primary,
+        svg .fa-secondary {
+          fill: $white;
         }
       }
     }
@@ -75,9 +86,10 @@
 
   .dropdown-item {
     position: relative;
-    font-family: $headings-font-family;
+    @include typo($s17, 400, 'head');
     display: flex;
     align-items: center;
+    padding: 15px 20px;
 
     .dp-po-icon {
       font-size: 26px;
@@ -85,7 +97,6 @@
       color: $grey-dark;
 
       .fa-check {
-
         position: absolute;
         right: 20px;
         top: 10px;
@@ -93,8 +104,10 @@
       }
     }
 
-    &:hover {
+    &:hover,
+    &.active {
       background: none;
+      color: $brand-primary;
 
       .dp-po-icon {
         color: $brand-primary;
@@ -106,19 +119,58 @@
       }
     }
 
-    &:last-child {
-      color: $brand-primary;
-      font-size: $button1-font-size;
-      font-family: $font-family-sans-serif;
-      font-weight: 600;
-    }
-
     &.disabled {
       color: $grey;
 
       i {
         color: $grey;
       }
+    }
+
+    &#{$self}-manage {
+      color: $brand-primary;
+      @include typo($s14, 600, 'body');
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &-divider {
+    display: block;
+    height: 1px;
+    width: 100%;
+    background: $grey;
+  }
+
+  &-large {
+    #{$self}-btn {
+      width: 100%;
+      @include typo($s23, 400, 'head');
+      padding: 8px 20px;
+
+      .dp-po-icon {
+        font-size: $s23;
+
+        .fa-check {
+          right: 20px;
+          display: none;
+        }
+      }
+
+      &:hover {
+        .dp-po-icon {
+          .fa-check {
+            display: block;
+            color: $white;
+          }
+        }
+      }
+    }
+
+    .dropdown-menu {
+      width: 100%;
     }
   }
 }
