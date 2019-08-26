@@ -5,7 +5,8 @@
 @import "variables/vars";
 
 .dp-po {
-  font: $font-size-base $font-family-sans-serif;
+  font-size: $font-size-base;
+  font-family: $font-family-sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 

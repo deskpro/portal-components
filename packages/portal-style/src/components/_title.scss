@@ -1,7 +1,7 @@
 .dp-po-title {
   display: inline-flex;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 20px;
   $self: '.dp-po-title';
 
   &-svg {
@@ -9,13 +9,12 @@
   }
 
   &-text {
-    font-family: $headings-font-family;
-    font-size: $font-size-base * 1.666; // 30px at standard size
+    @include typo($s30, 400, 'head');
     color: $grey-darkest;
     margin: 0;
 
     &#{$self}-small {
-      font-size: 23px;
+      font-size: $s23;
     }
   }
 
@@ -24,8 +23,10 @@
     display: inline-flex;
     align-items: center;
 
+
     #{$self}-text {
       color: $brand-primary;
+      font-weight: 300;
     }
   }
 }

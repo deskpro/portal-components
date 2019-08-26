@@ -4,7 +4,7 @@
 
   &-title {
     @include typo($s23, 400, 'head');
-    padding: 0 0 20px 0;
+    padding: 0 0 16px 0;
     border-bottom: 1px solid $grey-light;
     margin: 0;
   }

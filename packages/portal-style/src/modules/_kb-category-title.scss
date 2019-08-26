@@ -12,8 +12,7 @@
   }
 
   &-text {
-    font-family: $headings-font-family;
-    font-size: $h2-font-size;
+    @include typo($s23, 400, 'head');
     color: $brand-primary;
     margin: 0;
   }
@@ -21,7 +20,7 @@
   &-link {
     display: inline-flex;
     align-items: center;
-    margin: 20px 0 0;
+    margin: 30px 0 0;
 
     &:hover {
       .dp-po-icon {

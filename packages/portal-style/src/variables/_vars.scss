@@ -24,6 +24,7 @@ $font-weight-bold: bold !default;
 
 $font-weight-base: $font-weight-normal !default;
 $line-height-base: 1.5 !default;
+$headings-line-height: 1.5 !default;
 
 $headings-font-family: "Rubik",
 $font-family-sans-serif;
@@ -95,6 +96,7 @@ $btn-border-radius-sm: 4px;
 
 
 $s36: $font-size-base * 2.000 !default; // 36px
+$s30: $font-size-base * 1.666 !default; // 30px
 $s28: $font-size-base * 1.555 !default; // 28px
 $s26: $font-size-base * 1.444 !default; // 26px
 $s23: $font-size-base * 1.277 !default; // 23px

@@ -15,7 +15,7 @@
     color: $brand-primary;
     display: flex;
     align-items: center;
-    border: 1px solid $brand-primary;
+    border: 2px solid $grey-light;
     border-radius: 4px;
     outline: none;
     min-width: 150px;
@@ -36,6 +36,7 @@
     &:hover {
       background: $brand-primary;
       color: $white;
+      border-color: $brand-primary;
 
       .dp-po-icon {
         .fa-check {
@@ -67,6 +68,7 @@
     #{$self}-btn {
       background: $brand-primary;
       color: $white;
+      border-color: $brand-primary;
 
       .dp-po-icon {
         color: $white;
@@ -149,6 +151,7 @@
       width: 100%;
       @include typo($s23, 400, 'head');
       padding: 8px 20px;
+      border: 1px solid $brand-primary;
 
       .dp-po-icon {
         font-size: $s23;

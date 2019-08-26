@@ -1,6 +1,6 @@
 .dp-po-community-channel-tags {
   &-list {
-    margin: 0;
+    margin: 0 0 10px 0;
     padding: 0;
   }
 
@@ -33,4 +33,32 @@
     @include typo($s12, 600, 'body');
     margin-left: 5px;
   }
+}
+
+.dp-po-homepage {
+  &-navigation {
+    margin-bottom: 70px;
+  }
+
+  &-news {
+    margin-bottom: 50px;
+
+    .dp-po-block {
+      padding: 45px 30px;
+    }
+  }
+
+  &-kb {
+    margin-bottom: 50px;
+
+    .dp-po-block {
+      padding: 45px 30px;
+    }
+  }
+
+  &-community {
+    margin-bottom: 50px;
+  }
+
+  &-guides {}
 }

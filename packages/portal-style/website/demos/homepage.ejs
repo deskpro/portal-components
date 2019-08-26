@@ -10,7 +10,9 @@
     <main class="dp-po-main dp-po-homepage">
       <div class="container">
         <%- include('_partials/_navigation-block.ejs'); %>
-        <div class="dp-po-section">
+
+        <!-- News-->
+        <div class="dp-po-homepage-news">
           <div class="row">
             <div class="col-sm-6">
               <div class="dp-po-title">
@@ -31,7 +33,8 @@
           </div>
         </div>
 
-        <div class="dp-po-section">
+        <!-- Knowledgebase Variation 1-->
+        <div class="dp-po-homepage-kb">
           <div class="dp-po-title">
             <a href="" class="dp-po-title-link">
               <img class="dp-po-title-svg"
@@ -44,7 +47,9 @@
             <%- include('_partials/_kb-categories-title.ejs'); %>
           </div>
         </div>
-        <div class="dp-po-section">
+
+        <!-- Knowledgebase Variation 2-->
+        <div class="dp-po-homepage-kb">
           <div class="dp-po-title">
             <a href="" class="dp-po-title-link">
               <img class="dp-po-title-svg"
@@ -53,20 +58,27 @@
             </a>
           </div>
           <div class="dp-po-block">
-            <div class="row">
-              <div class="col-sm-6">
-                <%- include('_partials/_kb-categories.ejs'); %>
+            <div class="row mb-4">
+              <div class="col-sm-6 ">
                 <%- include('_partials/_kb-categories.ejs'); %>
               </div>
               <div class="col-sm-6">
                 <%- include('_partials/_kb-categories.ejs'); %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <%- include('_partials/_kb-categories.ejs'); %>
+              </div>
+              <div class="col-sm-6">
                 <%- include('_partials/_kb-categories.ejs'); %>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="dp-po-section">
+        <!-- Community Variation 1-->
+        <div class="dp-po-homepage-community">
           <div class="row">
             <div class="col-sm-3">
               <div class="dp-po-title">
@@ -95,7 +107,8 @@
           </div>
         </div>
 
-        <div class="dp-po-section">
+        <!-- Community Variation 2-->
+        <div class="dp-po-homepage-community">
           <div class="dp-po-title">
             <a href="" class="dp-po-title-link">
               <img class="dp-po-title-svg" src="/portal-components/portal-style/static/img/page-icons/community.svg">
@@ -105,7 +118,8 @@
           <%- include('_partials/_community-channel.ejs'); %>
         </div>
 
-        <div class="dp-po-section">
+        <!-- Community Variation 3-->
+        <div class="dp-po-homepage-community">
           <div class="dp-po-title">
             <a href="" class="dp-po-title-link">
               <img class="dp-po-title-svg" src="/portal-components/portal-style/static/img/page-icons/community.svg">
@@ -115,7 +129,8 @@
           <%- include('_partials/_community-channel-blocks.ejs'); %>
         </div>
 
-        <div class="dp-po-section">
+        <!-- Guides-->
+        <div class="dp-po-homepage-guides">
           <div class="dp-po-title">
             <a href="" class="dp-po-title-link">
               <img class="dp-po-title-svg" src="/portal-components/portal-style/static/img/page-icons/guides.svg">

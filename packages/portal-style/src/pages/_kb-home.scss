@@ -6,7 +6,7 @@
   }
 
   &-list {
-    margin: 0;
+    margin: 0 0 25px;
     padding: 0;
   }
 
@@ -33,9 +33,8 @@
 
   &-link {
     color: $grey-darkest;
-    font-size: $h3-font-size;
-    font-family: $headings-font-family;
-    display: inline-flex;
+    @include typo($s19, 400, 'head');
+    display: flex;
     align-items: center;
 
     &:hover {
@@ -50,6 +49,13 @@
     &-draft {
       color: $grey-dark;
     }
+  }
+
+  &-text {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 }
 
