@@ -1,0 +1,116 @@
+.dp-po-news-listing {
+  $self: '.dp-po-news-listing';
+
+  &-item {
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &-link {
+    display: flex;
+    color: $grey-darkest;
+    padding: 20px;
+    position: relative;
+    align-items: center;
+    border: 2px solid $grey-light;
+    border-radius: 6px;
+
+    &:hover {
+      box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+      text-decoration: none;
+      color: $grey-darkest;
+      border-color: $brand-primary;
+
+      #{$self}-title {
+        color: $brand-primary;
+        text-decoration: underline;
+      }
+
+      #{$self}-date {
+        background: $info-light;
+        border-color: $brand-primary;
+        color: $brand-primary;
+      }
+
+      #{$self}-year {
+        border-color: $brand-primary;
+      }
+    }
+  }
+
+  &-date {
+    border: 1px solid $grey-light;
+    background: $grey-lightest;
+    border-radius: 4px;
+    height: 100%;
+    text-align: center;
+    @include typo($s18, 400, 'head');
+    margin: 0 20px 0 0;
+    flex: 0 0 75px;
+  }
+
+  &-month {
+    display: block;
+    padding: 6px;
+  }
+
+  &-year {
+    display: block;
+    border-top: 1px solid $grey-light;
+    padding: 6px;
+    width: 100%;
+  }
+
+  &-figure {
+    margin: 0 20px 0 0;
+  }
+
+  &-photo {
+    max-width: 150px;
+    max-height: 70px;
+  }
+
+  &-content {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  &-title {
+    @include typo($s23, 400, 'head');
+    flex: 0 0 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding-right: 100px;
+  }
+
+  &-comments {
+    display: inline-flex;
+    vertical-align: middle;
+    margin-left: 20px;
+
+    .dp-po-icon {
+      color: $grey-dark;
+      margin-right: 10px;
+      position: relative;
+      top: 2px;
+    }
+  }
+
+  .dp-po-avatar {
+    display: inline-flex;
+    vertical-align: middle;
+
+    strong {
+      font-weight: normal;
+    }
+  }
+
+  .badge {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+}
