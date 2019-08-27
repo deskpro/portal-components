@@ -1,0 +1,41 @@
+.dp-po-notification {
+  background: $info-light;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 0;
+
+  &-title {
+    margin: 0;
+    @include typo($s23, 400, 'head');
+    color: $grey-darkest;
+  }
+
+  &-link {
+    text-decoration: underline;
+  }
+
+  &-figure {
+    margin: 0 25px 0 0;
+    position: relative;
+  }
+
+  &-count {
+    border-radius: 50%;
+    color: $white;
+    background: $danger;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include typo($s19, 500, 'head');
+    position: absolute;
+    right: -17px;
+    top: -17px;
+  }
+
+  &-image {
+    width: 60px;
+  }
+}
