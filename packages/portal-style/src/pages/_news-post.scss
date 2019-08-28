@@ -69,41 +69,4 @@
       color: $grey-dark;
     }
   }
-
-  &-all {
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
-
-    &:before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 1px;
-      background: $grey-light;
-      left: 0;
-      top: 20px;
-    }
-  }
-
-  &-alllink {
-    display: flex;
-    align-items: center;
-    color: $brand-primary;
-    background: $white;
-    padding: 10px;
-    z-index: 1;
-    @include typo($s14, 600);
-
-    &:hover {
-      text-decoration: none;
-      opacity: 0.8;
-    }
-
-    .dp-po-icon {
-      @include typo($s19);
-      margin-left: 10px;
-      line-height: 0;
-    }
-  }
 }
