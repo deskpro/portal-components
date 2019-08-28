@@ -86,8 +86,10 @@
 
     .dp-po-icon {
       color: $brand-primary;
-      font-size: 24px;
+      font-size: 22px;
       margin-left: 10px;
+      position: relative;
+      top: 2px;
     }
   }
 

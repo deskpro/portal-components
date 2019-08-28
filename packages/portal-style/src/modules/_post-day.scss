@@ -7,6 +7,7 @@
   left: -60px;
   top: 0;
   position: absolute;
+  color: $grey-darkest;
 
   span {
     display: block;
@@ -14,20 +15,17 @@
 
   &-month {
     text-transform: uppercase;
-    font-weight: 700;
-    font-size: $h6-font-size;
+    @include typo ($s16, 700, 'body');
     padding: 5px 0;
   }
 
   &-date {
-    font-family: $headings-font-family;
-    font-size: 26px;
+    @include typo ($s26, 400, 'head');
   }
 
   &-year {
     border-top: 1px solid $grey-light;
-    font-weight: 700;
-    font-size: $h6-font-size;
+    @include typo ($s16, 700, 'body');
     padding: 5px 0;
   }
 }

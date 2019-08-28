@@ -84,6 +84,7 @@
     min-height: 32px;
     border-top-right-radius: 4px;
     border-top-left-radius: 4px;
+    border-bottom: 2px solid $grey-light;
   }
 
   &-photo {
@@ -99,6 +100,7 @@
 
   &-title {
     @include typo($s17, 500, 'head');
+    line-height: 1.35;
   }
 
   &-desc {
@@ -112,7 +114,7 @@
       font-size: 22px;
       position: absolute;
       right: 0;
-
+      bottom: -5px;
     }
   }
 
@@ -123,7 +125,7 @@
     width: 24px;
     position: absolute;
     right: 15px;
-    bottom: 12px;
+    bottom: 8px;
   }
 
   &-item-seeall {
@@ -159,7 +161,9 @@
 
       .dp-po-icon {
         color: $brand-primary;
-        margin-left: 5px;
+        margin-left: 10px;
+        position: relative;
+        top: 2px;
       }
     }
 
@@ -183,9 +187,19 @@
     top: 0;
     margin: auto;
 
+    .dp-po-icon {
+      position: relative;
+      left: -1px;
+    }
+
     &-right {
       left: auto;
       right: -20px;
+
+      .dp-po-icon {
+        right: -1px;
+        left: auto;
+      }
     }
 
     &:hover {
@@ -194,6 +208,8 @@
       color: $white;
       border-color: $brand-primary;
     }
+
+
   }
 
 }

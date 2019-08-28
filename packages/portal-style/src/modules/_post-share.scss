@@ -17,35 +17,41 @@
   }
 
   .dp-po-icon {
-    font-size: 28px;
-
-    svg {
-      color: $grey-dark;
-    }
-
-    .fa-linkedin {
-      color: $linkedin;
-    }
-
-    .fa-facebook-square {
-      color: $facebook;
-    }
-
-    .fa-twitter {
-      color: $twitter;
-    }
-
-    .fa-whatsapp {
-      color: $whatsapp;
-    }
+    width: 24px;
   }
 
   .dropdown-item,
   .dropdown-item-text {
     font-size: 17px;
+  }
+
+  .dropdown-menu {
+    width: 250px;
+  }
+
+  &-url {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin: 10px 0;
+
+    input {
+      border-radius: 4px;
+      border: 1px solid $grey-light;
+      padding: 9px 10px;
+      color: $brand-primary;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      outline: none;
+      width: 80%;
+      font-size: $s15;
+    }
 
     .dp-po-icon {
-      font-size: 22px;
+      font-size: 28px;
+      color: $grey-dark;
+      cursor: pointer;
     }
   }
 }

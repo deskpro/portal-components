@@ -11,25 +11,27 @@
     text-align: left;
     position: relative;
     background: $white;
-    padding: 8px 10px;
+    padding: 4px 10px;
     color: $brand-primary;
     display: flex;
     align-items: center;
     border: 2px solid $grey-light;
     border-radius: 4px;
     outline: none;
-    min-width: 150px;
+    min-width: 145px;
     @include typo($s14, 600, 'body');
 
     .dp-po-icon {
       margin-right: 10px;
-      font-size: 20px;
+      font-size: 22px;
+      line-height: 0;
 
       .fa-check {
         position: absolute;
         right: 10px;
-        top: 10px;
+        top: 9px;
         color: $success;
+        font-size: 14px;
       }
     }
 
@@ -91,17 +93,19 @@
     @include typo($s17, 400, 'head');
     display: flex;
     align-items: center;
-    padding: 15px 20px;
+    margin: 15px 20px;
+    padding: 0;
+    width: auto;
 
     .dp-po-icon {
-      font-size: 26px;
+      font-size: 20px;
       margin: 0 10px 0 0;
       color: $grey-dark;
 
       .fa-check {
         position: absolute;
-        right: 20px;
-        top: 10px;
+        right: 0;
+        top: 0;
         display: none;
       }
     }
@@ -159,6 +163,7 @@
         .fa-check {
           right: 20px;
           display: none;
+          font-size: 24px;
         }
       }
 
@@ -174,6 +179,12 @@
 
     .dropdown-menu {
       width: 100%;
+    }
+
+    .dropdown-item {
+      .dp-po-icon {
+        font-size: 24px;
+      }
     }
   }
 }
