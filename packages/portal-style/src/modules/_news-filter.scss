@@ -1,0 +1,166 @@
+.dp-po-news-filter {
+  position: relative;
+
+  &-title {
+    @include typo($s17, 500, 'head');
+    color: $grey-dark;
+    margin: 0;
+  }
+
+  &-collapse {
+    position: absolute;
+    right: 20px;
+    top: 18px;
+    color: $brand-primary;
+    font-size: 24px;
+
+    &.collapsed {
+      transform: rotate(180deg);
+    }
+  }
+
+  &-type {
+    &-list {
+      margin: 0;
+      padding: 0;
+    }
+
+    &-item {
+      display: block;
+
+      .form-group {
+        margin-bottom: 12px;
+      }
+
+      &:last-child {
+        .form-group {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &-option {
+      display: flex;
+      align-items: center;
+      padding: 15px 0;
+    }
+
+    &-link {
+      position: relative;
+      color: $grey-dark;
+      font-size: $s15;
+      margin-right: 30px;
+
+      &:after {
+        content: '';
+        width: 1px;
+        height: 100%;
+        background: $grey-light;
+        position: absolute;
+        right: -15px;
+        top: 0;
+        display: block;
+      }
+
+      &:last-child {
+        margin: 0;
+
+        &:after {
+          display: none;
+        }
+      }
+
+      &.active {
+        color: $brand-primary;
+        text-decoration: underline;
+      }
+    }
+
+  }
+
+  &-date {
+    &-option {
+      display: flex;
+      padding: 15px 0 0;
+      align-items: start;
+    }
+
+    &-year {
+      &-list {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex: 0 0 30%;
+        position: relative;
+        flex-wrap: wrap;
+
+
+        &:after {
+          content: '';
+          width: 1px;
+          height: 100%;
+          background: $grey-light;
+          display: block;
+          position: absolute;
+          right: 7px;
+          top: 0;
+        }
+      }
+
+      &-item {
+        display: flex;
+        flex: 0 0 100%;
+        padding: 5px 0;
+        height: 30px;
+      }
+
+      &-link {
+        color: $grey-dark;
+        font-size: $s15;
+
+        &:hover {
+          color: $brand-primary;
+          font-weight: 700;
+        }
+
+        &.active {
+          font-weight: 700;
+          color: $brand-primary;
+        }
+      }
+    }
+
+    &-month {
+      &-list {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex: 0 0 70%;
+        flex-wrap: wrap;
+      }
+
+      &-item {
+        display: flex;
+        flex: 0 0 50%;
+        justify-content: space-around;
+        padding: 5px 0;
+        height: 30px;
+      }
+
+      &-link {
+        color: $grey-dark;
+        font-size: $s15;
+
+        &:hover {
+          color: $brand-primary;
+          font-weight: 700;
+        }
+
+        &.active {
+          font-weight: 700;
+          color: $brand-primary;
+        }
+      }
+    }
+  }
+}
