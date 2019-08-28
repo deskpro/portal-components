@@ -1,7 +1,6 @@
 .dp-po-community-status {
   &-title {
     @include typo($s23, 400, 'head');
-    color: $grey-darkest;
   }
 
   &-list {

@@ -10,7 +10,6 @@
 
   &-text {
     @include typo($s30, 400, 'head');
-    color: $grey-darkest;
     margin: 0;
 
     &#{$self}-small {

@@ -71,9 +71,7 @@
     margin: 10px 0 0;
   }
 
-  &-content {
-    color: $grey-darkest;
-  }
+  &-content {}
 
   &-vote {
     padding: 0 0 0 40px;
@@ -146,7 +144,6 @@
     align-items: center;
     font-size: 14px;
     font-weight: 600;
-    color: $grey-darkest;
 
     .dp-po-icon {
       margin-right: 7px;

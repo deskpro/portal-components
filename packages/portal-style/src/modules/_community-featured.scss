@@ -1,7 +1,6 @@
 .dp-po-community-featured {
   &-title {
     @include typo($s23, 400, 'head');
-    color: $grey-darkest;
   }
 
   &-list {

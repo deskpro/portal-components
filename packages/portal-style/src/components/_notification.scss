@@ -9,7 +9,6 @@
   &-title {
     margin: 0;
     @include typo($s23, 400, 'head');
-    color: $grey-darkest;
   }
 
   &-link {
