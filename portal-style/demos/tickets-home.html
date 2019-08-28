@@ -213,7 +213,7 @@
               </div>
 
               <div class="dp-po-ticket-filter">
-                <div class="row">
+                <div class="row mb-4">
                   <div class="col-sm-6">
                     <h4 class="dp-po-ticket-filter-title">Filter by</h4>
                   </div>
@@ -223,6 +223,7 @@
                 </div>
 
                 <ul class="dp-po-ticket-filter-list">
+
                   <li class="dp-po-ticket-filter-item">
                     <div class="form-group dp-po-form-check">
                       <input type="checkbox" class="form-check-input" id="departmentCheck" checked>
@@ -230,9 +231,9 @@
                     </div>
                     <a class="dp-po-ticket-filter-collapse" data-toggle="collapse" href="#collapseExample" role="button"
                       aria-expanded="false" aria-controls="collapseExample">
-                      <i class="far fa-angle-down"></i>
+                      <i class="dp-po-icon far fa-angle-down"></i>
                     </a>
-                    <div class="collapse" id="collapseExample">
+                    <div class="collapse show" id="collapseExample">
                       <ul class="dp-po-ticket-filter-list">
                         <li class="dp-po-ticket-filter-item">
                           <div class="form-group dp-po-form-check">
@@ -268,18 +269,95 @@
                     </div>
 
                   </li>
+
                   <li class="dp-po-ticket-filter-item">
                     <div class="form-group dp-po-form-check">
                       <input type="checkbox" class="form-check-input" id="userCheck">
                       <label class="form-check-label" for="userCheck">User</label>
                     </div>
+                    <a class="dp-po-ticket-filter-collapse" data-toggle="collapse" href="#collapseExample1"
+                      role="button" aria-expanded="false" aria-controls="collapseExample1">
+                      <i class="dp-po-icon far fa-angle-down"></i>
+                    </a>
+                    <div class="collapse show" id="collapseExample1">
+                      <ul class="dp-po-ticket-filter-list">
+                        <li class="dp-po-ticket-filter-item">
+                          <div class="form-group dp-po-form-check">
+                            <input type="checkbox" class="form-check-input" id="user1">
+                            <label class="form-check-label" for="user1"><img
+                                src="/portal-components/portal-style/static/img/docs/avatar.png"> Jonathan Jones</label>
+                          </div>
+                        </li>
+                        <li class="dp-po-ticket-filter-item">
+                          <div class="form-group dp-po-form-check">
+                            <input type="checkbox" class="form-check-input" id="user2">
+                            <label class="form-check-label" for="user2"><img
+                                src="/portal-components/portal-style/static/img/docs/avatar.png"> Wendy Pride</label>
+                          </div>
+                        </li>
+                        <li class="dp-po-ticket-filter-item">
+                          <div class="form-group dp-po-form-check">
+                            <input type="checkbox" class="form-check-input" id="user3" checked>
+                            <label class="form-check-label" for="user3"><img
+                                src="/portal-components/portal-style/static/img/docs/avatar.png"> Elaine
+                              Fredericks</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
                   </li>
+
                   <li class="dp-po-ticket-filter-item">
                     <div class="form-group dp-po-form-check">
                       <input type="checkbox" class="form-check-input" id="activityCheck" checked>
                       <label class="form-check-label" for="activityCheck">Last Activity</label>
                     </div>
+                    <a class="dp-po-ticket-filter-collapse" data-toggle="collapse" href="#collapseExample2"
+                      role="button" aria-expanded="false" aria-controls="collapseExample">
+                      <i class="dp-po-icon far fa-angle-down"></i>
+                    </a>
+                    <div class="collapse show" id="collapseExample2">
+                      <ul class="dp-po-ticket-filter-list">
+                        <li class="dp-po-ticket-filter-item">
+                          <div class="form-group dp-po-form-check">
+                            <input type="checkbox" class="form-check-input" id="lasthour" checked>
+                            <label class="form-check-label" for="lasthour">Last 24 hours</label>
+                          </div>
+                        </li>
+                        <li class="dp-po-ticket-filter-item">
+                          <div class="form-group dp-po-form-check">
+                            <input type="checkbox" class="form-check-input" id="lastweek" checked>
+                            <label class="form-check-label" for="lastweek">Last week</label>
+                          </div>
+                        </li>
+                        <li class="dp-po-ticket-filter-item">
+                          <div class="form-group dp-po-form-check">
+                            <input type="checkbox" class="form-check-input" id="lastmonth" checked>
+                            <label class="form-check-label" for="lastmonth">Last month</label>
+                          </div>
+                        </li>
+                        <li class="dp-po-ticket-filter-item">
+                          <div class="form-group dp-po-form-check">
+                            <input type="checkbox" class="form-check-input" id="6months">
+                            <label class="form-check-label" for="6months">Last 6 month</label>
+                          </div>
+                        </li>
+                        <li class="dp-po-ticket-filter-item">
+                          <div class="form-group dp-po-form-check">
+                            <input type="checkbox" class="form-check-input" id="lastyear">
+                            <label class="form-check-label" for="lastyear">Last year</label>
+                          </div>
+                        </li>
+                        <li class="dp-po-ticket-filter-item">
+                          <div class="form-group dp-po-form-check">
+                            <input type="checkbox" class="form-check-input" id="moreyear">
+                            <label class="form-check-label" for="moreyear">More than 1 year</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
                   </li>
+
                 </ul>
               </div>
             </div>
