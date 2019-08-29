@@ -1,0 +1,21 @@
+.dp-po-download-agree {
+  &-list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &-item {
+    display: flex;
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  .dp-po-icon {
+    margin-right: 10px;
+    position: relative;
+    top: 1px;
+  }
+}
