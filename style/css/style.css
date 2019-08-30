@@ -1826,7 +1826,7 @@ svg { fill: #a9b0b0; }
   outline: none;
 }
 
-a.dp-po-Button {
+a.dp-po-Button:hover {
   text-decoration: none;
 }
 
@@ -2630,6 +2630,14 @@ a.dp-po-Button {
   max-width: max-content;
   padding: 5px;
   position: relative;
+}
+
+.dp-po-label a {
+  color: inherit;
+}
+
+.dp-po-label a:hover {
+  color: inherit;
 }
 
 .dp-po-label.label--small {
@@ -6243,6 +6251,7 @@ a:hover {
   display: block;
 }
 
+.dp-po-tex-wrap .fr-img-caption .fr-img-wrap .fr-inner,
 .dp-po-image-description {
   color: #8b9293;
   font: 400 12px/1.5 "Lato", sans-serif;
@@ -8499,6 +8508,7 @@ a:hover {
 	border: 5px solid #eff0f0;
   }
 
+  .dp-po-tex-wrap .fr-img-caption .fr-img-wrap .fr-inner,
   .dp-po-image-description {
   	display: none;
   }
