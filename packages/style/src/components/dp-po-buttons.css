@@ -15,7 +15,7 @@
   outline: none;
 }
 
-a.dp-po-Button {
+a.dp-po-Button:hover {
   text-decoration: none;
 }
 

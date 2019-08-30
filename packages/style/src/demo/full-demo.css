@@ -431,6 +431,7 @@ a:hover {
   display: block;
 }
 
+.dp-po-tex-wrap .fr-img-caption .fr-img-wrap .fr-inner,
 .dp-po-image-description {
   color: var(--grey-dark);
   font: var(--p-3);
@@ -2609,6 +2610,7 @@ a:hover {
 	border: 5px solid var(--grey-lighter);
   }
 
+  .dp-po-tex-wrap .fr-img-caption .fr-img-wrap .fr-inner,
   .dp-po-image-description {
   	display: none;
   }

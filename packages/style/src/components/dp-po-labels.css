@@ -16,6 +16,14 @@
   position: relative;
 }
 
+.dp-po-label a {
+  color: inherit;
+}
+
+.dp-po-label a:hover {
+  color: inherit;
+}
+
 .dp-po-label.label--small {
   font: var(--b-3-semibold);
   height: 15px;
