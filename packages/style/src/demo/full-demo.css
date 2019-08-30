@@ -62,7 +62,7 @@ a:hover {
 }
 
 .dp-po-nav .dp-po-Avatar.Avatar--circle {
-	display: none;
+  display: none;
 }
 
 .dp-po-Logo-wrap {
@@ -74,6 +74,11 @@ a:hover {
   margin-left: 30px;
   margin-right: 60px;
   position: relative;
+}
+
+.dp-po-Logo-wrap .dp-po-Icon img {
+  max-height: 40px;
+  max-width: 40px;
 }
 
 .dp-po-nav .dp-po-Button {
@@ -96,8 +101,8 @@ a:hover {
 }
 
 .dp-po-Logo-descript {
-  font: var(--h-3);
   color: var(--grey-darkest);
+  font: var(--h-3);
 }
 
 .dp-po-Header-container {
@@ -114,7 +119,7 @@ a:hover {
 }
 
 .dp-po-Header-container .dp-po-Search-bar input:focus + .dp-po-Icon {
-	display: block;
+  display: block;
 }
 
 .dp-po-Header-container .dp-po-Searchbar-wrap {
@@ -123,9 +128,9 @@ a:hover {
 
 .dp-po-nav-control li.dp-po-Select-Language {
   align-items: center;
+  color: var(--grey-darkest);
   display: flex;
   margin-right: 30px;
-  color: var(--grey-darkest);
 }
 
 .dp-po-nav .dp-po-back-home {
@@ -462,7 +467,7 @@ a:hover {
 
 .dp-po-add-comments.is-active + .dp-po-comments-wrap {
     display: block;
-} 
+}
 
 .dp-po-add-comments + .dp-po-comments-wrap {
 	display: none;
@@ -2017,7 +2022,7 @@ a:hover {
 	left: 2px;
 }
 
-.dp-po-direction-rtl .dp-po-comments-wrap .dp-po-Upload-wrapper, 
+.dp-po-direction-rtl .dp-po-comments-wrap .dp-po-Upload-wrapper,
 .dp-po-direction-rtl .dp-po-comments-wrap .dp-po-button-wrap {
 	padding-left: 0;
 	padding-right: 40px;
@@ -2388,7 +2393,7 @@ a:hover {
   .dp-po-description-wrap .dp-IconsWrapper {
   	display: none;
   }
-  
+
   .dp-po-List.List--avatars li {
   	border: 5px solid var(--white);
   }
@@ -2553,7 +2558,7 @@ a:hover {
 	top: -39px;
 	cursor: pointer;
   }
-  
+
   .dp-po-tex-wrap {
   	box-shadow: none;
   	font: var(--mp-1);
@@ -2853,7 +2858,7 @@ a:hover {
 
   .dp-Template .dp-po-comments-wrap .comment--item .dp-po-Button {
 	max-width: 300px;
-	flex: 0 0 48%;	
+	flex: 0 0 48%;
   }
 
   .dp-Template .dp-po-comments-wrap .dp-po-CustomCheckbox.CustomCheckbox--medium {
@@ -2998,7 +3003,7 @@ a:hover {
   }
 
   .dp-po-comments.dp-po-add-comments.is-active {
-  	margin-bottom: 35px; 
+  	margin-bottom: 35px;
   }
 
   .dp-po-comments-wrap .dp-po-list.comment--item .dp-po-Upload-wrapper .dp-po-comment-subtitle {
@@ -3035,7 +3040,7 @@ a:hover {
   .dp-po-direction-rtl .dp-po-comments-wrap.dp-po-reply-comment .comment--item .dp-po-subtitle .dp-po-reply-comment-close,
   .dp-po-direction-rtl.dp-Template .dp-po-comments-wrap .comment--item .dp-po-Button.dp-po-reply-comment-close {
 	left: 0;
-	right: auto;  	
+	right: auto;
   }
 
   .dp-po-direction-rtl .dp-po-comments-item {
@@ -3133,7 +3138,7 @@ a:hover {
 	.dp-po-comments.comments-list + .dp-po-comments-wrap .dp-po-subtitle {
 		/*position: relative;*/
 	}
-	
+
 	.dp-po-comments-item {
 		position: relative;
 	}
@@ -3159,7 +3164,7 @@ a:hover {
 
 }
 
-@media screen and (min-device-width: 632px) and (max-device-width: 700px) { 
+@media screen and (min-device-width: 632px) and (max-device-width: 700px) {
 
 	.txt--dealing .dp-po-tooltip-wrap .dp-po-tooltip {
 		top: calc(100% - 19px);
@@ -3167,7 +3172,7 @@ a:hover {
 
 }
 
-@media screen and (min-device-width: 500px) and (max-device-width: 526px) { 
+@media screen and (min-device-width: 500px) and (max-device-width: 526px) {
 
 	.txt--dealing .dp-po-tooltip-wrap .dp-po-tooltip {
 		top: calc(100% - 19px);
@@ -3175,7 +3180,7 @@ a:hover {
 
 }
 
-@media screen and (min-device-width: 399px) and (max-device-width: 427px) { 
+@media screen and (min-device-width: 399px) and (max-device-width: 427px) {
 
 	.txt--dealing .dp-po-tooltip-wrap .dp-po-tooltip {
 		top: calc(100% - 19px);
