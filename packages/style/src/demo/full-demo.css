@@ -1710,13 +1710,20 @@ a:hover {
 	padding-left: 10px;
 }
 
+.dp-Template .dp-po-Info-wrap .dp-po-Info {
+  margin-bottom: 20px;
+}
+
+.dp-Template .dp-po-Info-wrap .dp-po-Info:last-child {
+  margin-bottom: 0;
+}
+
 .dp-Template .dp-po-Info-wrap .dp-po-Info.Info--danger {
 	background: var(--warning-light);
 }
 
 .dp-Template .dp-po-Info-wrap .dp-po-Info.Info--success {
 	background: var(--success-light);
-	margin-bottom: 20px;
 }
 
 /*open for demo forms*/
