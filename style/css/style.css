@@ -7585,13 +7585,20 @@ a:hover {
 	padding-left: 10px;
 }
 
+.dp-Template .dp-po-Info-wrap .dp-po-Info {
+  margin-bottom: 20px;
+}
+
+.dp-Template .dp-po-Info-wrap .dp-po-Info:last-child {
+  margin-bottom: 0;
+}
+
 .dp-Template .dp-po-Info-wrap .dp-po-Info.Info--danger {
 	background: #f9e6e1;
 }
 
 .dp-Template .dp-po-Info-wrap .dp-po-Info.Info--success {
 	background: #efd;
-	margin-bottom: 20px;
 }
 
 /*open for demo forms*/
