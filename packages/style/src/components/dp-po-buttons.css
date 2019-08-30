@@ -15,6 +15,10 @@
   outline: none;
 }
 
+a.dp-po-Button {
+  text-decoration: none;
+}
+
 /* Button--small */
 
 .dp-po-Button.Button--small {
