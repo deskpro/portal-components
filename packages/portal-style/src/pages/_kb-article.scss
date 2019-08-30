@@ -74,6 +74,25 @@
   }
 }
 
+.dp-po-post-content .fr-img-caption .fr-img-wrap {
+  border: 1px solid $grey;
+  margin-bottom: 1em;
+  display: block;
+
+  img {
+    outline: 1px solid $grey-light;
+    margin: 10px;
+    max-width: calc(100% - 20px);
+  }
+
+  .fr-inner {
+    background: $grey-lightest;
+    font-size: $p4-font-size;
+    padding: 5px 10px;
+    display: block;
+  }
+}
+
 .dp-po-kb-attachments {
   background: $grey-lightest;
   border-radius: 4px;
