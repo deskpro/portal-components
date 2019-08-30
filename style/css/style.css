@@ -5958,20 +5958,26 @@ a:hover {
   display: none;
 }
 
-.dp-po-Breadcrumbs .dp-po-Breadcrumb-item .dp-po-Icon.Icon-Tech-company {
+.dp-po-Breadcrumbs .dp-po-Breadcrumb-item .dp-po-Icon.Icon-Tech-company,
+.dp-po-Breadcrumbs .dp-po-Breadcrumb-item .dp-po-Icon img {
   height: 23px;
   position: relative;
   width: 23px;
+  vertical-align: middle;
 }
 
-.dp-po-Breadcrumbs .dp-po-Breadcrumb-item .dp-po-Icon.Icon-Tech-company::after {
+.dp-po-Breadcrumbs .dp-po-Breadcrumb-item .dp-po-Icon::after {
   background-color: #d3d6d7;
   content: "";
   height: calc(100% + 9px);
   position: absolute;
-  right: -10px;
+  right: 10px;
   top: -4px;
   width: 1px;
+}
+
+.dp-po-Breadcrumbs .dp-po-Breadcrumb-item .dp-po-Icon.Icon-Tech-company::after {
+  right: -10px;
 }
 
 .Breadcrumbs--custom.dp-po-Breadcrumb-item:last-child .dp-po-Breadcrumb-link::after {
@@ -7744,7 +7750,7 @@ a:hover {
 	        transform: rotate(-45deg);
 }
 
-.dp-po-direction-rtl .dp-po-Breadcrumbs .dp-po-Breadcrumb-item .dp-po-Icon.Icon-Tech-company::after {
+.dp-po-direction-rtl .dp-po-Breadcrumbs .dp-po-Breadcrumb-item .dp-po-Icon::after {
 	left: -10px;
 	right: auto;
 }
