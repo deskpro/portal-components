@@ -4,6 +4,7 @@
 
 .form-group {
   margin-bottom: 20px;
+  position: relative;
 
   textarea {
     min-height: 150px;
@@ -16,8 +17,9 @@
   }
 
   label {
-    font-size: 15px;
-    color: $grey-dark;
+    font-size: $s15;
+    font-weight: 700;
+    color: $grey-darkest;
     margin: 0 0 10px;
     display: block;
   }
@@ -162,5 +164,45 @@
   &:hover {
     text-decoration: none;
     color: $brand-primary;
+  }
+}
+
+.dp-po-form-password {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 1px solid $brand-primary;
+  padding: 20px;
+  display: inline-block;
+  position: absolute;
+  background: $white;
+  bottom: 0;
+  z-index: 1;
+  transform: translateY(100%);
+
+  &-title {
+    @include typo($s17, 500, 'head');
+    color: $grey-dark;
+    margin: 0 0 10px;
+  }
+
+  &-list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    color: $grey-dark;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  .dp-po-icon {
+    color: $success;
+    margin-right: 10px;
   }
 }
