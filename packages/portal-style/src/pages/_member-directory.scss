@@ -1,0 +1,105 @@
+.dp-po-member-directory {
+  .dp-po-columnfilter {
+    margin-right: 20px;
+  }
+}
+
+.dp-po-member-search {
+  position: relative;
+  width: 100%;
+
+  input[type="text"] {
+    width: 100%;
+    background: $white;
+    border: 1px solid $grey-light;
+    border-radius: 4px;
+    padding: 10px 50px;
+    font-size: $p2-font-size;
+    color: $grey-dark;
+    outline: none;
+  }
+
+  button[type="submit"] {
+    position: absolute;
+    border: none;
+    height: 32px;
+    left: 5px;
+    position: absolute;
+    top: calc(50% - 16px);
+    width: 32px;
+    font-size: 20px;
+    padding: 0;
+    color: $brand-primary;
+  }
+}
+
+.dp-po-member-table {
+  $self: '.dp-po-member-table';
+
+  &-row {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    padding: 0 20px;
+    position: relative;
+
+    &-head {
+      font-weight: 700;
+
+      #{$self}-cell {
+        color: $grey-dark;
+        overflow: inherit !important;
+        display: flex;
+
+        .dp-po-icon {
+          margin-left: 10px;
+        }
+      }
+
+      &:hover {
+        background: transparent !important;
+
+        #{$self}-cell {
+          color: $grey-dark !important;
+        }
+      }
+    }
+
+    &:nth-child(even) {
+      background: $grey-lightest;
+    }
+
+    &:hover {
+      background: $info-light;
+    }
+  }
+
+  &-cell {
+    width: calc(100% / 5);
+    font-size: $p3-font-size;
+    padding: 14px 5px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden !important;
+
+    &-large {
+      width: 25%;
+    }
+
+    &-small {
+      width: 5%;
+    }
+  }
+
+  &-message {
+    .dp-po-icon {
+      color: $grey-dark;
+      font-size: 20px;
+
+      &:hover {
+        color: $brand-primary;
+      }
+    }
+  }
+
+}

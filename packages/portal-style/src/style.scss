@@ -35,6 +35,7 @@
   @import "components/like";
   @import "components/status-ribbon";
   @import "components/notification";
+  @import "components/modal";
 
   /**************************
   ******* MODULES ********
@@ -80,7 +81,10 @@
   @import "pages/downloads-file";
   @import "pages/downloads-home";
   @import "pages/account-register";
+  @import "pages/member-directory";
 }
+
+@import "components/global";
 
 body {
   margin: 0;

@@ -1,0 +1,18 @@
+/*
+Styles which are out of .dp-po-* scope
+e.g. Modal Backdrop
+*/
+
+.modal-backdrop {
+  background: $grey-darkest;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+
+  &.show {
+    opacity: 0.5;
+  }
+}
