@@ -26,3 +26,7 @@ button {
 .col-centered {
   margin: 0 auto;
 }
+
+:focus {
+  outline: none;
+}
