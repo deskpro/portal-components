@@ -11,24 +11,29 @@
       max-height: 49px;
       max-width: 49px;
     }
+    .dp-po-logo {
+      position: relative;
+      display: block;
+      padding: 0 50px 0 0;
+      &:after {
+        position: absolute;
+        content: '';
+        width: 1px;
+        height: 28px;
+        background: $grey-light;
+        right: 28px;
+        top: 11px;
+      }
+    }
   }
 
   .dp-po-brand-name {
     @extend .h3;
     color: $grey-darkest;
     position: relative;
-    padding: 0 0 0 50px;
+    padding: 10px 0;
     margin: 0;
     line-height: 1.5;
-
-    &:before {
-      position: absolute;
-      content: '';
-      width: 1px;
-      height: 100%;
-      background: $grey-light;
-      left: 21px;
-    }
   }
 
   .dp-po-header-right {
