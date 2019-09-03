@@ -1,0 +1,12 @@
+.dp-po-time {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  justify-content: flex-end;
+
+  .dp-po-icon {
+    margin-right: 7px;
+    color: $brand-primary;
+  }
+}

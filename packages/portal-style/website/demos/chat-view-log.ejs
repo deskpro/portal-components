@@ -14,9 +14,44 @@
               <img class="dp-po-title-svg" src="/portal-components/portal-style/static/img/page-icons/chats.svg">
               <h2 class="dp-po-title-text">Your chat with Danny Hagenes</h2>
             </div>
+            <div class="row">
+              <div class="col-sm-10">
+                <%- include('_partials/_post-info.ejs'); %>
+              </div>
+              <div class="col-sm-2">
+                <%- include('_partials/_post-extra.ejs'); %>
+              </div>
+            </div>
+
+            <div class="dp-po-block">
+              <%- include('_partials/_chat-log.ejs'); %>
+            </div>
           </div>
           <div class="col-sm-3">
-
+            <div class="dp-po-kbmeta">
+              <h3 class="dp-po-kbmeta-title">Assigned agent</h3>
+              <p>
+                <div class="dp-po-avatar dp-po-avatar-round">
+                  <img src="/portal-components/portal-style/static/img/docs/avatar.png" />
+                  <span>Danny Hagenes</span>
+                </div>
+              </p>
+              <h3 class="dp-po-kbmeta-title">Also on this chat</h3>
+              <p>
+                <div class="dp-po-avatar dp-po-avatar-round">
+                  <img src="/portal-components/portal-style/static/img/docs/avatar.png" />
+                  <span>Zac Prudent</span>
+                </div>
+              </p>
+            </div>
+            <div class="dp-po-kbmeta">
+              <h3 class="dp-po-kbmeta-title">Department</h3>
+              <p>Support</p>
+              <h3 class="dp-po-kbmeta-title">Total chat time</h3>
+              <p>9 minutes</p>
+              <h3 class="dp-po-kbmeta-title">Last activity</h3>
+              <p>Tuesday, 6.17 pm</p>
+            </div>
           </div>
         </div>
       </div>
