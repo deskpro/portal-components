@@ -169,14 +169,271 @@
   <div class="dp-po">
     <main class="dp-po-main dp-po-chat-home">
       <div class="container">
+        <div class="dp-po-title">
+          <img class="dp-po-title-svg" src="/portal-components/portal-style/static/img/page-icons/chats.svg">
+          <h2 class="dp-po-title-text">My chats</h2>
+        </div>
+      </div>
+      <div class="container">
         <div class="row">
-          <div class="col-sm-9">
-            <div class="dp-po-title">
-              <img class="dp-po-title-svg" src="/portal-components/portal-style/static/img/page-icons/chats.svg">
-              <h2 class="dp-po-title-text">Chats</h2>
+          <div class="col-sm-3">
+            <div class="dp-po-ticket-sidebar">
+
+              <div class="dp-po-ticket-pages">
+                <ul class="dp-po-ticket-pages-list">
+                  <li class="dp-po-ticket-pages-item">
+                    <a href="" class="dp-po-ticket-pages-link">
+                      <i class="dp-po-icon fal fa-envelope-open-text"></i> My tickets
+                    </a>
+                  </li>
+                  <li class="dp-po-ticket-pages-item">
+                    <a href="" class="dp-po-ticket-pages-link">
+                      <i class="dp-po-icon fal fa-closed-captioning"></i> Tickets i’m CC’d on
+                    </a>
+                  </li>
+                  <li class="dp-po-ticket-pages-item">
+                    <a href="" class="dp-po-ticket-pages-link">
+                      <i class="dp-po-icon fal fa-atom-alt"></i> Techco tickets
+                    </a>
+                  </li>
+                  <li class="dp-po-ticket-pages-item active">
+                    <a href="" class="dp-po-ticket-pages-link">
+                      <i class="dp-po-icon fal fa-comments-alt"></i> My chats
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="dp-po-ticket-filter">
+                <div class="row mb-4">
+                  <div class="col-sm-6">
+                    <h4 class="dp-po-ticket-filter-title">Filter by</h4>
+                  </div>
+                  <div class="col-sm-6 text-right">
+                    <a href="" class="dp-po-ticket-filter-clearall">Clear all</a>
+                  </div>
+                </div>
+
+                <ul class="dp-po-ticket-filter-list">
+                  <li class="dp-po-ticket-filter-item">
+                    <div class="form-group dp-po-form-check">
+                      <input type="checkbox" class="form-check-input" id="userCheck">
+                      <label class="form-check-label" for="userCheck">User</label>
+                    </div>
+                    <a class="dp-po-ticket-filter-collapse" data-toggle="collapse" href="#collapseExample1"
+                      role="button" aria-expanded="false" aria-controls="collapseExample1">
+                      <i class="dp-po-icon far fa-angle-down"></i>
+                    </a>
+                    <div class="collapse show" id="collapseExample1">
+                      <ul class="dp-po-ticket-filter-list">
+                        <li class="dp-po-ticket-filter-item">
+                          <div class="form-group dp-po-form-check">
+                            <input type="checkbox" class="form-check-input" id="user1">
+                            <label class="form-check-label" for="user1"><img
+                                src="/portal-components/portal-style/static/img/docs/avatar.png"> Jonathan Jones</label>
+                          </div>
+                        </li>
+                        <li class="dp-po-ticket-filter-item">
+                          <div class="form-group dp-po-form-check">
+                            <input type="checkbox" class="form-check-input" id="user2">
+                            <label class="form-check-label" for="user2"><img
+                                src="/portal-components/portal-style/static/img/docs/avatar.png"> Wendy Pride</label>
+                          </div>
+                        </li>
+                        <li class="dp-po-ticket-filter-item">
+                          <div class="form-group dp-po-form-check">
+                            <input type="checkbox" class="form-check-input" id="user3" checked>
+                            <label class="form-check-label" for="user3"><img
+                                src="/portal-components/portal-style/static/img/docs/avatar.png"> Elaine
+                              Fredericks</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+
+              </div>
             </div>
           </div>
-          <div class="col-sm-3">
+          <div class="col-sm-9">
+            <div class="dp-po-section dp-po-block">
+              <div class="row">
+                <div class="col-sm-6">
+                  <form class="dp-po-member-search">
+                    <input type="text" name="" placeholder="Search"></input>
+                    <button type="submit"> <i class="dp-po-icon far fa-search"></i></button>
+                  </form>
+                </div>
+                <div class="col-sm-6 text-right">
+                  <div class="dp-po-columnfilter">
+                    <a href="javascript:void(0)" class="dp-po-columnfilter-link" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false"><i class="dp-po-icon far fa-ballot-check"></i></a>
+                    <div class="dropdown-menu dropdown-menu-right dp-po-columnfilter-dropdown">
+                      <ul class="dp-po-columnfilter-list">
+                        <li class="dp-po-columnfilter-item">
+                          <div class="form-group dp-po-form-check">
+                            <input type="checkbox" class="form-check-input" id="SubjectCheck">
+                            <label class="form-check-label" for="SubjectCheck">Email</label>
+                          </div>
+                        </li>
+                        <li class="dp-po-columnfilter-item">
+                          <div class="form-group dp-po-form-check">
+                            <input type="checkbox" class="form-check-input" id="DepartmentCheck" checked>
+                            <label class="form-check-label" for="DepartmentCheck">Phone Number</label>
+                          </div>
+                        </li>
+                        <li class="dp-po-columnfilter-item">
+                          <div class="form-group dp-po-form-check">
+                            <input type="checkbox" class="form-check-input" id="UserCheck">
+                            <label class="form-check-label" for="UserCheck">Job Title</label>
+                          </div>
+                        </li>
+                        <li class="dp-po-columnfilter-item">
+                          <div class="form-group dp-po-form-check">
+                            <input type="checkbox" class="form-check-input" id="agentCheck">
+                            <label class="form-check-label" for="agentCheck">Company</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dp-po-table dp-po-table-col3">
+                <div class="dp-po-table-row dp-po-table-row-head">
+                  <span class="dp-po-table-cell dp-po-table-cell-large">Date
+                    <div class="dropdown">
+                      <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <i class="dp-po-icon far fa-arrows-v"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="#">Newest first</a>
+                        <a class="dropdown-item" href="#">Oldest first</a>
+                      </div>
+                    </div>
+                  </span>
+                  <span class="dp-po-table-cell dp-po-table-cell-large">Agent
+                    <div class="dropdown">
+                      <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <i class="dp-po-icon far fa-arrows-v"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="#">First Name</a>
+                        <a class="dropdown-item" href="#">Last Name</a>
+                      </div>
+                    </div>
+                  </span>
+                  <span class="dp-po-table-cell dp-po-table-cell-large">First user reply</span>
+                </div>
+
+                <div class="dp-po-table-row">
+                  <span class="dp-po-table-cell">17 Jun, 2019</span>
+                  <span class="dp-po-table-cell dp-po-table-cell-large">
+                    <div class="dp-po-avatar dp-po-avatar-round">
+                      <img src="/portal-components/portal-style/static/img/docs/avatar.png" /> Artem Berdyshev
+                    </div>
+                  </span>
+                  <span class="dp-po-table-cell dp-po-table-cell-large">Hi, I’m really interested in your
+                    product, I’ve seeen the long messages</span>
+                </div>
+
+                <div class="dp-po-table-row">
+                  <span class="dp-po-table-cell">17 Jun, 2019</span>
+                  <span class="dp-po-table-cell dp-po-table-cell-large">
+                    <div class="dp-po-avatar dp-po-avatar-round">
+                      <img src="/portal-components/portal-style/static/img/docs/avatar.png" /> Bogdan M
+                    </div>
+                  </span>
+                  <span class="dp-po-table-cell dp-po-table-cell-large">Hi, I’m really interested in your
+                    product, I’ve seeen the long messages</span>
+                </div>
+
+                <div class="dp-po-table-row">
+                  <span class="dp-po-table-cell">17 Jun, 2019</span>
+                  <span class="dp-po-table-cell dp-po-table-cell-large">
+                    <div class="dp-po-avatar dp-po-avatar-round">
+                      <img src="/portal-components/portal-style/static/img/docs/avatar.png" /> Colin Dunn
+                    </div>
+                  </span>
+                  <span class="dp-po-table-cell dp-po-table-cell-large">Hi, I’m really interested in your
+                    product, I’ve seeen the long messages</span>
+                </div>
+
+                <div class="dp-po-table-row">
+                  <span class="dp-po-table-cell">17 Jun, 2019</span>
+                  <span class="dp-po-table-cell dp-po-table-cell-large">
+                    <div class="dp-po-avatar dp-po-avatar-round">
+                      <img src="/portal-components/portal-style/static/img/docs/avatar.png" /> Giada Bobbera
+                    </div>
+                  </span>
+                  <span class="dp-po-table-cell dp-po-table-cell-large">Hi, I’m really interested in your
+                    product, I’ve seeen the long messages</span>
+                </div>
+
+                <div class="dp-po-table-row">
+                  <span class="dp-po-table-cell">17 Jun, 2019</span>
+                  <span class="dp-po-table-cell dp-po-table-cell-large">
+                    <div class="dp-po-avatar dp-po-avatar-round">
+                      <img src="/portal-components/portal-style/static/img/docs/avatar.png" /> Grace Howlett
+                    </div>
+                  </span>
+                  <span class="dp-po-table-cell dp-po-table-cell-large">Hi, I’m really interested in your
+                    product, I’ve seeen the long messages</span>
+                </div>
+
+                <div class="dp-po-table-row">
+                  <span class="dp-po-table-cell">17 Jun, 2019</span>
+                  <span class="dp-po-table-cell dp-po-table-cell-large">
+                    <div class="dp-po-avatar dp-po-avatar-round">
+                      <img src="/portal-components/portal-style/static/img/docs/avatar.png" /> Hannah Scott
+                    </div>
+                  </span>
+                  <span class="dp-po-table-cell dp-po-table-cell-large">Hi, I’m really interested in your
+                    product, I’ve seeen the long messages</span>
+                </div>
+              </div>
+
+            </div>
+            <div class="dp-po-pagination">
+  <nav aria-label="...">
+    <ul class="pagination">
+      <li class="page-item page-item-icon disabled">
+        <a class="page-link" href="#" tabindex="-1" aria-disabled="true"><i
+            class="dp-po-icon far fa-angle-left"></i></a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item active" aria-current="page">
+        <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">4</a></li>
+      <li class="page-item"><a class="page-link" href="#">5</a></li>
+      <li class="page-item"><a class="page-link" href="#">6</a></li>
+      <li class="page-item"><a class="page-link" href="#">7</a></li>
+      <li class="page-item"><a class="page-link" href="#">8</a></li>
+      <li class="page-item"><a class="page-link" href="#">9</a></li>
+      <li class="page-item"><a class="page-link" href="#">10</a></li>
+      <li class="page-item"><a class="page-link" href="#">11</a></li>
+      <li class="page-item page-item-dots"><a class="page-link" href="javascript:void(0)">...</a></li>
+      <li class="page-item"><a class="page-link" href="#">75</a></li>
+      <li class="page-item page-item-icon">
+        <a class="page-link" href="#"><i class="dp-po-icon far fa-angle-right"></i></a>
+      </li>
+    </ul>
+  </nav>
+  <div class="dp-po-pagination-goto">
+    <form>
+      <span>Go to page</span>
+      <input type="text" class="dp-po-pagination-goto-text" />
+      <input type="submit" class="dp-po-pagination-goto-button" value="Go">
+    </form>
+  </div>
+
+</div>
 
           </div>
         </div>
