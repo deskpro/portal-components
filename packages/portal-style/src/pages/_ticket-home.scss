@@ -1,63 +1,10 @@
-.dp-po-ticket {
-  $self: '.dp-po-ticket';
+.dp-po-table-ticket {
+  $self: '.dp-po-table';
 
-  &-table {
-    margin: 20px -30px 30px;
-
-    &-danger {
-      #{$self}-cell-icon {
-        color: $danger !important;
-      }
-    }
-
-    &-success {
-      #{$self}-cell-icon {
-        color: $success !important;
-      }
-    }
-
-    &-neutral {
-      #{$self}-cell-icon {
-        color: $neutral !important;
-      }
-    }
-  }
-
-  &-row {
-    display: flex;
-    align-items: center;
-    flex-flow: row wrap;
-    padding: 0 25px 0 55px;
-    position: relative;
-
-    &-head {
-
-      font-weight: 700;
-
-      #{$self}-cell {
-        color: $grey-dark;
-      }
-
-      &:hover {
-        background: transparent !important;
-
-        #{$self}-cell {
-          color: $grey-dark !important;
-        }
-      }
-    }
-
-    &:nth-child(even) {
-      background: $grey-lightest;
-    }
+  #{$self}-row {
+    padding-left: 55px;
 
     &:hover {
-      background: $info-light;
-
-      #{$self}-cell {
-        color: $brand-primary;
-      }
-
       #{$self}-cell-rating {
         display: none;
       }
@@ -65,26 +12,11 @@
       #{$self}-cell-rating-link {
         display: inline-block;
       }
-
-      #{$self}-cell-link {
-        color: $brand-primary;
-      }
     }
   }
 
-  &-cell {
-    width: calc(100% / 6);
-    font-size: $p3-font-size;
-    padding: 20px 5px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden !important;
-
-    &-link {
-      color: $grey-darkest;
-    }
-
-    &-icon {
+  #{$self}-cell {
+    &-indicator {
       position: absolute;
       left: 25px;
       width: auto;
@@ -92,6 +24,10 @@
       .dp-po-icon {
         font-size: 12px;
       }
+    }
+
+    &-ratingwrap {
+      padding: 0;
     }
 
     &-rating {
@@ -144,9 +80,23 @@
         }
       }
     }
+  }
 
-    &-ratingwrap {
-      padding: 0;
+  &-danger {
+    #{$self}-cell-indicator {
+      color: $danger !important;
+    }
+  }
+
+  &-success {
+    #{$self}-cell-indicator {
+      color: $success !important;
+    }
+  }
+
+  &-neutral {
+    #{$self}-cell-indicator {
+      color: $neutral !important;
     }
   }
 }

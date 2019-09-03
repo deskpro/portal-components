@@ -1,0 +1,89 @@
+.dp-po-table {
+  $self: '.dp-po-table';
+  margin: 20px -30px 0;
+
+  &-row {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    padding: 0 30px;
+    position: relative;
+
+    &-head {
+      font-weight: 700;
+
+      #{$self}-cell {
+        color: $grey-dark;
+        display: flex;
+        overflow: inherit !important;
+
+        .dp-po-icon {
+          margin-left: 10px;
+        }
+      }
+
+      &:hover {
+        background: transparent !important;
+
+        #{$self}-cell {
+          color: $grey-dark !important;
+        }
+      }
+    }
+
+    &:nth-child(even) {
+      background: $grey-lightest;
+    }
+
+    &:hover {
+      background: $info-light;
+
+      #{$self}-cell-link {
+        color: $brand-primary;
+      }
+    }
+  }
+
+  &-col3 {
+    #{$self}-cell {
+      width: calc(100% / 3);
+    }
+  }
+
+  &-col4 {
+    #{$self}-cell {
+      width: calc(100% / 4);
+    }
+  }
+
+  &-col5 {
+    #{$self}-cell {
+      width: calc(100% / 5);
+    }
+  }
+
+  &-col6 {
+    #{$self}-cell {
+      width: calc(100% / 6);
+    }
+  }
+
+  &-col7 {
+    #{$self}-cell {
+      width: calc(100% / 7);
+    }
+  }
+
+  &-cell {
+    width: calc(100% / 6);
+    font-size: $p3-font-size;
+    padding: 15px 5px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden !important;
+
+    &-link {
+      color: $grey-darkest;
+    }
+  }
+}
