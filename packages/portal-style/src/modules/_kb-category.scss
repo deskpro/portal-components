@@ -1,0 +1,76 @@
+.dp-po-kb-category {
+  height: 100%;
+
+  .dp-po-category-title {
+    &-link {
+      margin: 0 0 20px;
+      height: 58px;
+    }
+  }
+
+  &-list {
+    margin: 0 0 62px;
+    padding: 0;
+  }
+
+  &-item {
+    display: block;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 15px;
+
+    &:before {
+      content: "\25A0";
+      color: $grey-light;
+      font-weight: 600;
+      display: inline-block;
+      width: 4px;
+      height: 4px;
+      position: absolute;
+      line-height: 0;
+      transform: scale(0.7);
+      top: 10px;
+      left: 0;
+    }
+  }
+
+  &-link {
+    color: $grey-darkest;
+    @include typo($s19, 400, 'head');
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      text-decoration: none;
+      color: $brand-primary;
+    }
+
+    &:not([href]) {
+      &:hover {
+        color: $grey-darkest;
+      }
+    }
+
+    .badge {
+      margin-left: 10px;
+    }
+
+    &-draft {
+      color: $grey-dark;
+    }
+  }
+
+  &-text {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .dp-po-viewall {
+    position: absolute;
+    width: calc(100% - 30px);
+    left: 15px;
+    bottom: 0;
+  }
+}

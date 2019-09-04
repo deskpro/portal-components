@@ -25,6 +25,10 @@
         margin-bottom: 20px;
       }
 
+      #{$self}-desc {
+        margin: 0 0 30px;
+      }
+
       #{$self}-avatar {
         bottom: -12px;
       }
@@ -32,7 +36,7 @@
   }
 
   &-link {
-    padding: 15px;
+    padding: 15px 15px 0;
     display: block;
     position: relative;
     color: $grey-darkest;
@@ -105,16 +109,16 @@
 
   &-desc {
     font-size: $s16;
-    margin: 0;
+    margin: 0 0 40px;
     position: relative;
     line-height: 1.5;
 
     .dp-po-icon {
       color: $brand-primary;
       font-size: 22px;
-      position: absolute;
-      right: 0;
-      bottom: -5px;
+      position: relative;
+      float: right;
+      line-height: 1.2;
     }
   }
 
