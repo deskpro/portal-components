@@ -1,0 +1,11 @@
+.dp-po-post-like {
+  position: absolute;
+  left: -40px;
+  top: 0;
+
+  .dp-po-like {
+    &-count {
+      background: $white;
+    }
+  }
+}
