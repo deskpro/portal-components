@@ -171,17 +171,19 @@
   <div class="dp-po">
     <main class="dp-po-main dp-po-knowledgebase-article">
       <div class="container">
-        <div class="row">
+
+        <div class="row align-items-end mb-4">
           <div class="col-sm-9">
 
-            <div class="dp-po-section">
-              <div class="dp-po-title">
-                <img class="dp-po-title-svg"
-                  src="/portal-components/portal-style/static/img/page-icons/knowledgebase.svg">
-                <h2 class="dp-po-title-text">Deskpro for IT teams</h2>
-              </div>
+            <div class="dp-po-title">
+              <img class="dp-po-title-svg"
+                src="/portal-components/portal-style/static/img/page-icons/knowledgebase.svg">
+              <h2 class="dp-po-title-text">Deskpro for IT teams</h2>
+            </div>
 
-              <div class="dp-po-post-avatars">
+            <div class="row align-items-end">
+              <div class="col-sm-10">
+                <div class="dp-po-post-avatars">
   <ul class="dp-po-post-avatars-list">
     <li class="dp-po-post-avatars-item">
       <a href="javascript:void(0)" class="dp-po-post-avatars-link" data-toggle="tooltip" data-placement="bottom"
@@ -217,13 +219,13 @@
   </ul>
 </div>
 
-
-              <div class="row">
-                <div class="col-sm-10">
-                  <div class="dp-po-post-info">
+                <div class="dp-po-post-info">
   <ul class="dp-po-post-info-list">
     <li class="dp-po-post-info-item">
       Last updated: <b>23 May, 2019</b> by <b>Jason Smith</b>
+    </li>
+    <li class="dp-po-post-info-item">
+      <i class="dp-po-icon far fa-calendar-alt"></i> <b>23 May, 2019</b>
     </li>
     <li class="dp-po-post-info-item">
       News type: <b>Product Release</b>
@@ -231,9 +233,9 @@
   </ul>
 </div>
 
-                </div>
-                <div class="col-sm-2">
-                  <div class="dp-po-post-extra">
+              </div>
+              <div class="col-sm-2">
+                <div class="dp-po-post-extra">
   <ul class="dp-po-post-extra-list">
     <li class="dp-po-post-extra-item">
       <a href="" class="dp-po-post-extra-link"><i class="dp-po-icon fal fa-print"></i></a>
@@ -244,9 +246,38 @@
   </ul>
 </div>
 
-                </div>
               </div>
+            </div>
 
+          </div>
+          <div class="col-sm-3">
+            <div class="dp-po-subscribe dp-po-subscribe-large">
+  <div class="dropdown">
+    <!--class : dp-po-subscribe-activebtn -->
+    <button class="dp-po-subscribe-btn" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+      aria-expanded="false" data-offset="0,10">
+      <i class="dp-po-icon fad fa-envelope"></i> Subscribe <i class="dp-po-icon far fa-check"></i>
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+      <a class="dropdown-item disabled" href="#"><i class="dp-po-icon fal fa-file-alt"></i> Article <i
+          class="dp-po-icon far fa-check"></i></a>
+      <a class="dropdown-item" href="#"><i class="dp-po-icon fal fa-file-spreadsheet"></i> Category <i
+          class="dp-po-icon far fa-check"></i></a>
+      <a class="dropdown-item" href="#"><i class="dp-po-icon fal fa-file-chart-line"></i> Knowledgebase <i
+          class="dp-po-icon far fa-check"></i></a>
+      <span class="dp-po-subscribe-divider"></span>
+      <a class="dropdown-item dp-po-subscribe-manage" href="#">All your subscriptions</a>
+    </div>
+  </div>
+</div>
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-9">
+
+            <div class="dp-po-section">
 
               <div class="alert alert-icon alert-danger" role="alert">
                 <i class="dp-po-icon fal fa-calendar-alt"></i> This article will unpublish on 1 July 2019.
@@ -257,7 +288,6 @@
               <div class="alert alert-icon alert-success" role="alert">
                 <i class="dp-po-icon fal fa-calendar-alt"></i> This article will unpublish on 1 July 2019.
               </div>
-
               <div class="dp-po-post-content dp-po-block">
 
                 <p>Many IT teams have chosen to use Deskpro to manage internal IT requests from within their company.
@@ -329,7 +359,6 @@
                 </div>
               </div>
             </div>
-
             <div class="dp-po-section db-po-post-rating">
   <a href="javascript:void(0)" class="btn btn-icon btn-outline-success"> <i class="dp-po-icon far fa-check"></i>
     Helpful </a>
@@ -810,28 +839,6 @@
 
           </div>
           <div class="col-sm-3">
-            <div class="dp-po-sidebar-spacer"></div>
-
-            <div class="dp-po-subscribe dp-po-subscribe-large">
-  <div class="dropdown">
-    <!--class : dp-po-subscribe-activebtn -->
-    <button class="dp-po-subscribe-btn" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
-      aria-expanded="false" data-offset="0,10">
-      <i class="dp-po-icon fad fa-envelope"></i> Subscribe <i class="dp-po-icon far fa-check"></i>
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-      <a class="dropdown-item disabled" href="#"><i class="dp-po-icon fal fa-file-alt"></i> Article <i
-          class="dp-po-icon far fa-check"></i></a>
-      <a class="dropdown-item" href="#"><i class="dp-po-icon fal fa-file-spreadsheet"></i> Category <i
-          class="dp-po-icon far fa-check"></i></a>
-      <a class="dropdown-item" href="#"><i class="dp-po-icon fal fa-file-chart-line"></i> Knowledgebase <i
-          class="dp-po-icon far fa-check"></i></a>
-      <span class="dp-po-subscribe-divider"></span>
-      <a class="dropdown-item dp-po-subscribe-manage" href="#">All your subscriptions</a>
-    </div>
-  </div>
-</div>
-
 
             <div class="dp-po-contents">
               <h3 class="dp-po-contents-title">Contents</h3>
@@ -963,20 +970,20 @@
 </div>
 
 
-            <div class="dp-po-kbmeta">
-              <h3 class="dp-po-kbmeta-title">Created by</h3>
+            <div class="dp-po-post-meta">
+              <h3 class="dp-po-post-meta-title">Created by</h3>
               <p>Nicholas Green</p>
-              <h3 class="dp-po-kbmeta-title">First published</h3>
+              <h3 class="dp-po-post-meta-title">First published</h3>
               <p>12 Jun 2019</p>
-              <h3 class="dp-po-kbmeta-title">Custom Field X</h3>
+              <h3 class="dp-po-post-meta-title">Custom Field X</h3>
               <p>Value Y</p>
               <table class="table table-borderless">
                 <tr>
                   <th>
-                    <h3 class="dp-po-kbmeta-title">Translations</h3>
+                    <h3 class="dp-po-post-meta-title">Translations</h3>
                   </th>
                   <th class="text-right">
-                    <h3 class="dp-po-kbmeta-title">Updated</h3>
+                    <h3 class="dp-po-post-meta-title">Updated</h3>
                   </th>
                 </tr>
                 <tr>
@@ -990,7 +997,7 @@
                   <td class="text-right">2 weeks</td>
                 </tr>
               </table>
-              <h3 class="dp-po-kbmeta-title">Unpublished date <i class="dp-po-icon fal fa-info-circle text-primary"
+              <h3 class="dp-po-post-meta-title">Unpublished date <i class="dp-po-icon fal fa-info-circle text-primary"
                   data-toggle="tooltip" title="Viewed by agents only" data-placement="right"></i></h3>
               <p>26 June 2020</p>
             </div>
