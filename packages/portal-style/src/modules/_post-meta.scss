@@ -1,0 +1,33 @@
+.dp-po-post-meta {
+  $self: '.dp-po-post-meta';
+  background: $white;
+  border: 1px solid $grey-light;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 20px;
+  margin: 0 0 20px;
+
+  &-title {
+    font-size: $p2-font-size;
+    color: $grey-dark;
+    font-family: $font-family-sans-serif;
+  }
+
+  th {
+    padding: 0;
+
+    #{$self}-title {
+      margin: 0;
+    }
+  }
+
+  td {
+    padding: 10px 0 0;
+    color: $grey-darkest;
+    @include typo($s16, 400, 'body');
+
+    img {
+      margin-right: 5px;
+    }
+  }
+}

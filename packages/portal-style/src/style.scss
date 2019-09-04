@@ -59,6 +59,7 @@
   @import "modules/post-info";
   @import "modules/post-extra";
   @import "modules/post-day";
+  @import "modules/post-meta";
   @import "modules/navigation-block";
   @import "modules/kb-featured";
   @import "modules/kb-category-title";
@@ -85,6 +86,8 @@
   @import "pages/downloads-home";
   @import "pages/account-register";
   @import "pages/member-directory";
+  @import "pages/chat-home";
+  @import "pages/chat-view-log";
 }
 
 @import "components/global";

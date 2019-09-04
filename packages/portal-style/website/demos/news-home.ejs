@@ -14,11 +14,19 @@
               <img class="dp-po-title-svg" src="/portal-components/portal-style/static/img/page-icons/news.svg">
               <h2 class="dp-po-title-text">News</h2>
             </div>
+          </div>
+          <div class="col-sm-3">
+            <%- include('_partials/_subscribe.ejs'); %>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-9">
+
             <%- include('_partials/_news-listing.ejs'); %>
             <%- include('_partials/_pagination.ejs'); %>
           </div>
           <div class="col-sm-3">
-            <%- include('_partials/_subscribe.ejs'); %>
             <div class="dp-po-sidebar dp-po-news-filter dp-po-news-filter-type">
               <h3 class="dp-po-news-filter-title">Select type</h3>
               <a class="dp-po-news-filter-collapse" data-toggle="collapse" href="#collapseExample" role="button"

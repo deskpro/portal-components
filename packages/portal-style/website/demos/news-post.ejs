@@ -8,27 +8,31 @@
   <div class="dp-po">
     <main class="dp-po-main dp-po-news-post">
       <div class="container">
+        <div class="row align-items-end mb-4">
+          <div class="col-sm-9">
+            <%- include('_partials/_post-day.ejs'); %>
+            <div class="dp-po-title">
+              <img class="dp-po-title-svg" src="/portal-components/portal-style/static/img/page-icons/news.svg">
+              <h2 class="dp-po-title-text">Deskpro 5.14.0, 5.14.1, 5.14.2, Released</h2>
+            </div>
+            <div class="row align-items-end">
+              <div class="col-sm-10">
+                <%- include('_partials/_post-avatars.ejs'); %>
+                <%- include('_partials/_post-info.ejs'); %>
+              </div>
+              <div class="col-sm-2">
+                <%- include('_partials/_post-extra.ejs'); %>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <%- include('_partials/_subscribe.ejs'); %>
+          </div>
+        </div>
         <div class="row">
           <div class="col-sm-9">
 
             <div class="dp-po-section">
-              <%- include('_partials/_post-day.ejs'); %>
-
-              <div class="dp-po-title">
-                <img class="dp-po-title-svg" src="/portal-components/portal-style/static/img/page-icons/news.svg">
-                <h2 class="dp-po-title-text">Deskpro 5.14.0, 5.14.1, 5.14.2, Released</h2>
-              </div>
-
-              <%- include('_partials/_post-avatars.ejs'); %>
-
-              <div class="row">
-                <div class="col-sm-10">
-                  <%- include('_partials/_post-info.ejs'); %>
-                </div>
-                <div class="col-sm-2">
-                  <%- include('_partials/_post-extra.ejs'); %>
-                </div>
-              </div>
 
               <div class="dp-po-post-content dp-po-block">
                 <%- include('_partials/_post-content.ejs'); %>
@@ -43,9 +47,6 @@
 
           </div>
           <div class="col-sm-3">
-            <div class="dp-po-sidebar-spacer"></div>
-            <%- include('_partials/_subscribe.ejs'); %>
-
             <%- include('_partials/_related-content.ejs'); %>
 
             <%- include('_partials/_post-share.ejs'); %>

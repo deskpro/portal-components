@@ -8,27 +8,36 @@
   <div class="dp-po">
     <main class="dp-po-main dp-po-knowledgebase-article">
       <div class="container">
+
+        <div class="row align-items-end mb-4">
+          <div class="col-sm-9">
+
+            <div class="dp-po-title">
+              <img class="dp-po-title-svg"
+                src="/portal-components/portal-style/static/img/page-icons/knowledgebase.svg">
+              <h2 class="dp-po-title-text">Deskpro for IT teams</h2>
+            </div>
+
+            <div class="row align-items-end">
+              <div class="col-sm-10">
+                <%- include('_partials/_post-avatars.ejs'); %>
+                <%- include('_partials/_post-info.ejs'); %>
+              </div>
+              <div class="col-sm-2">
+                <%- include('_partials/_post-extra.ejs'); %>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-sm-3">
+            <%- include('_partials/_subscribe.ejs'); %>
+          </div>
+        </div>
+
         <div class="row">
           <div class="col-sm-9">
 
             <div class="dp-po-section">
-              <div class="dp-po-title">
-                <img class="dp-po-title-svg"
-                  src="/portal-components/portal-style/static/img/page-icons/knowledgebase.svg">
-                <h2 class="dp-po-title-text">Deskpro for IT teams</h2>
-              </div>
-
-              <%- include('_partials/_post-avatars.ejs'); %>
-
-              <div class="row">
-                <div class="col-sm-10">
-                  <%- include('_partials/_post-info.ejs'); %>
-                </div>
-                <div class="col-sm-2">
-                  <%- include('_partials/_post-extra.ejs'); %>
-                </div>
-              </div>
-
 
               <div class="alert alert-icon alert-danger" role="alert">
                 <i class="dp-po-icon fal fa-calendar-alt"></i> This article will unpublish on 1 July 2019.
@@ -39,7 +48,6 @@
               <div class="alert alert-icon alert-success" role="alert">
                 <i class="dp-po-icon fal fa-calendar-alt"></i> This article will unpublish on 1 July 2019.
               </div>
-
               <div class="dp-po-post-content dp-po-block">
 
                 <%- include('_partials/_post-content.ejs'); %>
@@ -66,7 +74,6 @@
                 </div>
               </div>
             </div>
-
             <%- include('_partials/_post-rating.ejs'); %>
 
             <%- include('_partials/_comments-thread.ejs'); %>
@@ -75,9 +82,6 @@
 
           </div>
           <div class="col-sm-3">
-            <div class="dp-po-sidebar-spacer"></div>
-
-            <%- include('_partials/_subscribe.ejs'); %>
 
             <div class="dp-po-contents">
               <h3 class="dp-po-contents-title">Contents</h3>
@@ -106,20 +110,20 @@
 
             <%- include('_partials/_post-share.ejs'); %>
 
-            <div class="dp-po-kbmeta">
-              <h3 class="dp-po-kbmeta-title">Created by</h3>
+            <div class="dp-po-post-meta">
+              <h3 class="dp-po-post-meta-title">Created by</h3>
               <p>Nicholas Green</p>
-              <h3 class="dp-po-kbmeta-title">First published</h3>
+              <h3 class="dp-po-post-meta-title">First published</h3>
               <p>12 Jun 2019</p>
-              <h3 class="dp-po-kbmeta-title">Custom Field X</h3>
+              <h3 class="dp-po-post-meta-title">Custom Field X</h3>
               <p>Value Y</p>
               <table class="table table-borderless">
                 <tr>
                   <th>
-                    <h3 class="dp-po-kbmeta-title">Translations</h3>
+                    <h3 class="dp-po-post-meta-title">Translations</h3>
                   </th>
                   <th class="text-right">
-                    <h3 class="dp-po-kbmeta-title">Updated</h3>
+                    <h3 class="dp-po-post-meta-title">Updated</h3>
                   </th>
                 </tr>
                 <tr>
@@ -133,7 +137,7 @@
                   <td class="text-right">2 weeks</td>
                 </tr>
               </table>
-              <h3 class="dp-po-kbmeta-title">Unpublished date <i class="dp-po-icon fal fa-info-circle text-primary"
+              <h3 class="dp-po-post-meta-title">Unpublished date <i class="dp-po-icon fal fa-info-circle text-primary"
                   data-toggle="tooltip" title="Viewed by agents only" data-placement="right"></i></h3>
               <p>26 June 2020</p>
             </div>
