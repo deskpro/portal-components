@@ -1,0 +1,55 @@
+.dp-po-post-user {
+  $self: '.dp-po-post-user';
+
+  &-list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &-item {
+    display: inline-block;
+    vertical-align: middle;
+    list-style: none;
+    position: relative;
+    margin: 0 30px 0 0;
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: -15px;
+      top: 0;
+      width: 1px;
+      height: 100%;
+      background: $grey;
+    }
+
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  &-link {
+    color: $grey-darkest;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .dropdown {
+    &.show {
+      .dp-po-avatar {
+        img {
+          border: 1px solid $brand-primary;
+        }
+      }
+
+      #{$self}-link {
+        color: $brand-primary;
+      }
+    }
+  }
+
+}
