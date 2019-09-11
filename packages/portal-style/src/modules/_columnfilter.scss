@@ -1,0 +1,44 @@
+.dp-po-columnfilter {
+  $self: '.dp-po-columnfilter';
+
+  &-link {
+    font-size: 30px;
+    display: inline-block;
+    text-align: center;
+    color: $grey-light;
+
+    &:hover {
+      text-decoration: none;
+      color: $brand-primary;
+    }
+  }
+
+  &.show {
+    #{$self}-link {
+      color: $brand-primary;
+    }
+  }
+
+  &-dropdown {}
+
+  &-list {
+    margin: 0;
+    padding: 10px 20px;
+  }
+
+  &-item {
+    display: block;
+    white-space: nowrap;
+
+    .form-group {
+      margin-bottom: 5px;
+    }
+
+    &:last-child {
+      .form-group {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+}
