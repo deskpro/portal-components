@@ -1,0 +1,135 @@
+.dp-po-messages {
+  $self: '.dp-po-messages';
+
+  &-figure {
+    margin: 0 20px 0 0;
+  }
+
+  &-list {
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid $grey-light;
+  }
+
+  &-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid $grey-light;
+
+    &-new {
+      #{$self}-name {
+        font-weight: 500;
+      }
+
+      #{$self}-msg {
+        color: $grey-darkest;
+      }
+
+      #{$self}-status {
+        display: block;
+      }
+
+      .dp-po-time {
+        color: $brand-primary !important;
+      }
+    }
+
+    &-blocked {
+      #{$self}-link {
+        color: $grey;
+      }
+
+      #{$self}-msg {
+        color: $grey !important;
+      }
+
+      #{$self}-avatar {
+        opacity: 0.5;
+      }
+
+      #{$self}-block {
+        &-btn {
+          color: $grey-darkest;
+        }
+
+        .dp-po-icon {
+          color: $danger;
+        }
+      }
+    }
+  }
+
+  &-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  &-link {
+    color: $grey-darkest;
+
+    &:hover {
+      text-decoration: none;
+
+      #{$self}-msg {
+        color: $brand-primary;
+      }
+    }
+  }
+
+  &-name {
+    @include typo($s17, 400, 'head');
+  }
+
+  &-msg {
+    margin: 0;
+    font-size: $s15;
+    color: $grey-dark;
+  }
+
+  &-block {
+    position: absolute;
+    right: 100px;
+    top: 15px;
+
+    &-btn {
+      border-radius: 4px;
+      border: 2px solid $grey-light;
+      @include typo($s14, 600, 'body');
+      display: inline-flex;
+      color: $grey-light;
+      padding: 3px 8px;
+      align-items: center;
+
+      .dp-po-icon {
+        margin-right: 10px;
+        font-size: 20px;
+      }
+
+      &:hover {
+        text-decoration: none;
+        color: $danger;
+        border-color: $danger;
+      }
+    }
+  }
+
+  .dp-po-time {
+    position: absolute;
+    right: 0;
+    top: 15px;
+    color: $grey-dark;
+    font-size: $s12;
+  }
+
+  &-status {
+    color: $brand-primary;
+    position: absolute;
+    right: 0;
+    top: 34px;
+    font-size: 12px;
+    display: none;
+  }
+}
