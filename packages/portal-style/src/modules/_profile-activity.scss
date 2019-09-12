@@ -1,0 +1,66 @@
+.dp-po-profile-activity {
+  $self: '.dp-po-profile-activity';
+
+  &-title {
+    @include typo($s23, 400, 'head');
+    margin: 0 0 30px;
+  }
+
+  &-list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &-item {
+    list-style: none;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid $grey-light;
+    padding: 20px 0;
+    flex-wrap: wrap;
+    line-height: 1.5;
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  &-icon {
+    color: $brand-primary;
+    font-size: 24px;
+    flex: 0 0 24px;
+    margin-right: 10px;
+  }
+
+  &-image {
+    max-height: 30px;
+    max-width: 25px;
+    filter: grayscale(100%);
+  }
+
+  &-link {
+    color: $grey-darkest;
+
+    span {
+      @include typo($s19, 500, 'head');
+    }
+
+    &:hover {
+      #{$self}-image {
+        filter: none;
+      }
+    }
+  }
+
+  &-desc {
+    flex: 0 0 calc(100% - 34px);
+    padding: 0 130px 0 0;
+  }
+
+  .dp-po-time {
+    position: absolute;
+    right: 0;
+    top: 23px;
+  }
+}

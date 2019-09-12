@@ -1,0 +1,70 @@
+.dp-po-profile {
+  &-figure {
+    margin: 0 0 20px;
+    text-align: center;
+  }
+
+  &-image {
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+  }
+
+  &-name {
+    @include typo($s23, 400, 'head');
+    text-align: center;
+  }
+
+  &-title {
+    @include typo($s18, 400, 'body');
+    color: $grey-dark;
+    text-align: center;
+  }
+
+  &-stats {
+    margin: 0 0 30px;
+    padding: 30px 0;
+    display: flex;
+    border-bottom: 1px solid $grey-light;
+    justify-content: space-between;
+
+    &-item {
+      list-style: none;
+      text-align: center;
+      font-size: $s15;
+    }
+
+    &-icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: $info-light;
+      color: $brand-primary;
+      @include typo($s17, 500, 'head');
+      text-align: center;
+      margin: 0 auto 10px;
+      padding: 10px 0px;
+    }
+
+    .dp-po-icon {
+      display: block;
+      text-align: center;
+      font-size: 20px;
+      margin: 0 0 3px;
+    }
+  }
+
+  &-extras {
+    margin: 0 0 30px;
+    padding: 0 0 20px;
+    border-bottom: 1px solid $grey-light;
+
+    &-title {
+      @include typo($s15, 700, 'body');
+      color: $grey-dark;
+    }
+
+    &-desc {}
+  }
+
+}

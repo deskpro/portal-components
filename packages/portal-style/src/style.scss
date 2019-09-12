@@ -38,6 +38,7 @@
   @import "components/modal";
   @import "components/table";
   @import "components/time";
+  @import "components/timeline";
 
   /**************************
   ******* MODULES ********
@@ -78,6 +79,8 @@
   @import "modules/downloads-listing";
   @import "modules/chat-log";
   @import "modules/columnfilter";
+  @import "modules/profile";
+  @import "modules/profile-activity";
 
   /**************************
   ******** PAGES *********
