@@ -14,7 +14,6 @@
   &-item {
     position: relative;
     display: flex;
-    align-items: center;
     padding: 15px 0;
     border-bottom: 1px solid $grey-light;
 
@@ -57,6 +56,15 @@
         .dp-po-icon {
           color: $danger;
         }
+      }
+    }
+
+    &-compose {
+      border: none;
+
+      #{$self}-wrap {
+        display: block;
+        width: 100%;
       }
     }
   }
@@ -131,5 +139,44 @@
     top: 34px;
     font-size: 12px;
     display: none;
+  }
+
+  &-back {
+    display: flex;
+    align-items: center;
+    font-size: $s15;
+    color: $grey-darkest;
+    margin: 0 0 15px;
+
+    .dp-po-icon {
+      margin-right: 10px;
+      color: $brand-primary;
+      font-size: 25px;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: $brand-primary;
+    }
+  }
+
+  &-thread {
+    #{$self}-name {
+      font-weight: 500;
+    }
+
+    #{$self}-item {
+      &-mine {
+        #{$self}-name {
+          color: $grey;
+        }
+      }
+
+      &-their {
+        #{$self}-msg {
+          color: $grey-darkest;
+        }
+      }
+    }
   }
 }

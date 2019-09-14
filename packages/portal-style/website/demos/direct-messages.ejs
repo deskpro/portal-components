@@ -16,6 +16,23 @@
         <div class="dp-po-block">
           <%- include('_partials/_messages.ejs'); %>
         </div>
+        <br />
+        <div class="dp-po-block">
+          <%- include('_partials/_messages-thread.ejs'); %>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col-sm-7 col-centered">
+            <div class="dp-po-title">
+              <img class="dp-po-title-svg"
+                src="/portal-components/portal-style/static/img/page-icons/direct-message.svg">
+              <h2 class="dp-po-title-text">New Message</h2>
+            </div>
+            <div class="dp-po-block">
+              <%- include('_partials/_messages-new.ejs'); %>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   </div>
