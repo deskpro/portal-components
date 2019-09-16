@@ -63,6 +63,8 @@
   @import "modules/post-meta";
   @import "modules/post-like";
   @import "modules/post-user";
+  @import "modules/post-attachments";
+  @import "modules/post-links";
   @import "modules/navigation-block";
   @import "modules/kb-featured";
   @import "modules/kb-category";
@@ -92,6 +94,7 @@
   @import "pages/news-home";
   @import "pages/news-post";
   @import "pages/ticket-home";
+  @import "pages/ticket-view";
   @import "pages/downloads-eula";
   @import "pages/downloads-file";
   @import "pages/downloads-home";

@@ -1,0 +1,35 @@
+.dp-po-post-links {
+  &-list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &-item {
+    margin: 0 0 10px;
+    list-style: none;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &-link {
+    display: block;
+    align-items: center;
+    position: relative;
+    padding: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
+    .dp-po-icon {
+      margin-right: 10px;
+      color: $grey-dark;
+      font-size: 20px;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

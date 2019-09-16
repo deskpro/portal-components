@@ -1,0 +1,49 @@
+.dp-po-post-attachments {
+  &-list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &-item {
+    margin: 0 0 10px;
+    list-style: none;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &-link {
+    display: block;
+    align-items: center;
+    position: relative;
+    padding: 0 80px 0 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
+    .dp-po-icon {
+      margin-right: 10px;
+      color: $grey-dark;
+      font-size: 20px;
+    }
+
+    span {
+      position: absolute;
+      right: 25px;
+      top: 4px;
+      font-size: 14px;
+    }
+
+    .fa-arrow-to-bottom {
+      color: $brand-primary;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

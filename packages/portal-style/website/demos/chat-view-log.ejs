@@ -56,36 +56,9 @@
               <p>Tuesday, 6.17 pm</p>
             </div>
 
-            <div class="dp-po-sidebar dp-po-chat-attachments">
-              <h3 class="dp-po-sidebar-title">Attachments</h3>
-              <ul class="dp-po-chat-attachments-list">
-                <li class="dp-po-chat-attachments-item">
-                  <a href="" class="dp-po-chat-attachments-link">
-                    <i class="dp-po-icon fal fa-file-pdf"></i>
-                    basedn-testing-article.pdf <span>(112 kB)</span>
-                    <i class="dp-po-icon fal fa-arrow-to-bottom"></i>
-                  </a>
-                </li>
-                <li class="dp-po-chat-attachments-item">
-                  <a href="" class="dp-po-chat-attachments-link">
-                    <i class="dp-po-icon fal fa-file-image"></i>
-                    photo-123123-321.pdf <span>(20 kB)</span>
-                    <i class="dp-po-icon fal fa-arrow-to-bottom"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="dp-po-sidebar dp-po-chat-links">
-              <h3 class="dp-po-sidebar-title">Links</h3>
-              <ul class="dp-po-chat-links-list">
-                <li class="dp-po-chat-links-item">
-                  <a href="" class="dp-po-chat-links-link">
-                    <i class="dp-po-icon fal fa-link"></i>
-                    http://localhost:3000/portal-components/portal-style/demos/knowledgebase-article.html
-                  </a>
-                </li>
-              </ul>
-            </div>
+            <%- include('_partials/_post-attachments.ejs'); %>
+
+            <%- include('_partials/_post-links.ejs'); %>
           </div>
         </div>
       </div>

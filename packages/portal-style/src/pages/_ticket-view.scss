@@ -1,0 +1,240 @@
+.dp-po-ticket-block {
+  $self: '.dp-po-ticket-block';
+  background: $white;
+  border: 1px solid $grey-light;
+  border-radius: 4px;
+  padding: 30px;
+  position: relative;
+  margin-bottom: 20px;
+
+  &-cc {
+    margin-top: 15px;
+
+    &-list {
+      margin: 0;
+      padding: 0;
+    }
+
+    &-item {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: $s15;
+      color: $grey-dark;
+      line-height: 1;
+      margin-right: 20px;
+      position: relative;
+
+      &:first-child {
+        border-radius: 2px;
+        border: 1px solid $grey-light;
+        background: $grey-lightest;
+        color: $grey-darkest;
+        padding: 2px 5px;
+        font-size: 10px;
+        font-weight: 600;
+        margin-right: 10px;
+
+        &:after {
+          display: none;
+        }
+      }
+
+      &:after {
+        content: '';
+        width: 1px;
+        height: 100%;
+        position: absolute;
+        right: -9px;
+        top: 0;
+        background: $grey-dark;
+      }
+
+      &:last-child {
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &-content,
+  &-like,
+  &-cc,
+  &-feedback {
+    margin-left: 40px;
+  }
+
+  &-msg {
+    margin: 15px 0 0;
+    line-height: 1.5;
+  }
+
+  &-showmore {
+    color: $grey;
+    font-size: 14px;
+
+    .dp-po-icon {
+      color: $brand-primary;
+      margin-left: 5px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: $brand-primary;
+    }
+  }
+
+  &-likebtn {
+    color: $grey;
+    font-size: $s15;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    margin: 15px 0 0;
+
+    .dp-po-icon {
+      margin-right: 10px;
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 24px;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: $success;
+    }
+
+    &.active {
+      color: $success;
+    }
+  }
+
+  .badge-purple {
+    position: absolute;
+    top: -13px;
+    left: 30px;
+    background: $purple;
+    color: $white;
+  }
+
+  .dp-po-time {
+    position: absolute;
+    top: 37px;
+    right: 30px;
+  }
+
+  &-their {
+    border-color: $purple;
+  }
+
+  &-mine {
+    border-left: 4px solid $brand-primary;
+
+    .badge {
+      display: none;
+    }
+
+    .dp-po-avatar {
+      color: $grey-dark;
+    }
+  }
+
+  &-timeline {
+    display: flex;
+    align-items: center;
+  }
+
+  &-status {
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 20px;
+    color: $grey-dark;
+
+    .badge {
+      margin: 0 0 0 10px;
+      background: $success;
+      color: $white;
+
+      .dp-po-icon {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  &-rate {
+    .dp-po-time {
+      top: 100px;
+    }
+  }
+
+  &-header {
+    background: $grey-lightest;
+    margin: -30px -30px 20px;
+    padding: 20px 30px;
+    @include typo($s19, 400, 'head');
+    display: flex;
+    align-items: center;
+
+    .dp-po-icon {
+      margin-right: 10px;
+      font-size: 28px;
+    }
+  }
+
+  &-feedback {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    color: $grey-dark;
+
+    .dp-po-avatar {
+      margin: 0 10px;
+      color: $grey-darkest;
+    }
+  }
+
+  &-rating {
+    margin-left: 10px;
+  }
+}
+
+
+.dp-po-ticket-attachments {
+  background: $grey-lighter;
+  border-radius: 4px;
+  padding: 20px 30px 20px 70px;
+  margin: 20px -30px -30px;
+
+  &-title {
+    color: $grey-dark;
+    @include typo($s15);
+    margin: 0 0 15px;
+  }
+
+  &-list {
+    margin: 0 !important;
+    padding: 0;
+  }
+
+  &-item {
+    list-style: none;
+    margin-top: 12px;
+  }
+
+  &-link {
+    display: inline-flex;
+    align-items: center;
+    color: $brand-primary;
+
+    &:hover {
+      color: $brand-primary;
+    }
+
+    .dp-po-icon {
+      margin: 0 0 0 10px;
+      font-size: 22px;
+    }
+  }
+}
