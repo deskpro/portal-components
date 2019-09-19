@@ -1,7 +1,9 @@
 // From node_modules
 @import "bootstrap/scss/functions";
+@import "override_functions";
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/mixins";
+@import "override_mixins";
 @import "bootstrap/scss/root";
 @import "bootstrap/scss/reboot";
 @import "bootstrap/scss/type";

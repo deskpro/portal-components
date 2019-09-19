@@ -1,0 +1,24 @@
+@function theme-color-level($color-name: "primary", $level: 0) {
+  $color-base: if($level > 0, 'b', 'w');
+  $level: abs($level);
+
+  @return var(--tcl-#{$color-name}-#{$color-base}-#{$level});
+}
+
+@function color-yiq($color, $dark: $yiq-text-dark, $light: $yiq-text-light) {
+  @if type_of($color) == string {
+    $color: str-replace($color, 'var(');
+    $color: str-replace($color, ')');
+    @return var(#{$color + '-yiq'});
+  }
+  @return $color;
+}
+
+@function rbg-color($color) {
+  @if type_of($color) == string {
+    $color: str-replace($color, 'var(');
+    $color: str-replace($color, ')');
+    @return var(#{$color + '-rgb'});
+  }
+  @return $color;
+}
