@@ -16,7 +16,7 @@
       #{$self}-link {
         border-top-color: $brand-primary;
         border-bottom-color: $white;
-        color: $grey-darkest;
+        color: $text-color;
 
         .dp-po-icon {
           background: $info-light;
@@ -53,7 +53,7 @@
 
     &:hover {
       text-decoration: none;
-      color: $grey-darkest;
+      color: $text-color;
 
       .dp-po-icon {
         background: $info-light;

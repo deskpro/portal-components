@@ -23,14 +23,14 @@
 
   &-link {
     display: flex;
-    color: $grey-darkest;
+    color: $text-color;
     position: relative;
     border-bottom: 1px solid $grey-light;
     padding: 20px 0;
 
     &:hover {
       text-decoration: none;
-      color: $grey-darkest;
+      color: $text-color;
 
       #{$self}-title {
         color: $brand-primary;

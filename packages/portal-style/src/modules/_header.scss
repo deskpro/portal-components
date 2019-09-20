@@ -29,7 +29,7 @@
 
   .dp-po-brand-name {
     @extend .h3;
-    color: $grey-darkest;
+    color: $text-color;
     position: relative;
     padding: 10px 0;
     margin: 0;
@@ -57,7 +57,7 @@
 
     &-login {
       font-weight: 700;
-      color: $grey-darkest;
+      color: $text-color;
       font-size: $p2-font-size;
       padding: 10px 30px;
       display: inline-block;
@@ -117,7 +117,7 @@
       align-items: center;
       width: 120px;
       justify-content: space-between;
-      color: $grey-darkest;
+      color: $text-color;
       font-size: $p2-font-size;
 
       &:hover {

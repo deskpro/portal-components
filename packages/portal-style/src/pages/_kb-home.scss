@@ -21,7 +21,7 @@
 
   &-linktitle {
     @include typo($s19, 400, 'head');
-    color: $grey-darkest;
+    color: $text-color;
     display: flex;
     align-items: center;
 
@@ -42,7 +42,7 @@
   }
 
   &-linkauthor {
-    color: $grey-darkest;
+    color: $text-color;
 
     strong {
       font-weight: 400;
@@ -62,7 +62,7 @@
       color: $grey;
 
       span {
-        color: $grey-darkest;
+        color: $text-color;
       }
     }
 

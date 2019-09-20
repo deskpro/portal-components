@@ -1,6 +1,7 @@
 /**************************
 ******* VARIABLES ********
 **************************/
+@import "variables/css_variables";
 @import "variables/colors";
 @import "variables/vars";
 
@@ -118,5 +119,5 @@ body {
   margin: 0;
   padding: 0;
   font-size: $font-size-base;
-  color: $grey-darkest;
+  color: $text-color;
 }

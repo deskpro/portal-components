@@ -3,87 +3,19 @@ $white: #fff;
 
 @import "bootstrap/scss/functions";
 
-$danger: #E84954;
-$warning: #EC6C4E;
-$neutral: #F8AF3C;
-$success: #54B162;
-$info: #4B93CF;
-
-:root {
-  --brand-primary: #3A8DDE;
-  --brand-primary-d-75: #237acf;
-  --brand-primary-d-100: #2173c4;
-  --brand-primary-d-125: #1f6db9;
-  --brand-primary-d-150: #1d67ae;
-  --brand-primary-l-250: #a7ccf0;
-  --brand-primary-l-350: #d3e5f8;
-  --brand-primary-yiq: #fff;
-  --brand-primary-rgb: 58, 141, 222;
-  --brand-secondary: #a9b0b0;
-  --brand-secondary-d-75: #959e9e;
-  --brand-secondary-d-100: #8e9898;
-  --brand-secondary-d-125: #889191;
-  --brand-secondary-d-150: #818b8b;
-  --brand-secondary-l-250: #ebeded;
-  --brand-secondary-l-350: #fff;
-  --brand-secondary-yiq: #212529;
-  --brand-secondary-rgb: 169, 176, 176;
-  --danger: #E84954;
-  --danger-d-75: #e42734;
-  --danger-d-100: #e21c2a;
-  --danger-d-125: #d61b28;
-  --danger-d-150: #cb1a26;
-  --danger-l-100: #ee767f;
-  --danger-yiq: #fff;
-  --warning: #EC6C4E;
-  --warning-d-75: #e84f2b;
-  --warning-d-100: #e74620;
-  --warning-d-125: #e23f18;
-  --warning-d-150: #d63b17;
-  --warning-l-100: #f1927c;
-  --warning-yiq: #212529;
-  --neutral: #F8AF3C;
-  --neutral-d-75: #f7a017;
-  --neutral-d-100: #f69b0b;
-  --neutral-d-125: #ec9408;
-  --neutral-d-150: #df8c08;
-  --neutral-l-100: #fac36d;
-  --success: #54B162;
-  --success-d-75: #469952;
-  --success-d-100: #42904e;
-  --success-d-125: #3e8749;
-  --success-d-150: #3a7f44;
-  --success-l-100: #77c182;
-  --success-yiq: #fff;
-  --info: #4B93CF;
-  --info-d-75: #3380c0;
-  --info-d-100: #317ab6;
-  --info-d-125: #2e73ac;
-  --info-d-150: #2b6ca2;
-  --info-l-100: #73abda;
-  --info-yiq: #fff;
-  --tcl-danger-b-6: #79262c;
-  --tcl-danger-w-10: #fadbdd;
-  --tcl-danger-w-9: #f9cccf;
-  --tcl-info-b-6: #274c6c;
-  --tcl-info-w-10: #dbe9f5;
-  --tcl-info-w-9: #cde1f2;
-  --tcl-success-b-6: #2c5c33;
-  --tcl-success-w-10: #ddefe0;
-  --tcl-success-w-9: #cfe9d3;
-}
 
 /**************************
 **** Primary colours ****
 **************************/
 
 $brand-primary: var(--brand-primary);
-$grey-darkest: #4C4F50;
+$text-color: var(--text-color);
 
 /**************************
 **** Secondary colours ****
 **************************/
 
+$grey-darkest: #4C4F50;
 $grey-dark: #8B9293;
 $grey: #A9B0B0;
 $grey-light: #D3D6D7;
@@ -96,6 +28,8 @@ $warning: var(--warning);
 $neutral: var(--neutral);
 $success: var(--success);
 $info: var(--info);
+$light: var(--light);
+$dark: var(--dark);
 
 /**************************
 **** Tertiary colours ****

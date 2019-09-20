@@ -39,12 +39,12 @@
     padding: 15px 15px 0;
     display: block;
     position: relative;
-    color: $grey-darkest;
+    color: $text-color;
     height: 100%;
 
     &:hover {
       text-decoration: none;
-      color: $grey-darkest;
+      color: $text-color;
 
       #{$self}-title {
         color: $brand-primary;

@@ -28,7 +28,7 @@
         border-radius: 2px;
         border: 1px solid $grey-light;
         background: $grey-lightest;
-        color: $grey-darkest;
+        color: $text-color;
         padding: 2px 5px;
         font-size: 10px;
         font-weight: 600;
@@ -191,7 +191,7 @@
 
     .dp-po-avatar {
       margin: 0 10px;
-      color: $grey-darkest;
+      color: $text-color;
     }
   }
 

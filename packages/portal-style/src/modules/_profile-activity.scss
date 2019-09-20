@@ -40,7 +40,7 @@
   }
 
   &-link {
-    color: $grey-darkest;
+    color: $text-color;
 
     span {
       @include typo($s19, 500, 'head');

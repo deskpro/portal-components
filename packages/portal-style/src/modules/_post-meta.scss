@@ -23,7 +23,7 @@
 
   td {
     padding: 10px 0 0;
-    color: $grey-darkest;
+    color: $text-color;
     @include typo($s16, 400, 'body');
 
     img {

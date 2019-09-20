@@ -23,7 +23,7 @@
     display: block;
     overflow: hidden;
     text-overflow: ellipsis;
-    color: $grey-darkest;
+    color: $text-color;
     margin-top: 30px;
     @include typo($s19, 400, 'head');
     white-space: nowrap;

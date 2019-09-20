@@ -31,7 +31,7 @@
   }
 
   &-link {
-    color: $grey-darkest;
+    color: $text-color;
     @include typo($s23, 400, 'head');
     padding-right: 105px;
     display: block;
@@ -63,7 +63,7 @@
 
   &-author {
     margin-right: 20px;
-    color: $grey-darkest;
+    color: $text-color;
   }
 
   &-tags {

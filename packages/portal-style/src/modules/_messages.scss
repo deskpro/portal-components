@@ -23,7 +23,7 @@
       }
 
       #{$self}-msg {
-        color: $grey-darkest;
+        color: $text-color;
       }
 
       #{$self}-status {
@@ -50,7 +50,7 @@
 
       #{$self}-block {
         &-btn {
-          color: $grey-darkest;
+          color: $text-color;
         }
 
         .dp-po-icon {
@@ -76,7 +76,7 @@
   }
 
   &-link {
-    color: $grey-darkest;
+    color: $text-color;
 
     &:hover {
       text-decoration: none;
@@ -145,7 +145,7 @@
     display: flex;
     align-items: center;
     font-size: $s15;
-    color: $grey-darkest;
+    color: $text-color;
     margin: 0 0 15px;
 
     .dp-po-icon {
@@ -174,7 +174,7 @@
 
       &-their {
         #{$self}-msg {
-          color: $grey-darkest;
+          color: $text-color;
         }
       }
     }

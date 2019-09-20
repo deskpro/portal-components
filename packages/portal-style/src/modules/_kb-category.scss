@@ -36,7 +36,7 @@
   }
 
   &-link {
-    color: $grey-darkest;
+    color: $text-color;
     @include typo($s19, 400, 'head');
     display: flex;
     align-items: center;
@@ -48,7 +48,7 @@
 
     &:not([href]) {
       &:hover {
-        color: $grey-darkest;
+        color: $text-color;
       }
     }
 
