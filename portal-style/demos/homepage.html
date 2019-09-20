@@ -189,7 +189,7 @@
       <li class="dp-po-navigation-block-item">
         <a href="" class="dp-po-navigation-block-link">
           <figure class="dp-po-navigation-block-figure">
-            <img class="dp-po-navigation-block-svg"
+            <img class="dp-po-navigation-block-svg svg"
               src="/portal-components/portal-style/static/img/page-icons/community.svg">
           </figure>
           <div class="dp-po-navigation-block-right">
@@ -279,7 +279,7 @@
             <div class="col-sm-6">
               <div class="dp-po-title">
                 <a href="" class="dp-po-title-link">
-                  <img class="dp-po-title-svg" src="/portal-components/portal-style/static/img/page-icons/news.svg">
+                  <img class="dp-po-title-svg svg" src="/portal-components/portal-style/static/img/page-icons/news.svg">
                   <h2 class="dp-po-title-text">News</h2>
                 </a>
               </div>
@@ -1164,8 +1164,7 @@
     </div>
   </footer>
 </div>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
   integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
@@ -1178,6 +1177,41 @@
     $('[data-toggle="tooltip"]').tooltip(toolOptions);
     $('[data-toggle="popover"]').popover();
     $('.dropdown-toggle').dropdown();
+  });
+
+  jQuery('img[class$=svg]').each(function(){
+    var $img = jQuery(this);
+    console.log($img);
+    var imgID = $img.attr('id');
+    var imgClass = $img.attr('class');
+    var imgURL = $img.attr('src');
+
+    jQuery.get(imgURL, function(data) {
+      // Get the SVG tag, ignore the rest
+      var $svg = jQuery(data).find('svg');
+
+      // Add replaced image's ID to the new SVG
+      if(typeof imgID !== 'undefined') {
+        $svg = $svg.attr('id', imgID);
+      }
+      // Add replaced image's classes to the new SVG
+      if(typeof imgClass !== 'undefined') {
+        $svg = $svg.attr('class', imgClass+' replaced-svg');
+      }
+
+      // Remove any invalid XML tags as per http://validator.w3.org
+      $svg = $svg.removeAttr('xmlns:a');
+
+      // Check if the viewport is set, if the viewport is not set the SVG wont't scale.
+      if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+        $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
+      }
+
+      // Replace image with new SVG
+      $img.replaceWith($svg);
+
+    }, 'xml');
+
   });
 
 </script>
