@@ -30,11 +30,11 @@
 
     &.active {
       #{$self}-link {
-        color: $grey-darkest;
+        color: $text-color;
 
         &-date {
           background: $white;
-          color: $grey-darkest;
+          color: $text-color;
         }
       }
     }

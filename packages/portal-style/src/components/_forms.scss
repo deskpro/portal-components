@@ -19,7 +19,7 @@
   label {
     font-size: $s15;
     font-weight: 700;
-    color: $grey-darkest;
+    color: $text-color;
     margin: 0 0 10px;
     display: block;
   }
@@ -157,7 +157,7 @@
 }
 
 .dp-po-form-btntext {
-  color: $grey-darkest;
+  color: $text-color;
   font-size: $p4-font-size;
   display: table;
   margin-top: 10px;

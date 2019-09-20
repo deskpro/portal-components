@@ -11,7 +11,7 @@
       .page-link {
         border-radius: 2px;
         border: 1px solid $grey-light;
-        color: $grey-darkest;
+        color: $text-color;
         font-size: $p4-font-size;
         font-weight: 600;
         padding: 4px 8px;
@@ -19,7 +19,7 @@
 
       &.active {
         border-radius: 2px;
-        color: $grey-darkest;
+        color: $text-color;
         font-size: $p4-font-size;
         font-weight: 600;
         padding: 4px 8px;
@@ -37,7 +37,7 @@
         &.page-item-dots {
           .page-link {
             background: none;
-            color: $grey-darkest;
+            color: $text-color;
           }
         }
       }

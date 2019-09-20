@@ -7,13 +7,13 @@
 
   &-link {
     display: flex;
-    color: $grey-darkest;
+    color: $text-color;
 
     &:hover {
       text-decoration: none;
 
       #{$self}-content {
-        color: $grey-darkest;
+        color: $text-color;
       }
 
       #{$self}-title {
