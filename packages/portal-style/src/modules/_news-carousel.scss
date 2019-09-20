@@ -155,6 +155,9 @@
       border-radius: 4px;
       padding: 40px;
       display: inline-block;
+      svg {
+        fill: var(--brand-primary);
+      }
     }
 
     #{$self}-allink {
