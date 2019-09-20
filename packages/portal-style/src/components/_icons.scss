@@ -10,6 +10,16 @@
     }
   }
 
+  &#{$self}-white {
+    svg {
+
+      .fa-secondary,
+      .fa-primary {
+        fill: $white;
+      }
+    }
+  }
+
   &#{$self}-danger {
     svg {
 

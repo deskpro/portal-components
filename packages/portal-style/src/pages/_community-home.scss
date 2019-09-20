@@ -1,0 +1,200 @@
+.dp-po-community-row {
+  $self: '.dp-po-community-row';
+
+  &-list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &-item {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    background: $white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+    margin-top: 50px;
+
+    &-nocover {
+      border: 2px solid transparent;
+
+      #{$self}-left {
+        &:after {
+          display: none;
+        }
+      }
+
+      #{$self}-title,
+      #{$self}-description {
+        color: $grey-darkest;
+      }
+
+      #{$self}-btn {
+        color: $brand-primary;
+        border-color: $brand-primary;
+      }
+
+      &:hover {
+        border-color: $brand-primary;
+      }
+    }
+  }
+
+  &-left {
+    flex: 0 0 60%;
+    position: relative;
+    padding: 30px;
+    border-right: 1px solid $grey-light;
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(50% 114.51% at 50% 0%, #FFFFFF 0%, rgba(0, 0, 0, 0.99) 100%);
+      mix-blend-mode: multiply;
+      opacity: 0.4;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+  }
+
+  &-right {
+    flex: 0 0 40%;
+    padding: 30px;
+  }
+
+  &-icon {
+    position: absolute;
+    left: 20px;
+    top: -40px;
+    background: $purple-light;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+
+    .dp-po-icon {
+      font-size: 40px;
+    }
+
+    &-purple {
+      background: $purple;
+    }
+
+    &-neutral {
+      background: $neutral;
+    }
+
+    &-warning {
+      background: $warning;
+    }
+
+    &-success {
+      background: $success;
+    }
+
+    &-pink {
+      background: $pink;
+    }
+
+    &-danger {
+      background: $danger;
+    }
+  }
+
+  &-title {
+    font-size: $s36;
+    position: relative;
+    color: $white;
+    z-index: 1;
+    padding-top: 70px;
+    margin: 0 0 20px;
+  }
+
+  &-description {
+    position: relative;
+    color: $white;
+    z-index: 1;
+    margin: 0;
+    width: 70%;
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: bottom;
+  }
+
+  &-btn {
+    position: relative;
+    color: $white;
+    z-index: 1;
+    font-size: $s14;
+    font-weight: 600;
+    border: 1.5px solid $white;
+    border-radius: 2px;
+    padding: 10px 20px;
+    display: inline-block;
+    vertical-align: bottom;
+  }
+
+  &-activity {
+    &-heading {
+      font-size: $s19;
+      margin: 0 0 15px;
+    }
+
+    &-list {
+      margin: 0;
+      padding: 0;
+    }
+
+    &-item {
+      list-style: none;
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      color: $grey-darkest;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    &-title {
+      font-size: $s17;
+      margin: 0;
+      width: 320px;
+      display: block;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    &-img {
+      width: 30px;
+      margin-right: 10px;
+    }
+
+    &-time {
+      color: $grey-dark;
+      @include typo($s17, 400, 'head');
+      width: 50px;
+      margin-left: 10px;
+    }
+  }
+}
