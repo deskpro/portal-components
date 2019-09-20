@@ -197,7 +197,40 @@
             </div>
           </div>
           <div class="col-sm-3">
-
+            <div class="dp-po-ticket-close">
+              <a href="javascript:void(0)" class="dp-po-ticket-close-btn" data-toggle="modal"
+                data-target="#messageMember"> <i class="dp-po-icon fad fa-envelope-open-text"></i> Close ticket</a>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="messageMember" tabindex="-1" role="dialog" aria-labelledby="messageMember"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="messageMember">Send a new message</h5>
+                  </div>
+                  <div class="modal-body">
+                    <form class="dp-po-form">
+                      <div class="form-group">
+                        <div class="dp-po-avatar dp-po-avatar-round">
+                          To: &nbsp; <img src="/portal-components/portal-style/static/img/docs/avatar.png" /> Artem
+                          Berdyshev
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Message *</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1"
+                          placeholder="Your Message"></textarea>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Send Message</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="row">
