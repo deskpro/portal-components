@@ -1,0 +1,101 @@
+.dp-po-ticket-meta {
+  $self: '.dp-po-ticket-meta';
+  background: $white;
+  border: 1px solid $grey-light;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 20px;
+  margin: 0 0 20px;
+
+  &-title {
+    font-size: $p2-font-size;
+    color: $grey-dark;
+    font-family: $font-family-sans-serif;
+  }
+
+  .dp-po-avatar {
+    margin-bottom: 1em;
+  }
+
+  &-cc {
+    position: relative;
+
+    &-list {
+      margin: 0 0 15px;
+      padding: 0 0 15px;
+      border-bottom: 1px solid $grey-light;
+    }
+
+    &-item {
+      list-style: none;
+      display: flex;
+      margin: 0 0 10px;
+      position: relative;
+
+      &:hover {
+        #{$self}-cc-name {
+          color: $grey;
+        }
+
+        #{$self}-cc-remove {
+          display: block;
+        }
+      }
+
+      img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+    }
+
+    &-name {
+      font-size: $s16;
+    }
+
+    &-email {
+      font-size: $s14;
+      color: $grey-dark;
+    }
+
+    &-link {
+      color: $grey;
+      font-weight: 600;
+      font-size: 10px;
+      background: $grey-lightest;
+      border: 1px solid $grey-light;
+      display: inline-block;
+      padding: 2px 7px;
+      border-radius: 2px;
+      position: absolute;
+      top: 2px;
+      right: 0;
+
+      &:hover {
+        text-decoration: none;
+        border-color: $brand-primary;
+        background: $info-light;
+        color: $brand-primary;
+      }
+    }
+
+    &-form {
+      background: $white;
+      border-radius: 4px;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+      border: 1px solid $grey-light;
+      padding: 15px;
+      position: absolute;
+      top: 30px;
+      right: 0;
+    }
+
+    &-remove {
+      position: absolute;
+      right: 0px;
+      top: 10px;
+      display: none;
+    }
+  }
+}
