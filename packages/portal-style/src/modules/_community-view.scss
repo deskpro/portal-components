@@ -1,8 +1,6 @@
 .dp-po-community-view {
   $self: '.dp-po-community-view';
 
-  &-list {}
-
   &-item {
     display: flex;
     border-top: 1px solid $grey-light;
@@ -18,6 +16,10 @@
       #{$self}-activity {
         text-align: center;
       }
+    }
+
+    &:last-child {
+      padding-bottom: 0;
     }
   }
 
@@ -83,6 +85,7 @@
       color: $grey-dark;
       text-align: center;
       margin-right: 10px;
+      flex: 0 0 30px;
 
       &:last-child {
         margin: 0;
@@ -142,6 +145,75 @@
       line-height: 1.5;
       margin: 10px 0 0;
 
+    }
+  }
+
+  &-compact {
+    #{$self}-item {
+      align-items: center;
+    }
+
+    #{$self}-votes {
+      flex: 0 0 80px;
+    }
+
+    #{$self}-title {
+      flex: 0 0 calc(100% - 620px);
+    }
+
+    #{$self}-office {
+      flex: 0 0 50px;
+      text-align: center;
+
+      img {
+        max-width: 25px;
+      }
+    }
+
+    #{$self}-link {
+      margin: 0;
+    }
+
+    #{$self}-status {}
+
+    #{$self}-comments {}
+
+    #{$self}-author {
+      flex: 0 0 50px;
+      text-align: center;
+
+      .dp-po-avatar {
+        justify-content: center;
+      }
+
+      img {
+        margin: 0;
+      }
+    }
+
+    #{$self}-activity {
+      flex: 0 0 170px;
+
+      &-list {
+        justify-content: center;
+      }
+
+      &-item {
+        flex: inherit;
+
+        &:first-child {
+          #{$self}-activity-image {
+            margin-left: 0;
+          }
+        }
+      }
+
+      &-image {
+        margin: -4px 0 0 -18px;
+        border: 3px solid $white;
+        width: 36px;
+        height: 36px;
+      }
     }
   }
 

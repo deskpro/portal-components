@@ -1,0 +1,50 @@
+<%- include('_partials/_head.ejs'); %>
+
+<body>
+  <%- include('_partials/_header.ejs'); %>
+  <%- include('_partials/_search.ejs'); %>
+  <%- include('_partials/_breadcrumbs.ejs'); %>
+
+  <div class="dp-po">
+    <main class="dp-po-main dp-po-community-home">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-9">
+            <div class="dp-po-title">
+              <img class="dp-po-title-svg" src="/portal-components/portal-style/static/img/page-icons/community.svg">
+              <h2 class="dp-po-title-text">Community</h2>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <%- include('_partials/_subscribe.ejs'); %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="dp-po-community-tabs">
+              <ul class="dp-po-community-tabs-list">
+                <li class="dp-po-community-tabs-item active">
+                  <a href="" class="dp-po-community-tabs-link">
+                    <i class="dp-po-icon far fa-list-ul"></i> Topics list
+                  </a>
+                </li>
+                <li class="dp-po-community-tabs-item">
+                  <a href="" class="dp-po-community-tabs-link">
+                    <i class="dp-po-icon far fa-exchange"></i> Status Change
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="dp-po-section dp-po-block">
+              <%- include('_partials/_community-topics-list-compact.ejs'); %>
+            </div>
+            <%- include('_partials/_pagination.ejs'); %>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <%- include('_partials/_footer.ejs'); %>
+</body>
+
+</html>
