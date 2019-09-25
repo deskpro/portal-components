@@ -23,7 +23,8 @@ const files = {
   scssPath: 'src/**/*.scss',
   srcAssetsPath: 'src/assets/**/*',
   websitePath: 'website/**/*.ejs',
-  websiteStaticPath: 'website/static/**/*'
+  websiteStaticPath: 'website/static/**/*',
+  websiteStaticImgPath: 'website/static/img/**/*'
 };
 
 // Sass task: compiles the style.scss file into style.css
@@ -36,6 +37,7 @@ function scssTask() {
     .pipe(postcss([autoprefixer(), cssnano()])) // PostCSS plugins
     .pipe(sourcemaps.write('.')) // write sourcemaps file in current directory
     .pipe(dest('.build/portal-components/portal-style/dist')) // put final CSS in dist folder
+    .pipe(dest('dist')) // put final CSS in dist folder
     .pipe(connect.reload());
 }
 
@@ -64,6 +66,13 @@ function websiteStaticTask() {
     .pipe(connect.reload());
 }
 
+// website static assets
+function websiteStaticImgTask() {
+  return src(files.websiteStaticImgPath)
+    .pipe(dest('dist/img'))
+    .pipe(connect.reload());
+}
+
 // Watch task: watch SCSS and JS files for changes
 // If any change, run scss and js tasks simultaneously
 function watchTask() {
@@ -89,5 +98,5 @@ exports.dev = series(
 );
 
 exports.default = series(
-  parallel(scssTask, ejsTask, websiteStaticTask, styleAssetsTask)
+  parallel(scssTask, ejsTask, websiteStaticTask, styleAssetsTask, websiteStaticImgTask)
 );
