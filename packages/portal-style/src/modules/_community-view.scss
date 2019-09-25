@@ -61,7 +61,7 @@
 
   &-status {
     flex: 0 0 120px;
-    text-align: center;
+    padding-left: 20px;
   }
 
   &-comments {
@@ -174,7 +174,7 @@
       margin: 0;
     }
 
-    #{$self}-status {}
+
 
     #{$self}-comments {}
 
@@ -214,6 +214,21 @@
         width: 36px;
         height: 36px;
       }
+    }
+  }
+
+  &-statuschange {
+    #{$self}-title {
+      flex: 0 0 calc(100% - 620px);
+    }
+
+    #{$self}-status {
+      flex: 0 0 300px;
+    }
+
+    #{$self}-official {
+      margin-left: 0;
+      flex: 0 0 100%;
     }
   }
 

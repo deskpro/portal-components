@@ -7,7 +7,7 @@
   text-transform: uppercase;
 
   &-from {
-    background: #C4C4C4;
+    background: $grey-light;
     border-top-left-radius: 2px;
     border-bottom-left-radius: 2px;
     padding: 4px 9px;
@@ -20,10 +20,48 @@
       height: 0;
       border-top: 11px solid transparent;
       border-bottom: 12px solid transparent;
-      border-left: 11px solid #C4C4C4;
+      border-left: 11px solid $grey-light;
       position: absolute;
       right: -11px;
       top: 0;
+    }
+  }
+
+  &-time {
+    background: $grey;
+    padding: 4px 9px;
+    position: relative;
+    margin-right: 20px;
+
+    &-arrow {
+      width: 0;
+      height: 0;
+      border-top: 11px solid transparent;
+      border-bottom: 12px solid transparent;
+      border-left: 11px solid $grey;
+      position: absolute;
+      right: -11px;
+      top: 0;
+    }
+
+    &:after,
+    &:before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-top: 0px solid transparent;
+      border-bottom: 12px solid transparent;
+      border-left: 12px solid $grey;
+      position: absolute;
+      left: -12px;
+      top: 0;
+      transform: rotate(90deg);
+    }
+
+    &:before {
+      top: auto;
+      bottom: 0;
+      transform: rotate(180deg);
     }
   }
 
