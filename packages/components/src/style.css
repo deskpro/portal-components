@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+
 :root {
   --primary-color: #3d88f3;
   --error-color: #f16c7c;
@@ -15,7 +17,6 @@
   --textarea-background: #f8fafc;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Rubik');
 
 .dp-pc_form {
   box-sizing: border-box;

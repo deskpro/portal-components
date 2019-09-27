@@ -1,5 +1,5 @@
 const path = require('path');
-const pkg = require('../package.json');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 // const nodeExternals = require('webpack-node-externals');
 
 const mapToFolder = (dependencies, folder) =>
@@ -42,7 +42,24 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use:  ['style-loader', 'css-loader']
+        use:  ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use:      [
+            {
+              loader:  'css-loader',
+              options: { sourceMap: true }
+            },
+            {
+              loader:  'postcss-loader',
+              options: {
+                sourceMap: true,
+                config:    {
+                  path: './config/'
+                }
+              }
+            }
+          ]
+        })
       },
       {
         loader:  require.resolve('file-loader'),
@@ -52,5 +69,8 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new ExtractTextPlugin('style.css'),
+  ]
 };
