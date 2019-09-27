@@ -203,32 +203,172 @@
         </div>
         <div class="row">
           <div class="col-sm-12">
-            <div class="dp-po-community-tabs">
-              <ul class="dp-po-community-tabs-list">
-                <li class="dp-po-community-tabs-item active">
-                  <a href="" class="dp-po-community-tabs-link">
-                    <i class="dp-po-icon far fa-list-ul"></i> Topics list
-                  </a>
+            <div class="dp-po-community-header">
+  <div class="dp-po-community-tabs">
+    <ul class="dp-po-community-tabs-list">
+      <li class="dp-po-community-tabs-item active">
+        <a href="" class="dp-po-community-tabs-link">
+          <i class="dp-po-icon far fa-list-ul"></i> List view
+        </a>
+      </li>
+      <li class="dp-po-community-tabs-item">
+        <a href="" class="dp-po-community-tabs-link">
+          <i class="dp-po-icon far fa-exchange"></i> Status Change
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <form class="dp-po-community-header-search">
+    <input type="text" name="" placeholder="Search suggestions"></input>
+    <button type="submit"> <i class="dp-po-icon far fa-search"></i></button>
+  </form>
+
+  <div class="dp-po-community-header-right">
+    <div class="dp-po-community-header-filter">
+      <a class="dp-po-community-header-filter-link" href="" data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="false">
+        <i class="dp-po-icon fad fa-align-center"></i> Filters (11) <i class="dp-po-icon far fa-angle-down"></i>
+      </a>
+      <div class="dropdown-menu dropdown-menu-left">
+        <div class="dp-po-community-header-filter-dropdown">
+
+          <h4 class="dp-po-community-header-filter-dropdown-title">My Activity:</h4>
+          <div class="form-group dp-po-form-check">
+            <input type="checkbox" class="form-check-input" id="voted">
+            <label class="form-check-label" for="voted">I voted</label>
+            <i class="dp-po-icon fad fa-thumbs-up"></i>
+          </div>
+          <div class="form-group dp-po-form-check">
+            <input type="checkbox" class="form-check-input" id="created">
+            <label class="form-check-label" for="created">I created</label>
+            <i class="dp-po-icon fad fa-comment-alt-edit"></i>
+          </div>
+          <div class="form-group dp-po-form-check">
+            <input type="checkbox" class="form-check-input" id="commented">
+            <label class="form-check-label" for="commented">I commented</label>
+            <i class="dp-po-icon fad fa-comment-alt-lines"></i>
+          </div>
+          <hr />
+          <h4 class="dp-po-community-header-filter-dropdown-title">Status:</h4>
+          <ul class="dp-po-community-header-filter-dropdown-list">
+            <li class="dp-po-community-header-filter-dropdown-item">
+              <div class="form-group dp-po-form-check">
+                <input type="checkbox" class="form-check-input" id="open">
+                <label class="form-check-label" for="open">Open</label>
+              </div>
+              <ul class="dp-po-community-header-filter-dropdown-sublist">
+                <li class="dp-po-community-header-filter-dropdown-item">
+                  <div class="form-group dp-po-form-check">
+                    <input type="checkbox" class="form-check-input" id="started">
+                    <label class="form-check-label" for="started"><span
+                        class="badge badge-success">Started</span></label>
+                  </div>
                 </li>
-                <li class="dp-po-community-tabs-item">
-                  <a href="" class="dp-po-community-tabs-link">
-                    <i class="dp-po-icon far fa-exchange"></i> Status Change
-                  </a>
+                <li class="dp-po-community-header-filter-dropdown-item">
+                  <div class="form-group dp-po-form-check">
+                    <input type="checkbox" class="form-check-input" id="development">
+                    <label class="form-check-label" for="development"><span
+                        class="badge badge-danger">Development</span></label>
+                  </div>
+                </li>
+                <li class="dp-po-community-header-filter-dropdown-item">
+                  <div class="form-group dp-po-form-check">
+                    <input type="checkbox" class="form-check-input" id="review">
+                    <label class="form-check-label" for="review"><span class="badge badge-warning">Review</span></label>
+                  </div>
+                </li>
+                <li class="dp-po-community-header-filter-dropdown-item">
+                  <div class="form-group dp-po-form-check">
+                    <input type="checkbox" class="form-check-input" id="deferred">
+                    <label class="form-check-label" for="deferred"><span
+                        class="badge badge-info">Deferred</span></label>
+                  </div>
                 </li>
               </ul>
-            </div>
+            </li>
+            <li class="dp-po-community-header-filter-dropdown-item">
+              <div class="form-group dp-po-form-check">
+                <input type="checkbox" class="form-check-input" id="open">
+                <label class="form-check-label" for="open">Closed</label>
+              </div>
+              <ul class="dp-po-community-header-filter-dropdown-sublist">
+                <li class="dp-po-community-header-filter-dropdown-item">
+                  <div class="form-group dp-po-form-check">
+                    <input type="checkbox" class="form-check-input" id="started">
+                    <label class="form-check-label" for="started"><span
+                        class="badge badge-success">Finished</span></label>
+                  </div>
+                </li>
+                <li class="dp-po-community-header-filter-dropdown-item">
+                  <div class="form-group dp-po-form-check">
+                    <input type="checkbox" class="form-check-input" id="development">
+                    <label class="form-check-label" for="development"><span
+                        class="badge badge-danger">Declined</span></label>
+                  </div>
+                </li>
+                <li class="dp-po-community-header-filter-dropdown-item">
+                  <div class="form-group dp-po-form-check">
+                    <input type="checkbox" class="form-check-input" id="review">
+                    <label class="form-check-label" for="review"><span
+                        class="badge badge-warning">Duplicate</span></label>
+                  </div>
+                </li>
+                <li class="dp-po-community-header-filter-dropdown-item">
+                  <div class="form-group dp-po-form-check">
+                    <input type="checkbox" class="form-check-input" id="deferred">
+                    <label class="form-check-label" for="deferred"><span
+                        class="badge badge-info">Archived</span></label>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <hr />
+          <a href="" class="dp-po-community-header-filter-dropdown-clear">
+            <i class="dp-po-icon fal fa-times"></i> Clear all filters
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="dp-po-community-header-view">
+      <a href="javascript:void(0)"
+        class="dp-po-community-header-view-link dp-po-community-header-view-compact active"><i
+          class="dp-po-icon far fa-minus"></i></a>
+      <a href="javascript:void(0)" class="dp-po-community-header-view-link dp-po-community-header-view-expanded"><i
+          class="dp-po-icon far fa-equals"></i></a>
+    </div>
+
+    <div class="dp-po-community-header-sort">
+      <a class="dp-po-community-header-sort-link" href="javascript:void(0)" data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="false"><i class="dp-po-icon fad fa-sort-alt"></i></a>
+      <div class="dropdown-menu dropdown-menu-right">
+        <a class="dropdown-item" href="#">Most popular first <i class="dp-po-icon far fa-check"></i></a>
+        <a class="dropdown-item" href="#">Least popular first <i class="dp-po-icon far fa-check"></i></a>
+        <a class="dropdown-item" href="#">Highest rated first <i class="dp-po-icon far fa-check"></i></a>
+        <a class="dropdown-item" href="#">Lowest rated first <i class="dp-po-icon far fa-check"></i></a>
+        <a class="dropdown-item" href="#">Newest <i class="dp-po-icon far fa-check"></i></a>
+        <a class="dropdown-item active" href="#">Oldest <i class="dp-po-icon far fa-check"></i></a>
+        <a class="dropdown-item" href="#">Most comments first <i class="dp-po-icon far fa-check"></i></a>
+        <a class="dropdown-item" href="#">Least comments first <i class="dp-po-icon far fa-check"></i></a>
+        <a class="dropdown-item" href="#">Most views first <i class="dp-po-icon far fa-check"></i></a>
+        <a class="dropdown-item" href="#">Least views first <i class="dp-po-icon far fa-check"></i></a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
             <div class="dp-po-section dp-po-block">
-              <div class="dp-po-community-view">
+              <div class="dp-po-community-view dp-po-community-view-statuschange">
   <div class="dp-po-community-view-list">
     <div class="dp-po-community-view-item dp-po-community-view-item-head">
-      <div class="dp-po-community-view-votes">
-        Votes
-      </div>
       <div class="dp-po-community-view-title">
         Title / Author
       </div>
       <div class="dp-po-community-view-status">
-        Status
+        Status change
       </div>
       <div class="dp-po-community-view-comments">
         Comments
@@ -238,12 +378,6 @@
       </div>
     </div>
     <div class="dp-po-community-view-item">
-      <div class="dp-po-community-view-votes">
-        <a href="" class="dp-po-like" data-toggle="modal" data-target="#messageMember">
-          <span class="dp-po-like-count">99</span>
-          <span class="dp-po-like-icon"><i class="dp-po-icon far fa-thumbs-up"></i></span>
-        </a>
-      </div>
       <div class="dp-po-community-view-title">
         <a href="" class="dp-po-community-view-link"> Allow the ability for admins to restrict date/time custom and this
           might be the long title</a>
@@ -254,7 +388,11 @@
         <span class="dp-po-community-view-time">15 Aug 2019</span>
       </div>
       <div class="dp-po-community-view-status">
-        <span class="badge badge-success">Started</span>
+        <div class="dp-po-status-ribbon">
+          <span class="dp-po-status-ribbon-from">Deferred</span>
+          <span class="dp-po-status-ribbon-time">59m <span class="dp-po-status-ribbon-time-arrow"></span></span>
+          <span class="dp-po-status-ribbon-to dp-po-status-ribbon-to-success">Started</span>
+        </div>
       </div>
       <div class="dp-po-community-view-comments">
         28
@@ -306,12 +444,6 @@
       </div>
     </div>
     <div class="dp-po-community-view-item">
-      <div class="dp-po-community-view-votes">
-        <a href="" class="dp-po-like" data-toggle="modal" data-target="#messageMember">
-          <span class="dp-po-like-count">99</span>
-          <span class="dp-po-like-icon"><i class="dp-po-icon far fa-thumbs-up"></i></span>
-        </a>
-      </div>
       <div class="dp-po-community-view-title">
         <a href="" class="dp-po-community-view-link"> Allow the ability for admins to restrict date/time custom and this
           might be the long title</a>
@@ -322,7 +454,11 @@
         <span class="dp-po-community-view-time">15 Aug 2019</span>
       </div>
       <div class="dp-po-community-view-status">
-        <span class="badge badge-danger">Started</span>
+        <div class="dp-po-status-ribbon">
+          <span class="dp-po-status-ribbon-from">Deferred</span>
+          <span class="dp-po-status-ribbon-time">59m <span class="dp-po-status-ribbon-time-arrow"></span></span>
+          <span class="dp-po-status-ribbon-to dp-po-status-ribbon-to-purple">Development</span>
+        </div>
       </div>
       <div class="dp-po-community-view-comments">
         28
@@ -338,12 +474,6 @@
       </div>
     </div>
     <div class="dp-po-community-view-item">
-      <div class="dp-po-community-view-votes">
-        <a href="" class="dp-po-like" data-toggle="modal" data-target="#messageMember">
-          <span class="dp-po-like-count">99</span>
-          <span class="dp-po-like-icon"><i class="dp-po-icon far fa-thumbs-up"></i></span>
-        </a>
-      </div>
       <div class="dp-po-community-view-title">
         <a href="" class="dp-po-community-view-link"> Allow the ability for admins answer.</a>
         <div class="dp-po-avatar dp-po-avatar-round">
@@ -353,7 +483,11 @@
         <span class="dp-po-community-view-time">15 Aug 2019</span>
       </div>
       <div class="dp-po-community-view-status">
-        <span class="badge badge-info">Started</span>
+        <div class="dp-po-status-ribbon">
+          <span class="dp-po-status-ribbon-from">Deferred</span>
+          <span class="dp-po-status-ribbon-time">59m <span class="dp-po-status-ribbon-time-arrow"></span></span>
+          <span class="dp-po-status-ribbon-to dp-po-status-ribbon-to-neutral">Review</span>
+        </div>
       </div>
       <div class="dp-po-community-view-comments">
         28
