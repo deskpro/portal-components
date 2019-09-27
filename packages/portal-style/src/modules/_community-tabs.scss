@@ -10,40 +10,59 @@
     display: inline-block;
     vertical-align: middle;
     list-style: none;
-    margin-right: 10px;
+    margin-left: -4px;
+    position: relative;
 
     &.active {
       #{$self}-link {
         border-top-color: $brand-primary;
-        border-bottom-color: $white;
         color: $text-color;
+        background: $white;
 
         .dp-po-icon {
-          background: $info-light;
           color: $brand-primary;
         }
       }
+
+      &:after {
+        content: '';
+        width: calc(100% - 2px);
+        height: 2px;
+        background: $white;
+        position: absolute;
+        bottom: -1px;
+        left: 1px;
+      }
+
+      &:before {
+        content: '';
+        width: 100%;
+        height: 2px;
+        background: $brand-primary;
+        position: absolute;
+        top: -1px;
+        left: 0;
+        z-index: 1;
+      }
+    }
+
+    &:first-child {
+      margin-left: 0;
     }
   }
 
   &-link {
-    background: $white;
-    border-radius: 4px 4px 0px 0px;
-    border-top: 4px solid $grey-light;
-    border-bottom: 2px solid $grey-light;
-    padding: 10px 20px;
-    color: $grey;
+    background: $grey-lighter;
+    border-left: 1px solid $grey-light;
+    border-right: 1px solid $grey-light;
+    padding: 13px 20px;
+    color: $grey-dark;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
-    @include typo($s23, 400, 'head');
+    @include typo($s19, 400, 'head');
 
     .dp-po-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: $grey-lightest;
       margin-right: 10px;
       display: flex;
       align-items: center;
@@ -56,7 +75,6 @@
       color: $text-color;
 
       .dp-po-icon {
-        background: $info-light;
         color: $brand-primary;
       }
     }

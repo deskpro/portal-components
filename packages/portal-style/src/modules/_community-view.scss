@@ -60,7 +60,7 @@
   }
 
   &-status {
-    flex: 0 0 120px;
+    flex: 0 0 150px;
     padding-left: 20px;
   }
 
@@ -70,7 +70,8 @@
   }
 
   &-activity {
-    flex: 0 0 200px;
+    flex: 0 0 180px;
+    padding: 0 10px;
 
     &-list {
       display: flex;
@@ -82,14 +83,9 @@
       display: block;
       list-style: none;
       font-size: $s12;
-      color: $grey-dark;
-      text-align: center;
-      margin-right: 10px;
-      flex: 0 0 30px;
 
-      &:last-child {
-        margin: 0;
-      }
+      text-align: center;
+      flex: 0 0 34px;
     }
 
     &-image {
@@ -97,6 +93,22 @@
       width: 30px;
       height: 30px;
       margin-bottom: 8px;
+      border: 2px solid $white;
+    }
+
+    &-link {
+      color: $grey-dark;
+      display: block;
+
+      &:hover {
+        text-decoration: none;
+
+        #{$self}-activity-image {
+          border-color: $brand-primary;
+          position: relative;
+          z-index: 10;
+        }
+      }
     }
 
   }
@@ -158,23 +170,77 @@
     }
 
     #{$self}-title {
-      flex: 0 0 calc(100% - 620px);
+      flex: 0 0 calc(100% - 640px);
     }
 
     #{$self}-office {
       flex: 0 0 50px;
       text-align: center;
+      position: relative;
 
       img {
         max-width: 25px;
+      }
+
+      &-reply {
+        position: absolute;
+        background: $white;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+        border-radius: 2px;
+        border: 1px solid $grey-lighter;
+        width: 500px;
+        z-index: 1;
+        text-align: left;
+        padding: 15px;
+
+        &-title {
+          @include typo($s15, 500, 'head');
+        }
+
+        &-desc {
+          font-size: $s16;
+          line-height: 1.5;
+          margin: 0 0 10px;
+        }
+
+        &-list {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+        }
+
+        &-item {
+          list-style: none;
+          position: relative;
+          font-size: $s16;
+          margin: 0 0 0 20px;
+
+          &:after {
+            content: '';
+            width: 1px;
+            height: 100%;
+            position: absolute;
+            background: $grey-light;
+            right: -10px;
+            top: 0;
+          }
+
+          &:last-child {
+            color: $grey;
+
+            &:after {
+              display: none;
+            }
+          }
+        }
       }
     }
 
     #{$self}-link {
       margin: 0;
     }
-
-
 
     #{$self}-comments {}
 
@@ -188,6 +254,17 @@
 
       img {
         margin: 0;
+        border: 2px solid $white;
+      }
+
+      &-link {
+        display: inline-block;
+
+        &:hover {
+          img {
+            border-color: $brand-primary !important;
+          }
+        }
       }
     }
 
@@ -209,10 +286,7 @@
       }
 
       &-image {
-        margin: -4px 0 0 -18px;
-        border: 3px solid $white;
-        width: 36px;
-        height: 36px;
+        margin: 0 0 0 -5px;
       }
     }
   }
