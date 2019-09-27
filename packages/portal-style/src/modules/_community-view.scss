@@ -176,17 +176,71 @@
     #{$self}-office {
       flex: 0 0 50px;
       text-align: center;
+      position: relative;
 
       img {
         max-width: 25px;
+      }
+
+      &-reply {
+        position: absolute;
+        background: $white;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+        border-radius: 2px;
+        border: 1px solid $grey-lighter;
+        width: 500px;
+        z-index: 1;
+        text-align: left;
+        padding: 15px;
+
+        &-title {
+          @include typo($s15, 500, 'head');
+        }
+
+        &-desc {
+          font-size: $s16;
+          line-height: 1.5;
+          margin: 0 0 10px;
+        }
+
+        &-list {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+        }
+
+        &-item {
+          list-style: none;
+          position: relative;
+          font-size: $s16;
+          margin: 0 0 0 20px;
+
+          &:after {
+            content: '';
+            width: 1px;
+            height: 100%;
+            position: absolute;
+            background: $grey-light;
+            right: -10px;
+            top: 0;
+          }
+
+          &:last-child {
+            color: $grey;
+
+            &:after {
+              display: none;
+            }
+          }
+        }
       }
     }
 
     #{$self}-link {
       margin: 0;
     }
-
-
 
     #{$self}-comments {}
 
