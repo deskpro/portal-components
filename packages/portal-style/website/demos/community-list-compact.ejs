@@ -21,22 +21,9 @@
         </div>
         <div class="row">
           <div class="col-sm-12">
-            <div class="dp-po-community-tabs">
-              <ul class="dp-po-community-tabs-list">
-                <li class="dp-po-community-tabs-item active">
-                  <a href="" class="dp-po-community-tabs-link">
-                    <i class="dp-po-icon far fa-list-ul"></i> Topics list
-                  </a>
-                </li>
-                <li class="dp-po-community-tabs-item">
-                  <a href="" class="dp-po-community-tabs-link">
-                    <i class="dp-po-icon far fa-exchange"></i> Status Change
-                  </a>
-                </li>
-              </ul>
-            </div>
+            <%- include('_partials/_community-header.ejs'); %>
             <div class="dp-po-section dp-po-block">
-              <%- include('_partials/_community-topics-list-status.ejs'); %>
+              <%- include('_partials/_community-topics-list-compact.ejs'); %>
             </div>
             <%- include('_partials/_pagination.ejs'); %>
           </div>
