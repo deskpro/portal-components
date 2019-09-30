@@ -660,7 +660,7 @@
       & .dnd {
         display: inline-block;
       }
-      & .SVGInline > svg {
+      & svg {
         height: 17px;
         margin-right: 8px;
         margin-bottom: -2px;
@@ -671,7 +671,7 @@
         border-color: var(--primary-color);
         color: var(--primary-color);
         transition: 0.2s ease all;
-        & .SVGInline > svg .st0 {
+        & svg [class$=st0] {
           fill: var(--primary-color);
           transition: 0.2s ease all;
         }
@@ -691,14 +691,14 @@
           cursor: pointer;
           & svg {
             width: 12px;
-            & .st0 {
+            & path {
               fill: var(--light-grey);
             }
           }
           &:hover {
             color: var(--error-color);
             transition: 0.2s ease all;
-            & svg .st0 {
+            & svg path {
               fill: var(--error-color);
               transition: 0.2s ease all;
             }
@@ -720,7 +720,7 @@
   &.dp-pc_error .dp-pc_file-upload__dropzone {
     border-color: var(--error-color);
     & .choose, & .dnd {
-      & svg .st0 {
+      & svg [class$=st0] {
         fill: var(--error-color);
       }
     }
@@ -755,7 +755,7 @@
       margin-left: 0;
       margin-bottom: -4px;
     }
-    & .SVGInline + div {
+    & svg + div {
       display: inline-block;
       width: calc(100% - 20px);
     }
@@ -770,7 +770,7 @@
       & ~ .indicator:after {
         height: 50%;
       }
-      & svg .st0 {
+      & svg [class$=st0] {
         fill: var(--primary-color);
       }
       & ~ .dp-pc_label {

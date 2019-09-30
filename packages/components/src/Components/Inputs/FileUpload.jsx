@@ -2,11 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import DropZone from 'react-dropzone';
-import SVGInline from 'react-svg-inline';
 import { formatFileSize } from '@deskpro/js-utils/dist/numbers';
-import fileIcon from 'assets/file-icon.svg';
-import dndIcon from 'assets/drag-and-drop.svg';
-import deleteIcon from 'assets/delete.svg';
+import FileIcon from '../../assets/file-icon.svg';
+import DndIcon from '../../assets/drag-and-drop.svg';
+import DeleteIcon from '../../assets/delete.svg';
 import { Progress } from '../index';
 
 import Field from '../Field';
@@ -106,7 +105,7 @@ class File extends React.Component {
 
   renderRemove = () => (
     <span className="dp-pc_file-upload_remove-file">
-      <SVGInline svg={deleteIcon} /> remove
+      <DeleteIcon /> remove
     </span>
   );
 
@@ -245,12 +244,12 @@ class FileUpload extends Field {
             onFocus={this.handleFocus}
             onBlur={this.handleBlur}
           >
-            <SVGInline svg={fileIcon} />
+            <FileIcon />
             Choose {multiple ? 'files' : 'a file'}
           </div>
           <div className="or">or</div>
           <div className="dnd">
-            <SVGInline svg={dndIcon} />
+            <DndIcon />
             Drag and drop
           </div>
         </DropZone>
