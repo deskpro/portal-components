@@ -26,11 +26,3 @@ deploy:
     local-dir: target/portal-components
     on:
       branch: develop
-  - provider: npm
-    email: julien.ducro@deskpro.com
-    api_key:
-      secure: iGNdyMSvrHeG0JIG/imjIVcLyBcCzUp/+zYZBUbcadjAyStXrboHfkvXE4nRwan8tocnfDiOfsgAacp+g+UILzHkcfMD0EzWufa16EHwLIXZyDb+poK7oQ2FL3AvcS7X/CWfWeHGEOQ9/6uIta3Wk8dIPPm178yOzWkaV104itcT1b+xM8JQlMEIEXe0CP2B4OasP/bztH0n6+Q5MoUk4GsOFQK3Eb+tTj0f6QRNmClAzmV8m8j65KmGYKEG6PhJGIAR54KDWCbtCKNuNjkKq8gajg8naeYCeuTHKBsq4oB3kUI18jAIgLUb54WM935Lx3mMR5sZdmjzHMCh59iJVDUu8t2kpv6XhCI7sCynY/3tXMIUvWC0g+uqA5kzAdsvOs/CMM2H0RdEppdlRHKbVntos6ETtZA29RlfW64Z4s+IrzZCoeZROOb3jveDyJaqU5bDRydDkfkrQgz+Nm/15CWOK6mBKzCf6ON0o83NaZ1EpjP9DtshBLa5BfJjuk3fq/Z4JTTGHFrxKMbhW9mbDaqQP4cRBzo1bE04sTt4upPierpg6WknhEIsiwo/44UbadYKitMJLGq+pQDhpDNhGz3CPdm3bNbWNoaG1P81me48igOIcbvaCXH1q8OhJlidmrfoONtMtaMek76NY/vuWeJxWGK+bIun76aLqZd8Hx4=
-    on:
-      branch: master
-      tags: true
-      repo: deskpro/portal-components
