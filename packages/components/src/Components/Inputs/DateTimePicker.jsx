@@ -1,6 +1,5 @@
 import React from 'react';
-import SVGInline from 'react-svg-inline';
-import dateTimeIcon from 'assets/date-time.svg';
+import DateTimeIcon from 'assets/date-time.svg';
 import moment from 'moment/moment';
 import { getIn } from 'formik';
 import DatePicker from './DatePicker';
@@ -31,7 +30,7 @@ class DateTimePicker extends DatePicker {
     };
   };
 
-  renderIcon = () => <SVGInline svg={dateTimeIcon} />;
+  renderIcon = () => <DateTimeIcon />;
 }
 
 DateTimePicker.defaultProps = {

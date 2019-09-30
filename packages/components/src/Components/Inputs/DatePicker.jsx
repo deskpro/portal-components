@@ -3,9 +3,8 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import moment from 'moment-hijri';
 import ReactDatePicker from '@deskpro/react-datepicker-hijri';
-import SVGInline from 'react-svg-inline';
 import { getIn } from 'formik';
-import calendarIcon from 'assets/calendar.svg';
+import CalendarIcon from 'assets/calendar.svg';
 
 import Field from '../Field';
 
@@ -56,7 +55,7 @@ class DatePicker extends Field {
     };
   };
 
-  renderIcon = () => <SVGInline svg={calendarIcon} />;
+  renderIcon = () => <CalendarIcon />;
 
   renderLabel = () => {
     const {

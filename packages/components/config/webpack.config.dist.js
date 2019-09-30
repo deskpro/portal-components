@@ -62,11 +62,8 @@ module.exports = {
         })
       },
       {
-        loader:  require.resolve('file-loader'),
-        exclude: [/\.(js|jsx|mjs)$/, /\.html$/, /\.json$/, /\.css$/],
-        options: {
-          name: 'assets/[name].[ext]'
-        }
+        test: /\.svg$/,
+        use:  ['@svgr/webpack']
       }
     ]
   },
