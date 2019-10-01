@@ -1,0 +1,107 @@
+.dp-po-community-title {
+  $self: '.dp-po-community-title';
+  margin-bottom: 25px;
+
+  &-link {
+    @include typo($s30, 400, 'head');
+    display: inline-flex;
+    align-items: center;
+    color: $grey-darkest;
+
+    &:hover {
+      text-decoration: none;
+      color: $brand-primary;
+    }
+  }
+
+  &-icon {
+    width: 52px;
+    height: 52px;
+    background: $info-light;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $grey-light;
+    margin-right: 10px;
+
+    .dp-po-icon {
+      font-size: 24px;
+    }
+
+    &-purple {
+      background: $purple-light;
+    }
+
+    &-neutral {
+      background: $neutral-light;
+    }
+
+    &-warning {
+      background: $warning-light;
+    }
+
+    &-success {
+      background: $success-light;
+    }
+
+    &-pink {
+      background: $pink-light;
+    }
+
+    &-danger {
+      background: $danger-light;
+    }
+  }
+
+  &-arrow {
+    margin-left: 10px;
+    color: $brand-primary;
+    position: relative;
+    top: 3px;
+  }
+
+  .dropdown-menu {
+    border-color: $brand-primary;
+    width: 280px;
+  }
+
+  &-button {
+    border: 1px solid $brand-primary;
+    border-radius: 4px;
+    background: $white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-link {
+      text-align: center;
+      padding: 10px 20px;
+      display: block;
+      width: 100%;
+      @include typo($s19, 400, 'head');
+
+      .dp-po-icon {
+        margin-right: 10px;
+      }
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    &:hover {
+      background: $info-light;
+    }
+
+    &-dropdown {
+      border-left: 1px solid $brand-primary;
+      padding: 10px;
+      text-align: center;
+    }
+
+    #{$self}-arrow {
+      margin: 0;
+    }
+  }
+}

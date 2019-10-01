@@ -9,11 +9,40 @@
     <main class="dp-po-main dp-po-community-home">
       <div class="container">
         <div class="row">
-          <div class="col-sm-9">
-            <div class="dp-po-title">
-              <img class="dp-po-title-svg" src="/portal-components/portal-style/static/img/page-icons/community.svg">
-              <h2 class="dp-po-title-text">Community</h2>
+          <div class="col-sm-6">
+            <div class="dp-po-community-title">
+              <a class="dp-po-community-title-link" href="" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                <span class="dp-po-community-title-icon dp-po-community-title-icon-success">
+                  <i class="dp-po-icon dp-po-icon-success fad fa-comment-alt-check"></i>
+                </span>
+                Suggestions
+                <i class="dp-po-icon dp-po-community-title-arrow far fa-angle-down"></i>
+              </a>
+              <div class="dropdown-menu dropdown-menu-left">
+                <a class="dropdown-item" href="#">
+                  <i class="dp-po-icon dp-po-icon-danger fad fa-hands-helping"></i> Help
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="dp-po-icon dp-po-icon-success fad fa-comment-alt-check"></i> Suggestions
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="dp-po-icon dp-po-icon-pink fad fa-comments"></i> Chat
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="dp-po-icon dp-po-icon-warning fad fa-code"></i> Developers
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="dp-po-icon dp-po-icon-info fad fa-receipt"></i> Finance
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="dp-po-icon dp-po-icon-neutral fad fa-rocket"></i> General chat
+                </a>
+              </div>
             </div>
+          </div>
+          <div class="col-sm-3">
+            <%- include('_partials/_community-button.ejs'); %>
           </div>
           <div class="col-sm-3">
             <%- include('_partials/_subscribe.ejs'); %>
