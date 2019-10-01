@@ -1,6 +1,6 @@
 {
   "name": "style",
-  "version": "0.0.0",
+  "version": "0.2.8",
   "description": "Styling for for Deskpro Portal Interface",
   "author": "DeskPRO <support@deskpro.com>",
   "homepage": "",
@@ -26,7 +26,6 @@
     "postinstall": "[ ! -d website ] || (cd website && npm install)",
     "compile": "html-includes --src 'website/static/includes/' --dest 'website/static/demos/' --watch"
   },
-  "dependencies": {},
   "devDependencies": {
     "concurrently": "^4.1.0",
     "contrast": "^1.0.1",
