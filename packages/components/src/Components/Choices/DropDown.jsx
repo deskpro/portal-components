@@ -57,7 +57,16 @@ const Option = (props) => {
 
 Option.propTypes = components.Option.propTypes;
 
-class DropDown extends Field {
+export class DropDownInput extends React.Component {
+  static propType = {
+    form:       PropTypes.object,
+    dataSource: PropTypes.shape({
+      getOptions: PropTypes.oneOfType([PropTypes.func, PropTypes.array]).isRequired,
+    }).isRequired,
+    handleChange: PropTypes.func,
+    isClearable:  PropTypes.bool,
+  };
+
   constructor(props) {
     super(props);
     this.state = {
@@ -128,9 +137,9 @@ class DropDown extends Field {
     });
   };
 
-  renderField = (form) => {
+  render() {
     const {
-      name, dataSource, isClearable, ...props
+      name, dataSource, isClearable, form, ...props
     } = this.props;
     if (Array.isArray(dataSource.getOptions)) {
       return (
@@ -165,6 +174,17 @@ class DropDown extends Field {
         loadOptions={inputValue => this.loadOptions(form, inputValue)}
         classNamePrefix="react-select"
         {...props}
+      />
+    );
+  }
+}
+
+class DropDown extends Field {
+  renderField(form) {
+    return (
+      <DropDownInput
+        form={form}
+        {...this.props}
       />
     );
   }

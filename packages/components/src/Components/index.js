@@ -10,7 +10,7 @@ import Checkbox from './Inputs/Checkbox';
 import DatePicker from './Inputs/DatePicker';
 import DateTimePicker from './Inputs/DateTimePicker';
 import Email from './Inputs/Email';
-import FileUpload from './Inputs/FileUpload';
+import FileUpload, { FileUploadInput } from './Inputs/FileUpload';
 import LikertScale from './Inputs/LikertScale';
 import Number from './Inputs/Number';
 import Password from './Inputs/Password';
@@ -42,6 +42,7 @@ export {
   DateTimePicker,
   Email,
   FileUpload,
+  FileUploadInput,
   LikertScale,
   Number,
   Password,

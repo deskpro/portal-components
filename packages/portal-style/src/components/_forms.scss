@@ -219,10 +219,10 @@ select.form-control:not([multiple="multiple"]) {
       }
     }
 
-    &>span {
-      margin: 0 15px;
-      font-size: 12px;
+    & > span {
       color: $grey-dark;
+      font-size: 12px;
+      margin: 0 15px;
     }
 
     .dp-po-drag {
@@ -296,4 +296,7 @@ select.form-control:not([multiple="multiple"]) {
     color: $success;
     margin-right: 10px;
   }
+}
+.field_more_attachments {
+  display: none;
 }

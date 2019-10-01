@@ -1,6 +1,6 @@
 module.exports = {
   plugins: {
-    'postcss-cssnext':        {},
+    'postcss-preset-env':     {},
     'postcss-flexbugs-fixes': {},
     'postcss-import':         {},
     'postcss-nested':         {},

@@ -125,7 +125,22 @@ class File extends React.Component {
   }
 }
 
-class FileUpload extends Field {
+export class FileUploadInput extends React.Component {
+  static propTypes = {
+    multiple:  PropTypes.bool,
+    url:       PropTypes.string.isRequired,
+    csrfToken: PropTypes.string.isRequired,
+    name:      PropTypes.string.isRequired,
+    label:     PropTypes.string,
+    onChange:  PropTypes.func,
+  };
+
+  static defaultProps = {
+    multiple: false,
+    label:    '',
+    onChange() {},
+  };
+
   constructor(props) {
     super(props);
     this.state = {
@@ -150,8 +165,8 @@ class FileUpload extends Field {
   };
 
   handleTransferComplete = (e) => {
-    const { name } = this.props;
-    this.setFieldValue(name,  e.target.response.blob.id);
+    const { name, onChange } = this.props;
+    onChange(name,  e.target.response.blob.id);
     this.setState({ progress: -1 });
   };
 
@@ -215,10 +230,8 @@ class FileUpload extends Field {
     /* eslint-enable jsx-a11y/label-has-for */
   };
 
-  renderField = (form) => {
+  render() {
     const { multiple } = this.props;
-    this.setFieldValue = form.setFieldValue;
-    this.setFieldTouched = form.setFieldTouched;
 
     /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
     return (
@@ -261,6 +274,16 @@ class FileUpload extends Field {
     );
     /* eslint-enable jsx-a11y/no-noninteractive-tabindex */
   }
+}
+
+class FileUpload extends Field {
+  renderField = form =>
+    (
+      <FileUploadInput
+        onChange={form.setFieldValue}
+        {...this.props}
+      />
+    )
 }
 
 FileUpload.propTypes = {

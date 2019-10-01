@@ -48,3 +48,7 @@
     background: $linkedin;
   }
 }
+
+.btn + .btn {
+  margin-left: 5px;
+}

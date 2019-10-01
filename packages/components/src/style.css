@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Rubik');
 
 :root {
-  --primary-color: #3d88f3;
+  --brand-primary: #3d88f3;
   --error-color: #f16c7c;
   --label-color: #7d95aa;
   --text-color: #5f768a;
@@ -33,13 +33,13 @@
     margin-top: 10px;
     margin-left: 10px;
     border-radius: 4px;
-    background-color: var(--primary-color);
+    background-color: var(--brand-primary);
     font-size: 18px;
     color: white;
     border: 0;
     transition: 0.2s ease all;
     &:hover, &:focus {
-      background-color: color(var(--primary-color) alpha(-20%));
+      background-color: color(var(--brand-primary) alpha(-20%));
       box-shadow: 4px 4px 6px var(--box-shadow-30);
       outline: none;
     }
@@ -85,7 +85,7 @@
     top: 11px;
     left: 10px;
     font-size: 10px;
-    color: var(--primary-color);
+    color: var(--brand-primary);
   }
 
   &:not(.dp-pc_empty):not(.dp-pc_error) input:not(:focus) ~ .dp-pc_label {
@@ -106,7 +106,7 @@
     width: 3px;
     left: 1px;
     position: absolute;
-    background: var(--primary-color);
+    background: var(--brand-primary);
     transition: 0.2s ease all;
   }
   & .indicator:before {
@@ -264,7 +264,7 @@
           content: ' ';
           height: 14px;
           width: 2px;
-          background-color: var(--primary-color);
+          background-color: var(--brand-primary);
         }
         &:before {
           transform: rotate(-45deg);
@@ -312,11 +312,11 @@
       position: relative;
       &.react-select__option--is-focused {
         background-color: var(--option-background);
-        color: var(--primary-color);
+        color: var(--brand-primary);
       }
       &.react-select__option--is-selected {
         color: var(--text-color);
-        background-color: color(var(--primary-color) alpha(10%));
+        background-color: color(var(--brand-primary) alpha(10%));
       }
     }
     & .react-select__option--arrow {
@@ -331,7 +331,7 @@
         content: ' ';
         height: 12px;
         width: 2px;
-        background-color: var(--primary-color);
+        background-color: var(--brand-primary);
       }
       &:before {
         transform: rotate(-45deg);
@@ -440,7 +440,7 @@
           position: absolute;
           top: 2px;
           left: 1px;
-          border: 2px solid var(--primary-color);
+          border: 2px solid var(--brand-primary);
           border-top: none;
           border-right: none;
           background: transparent;
@@ -513,7 +513,7 @@
         position: absolute;
         top: 2px;
         left: 1px;
-        border: 2px solid var(--primary-color);
+        border: 2px solid var(--brand-primary);
         border-top: none;
         border-right: none;
         background: transparent;
@@ -583,7 +583,7 @@
       &::after {
         content: '';
         position: absolute;
-        background-color: var(--primary-color);
+        background-color: var(--brand-primary);
         width: 0;
         height: 0;
         top: 50%;
@@ -668,11 +668,11 @@
       &:hover .choose,
       & .choose:focus {
         outline: none;
-        border-color: var(--primary-color);
-        color: var(--primary-color);
+        border-color: var(--brand-primary);
+        color: var(--brand-primary);
         transition: 0.2s ease all;
         & svg [class$=st0] {
-          fill: var(--primary-color);
+          fill: var(--brand-primary);
           transition: 0.2s ease all;
         }
       }
@@ -771,13 +771,13 @@
         height: 50%;
       }
       & svg [class$=st0] {
-        fill: var(--primary-color);
+        fill: var(--brand-primary);
       }
       & ~ .dp-pc_label {
         top: 11px;
         left: 10px;
         font-size: 10px;
-        color: var(--primary-color);
+        color: var(--brand-primary);
       }
     }
     & .react-datepicker__current-month--hasYearDropdown.react-datepicker__current-month--hasMonthDropdown {
@@ -817,11 +817,11 @@
       &:focus {
         outline: none;
         & .dp-pc_likert_number {
-          background-color: var(--primary-color);
+          background-color: var(--brand-primary);
           color: #fff;
         }
         & .dp-pc_likert_label {
-          color: var(--primary-color);
+          color: var(--brand-primary);
         }
       }
     }
@@ -916,11 +916,11 @@
   }
   & .dp-pc_likert .dp-pc_likert_input:hover {
     & .dp-pc_likert_number {
-      background-color: var(--primary-color);
+      background-color: var(--brand-primary);
       color: #fff;
     }
     & .dp-pc_likert_label {
-      color: var(--primary-color);
+      color: var(--brand-primary);
     }
   }
 }
