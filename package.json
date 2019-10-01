@@ -21,7 +21,9 @@
     "lint": "eslint . --cache --cache-location=.cache/eslint --ext .js,.jsx",
     "travis-test": "lerna run --stream travis-test",
     "presnapshots": "http-server target/ -s -p 8000 &",
-    "snapshots": "percy exec -- node snapshots.js"
+    "snapshots": "percy exec -- node snapshots.js",
+    "publish-git": "lerna publish --force-publish --skip-npm --yes",
+    "publish-npm": "lerna publish --force-publish --skip-git --yes"
   },
   "dependencies": {
     "@percy/script": "^1.0.0",
