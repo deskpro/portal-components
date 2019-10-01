@@ -5,6 +5,7 @@
   "author": "Julien Ducro <julien.ducro@deskpro.com>",
   "homepage": "https://github.com/deskpro/portal-components#readme",
   "license": "ISC",
+  "private": true,
   "main": "lib/components-demo.js",
   "directories": {
     "lib": "lib",
