@@ -94,13 +94,14 @@ const AJAXSubmit = (function () {
   // eslint-disable-next-line func-names
   return function (config) {
     if (!config.url) { return; }
-    this.req = new SubmitRequest(config);
+    new SubmitRequest(config);
   };
 }());
 
 class File extends React.Component {
   static propTypes = {
-    file: PropTypes.object.isRequired
+    inputName: PropTypes.string.isRequired,
+    file:      PropTypes.object.isRequired
   };
 
   renderRemove = () => (
@@ -111,16 +112,23 @@ class File extends React.Component {
 
   renderSize = () => {
     const { file } = this.props;
-    if (file.size) {
+    if (typeof file.size === 'string') {
+      return `(${file.size})`;
+    } else if (typeof file.size === 'number') {
       return `(${formatFileSize(file.size)})`;
     }
     return null;
   };
 
   render() {
-    const { file } = this.props;
+    const { file, inputName } = this.props;
+    const formName = `${inputName}[${file.id}][blob_auth]`;
+
     return (
-      <li>{file.name} {this.renderSize()} {this.renderRemove()}</li>
+      <li>
+        {file.filename} {this.renderSize()} {this.renderRemove()}
+        <input type="hidden" name={formName} value={file.authcode} />
+      </li>
     );
   }
 }
@@ -152,7 +160,6 @@ export class FileUploadInput extends React.Component {
   }
 
   handleDrop = (accepted) => {
-    this.setState({ files: accepted });
     AJAXSubmit({
       url:              this.props.url,
       files:            accepted,
@@ -166,7 +173,9 @@ export class FileUploadInput extends React.Component {
 
   handleTransferComplete = (e) => {
     const { name, onChange } = this.props;
-    onChange(name,  e.target.response.blob.id);
+    const files = this.state.files.concat([e.target.response.blob]);
+    this.setState({ files });
+    onChange(name, files);
     this.setState({ progress: -1 });
   };
 
@@ -231,7 +240,7 @@ export class FileUploadInput extends React.Component {
   };
 
   render() {
-    const { multiple } = this.props;
+    const { multiple, name } = this.props;
 
     /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
     return (
@@ -268,7 +277,7 @@ export class FileUploadInput extends React.Component {
         </DropZone>
         <Progress progress={this.state.progress} />
         <ul>
-          {Array.from(this.state.files).map(file => <File key={file.name} file={file} />)}
+          {Array.from(this.state.files).map(file => <File inputName={name} key={file.name} file={file} />)}
         </ul>
       </div>
     );
