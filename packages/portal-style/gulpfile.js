@@ -69,6 +69,7 @@ function websiteStaticTask() {
 // website static assets
 function websiteStaticImgTask() {
   return src(files.websiteStaticImgPath)
+    .pipe(dest('.build/portal-components/portal-style/dist/img'))
     .pipe(dest('dist/img'))
     .pipe(connect.reload());
 }
@@ -80,6 +81,7 @@ function watchTask() {
   watch([files.websitePath], parallel(ejsTask));
   watch([files.websiteStaticPath], parallel(websiteStaticTask));
   watch([files.srcAssetsPath], parallel(styleAssetsTask));
+  watch([files.websiteStaticImgPath], parallel(websiteStaticImgTask));
 }
 
 // Server task for local web dev
@@ -93,7 +95,7 @@ function serverTask() {
 }
 
 exports.dev = series(
-  parallel(scssTask, ejsTask, websiteStaticTask, styleAssetsTask),
+  parallel(scssTask, ejsTask, websiteStaticTask, styleAssetsTask, websiteStaticImgTask),
   parallel(watchTask, serverTask)
 );
 
