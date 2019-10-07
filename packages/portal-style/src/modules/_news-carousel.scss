@@ -26,7 +26,8 @@
       }
 
       #{$self}-desc {
-        margin: 0 0 30px;
+        margin: 0;
+        padding: 0 0 20px;
       }
 
       #{$self}-avatar {
@@ -109,16 +110,21 @@
 
   &-desc {
     font-size: $s16;
-    margin: 0 0 40px;
+    padding: 0 0 40px;
+    margin: 0;
     position: relative;
     line-height: 1.5;
 
     .dp-po-icon {
       color: $brand-primary;
-      font-size: 22px;
+      font-size: 20px;
+      /*
       position: relative;
       float: right;
+      */
       line-height: 1.2;
+      position: absolute;
+      margin-left: 2px;
     }
   }
 
@@ -155,6 +161,7 @@
       border-radius: 4px;
       padding: 40px;
       display: inline-block;
+
       svg {
         fill: var(--brand-primary);
       }
