@@ -2,9 +2,23 @@
   display: flex;
   align-items: center;
 
+  .dp-po-avatar-name,
   img {
-    width: 30px;
+    border-radius: 50%;
     margin-right: 10px;
+    width: 30px;
+  }
+
+  .dp-po-avatar-name {
+    background: $grey;
+    color: $white;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 700;
+    height: 30px;
+    padding: 5px 0;
+    text-align: center;
+    text-transform: uppercase;
   }
 
   .badge {
@@ -12,6 +26,7 @@
   }
 
   &-round {
+
     img {
       border-radius: 50%;
     }
