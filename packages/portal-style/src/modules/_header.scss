@@ -102,9 +102,22 @@
       }
 
       &-title {
-        padding: 0;
         font-size: $p4-font-size;
         margin: 0 0 20px;
+        padding: 0;
+      }
+
+      &.dp-po-logged-in-user {
+        white-space: nowrap;
+
+        a {
+          color: var(--text-color);
+
+          &:hover {
+            color: var(--brand-primary);
+            text-decoration: none;
+          }
+        }
       }
     }
   }
