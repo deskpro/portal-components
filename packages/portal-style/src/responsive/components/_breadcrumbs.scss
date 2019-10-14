@@ -1,0 +1,19 @@
+@include media-breakpoint-down(sm) {
+  .breadcrumb-outer {
+    border: none;
+  }
+
+  .breadcrumb-image {
+    display: none;
+  }
+
+  .breadcrumb {
+    padding: 0;
+    flex-wrap: nowrap;
+  }
+
+  .breadcrumb-item {
+    white-space: nowrap;
+  }
+
+}

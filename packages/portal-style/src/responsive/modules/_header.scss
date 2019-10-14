@@ -1,0 +1,40 @@
+@include media-breakpoint-down(sm) {
+  .dp-po-header {
+    .dp-po-homelink {
+      .dp-po-logo {
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    .dp-po-brand-name {
+      display: none;
+    }
+
+    .dp-po-language {
+      margin: 0;
+    }
+
+    .dp-po-language-link {
+      width: auto;
+      text-indent: -999px;
+    }
+
+    .dp-po-user {
+      margin: 0;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    .dp-po-user-login {
+      padding: 0;
+    }
+
+    .dp-po-header-button {
+      margin: 0 10px;
+    }
+  }
+}

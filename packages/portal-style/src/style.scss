@@ -111,6 +111,14 @@
   @import "pages/ticket-create";
   @import "pages/ticket-home";
   @import "pages/ticket-view";
+
+
+  /**************************
+  ******* RESPONSIVE ********
+  **************************/
+  @import "responsive/components/breadcrumbs";
+  @import "responsive/modules/header";
+  @import "responsive/modules/search";
 }
 
 @import "components/global";
