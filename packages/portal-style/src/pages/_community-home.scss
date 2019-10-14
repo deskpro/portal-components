@@ -68,6 +68,7 @@
   &-right {
     flex: 0 0 40%;
     padding: 30px;
+    overflow: hidden;
   }
 
   &-icon {
@@ -178,7 +179,6 @@
     &-title {
       font-size: $s17;
       margin: 0;
-      width: 320px;
       display: block;
       white-space: nowrap;
       text-overflow: ellipsis;
@@ -193,7 +193,7 @@
     &-time {
       color: $grey-dark;
       @include typo($s17, 400, 'head');
-      width: 50px;
+      white-space: nowrap;
       margin-left: 10px;
     }
   }
