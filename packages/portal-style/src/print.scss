@@ -1,0 +1,37 @@
+@media print {
+
+  .dp-po {
+
+    .no-print {
+      display: none;
+    }
+
+    .dp-po-header .dp-po-header-right {
+      display: none;
+    }
+
+    .breadcrumb-outer {
+      margin-top: 15px;
+    }
+
+    .dp-po-search {
+      display: none;
+    }
+
+    .db-po-post-rating .btn {
+      display: none;
+    }
+
+    .dp-po-subscribe-btn {
+      display: none;
+    }
+
+    .dp-po-post-extra {
+      display: none;
+    }
+  }
+
+  .sf-toolbar {
+    display: none !important;
+  }
+}

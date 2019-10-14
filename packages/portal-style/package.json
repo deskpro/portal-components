@@ -1,6 +1,6 @@
 {
   "name": "@deskpro/portal-style",
-  "version": "0.2.10",
+  "version": "0.2.13",
   "description": "Styling for for Deskpro Portal Interface",
   "author": "DeskPRO <support@deskpro.com>",
   "license": "SEE LICENSE IN LICENSE",
@@ -20,6 +20,7 @@
     "autoprefixer": "^9.6.0",
     "concurrently": "^4.1.0",
     "contrast": "^1.0.1",
+    "cors": "^2.8.5",
     "cpx": "^1.5.0",
     "cssnano": "^4.1.10",
     "eslint": "^6.1.0",

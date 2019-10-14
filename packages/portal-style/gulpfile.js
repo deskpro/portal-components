@@ -13,6 +13,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const connect = require('gulp-connect');
+const cors = require('cors');
 const ejs = require("gulp-ejs");
 const rename = require('gulp-rename');
 const autoprefixer = require('autoprefixer');
@@ -90,7 +91,10 @@ function serverTask() {
     port: 3000,
     livereload: true,
     root: ".build",
-    localhost: 'localhost'
+    localhost: 'localhost',
+    middleware: function() {
+      return [cors()];
+    }
   });
 }
 

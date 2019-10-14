@@ -251,29 +251,33 @@ export class FileUploadInput extends React.Component {
         <DropZone
           onDrop={this.handleDrop}
           multiple={multiple}
-          className="dp-pc_file-upload__dropzone"
-          inputProps={{
-            id: this.id
-          }}
           ref={(c) => { this.dropZone = c; }}
-          onMouseEnter={this.handleMouseEnter}
-          onMouseLeave={this.handleMouseLeave}
         >
-          <div
-            className="choose"
-            tabIndex="0"
-            onKeyPress={this.handleKeyPress}
-            onFocus={this.handleFocus}
-            onBlur={this.handleBlur}
-          >
-            <FileIcon />
-            Choose {multiple ? 'files' : 'a file'}
-          </div>
-          <div className="or">or</div>
-          <div className="dnd">
-            <DndIcon />
-            Drag and drop
-          </div>
+          {({ getRootProps, getInputProps }) => (
+            <div
+              className="dp-pc_file-upload__dropzone"
+              onMouseEnter={this.handleMouseEnter}
+              onMouseLeave={this.handleMouseLeave}
+              {...getRootProps()}
+            >
+              <input id={this.id} {...getInputProps()} />
+              <div
+                className="choose"
+                tabIndex="0"
+                onKeyPress={this.handleKeyPress}
+                onFocus={this.handleFocus}
+                onBlur={this.handleBlur}
+              >
+                <FileIcon />
+                Choose {multiple ? 'files' : 'a file'}
+              </div>
+              <div className="or">or</div>
+              <div className="dnd">
+                <DndIcon />
+                Drag and drop
+              </div>
+            </div>
+          )}
         </DropZone>
         <Progress progress={this.state.progress} />
         <ul>
