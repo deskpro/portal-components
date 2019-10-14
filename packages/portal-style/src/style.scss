@@ -116,10 +116,9 @@
   /**************************
   ******* RESPONSIVE ********
   **************************/
-  @import "responsive/components/breadcrumbs";
-  @import "responsive/modules/header";
-  @import "responsive/modules/search";
+  @import "responsive/responsive";
 }
+
 @import "print";
 
 @import "components/global";

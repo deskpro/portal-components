@@ -1,0 +1,22 @@
+@include media-breakpoint-down(sm) {
+  .dp-po-title {
+    $self: '.dp-po-title';
+
+    &-svg {}
+
+    &-text {
+      &#{$self}-small {}
+    }
+
+    &-link {
+      svg {
+        display: none;
+      }
+
+      #{$self}-text {
+        font-size: $s26;
+        color: $grey-darkest;
+      }
+    }
+  }
+}

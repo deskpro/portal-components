@@ -1,0 +1,27 @@
+@include media-breakpoint-down(sm) {
+  .dp-po-category-title {
+    .dp-po-icon {
+      margin-right: 0;
+    }
+
+    &-text {
+      font-size: $s18;
+      color: $grey-darkest;
+    }
+
+    &-link {
+      display: flex;
+      background: $grey-lightest;
+      border-radius: 50px;
+      margin: 15px 0 0;
+
+      &:hover {
+        text-decoration: none;
+
+        .dp-po-icon {
+          background: $grey-lightest;
+        }
+      }
+    }
+  }
+}

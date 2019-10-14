@@ -1,0 +1,68 @@
+@include media-breakpoint-down(sm) {
+  .dp-po-community-channel {
+    $self: '.dp-po-community-channel';
+
+    &-icon {
+      width: 60px;
+      height: 60px;
+      flex: 0 0 60px;
+
+      .dp-po-icon {
+        font-size: 35px;
+      }
+    }
+
+    &-list {
+      flex-wrap: wrap;
+    }
+
+    &-item {
+      box-shadow: 0 5px 5px rgba(0, 0, 0, .15);
+      border-radius: 4px;
+      flex: 0 0 48%;
+      border: 1px solid $grey-lighter;
+      padding: 10px 0;
+      margin-bottom: 15px;
+    }
+
+    &-link {
+      display: flex;
+    }
+
+    &-name {
+      font-size: $s18;
+      padding: 10px 0;
+    }
+
+    &-right {
+      max-width: 130px;
+    }
+
+    &#{$self}-blocks {
+      #{$self}-list {
+        display: flex;
+      }
+
+      #{$self}-item {
+        flex: 0 0 100%;
+        padding: 20px;
+        margin: 0 0 20px 0;
+
+        &:nth-child(3n) {
+          margin: 0 0 20px 0;
+        }
+      }
+
+      #{$self}-link {
+        justify-content: flex-start;
+      }
+
+      #{$self}-icon {
+        width: 60px;
+        height: 60px;
+        flex: 0 0 60px;
+        margin-right: 20px;
+      }
+    }
+  }
+}

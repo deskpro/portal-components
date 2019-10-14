@@ -1,0 +1,11 @@
+@include media-breakpoint-down(sm) {
+  .dp-po-news-carousel {
+    &-item {
+      flex: 1 0 75%;
+    }
+
+    &-arrow {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@include media-breakpoint-down(sm) {
+  .dp-po-kb-featured {
+    &-link {
+      margin-top: 20px;
+    }
+
+    &-title {
+      border: none;
+      padding: 0;
+    }
+  }
+}

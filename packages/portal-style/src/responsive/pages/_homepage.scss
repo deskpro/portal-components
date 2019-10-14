@@ -1,0 +1,29 @@
+@include media-breakpoint-down(sm) {
+  .dp-po-homepage {
+    &-navigation {
+      margin-bottom: 70px;
+    }
+
+    &-news {
+      margin-bottom: 50px;
+
+      .dp-po-block {
+        padding: 0;
+      }
+    }
+
+    &-kb {
+      margin-bottom: 50px;
+
+      .dp-po-block {
+        padding: 0;
+      }
+    }
+
+    &-community {
+      margin-bottom: 50px;
+    }
+
+    &-guides {}
+  }
+}

@@ -1,0 +1,21 @@
+@include media-breakpoint-down(sm) {
+  .dp-po-notification {
+    padding: 15px;
+
+    &-title {
+      font-size: $s16;
+    }
+
+    &-count {
+      font-size: $s12;
+      width: 20px;
+      height: 20px;
+      right: -12px;
+      top: -12px;
+    }
+
+    &-image {
+      width: 30px;
+    }
+  }
+}
