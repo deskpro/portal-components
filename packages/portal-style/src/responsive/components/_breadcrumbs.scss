@@ -9,11 +9,16 @@
 
   .breadcrumb {
     padding: 0;
-    flex-wrap: nowrap;
   }
 
   .breadcrumb-item {
     white-space: nowrap;
+    width: 24%;
+  }
+
+  .breadcrumb-item a {
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 
 }
