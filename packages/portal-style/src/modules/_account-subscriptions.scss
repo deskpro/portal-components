@@ -1,0 +1,67 @@
+.dp-po-account-subscription {
+  $self: '.dp-po-account-subscription';
+
+  &-block {
+    margin: 0 0 30px;
+
+    .dp-po-pagination {
+      justify-content: center;
+    }
+  }
+
+  &-list {
+    margin: 0 0 20px;
+    padding: 0;
+  }
+
+  &-item {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: $s15;
+    border-bottom: 1px solid $grey-light;
+    padding: 15px 0;
+
+    &:hover {
+      #{$self}-topic {
+        text-decoration: none;
+        color: $brand-primary;
+      }
+    }
+
+    &:first-child {
+      #{$self}-topic {
+        @include typo($s17, 500, 'head');
+        color: $grey-darkest;
+      }
+
+      #{$self}-action {
+        color: $grey-dark;
+      }
+    }
+  }
+
+  &-topic {
+    font-size: $s17;
+    margin: 0;
+    display: flex;
+    align-items: center;
+
+    .dp-po-icon {
+      font-size: 30px;
+      margin-right: 10px;
+    }
+  }
+
+  &-action {
+    font-size: $s15;
+    font-weight: 700;
+    color: $grey;
+
+    &:hover {
+      color: $brand-primary;
+      text-decoration: none;
+    }
+  }
+}

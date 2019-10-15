@@ -1,0 +1,86 @@
+.dp-po-account-sidebar {
+  $self: '.dp-po-account-sidebar';
+
+  &-list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &-item {
+    list-style: none;
+    border-bottom: 1px solid $grey;
+
+    &:first-child {
+      #{$self}-link {
+        margin-top: 0;
+      }
+    }
+
+    &:last-child {
+      border: none;
+
+      #{$self}-link {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &-link {
+    display: flex;
+    @include typo($s19, 400, 'head');
+    color: $grey-dark;
+    position: relative;
+    margin: 20px 0;
+
+    .dp-po-icon {
+      position: absolute;
+      right: 0;
+      font-size: 30px;
+      top: -5px;
+    }
+
+    &:hover {
+      color: $brand-primary;
+      text-decoration: none;
+    }
+
+    &.active {
+      color: $grey-darkest;
+      font-weight: 500;
+    }
+  }
+
+  &-sublist {
+    margin: 0;
+    padding: 0;
+  }
+
+  &-subitem {
+    list-style: none;
+  }
+
+  &-sublink {
+    display: flex;
+    @include typo($s17, 400, 'head');
+    color: $grey;
+    align-items: center;
+    margin: 0 0 20px;
+
+    &:hover,
+    &.active {
+      text-decoration: none;
+      color: $brand-primary;
+
+      #{$self}-image {
+        filter: none;
+      }
+    }
+  }
+
+  &-image {
+    max-height: 30px;
+    max-width: 30px;
+    margin-right: 10px;
+    filter: grayscale(100%);
+  }
+}

@@ -4,19 +4,23 @@
   <%- include('_partials/_header.ejs'); %>
   <%- include('_partials/_search.ejs'); %>
   <%- include('_partials/_breadcrumbs.ejs'); %>
-
+  <%- include('_partials/_message-bar.ejs'); %>
   <div class="dp-po">
-    <main class="dp-po-main dp-po-public-profile">
+    <main class="dp-po-main dp-po-your-account">
       <div class="container">
+        <div class="dp-po-title">
+          <img class="dp-po-title-svg" src="/portal-components/portal-style/static/img/page-icons/account.svg">
+          <h2 class="dp-po-title-text">Your account</h2>
+        </div>
         <div class="row">
           <div class="col-sm-4">
             <div class="dp-po-block">
-              <%- include('_partials/_profile.ejs'); %>
+              <%- include('_partials/_account-sidebar.ejs'); %>
             </div>
           </div>
           <div class="col-sm-8">
             <div class="dp-po-block dp-po-section">
-              <%- include('_partials/_profile-activity.ejs'); %>
+              <%- include('_partials/_your-account.ejs'); %>
             </div>
           </div>
         </div>

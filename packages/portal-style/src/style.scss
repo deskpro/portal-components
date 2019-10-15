@@ -29,6 +29,7 @@
   @import "components/forms";
   @import "components/icons";
   @import "components/like";
+  @import "components/message-bar";
   @import "components/modal";
   @import "components/notification";
   @import "components/pagination";
@@ -44,6 +45,9 @@
   /**************************
   ******* MODULES ********
   **************************/
+  @import "modules/account-email";
+  @import "modules/account-sidebar";
+  @import "modules/account-subscriptions";
   @import "modules/block";
   @import "modules/chat-log";
   @import "modules/columnfilter";
@@ -111,7 +115,7 @@
   @import "pages/ticket-create";
   @import "pages/ticket-home";
   @import "pages/ticket-view";
-
+  @import "pages/your-account";
 
   /**************************
   ******* RESPONSIVE ********

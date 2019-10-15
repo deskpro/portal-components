@@ -1,0 +1,60 @@
+.dp-po-account-email {
+  $self: '.dp-po-account-email';
+
+  &-title {
+    @include typo($s15, 700, 'body');
+  }
+
+  &-list {
+    margin: 0 0 20px;
+    padding: 0;
+  }
+
+  &-item {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $grey-light;
+    padding: 20px 0;
+
+    &:hover {
+      #{$self}-address {
+        color: $brand-primary;
+      }
+    }
+  }
+
+  &-address {
+    font-size: $s15;
+    margin: 0;
+    display: flex;
+    align-items: center;
+
+    .dp-po-icon {
+      margin-right: 10px;
+      font-size: 20px;
+    }
+  }
+
+  &-action {
+    display: flex;
+    align-items: center;
+
+    &-item {
+      list-style: none;
+      @include typo($s15, 700, 'body');
+      color: $grey;
+    }
+
+    &-link {
+      margin-left: 20px;
+      @include typo($s15, 700, 'body');
+      color: $grey;
+
+      &:hover {
+        color: $brand-primary;
+        text-decoration: none;
+      }
+    }
+  }
+}
