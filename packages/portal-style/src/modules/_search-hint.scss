@@ -1,0 +1,41 @@
+.dp-po-search-hint {
+  position: absolute;
+  background: $white;
+  border-radius: 4px;
+  border: 2px solid $brand-primary;
+  box-shadow: 6.02308px 6.02308px 6.02308px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  padding: 20px;
+  z-index: 1;
+
+  &-list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &-item {
+    list-style: none;
+  }
+
+  &-link {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid $grey-lighter;
+    color: $grey-darkest;
+
+    &:hover {
+      text-decoration: none;
+      color: $brand-primary;
+    }
+  }
+
+  &-viewall {
+    text-decoration: underline;
+    font-size: $s15;
+    font-weight: 700;
+    margin-top: 10px;
+    display: inline-block;
+  }
+}
