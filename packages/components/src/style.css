@@ -643,7 +643,6 @@
       border-radius: 4px;
       display: inline-block;
       padding: 10px 23px 10px 10px;
-      margin-top: 40px;
       white-space: nowrap;
       cursor: pointer;
       & .choose {
@@ -906,6 +905,9 @@
       color: var(--light-grey);
     }
   }
+}
+.dp-pc_form .dp-pc_field .dp-pc_file-upload__dropzone {
+  margin-top: 45px;
 }
 .dp-pc_form.show-hover {
   & .dp-pc_field:hover {

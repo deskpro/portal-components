@@ -136,6 +136,7 @@ class File extends React.Component {
 export class FileUploadInput extends React.Component {
   static propTypes = {
     multiple:  PropTypes.bool,
+    id:        PropTypes.string,
     url:       PropTypes.string.isRequired,
     csrfToken: PropTypes.string.isRequired,
     name:      PropTypes.string.isRequired,
@@ -146,13 +147,14 @@ export class FileUploadInput extends React.Component {
   static defaultProps = {
     multiple: false,
     label:    '',
+    id:       '',
     onChange() {},
   };
 
   constructor(props) {
     super(props);
     this.state = {
-      files:    [],
+      files:    props.files,
       progress: -1,
       focused:  false,
       hovered:  false,
@@ -228,11 +230,11 @@ export class FileUploadInput extends React.Component {
   renderLabel = () => {
     const {
       label,
+      id,
     } = this.props;
-    const htmlFor = this.id;
     /* eslint-disable jsx-a11y/label-has-for */
     return (
-      <label className="dp-pc_file-input_label" htmlFor={htmlFor}>
+      <label className="dp-pc_file-input_label" htmlFor={id}>
         {label}
       </label>
     );
@@ -240,7 +242,7 @@ export class FileUploadInput extends React.Component {
   };
 
   render() {
-    const { multiple, name } = this.props;
+    const { multiple, name, id } = this.props;
 
     /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
     return (
@@ -260,7 +262,7 @@ export class FileUploadInput extends React.Component {
               onMouseLeave={this.handleMouseLeave}
               {...getRootProps()}
             >
-              <input id={this.id} {...getInputProps()} />
+              <input id={id} name={name} {...getInputProps()} />
               <div
                 className="choose"
                 tabIndex="0"
@@ -294,6 +296,7 @@ class FileUpload extends Field {
     (
       <FileUploadInput
         onChange={form.setFieldValue}
+        id={this.id}
         {...this.props}
       />
     )
