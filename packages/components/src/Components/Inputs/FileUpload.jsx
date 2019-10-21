@@ -262,7 +262,7 @@ export class FileUploadInput extends React.Component {
               onMouseLeave={this.handleMouseLeave}
               {...getRootProps()}
             >
-              <input id={id} name={name} {...getInputProps()} />
+              <input id={id} {...getInputProps()} />
               <div
                 className="choose"
                 tabIndex="0"
