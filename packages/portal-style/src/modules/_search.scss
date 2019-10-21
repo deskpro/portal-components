@@ -23,12 +23,7 @@
       color: $grey-dark;
       outline: none;
 
-      &:focus {
-        #{$self}-form {
-          border: 2px solid $brand-primary;
-          box-shadow: 6.02308px 6.02308px 6.02308px rgba(0, 0, 0, 0.15);
-        }
-      }
+      &:focus {}
     }
 
     button[type="submit"] {
@@ -45,6 +40,29 @@
     }
   }
 
+  &-list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &-item {
+    list-style: none;
+  }
+
+  &-link {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $grey-lighter;
+    color: $grey-darkest;
+
+    &:hover {
+      text-decoration: none;
+      color: $brand-primary;
+    }
+  }
+
   &-hint {
     position: absolute;
     background: $white;
@@ -53,36 +71,163 @@
     width: 100%;
     padding: 20px;
     z-index: 1;
+    border: 2px solid $brand-primary;
+    box-shadow: 6.02308px 6.02308px 6.02308px rgba(0, 0, 0, 0.15);
 
-    &-list {
-      margin: 0;
-      padding: 0;
-    }
 
-    &-item {
-      list-style: none;
-    }
-
-    &-link {
-      padding: 10px 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-top: 1px solid $grey-lighter;
-      color: $grey-darkest;
-
-      &:hover {
-        text-decoration: none;
-        color: $brand-primary;
-      }
-    }
 
     &-viewall {
       text-decoration: underline;
       font-size: $s15;
       font-weight: 700;
-      margin-top: 10px;
+      margin: 20px 0;
       display: inline-block;
+    }
+
+    &-header {
+      &-title {
+        @include typo($s19, 500, 'head');
+        display: flex;
+        align-items: center;
+
+        span {
+          color: $brand-primary;
+          margin-left: 5px;
+          font-weight: 400;
+        }
+      }
+
+      .dp-po-icon {
+        margin-right: 10px;
+        font-size: 20px;
+      }
+    }
+  }
+
+  &-tabs {
+    &-list {
+      margin: 0 -20px;
+      padding: 0;
+      display: flex;
+      border-top: 1px solid $grey-light;
+      border-bottom: 1px solid $grey-light;
+      justify-content: space-around;
+    }
+
+    &-item {
+      list-style: none;
+      flex-grow: 1;
+
+      &:last-child {
+        #{$self}-tabs-link {
+          border: none;
+        }
+      }
+    }
+
+    &-link {
+      color: $grey-darkest;
+      font-size: $s15;
+      justify-content: center;
+      border-right: 1px solid $grey-light;
+      background: $grey-lightest;
+      display: flex;
+      flex-wrap: nowrap;
+      height: 48px;
+      align-items: center;
+      position: relative;
+
+      span {
+        color: $brand-primary;
+        margin-left: 5px;
+      }
+
+      &.active {
+        background: $white;
+
+        &:before,
+        &:after {
+          content: '';
+          height: 2px;
+          width: 100%;
+          position: absolute;
+          left: 0;
+          top: -1px;
+          background: $brand-primary;
+        }
+
+        &:after {
+          background: $white;
+          top: auto;
+          bottom: -1px;
+        }
+      }
+
+      &:hover {
+        text-decoration: none;
+        background: $white;
+      }
+    }
+
+    &-image {
+      max-width: 20px;
+      max-height: 20px;
+      margin-right: 5px;
+    }
+  }
+
+  &-results {
+    #{$self}-tabs {
+      &-list {
+        margin: 0 -30px;
+      }
+    }
+  }
+
+  &-detail {
+    position: relative;
+
+    #{$self}-hint {
+      &-header {
+        margin: -30px -30px 0;
+        border-bottom: 1px solid $grey-lighter;
+
+        &-title {
+          padding: 10px 20px 10px 70px;
+          margin: 0;
+        }
+      }
+    }
+
+    #{$self}-tabs {
+      &-list {
+        margin: 0 -30px 0 20px;
+      }
+    }
+  }
+
+  &-back {
+    background: $grey-lighter;
+    display: inline-flex;
+    padding: 15px;
+    position: absolute;
+    left: -30px;
+    top: 0;
+    height: 50px;
+    z-index: 1;
+
+    .dp-po-icon {
+
+      font-size: 24px;
+      line-height: 0;
+    }
+
+    &-link {
+      color: $grey;
+
+      &:hover {
+        color: $brand-primary;
+      }
     }
   }
 }
