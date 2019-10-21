@@ -4,18 +4,20 @@
     height: auto;
     padding: 15px 10px;
     border-bottom: 1px solid $grey-lighter;
-  }
 
-  .dp-po-search-form {
-    input[type="search"] {
-      border: none;
-      background: $grey-lighter;
-      padding: 13px 20px 13px 60px;
-      font-size: $s18;
-    }
+    &-form {
+      position: static;
 
-    button[type="submit"] {
-      background: transparent;
+      input[type="search"] {
+        border: none;
+        background: $grey-lighter;
+        padding: 13px 20px 13px 60px;
+        font-size: $s18;
+      }
+
+      button[type="submit"] {
+        background: transparent;
+      }
     }
   }
 }

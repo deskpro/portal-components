@@ -1,0 +1,14 @@
+@include media-breakpoint-down(sm) {
+  .dp-po-download-listing {
+    $self: '.dp-po-download-listing';
+
+    &-title {
+      white-space: normal;
+    }
+
+    &-heading {
+      border-bottom: 1px solid $grey-light;
+      padding-bottom: 10px;
+    }
+  }
+}
