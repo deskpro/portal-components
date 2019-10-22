@@ -75,4 +75,20 @@
       flex: none;
     }
   }
+  &.agreed #{$self}-icon {
+    background-color: $success;
+  }
+
+  &.agreed:hover {
+
+    #{$self}-count {
+      color: $success;
+    }
+    #{$self}-icon {
+      background: $success-light;
+    }
+    .dp-po-icon {
+      color: $success;
+    }
+  }
 }
