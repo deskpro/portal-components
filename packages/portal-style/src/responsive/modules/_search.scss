@@ -19,5 +19,33 @@
         background: transparent;
       }
     }
+
+    &-hint {
+      box-shadow: none;
+      border: none;
+      border-radius: 0;
+      padding: 10px 5px;
+      width: auto;
+
+      &-header {
+        display: none;
+      }
+    }
+
+    &-link {
+      .dp-po-time {
+        display: none;
+      }
+    }
+
+    &-tabs {
+      &-list {
+        display: none;
+      }
+    }
+
+    &-back {
+      display: none;
+    }
   }
 }
