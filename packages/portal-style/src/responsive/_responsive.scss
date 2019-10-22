@@ -15,15 +15,18 @@
 @import "modules/guides";
 @import "modules/header";
 @import "modules/kb-category-title";
+@import "modules/kb-category";
 @import "modules/kb-featured";
 @import "modules/layout";
 @import "modules/navigation-block";
 @import "modules/news-carousel";
+@import "modules/news-listing";
 @import "modules/search";
 
 /**************************
 ******** PAGES *********
 **************************/
-@import "pages/homepage";
 @import "pages/downloads-eula";
 @import "pages/downloads-home";
+@import "pages/homepage";
+@import "pages/kb-home";

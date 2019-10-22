@@ -142,8 +142,16 @@
     border: 1.5px solid $white;
     border-radius: 2px;
     padding: 10px 20px;
-    display: inline-block;
     vertical-align: bottom;
+    float: right;
+    margin-top: 10px;
+
+    &:hover {
+      background: $brand-primary;
+      text-decoration: none;
+      color: $white;
+      border-color: $brand-primary;
+    }
   }
 
   &-activity {

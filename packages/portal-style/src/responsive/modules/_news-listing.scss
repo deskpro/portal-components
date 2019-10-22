@@ -1,0 +1,55 @@
+@include media-breakpoint-down(sm) {
+  .dp-po-news-listing {
+    $self: '.dp-po-news-listing';
+
+    &-link {
+      padding: 0;
+      display: block;
+    }
+
+    &-date {
+      margin: 0;
+      text-align: left;
+      border: none;
+      border-bottom: 1px solid $grey-light;
+      padding: 0 10px;
+    }
+
+    &-month {
+      display: inline-block;
+      padding: 10px 0;
+    }
+
+    &-year {
+      border: none;
+      display: inline-block;
+      width: auto;
+      padding: 10px 0;
+    }
+
+    &-figure {
+      margin: 0;
+    }
+
+    &-photo {
+      max-width: 100%;
+      max-height: inherit;
+      width: 100%;
+    }
+
+    &-title {
+      padding: 0;
+    }
+
+    &-content {
+      overflow: inherit;
+      white-space: unset;
+      padding: 10px;
+    }
+
+    .badge {
+      top: 9px;
+      right: 10px;
+    }
+  }
+}
