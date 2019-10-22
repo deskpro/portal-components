@@ -2,9 +2,7 @@
   .dp-po-title {
     $self: '.dp-po-title';
 
-    &-svg {
-      display: none;
-    }
+    &-svg {}
 
     &-text {
       &#{$self}-small {}

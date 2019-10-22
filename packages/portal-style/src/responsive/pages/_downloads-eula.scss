@@ -1,0 +1,12 @@
+@include media-breakpoint-down(sm) {
+  .dp-po-download-eula {
+    .dp-po-block {
+      padding: 0;
+    }
+  }
+
+  .dp-po-download-terms {
+    height: auto;
+    padding: 10px;
+  }
+}
