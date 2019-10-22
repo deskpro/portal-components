@@ -1,0 +1,16 @@
+@include media-breakpoint-down(sm) {
+  .dp-po-account-email {
+    &-item {
+      display: block;
+    }
+
+    &-action {
+      margin: 10px 0 0;
+      padding: 0;
+
+      &-link {
+        margin: 0 20px 0 0;
+      }
+    }
+  }
+}
