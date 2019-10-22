@@ -20,4 +20,13 @@
     margin: 0;
     font-weight: 700;
   }
+  &-edit {
+    font-size: 12px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    i {
+      margin-left: 2px;
+    }
+  }
 }
