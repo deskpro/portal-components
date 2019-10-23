@@ -249,8 +249,22 @@
   font-family: Rubik,sans-serif;
 
   .dp-po-icon {
-    font-size: 12px;
+    font-size: 0.55em;
     margin-right: 3px;
     vertical-align: text-bottom;
+    .fa-stack-2x {
+      font-size: 1em;
+    }
+  }
+  &.closed {
+    border-color: $grey-dark;
+    color: $grey;
+  }
+}
+
+.dp-po-ticket-success {
+  text-align: center;
+  .footer {
+    font-size: 14px;
   }
 }
