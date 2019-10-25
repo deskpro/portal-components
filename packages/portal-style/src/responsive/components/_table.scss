@@ -24,6 +24,8 @@
     &-cell {
       padding: 2px 0;
       display: block;
+      overflow: auto !important;
+      white-space: unset;
     }
 
     &-col5 {

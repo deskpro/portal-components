@@ -1,0 +1,45 @@
+@include media-breakpoint-down(sm) {
+  .dp-po-table-chat {
+    $self: ".dp-po-table";
+
+    #{$self}-row {
+      padding: 10px 0;
+
+      &:hover {
+        #{$self}-cell {
+          &-view {
+            display: none;
+          }
+
+          &-large {
+            padding: 2px 0;
+          }
+        }
+      }
+    }
+
+    #{$self}-cell {
+      width: 100%;
+
+      &-large {
+        width: 100%;
+      }
+
+      &-small {
+        width: 100%;
+      }
+
+      &-view {
+        display: none;
+      }
+
+      &-date {
+        font-weight: 700;
+
+        .dp-po-icon {
+          display: block;
+        }
+      }
+    }
+  }
+}
