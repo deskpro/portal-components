@@ -59,19 +59,32 @@
             </div>
             <div class="dp-po-user">
               
-                <a href="javascript:void(0)" class="dp-po-user-login dp-po-avatar" data-toggle="dropdown" aria-haspopup="true"
-                   aria-expanded="false">
-                  <img src="/portal-components/portal-style/static/img/docs/profile.png" class="dp-po-avatar-image" />
-                  <i class="dp-po-icon far fa-angle-down"></i>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right dp-po-user-dropdown dp-po-logged-in-user">
-                  <img src="/portal-components/portal-style/static/img/docs/profile.png" width="50" height="50"/> Artem Berdyshev
-                  <hr />
-                  <a href="#"><img class="dp-profile-svg" src="/portal-components/portal-style/static/img/profile-icons/profile.svg">View profile</a> <br />
-                  <a href="#"><img class="dp-profile-svg" src="/portal-components/portal-style/static/img/profile-icons/tickets.svg">My tickets</a> <br />
-                  <a href="#"><img class="dp-profile-svg" src="/portal-components/portal-style/static/img/profile-icons/chats.svg">My chats</a> <br />
-                  <a href="#" id="top-logout-btn" class="btn btn-primary">Logout</a>
+              <a href="javascript:void(0)" class="dp-po-user-login dp-po-avatar" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img src="/portal-components/portal-style/static/img/docs/profile.png" class="dp-po-avatar-image" />
+                <i class="dp-po-icon far fa-angle-down"></i>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right dp-po-user-dropdown dp-po-user-menu">
+                <div class="dp-po-avatar">
+                  <img src="/portal-components/portal-style/static/img/docs/profile.png" /> Artem
+                  Berdyshev
                 </div>
+                <ul class="dp-po-user-menu-list">
+                  <li class="dp-po-user-menu-item">
+                    <a href="#" class="dp-po-user-menu-link"><img class="dp-profile-svg dp-po-user-menu-image"
+                        src="/portal-components/portal-style/static/img/profile-icons/profile.svg">View profile</a>
+                  </li>
+                  <li class="dp-po-user-menu-item">
+                    <a class="dp-po-user-menu-link" href="#"><img class="dp-profile-svg dp-po-user-menu-image"
+                        src="/portal-components/portal-style/static/img/profile-icons/tickets.svg">My tickets</a>
+                  </li>
+                  <li class="dp-po-user-menu-item">
+                    <a class="dp-po-user-menu-link" href="#"><img class="dp-profile-svg dp-po-user-menu-image"
+                        src="/portal-components/portal-style/static/img/profile-icons/chats.svg">My chats</a>
+                  </li>
+                </ul>
+                <a href="#" id="top-logout-btn" class="btn btn-primary btn-block">Logout</a>
+              </div>
               
             </div>
           </div>
