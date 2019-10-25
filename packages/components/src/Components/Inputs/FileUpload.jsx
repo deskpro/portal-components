@@ -148,6 +148,7 @@ export class FileUploadInput extends React.Component {
     multiple: false,
     label:    '',
     id:       '',
+    files:    [],
     onChange() {},
   };
 

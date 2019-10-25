@@ -637,7 +637,7 @@
   *******************************/
   & .dp-pc_file-upload {
     color: var(--text-color);
-    margin-left: 10px;
+    margin-left: -10px;
     & .dp-pc_file-upload__dropzone {
       border: 2px dashed var(--checkbox-border);
       border-radius: 4px;
@@ -686,10 +686,11 @@
         color: var(--description-color);
         & .dp-pc_file-upload_remove-file {
           color: var(--light-grey);
+          margin-left: 5px;
           font-size: 12px;
           cursor: pointer;
           & svg {
-            width: 12px;
+            width: 9px;
             & path {
               fill: var(--light-grey);
             }
