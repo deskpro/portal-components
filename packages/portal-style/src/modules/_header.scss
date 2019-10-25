@@ -128,14 +128,14 @@
       min-width: 300px;
 
       &-list {
-        margin: 20px 0;
-        padding: 0;
+        margin: 20px 0 0;
+        padding: 10px 0;
         border-top: 1px solid $grey-light;
       }
 
       &-item {
         list-style: none;
-        padding: 20px 0;
+        padding: 10px 0;
       }
 
       &-link {
@@ -157,6 +157,8 @@
 
       &-image {
         margin-right: 10px;
+        width: 25px;
+        height: 25px;
       }
     }
   }
