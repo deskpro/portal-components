@@ -1,0 +1,30 @@
+@include media-breakpoint-down(sm) {
+  .dp-po-member-search {
+    button[type="submit"] {
+      background: $white;
+    }
+  }
+
+  .dp-po-table-member {
+    $self: ".dp-po-table";
+
+    #{$self}-row {
+      padding: 10px 0;
+    }
+
+    #{$self}-cell {
+      &-large {
+        width: 100%;
+      }
+
+      &-small {
+        width: 100%;
+      }
+    }
+
+    #{$self}-message {
+      position: absolute;
+      top: 10px;
+    }
+  }
+}

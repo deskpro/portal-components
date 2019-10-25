@@ -3,6 +3,8 @@
 **************************/
 @import "components/breadcrumbs";
 @import "components/notification";
+@import "components/pagination";
+@import "components/table";
 @import "components/title";
 @import "components/view-link";
 
@@ -33,3 +35,5 @@
 @import "pages/downloads-home";
 @import "pages/homepage";
 @import "pages/kb-home";
+@import "pages/homepage";
+@import "pages/member-directory";

@@ -1,0 +1,7 @@
+@include media-breakpoint-down(sm) {
+  .dp-po-pagination {
+    &-goto {
+      display: none;
+    }
+  }
+}

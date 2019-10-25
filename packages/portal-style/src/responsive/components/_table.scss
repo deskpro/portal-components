@@ -1,0 +1,35 @@
+@include media-breakpoint-down(sm) {
+  .dp-po-table {
+    $self: '.dp-po-table';
+    margin: 20px 0px 0;
+
+    &-row {
+      display: block;
+      padding: 0;
+      border-bottom: 1px solid $grey-light;
+
+      &-head {
+        display: none;
+      }
+
+      &:nth-child(2n) {
+        background: $white;
+      }
+
+      &:hover {
+        background: $white;
+      }
+    }
+
+    &-cell {
+      padding: 2px 0;
+      display: block;
+    }
+
+    &-col5 {
+      #{$self}-cell {
+        width: 100%;
+      }
+    }
+  }
+}
