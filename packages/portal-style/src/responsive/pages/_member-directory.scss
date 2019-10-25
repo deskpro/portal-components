@@ -1,0 +1,15 @@
+@include media-breakpoint-down(sm) {
+  .dp-po-table-member {
+    $self: ".dp-po-table";
+
+    #{$self}-cell {
+      &-large {
+        width: 100%;
+      }
+
+      &-small {
+        width: 100%;
+      }
+    }
+  }
+}
