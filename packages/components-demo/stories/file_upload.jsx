@@ -29,6 +29,12 @@ storiesOf('Input', module)
             url="http://deskpro5.local/en/dpblob"
             csrfToken="123456"
             multiple
+            files={[
+              {
+                name: 'Test file',
+                filename: 'Test file.pdf'
+              }
+            ]}
           />
           <Submit>submit</Submit>
         </Form>
