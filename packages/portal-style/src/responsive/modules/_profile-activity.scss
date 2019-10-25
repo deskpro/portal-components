@@ -1,0 +1,18 @@
+@include media-breakpoint-down(sm) {
+  .dp-po-profile-activity {
+    $self: '.dp-po-profile-activity';
+
+    &-desc {
+      padding: 0;
+    }
+
+    &-item {
+      padding: 20px 0 30px;
+    }
+
+    .dp-po-time {
+      top: auto;
+      bottom: 5px;
+    }
+  }
+}
