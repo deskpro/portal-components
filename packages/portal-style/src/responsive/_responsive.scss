@@ -14,6 +14,7 @@
 @import "modules/account-email";
 @import "modules/account-sidebar";
 @import "modules/block";
+@import "modules/chat-log";
 @import "modules/community-channel";
 @import "modules/downloads-listing";
 @import "modules/guides";
@@ -31,6 +32,7 @@
 /**************************
 ******** PAGES *********
 **************************/
+@import "pages/chat-home";
 @import "pages/downloads-eula";
 @import "pages/downloads-home";
 @import "pages/homepage";

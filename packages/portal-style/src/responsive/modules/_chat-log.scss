@@ -1,0 +1,29 @@
+@include media-breakpoint-down(sm) {
+  .dp-po-chat-log {
+    $self: '.dp-po-chat-log';
+
+    &-notification {
+      margin: 0 -15px;
+      padding: 10px 15px;
+
+      &-icon {
+        flex: 0 0 24px;
+      }
+
+      &-title {
+        padding-right: 95px;
+      }
+    }
+
+    &-item {
+      .dp-po-avatar {
+        padding-right: 80px;
+        word-break: break-all;
+
+        img {
+          flex: 0 0 30px;
+        }
+      }
+    }
+  }
+}
