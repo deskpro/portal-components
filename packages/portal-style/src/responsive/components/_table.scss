@@ -15,10 +15,14 @@
       &:nth-child(2n) {
         background: $white;
       }
+
+      &:hover {
+        background: $white;
+      }
     }
 
     &-cell {
-      padding: 5px;
+      padding: 2px 0;
       display: block;
     }
 
