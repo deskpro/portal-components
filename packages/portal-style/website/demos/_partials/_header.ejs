@@ -34,6 +34,21 @@
               <a href="javascript:void(0)" class="btn btn-primary" title="Contact Us">Contact us</a>
             </div>
             <div class="dp-po-user">
+              <% if (typeof loggedIn !== 'undefined') { %>
+                <a href="javascript:void(0)" class="dp-po-user-login dp-po-avatar" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
+                  <img src="/portal-components/portal-style/static/img/docs/profile.png" class="dp-po-avatar-image" />
+                  <i class="dp-po-icon far fa-angle-down"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right dp-po-user-dropdown dp-po-logged-in-user">
+                  <img src="/portal-components/portal-style/static/img/docs/profile.png" width="50" height="50"/> Artem Berdyshev
+                  <hr />
+                  <a href="#"><img class="dp-profile-svg" src="/portal-components/portal-style/static/img/profile-icons/profile.svg">View profile</a> <br />
+                  <a href="#"><img class="dp-profile-svg" src="/portal-components/portal-style/static/img/profile-icons/tickets.svg">My tickets</a> <br />
+                  <a href="#"><img class="dp-profile-svg" src="/portal-components/portal-style/static/img/profile-icons/chats.svg">My chats</a> <br />
+                  <a href="#" id="top-logout-btn" class="btn btn-primary">Logout</a>
+                </div>
+              <% } else { %>
               <a href="javascript:void(0)" class="dp-po-user-login" data-toggle="dropdown" aria-haspopup="true"
                 aria-expanded="false">Login</a>
               <div class="dropdown-menu dropdown-menu-right dp-po-user-dropdown">
@@ -42,6 +57,7 @@
                 <%- include('_form-login.ejs'); %>
                 <%- include('_form-login-social.ejs'); %>
               </div>
+              <% } %>
             </div>
           </div>
 
