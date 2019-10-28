@@ -48,6 +48,12 @@
 
     &:first-child {
       margin-left: 0;
+
+      &.active {
+        #{$self}-link {
+          border-left: none;
+        }
+      }
     }
   }
 
