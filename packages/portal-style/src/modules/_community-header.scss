@@ -128,7 +128,7 @@
 
     &-dropdown {
       padding: 20px;
-      width: 260px;
+      min-width: 260px;
 
       &-title {
         @include typo($s15, 500, 'head');
@@ -139,7 +139,7 @@
         padding: 0;
 
         .badge {
-          width: 130px;
+          min-width: 130px;
           font-size: $s15;
         }
       }

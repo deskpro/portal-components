@@ -1,6 +1,7 @@
 .dp-po-community-title {
   $self: '.dp-po-community-title';
   margin-bottom: 25px;
+  overflow: hidden;
 
   &-link {
     @include typo($s30, 400, 'head');
@@ -70,9 +71,10 @@
     border: 1px solid $brand-primary;
     border-radius: 4px;
     background: $white;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: space-between;
+    float: right;
 
     &-link {
       text-align: center;
