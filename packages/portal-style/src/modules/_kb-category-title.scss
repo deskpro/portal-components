@@ -15,6 +15,10 @@
     @include typo($s23, 400, 'head');
     color: $brand-primary;
     margin: 0;
+
+    span {
+      font-size: $s19;
+    }
   }
 
   &-link {
