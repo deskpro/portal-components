@@ -245,7 +245,7 @@
     #{$self}-comments {}
 
     #{$self}-author {
-      flex: 0 0 50px;
+      flex: 0 0 70px;
       text-align: center;
 
       .dp-po-avatar {
@@ -269,11 +269,9 @@
     }
 
     #{$self}-activity {
-      flex: 0 0 170px;
+      flex: 0 0 150px;
 
-      &-list {
-        justify-content: center;
-      }
+      &-list {}
 
       &-item {
         flex: inherit;
