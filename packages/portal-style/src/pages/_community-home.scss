@@ -181,6 +181,12 @@
 
       &:hover {
         text-decoration: none;
+
+        #{$self}-activity {
+          &-title {
+            text-decoration: underline;
+          }
+        }
       }
     }
 

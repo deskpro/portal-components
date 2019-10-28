@@ -27,6 +27,8 @@
     margin: 30px 0 0;
 
     &:hover {
+      color: $brand-primary;
+
       .dp-po-icon {
         background: $info-light;
       }
