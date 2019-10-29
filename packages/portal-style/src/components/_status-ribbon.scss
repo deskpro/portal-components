@@ -5,6 +5,8 @@
   align-items: center;
   font-size: $s12;
   text-transform: uppercase;
+  overflow: hidden;
+
 
   &-from {
     background: $grey-light;
@@ -13,6 +15,8 @@
     padding: 4px 9px;
     position: relative;
     margin-right: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 
     &:after {
       content: '';
@@ -24,6 +28,13 @@
       position: absolute;
       right: -11px;
       top: 0;
+    }
+
+    span {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+      width: 70px;
     }
   }
 
@@ -72,6 +83,15 @@
     padding: 0 9px;
     padding: 4px 9px;
     position: relative;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    span {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+      width: 70px;
+    }
 
     &:after,
     &:before {
