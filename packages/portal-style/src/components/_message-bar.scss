@@ -2,9 +2,14 @@
   $self: ".dp-po-message-bar";
   align-items: center;
   background: $success-light;
-  display: flex;
-  justify-content: center;
   padding: 10px 0;
+  border-bottom: 1px solid $grey-light;
+
+  &-wrap {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
 
   &-text {
     margin: 0;
@@ -13,6 +18,17 @@
   &-icon {
     color: $success;
     margin: 0 10px 0 0;
+  }
+
+  &-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: $grey;
+
+    &:hover {
+      color: $brand-primary;
+    }
   }
 
   &-error {
