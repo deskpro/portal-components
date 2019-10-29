@@ -805,10 +805,10 @@
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
-"@deskpro/js-utils@^1.0.4":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@deskpro/js-utils/-/js-utils-1.0.6.tgz#5562440fb85284a1f4cf666a0b3a56f84e66e586"
-  integrity sha512-Xlr7YbrUUT59dZ6Nndxy+Ve3PYSyF4vmEc4nI48pgmC0y8qMtf1tp2J+N5gOpMoNmb/dzjEZKigIcQp9zUFn4A==
+"@deskpro/js-utils@1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@deskpro/js-utils/-/js-utils-1.0.7.tgz#cc1b97be3af31ec53882da5a6a7239c45e36ef42"
+  integrity sha512-XqPLn1hXCUCCFZbNRpxp8CqGBKrT3obMHvtTWAITDUfSurJKisF9HxtzJ23Lzc/Mq9PqTOfpHaCqAjWKJuHtUA==
 
 "@deskpro/react-datepicker-hijri@^1.5.0":
   version "1.5.0"

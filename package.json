@@ -26,7 +26,6 @@
     "publish-npm": "lerna publish --force-publish --no-git-tag-version --no-push --yes"
   },
   "dependencies": {
-    "@deskpro/js-utils": "1.0.7",
     "@percy/script": "^1.0.0",
     "http-server": "^0.11.1"
   }
