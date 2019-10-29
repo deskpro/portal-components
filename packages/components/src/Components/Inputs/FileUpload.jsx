@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import DropZone from 'react-dropzone';
 import { formatFileSize } from '@deskpro/js-utils/dist/numbers';
+import { deepMerge } from '@deskpro/js-utils/dist/objects';
 import FileIcon from '../../assets/file-icon.svg';
 import DndIcon from '../../assets/drag-and-drop.svg';
 import DeleteIcon from '../../assets/delete.svg';
@@ -23,6 +24,13 @@ if (!XMLHttpRequest.prototype.sendAsBinary) {
     /* ...or as ArrayBuffer (legacy)...: this.send(ui8Data.buffer); */
   };
 }
+
+const I18N = {
+  dragNDrop:   'Drag and drop',
+  or:          'or',
+  chooseAFile: 'Choose a file',
+  chooseFiles: 'Choose files',
+};
 
 // eslint-disable-next-line func-names
 const AJAXSubmit = (function () {
@@ -142,6 +150,7 @@ export class FileUploadInput extends React.Component {
     name:      PropTypes.string.isRequired,
     label:     PropTypes.string,
     onChange:  PropTypes.func,
+    i18n:      PropTypes.object,
   };
 
   static defaultProps = {
@@ -150,10 +159,14 @@ export class FileUploadInput extends React.Component {
     id:       '',
     files:    [],
     onChange() {},
+    i18n:     {},
   };
 
   constructor(props) {
     super(props);
+
+    this.i18n = deepMerge(I18N, props.i18n);
+
     this.state = {
       files:    props.files,
       progress: -1,
@@ -272,12 +285,12 @@ export class FileUploadInput extends React.Component {
                 onBlur={this.handleBlur}
               >
                 <FileIcon />
-                Choose {multiple ? 'files' : 'a file'}
+                {multiple ? this.i18n.chooseFiles : this.i18n.chooseAFile}
               </div>
-              <div className="or">or</div>
+              <div className="or">{this.i18n.or}</div>
               <div className="dnd">
                 <DndIcon />
-                Drag and drop
+                {this.i18n.dragNDrop}
               </div>
             </div>
           )}
