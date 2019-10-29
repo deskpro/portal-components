@@ -46,10 +46,10 @@
   }
 
   &-item:hover {
-    color: $breadcrumb-active-color;
+    color: $breadcrumb-hover-color;
 
     a {
-      color: $breadcrumb-active-color;
+      color: $breadcrumb-hover-color;
       position: relative;
 
       &:after {
@@ -72,10 +72,6 @@
     a {
       color: $breadcrumb-active-color;
       position: relative;
-
-      &:after {
-        opacity: 1;
-      }
     }
 
     .dp-po-icon {
