@@ -26,40 +26,109 @@
           <div class="col-sm-3">
             <div class="dp-po-ticket-close">
               <a href="javascript:void(0)" class="dp-po-ticket-close-btn" data-toggle="modal"
-                data-target="#messageMember">
-                <span class="dp-po-icon fa-stack fa-sm">
-                  <i class="fad fa-envelope  fa-stack-2x"></i>
-                  <i class="fas fa-times-circle fa-stack-1x fa-inverse"></i>
+                data-target="#closeTicketRating">
+                <span class="fa-layers">
+                  <i class="dp-po-icon fad fa-envelope"></i>
+                  <i class="dp-po-icon fa-inverse fas fa-circle" data-fa-transform="shrink-8"></i>
+                  <i class="dp-po-icon fas fa-times" data-fa-transform="shrink-10"></i>
                 </span>
                 Close ticket
               </a>
             </div>
-            <!-- Modal -->
-            <div class="modal fade" id="messageMember" tabindex="-1" role="dialog" aria-labelledby="messageMember"
+            <!-- Modal SCREEN 1 : CHANGE DATA-TARGET ABOVE TO VIEW THIS-->
+            <div class="modal fade" id="closeTicket" tabindex="-1" role="dialog" aria-labelledby="closeTicket"
               aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-dialog modal-dialog-centered dp-po-ticket-modal" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="messageMember">Send a new message</h5>
+                    <div class="dp-po-ticket-modal-header">Are you sure you want to close your ticket?</div>
                   </div>
                   <div class="modal-body">
-                    <form class="dp-po-form">
-                      <div class="form-group">
-                        <div class="dp-po-avatar dp-po-avatar-round">
-                          To: &nbsp; <img src="/portal-components/portal-style/static/img/docs/avatar.png" /> Artem
-                          Berdyshev
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Message *</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1"
-                          placeholder="Your Message"></textarea>
-                      </div>
-                    </form>
+                    <p class="mb-4">Once your ticket is resolved, our agents will no longer respond.</p>
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Send Message</button>
+                    <button type="button" class="btn btn-primary">Resolve my ticket</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Modal SCREEN 2 : DEAFULT ACTIVE IN CODE -->
+            <div class="modal fade" id="closeTicketRating" tabindex="-1" role="dialog"
+              aria-labelledby="closeTicketRating" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered dp-po-ticket-modal" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <div class="dp-po-ticket-modal-header">
+                      <i class="dp-po-icon fad fa-comments-alt"></i> Rate your support
+                    </div>
+                  </div>
+                  <div class="modal-body">
+                    <div class="dp-po-ticket-modal-body">
+                      <div class="dp-po-ticket-modal-agent">
+                        <div class="dp-po-avatar dp-po-avatar-round">
+                          <img src="/portal-components/portal-style/static/img/docs/avatar.png" />
+                          <strong>Nick Green</strong>
+                        </div>
+                        helped with your ticket “support”
+                      </div>
+
+                      <p class="mt-4">How would you rate the support you received?</p>
+                      <form class="dp-po-form">
+                        <div class="form-group">
+                          <div id="ticket_ticket_field_7">
+                            <div id="ticket_ticket_field_7_data">
+                              <div class="radios">
+                                <label class="title">
+                                  <input type="radio" name="rating" value="8">
+                                  <i></i>
+                                  <span class="label">
+                                    <div class="dp-po-ticket-modal-rating dp-po-ticket-modal-rating-one">
+                                      <i class="dp-po-icon fad fa-star"></i>
+                                      <i class="dp-po-icon fad fa-star"></i>
+                                      <i class="dp-po-icon fad fa-star"></i>
+                                    </div>
+                                    It was not good
+                                  </span>
+                                </label>
+                                <label class="title">
+                                  <input type="radio" name="rating" value="9">
+                                  <i></i>
+                                  <span class="label">
+                                    <div class="dp-po-ticket-modal-rating dp-po-ticket-modal-rating-two">
+                                      <i class="dp-po-icon fad fa-star"></i>
+                                      <i class="dp-po-icon fad fa-star"></i>
+                                      <i class="dp-po-icon fad fa-star"></i>
+                                    </div>
+                                    It was ok
+                                  </span>
+                                </label>
+                                <label class=" title">
+                                  <input type="radio" name="rating" value="10" checked="checked">
+                                  <i></i>
+                                  <span class="label">
+                                    <div class="dp-po-ticket-modal-rating dp-po-ticket-modal-rating-three">
+                                      <i class="dp-po-icon fad fa-star"></i>
+                                      <i class="dp-po-icon fad fa-star"></i>
+                                      <i class="dp-po-icon fad fa-star"></i>
+                                    </div>
+                                    It was great
+                                  </span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleFormControlTextarea1">Or leave a comment</label>
+                          <textarea class="form-control" id="exampleFormControlTextarea1"
+                            placeholder="Your comment"></textarea>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Submit Feedback</button>
                   </div>
                 </div>
               </div>
@@ -177,7 +246,14 @@
             <div class="dp-po-sidebar dp-po-ticket-meta">
               <h3 class="dp-po-sidebar-title">Ticket Properties</h3>
               <p>
-                <a href="#" class="dp-po-sidebar-edit">Edit <i class="" data-fa-i2svg=""><svg class="svg-inline--fa fa-pen fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="pen" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M290.74 93.24l128.02 128.02-277.99 277.99-114.14 12.6C11.35 513.54-1.56 500.62.14 485.34l12.7-114.22 277.9-277.88zm207.2-19.06l-60.11-60.11c-18.75-18.75-49.16-18.75-67.91 0l-56.55 56.55 128.02 128.02 56.55-56.55c18.75-18.76 18.75-49.16 0-67.91z"></path></svg></i></a>
+                <a href="#" class="dp-po-sidebar-edit">Edit <i class="" data-fa-i2svg=""><svg
+                      class="svg-inline--fa fa-pen fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas"
+                      data-icon="pen" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                      data-fa-i2svg="">
+                      <path fill="currentColor"
+                        d="M290.74 93.24l128.02 128.02-277.99 277.99-114.14 12.6C11.35 513.54-1.56 500.62.14 485.34l12.7-114.22 277.9-277.88zm207.2-19.06l-60.11-60.11c-18.75-18.75-49.16-18.75-67.91 0l-56.55 56.55 128.02 128.02 56.55-56.55c18.75-18.76 18.75-49.16 0-67.91z">
+                      </path>
+                    </svg></i></a>
               </p>
 
               <h3 class="dp-po-ticket-meta-title">Department</h3>

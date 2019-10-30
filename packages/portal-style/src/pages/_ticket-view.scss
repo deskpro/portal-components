@@ -200,7 +200,6 @@
   }
 }
 
-
 .dp-po-ticket-attachments {
   background: $grey-lighter;
   border-radius: 4px;
@@ -240,31 +239,147 @@
 }
 
 .dp-po-ticket-close {
-  border: 1px solid $brand-primary;
-  background-color: $white;
-  border-radius: 4px;
-  font-size: 23px;
-  line-height: 150%;
-  padding: 5px 20px;
-  font-family: Rubik,sans-serif;
+  $self: '.dp-po-ticket-close';
 
-  .dp-po-icon {
-    font-size: 0.55em;
-    margin-right: 3px;
-    vertical-align: text-bottom;
-    .fa-stack-2x {
-      font-size: 1em;
+  &-btn {
+    display: flex;
+    align-items: center;
+    border: 1px solid $brand-primary;
+    background-color: $white;
+    border-radius: 4px;
+    @include typo($s23, 400, 'head');
+    padding: 7px 20px;
+
+    &:hover {
+      text-decoration: none;
+      background: $brand-primary;
+      color: $white;
+
+      .fa-envelope {
+
+        .fa-secondary,
+        .fa-primary {
+          fill: $white;
+        }
+      }
+
+      .fa-circle {
+        color: $brand-primary;
+      }
     }
   }
+
+  .fa-layers {
+    margin-right: 10px;
+  }
+
   &.closed {
-    border-color: $grey-dark;
-    color: $grey;
+    #{$self}-btn {
+      border-color: $grey-dark;
+      color: $grey;
+    }
+
+    .fa-envelope {
+
+      .fa-secondary,
+      .fa-primary {
+        fill: $grey;
+      }
+    }
   }
 }
 
 .dp-po-ticket-success {
   text-align: center;
+
   .footer {
     font-size: 14px;
+  }
+}
+
+.dp-po-ticket-modal {
+
+  .modal-content {
+    overflow: hidden;
+  }
+
+  .modal-header {
+    border: none;
+  }
+
+  &-header {
+    margin: -30px -30px 0;
+    padding: 20px 30px;
+    @include typo($s23, 400, 'head');
+    display: flex;
+    align-items: center;
+    background: $grey-lightest;
+    width: calc(100% + 60px);
+
+    .dp-po-icon {
+      margin-right: 20px;
+      font-size: 26px;
+    }
+  }
+
+  &-body {
+    .form-group .radios {
+      margin-top: 20px;
+
+      label {
+        font-weight: 400;
+        width: 180px;
+
+        span.label {
+          display: inline-block;
+          vertical-align: top;
+        }
+      }
+    }
+
+
+  }
+
+  &-agent {
+    display: flex;
+    align-items: center;
+
+    .dp-po-avatar {
+      margin-right: 5px;
+    }
+  }
+
+  &-rating {
+    margin: -7px 0 5px;
+
+    .dp-po-icon {
+      font-size: 24px;
+    }
+
+    &-one {
+      .dp-po-icon {
+
+        &:nth-child(2),
+        &:nth-child(3) {
+
+          .fa-primary,
+          .fa-secondary {
+            fill: $grey;
+          }
+        }
+      }
+    }
+
+    &-two {
+      .dp-po-icon {
+        &:nth-child(3) {
+
+          .fa-primary,
+          .fa-secondary {
+            fill: $grey;
+          }
+        }
+      }
+    }
   }
 }
