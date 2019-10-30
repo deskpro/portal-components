@@ -217,13 +217,14 @@
   text-align: right;
 
   &-link {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     background: $white;
     border: 1px solid $brand-primary;
     border-radius: 4px;
-    @include typo($s19, 400, 'head');
-    padding: 10px 20px;
+    @include typo($s23, 400, 'head');
+    padding: 8px 20px;
+    margin-bottom: 25px;
 
     .dp-po-icon {
       margin-right: 10px;
