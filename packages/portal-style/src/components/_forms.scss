@@ -66,6 +66,10 @@
           opacity: 1 !important;
           transition: 0.2s;
         }
+
+        &:disabled+i {
+          border-color: $grey-light;
+        }
       }
 
       span.label {
@@ -81,6 +85,7 @@
 
       &+i {
         border-radius: 50%;
+        border: 1px solid $grey-dark;
 
         &::after {
           background-color: $brand-primary;
@@ -96,8 +101,8 @@
 
       &:checked+i::after {
         height: 8px;
-        left: 17%;
-        top: 17%;
+        left: 3px;
+        top: 3px;
         width: 8px;
       }
     }

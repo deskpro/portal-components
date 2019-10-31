@@ -364,7 +364,7 @@
 
           .fa-primary,
           .fa-secondary {
-            fill: $grey;
+            fill: $grey-light;
           }
         }
       }
@@ -376,9 +376,17 @@
 
           .fa-primary,
           .fa-secondary {
-            fill: $grey;
+            fill: $grey-light;
           }
         }
+      }
+    }
+  }
+  input[type=radio]:disabled ~ .label {
+    .dp-po-ticket-modal-rating .dp-po-icon {
+      .fa-primary,
+      .fa-secondary {
+        fill: $grey-light;
       }
     }
   }
