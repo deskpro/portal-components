@@ -158,7 +158,7 @@
   <div class="dp-po">
     <main class="dp-po-main dp-po-community-topic">
       <div class="container">
-        <div class="row mb-4 align-items-end">
+        <div class="row mb-4">
           <div class="col-sm-9">
             <div class="dp-po-post-like">
   <a href="" class="dp-po-like" data-toggle="modal" data-target="#messageMember">
@@ -274,30 +274,6 @@
             </div>
           </div>
           <div class="col-sm-3">
-            <div class="dp-po-community-create">
-              <a class="dp-po-community-create-link" href="">
-                <i class="dp-po-icon fad fa-edit"></i>Create
-              </a>
-            </div>
-            <div class="dp-po-subscribe dp-po-subscribe-large">
-  <div class="dropdown">
-    <!--class : dp-po-subscribe-activebtn -->
-    <button class="dp-po-subscribe-btn" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
-      aria-expanded="false" data-offset="0,10">
-      <i class="dp-po-icon fad fa-envelope"></i> Subscribe <i class="dp-po-icon far fa-check"></i>
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-      <a class="dropdown-item disabled" href="#"><i class="dp-po-icon fal fa-file-alt"></i> Article <i
-          class="dp-po-icon far fa-check"></i></a>
-      <a class="dropdown-item" href="#"><i class="dp-po-icon fal fa-file-spreadsheet"></i> Category <i
-          class="dp-po-icon far fa-check"></i></a>
-      <a class="dropdown-item" href="#"><i class="dp-po-icon fal fa-file-chart-line"></i> Knowledgebase <i
-          class="dp-po-icon far fa-check"></i></a>
-      <span class="dp-po-subscribe-divider"></span>
-      <a class="dropdown-item dp-po-subscribe-manage" href="#">All your subscriptions</a>
-    </div>
-  </div>
-</div>
 
           </div>
         </div>
@@ -954,14 +930,14 @@
     $('.dropdown-toggle').dropdown();
   });
 
-  document.querySelectorAll('img[class$=svg]').forEach(function(img){
+  document.querySelectorAll('img[class$=svg]').forEach(function (img) {
     var imgID = img.id;
     var imgClass = img.className;
     var imgURL = img.src;
 
-    fetch(imgURL).then(function(response) {
+    fetch(imgURL).then(function (response) {
       return response.text();
-    }).then(function(text){
+    }).then(function (text) {
 
       var parser = new DOMParser();
       var xmlDoc = parser.parseFromString(text, "text/xml");
@@ -970,19 +946,19 @@
       var svg = xmlDoc.getElementsByTagName('svg')[0];
 
       // Add replaced image's ID to the new SVG
-      if(typeof imgID !== 'undefined') {
+      if (typeof imgID !== 'undefined') {
         svg.setAttribute('id', imgID);
       }
       // Add replaced image's classes to the new SVG
-      if(typeof imgClass !== 'undefined') {
-        svg.setAttribute('class', imgClass+' replaced-svg');
+      if (typeof imgClass !== 'undefined') {
+        svg.setAttribute('class', imgClass + ' replaced-svg');
       }
 
       // Remove any invalid XML tags as per http://validator.w3.org
       svg.removeAttribute('xmlns:a');
 
       // Check if the viewport is set, if the viewport is not set the SVG wont't scale.
-      if(!svg.getAttribute('viewBox') && svg.getAttribute('height') && svg.getAttribute('width')) {
+      if (!svg.getAttribute('viewBox') && svg.getAttribute('height') && svg.getAttribute('width')) {
         svg.setAttribute('viewBox', '0 0 ' + svg.getAttribute('height') + ' ' + svg.getAttribute('width'))
       }
 
@@ -992,6 +968,16 @@
     });
 
   });
+
+  $('.dp-po-mobile-community-tags-link').on('click', function () {
+    $('.dp-po-community-channel-tags').slideToggle();
+  })
+
+  $('.dp-po-category-title-expand').on('click', function () {
+    $(this).toggleClass('active');
+    $(this).parents('.dp-po-category-title').next('.dp-po-kb-category-list').slideToggle();
+    return false;
+  })
 
 </script>
 

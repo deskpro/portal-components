@@ -198,6 +198,9 @@
       <i class="dp-po-icon far fa-rocket text-danger"></i>
       <h2 class="dp-po-category-title-text">Getting Started <span>(5)</span></h2>
     </a>
+    <a href="javascript:void(0)" class="dp-po-category-title-expand">
+      <i class="dp-po-icon fal fa-angle-down"></i>
+    </a>
   </div>
   <ul class="dp-po-kb-category-list">
     <!--
@@ -247,6 +250,9 @@
     <a href="" class="dp-po-category-title-link">
       <i class="dp-po-icon far fa-rocket text-danger"></i>
       <h2 class="dp-po-category-title-text">Getting Started <span>(5)</span></h2>
+    </a>
+    <a href="javascript:void(0)" class="dp-po-category-title-expand">
+      <i class="dp-po-icon fal fa-angle-down"></i>
     </a>
   </div>
   <ul class="dp-po-kb-category-list">
@@ -300,6 +306,9 @@
       <i class="dp-po-icon far fa-rocket text-danger"></i>
       <h2 class="dp-po-category-title-text">Getting Started <span>(5)</span></h2>
     </a>
+    <a href="javascript:void(0)" class="dp-po-category-title-expand">
+      <i class="dp-po-icon fal fa-angle-down"></i>
+    </a>
   </div>
   <ul class="dp-po-kb-category-list">
     <!--
@@ -349,6 +358,9 @@
     <a href="" class="dp-po-category-title-link">
       <i class="dp-po-icon far fa-rocket text-danger"></i>
       <h2 class="dp-po-category-title-text">Getting Started <span>(5)</span></h2>
+    </a>
+    <a href="javascript:void(0)" class="dp-po-category-title-expand">
+      <i class="dp-po-icon fal fa-angle-down"></i>
     </a>
   </div>
   <ul class="dp-po-kb-category-list">
@@ -653,14 +665,14 @@
     $('.dropdown-toggle').dropdown();
   });
 
-  document.querySelectorAll('img[class$=svg]').forEach(function(img){
+  document.querySelectorAll('img[class$=svg]').forEach(function (img) {
     var imgID = img.id;
     var imgClass = img.className;
     var imgURL = img.src;
 
-    fetch(imgURL).then(function(response) {
+    fetch(imgURL).then(function (response) {
       return response.text();
-    }).then(function(text){
+    }).then(function (text) {
 
       var parser = new DOMParser();
       var xmlDoc = parser.parseFromString(text, "text/xml");
@@ -669,19 +681,19 @@
       var svg = xmlDoc.getElementsByTagName('svg')[0];
 
       // Add replaced image's ID to the new SVG
-      if(typeof imgID !== 'undefined') {
+      if (typeof imgID !== 'undefined') {
         svg.setAttribute('id', imgID);
       }
       // Add replaced image's classes to the new SVG
-      if(typeof imgClass !== 'undefined') {
-        svg.setAttribute('class', imgClass+' replaced-svg');
+      if (typeof imgClass !== 'undefined') {
+        svg.setAttribute('class', imgClass + ' replaced-svg');
       }
 
       // Remove any invalid XML tags as per http://validator.w3.org
       svg.removeAttribute('xmlns:a');
 
       // Check if the viewport is set, if the viewport is not set the SVG wont't scale.
-      if(!svg.getAttribute('viewBox') && svg.getAttribute('height') && svg.getAttribute('width')) {
+      if (!svg.getAttribute('viewBox') && svg.getAttribute('height') && svg.getAttribute('width')) {
         svg.setAttribute('viewBox', '0 0 ' + svg.getAttribute('height') + ' ' + svg.getAttribute('width'))
       }
 
@@ -691,6 +703,16 @@
     });
 
   });
+
+  $('.dp-po-mobile-community-tags-link').on('click', function () {
+    $('.dp-po-community-channel-tags').slideToggle();
+  })
+
+  $('.dp-po-category-title-expand').on('click', function () {
+    $(this).toggleClass('active');
+    $(this).parents('.dp-po-category-title').next('.dp-po-kb-category-list').slideToggle();
+    return false;
+  })
 
 </script>
 
