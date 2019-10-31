@@ -2,11 +2,19 @@
   .dp-po-kb-featured {
     &-link {
       margin-top: 20px;
+      font-size: $s16;
     }
 
     &-title {
       border: none;
       padding: 0;
+      font-size: $s18;
+    }
+
+    &-number {
+      padding: 6px 0;
+      font-size: $s14;
+      margin-right: 10px;
     }
   }
 }

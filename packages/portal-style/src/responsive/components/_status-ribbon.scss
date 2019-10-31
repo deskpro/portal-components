@@ -1,0 +1,9 @@
+@include media-breakpoint-down(sm) {
+  .dp-po-status-ribbon {
+    text-align: center;
+
+    &-from {
+      display: none;
+    }
+  }
+}

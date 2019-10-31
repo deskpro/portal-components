@@ -1,5 +1,9 @@
 @include media-breakpoint-down(sm) {
   .dp-po-viewall {
     justify-content: flex-start;
+
+    &-link {
+      padding-left: 0;
+    }
   }
 }

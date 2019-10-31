@@ -4,6 +4,7 @@
 @import "components/breadcrumbs";
 @import "components/notification";
 @import "components/pagination";
+@import "components/status-ribbon";
 @import "components/table";
 @import "components/title";
 @import "components/view-link";
@@ -16,6 +17,8 @@
 @import "modules/block";
 @import "modules/chat-log";
 @import "modules/community-channel";
+@import "modules/community-featured";
+@import "modules/community-status";
 @import "modules/downloads-listing";
 @import "modules/guides";
 @import "modules/header";

@@ -1,0 +1,13 @@
+@include media-breakpoint-down(sm) {
+  .dp-po-community-featured {
+    margin-bottom: 20px;
+
+    &-link {
+      font-size: $s16;
+    }
+
+    &-title {
+      font-size: $s18;
+    }
+  }
+}

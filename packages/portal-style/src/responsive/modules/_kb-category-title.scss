@@ -1,12 +1,19 @@
 @include media-breakpoint-down(sm) {
   .dp-po-category-title {
     .dp-po-icon {
-      margin-right: 0;
+      background: $grey-lighter;
+      margin-right: 10px;
+      flex: 0 0 58px;
     }
 
     &-text {
       font-size: $s18;
       color: $grey-darkest;
+
+      span {
+        font-weight: 500;
+        font-size: $s16;
+      }
     }
 
     &-link {
@@ -14,12 +21,32 @@
       background: $grey-lightest;
       border-radius: 50px;
       margin: 15px 0 0;
+      padding-right: 60px;
 
       &:hover {
         text-decoration: none;
 
         .dp-po-icon {
-          background: $grey-lightest;
+          background: $grey-lighter;
+        }
+      }
+    }
+
+    &-expand {
+      position: absolute;
+      right: 15px;
+      top: 0;
+      z-index: 1;
+      display: block;
+
+      .dp-po-icon {
+        margin: 0;
+        background: $grey-lightest;
+      }
+
+      &.active {
+        .dp-po-icon {
+          transform: rotate(180deg);
         }
       }
     }

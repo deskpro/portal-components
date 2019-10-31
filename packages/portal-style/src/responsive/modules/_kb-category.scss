@@ -1,24 +1,24 @@
 @include media-breakpoint-down(sm) {
   .dp-po-kb-category {
     &-link {
-      display: block;
+      font-size: $s16;
     }
 
     &-list {
-      margin: 60px 0 0;
-    }
-
-    &-text {
-      overflow: inherit;
-      text-overflow: unset;
-      white-space: normal;
-      display: inline;
-      vertical-align: middle;
+      margin: 0;
+      display: none;
+      padding: 0 0 20px;
     }
 
     .dp-po-viewall {
-      bottom: auto;
-      top: 70px;
+      display: none;
+    }
+
+    .dp-po-category-title {
+      &-link {
+        margin: 0 0 15px;
+        height: auto;
+      }
     }
   }
 }

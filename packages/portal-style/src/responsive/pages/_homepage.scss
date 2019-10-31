@@ -18,6 +18,10 @@
       .dp-po-block {
         padding: 0;
       }
+
+      .mb-4 {
+        margin-bottom: 0 !important;
+      }
     }
 
     &-community {
@@ -25,5 +29,80 @@
     }
 
     &-guides {}
+
+    .dp-po-title {
+      display: flex;
+
+      &-link {
+        display: flex;
+        border-bottom: 1px solid $grey-light;
+        width: 100%;
+      }
+
+      &-text {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .dp-po-community-channel-tags {
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+    border: 1px solid $brand-primary;
+    border-radius: 4px;
+    padding: 15px;
+    position: absolute;
+    z-index: 2;
+    width: calc(100% - 30px);
+    background: $white;
+    left: 15px;
+    display: none;
+
+    &-list {}
+
+    &-item {
+      display: block;
+      margin: 0 0 10px;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+
+    &-link {
+      border-radius: 0;
+      background: none;
+      padding: 0;
+      border: none;
+      font-size: $s18;
+
+      &:hover {
+        background: none;
+        color: $brand-primary;
+        text-decoration: underline;
+      }
+    }
+
+    &-count {
+      color: $grey-darkest;
+      font-size: $s15;
+    }
+  }
+
+  .dp-po-mobile-community-tags {
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    display: block;
+
+    &-link {
+      display: inline-flex;
+      @include typo($s16, 700, 'body');
+      align-items: center;
+      flex-wrap: nowrap;
+
+      .dp-po-icon {
+        margin-right: 5px;
+      }
+    }
   }
 }
