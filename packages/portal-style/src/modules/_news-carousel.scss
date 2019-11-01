@@ -2,19 +2,19 @@
   $self: '.dp-po-news-carousel';
   position: relative;
 
+  /*
   &-list {
     margin: 0;
     padding: 0;
     display: flex;
   }
-
+  */
   &-item {
     list-style: none;
     margin: 0 20px;
     display: inline-block;
     border: 2px solid $grey-light;
     border-radius: 6px;
-    flex: 1 0 21%;
 
     &:hover {
       box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
@@ -224,7 +224,52 @@
       border-color: $brand-primary;
     }
 
-
+    &.slick-disabled {
+      opacity: 0 !important;
+    }
   }
 
+  .slick-dots {
+    margin: 30px 0 -20px;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    li {
+      list-style: none;
+      margin: 0 5px;
+
+      button {
+        background: none;
+        border: none;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        text-indent: -9999px;
+        background: $grey-light;
+        display: block;
+        padding: 0;
+      }
+
+      &.slick-active {
+        button {
+          background: $brand-primary;
+        }
+      }
+    }
+  }
+
+  .slick-track {
+    display: flex !important;
+  }
+
+  .slick-slide {
+    height: inherit !important;
+  }
 }
+
+/*
+slick-prev  slick-disabled
+  slick-next slick-arrow
+  */

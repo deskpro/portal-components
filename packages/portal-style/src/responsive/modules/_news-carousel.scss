@@ -1,16 +1,3 @@
 @include media-breakpoint-down(sm) {
-  .dp-po-news-carousel {
-    &-list {
-      flex-wrap: nowrap;
-      overflow-y: scroll;
-    }
-
-    &-item {
-      flex: 1 0 75%;
-    }
-
-    &-arrow {
-      display: none;
-    }
-  }
+  .dp-po-news-carousel {}
 }
