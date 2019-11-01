@@ -9,16 +9,22 @@
 
   .breadcrumb {
     padding: 0;
+    width: 100%;
   }
 
   .breadcrumb-item {
     white-space: nowrap;
-    width: 24%;
-  }
+    width: 25%;
+    margin: 0;
 
-  .breadcrumb-item a {
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
+    &:first-child {
+      margin: 0;
+    }
 
+    a {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      margin-right: 21px;
+    }
+  }
 }
