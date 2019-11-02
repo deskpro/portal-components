@@ -314,7 +314,12 @@ export class FileUploadInput extends React.Component {
         </DropZone>
         <Progress progress={this.state.progress} />
         <ul>
-          {Array.from(this.state.files).map(file => <File onRemove={this.handleRemove} inputName={name} key={`key_${file.name}`} file={file} />)}
+          {Array.from(this.state.files).map(file => (<File
+            onRemove={this.handleRemove}
+            inputName={name}
+            key={`key_${file.name}`}
+            file={file}
+          />))}
         </ul>
       </div>
     );
