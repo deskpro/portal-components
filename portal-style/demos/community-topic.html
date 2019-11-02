@@ -158,7 +158,7 @@
   <div class="dp-po">
     <main class="dp-po-main dp-po-community-topic">
       <div class="container">
-        <div class="row mb-4">
+        <div class="row mb-4 align-items-end">
           <div class="col-sm-9">
             <div class="dp-po-post-like">
   <a href="" class="dp-po-like" data-toggle="modal" data-target="#messageMember">
@@ -275,11 +275,37 @@
           </div>
           <div class="col-sm-3">
             <div class="dp-po-community-create">
-              <a href="javascript:void(0);" class="dp-po-community-create-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="dp-po-community-create-link" href="">
+                <i class="dp-po-icon fad fa-edit"></i>Create
+              </a>
+            </div>
+            <div class="dp-po-subscribe dp-po-subscribe-large">
+  <div class="dropdown">
+    <!--class : dp-po-subscribe-activebtn -->
+    <button class="dp-po-subscribe-btn" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+      aria-expanded="false" data-offset="0,10">
+      <i class="dp-po-icon fad fa-envelope"></i> Subscribe <i class="dp-po-icon far fa-check"></i>
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+      <a class="dropdown-item disabled" href="#"><i class="dp-po-icon fal fa-file-alt"></i> Article <i
+          class="dp-po-icon far fa-check"></i></a>
+      <a class="dropdown-item" href="#"><i class="dp-po-icon fal fa-file-spreadsheet"></i> Category <i
+          class="dp-po-icon far fa-check"></i></a>
+      <a class="dropdown-item" href="#"><i class="dp-po-icon fal fa-file-chart-line"></i> Knowledgebase <i
+          class="dp-po-icon far fa-check"></i></a>
+      <span class="dp-po-subscribe-divider"></span>
+      <a class="dropdown-item dp-po-subscribe-manage" href="#">All your subscriptions</a>
+    </div>
+  </div>
+</div>
+
+            <!--<div class="dp-po-community-create">
+              <a href="javascript:void(0);" class="dp-po-community-create-link" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
                 <i class="dp-po-icon fad fa-edit"></i>
                 Create topic
               </a>
-            </div>
+            </div>-->
           </div>
         </div>
         <div class="row">
