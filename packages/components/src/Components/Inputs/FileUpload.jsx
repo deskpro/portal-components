@@ -102,18 +102,24 @@ const AJAXSubmit = (function () {
   // eslint-disable-next-line func-names
   return function (config) {
     if (!config.url) { return; }
-    this.req = new SubmitRequest(config);
+    config.req = new SubmitRequest(config);
   };
 }());
 
 class File extends React.Component {
   static propTypes = {
     inputName: PropTypes.string.isRequired,
+    onRemove:  PropTypes.func.isRequired,
     file:      PropTypes.object.isRequired
   };
 
+  onClickRemove = () => {
+    this.props.onRemove(this.props.file);
+  };
+
+
   renderRemove = () => (
-    <span className="dp-pc_file-upload_remove-file">
+    <span className="dp-pc_file-upload_remove-file" onClick={this.onClickRemove}>
       <DeleteIcon /> remove
     </span>
   );
@@ -239,6 +245,11 @@ export class FileUploadInput extends React.Component {
     });
   };
 
+  handleRemove = (file) => {
+    const files = this.state.files.filter(f => f.id !== file.id);
+    this.setState({ files });
+  };
+
   renderDivider = () => null;
 
   renderLabel = () => {
@@ -297,7 +308,7 @@ export class FileUploadInput extends React.Component {
         </DropZone>
         <Progress progress={this.state.progress} />
         <ul>
-          {Array.from(this.state.files).map(file => <File inputName={name} key={file.name} file={file} />)}
+          {Array.from(this.state.files).map(file => <File onRemove={this.handleRemove} inputName={name} key={`key_${file.name}`} file={file} />)}
         </ul>
       </div>
     );
