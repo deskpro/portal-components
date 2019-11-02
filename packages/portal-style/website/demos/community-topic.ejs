@@ -8,7 +8,7 @@
   <div class="dp-po">
     <main class="dp-po-main dp-po-community-topic">
       <div class="container">
-        <div class="row mb-4">
+        <div class="row mb-4 align-items-end">
           <div class="col-sm-9">
             <%- include('_partials/_post-like.ejs'); %>
             <div class="dp-po-title">
@@ -47,11 +47,18 @@
           </div>
           <div class="col-sm-3">
             <div class="dp-po-community-create">
-              <a href="javascript:void(0);" class="dp-po-community-create-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="dp-po-community-create-link" href="">
+                <i class="dp-po-icon fad fa-edit"></i>Create
+              </a>
+            </div>
+            <%- include('_partials/_subscribe.ejs'); %>
+            <!--<div class="dp-po-community-create">
+              <a href="javascript:void(0);" class="dp-po-community-create-link" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
                 <i class="dp-po-icon fad fa-edit"></i>
                 Create topic
               </a>
-            </div>
+            </div>-->
           </div>
         </div>
         <div class="row">
