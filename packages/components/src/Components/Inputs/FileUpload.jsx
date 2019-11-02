@@ -117,9 +117,15 @@ class File extends React.Component {
     this.props.onRemove(this.props.file);
   };
 
+  onHandleKeyDown = (ev) => {
+    if (ev.ctrlKey && ev.altKey && ev.keyCode === 68) {
+      this.props.onRemove(this.props.file);
+    }
+  };
+
 
   renderRemove = () => (
-    <span className="dp-pc_file-upload_remove-file" onClick={this.onClickRemove}>
+    <span className="dp-pc_file-upload_remove-file" onClick={this.onClickRemove} onKeyDown={this.onHandleKeyDown}>
       <DeleteIcon /> remove
     </span>
   );
