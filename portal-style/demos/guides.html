@@ -123,90 +123,175 @@
 
 
   <div class="dp-po">
-    <main class="dp-po-main dp-po-account-register">
-      <div class="container">
+    <main class="dp-po-main dp-po-guides">
+      <div class="container-fluid">
+        <div class="dp-po-guide-header">
+    
+</div>
         <div class="row">
-          <div class="col-sm-7 col-centered">
-            <div class="dp-po-title">
-              <h2 class="dp-po-title-text">Register</h2>
-            </div>
-            <div class="dp-po-section dp-po-block">
-              <section class="dp-po-loginform">
-  <form class="do-po-form">
-    <div class="form-group">
-      <label for="exampleInputEmail1">Name</label>
-      <input type="text" class="form-control form-success" id="exampleInputEmail1" aria-describedby="emailHelp"
-        placeholder="Name">
-      <small id="emailHelp" class="form-text text-success">HelpText or Success Message</small>
-    </div>
-    <div class="form-group">
-      <label for="exampleInputEmail1">Email</label>
-      <input type="email" class="form-control form-error" id="exampleInputEmail1" aria-describedby="emailHelp"
-        placeholder="Email Address">
-      <small id="emailHelp" class="form-text text-danger">HelpText or Error Message</small>
-    </div>
-    <div class="form-group">
-      <label for="exampleInputEmail1">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-      <div class="dp-po-form-password">
-        <h4 class="dp-po-form-password-title">Please ensure the following</h4>
-        <ul class="dp-po-form-password-list">
-          <li class="dp-po-form-password-item"><i class="dp-po-icon far fa-check"></i> Length must be greater than 8
-            characters</li>
-          <li class="dp-po-form-password-item"><i class="dp-po-icon far fa-check"></i> Password must contain numbers
-          </li>
-          <li class="dp-po-form-password-item"><i class="dp-po-icon far fa-check"></i> Password must have at least one
-            symbol</li>
-        </ul>
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="exampleInputEmail1">Confirm password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm Password">
-    </div>
-    <div class="form-group">
-      <label for="exampleFormControlSelect1">Timezone</label>
-      <select class="form-control" id="exampleFormControlSelect1">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
-    </div>
-    <div class="form-group dp-po-form-captcha">
-      <div class="row align-items-center no-gutters">
-        <div class="col-sm-5">
-          <label for="exampleInputEmail1">CAPTCHA</label>
-          <div class="dp-po-form-captcha-text"></div>
-        </div>
-        <div class="col-sm-2 text-center">
-          <label for="exampleInputEmail1">&nbsp;</label>
-          <a href="" class="dp-po-form-captcha-reload"><i class="dp-po-icon far fa-sync"></i></a>
-        </div>
-        <div class="col-sm-5">
-          <label for="exampleInputEmail1">&nbsp;</label>
-          <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Insert text">
-        </div>
-      </div>
-      <small id="emailHelp" class="form-text">To prove you are human, please insert the text you can see in the box
-        above.</small>
-
-    </div>
-    <button type="submit" class="btn btn-primary btn-lg">Register</button>
+          <div class="col-sm-3">
+            <div class="dp-po-guides-search">
+  <form class="dp-po-guides-search-form">
+    <input type="text" name="" placeholder="Search table of contents"></input>
+    <button type="submit"> <i class="dp-po-icon far fa-search"></i></button>
   </form>
-</section>
+  <div class="dp-po-guides-search-block">
+    <div class="dp-po-guides-search-content">
+      <a href="javascript:void(0)" class="dp-po-guides-search-content-title collapsed" data-toggle="collapse"
+        data-target="#collapseItem1" aria-expanded="false" aria-controls="collapseItem1">ADMIN GUIDE
+        PART I <i class="dp-po-icon far fa-angle-down"></i>
+      </a>
+      <ul class="dp-po-guides-search-content-list collapse" id="collapseItem1">
+        <li class="dp-po-guides-search-content-item">
+          <a href="" class="dp-po-guides-search-content-link"> AUTHENTICATION AND SSO</a>
+          <ul class="dp-po-guides-search-content-suplist">
+            <li class="dp-po-guides-search-content-supitem">
+              <a href="" class="dp-po-guides-search-content-suplink">Filtering a usersource</a>
+            </li>
+            <li class="dp-po-guides-search-content-supitem">
+              <a href="" class="dp-po-guides-search-content-suplink">Importing user data</a>
+            </li>
+            <li class="dp-po-guides-search-content-supitem">
+              <a href="" class="dp-po-guides-search-content-suplink">Active Directory setup</a>
+            </li>
+            <li class="dp-po-guides-search-content-supitem">
+              <a href="" class="dp-po-guides-search-content-suplink">Azure AD Setup</a>
+            </li>
+            <li class="dp-po-guides-search-content-supitem">
+              <a href="" class="dp-po-guides-search-content-suplink active">LDAP</a>
+              <ul class="dp-po-guides-search-content-sublist">
+                <li class="dp-po-guides-search-content-subitem">
+                  <a href="" class="dp-po-guides-search-content-sublink active">LDAP Setup</a>
+                  <ul class="dp-po-guides-search-content-underlist">
+                    <li class="dp-po-guides-search-content-underitem">
+                      <a href="" class="dp-po-guides-search-content-underlink active">Increasing sync speed</a>
+                    </li>
+                    <li class="dp-po-guides-search-content-underitem">
+                      <a href="" class="dp-po-guides-search-content-underlink ">Filtering user records</a>
+                    </li>
+                    <li class="dp-po-guides-search-content-underitem">
+                      <a href="" class="dp-po-guides-search-content-underlink">Additional user data</a>
+                    </li>
+                    <li class="dp-po-guides-search-content-underitem">
+                      <a href="" class="dp-po-guides-search-content-underlink">Working with data collections</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dp-po-guides-search-content-subitem">
+                  <a href="" class="dp-po-guides-search-content-sublink">JSON Web Token setup</a>
+                </li>
+                <li class="dp-po-guides-search-content-subitem">
+                  <a href="" class="dp-po-guides-search-content-sublink">SAML setup</a>
+                </li>
+                <li class="dp-po-guides-search-content-subitem">
+                  <a href="" class="dp-po-guides-search-content-sublink">Database auth setup</a>
+                </li>
+                <li class="dp-po-guides-search-content-subitem">
+                  <a href="" class="dp-po-guides-search-content-sublink">OneLogin setup</a>
+                </li>
+                <li class="dp-po-guides-search-content-subitem">
+                  <a href="" class="dp-po-guides-search-content-sublink">Okta setup</a>
+                </li>
+                <li class="dp-po-guides-search-content-subitem">
+                  <a href="" class="dp-po-guides-search-content-sublink">Google+ setup</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dp-po-guides-search-content-supitem">
+              <a href="" class="dp-po-guides-search-content-suplink">Wiacts Nopassword setup</a>
+            </li>
+            <li class="dp-po-guides-search-content-supitem">
+              <a href="" class="dp-po-guides-search-content-suplink">OpenID Connect setup</a>
+            </li>
+          </ul>
+        </li>
+        <li class="dp-po-guides-search-content-item">
+          <a href="" class="dp-po-guides-search-content-link"> INTEGRATION</a>
+        </li>
+        <li class="dp-po-guides-search-content-item">
+          <a href="" class="dp-po-guides-search-content-link"> LABELS</a>
+        </li>
+        <li class="dp-po-guides-search-content-item">
+          <a href="" class="dp-po-guides-search-content-link">AGENT INTERFACE OPTIONS
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+          </div>
+          <div class="col-sm-6">
+            <div class="dp-po-block dp-po-section">
 
             </div>
-            <div class="dp-po-block">
-              <div class="dp-po-register-success">
-                <i class="dp-po-icon fal fa-user"></i>
-                <h2 class="dp-po-register-success-title">Thank you for registering</h2>
-                <p class="dp-po-register-success-msg">We’ve sent you an email to name@something.com<br />Please validate
-                  your
-                  email address to access your support centre.</p>
-                <a href="" class="dp-po-register-success-link">Resend registration email</a>
-              </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="dp-po-guides-content">
+              <h3 class="dp-po-guides-content-title">Contents</h3>
+              <ul class="dp-po-guides-content-list">
+                <li class="dp-po-guides-content-item">
+                  <a href="" class="dp-po-guides-content-link active"><i class="dp-po-icon fal fa-angle-right"></i> LDPA
+                    set up </a>
+                </li>
+                <li class="dp-po-guides-content-item">
+                  <a href="" class="dp-po-guides-content-link"><i class="dp-po-icon fal fa-angle-right"></i> Increasing
+                    sync speed </a>
+                </li>
+                <li class="dp-po-guides-content-item">
+                  <a href="" class="dp-po-guides-content-link"><i class="dp-po-icon fal fa-angle-right"></i> Filtering
+                    user records </a>
+                </li>
+                <li class="dp-po-guides-content-item">
+                  <a href="" class="dp-po-guides-content-link"><i class="dp-po-icon fal fa-angle-right"></i> Additional
+                    user data </a>
+                </li>
+                <li class="dp-po-guides-content-item">
+                  <a href="" class="dp-po-guides-content-link"><i class="dp-po-icon fal fa-angle-right"></i> Working
+                    with data collections </a>
+                </li>
+              </ul>
+            </div>
+            <div class="dp-po-guides-meta">
+              <div class="dp-po-post-avatars">
+  <ul class="dp-po-post-avatars-list">
+    <li class="dp-po-post-avatars-item">
+      <a href="javascript:void(0)" class="dp-po-post-avatars-link" data-toggle="tooltip" data-placement="bottom"
+        title="Amanda Kahli">
+        <img class="dp-po-post-avatars-image" src="/portal-components/portal-style/static/img/docs/avatar.png">
+      </a>
+    </li>
+    <li class="dp-po-post-avatars-item">
+      <a href="javascript:void(0)" class="dp-po-post-avatars-link" data-toggle="tooltip" data-placement="bottom"
+        title="Jimmy Nicole">
+        <img class="dp-po-post-avatars-image" src="/portal-components/portal-style/static/img/docs/avatar.png">
+      </a>
+    </li>
+    <li class="dp-po-post-avatars-item">
+      <a href="javascript:void(0)" class="dp-po-post-avatars-link" data-toggle="tooltip" data-placement="bottom"
+        title="Nicholas Green">
+        <span class="dp-po-post-avatars-name">NG</span>
+      </a>
+    </li>
+    <li class="dp-po-post-avatars-item">
+      <a href="javascript:void(0)" class="dp-po-post-avatars-link" data-toggle="tooltip" data-placement="bottom"
+        title="Jeff Audy">
+        <img class="dp-po-post-avatars-image" src="/portal-components/portal-style/static/img/docs/avatar.png">
+      </a>
+    </li>
+
+    <li class="dp-po-post-avatars-item">
+      <a href="javascript:void(0)" class="dp-po-post-avatars-link" data-toggle="tooltip" data-placement="bottom"
+        title="Stephine Jolly">
+        <span class="dp-po-post-avatars-name">SJ</span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+              <br />
+              <p>Published: <strong>23 Oct, 2019</strong></p>
+              <p>Last updated: <strong>30 Oct, 2019</strong></p>
             </div>
           </div>
         </div>
