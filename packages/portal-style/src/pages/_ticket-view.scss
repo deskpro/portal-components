@@ -382,8 +382,10 @@
       }
     }
   }
-  input[type=radio]:disabled ~ .label {
+
+  input[type=radio]:disabled~.label {
     .dp-po-ticket-modal-rating .dp-po-icon {
+
       .fa-primary,
       .fa-secondary {
         fill: $grey-light;
