@@ -8,7 +8,7 @@
   position: relative;
 
   &-form {
-    max-width: 750px;
+    max-width: 860px;
     position: absolute;
     top: calc(50% - 30px);
     width: 100%;
@@ -16,7 +16,7 @@
     input[type="search"] {
       width: 100%;
       background: $white;
-      border: 1px solid $brand-primary;
+      border: 2px solid $brand-primary;
       border-radius: 4px;
       padding: 13px 60px;
       @include typo($s23, 400, 'head');
@@ -24,6 +24,10 @@
       outline: none;
 
       &:focus {}
+
+      &.opened {
+        border-radius: 4px 4px 0 0;
+      }
     }
 
     button[type="submit"] {
@@ -65,11 +69,12 @@
   &-hint {
     position: absolute;
     background: $white;
-    border-radius: 4px;
+    border-radius: 0 0 4px 4px;
     display: block;
     width: 100%;
     z-index: 1;
     border: 2px solid $brand-primary;
+    border-top: none;
     box-shadow: 6.02308px 6.02308px 6.02308px rgba(0, 0, 0, 0.15);
 
     &-viewall {
@@ -82,7 +87,7 @@
     }
 
     &-tickets {
-      padding: 20px 20px 0;
+      padding: 14px 20px 0;
       #{$self}-list {
         padding: 0;
       }
@@ -115,6 +120,24 @@
       .dp-po-icon {
         margin-right: 10px;
         font-size: 20px;
+      }
+    }
+    & .no-results #{$self}-hint-header {
+      &-title {
+        color: $grey-dark;
+        span {
+          background-color: $grey;
+        }
+      }
+      .dp-po-icon {
+        .fa-primary {
+          fill: $grey;
+          opacity: 0.4;
+        }
+        .fa-secondary {
+          fill: $grey;
+          opacity: 1;
+        }
       }
     }
   }
@@ -188,12 +211,28 @@
         text-decoration: none;
         background: $white;
       }
+
+      &.no-results {
+        color: $grey-dark;
+        &:hover {
+          background: $grey-lightest;
+          color: $grey-dark;
+          cursor: initial;
+        }
+        span {
+          background-color: $grey;
+        }
+        #{$self}-tabs-image, #{$self}-tabs-image svg {
+          fill: $grey-dark;
+        }
+      }
     }
 
-    &-image {
+    &-image, &-image svg {
       max-width: 20px;
       max-height: 20px;
       margin-right: 5px;
+      fill: var(--brand-primary);
     }
   }
 
