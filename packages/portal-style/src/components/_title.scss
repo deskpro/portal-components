@@ -29,4 +29,32 @@
       font-weight: 300;
     }
   }
+
+  &-search {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    padding-left: 20px;
+    position: relative;
+
+    &-text {
+      @include typo($s23, 400, 'head');
+      margin: 0 0 5px;
+    }
+
+    span {
+      color: $brand-primary;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 35px;
+      width: 1px;
+      background: $grey;
+    }
+  }
 }

@@ -1,6 +1,11 @@
 .dp-po-search {
-  $self: '.dp-po-search';
-  background: linear-gradient(90deg, var(--brand-primary-d-100) 0%, var(--brand-primary) 49.48%, var(--brand-primary-l-100) 100%);
+  $self: ".dp-po-search";
+  background: linear-gradient(
+    90deg,
+    var(--brand-primary-d-100) 0%,
+    var(--brand-primary) 49.48%,
+    var(--brand-primary-l-100) 100%
+  );
   height: 240px;
   display: flex;
   align-items: center;
@@ -19,11 +24,12 @@
       border: 2px solid $brand-primary;
       border-radius: 4px;
       padding: 13px 60px;
-      @include typo($s23, 400, 'head');
+      @include typo($s23, 400, "head");
       color: $grey-dark;
       outline: none;
 
-      &:focus {}
+      &:focus {
+      }
 
       &.opened {
         border-radius: 4px 4px 0 0;
@@ -40,7 +46,7 @@
       font-size: 26px;
       padding: 0;
       color: $brand-primary;
-      background-color: white;
+      background-color: $white;
     }
   }
 
@@ -88,12 +94,15 @@
 
     &-tickets {
       padding: 14px 20px 0;
+
       #{$self}-list {
         padding: 0;
       }
+
       #{$self}-hint-viewall {
         padding: 0;
       }
+
       #{$self}-item:first-child #{$self}-link {
         border-top: 1px solid $grey-lighter;
       }
@@ -101,7 +110,7 @@
 
     &-header {
       &-title {
-        @include typo($s19, 500, 'head');
+        @include typo($s19, 500, "head");
         display: flex;
         align-items: center;
 
@@ -126,15 +135,18 @@
   &-hint-tickets.no-results #{$self}-hint-header {
     &-title {
       color: $grey-dark;
+
       span {
         background-color: $grey;
       }
     }
+
     .dp-po-icon {
       .fa-primary {
         fill: $grey;
         opacity: 0.4;
       }
+
       .fa-secondary {
         fill: $grey;
         opacity: 1;
@@ -191,7 +203,7 @@
 
         &:before,
         &:after {
-          content: '';
+          content: "";
           height: 2px;
           width: 100%;
           position: absolute;
@@ -214,21 +226,26 @@
 
       &.no-results {
         color: $grey-dark;
+
         &:hover {
           background: $grey-lightest;
           color: $grey-dark;
           cursor: initial;
         }
+
         span {
           background-color: $grey;
         }
-        #{$self}-tabs-image, #{$self}-tabs-image svg {
+
+        #{$self}-tabs-image,
+        #{$self}-tabs-image svg {
           fill: $grey-dark;
         }
       }
     }
 
-    &-image, &-image svg {
+    &-image,
+    &-image svg {
       max-width: 20px;
       max-height: 20px;
       margin-right: 5px;
@@ -237,10 +254,8 @@
   }
 
   &-results {
-    #{$self}-tabs {
-      &-list {
-        margin: 0 -30px;
-      }
+    .dp-po-block {
+      padding: 0;
     }
   }
 
@@ -266,27 +281,127 @@
     }
   }
 
-  &-back {
-    background: $grey-lighter;
-    display: inline-flex;
-    padding: 15px;
-    position: absolute;
-    left: -30px;
-    top: 0;
-    height: 50px;
-    z-index: 1;
+  &-sidebar {
+    background: $white;
+    border: 1px solid $grey-light;
+    border-radius: 4px;
+    padding: 5px 0;
 
-    .dp-po-icon {
+    &-list {
+      margin: 0;
+      padding: 0;
+    }
 
-      font-size: 24px;
-      line-height: 0;
+    &-item {
+      list-style: none;
     }
 
     &-link {
-      color: $grey;
+      display: flex;
+      align-items: center;
+      @include typo($s19, 400, "head");
+      color: $grey-dark;
+      padding: 12px 20px;
+      position: relative;
+
+      &.active {
+        background: $info-light;
+        color: $brand-primary;
+      }
+
+      &.disabled {
+        #{$self}-sidebar {
+          &-count {
+            background: $grey;
+          }
+
+          &-image {
+            filter: grayscale(100%);
+          }
+        }
+      }
 
       &:hover {
-        color: $brand-primary;
+      }
+    }
+
+    &-image {
+      margin-right: 10px;
+      width: 24px;
+    }
+
+    &-count {
+      @include typo($s12, 600, "body");
+      background: $brand-primary;
+      color: $white;
+      border-radius: 2px;
+      position: absolute;
+      right: 20px;
+      padding: 1px 3px;
+    }
+  }
+
+  &-details {
+    &-list {
+      margin: 0;
+      padding: 0;
+    }
+
+    &-item {
+      list-style: none;
+      border-bottom: 1px solid $grey-lighter;
+      padding: 12px 0;
+
+      &:first-child {
+        padding-top: 0;
+      }
+
+      &:last-child {
+        padding-bottom: 0;
+        border: none;
+      }
+    }
+
+    &-link {
+      position: relative;
+      display: block;
+      color: $grey-darkest;
+
+      &:hover {
+        text-decoration: none;
+        #{$self}-details {
+          &-title {
+            text-decoration: underline;
+          }
+          &-tag {
+            text-decoration: none;
+            color: $grey-darkest;
+          }
+        }
+      }
+    }
+
+    .dp-po-time {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    &-title {
+      margin: 0;
+    }
+
+    &-tag {
+      display: inline-flex;
+      background: $grey-lightest;
+      border-radius: 4px;
+      font-size: $s12;
+      align-items: center;
+      padding: 5px;
+      margin-top: 10px;
+      .dp-po-icon {
+        color: $grey;
+        margin-right: 5px;
       }
     }
   }

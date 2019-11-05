@@ -1,0 +1,196 @@
+.dp-po-guides-search {
+  background: $white;
+  border: 1px solid $grey-light;
+  border-radius: 4px;
+
+  &-form {
+    padding: 20px;
+    border-bottom: 1px solid $grey-light;
+    position: relative;
+    width: 100%;
+
+    input[type="text"] {
+      width: 100%;
+      background: $white;
+      border: 1px solid $grey-light;
+      border-radius: 4px;
+      padding: 10px 50px;
+      font-size: $p2-font-size;
+      color: $grey-dark;
+      outline: none;
+    }
+
+    button[type="submit"] {
+      position: absolute;
+      border: none;
+      height: 32px;
+      left: 25px;
+      position: absolute;
+      top: calc(50% - 16px);
+      width: 32px;
+      font-size: 20px;
+      padding: 0;
+      color: $brand-primary;
+      background-color: $white;
+    }
+
+  }
+
+  &-block {
+    padding: 20px;
+  }
+
+  &-content {
+    &-title {
+      background: $info-light;
+      color: $grey-darkest;
+
+      @include typo($s17, 500, 'head');
+      display: block;
+      padding: 10px;
+      border-radius: 2px;
+
+      .dp-po-icon {
+        float: right;
+        color: $brand-primary;
+        font-size: 20px;
+        line-height: 0;
+        transform: rotate(180deg);
+      }
+
+      &:hover {
+        text-decoration: none;
+        background: $info-light;
+        color: $grey-darkest;
+      }
+
+      &.collapsed {
+        background: $grey-lighter;
+        color: $grey-dark;
+
+        .dp-po-icon {
+          transform: rotate(0);
+        }
+
+        &:hover {
+          text-decoration: none;
+          background: $info-light;
+          color: $grey-darkest;
+        }
+      }
+    }
+
+    &-list {
+      margin: 0;
+      padding: 10px;
+    }
+
+    &-item {
+      list-style: none;
+      margin-top: 10px;
+    }
+
+    &-link {
+      @include typo($s15, 700, 'body');
+      color: $grey-darkest;
+      text-transform: uppercase;
+    }
+
+    &-suplist {
+      margin: 0;
+      padding: 0 0 0 20px;
+    }
+
+    &-supitem {
+      list-style: none;
+      margin-top: 10px;
+    }
+
+    &-suplink {
+      @include typo($s15, 400, 'body');
+      color: $grey-darkest;
+    }
+
+    &-sublist {
+      margin: 0;
+      padding: 0 0 0 20px;
+      position: relative;
+
+      &:before {
+        content: '';
+        width: 2px;
+        height: calc(100% - 4px);
+        position: absolute;
+        left: 0;
+        top: 3px;
+        background: $grey-light;
+      }
+    }
+
+    &-subitem {
+      list-style: none;
+      margin-top: 10px;
+    }
+
+    &-sublink {
+      @include typo($s15, 400, 'body');
+      color: $grey-darkest;
+      position: relative;
+
+      &.active {
+        color: $brand-primary;
+
+        &:before {
+          content: '';
+          width: 2px;
+          height: 100%;
+          position: absolute;
+          left: -20px;
+          top: 0;
+          background: $brand-primary;
+        }
+      }
+    }
+
+    &-underlist {
+      margin: 0;
+      padding: 0 0 0 20px;
+      position: relative;
+
+      &:before {
+        content: '';
+        width: 2px;
+        height: calc(100% - 4px);
+        position: absolute;
+        left: 0;
+        top: 3px;
+        background: $grey-light;
+      }
+    }
+
+    &-underitem {
+      list-style: none;
+      margin-top: 10px;
+    }
+
+    &-underlink {
+      @include typo($s15, 400, 'body');
+      color: $grey-darkest;
+      position: relative;
+
+      &.active {
+        color: $brand-primary;
+
+        &:before {
+          content: '';
+          width: 2px;
+          height: 100%;
+          position: absolute;
+          left: -20px;
+          top: 0;
+          background: $brand-primary;
+        }
+      }
+    }
+  }
+}

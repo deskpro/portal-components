@@ -1,0 +1,56 @@
+.dp-po-guides-content {
+  background: $white;
+  border: 1px solid $grey-light;
+  border-radius: 4px;
+  margin: 0 0 25px;
+
+  &-title {
+    @include typo($s17, 500, 'head');
+    color: $grey-dark;
+    border-bottom: 1px solid $grey-light;
+    padding: 15px 20px;
+    margin: 0;
+  }
+
+  &-list {
+    margin: 0;
+    padding: 20px;
+  }
+
+  &-item {
+    display: block;
+  }
+
+  &-link {
+    color: $grey-darkest;
+    display: flex;
+    align-items: center;
+    @include typo($s14, 600, 'body');
+
+    &:hover {
+      color: $brand-primary;
+    }
+
+    &.active {
+      color: $brand-primary;
+
+      .dp-po-icon {
+        opacity: 1;
+      }
+    }
+
+    .dp-po-icon {
+      font-size: 20px;
+      color: $brand-primary;
+      margin-right: 10px;
+      opacity: 0;
+    }
+  }
+}
+
+.dp-po-guides-meta {
+  background: $white;
+  border: 1px solid $grey-light;
+  border-radius: 4px;
+  padding: 20px;
+}
