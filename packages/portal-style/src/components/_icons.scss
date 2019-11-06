@@ -21,8 +21,6 @@
   }
 
   &#{$self}-danger {
-    background: $danger;
-
     svg {
 
       .fa-secondary,
@@ -33,8 +31,6 @@
   }
 
   &#{$self}-purple {
-    background: $purple;
-
     svg {
 
       .fa-secondary,
