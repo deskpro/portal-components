@@ -8,47 +8,233 @@
   <div class="dp-po">
     <main class="dp-po-main dp-po-guides">
       <div class="container-fluid">
-        <%- include('_partials/_guides-header.ejs'); %>
-        <div class="row">
-          <div class="col-sm-3">
-            <%- include('_partials/_guides-search.ejs'); %>
-          </div>
-          <div class="col-sm-6">
-            <div class="dp-po-block dp-po-section">
+        <%- include('_partials/_guides-carousel.ejs'); %>
+      </div>
+      <div class="dp-po-guides-section">
+        <div class="dp-po-guides-wrap">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-3">
+                <%- include('_partials/_guides-search.ejs'); %>
+              </div>
+              <div class="col-sm-6">
+                <div class="dp-po-guides-block">
+                  <div class="dp-po-guides-block-article">
+                    <div class="dp-po-guides-block-header">
+                      <div>
+                        <h2 class="dp-po-guides-block-title">LDAP Set up</h2>
+                        <p class="dp-po-guides-block-chapter"><i class="dp-po-icon fal fa-angle-right"></i> LDAP</p>
+                      </div>
+                      <div class="dp-po-guides-block-extra">
+                        <ul class="dp-po-guides-block-extra-list">
+                          <li class="dp-po-guides-block-extra-item">
+                            <a href="" class="dp-po-guides-block-extra-link"><i class="dp-po-icon fal fa-print"></i></a>
+                          </li>
+                          <li class="dp-po-guides-block-extra-item">
+                            <a href="" class="dp-po-guides-block-extra-link">
+                              <i class="dp-po-icon fal fa-file-pdf"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="dp-po-post-content dp-po-guides-block-content">
+                      <p>The LDAP Authentication app enables you to create user and/or agent accounts from LDAP user
+                        records.</p>
 
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="dp-po-guides-content">
-              <h3 class="dp-po-guides-content-title">Contents</h3>
-              <ul class="dp-po-guides-content-list">
-                <li class="dp-po-guides-content-item">
-                  <a href="" class="dp-po-guides-content-link active"><i class="dp-po-icon fal fa-angle-right"></i> LDPA
-                    set up </a>
-                </li>
-                <li class="dp-po-guides-content-item">
-                  <a href="" class="dp-po-guides-content-link"><i class="dp-po-icon fal fa-angle-right"></i> Increasing
-                    sync speed </a>
-                </li>
-                <li class="dp-po-guides-content-item">
-                  <a href="" class="dp-po-guides-content-link"><i class="dp-po-icon fal fa-angle-right"></i> Filtering
-                    user records </a>
-                </li>
-                <li class="dp-po-guides-content-item">
-                  <a href="" class="dp-po-guides-content-link"><i class="dp-po-icon fal fa-angle-right"></i> Additional
-                    user data </a>
-                </li>
-                <li class="dp-po-guides-content-item">
-                  <a href="" class="dp-po-guides-content-link"><i class="dp-po-icon fal fa-angle-right"></i> Working
-                    with data collections </a>
-                </li>
-              </ul>
-            </div>
-            <div class="dp-po-guides-meta">
-              <%- include('_partials/_post-avatars.ejs'); %>
-              <br />
-              <p>Published: <strong>23 Oct, 2019</strong></p>
-              <p>Last updated: <strong>30 Oct, 2019</strong></p>
+                      <blockquote> You can optionally enable regular syncing of data, so that Deskpro accounts are
+                        regularly
+                        updated with the latest information from the LDAP directory. If you select this option, data
+                        will
+                        automatically be pulled from LDAP daily at 1am (as well as when you manually choose to sync,
+                        which
+                        you can do at any time).</blockquote>
+
+                      <p>To set up LDAP Authentication for users, go to <b>Admin > CRM > Auth & SSO</b>; to install it
+                        for
+                        agents, go to <b>Admin > CRM > Auth & SSO</b>. If you want to use LDAP for both users and
+                        agents,
+                        you should install it in both places.</p>
+                      <ol>
+                        <li>Click + Add and click the LDAP Authentication app.
+                          <ol>
+                            <li>Check Yes, enable LDAP Authentication.</li>
+                            <li>Select Enable Auto Sync if required.</li>
+                          </ol>
+                        </li>
+                      </ol>
+
+                      <div class="dp-po-post-content-note">
+                        <h4 class="dp-po-post-content-note-title">
+                          <i class="dp-po-icon fal fa-info-circle"></i> Note</h4>
+
+                        <p>Account information is sent one-way, from the LDAP directory to Deskpro only. As a result, if
+                          an
+                          account was created via LDAP, you should reset its password, change its primary email address
+                          or
+                          delete it from within the LDAP directory, not from within Deskpro.</p>
+                      </div>
+
+
+                      <p>The LDAP Authentication app enables you to create user and/or agent accounts from LDAP user
+                        records.</p>
+
+                      <figure class="dp-po-post-content-figure">
+                        <img class="dp-po-post-content-image img-fluid"
+                          src="/portal-components/portal-style/static/img/docs/Image.png">
+                      </figure>
+
+                      To set up LDAP Authentication for users, go to Admin > CRM > <a href="">Auth & SSO</a>; to install
+                      it
+                      for agents, go to Admin > Agents > <a href="">Auth & SSO</a>. If you want to use LDAP for both
+                      users
+                      and agents, <i>you should install it in both places</i>.
+
+                      <ul>
+                        <li>Click + Add and click the LDAP Authentication app.
+                          <ul>
+                            <li>Check Yes, enable LDAP Authentication.</li>
+                            <li>Select Enable Auto Sync if required.</li>
+                          </ul>
+                        </li>
+                      </ul>
+
+                      <div class="dp-po-post-content-code">
+                        $DP_CONFIG['debug']['enable_usersource_log'] = false;
+                        $variable
+                        $DP_CONFIG['debug']['enable_usersource_log'] = false;
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="dp-po-guides-block-article">
+                    <div class="dp-po-guides-block-header">
+                      <div>
+                        <h2 class="dp-po-guides-block-title">LDAP Set up</h2>
+                        <p class="dp-po-guides-block-chapter"><i class="dp-po-icon fal fa-angle-right"></i> LDAP</p>
+                      </div>
+                      <div class="dp-po-guides-block-extra">
+                        <ul class="dp-po-guides-block-extra-list">
+                          <li class="dp-po-guides-block-extra-item">
+                            <a href="" class="dp-po-guides-block-extra-link"><i class="dp-po-icon fal fa-print"></i></a>
+                          </li>
+                          <li class="dp-po-guides-block-extra-item">
+                            <a href="" class="dp-po-guides-block-extra-link">
+                              <i class="dp-po-icon fal fa-file-pdf"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="dp-po-post-content dp-po-guides-block-content">
+                      <p>The LDAP Authentication app enables you to create user and/or agent accounts from LDAP user
+                        records.</p>
+
+                      <blockquote> You can optionally enable regular syncing of data, so that Deskpro accounts are
+                        regularly
+                        updated with the latest information from the LDAP directory. If you select this option, data
+                        will
+                        automatically be pulled from LDAP daily at 1am (as well as when you manually choose to sync,
+                        which
+                        you can do at any time).</blockquote>
+
+                      <p>To set up LDAP Authentication for users, go to <b>Admin > CRM > Auth & SSO</b>; to install it
+                        for
+                        agents, go to <b>Admin > CRM > Auth & SSO</b>. If you want to use LDAP for both users and
+                        agents,
+                        you should install it in both places.</p>
+                      <ol>
+                        <li>Click + Add and click the LDAP Authentication app.
+                          <ol>
+                            <li>Check Yes, enable LDAP Authentication.</li>
+                            <li>Select Enable Auto Sync if required.</li>
+                          </ol>
+                        </li>
+                      </ol>
+
+                      <div class="dp-po-post-content-note">
+                        <h4 class="dp-po-post-content-note-title">
+                          <i class="dp-po-icon fal fa-info-circle"></i> Note</h4>
+
+                        <p>Account information is sent one-way, from the LDAP directory to Deskpro only. As a result, if
+                          an
+                          account was created via LDAP, you should reset its password, change its primary email address
+                          or
+                          delete it from within the LDAP directory, not from within Deskpro.</p>
+                      </div>
+
+
+                      <p>The LDAP Authentication app enables you to create user and/or agent accounts from LDAP user
+                        records.</p>
+
+                      <figure class="dp-po-post-content-figure">
+                        <img class="dp-po-post-content-image img-fluid"
+                          src="/portal-components/portal-style/static/img/docs/Image.png">
+                      </figure>
+
+                      To set up LDAP Authentication for users, go to Admin > CRM > <a href="">Auth & SSO</a>; to install
+                      it
+                      for agents, go to Admin > Agents > <a href="">Auth & SSO</a>. If you want to use LDAP for both
+                      users
+                      and agents, <i>you should install it in both places</i>.
+
+                      <ul>
+                        <li>Click + Add and click the LDAP Authentication app.
+                          <ul>
+                            <li>Check Yes, enable LDAP Authentication.</li>
+                            <li>Select Enable Auto Sync if required.</li>
+                          </ul>
+                        </li>
+                      </ul>
+
+                      <div class="dp-po-post-content-code">
+                        $DP_CONFIG['debug']['enable_usersource_log'] = false;
+                        $variable
+                        $DP_CONFIG['debug']['enable_usersource_log'] = false;
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="dp-po-guides-contents">
+                  <h3 class="dp-po-guides-contents-title">Contents</h3>
+                  <ul class="dp-po-guides-contents-list">
+                    <li class="dp-po-guides-contents-item">
+                      <a href="" class="dp-po-guides-contents-link active"><i class="dp-po-icon fal fa-angle-right"></i>
+                        LDPA
+                        set up </a>
+                    </li>
+                    <li class="dp-po-guides-contents-item">
+                      <a href="" class="dp-po-guides-contents-link"><i class="dp-po-icon fal fa-angle-right"></i>
+                        Increasing
+                        sync speed </a>
+                    </li>
+                    <li class="dp-po-guides-contents-item">
+                      <a href="" class="dp-po-guides-contents-link"><i class="dp-po-icon fal fa-angle-right"></i>
+                        Filtering
+                        user records </a>
+                    </li>
+                    <li class="dp-po-guides-contents-item">
+                      <a href="" class="dp-po-guides-contents-link"><i class="dp-po-icon fal fa-angle-right"></i>
+                        Additional
+                        user data </a>
+                    </li>
+                    <li class="dp-po-guides-contents-item">
+                      <a href="" class="dp-po-guides-contents-link"><i class="dp-po-icon fal fa-angle-right"></i>
+                        Working
+                        with data collections </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="dp-po-guides-meta">
+                  <%- include('_partials/_post-avatars.ejs'); %>
+                  <br />
+                  <p>Published: <strong>23 Oct, 2019</strong></p>
+                  <p>Last updated: <strong>30 Oct, 2019</strong></p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

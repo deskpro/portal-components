@@ -41,6 +41,11 @@
   }
 
   &-content {
+
+    &-accordion {
+      margin-bottom: 10px;
+    }
+
     &-title {
       background: $info-light;
       color: $grey-darkest;
