@@ -431,6 +431,27 @@
     }]
   });
 
+  $('.dp-po-guides-carousel-list').slick({
+    dots: false,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 5,
+    slidesToScroll: 5,
+    rows: 0,
+    nextArrow: '<button class="dp-po-guides-carousel-arrow dp-po-guides-carousel-arrow-right"><i class="dp-po-icon far fa-angle-right"></i></button>',
+    prevArrow: '<button class="dp-po-guides-carousel-arrow dp-po-guides-carousel-arrow-left"><i class="dp-po-icon far fa-angle-left"></i></button>',
+    responsive: [{
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true,
+        arrows: false,
+      }
+    }]
+  });
+
 </script>
 
 
