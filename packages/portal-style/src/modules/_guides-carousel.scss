@@ -1,4 +1,4 @@
-.dp-po-guides-header {
+.dp-po-guides-carousel {
   margin-bottom: 50px;
 
   &-list {}
@@ -8,6 +8,7 @@
     border: 2px solid $grey-light;
     background: $white;
     display: inline-block;
+    margin: 0 5px;
     max-width: 400px;
 
     &:hover {
@@ -22,7 +23,8 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-    align-items: center;
+    width: 100%;
+    padding: 15px 20px;
 
     .dp-po-icon {
       width: 40px;
@@ -36,6 +38,10 @@
       margin-right: 5px;
       font-size: 20px;
     }
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 
   &-image {
@@ -47,7 +53,6 @@
   &-content {
     display: flex;
     align-items: center;
-    padding: 15px 20px;
     justify-content: space-between;
   }
 
@@ -56,7 +61,7 @@
 
     &-list {
       margin: 0;
-      padding: 0 0 0 30px;
+      padding: 0 20px 0 0;
       display: flex;
       align-items: center;
     }
@@ -87,8 +92,57 @@
       height: 100%;
       background: $grey-light;
       position: absolute;
-      left: 20px;
+      left: -10px;
       top: 0;
+    }
+  }
+
+  .slick-track {
+    margin: 0;
+  }
+
+  &-arrow {
+    position: absolute;
+    border: none;
+    background: $brand-primary;
+    z-index: 9;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    font-size: 30px;
+    color: $white;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    opacity: 0.9;
+    border: 2px solid $brand-primary;
+
+    .dp-po-icon {
+      position: relative;
+      left: -1px;
+    }
+
+    &-right {
+      left: auto;
+      right: 0;
+
+      .dp-po-icon {
+        right: -1px;
+        left: auto;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      background: $white;
+      color: $brand-primary;
+      opacity: 1;
+    }
+
+    &.slick-disabled {
+      opacity: 0 !important;
     }
   }
 }
