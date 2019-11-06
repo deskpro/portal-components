@@ -405,10 +405,7 @@
       }
     }
   }
-}
-.dp-po-section {
-  .dp-po-search-hint-tickets {
-    padding: 0;
-    margin: -20px -10px 0;
+  &-no-results {
+    padding: 30px;
   }
 }
