@@ -1,5 +1,8 @@
 .dp-po-guides-carousel {
+  $self: '.dp-po-guides-carousel';
   margin-bottom: 50px;
+  background: $grey-lightest;
+  min-height: 10px;
 
   &-list {}
 
@@ -143,6 +146,19 @@
 
     &.slick-disabled {
       opacity: 0 !important;
+    }
+  }
+
+  &.sticky {
+    #{$self}-list {
+      position: fixed;
+      width: calc(100% - 30px);
+      top: 30px;
+      left: 15px;
+    }
+
+    #{$self}-image {
+      display: none;
     }
   }
 }
