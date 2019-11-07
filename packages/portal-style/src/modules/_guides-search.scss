@@ -2,6 +2,7 @@
   background: $white;
   border: 1px solid $grey-light;
   border-radius: 4px;
+  height: 100%;
 
   &-form {
     padding: 20px;
@@ -18,6 +19,11 @@
       font-size: $p2-font-size;
       color: $grey-dark;
       outline: none;
+
+      &:focus {
+        color: $brand-primary;
+        border-color: $brand-primary;
+      }
     }
 
     button[type="submit"] {
