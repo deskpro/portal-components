@@ -23,6 +23,11 @@
 
   &-item {
     display: block;
+    margin: 0 0 7px;
+
+    &:last-child {
+      margin: 0;
+    }
   }
 
   &-link {
@@ -30,6 +35,7 @@
     display: flex;
     align-items: center;
     @include typo($s14, 600, 'body');
+    line-height: 1.5;
 
     &:hover {
       color: $brand-primary;
@@ -57,6 +63,24 @@
   border: 1px solid $grey-light;
   border-radius: 4px;
   padding: 20px;
+
+  .dp-po-post-avatars {
+    margin-bottom: 1em;
+
+    &-item,
+    &-link {
+      border-color: $white;
+    }
+  }
+
+  p {
+    color: $grey-dark;
+    font-size: $s16;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
 }
 
 .dp-po-guides-section {
@@ -65,12 +89,21 @@
 }
 
 .dp-po-guides-block {
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-  border: 1px solid $grey-light;
-  background: $white;
+
 
   &-article {
-    padding-bottom: 20px;
+    &:not(:first-child) {
+      margin-top: -2px;
+    }
+
+    &-left {
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+      border: 1px solid $grey-light;
+      background: $white;
+      padding-bottom: 20px;
+    }
+
+    &-right {}
   }
 
   &-header {
@@ -79,18 +112,23 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 1px solid $grey-light;
   }
 
   &-title {
     font-size: $s28;
     margin: 0;
+
+    .dp-po-icon {
+      font-size: 20px;
+    }
   }
 
   &-chapter {
     margin: 0;
     @include typo($s14, 600, 'body');
     color: $grey-dark;
-    display: flex;
+    display: inline-flex;
     align-items: center;
 
     .dp-po-icon {
@@ -98,6 +136,10 @@
       font-size: 20px;
       margin-right: 5px;
       line-height: 0%;
+    }
+
+    &:hover {
+      text-decoration: none;
     }
   }
 

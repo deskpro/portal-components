@@ -18,6 +18,11 @@
       font-size: $p2-font-size;
       color: $grey-dark;
       outline: none;
+
+      &:focus {
+        color: $brand-primary;
+        border-color: $brand-primary;
+      }
     }
 
     button[type="submit"] {

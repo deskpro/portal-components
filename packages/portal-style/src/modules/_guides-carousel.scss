@@ -4,7 +4,9 @@
   background: $grey-lightest;
   min-height: 10px;
 
-  &-list {}
+  &-list {
+    margin: 0 20px;
+  }
 
   &-item {
     border-radius: 4px;
@@ -12,10 +14,15 @@
     background: $white;
     display: inline-block;
     margin: 0 5px;
-    max-width: 400px;
+    max-width: 360px;
 
     &:hover {
       border-color: $brand-primary;
+    }
+
+    &.active {
+      border-color: $brand-primary;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
     }
   }
 
@@ -48,9 +55,13 @@
   }
 
   &-image {
-    border-bottom: 1px solid $grey-light;
+    border-bottom: 2px solid $grey-light;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
+    background-size: cover;
+    height: 126px;
+    width: 100%;
+    margin: 0;
   }
 
   &-content {
@@ -115,7 +126,7 @@
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
     font-size: 30px;
     color: $white;
-    left: 0;
+    left: -21px;
     bottom: 0;
     top: 0;
     margin: auto;
@@ -129,7 +140,7 @@
 
     &-right {
       left: auto;
-      right: 0;
+      right: -21px;
 
       .dp-po-icon {
         right: -1px;
