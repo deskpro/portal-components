@@ -107,18 +107,6 @@
     margin: 0;
     position: relative;
     line-height: 1.5;
-
-    .dp-po-icon {
-      color: $brand-primary;
-      font-size: 20px;
-      /*
-      position: relative;
-      float: right;
-      */
-      line-height: 1.2;
-      position: absolute;
-      margin-left: 10px;
-    }
   }
 
   &-avatar {
@@ -127,8 +115,16 @@
     height: 24px;
     width: 24px;
     position: absolute;
+    left: 15px;
+    bottom: 8px;
+  }
+  &-caret {
+    position: absolute;
     right: 15px;
     bottom: 8px;
+    color: $brand-primary;
+    font-size: 20px;
+    line-height: 1.2;
   }
 
   &-item-seeall {

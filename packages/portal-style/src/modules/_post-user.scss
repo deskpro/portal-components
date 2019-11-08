@@ -4,6 +4,14 @@
   &-list {
     margin: 0;
     padding: 0;
+
+    &-forum-link {
+      color: inherit;
+    }
+  }
+
+  &-category-link {
+    color: inherit;
   }
 
   &-item {

@@ -284,3 +284,11 @@
     }
   }
 }
+.dp-po-tickets-home {
+  .dp-po-pagination {
+    margin-bottom: 25px;
+  }
+  .dp-po-pagination:last-child {
+    margin-bottom: 0;
+  }
+}
