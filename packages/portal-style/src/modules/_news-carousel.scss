@@ -112,11 +112,16 @@
   &-avatar {
     display: inline-block;
     border-radius: 50%;
-    height: 24px;
-    width: 24px;
     position: absolute;
     left: 15px;
     bottom: 8px;
+    span.dp-po-avatar-image,
+    span.dp-po-avatar-name {
+      height: 24px;
+      width: 24px;
+      font-size: 12px;
+      padding: 4px 0;
+    }
   }
   &-caret {
     position: absolute;

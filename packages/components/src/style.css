@@ -8,7 +8,7 @@
   --description-color: #5f768a;
   --light-grey: #9fb3c4;
   --divider-color: #dee4eb;
-    --valid-label: #4eba5c;
+  --valid-label: #4eba5c;
   --box-shadow-30: rgba(39, 41, 86, 0.3);
   --option-background: #eff0f2;
   --checkbox-border: #dce4eb;
@@ -675,6 +675,16 @@
           transition: 0.2s ease all;
         }
       }
+      &.active {
+        border-color: var(--brand-primary);
+        transition: 0.2s ease all;
+        & .dnd {
+          color: var(--brand-primary);
+          & svg [class$=st0] {
+            fill: var(--brand-primary);
+          }
+        }
+      }
     }
     & > ul {
       list-style: none;
@@ -924,6 +934,37 @@
     }
     & .dp-pc_likert_label {
       color: var(--brand-primary);
+    }
+  }
+}
+.dp-progress {
+  width: 100%;
+  margin: 2px 0;
+  &--s {
+    .dp-progress__bar {
+      height: 1px;
+    }
+  }
+  &--m {
+    .dp-progress__bar {
+      height: 2px;
+      border-radius: 1px;
+    }
+  }
+  &--l {
+    .dp-progress__bar {
+      height: 5px;
+      border-radius: 2.5px;
+    }
+  }
+  &--primary {
+    & .dp-progress__bar {
+      background-color: var(--brand-primary);
+    }
+  }
+  &--cta {
+    & .dp-progress__bar {
+      background-color: var(--valid-label);
     }
   }
 }
