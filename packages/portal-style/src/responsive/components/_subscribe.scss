@@ -1,0 +1,23 @@
+@include media-breakpoint-down(sm) {
+  .dp-po-subscribe {
+    $self: '.dp-po-subscribe';
+
+    &-large {
+      #{$self}-btn {
+        font-size: $s15;
+        padding: 4px 10px;
+
+        .dp-po-icon {
+          .fa-check {
+            right: 10px;
+            font-size: 14px;
+          }
+        }
+      }
+
+      .dropdown-menu {
+        width: 300px;
+      }
+    }
+  }
+}

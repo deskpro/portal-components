@@ -1,0 +1,31 @@
+@include media-breakpoint-down(sm) {
+  .dp-po-post-extra-mobile {
+    &-list {
+      margin: 0;
+      padding: 0;
+    }
+
+    &-item {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      color: $grey-darkest;
+      @include typo($s18, 400, 'head');
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      .dp-po-icon {
+        margin-right: 10px;
+        font-size: 24px;
+        width: 30px;
+        text-align: center;
+      }
+    }
+  }
+}

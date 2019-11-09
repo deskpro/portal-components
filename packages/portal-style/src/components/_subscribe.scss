@@ -63,6 +63,24 @@
         color: $success;
       }
     }
+
+    &:hover {
+      background: $brand-primary;
+      color: $white;
+      border-color: $brand-primary;
+
+      .dp-po-icon {
+        .fa-check {
+          display: block;
+          color: $white;
+        }
+
+        svg .fa-primary,
+        svg .fa-secondary {
+          fill: $white;
+        }
+      }
+    }
   }
 
   .show {
@@ -171,6 +189,41 @@
           .fa-check {
             display: block;
             color: $white;
+          }
+        }
+      }
+    }
+
+    #{$self}-activebtn {
+      border-color: $grey-dark;
+      color: $grey-dark;
+
+      .dp-po-icon {
+        .fa-check {
+          display: block;
+          color: $success;
+        }
+
+        svg .fa-primary,
+        svg .fa-secondary {
+          fill: $grey-dark;
+        }
+      }
+
+      &:hover {
+        background: $brand-primary;
+        color: $white;
+        border-color: $brand-primary;
+
+        .dp-po-icon {
+          .fa-check {
+            display: block;
+            color: $white;
+          }
+
+          svg .fa-primary,
+          svg .fa-secondary {
+            fill: $white;
           }
         }
       }

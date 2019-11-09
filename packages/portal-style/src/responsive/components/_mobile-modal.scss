@@ -1,0 +1,22 @@
+.mobile-modal {
+  &.show {
+    display: flex !important;
+    align-items: flex-end;
+  }
+
+  .modal-dialog {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .modal-content {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 10px;
+    min-height: 300px;
+  }
+
+  .modal-header {
+    height: 35px;
+  }
+}

@@ -1,0 +1,11 @@
+@include media-breakpoint-down(sm) {
+  .dp-po-post-mobile-area {
+    border-top: 1px solid $grey-light;
+    border-bottom: 1px solid $grey-light;
+    display: flex;
+    padding: 10px 0;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+}
