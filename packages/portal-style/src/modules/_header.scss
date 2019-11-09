@@ -10,7 +10,6 @@
 
     img {
       max-height: 49px;
-      max-width: 49px;
     }
 
     .dp-po-logo {
@@ -68,6 +67,10 @@
       &:hover {
         color: $grey;
         text-decoration: none;
+      }
+
+      .dp-po-icon {
+        vertical-align: 9px;
       }
     }
 
@@ -169,19 +172,25 @@
     &-link {
       display: flex;
       align-items: center;
-      width: 120px;
+      min-width: 120px;
       justify-content: space-between;
       color: $text-color;
       font-size: $p2-font-size;
+      white-space: nowrap;
 
       &:hover {
         text-decoration: none;
         color: $brand-primary;
       }
 
+      img {
+        margin-right: 10px;
+      }
+
       .dp-po-icon {
         color: $brand-primary;
         font-size: 20px;
+        margin-left: 10px;
       }
     }
 

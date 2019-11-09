@@ -40,7 +40,7 @@ const AJAXSubmit = (function () {
     oAjaxReq.submittedData = oData;
 
     if (config.updateProgress) {
-      oAjaxReq.addEventListener('progress', config.updateProgress);
+      oAjaxReq.upload.addEventListener('progress', config.updateProgress);
     }
     if (config.transferComplete) {
       oAjaxReq.addEventListener('load', config.transferComplete);
@@ -286,9 +286,9 @@ export class FileUploadInput extends React.Component {
           multiple={multiple}
           ref={(c) => { this.dropZone = c; }}
         >
-          {({ getRootProps, getInputProps }) => (
+          {({ getRootProps, getInputProps, isDragActive }) => (
             <div
-              className="dp-pc_file-upload__dropzone"
+              className={classNames('dp-pc_file-upload__dropzone', { active: isDragActive })}
               onMouseEnter={this.handleMouseEnter}
               onMouseLeave={this.handleMouseLeave}
               {...getRootProps()}
@@ -309,10 +309,10 @@ export class FileUploadInput extends React.Component {
                 <DndIcon />
                 {this.i18n.dragNDrop}
               </div>
+              <Progress percent={this.state.progress} />
             </div>
           )}
         </DropZone>
-        <Progress progress={this.state.progress} />
         <ul>
           {Array.from(this.state.files).map(file => (<File
             onRemove={this.handleRemove}
