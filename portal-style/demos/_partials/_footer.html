@@ -118,5 +118,12 @@
     }]
   });
 
+  $('.mobile-modal').on('show.bs.modal', function (e) {
+    $('body').addClass('mobile-modal-open');
+  })
+  $('.mobile-modal').on('hide.bs.modal', function (e) {
+    $('body').removeClass('mobile-modal-open');
+  })
+
 </script>
 
