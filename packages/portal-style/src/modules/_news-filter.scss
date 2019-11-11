@@ -29,7 +29,11 @@
       display: block;
 
       .form-group {
-        margin-bottom: 12px;
+        display: inline-block;
+        margin: 0 0 12px 4px;
+      }
+      .form-group:first-child {
+        margin-left: 25px;
       }
 
       &:last-child {
@@ -163,4 +167,7 @@
       }
     }
   }
+}
+#news_categories {
+  margin-top: 5px;
 }
