@@ -159,6 +159,26 @@
                       </div>
                     </div>
                     <div class="form-group">
+                      <label class=" title required" for="ticket_department">Department *</label>
+                      <div class="with-dpx">
+                        <select id="ticket_department" name="ticket[department]" required="required" class="form-control" placeholder="Choose">
+                          <option value="" selected="selected" disabled>Choose</option>
+                          <option data-id="1" data-name="Support" value="1">Support</option>
+                          <option data-id="2" data-name="Sales" value="2">Sales</option>
+                          <option data-id="5" data-name="Widgets" value="5">Widgets</option>
+                          <option data-id="6" data-name="Regulation and Control of Magical Creatures" value="6">Regulation and Control of Magical Creatures</option>
+                          <option data-parent="6" data-id="7" data-name="Regulation" value="7">— Regulation</option>
+                          <option data-parent="6" data-id="8" data-name="Control" value="8">— Control</option>
+                          <option data-id="9" data-name="Hotdogs" value="9">Hotdogs</option>
+                        </select>
+                        <i class="far fa-angle-down fa-lg"></i>
+                      </div>
+                    </div>
+                    <div class="column-full deskpro-form-widget field_department" data-field="department" style="">
+
+
+                    </div>
+                    <div class="form-group">
                       <label for="exampleInputEmail1">Type of inquiry *</label>
                       <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                         placeholder="Reports">
