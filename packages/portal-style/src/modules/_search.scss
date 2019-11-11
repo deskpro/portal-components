@@ -57,6 +57,10 @@
 
   &-item {
     list-style: none;
+    & .dp-po-time .dp-po-icon {
+      margin-left: 7px;
+      margin-right: 0;
+    }
   }
 
   &-link {
