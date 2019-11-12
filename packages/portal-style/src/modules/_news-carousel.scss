@@ -261,6 +261,23 @@
   .slick-slide {
     height: inherit !important;
   }
+
+  & .unloaded {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row;
+
+    #{$self}-item {
+      height: 100%;
+      vertical-align: top;
+      flex-grow: 1;
+      flex-basis: 0;
+
+      &:nth-child(n+5) {
+        display: none;
+      }
+    }
+  }
 }
 
 /*
