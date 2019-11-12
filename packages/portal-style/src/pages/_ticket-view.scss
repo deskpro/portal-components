@@ -39,6 +39,11 @@
         }
       }
 
+      .remove-cc-from-reply {
+        margin-left: 10px;
+        color: $grey;
+      }
+
       &:after {
         content: '';
         width: 1px;
