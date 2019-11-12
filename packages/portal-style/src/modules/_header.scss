@@ -198,4 +198,95 @@
       font-size: $p2-font-size;
     }
   }
+
+  .dp-po-admin-menu {
+    $self: '.dp-po-admin-menu';
+    margin-left: 30px;
+
+    &-link {
+      display: flex;
+      align-items: center;
+      color: $grey-darkest;
+
+      .fa-angle-down {
+        margin-left: 10px;
+      }
+
+      &:hover {
+        text-decoration: none;
+        color: $brand-primary;
+
+        .dp-po-icon-round {
+          background: $brand-primary;
+        }
+      }
+    }
+
+    .dp-po-icon-round {
+      background: $grey;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      color: $white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+    }
+
+    &.show {
+      #{$self}-link {
+        .dp-po-icon-round {
+          background: $brand-primary;
+        }
+      }
+    }
+
+    .dropdown-item {
+      &:hover {
+        .dp-po-icon-round {
+          background: $brand-primary;
+        }
+      }
+    }
+  }
+
+  .dp-po-admin-edit {
+    padding-right: 30px;
+    position: relative;
+
+    .btn {
+      &:hover {
+        border-color: $brand-primary;
+        background: none;
+        color: $brand-primary;
+      }
+    }
+
+    &:after {
+      content: "";
+      height: 100%;
+      width: 1px;
+      background: #d3d6d7;
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  .dp-po-admin-wrapper {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    position: relative;
+    padding-right: 30px;
+
+    &:after {
+      content: "";
+      height: 100%;
+      width: 1px;
+      background: #d3d6d7;
+      position: absolute;
+      right: 0;
+    }
+  }
 }
