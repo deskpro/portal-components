@@ -1,0 +1,17 @@
+@include media-breakpoint-down(sm) {
+  .dp-po-footer {
+    &-copyright {
+
+      &:before,
+      &:after {
+        width: 70px;
+        left: -80px;
+      }
+
+      &:after {
+        left: auto;
+        right: -80px;
+      }
+    }
+  }
+}
