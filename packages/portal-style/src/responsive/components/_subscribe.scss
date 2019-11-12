@@ -1,6 +1,7 @@
 @include media-breakpoint-down(sm) {
   .dp-po-subscribe {
     $self: '.dp-po-subscribe';
+    margin: 0;
 
     &-large {
       #{$self}-btn {
