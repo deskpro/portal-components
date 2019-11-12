@@ -234,6 +234,11 @@
       margin-right: 10px;
     }
 
+    hr {
+      margin-left: 1.25rem;
+      margin-right: 1.25rem;
+    }
+
     &.show {
       #{$self}-link {
         .dp-po-icon-round {
@@ -243,6 +248,7 @@
     }
 
     .dropdown-item {
+      font-size: 15px;
       &:hover {
         .dp-po-icon-round {
           background: $brand-primary;
@@ -252,24 +258,20 @@
   }
 
   .dp-po-admin-edit {
-    padding-right: 30px;
-    position: relative;
+    margin-top: 10px;
+    text-align: center;
+    padding: 0 1.25rem;
 
     .btn {
+      width: 100%;
+      justify-content: left;
+      padding-left: 10px;
+      padding-right: 10px;
       &:hover {
         border-color: $brand-primary;
         background: none;
         color: $brand-primary;
       }
-    }
-
-    &:after {
-      content: "";
-      height: 100%;
-      width: 1px;
-      background: #d3d6d7;
-      position: absolute;
-      right: 0;
     }
   }
 
