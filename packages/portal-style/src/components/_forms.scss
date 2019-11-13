@@ -141,13 +141,16 @@ select.form-control:not([multiple="multiple"]) {
     //background-repeat: no-repeat;
     //background-size: 0.65em auto;
   }
+
   & option:disabled {
     color: $grey-lightest;
   }
+
   &+i {
     position: absolute;
     top: 38px;
     right: 15px;
+
     & svg {
       fill: $brand-primary;
       color: $brand-primary;
@@ -221,17 +224,20 @@ select.form-control:not([multiple="multiple"]) {
     }
   }
 }
+
 .dp-po-form-check-compact {
   label {
     line-height: 15px;
     padding: 0 0 0 25px;
     color: $grey-dark;
+
     &:before {
       height: 14px;
       width: 14px;
       border-radius: 0;
       border: 1px solid $grey;
     }
+
     &:after {
       background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='11' height='10' viewBox='0 0 11 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.318604 5.9257C0.0812988 5.65139 0.0812988 5.18506 0.318604 4.91075L0.449121 4.75988C0.686426 4.48557 1.08984 4.48557 1.32715 4.75988L3.60527 7.39326L9.58535 0.480635C9.82266 0.206325 10.2261 0.206325 10.4634 0.480635L10.5939 0.631506C10.8312 0.905817 10.8312 1.37214 10.5939 1.64646L3.60527 9.7249L0.318604 5.9257Z' fill='white'/%3E%3C/svg%3E");
       color: $white;
@@ -239,6 +245,7 @@ select.form-control:not([multiple="multiple"]) {
       height: 14px;
     }
   }
+
   input[type="checkbox"] {
     &:checked {
       &+label:before {
@@ -257,6 +264,7 @@ select.form-control:not([multiple="multiple"]) {
     border: 2px dashed $grey-light;
     border-radius: 3px;
     cursor: pointer;
+    flex-wrap: wrap;
 
     &:hover {
       border-color: $brand-primary;

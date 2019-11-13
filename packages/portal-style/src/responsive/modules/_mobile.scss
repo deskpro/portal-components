@@ -1,0 +1,25 @@
+@include media-breakpoint-down(sm) {
+  .dp-po-mobile {
+    &-collapse {
+      position: relative;
+      border-bottom: 1px solid $grey-light;
+      padding-bottom: 10px;
+      cursor: pointer;
+
+      .dp-po-icon {
+        position: absolute;
+        font-size: 30px;
+        right: 0;
+        top: 0px;
+        line-height: 1;
+        color: $brand-primary;
+      }
+
+      &.collapsed {
+        .dp-po-icon {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}

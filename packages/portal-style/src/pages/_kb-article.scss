@@ -64,7 +64,7 @@
 
   &-image {
     outline: 1px solid $grey-light;
-    margin: 10px;
+    padding: 10px;
   }
 
   &-figcaption {
@@ -129,10 +129,12 @@
       font-size: 26px;
       color: $text-color;
     }
+
     span {
       margin-left: 5px;
       font-size: 14px;
     }
+
     .fa-arrow-to-bottom {
       margin-left: 10px;
       color: $brand-primary;
