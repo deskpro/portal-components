@@ -3,3 +3,9 @@
     position: static;
   }
 }
+
+@include media-breakpoint-down(sm) {
+  .dp-po-post-day {
+    position: static;
+  }
+}

@@ -97,69 +97,42 @@
           <div class="col-sm-3">
 
             <div class="dp-po-contents">
-              <h3 class="dp-po-contents-title">Contents</h3>
-              <ul class="dp-po-contents-list">
-                <li class="dp-po-contents-item">
-                  <a href="" class="dp-po-contents-link">Deskpro for IT Teams</a>
-                </li>
-                <li class="dp-po-contents-item">
-                  <a href="" class="dp-po-contents-link active">Creating Effective New Ticket Contact Forms</a>
-                </li>
-                <li class="dp-po-contents-item">
-                  <a href="" class="dp-po-contents-link">How do I get started with Deskpro?</a>
-                </li>
-                <li class="dp-po-contents-item">
-                  <a href="" class="dp-po-contents-link">What documentation is available for Deskpro?</a>
-                </li>
-                <li class="dp-po-contents-item">
-                  <a href="" class="dp-po-contents-link">Setting up a Custom Email Address with Deskpro Cloud</a>
-                </li>
-              </ul>
+              <h3 class="dp-po-contents-title d-none d-sm-block">Contents</h3>
+              <h3 class="dp-po-contents-title d-sm-none dp-po-mobile-collapse" data-toggle="collapse"
+                data-target="#collapseOne"> Contents <i class="dp-po-icon fal fa-angle-up"></i></h3>
+              <div id="collapseOne" class="collapse show">
+                <ul class="dp-po-contents-list">
+                  <li class="dp-po-contents-item">
+                    <a href="" class="dp-po-contents-link">Deskpro for IT Teams</a>
+                  </li>
+                  <li class="dp-po-contents-item">
+                    <a href="" class="dp-po-contents-link active">Creating Effective New Ticket Contact Forms</a>
+                  </li>
+                  <li class="dp-po-contents-item">
+                    <a href="" class="dp-po-contents-link">How do I get started with Deskpro?</a>
+                  </li>
+                  <li class="dp-po-contents-item">
+                    <a href="" class="dp-po-contents-link">What documentation is available for Deskpro?</a>
+                  </li>
+                  <li class="dp-po-contents-item">
+                    <a href="" class="dp-po-contents-link">Setting up a Custom Email Address with Deskpro Cloud</a>
+                  </li>
+                </ul>
+              </div>
             </div>
 
             <%- include('_partials/_post-label.ejs'); %>
 
             <%- include('_partials/_related-content.ejs'); %>
-
-            <%- include('_partials/_post-share.ejs'); %>
+            <div class="d-none d-sm-block">
+              <%- include('_partials/_post-share.ejs'); %>
+            </div>
 
             <%- include('_partials/_post-meta.ejs'); %>
           </div>
         </div>
-
-        <!-- Mobile Modal -->
-        <div class="modal fade mobile-modal" id="postShareMobile" tabindex="-1" role="dialog"
-          aria-labelledby="postShareMobile" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <%- include('_partials/_post-share-mobile.ejs'); %>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Mobile Modal -->
-        <div class="modal fade mobile-modal" id="postExtraMobile" tabindex="-1" role="dialog"
-          aria-labelledby="postExtraMobile" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <%- include('_partials/_post-extra-mobile.ejs'); %>
-              </div>
-            </div>
-          </div>
-        </div>
+        <%- include('_partials/_post-extra-mobile-modal.ejs'); %>
+        <%- include('_partials/_post-share-mobile-modal.ejs'); %>
       </div>
     </main>
   </div>
