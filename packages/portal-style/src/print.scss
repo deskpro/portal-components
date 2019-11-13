@@ -1,3 +1,7 @@
+@import "variables/css_variables";
+@import "variables/colors";
+@import "variables/vars";
+
 @media print {
 
   .dp-po {
@@ -10,8 +14,13 @@
       display: none;
     }
 
+    .breadcrumb {
+      justify-content: flex-start;
+    }
+
     .breadcrumb-outer {
-      margin-top: 15px;
+      margin: -5px 14px 0;
+      border-top: 2px solid $grey-light;
     }
 
     .dp-po-search {
@@ -22,6 +31,17 @@
       display: none;
     }
 
+    .dp-po-main {
+      padding: 20px 0;
+      background-color: $white;
+    }
+
+    .dp-po-post-avatars {
+      a {
+        text-decoration: none;
+      }
+    }
+
     .dp-po-subscribe-btn {
       display: none;
     }
@@ -29,9 +49,28 @@
     .dp-po-post-extra {
       display: none;
     }
+
+    .dp-po-post-content {
+      border: 1px solid $grey-light;
+      border-radius: 5px;
+    }
+    a.badge {
+      text-decoration: none;
+    }
+    .dp-po-comments > .dp-po-block {
+      border: 1px solid $grey-light;
+      border-radius: 0 0 4px 4px;
+    }
+    .dp-po-footer {
+      background-color: $white;
+    }
   }
 
   .sf-toolbar {
     display: none !important;
+  }
+
+  body {
+    padding: 20px !important;
   }
 }
