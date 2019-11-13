@@ -35,7 +35,7 @@
     position: relative;
     padding: 10px 0;
     margin: 0;
-    line-height: 1.5;
+    line-height: 2.8;
   }
 
   .dp-po-header-right {
@@ -67,10 +67,6 @@
       &:hover {
         color: $grey;
         text-decoration: none;
-      }
-
-      .dp-po-icon {
-        vertical-align: 9px;
       }
     }
 
