@@ -1,0 +1,15 @@
+@media (min-width: 768px) and (max-width: 1440px) {
+  .dp-po-news {
+    &-head {
+      display: flex;
+
+      &-left {
+        margin-right: 15px;
+      }
+
+      &-right {
+        width: 100%;
+      }
+    }
+  }
+}
