@@ -111,6 +111,9 @@
   .badge {
     position: absolute;
     right: 20px;
-    top: 20px;
+    top: 24px;
+    max-width: 100px;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 }
