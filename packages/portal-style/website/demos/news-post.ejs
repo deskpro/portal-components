@@ -10,18 +10,24 @@
       <div class="container">
         <div class="row align-items-end mb-4">
           <div class="col-sm-9">
-            <%- include('_partials/_post-day.ejs'); %>
-            <div class="dp-po-title">
-              <img class="dp-po-title-svg" src="/portal-components/portal-style/static/img/page-icons/news.svg">
-              <h2 class="dp-po-title-text">Deskpro 5.14.0, 5.14.1, 5.14.2, Released</h2>
-            </div>
-            <div class="row align-items-end">
-              <div class="col-sm-10">
-                <%- include('_partials/_post-avatars.ejs'); %>
-                <%- include('_partials/_post-info.ejs'); %>
+            <div class="dp-po-news-head">
+              <div class="dp-po-news-head-left">
+                <%- include('_partials/_post-day.ejs'); %>
               </div>
-              <div class="col-sm-2">
-                <%- include('_partials/_post-extra.ejs'); %>
+              <div class="dp-po-news-head-right">
+                <div class="dp-po-title">
+                  <img class="dp-po-title-svg" src="/portal-components/portal-style/static/img/page-icons/news.svg">
+                  <h2 class="dp-po-title-text">Deskpro 5.14.0, 5.14.1, 5.14.2, Released</h2>
+                </div>
+                <div class="row align-items-end">
+                  <div class="col-sm-10">
+                    <%- include('_partials/_post-avatars.ejs'); %>
+                    <%- include('_partials/_post-info.ejs'); %>
+                  </div>
+                  <div class="col-sm-2">
+                    <%- include('_partials/_post-extra.ejs'); %>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
