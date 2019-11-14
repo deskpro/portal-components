@@ -223,6 +223,33 @@
 
           </div>
           <div class="col-sm-3">
+            <div class="d-none d-sm-block">
+              <div class="dp-po-subscribe dp-po-subscribe-large">
+  <div class="dropdown">
+    <!--class : dp-po-subscribe-activebtn -->
+    <button class="dp-po-subscribe-btn" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+      aria-expanded="false" data-offset="0,10">
+      <i class="dp-po-icon fad fa-envelope"></i> Subscribe <i class="dp-po-icon far fa-check"></i>
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+      <a class="dropdown-item disabled" href="#"><i class="dp-po-icon fal fa-file-alt"></i> Article <i
+          class="dp-po-icon far fa-check"></i></a>
+      <a class="dropdown-item" href="#"><i class="dp-po-icon fal fa-file-spreadsheet"></i> Category <i
+          class="dp-po-icon far fa-check"></i></a>
+      <a class="dropdown-item" href="#"><i class="dp-po-icon fal fa-file-chart-line"></i> Knowledgebase <i
+          class="dp-po-icon far fa-check"></i></a>
+      <span class="dp-po-subscribe-divider"></span>
+      <a class="dropdown-item dp-po-subscribe-manage" href="#">All your subscriptions</a>
+    </div>
+  </div>
+</div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="d-block d-sm-none">
+          <div class="dp-po-post-mobile-area">
             <div class="dp-po-subscribe dp-po-subscribe-large">
   <div class="dropdown">
     <!--class : dp-po-subscribe-activebtn -->
@@ -243,6 +270,8 @@
   </div>
 </div>
 
+            <a href="javascript:void(0)" data-toggle="modal" data-target="#postExtraMobile"><i
+                class="far fa-ellipsis-v"></i></a>
           </div>
         </div>
 
@@ -760,7 +789,8 @@
 </div>
 
 
-            <div class="dp-po-sidebar dp-po-post-share">
+            <div class="d-none d-sm-block">
+              <div class="dp-po-sidebar dp-po-post-share">
   <h3 class="dp-po-sidebar-title">Share</h3>
   <ul class="dp-po-post-share-list">
     <li class="dp-po-post-share-item">
@@ -833,6 +863,7 @@
   </ul>
 </div>
 
+            </div>
 
             <div class="dp-po-post-meta">
   <h3 class="dp-po-post-meta-heading d-sm-none dp-po-mobile-collapse" data-toggle="collapse"
@@ -874,6 +905,100 @@
 
           </div>
         </div>
+
+         <!-- Mobile Modal -->
+ <div class="modal fade mobile-modal" id="postExtraMobile" tabindex="-1" role="dialog" aria-labelledby="postExtraMobile"
+   aria-hidden="true">
+   <div class="modal-dialog" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>
+       <div class="modal-body">
+         <div class="dp-po-post-extra-mobile">
+  <ul class="dp-po-post-extra-mobile-list">
+    <li class="dp-po-post-extra-mobile-item">
+      <a href="" data-toggle="modal" data-target="#postShareMobile" class="dp-po-post-extra-mobile-link"><i
+          class="dp-po-icon fas fa-share-alt"></i> Share</a>
+    </li>
+    <li class="dp-po-post-extra-mobile-item">
+      <a href="" class="dp-po-post-extra-mobile-link"><i class="dp-po-icon fal fa-print"></i> Print this article</a>
+    </li>
+    <li class="dp-po-post-extra-mobile-item">
+      <a href="" class="dp-po-post-extra-mobile-link"><i class="dp-po-icon fal fa-file-pdf"></i> Download this
+        article</a>
+    </li>
+  </ul>
+</div>
+
+       </div>
+     </div>
+   </div>
+ </div>
+
+        <!-- Mobile Modal -->
+<div class="modal fade mobile-modal" id="postShareMobile" tabindex="-1" role="dialog" aria-labelledby="postShareMobile"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="dp-po-post-share-mobile">
+  <ul class="dp-po-post-share-mobile-list">
+    <li class="dp-po-post-share-mobile-item">
+      <a href="" class="dp-po-post-share-mobile-link">
+        <img class="dp-po-icon" src="/portal-components/portal-style/static/img/brand-icons/linkedin.png" />
+        Linkedin
+      </a>
+    </li>
+    <li class="dp-po-post-share-mobile-item">
+      <a href="" class="dp-po-post-share-mobile-link">
+        <img class="dp-po-icon" src="/portal-components/portal-style/static/img/brand-icons/facebook.png" />
+        Facebook
+      </a>
+    </li>
+    <li class="dp-po-post-share-mobile-item">
+      <a href="" class="dp-po-post-share-mobile-link">
+        <img class="dp-po-icon" src="/portal-components/portal-style/static/img/brand-icons/whatsapp.png" />
+        Whatsapp
+      </a>
+    </li>
+    <li class="dp-po-post-share-mobile-item">
+      <a href="" class="dp-po-post-share-mobile-link">
+        <img class="dp-po-icon" src="/portal-components/portal-style/static/img/brand-icons/instagram.png" />
+        Instagram
+      </a>
+    </li>
+    <li class="dp-po-post-share-mobile-item">
+      <a href="" class="dp-po-post-share-mobile-link">
+        <img class="dp-po-icon" src="/portal-components/portal-style/static/img/brand-icons/pinterest.png" />
+        Pinterest
+      </a>
+    </li>
+    <li class="dp-po-post-share-mobile-item">
+      <a href="" class="dp-po-post-share-mobile-link">
+        <img class="dp-po-icon" src="/portal-components/portal-style/static/img/brand-icons/messenger.png" />
+        Messenger
+      </a>
+    </li>
+  </ul>
+  <div class="dp-po-post-share-mobile-url">
+    <h3 class="dp-po-post-share-mobile-title">Copy this link</h3>
+    <input type="text" value="https://deskpro.github.io/portal-components/portal-style/demos/homepage.html" readonly>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
       </div>
   </div>
   </main>
