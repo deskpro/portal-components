@@ -48,7 +48,17 @@
 
           </div>
           <div class="col-sm-3">
+            <div class="d-none d-sm-block">
+              <%- include('_partials/_subscribe.ejs'); %>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-block d-sm-none">
+          <div class="dp-po-post-mobile-area">
             <%- include('_partials/_subscribe.ejs'); %>
+            <a href="javascript:void(0)" data-toggle="modal" data-target="#postExtraMobile"><i
+                class="far fa-ellipsis-v"></i></a>
           </div>
         </div>
 
@@ -79,12 +89,17 @@
 
             <%- include('_partials/_related-content.ejs'); %>
 
-            <%- include('_partials/_post-share.ejs'); %>
+            <div class="d-none d-sm-block">
+              <%- include('_partials/_post-share.ejs'); %>
+            </div>
 
             <%- include('_partials/_post-meta.ejs'); %>
 
           </div>
         </div>
+
+        <%- include('_partials/_post-extra-mobile-modal.ejs'); %>
+        <%- include('_partials/_post-share-mobile-modal.ejs'); %>
       </div>
   </div>
   </main>
