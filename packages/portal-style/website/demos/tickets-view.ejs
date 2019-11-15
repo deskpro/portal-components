@@ -19,21 +19,25 @@
                 </div>
               </div>
               <div class="col-sm-2">
-                <%- include('_partials/_post-extra.ejs'); %>
+                <div class="d-none d-sm-block">
+                  <%- include('_partials/_post-extra.ejs'); %>
+                </div>
               </div>
             </div>
           </div>
           <div class="col-sm-3">
-            <div class="dp-po-ticket-close">
-              <a href="javascript:void(0)" class="dp-po-ticket-close-btn" data-toggle="modal"
-                data-target="#closeTicketRating">
-                <span class="fa-layers">
-                  <i class="dp-po-icon fad fa-envelope"></i>
-                  <i class="dp-po-icon fa-inverse fas fa-circle" data-fa-transform="shrink-8"></i>
-                  <i class="dp-po-icon fas fa-times" data-fa-transform="shrink-10"></i>
-                </span>
-                Close ticket
-              </a>
+            <div class="d-none d-sm-block">
+              <div class="dp-po-ticket-close">
+                <a href="javascript:void(0)" class="dp-po-ticket-close-btn" data-toggle="modal"
+                  data-target="#closeTicketRating">
+                  <span class="fa-layers">
+                    <i class="dp-po-icon fad fa-envelope"></i>
+                    <i class="dp-po-icon fa-inverse fas fa-circle" data-fa-transform="shrink-8"></i>
+                    <i class="dp-po-icon fas fa-times" data-fa-transform="shrink-10"></i>
+                  </span>
+                  Close ticket
+                </a>
+              </div>
             </div>
             <!-- Modal SCREEN 1 : CHANGE DATA-TARGET ABOVE TO VIEW THIS-->
             <div class="modal fade" id="closeTicket" tabindex="-1" role="dialog" aria-labelledby="closeTicket"
@@ -135,135 +139,166 @@
             </div>
           </div>
         </div>
+        <div class="d-block d-sm-none">
+          <div class="dp-po-post-mobile-area">
+            <div class="dp-po-ticket-close">
+              <a href="javascript:void(0)" class="dp-po-ticket-close-btn" data-toggle="modal"
+                data-target="#closeTicketRating">
+                <span class="fa-layers">
+                  <i class="dp-po-icon fad fa-envelope"></i>
+                  <i class="dp-po-icon fa-inverse fas fa-circle" data-fa-transform="shrink-8"></i>
+                  <i class="dp-po-icon fas fa-times" data-fa-transform="shrink-10"></i>
+                </span>
+                Close ticket
+              </a>
+            </div>
+            <a href="javascript:void(0)" data-toggle="modal" data-target="#postExtraMobile"><i
+                class="far fa-ellipsis-v"></i></a>
+          </div>
+        </div>
         <div class="row">
           <div class="col-sm-9">
             <%- include('_partials/_ticket-block.ejs'); %>
           </div>
           <div class="col-sm-3">
             <div class="dp-po-sidebar dp-po-ticket-status">
-              <h3 class="dp-po-sidebar-title">Ticket status</h3>
-              <span class="badge badge-warning badge-icon"><i class="dp-po-icon far fa-clock"></i> Awaiting user</span>
+              <h3 class="dp-po-sidebar-title d-none d-sm-block">Ticket status</h3>
+              <h3 class="dp-po-sidebar-title d-sm-none dp-po-mobile-collapse" data-toggle="collapse"
+                data-target="#collapseThree"> Ticket status <i class="dp-po-icon fal fa-angle-up"></i></h3>
+              <div id="collapseThree" class="collapse show">
+                <span class="badge badge-warning badge-icon"><i class="dp-po-icon far fa-clock"></i> Awaiting
+                  user</span>
+              </div>
             </div>
 
             <div class="dp-po-ticket-meta">
-              <h3 class="dp-po-ticket-meta-title">Ticket ID</h3>
-              <p>ALVM-6732-XRKJ</p>
+              <h3 class="dp-po-ticket-meta-title d-sm-none dp-po-mobile-collapse" data-toggle="collapse"
+                data-target="#collapseTwo"> Ticket details <i class="dp-po-icon fal fa-angle-up"></i></h3>
+              <div id="collapseTwo" class="collapse show">
+                <h3 class="dp-po-ticket-meta-title">Ticket ID</h3>
+                <p>ALVM-6732-XRKJ</p>
 
-              <h3 class="dp-po-ticket-meta-title">Requester</h3>
-              <div class="dp-po-avatar dp-po-avatar-round">
-                <img src="/portal-components/portal-style/static/img/docs/avatar.png">
-                Nick Green
-              </div>
-
-              <h3 class="dp-po-ticket-meta-title">Assigned agent</h3>
-              <div class="dp-po-avatar dp-po-avatar-round">
-                <img src="/portal-components/portal-style/static/img/docs/avatar.png">
-                Nick Green
-              </div>
-
-              <div class="dp-po-ticket-meta-cc">
-                <h3 class="dp-po-ticket-meta-title">Also on this ticket (12)</h3>
-                <ul class="dp-po-ticket-meta-cc-list">
-                  <li class="dp-po-ticket-meta-cc-item">
-                    <img src="/portal-components/portal-style/static/img/docs/avatar.png">
-                    <div class="dp-po-ticket-meta-cc-title">
-                      <span class="dp-po-ticket-meta-cc-name">Jonathan Jones</span>
-                      <span class="dp-po-ticket-meta-cc-email">jonathan.jones@techco.com</span>
-                    </div>
-                    <a href="" class="dp-po-ticket-meta-cc-remove"><i class="far fa-times-circle"></i></a>
-                  </li>
-                  <li class="dp-po-ticket-meta-cc-item">
-                    <img src="/portal-components/portal-style/static/img/docs/avatar.png">
-                    <div class="dp-po-ticket-meta-cc-title">
-                      <span class="dp-po-ticket-meta-cc-name">Jonathan Jones</span>
-                      <span class="dp-po-ticket-meta-cc-email">jonathan.jones@techco.com</span>
-                    </div>
-                    <a href="" class="dp-po-ticket-meta-cc-remove"><i class="far fa-times-circle"></i></a>
-                  </li>
-                  <li class="dp-po-ticket-meta-cc-item">
-                    <img src="/portal-components/portal-style/static/img/docs/avatar.png">
-                    <div class="dp-po-ticket-meta-cc-title">
-                      <span class="dp-po-ticket-meta-cc-name">Jonathan Jones</span>
-                      <span class="dp-po-ticket-meta-cc-email">jonathan.jones@techco.com</span>
-                    </div>
-                    <a href="" class="dp-po-ticket-meta-cc-remove"><i class="far fa-times-circle"></i></a>
-                  </li>
-                  <li class="dp-po-ticket-meta-cc-item">
-                    <img src="/portal-components/portal-style/static/img/docs/avatar.png">
-                    <div class="dp-po-ticket-meta-cc-title">
-                      <span class="dp-po-ticket-meta-cc-name">Jonathan Jones</span>
-                      <span class="dp-po-ticket-meta-cc-email">jonathan.jones@techco.com</span>
-                    </div>
-                    <a href="" class="dp-po-ticket-meta-cc-remove"><i class="far fa-times-circle"></i></a>
-                  </li>
-                  <li class="dp-po-ticket-meta-cc-item">
-                    <img src="/portal-components/portal-style/static/img/docs/avatar.png">
-                    <div class="dp-po-ticket-meta-cc-title">
-                      <span class="dp-po-ticket-meta-cc-name">Jonathan Jones</span>
-                      <span class="dp-po-ticket-meta-cc-email">jonathan.jones@techco.com</span>
-                    </div>
-                    <a href="" class="dp-po-ticket-meta-cc-remove"><i class="far fa-times-circle"></i></a>
-                  </li>
-                  <li class="dp-po-ticket-meta-cc-item">
-                    <img src="/portal-components/portal-style/static/img/docs/avatar.png">
-                    <div class="dp-po-ticket-meta-cc-title">
-                      <span class="dp-po-ticket-meta-cc-name">Jonathan Jones</span>
-                      <span class="dp-po-ticket-meta-cc-email">jonathan.jones@techco.com</span>
-                    </div>
-                    <a href="" class="dp-po-ticket-meta-cc-remove"><i class="far fa-times-circle"></i></a>
-                  </li>
-                </ul>
-
-                <a href="" class="dp-po-ticket-meta-cc-link">CC +</a>
-                <div class="dp-po-ticket-meta-cc-form">
-                  <form class="do-po-form">
-                    <div class="form-group">
-                      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                        placeholder="Name">
-                    </div>
-                    <div class="form-group">
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                        placeholder="Email Address">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Add</button>
-                  </form>
+                <h3 class="dp-po-ticket-meta-title">Requester</h3>
+                <div class="dp-po-avatar dp-po-avatar-round">
+                  <img src="/portal-components/portal-style/static/img/docs/avatar.png">
+                  Nick Green
                 </div>
+
+                <h3 class="dp-po-ticket-meta-title">Assigned agent</h3>
+                <div class="dp-po-avatar dp-po-avatar-round">
+                  <img src="/portal-components/portal-style/static/img/docs/avatar.png">
+                  Nick Green
+                </div>
+
+                <div class="dp-po-ticket-meta-cc">
+                  <h3 class="dp-po-ticket-meta-title">Also on this ticket (12)</h3>
+                  <ul class="dp-po-ticket-meta-cc-list">
+                    <li class="dp-po-ticket-meta-cc-item">
+                      <img src="/portal-components/portal-style/static/img/docs/avatar.png">
+                      <div class="dp-po-ticket-meta-cc-title">
+                        <span class="dp-po-ticket-meta-cc-name">Jonathan Jones</span>
+                        <span class="dp-po-ticket-meta-cc-email">jonathan.jones@techco.com</span>
+                      </div>
+                      <a href="" class="dp-po-ticket-meta-cc-remove"><i class="far fa-times-circle"></i></a>
+                    </li>
+                    <li class="dp-po-ticket-meta-cc-item">
+                      <img src="/portal-components/portal-style/static/img/docs/avatar.png">
+                      <div class="dp-po-ticket-meta-cc-title">
+                        <span class="dp-po-ticket-meta-cc-name">Jonathan Jones</span>
+                        <span class="dp-po-ticket-meta-cc-email">jonathan.jones@techco.com</span>
+                      </div>
+                      <a href="" class="dp-po-ticket-meta-cc-remove"><i class="far fa-times-circle"></i></a>
+                    </li>
+                    <li class="dp-po-ticket-meta-cc-item">
+                      <img src="/portal-components/portal-style/static/img/docs/avatar.png">
+                      <div class="dp-po-ticket-meta-cc-title">
+                        <span class="dp-po-ticket-meta-cc-name">Jonathan Jones</span>
+                        <span class="dp-po-ticket-meta-cc-email">jonathan.jones@techco.com</span>
+                      </div>
+                      <a href="" class="dp-po-ticket-meta-cc-remove"><i class="far fa-times-circle"></i></a>
+                    </li>
+                    <li class="dp-po-ticket-meta-cc-item">
+                      <img src="/portal-components/portal-style/static/img/docs/avatar.png">
+                      <div class="dp-po-ticket-meta-cc-title">
+                        <span class="dp-po-ticket-meta-cc-name">Jonathan Jones</span>
+                        <span class="dp-po-ticket-meta-cc-email">jonathan.jones@techco.com</span>
+                      </div>
+                      <a href="" class="dp-po-ticket-meta-cc-remove"><i class="far fa-times-circle"></i></a>
+                    </li>
+                    <li class="dp-po-ticket-meta-cc-item">
+                      <img src="/portal-components/portal-style/static/img/docs/avatar.png">
+                      <div class="dp-po-ticket-meta-cc-title">
+                        <span class="dp-po-ticket-meta-cc-name">Jonathan Jones</span>
+                        <span class="dp-po-ticket-meta-cc-email">jonathan.jones@techco.com</span>
+                      </div>
+                      <a href="" class="dp-po-ticket-meta-cc-remove"><i class="far fa-times-circle"></i></a>
+                    </li>
+                    <li class="dp-po-ticket-meta-cc-item">
+                      <img src="/portal-components/portal-style/static/img/docs/avatar.png">
+                      <div class="dp-po-ticket-meta-cc-title">
+                        <span class="dp-po-ticket-meta-cc-name">Jonathan Jones</span>
+                        <span class="dp-po-ticket-meta-cc-email">jonathan.jones@techco.com</span>
+                      </div>
+                      <a href="" class="dp-po-ticket-meta-cc-remove"><i class="far fa-times-circle"></i></a>
+                    </li>
+                  </ul>
+
+                  <a href="" class="dp-po-ticket-meta-cc-link">CC +</a>
+                  <div class="dp-po-ticket-meta-cc-form">
+                    <form class="do-po-form">
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                          placeholder="Name">
+                      </div>
+                      <div class="form-group">
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                          placeholder="Email Address">
+                      </div>
+                      <button type="submit" class="btn btn-primary">Add</button>
+                    </form>
+                  </div>
+                </div>
+
+                <h3 class="dp-po-ticket-meta-title">Organization</h3>
+                <div class="dp-po-avatar dp-po-avatar-round">
+                  <img src="/portal-components/portal-style/static/img/brand/logo.jpg">
+                  Techco
+                </div>
+
+                <h3 class="dp-po-ticket-meta-title">Created</h3>
+                <p>12 June 2019</p>
+
+                <h3 class="dp-po-ticket-meta-title">Last activity</h3>
+                <p>Today, 09.32 am</p>
               </div>
-
-              <h3 class="dp-po-ticket-meta-title">Organization</h3>
-              <div class="dp-po-avatar dp-po-avatar-round">
-                <img src="/portal-components/portal-style/static/img/brand/logo.jpg">
-                Techco
-              </div>
-
-              <h3 class="dp-po-ticket-meta-title">Created</h3>
-              <p>12 June 2019</p>
-
-              <h3 class="dp-po-ticket-meta-title">Last activity</h3>
-              <p>Today, 09.32 am</p>
-
             </div>
+
             <div class="dp-po-sidebar dp-po-ticket-meta">
-              <h3 class="dp-po-sidebar-title">Ticket Properties</h3>
-              <p>
-                <a href="#" class="dp-po-sidebar-edit">Edit <i class="" data-fa-i2svg=""><svg
-                      class="svg-inline--fa fa-pen fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas"
-                      data-icon="pen" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                      data-fa-i2svg="">
-                      <path fill="currentColor"
-                        d="M290.74 93.24l128.02 128.02-277.99 277.99-114.14 12.6C11.35 513.54-1.56 500.62.14 485.34l12.7-114.22 277.9-277.88zm207.2-19.06l-60.11-60.11c-18.75-18.75-49.16-18.75-67.91 0l-56.55 56.55 128.02 128.02 56.55-56.55c18.75-18.76 18.75-49.16 0-67.91z">
-                      </path>
-                    </svg></i></a>
-              </p>
+              <h3 class="dp-po-sidebar-title d-none d-sm-block">Ticket Properties</h3>
+              <h3 class="dp-po-sidebar-title d-sm-none dp-po-mobile-collapse" data-toggle="collapse"
+                data-target="#collapseOne"> Ticket Properties <i class="dp-po-icon fal fa-angle-up"></i></h3>
+              <div id="collapseOne" class="collapse show">
+                <p>
+                  <a href="#" class="dp-po-sidebar-edit">Edit <i class="" data-fa-i2svg=""><svg
+                        class="svg-inline--fa fa-pen fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas"
+                        data-icon="pen" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                        data-fa-i2svg="">
+                        <path fill="currentColor"
+                          d="M290.74 93.24l128.02 128.02-277.99 277.99-114.14 12.6C11.35 513.54-1.56 500.62.14 485.34l12.7-114.22 277.9-277.88zm207.2-19.06l-60.11-60.11c-18.75-18.75-49.16-18.75-67.91 0l-56.55 56.55 128.02 128.02 56.55-56.55c18.75-18.76 18.75-49.16 0-67.91z">
+                        </path>
+                      </svg></i></a>
+                </p>
 
-              <h3 class="dp-po-ticket-meta-title">Department</h3>
-              <p>Support</p>
+                <h3 class="dp-po-ticket-meta-title">Department</h3>
+                <p>Support</p>
+              </div>
             </div>
-            <%- include('_partials/_post-attachments.ejs'); %>
 
+            <%- include('_partials/_post-attachments.ejs'); %>
 
           </div>
         </div>
+        <%- include('_partials/_post-extra-mobile-modal.ejs'); %>
       </div>
     </main>
   </div>

@@ -1,0 +1,50 @@
+@include media-breakpoint-down(sm) {
+  .dp-po-ticket-block {
+    border-left: none;
+    border-right: none;
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 0;
+    border-bottom: 0;
+
+    .badge-purple {
+      left: 0;
+    }
+
+    .dp-po-time {
+      right: 0;
+    }
+
+    &-timeline {
+      display: block;
+    }
+
+    &-header {
+      margin: -30px -15px 20px;
+    }
+
+    &-feedback {
+      display: block;
+
+      .dp-po-avatar {
+        margin: 10px 0;
+      }
+    }
+
+    &-rating {
+      margin-left: 10px;
+      display: inline-block;
+    }
+
+    &-status {
+      margin-top: 20px;
+      margin-left: 40px;
+    }
+  }
+
+  .dp-po-ticket-attachments {
+    background: none;
+    margin: 20px -15px -30px;
+    padding: 20px 30px 20px 55px;
+  }
+}
