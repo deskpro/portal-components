@@ -2,9 +2,13 @@
   .dp-po-title {
     $self: '.dp-po-title';
 
-    &-svg {}
+    &-svg {
+      flex: 0 0 40px;
+    }
 
     &-text {
+      font-size: $s26;
+
       &#{$self}-small {}
     }
 

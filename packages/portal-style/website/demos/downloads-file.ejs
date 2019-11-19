@@ -41,8 +41,10 @@
                 <%- include('_partials/_post-info.ejs'); %>
               </div>
               <div class="col-sm-3">
-                <a href="" class="btn btn-icon btn-lg btn-primary"><i class="dp-po-icon fal fa-arrow-to-bottom"></i>
-                  Download</a>
+                <div class="d-none d-sm-block">
+                  <a href="" class="btn btn-icon btn-lg btn-primary"><i class="dp-po-icon fal fa-arrow-to-bottom"></i>
+                    Download</a>
+                </div>
               </div>
             </div>
 
@@ -54,6 +56,12 @@
           </div>
         </div>
 
+        <div class="d-block d-sm-none">
+          <div class="dp-po-post-mobile-area">
+            <a href="" class="btn btn-icon btn-primary"><i class="dp-po-icon fal fa-arrow-to-bottom"></i>
+              Download</a>
+          </div>
+        </div>
         <div class="d-block d-sm-none">
           <div class="dp-po-post-mobile-area">
             <%- include('_partials/_subscribe.ejs'); %>
