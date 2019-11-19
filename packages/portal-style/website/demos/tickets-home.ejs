@@ -17,205 +17,64 @@
             </div>
           </div>
           <div class="col-sm-6 text-right">
-            <a href="" class="btn btn-primary mb-4">Submit a ticket</a>
+            <div class="d-none d-sm-block">
+              <a href="" class="btn btn-primary mb-4">Submit a ticket</a>
+            </div>
+          </div>
+        </div>
+        <div class="d-block d-sm-none">
+          <div class="dp-po-post-mobile-area">
+            <a href="" class="btn btn-primary">Submit a ticket</a>
+            <a href="javascript:void(0)" data-toggle="modal" data-target="#ticketFilterMobile"><i
+                class="far fa-filter"></i></a>
           </div>
         </div>
       </div>
+
       <div class="container">
         <div class="row">
           <div class="col-sm-3">
-            <div class="dp-po-ticket-sidebar">
+            <div class="d-none d-sm-block">
+              <div class="dp-po-ticket-sidebar">
 
-              <div class="dp-po-ticket-pages">
-                <ul class="dp-po-ticket-pages-list">
-                  <li class="dp-po-ticket-pages-item">
-                    <a href="" class="dp-po-ticket-pages-link">
-                      <i class="dp-po-icon fal fa-envelope-open-text"></i> My tickets
-                    </a>
-                  </li>
-                  <li class="dp-po-ticket-pages-item active">
-                    <a href="" class="dp-po-ticket-pages-link">
-                      <i class="dp-po-icon fal fa-closed-captioning"></i> Tickets i’m CC’d on
-                    </a>
-                  </li>
-                  <li class="dp-po-ticket-pages-item">
-                    <a href="" class="dp-po-ticket-pages-link">
-                      <i class="dp-po-icon fal fa-atom-alt"></i> Techco tickets
-                    </a>
-                  </li>
-                  <li class="dp-po-ticket-pages-item">
-                    <a href="" class="dp-po-ticket-pages-link">
-                      <i class="dp-po-icon fal fa-comments-alt"></i> My chats
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="dp-po-ticket-filter">
-                <div class="row mb-4">
-                  <div class="col-sm-6">
-                    <h4 class="dp-po-ticket-filter-title">Filter by</h4>
-                  </div>
-                  <div class="col-sm-6 text-right">
-                    <a href="" class="dp-po-ticket-filter-clearall">Clear all</a>
-                  </div>
+                <div class="dp-po-ticket-pages">
+                  <ul class="dp-po-ticket-pages-list">
+                    <li class="dp-po-ticket-pages-item">
+                      <a href="" class="dp-po-ticket-pages-link">
+                        <i class="dp-po-icon fal fa-envelope-open-text"></i> My tickets
+                      </a>
+                    </li>
+                    <li class="dp-po-ticket-pages-item active">
+                      <a href="" class="dp-po-ticket-pages-link">
+                        <i class="dp-po-icon fal fa-closed-captioning"></i> Tickets i’m CC’d on
+                      </a>
+                    </li>
+                    <li class="dp-po-ticket-pages-item">
+                      <a href="" class="dp-po-ticket-pages-link">
+                        <i class="dp-po-icon fal fa-atom-alt"></i> Techco tickets
+                      </a>
+                    </li>
+                    <li class="dp-po-ticket-pages-item">
+                      <a href="" class="dp-po-ticket-pages-link">
+                        <i class="dp-po-icon fal fa-comments-alt"></i> My chats
+                      </a>
+                    </li>
+                  </ul>
                 </div>
-
-                <ul class="dp-po-ticket-filter-list">
-
-                  <li class="dp-po-ticket-filter-item">
-                    <div class="form-group dp-po-form-check">
-                      <input type="checkbox" class="form-check-input" id="departmentCheck" checked>
-                      <label class="form-check-label" for="departmentCheck">Department</label>
-                    </div>
-                    <a class="dp-po-ticket-filter-collapse" data-toggle="collapse" href="#collapseExample" role="button"
-                      aria-expanded="false" aria-controls="collapseExample">
-                      <i class="dp-po-icon far fa-angle-down"></i>
-                    </a>
-                    <div class="collapse show" id="collapseExample">
-                      <ul class="dp-po-ticket-filter-list">
-                        <li class="dp-po-ticket-filter-item">
-                          <div class="form-group dp-po-form-check">
-                            <input type="checkbox" class="form-check-input" id="supportCheck">
-                            <label class="form-check-label" for="supportCheck">Support</label>
-                          </div>
-                        </li>
-                        <li class="dp-po-ticket-filter-item">
-                          <div class="form-group dp-po-form-check">
-                            <input type="checkbox" class="form-check-input" id="hrCheck">
-                            <label class="form-check-label" for="hrCheck">HR</label>
-                          </div>
-                        </li>
-                        <li class="dp-po-ticket-filter-item">
-                          <div class="form-group dp-po-form-check">
-                            <input type="checkbox" class="form-check-input" id="rndCheck" checked>
-                            <label class="form-check-label" for="rndCheck">R&D</label>
-                          </div>
-                        </li>
-                        <li class="dp-po-ticket-filter-item">
-                          <div class="form-group dp-po-form-check">
-                            <input type="checkbox" class="form-check-input" id="salesCheck">
-                            <label class="form-check-label" for="salesCheck">Sales</label>
-                          </div>
-                        </li>
-                        <li class="dp-po-ticket-filter-item">
-                          <div class="form-group dp-po-form-check">
-                            <input type="checkbox" class="form-check-input" id="customerCheck">
-                            <label class="form-check-label" for="customerCheck">Customer Success</label>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-
-                  </li>
-
-                  <li class="dp-po-ticket-filter-item">
-                    <div class="form-group dp-po-form-check">
-                      <input type="checkbox" class="form-check-input" id="userCheck">
-                      <label class="form-check-label" for="userCheck">User</label>
-                    </div>
-                    <a class="dp-po-ticket-filter-collapse" data-toggle="collapse" href="#collapseExample1"
-                      role="button" aria-expanded="false" aria-controls="collapseExample1">
-                      <i class="dp-po-icon far fa-angle-down"></i>
-                    </a>
-                    <div class="collapse show" id="collapseExample1">
-                      <ul class="dp-po-ticket-filter-list">
-                        <li class="dp-po-ticket-filter-item">
-                          <div class="form-group dp-po-form-check">
-                            <input type="checkbox" class="form-check-input" id="user1">
-                            <label class="form-check-label" for="user1"><img
-                                src="/portal-components/portal-style/static/img/docs/avatar.png"> Jonathan Jones</label>
-                          </div>
-                        </li>
-                        <li class="dp-po-ticket-filter-item">
-                          <div class="form-group dp-po-form-check">
-                            <input type="checkbox" class="form-check-input" id="user2">
-                            <label class="form-check-label" for="user2"><img
-                                src="/portal-components/portal-style/static/img/docs/avatar.png"> Wendy Pride</label>
-                          </div>
-                        </li>
-                        <li class="dp-po-ticket-filter-item">
-                          <div class="form-group dp-po-form-check">
-                            <input type="checkbox" class="form-check-input" id="user3" checked>
-                            <label class="form-check-label" for="user3"><img
-                                src="/portal-components/portal-style/static/img/docs/avatar.png"> Elaine
-                              Fredericks</label>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-
-                  <li class="dp-po-ticket-filter-item">
-                    <div class="form-group dp-po-form-check">
-                      <input type="checkbox" class="form-check-input" id="activityCheck" checked>
-                      <label class="form-check-label" for="activityCheck">Last Activity</label>
-                    </div>
-                    <a class="dp-po-ticket-filter-collapse" data-toggle="collapse" href="#collapseExample2"
-                      role="button" aria-expanded="false" aria-controls="collapseExample">
-                      <i class="dp-po-icon far fa-angle-down"></i>
-                    </a>
-                    <div class="collapse show" id="collapseExample2">
-                      <ul class="dp-po-ticket-filter-list">
-                        <li class="dp-po-ticket-filter-item">
-                          <div class="form-group dp-po-form-check">
-                            <input type="checkbox" class="form-check-input" id="lasthour" checked>
-                            <label class="form-check-label" for="lasthour">Last 24 hours</label>
-                          </div>
-                        </li>
-                        <li class="dp-po-ticket-filter-item">
-                          <div class="form-group dp-po-form-check">
-                            <input type="checkbox" class="form-check-input" id="lastweek" checked>
-                            <label class="form-check-label" for="lastweek">Last week</label>
-                          </div>
-                        </li>
-                        <li class="dp-po-ticket-filter-item">
-                          <div class="form-group dp-po-form-check">
-                            <input type="checkbox" class="form-check-input" id="lastmonth" checked>
-                            <label class="form-check-label" for="lastmonth">Last month</label>
-                          </div>
-                        </li>
-                        <li class="dp-po-ticket-filter-item">
-                          <div class="form-group dp-po-form-check">
-                            <input type="checkbox" class="form-check-input" id="6months">
-                            <label class="form-check-label" for="6months">Last 6 month</label>
-                          </div>
-                        </li>
-                        <li class="dp-po-ticket-filter-item">
-                          <div class="form-group dp-po-form-check">
-                            <input type="checkbox" class="form-check-input" id="lastyear">
-                            <label class="form-check-label" for="lastyear">Last year</label>
-                          </div>
-                        </li>
-                        <li class="dp-po-ticket-filter-item">
-                          <div class="form-group dp-po-form-check">
-                            <input type="checkbox" class="form-check-input" id="moreyear">
-                            <label class="form-check-label" for="moreyear">More than 1 year</label>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-
-                </ul>
+                <%- include('_partials/_ticket-filter.ejs'); %>
               </div>
             </div>
           </div>
           <div class="col-sm-9">
             <div class="dp-po-section dp-po-block">
               <div class="row">
-                <div class="col-sm-4">
-                  <div class="dp-po-ticketbadge dp-po-ticketbadge-danger">
-                    <span class="dp-po-ticketbadge-number">5</span>You need to respond
-                  </div>
-                </div>
-                <div class="col-sm-7">
+                <div class="col-10 col-sm-7 order-sm-2">
                   <form class="dp-po-ticket-search">
                     <input type="text" name="" placeholder="Search Tickets"></input>
                     <button type="submit"> <i class="dp-po-icon far fa-search"></i></button>
                   </form>
                 </div>
-                <div class="col-sm-1 text-right">
+                <div class="col-2 col-sm-1 text-right order-sm-3">
                   <div class="dp-po-columnfilter">
                     <a href="javascript:void(0)" class="dp-po-columnfilter-link" data-toggle="dropdown"
                       aria-haspopup="true" aria-expanded="false"><i class="dp-po-icon far fa-ballot-check"></i></a>
@@ -255,6 +114,12 @@
                     </div>
                   </div>
                 </div>
+                <div class="col-12 col-sm-4 order-sm-1">
+                  <div class="dp-po-ticketbadge dp-po-ticketbadge-danger">
+                    <span class="dp-po-ticketbadge-number">5</span>You need to respond
+                  </div>
+                </div>
+
               </div>
 
               <div class="dp-po-table dp-po-table-col6 dp-po-table-ticket dp-po-table-ticket-danger mb-4">
@@ -290,6 +155,7 @@
           </div>
         </div>
       </div>
+      <%- include('_partials/_ticket-filter-mobile-modal.ejs'); %>
     </main>
   </div>
   <%- include('_partials/_footer.ejs'); %>
