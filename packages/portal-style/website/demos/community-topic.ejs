@@ -41,24 +41,37 @@
                 </div>
               </div>
               <div class="col-sm-2">
-                <%- include('_partials/_post-extra.ejs'); %>
+                <div class="d-none d-sm-block">
+                  <%- include('_partials/_post-extra.ejs'); %>
+                </div>
               </div>
             </div>
           </div>
           <div class="col-sm-3">
+            <div class="d-none d-sm-block">
+              <div class="dp-po-community-create">
+                <a class="dp-po-community-create-link" href="">
+                  <i class="dp-po-icon fad fa-edit"></i>Create
+                </a>
+              </div>
+              <%- include('_partials/_subscribe.ejs'); %>
+            </div>
+          </div>
+        </div>
+        <div class="d-block d-sm-none">
+          <div class="dp-po-post-mobile-area">
             <div class="dp-po-community-create">
               <a class="dp-po-community-create-link" href="">
                 <i class="dp-po-icon fad fa-edit"></i>Create
               </a>
             </div>
+          </div>
+        </div>
+        <div class="d-block d-sm-none">
+          <div class="dp-po-post-mobile-area">
             <%- include('_partials/_subscribe.ejs'); %>
-            <!--<div class="dp-po-community-create">
-              <a href="javascript:void(0);" class="dp-po-community-create-link" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                <i class="dp-po-icon fad fa-edit"></i>
-                Create topic
-              </a>
-            </div>-->
+            <a href="javascript:void(0)" data-toggle="modal" data-target="#postExtraMobile"><i
+                class="far fa-ellipsis-v"></i></a>
           </div>
         </div>
         <div class="row">
@@ -79,8 +92,9 @@
           </div>
           <div class="col-sm-3">
             <%- include('_partials/_related-content.ejs'); %>
-
-            <%- include('_partials/_post-share.ejs'); %>
+            <div class="d-none d-sm-block">
+              <%- include('_partials/_post-share.ejs'); %>
+            </div>
 
             <%- include('_partials/_post-label.ejs'); %>
 
@@ -88,6 +102,8 @@
           </div>
         </div>
       </div>
+      <%- include('_partials/_post-extra-mobile-modal.ejs'); %>
+      <%- include('_partials/_post-share-mobile-modal.ejs'); %>
     </main>
   </div>
   <%- include('_partials/_footer.ejs'); %>
