@@ -16,20 +16,36 @@
             </div>
           </div>
           <div class="col-sm-3">
-            <div class="dp-po-community-directory">
-              <a class="dp-po-community-directory-link" href=""> <img class="dp-po-community-directory-svg"
-                  src="/portal-components/portal-style/static/img/page-icons/direct-message.svg"> Member Directory</a>
+            <div class="d-none d-sm-block">
+              <div class="dp-po-community-directory">
+                <a class="dp-po-community-directory-link" href=""> <img class="dp-po-community-directory-svg"
+                    src="/portal-components/portal-style/static/img/page-icons/direct-message.svg"> Member Directory</a>
+              </div>
             </div>
           </div>
           <div class="col-sm-2">
+            <div class="d-none d-sm-block">
+              <div class="dp-po-community-create">
+                <a class="dp-po-community-create-link" href="">
+                  <i class="dp-po-icon fad fa-edit"></i>Create
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="d-none d-sm-block">
+              <%- include('_partials/_subscribe.ejs'); %>
+            </div>
+          </div>
+        </div>
+        <div class="d-block d-sm-none">
+          <div class="dp-po-post-mobile-area">
+            <%- include('_partials/_subscribe.ejs'); %>
             <div class="dp-po-community-create">
               <a class="dp-po-community-create-link" href="">
                 <i class="dp-po-icon fad fa-edit"></i>Create
               </a>
             </div>
-          </div>
-          <div class="col-sm-3">
-            <%- include('_partials/_subscribe.ejs'); %>
           </div>
         </div>
         <div class="row">
