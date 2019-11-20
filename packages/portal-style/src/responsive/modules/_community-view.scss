@@ -1,0 +1,46 @@
+@include media-breakpoint-down(sm) {
+  .dp-po-community-view {
+    $self: '.dp-po-community-view';
+
+    &-item {
+      display: block;
+
+      &-head {
+        display: none;
+      }
+    }
+
+    &-link {
+      white-space: inherit;
+    }
+
+    &-comments {
+      display: none;
+    }
+
+    &-activity {
+      display: none;
+    }
+
+    &-time {
+      display: none;
+    }
+
+    &-status {
+      padding: 0;
+    }
+
+    &-title {
+      display: block;
+      overflow: inherit;
+
+      .dp-po-avatar {
+        display: none;
+      }
+    }
+
+    &-official {
+      display: none;
+    }
+  }
+}
