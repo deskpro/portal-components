@@ -1,3 +1,7 @@
+.dp-po-guides {
+  padding-top: 30px;
+}
+
 .dp-po-guides-wrap {
   max-width: 1560px;
   padding-left: 15px;
@@ -88,8 +92,11 @@
 }
 
 .dp-po-guides-section {
-  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
+  border-top: 2px solid $grey-light;
   padding: 30px 0;
+  position: relative;
+  z-index: 1;
+  background-color: $grey-lightest;
 }
 
 .dp-po-guides-block {
@@ -103,6 +110,7 @@
     &-left {
       box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
       border: 1px solid $grey-light;
+      border-top: none;
       background: $white;
       padding-bottom: 20px;
     }
@@ -114,12 +122,14 @@
   }
 
   &-header {
-    background: rgba(239, 240, 240, 0.3);
+    background: #FAFBFB;
     padding: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid $grey-light;
+    border-top: 1px solid $grey-light;
+    position: sticky;
   }
 
   &-title {
