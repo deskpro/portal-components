@@ -72,10 +72,10 @@ class TicketField extends React.Component {
 
   render() {
     const { field, fileUploadUrl, csrfToken } = this.props;
-    if (field.get('field_id').match(/^ticket_field/)) {
+    if (field.get('field_type').match(/^ticket_field/)) {
       return this.renderCustomField();
     }
-    switch (field.get('field_id')) {
+    switch (field.get('field_type')) {
       case 'message':
         return <Textarea name="message" label="Message" />;
       case 'subject':

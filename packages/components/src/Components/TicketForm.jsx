@@ -107,7 +107,7 @@ class TicketForm extends React.Component {
     return this.getLayout()
       .get('fields', [])
       .map((field) => {
-        switch (field.get('field_id')) {
+        switch (field.get('field_type')) {
           case 'department':
             return (
               <TicketDepartment

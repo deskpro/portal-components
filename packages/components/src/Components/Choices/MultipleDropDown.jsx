@@ -84,7 +84,9 @@ class MultipleDropDown extends Field {
     if (Array.isArray(dataSource.getOptions)) {
       return (
         <ReactSelect
-          value={dataSource.getOptions.filter(o => getIn(form.values, name).includes(o.value))}
+          value={
+            dataSource.getOptions.filter(o => getIn(form.values, name) && getIn(form.values, name).includes(o.value))
+          }
           name={name}
           isClearable={false}
           onChange={value => this.handleChange(form, value)}
