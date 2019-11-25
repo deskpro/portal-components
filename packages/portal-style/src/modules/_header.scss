@@ -62,11 +62,16 @@
       color: $text-color;
       font-size: $p2-font-size;
       padding: 10px 30px;
-      display: inline-block;
+      display: flex;
 
       &:hover {
         color: $grey;
         text-decoration: none;
+      }
+
+      .dp-po-icon {
+        color: $brand-primary;
+        font-size: 20px;
       }
     }
 
@@ -215,6 +220,11 @@
         .dp-po-icon-round {
           background: $brand-primary;
         }
+      }
+
+      .dp-po-icon {
+        color: $brand-primary;
+        font-size: 20px;
       }
     }
 
