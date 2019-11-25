@@ -35,9 +35,15 @@
     flex-wrap: wrap;
     align-items: center;
 
-    .dp-po-avatar img {
-      width: 20px;
-      height: 20px;
+    .dp-po-avatar {
+      &-image,
+      &-name {
+        width: 20px;
+        height: 20px;
+        font-size: 11px;
+        padding: 3px 0;
+        font-weight: normal;
+      }
     }
   }
 
@@ -95,6 +101,21 @@
       margin-bottom: 8px;
       border: 2px solid $white;
     }
+
+    &-name {
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      margin-bottom: 8px;
+      border: 2px solid $white;
+      background: $grey;
+      color: $white;
+      font-weight: 700;
+      display: inline-block;
+      padding: 5px 0;
+      text-align: center;
+    }
+
 
     &-link {
       color: $grey-dark;
@@ -250,12 +271,13 @@
 
       .dp-po-avatar {
         justify-content: center;
+
+        &-image {
+          margin: 0;
+          border: 2px solid $white;
+        }
       }
 
-      img {
-        margin: 0;
-        border: 2px solid $white;
-      }
 
       &-link {
         display: inline-block;
@@ -283,7 +305,8 @@
         }
       }
 
-      &-image {
+      &-image,
+      &-name {
         margin: 0 0 0 -5px;
       }
     }

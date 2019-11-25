@@ -33,6 +33,6 @@ deploy:
       branch: develop
   - provider: script
     skip_cleanup: true
-    script: npm run publish-npm -- --repo-version $(node bin/lerna-version.js)
+    script: npm run publish-npm -- $(node bin/lerna-version.js)
     on:
       tags: true
