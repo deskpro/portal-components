@@ -19,7 +19,7 @@
 
       &:after {
         position: absolute;
-        content: '';
+        content: "";
         width: 1px;
         height: 28px;
         background: $grey-light;
@@ -50,7 +50,7 @@
     margin-left: 30px;
 
     &:before {
-      content: '';
+      content: "";
       height: 100%;
       width: 1px;
       background: $grey-light;
@@ -141,7 +141,7 @@
         display: flex;
         align-items: center;
         white-space: nowrap;
-        @include typo($s19, 400, 'head');
+        @include typo($s19, 400, "head");
         color: $grey-darkest;
 
         &:hover {
@@ -196,7 +196,7 @@
   }
 
   .dp-po-admin-menu {
-    $self: '.dp-po-admin-menu';
+    $self: ".dp-po-admin-menu";
     margin-left: 30px;
 
     &-link {
@@ -301,7 +301,7 @@
       margin: 0 0 5px;
       background: $purple;
       color: $white;
-      @include typo($s12, 600, 'body');
+      @include typo($s12, 600, "body");
       display: flex;
       align-items: center;
       border-radius: 10px;
@@ -315,7 +315,7 @@
     &-user {
       margin: 0;
       font-size: $s12;
-      padding: 0 10px;
+      padding: 0 20px 0 10px;
       align-items: center;
       width: 180px;
       text-overflow: ellipsis;
@@ -327,13 +327,12 @@
 
     &-close {
       position: absolute;
-      right: 0;
-      top: -1px;
+      right: 10px;
+      top: 1px;
 
       .dp-po-icon {
-        margin-left: 10px;
         color: $grey;
-        font-size: 14px;
+        font-size: 11px;
 
         &:hover {
           color: $danger;
