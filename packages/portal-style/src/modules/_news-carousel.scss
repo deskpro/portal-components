@@ -4,7 +4,7 @@
 
   &-item {
     list-style: none;
-    margin: 0 20px;
+    margin: 0 16px;
     display: inline-block;
     border: 2px solid $grey-light;
     border-radius: 6px;
@@ -18,14 +18,9 @@
         margin-bottom: 20px;
       }
 
-      #{$self}-desc {
-        margin: 0;
-        padding: 0 0 20px;
-      }
+      #{$self}-desc {}
 
-      #{$self}-avatar {
-        bottom: -12px;
-      }
+      #{$self}-avatar {}
     }
   }
 

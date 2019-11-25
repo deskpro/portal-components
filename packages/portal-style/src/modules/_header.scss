@@ -19,7 +19,7 @@
 
       &:after {
         position: absolute;
-        content: '';
+        content: "";
         width: 1px;
         height: 28px;
         background: $grey-light;
@@ -50,7 +50,7 @@
     margin-left: 30px;
 
     &:before {
-      content: '';
+      content: "";
       height: 100%;
       width: 1px;
       background: $grey-light;
@@ -146,7 +146,7 @@
         display: flex;
         align-items: center;
         white-space: nowrap;
-        @include typo($s19, 400, 'head');
+        @include typo($s19, 400, "head");
         color: $grey-darkest;
 
         &:hover {
@@ -201,7 +201,7 @@
   }
 
   .dp-po-admin-menu {
-    $self: '.dp-po-admin-menu';
+    $self: ".dp-po-admin-menu";
     margin-left: 30px;
 
     &-link {
@@ -255,6 +255,7 @@
 
     .dropdown-item {
       font-size: 15px;
+
       &:hover {
         .dp-po-icon-round {
           background: $brand-primary;
@@ -273,6 +274,7 @@
       justify-content: left;
       padding-left: 10px;
       padding-right: 10px;
+
       &:hover {
         border-color: $brand-primary;
         background: none;
@@ -295,6 +297,67 @@
       background: #d3d6d7;
       position: absolute;
       right: 0;
+    }
+  }
+
+  .dp-po-impersonation {
+    position: relative;
+    margin-right: 30px;
+    position: relative;
+    padding-right: 30px;
+    max-width: 230px;
+
+    &-badge {
+      margin: 0 0 5px;
+      background: $purple;
+      color: $white;
+      @include typo($s12, 600, "body");
+      display: flex;
+      align-items: center;
+      border-radius: 10px;
+      padding: 2px 10px;
+
+      .dp-po-icon {
+        margin-right: 10px;
+      }
+    }
+
+    &-user {
+      margin: 0;
+      font-size: $s12;
+      padding: 0 20px 0 10px;
+      align-items: center;
+      width: 180px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      display: block;
+      position: relative;
+    }
+
+    &-close {
+      position: absolute;
+      right: 10px;
+      top: 1px;
+
+      .dp-po-icon {
+        color: $grey;
+        font-size: 11px;
+
+        &:hover {
+          color: $danger;
+        }
+      }
+    }
+
+    &:after {
+      content: "";
+      height: 100%;
+      width: 1px;
+      background: #d3d6d7;
+      position: absolute;
+      right: 0;
+      top: 0;
     }
   }
 }
