@@ -73,6 +73,27 @@
         color: $brand-primary;
         font-size: 20px;
       }
+
+      &-figure {
+        position: relative;
+      }
+
+      &-count {
+        border-radius: 50%;
+        background-color: $danger;
+        height: 22px;
+        width: 22px;
+        color: $white;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: 'Rubik', sans-serif;
+        position: absolute;
+        right: 0;
+        top: -9px;
+      }
     }
 
     &-dropdown {
