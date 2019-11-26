@@ -8,6 +8,8 @@ import CalendarIcon from 'assets/calendar.svg';
 
 import Field from '../Field';
 
+moment.locale('en');
+
 class DatePicker extends Field {
   constructor(props) {
     super(props);

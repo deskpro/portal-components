@@ -1,9 +1,11 @@
 import React from 'react';
 import DateTimeIcon from 'assets/date-time.svg';
-import moment from 'moment/moment';
+import moment from 'moment-hijri';
 import { getIn } from 'formik';
 import DatePicker from './DatePicker';
 import Field from '../Field';
+
+moment.locale('en');
 
 class DateTimePicker extends DatePicker {
   getProps = (form) => {

@@ -29,9 +29,11 @@ class TicketField extends React.Component {
     switch (field.getIn(['data', 'widget_type'])) {
       case 'date':
         Component = DatePicker;
+        props.calendar = field.getIn(['data', 'options', 'calendar'], 'gregorian');
         break;
       case 'datetime':
         Component = DateTimePicker;
+        props.calendar = field.getIn(['data', 'options', 'calendar'], 'gregorian');
         break;
       case 'checkbox':
         Component = Checkboxes;
