@@ -1,0 +1,20 @@
+@include media-breakpoint-down(sm) {
+  .dp-po-community-title {
+    margin: 0;
+
+    &-button {
+      &-link {
+        font-size: $s14;
+        padding: 4px 10px;
+
+        .dp-po-icon {
+          display: none;
+        }
+      }
+
+      &-dropdown {
+        padding: 4px;
+      }
+    }
+  }
+}

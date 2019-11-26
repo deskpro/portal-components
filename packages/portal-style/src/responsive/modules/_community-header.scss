@@ -1,0 +1,17 @@
+@include media-breakpoint-down(sm) {
+  .dp-po-community-header {
+    $self: '.dp-po-community-header';
+
+    &-filter-dropdown {
+      padding: 0;
+
+      .form-group {
+        margin-bottom: 5px;
+      }
+
+      .badge {
+        font-size: $s12;
+      }
+    }
+  }
+}

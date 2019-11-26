@@ -1,0 +1,28 @@
+@include media-breakpoint-down(sm) {
+  .dp-po-community-header-mobile {
+    border-top: 1px solid $grey-light;
+    border-bottom: 1px solid $grey-light;
+    display: flex;
+    padding: 10px 0;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    &-left,
+    &-right {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      a {
+        margin-right: 20px;
+      }
+    }
+
+    &-right {
+      a {
+        margin: 0 0 0 20px;
+      }
+    }
+  }
+}
