@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import moment from 'moment-hijri';
 import { List } from 'immutable';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
@@ -7,6 +8,19 @@ import Form from './Form';
 import Submit from './Submit';
 import TicketField from './TicketField';
 import TicketDepartment from './TicketDepartment';
+
+const invalidDate = new Date('');
+function parseDateFromFormats(formats, parseStrict) {
+  return this.transform((value, originalValue) => {
+    if (this.isType(value)) return value;
+
+    const newValue = moment(originalValue, formats, parseStrict);
+
+    return newValue.isValid() ? newValue.toDate() : invalidDate;
+  });
+}
+
+Yup.addMethod(Yup.date, 'format', parseDateFromFormats);
 
 class TicketForm extends React.Component {
   static propTypes = {
@@ -60,6 +74,7 @@ class TicketForm extends React.Component {
   getValidationSchema = () => {
     // return lazy(obj)
     const shape = {};
+
     this.getLayout()
       .get('fields', [])
       .forEach((field) => {
@@ -76,7 +91,9 @@ class TicketForm extends React.Component {
           });
         }
         if (widgetType === 'datetime' || widgetType === 'date') {
-          validationRule = Yup.date();
+          // just a stab - format is not passed
+          const format = widgetType === 'datetime' ? 'DD/MM/YYYY HH:MM' : 'DD/MM/YYYY';
+          validationRule = Yup.date().format(format);
           const dateValidType = field.getIn(['data', 'options', 'date_valid_type']);
           if (dateValidType === 'range') {
             if (field.getIn(['data', 'options', 'date_valid_range1'])) {
