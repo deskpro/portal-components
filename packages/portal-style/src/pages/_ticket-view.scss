@@ -327,7 +327,8 @@
     }
   }
 
-  &-body {
+  &-body,
+  &#closeConfirm {
     .form-group .radios {
       margin-top: 20px;
 
