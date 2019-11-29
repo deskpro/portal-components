@@ -79,6 +79,9 @@
     border-top-left-radius: 4px;
     border-bottom: 2px solid $grey-light;
   }
+  &-cover.with-splash {
+    margin: -15px -15px 29px -15px;
+  }
 
   &-photo {
     border-top-right-radius: 4px;
@@ -92,6 +95,23 @@
     border: 2px solid $white;
   }
 
+  &-content {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+  }
+  &-content:after {
+    content: "";
+    position: absolute;
+    height: 80px;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 25%);
+  }
+
   &-title {
     @include typo($s17, 500, 'head');
     line-height: 1.35;
@@ -99,7 +119,6 @@
 
   &-desc {
     font-size: $s16;
-    padding: 0 0 40px;
     margin: 0;
     position: relative;
     line-height: 1.5;
