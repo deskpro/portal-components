@@ -1,5 +1,9 @@
 .breadcrumb-outer {
   border-bottom: 2px solid $grey-light;
+
+  .container {
+    height: 72px;
+  }
 }
 
 .breadcrumb {
@@ -9,7 +13,7 @@
   &-item {
     color: $breadcrumb-inactive-color;
     font-weight: bold;
-    font-size: $p2-font-size;
+    font-size: $p1-font-size;
     position: relative;
     display: flex;
     align-items: center;
@@ -82,16 +86,16 @@
 
   &-image {
     position: relative;
-    margin-right: 10px;
+    margin-right: 20px;
 
     img {
-      max-width: 20px;
-      margin-right: 10px;
+      max-width: 64px;
+      margin-right: 20px;
     }
 
     &:after {
       width: 2px;
-      height: 34px;
+      height: 74px;
       content: '';
       background: $grey-light;
       right: -1px;
