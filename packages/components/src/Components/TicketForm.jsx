@@ -8,6 +8,7 @@ import Form from './Form';
 import Submit from './Submit';
 import TicketField from './TicketField';
 import TicketDepartment from './TicketDepartment';
+import Person from './Inputs/Person';
 
 const invalidDate = new Date('');
 function parseDateFromFormats(formats, parseStrict) {
@@ -82,6 +83,9 @@ class TicketForm extends React.Component {
         if (field.get('required', false) || field.getIn(['data', 'options', 'validation_type']) === 'required') {
           validationRule = validationRule.required('Field is required');
         }
+        if (field.get('field_type') === 'email') {
+          validationRule = validationRule.email();
+        }
         const regex = field.getIn(['data', 'options', 'regex']);
         const widgetType = field.getIn(['data', 'widget_type'], null);
         if (regex) {
@@ -108,7 +112,12 @@ class TicketForm extends React.Component {
             }
           }
         }
-        shape[field.get('field_id')] = validationRule;
+        if (field.get('field_type') === 'person') {
+          shape[`${field.get('field_id')}.user_email`] = validationRule.email();
+          shape[`${field.get('field_id')}.user_name`] = validationRule.email();
+        } else {
+          shape[field.get('field_id')] = validationRule;
+        }
       });
     return Yup.object().shape(shape);
   };
@@ -133,6 +142,8 @@ class TicketForm extends React.Component {
                 handleChange={this.handleDepartmentChange}
               />
             );
+          case 'person':
+            return <Person name="person" namePlaceholder="John Doe" emailPlaceholder="john.doe@company.com" />;
           default:
             return (
               <TicketField

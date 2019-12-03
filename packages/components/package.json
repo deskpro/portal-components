@@ -33,7 +33,7 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "dist": "rm -rf ./dist && NODE_ENV=production webpack --config config/webpack.config.dist.js",
+    "dist": "NODE_ENV=production webpack --config config/webpack.config.dist.js",
     "lint": "eslint . --cache --cache-location=.cache/eslint --ext .js,.jsx",
     "test": "node scripts/test.js --env=jsdom",
     "travis-test": "npm run test -- --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
