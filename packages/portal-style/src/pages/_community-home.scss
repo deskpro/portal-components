@@ -86,6 +86,10 @@
 
     .dp-po-icon {
       font-size: 40px;
+      img {
+        max-width: 48px;
+        max-height: 48px;
+      }
     }
 
     &-purple {
