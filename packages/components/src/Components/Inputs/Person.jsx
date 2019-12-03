@@ -33,6 +33,8 @@ class Person extends Field {
       />
     ];
   }
+
+  renderDivider = () => null;
 }
 
 Person.propTypes = {
