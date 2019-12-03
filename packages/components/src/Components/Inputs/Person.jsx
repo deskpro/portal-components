@@ -5,13 +5,8 @@ import Text from './Text';
 import Email from './Email';
 
 
-class Person extends Field {
-  constructor(props) {
-    super(props);
-    this.type = 'person';
-  }
-
-  renderField = () => {
+class Person extends React.Component {
+  render() {
     const {
       name,
       namePlaceholder,
@@ -33,8 +28,6 @@ class Person extends Field {
       />
     ];
   }
-
-  renderDivider = () => null;
 }
 
 Person.propTypes = {
