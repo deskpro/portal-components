@@ -20,6 +20,24 @@
       }
     }
 
+    &-item {
+      .dp-po-time {
+        position: absolute;
+        right: 20px;
+        bottom: 5px;
+      }
+    }
+
+    &-linkauthor {
+      strong {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        display: block;
+        max-width: 90px;
+      }
+    }
+
     &-linktitle {
       align-items: start;
 
