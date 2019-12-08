@@ -87,6 +87,7 @@
   &-image {
     position: relative;
     margin-right: 20px;
+    line-height: 72px;
 
     img {
       max-width: 64px;
@@ -99,7 +100,7 @@
       content: '';
       background: $grey-light;
       right: -1px;
-      top: -4px;
+      top: 0;
       display: block;
       position: absolute;
     }
