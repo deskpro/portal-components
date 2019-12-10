@@ -107,6 +107,9 @@
       }
     }
   }
+  .dp-pc_file-upload {
+    padding: 0;
+  }
 }
 
 .form-control {
@@ -158,6 +161,23 @@ select.form-control:not([multiple="multiple"]) {
   }
 }
 
+.react-select {
+  background: $grey-lightest;
+  border: 2px solid $grey-light;
+  border-radius: 4px;
+  .react-select__control {
+    padding-top: 0;
+    height: 45px;
+
+    .react-select__single-value {
+      color: #495057;
+    }
+    .react-select__multi-value {
+      margin-top: 2px;
+    }
+  }
+}
+
 .dp-po-form-check,
 .dp-po-form-check-compact {
   padding: 0;
@@ -174,7 +194,6 @@ select.form-control:not([multiple="multiple"]) {
     &:before {
       background-color: $grey-lightest;
       border: 1px solid $grey-light;
-      border-radius: 0.5px;
       content: "";
       display: block;
       height: 20px;

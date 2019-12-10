@@ -59,12 +59,16 @@ Option.propTypes = components.Option.propTypes;
 
 export class DropDownInput extends React.Component {
   static propType = {
-    form:       PropTypes.object,
     dataSource: PropTypes.shape({
       getOptions: PropTypes.oneOfType([PropTypes.func, PropTypes.array]).isRequired,
     }).isRequired,
-    handleChange: PropTypes.func,
-    isClearable:  PropTypes.bool,
+    onChange:    PropTypes.func,
+    isClearable: PropTypes.bool,
+  };
+
+  static defaultProps = {
+    onBlur() {},
+    onFocus() {},
   };
 
   constructor(props) {
@@ -76,15 +80,11 @@ export class DropDownInput extends React.Component {
     };
   }
 
-  onBlur = (form) => {
-    const { name } = this.props;
+  onBlur = () => {
     this.props.onBlur();
     this.setState({
       menuIsOpen: false
     });
-    if (form) {
-      form.setFieldTouched(name, true);
-    }
   };
 
   onFocus = () => {
@@ -94,7 +94,7 @@ export class DropDownInput extends React.Component {
     });
   };
 
-  handleChange = (form, value) => {
+  onChange = (value) => {
     if (value && value.children && value.children.length) {
       const { children } = value;
       const options = [{
@@ -114,22 +114,21 @@ export class DropDownInput extends React.Component {
       });
       return false;
     }
-    const { name, handleChange } = this.props;
     this.setState({
       value,
       menuIsOpen: false,
     });
     this.select.blur();
     const newValue = value ? value.value : null;
-    form.setFieldValue(name, newValue);
-    handleChange(newValue);
+    this.props.onChange(newValue);
     return true;
   };
 
-  loadOptions = (form, inputValue) => {
-    const { dataSource, name } = this.props;
+  loadOptions = (inputValue) => {
+    const { dataSource } = this.props;
+    const propValue = this.props.value;
     return dataSource.getOptions(inputValue).then((options) => {
-      const value = options.find(o => o.value === getIn(form.values, name));
+      const value = options.find(o => o.value === propValue);
       this.setState({
         value
       });
@@ -139,24 +138,24 @@ export class DropDownInput extends React.Component {
 
   render() {
     const {
-      name, dataSource, isClearable, form, ...props
+      name, dataSource, isClearable, value, ...props
     } = this.props;
     if (Array.isArray(dataSource.getOptions)) {
       return (
         <ReactSelect
           ref={(c) => { this.select = c; }}
-          value={dataSource.getOptions.find(o => o.value === getIn(form.values, name))}
+          value={dataSource.getOptions.find(o => o.value === value)}
           name={name}
           isClearable={isClearable}
           components={{ SelectContainer, Option }}
           menuIsOpen={this.state.menuIsOpen}
-          onChange={value => this.handleChange(form, value)}
           options={this.state.options}
           closeMenuOnSelect={this.closeMenuOnSelect}
           classNamePrefix="react-select"
           {...props}
           onFocus={this.onFocus}
-          onBlur={() => this.onBlur(form)}
+          onBlur={this.onBlur}
+          onChange={this.onChange}
         />
       );
     }
@@ -166,24 +165,44 @@ export class DropDownInput extends React.Component {
         value={this.state.value}
         name={name}
         isClearable={isClearable}
-        onChange={value => this.handleChange(form, value)}
-        onBlur={() => form.setFieldTouched(name, true)}
         defaultOptions
         cacheOptions
         components={{ SelectContainer, Option }}
-        loadOptions={inputValue => this.loadOptions(form, inputValue)}
+        loadOptions={inputValue => this.loadOptions(inputValue)}
         classNamePrefix="react-select"
         {...props}
+        onChange={this.onChange}
+        onBlur={this.onBlur}
+        onFocus={this.onFocus}
       />
     );
   }
 }
 
 class DropDown extends Field {
+  onBlur = (form) => {
+    const { name } = this.props;
+    this.props.onBlur();
+    if (form) {
+      form.setFieldTouched(name, true);
+    }
+  };
+
+  onChange = (form, value) => {
+    const { name, handleChange } = this.props;
+
+    const newValue = value ? value.value : null;
+    form.setFieldValue(name, newValue);
+    handleChange(newValue);
+  };
+
+
   renderField(form) {
     return (
       <DropDownInput
-        form={form}
+        onBlur={() => this.onBlur(form)}
+        onChange={value => this.onChange(form, value)}
+        value={getIn(form.values, this.props.name)}
         {...this.props}
       />
     );
@@ -195,6 +214,7 @@ DropDown.propTypes = {
   dataSource: PropTypes.shape({
     getOptions: PropTypes.oneOfType([PropTypes.func, PropTypes.array]).isRequired,
   }).isRequired,
+  form:         PropTypes.object,
   handleChange: PropTypes.func,
   isClearable:  PropTypes.bool,
 };

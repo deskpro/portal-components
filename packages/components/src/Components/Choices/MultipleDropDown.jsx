@@ -50,7 +50,19 @@ const Option = (props) => {
 
 Option.propTypes = components.Option.propTypes;
 
-class MultipleDropDown extends Field {
+export class MultipleDropDownInput extends React.Component {
+  static propType = {
+    dataSource: PropTypes.shape({
+      getOptions: PropTypes.oneOfType([PropTypes.func, PropTypes.array]).isRequired,
+    }).isRequired,
+    onChange: PropTypes.func,
+  };
+
+  static defaultProps = {
+    onBlur() {},
+    onFocus() {},
+  };
+
   constructor(props) {
     super(props);
     this.state = {
@@ -58,20 +70,19 @@ class MultipleDropDown extends Field {
     };
   }
 
-  handleChange = (form, value) => {
-    const { name, handleChange } = this.props;
+  onChange = (value) => {
     this.setState({
       value
     });
     const newValue = value ? value.map(e => e.value) : null;
-    form.setFieldValue(name, newValue);
-    handleChange(newValue);
+    this.props.onChange(newValue);
   };
 
-  loadOptions = (form, inputValue) => {
-    const { dataSource, name } = this.props;
+  loadOptions = (inputValue) => {
+    const { dataSource } = this.props;
+    const propValue = this.props.value;
     return dataSource.getOptions(inputValue).then((options) => {
-      const value = options.find(o => o.value === getIn(form.values, name));
+      const value = options.find(o => propValue && propValue.includes(o.value));
       this.setState({
         value
       });
@@ -79,24 +90,25 @@ class MultipleDropDown extends Field {
     });
   };
 
-  renderField = (form) => {
-    const { name, dataSource, ...props } = this.props;
+  render() {
+    const {
+      name, dataSource, value, ...props
+    } = this.props;
     if (Array.isArray(dataSource.getOptions)) {
       return (
         <ReactSelect
           value={
-            dataSource.getOptions.filter(o => getIn(form.values, name) && getIn(form.values, name).includes(o.value))
+            dataSource.getOptions.filter(o => value && value.includes(o.value))
           }
           name={name}
           isClearable={false}
-          onChange={value => this.handleChange(form, value)}
-          onBlur={() => form.setFieldTouched(name, true)}
           options={dataSource.getOptions}
           hideSelectedOptions={false}
           components={{ Option, SelectContainer }}
           classNamePrefix="react-select"
           isMulti
           {...props}
+          onChange={this.onChange}
         />
       );
     }
@@ -106,16 +118,36 @@ class MultipleDropDown extends Field {
         value={this.state.value}
         name={name}
         isClearable={false}
-        onChange={value => this.handleChange(form, value)}
-        onBlur={() => form.setFieldTouched(name, true)}
         hideSelectedOptions={false}
         components={{ Option, SelectContainer }}
         defaultOptions
         cacheOptions
-        loadOptions={inputValue => this.loadOptions(form, inputValue)}
+        loadOptions={inputValue => this.loadOptions(inputValue)}
         classNamePrefix="react-select"
         isMulti
         {...props}
+        onChange={this.onChange}
+      />
+    );
+  }
+}
+
+class MultipleDropDown extends Field {
+  onBlur = (form) => {
+    const { name } = this.props;
+    this.props.onBlur();
+    if (form) {
+      form.setFieldTouched(name, true);
+    }
+  };
+
+  renderField(form) {
+    return (
+      <MultipleDropDownInput
+        onBlur={() => this.onBlur(form)}
+        onChange={value => this.onChange(form, value)}
+        value={getIn(form.values, this.props.name)}
+        {...this.props}
       />
     );
   }

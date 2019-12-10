@@ -1,6 +1,6 @@
 import Checkboxes from './Choices/Checkboxes';
-import DropDown from './Choices/DropDown';
-import MultipleDropDown from './Choices/MultipleDropDown';
+import DropDown, { DropDownInput } from './Choices/DropDown';
+import MultipleDropDown, { MultipleDropDownInput } from './Choices/MultipleDropDown';
 import Radio from './Choices/Radio';
 import WebhookDropDown from './Choices/WebhookDropDown';
 
@@ -31,7 +31,9 @@ import FieldLayout from './FieldLayout';
 export {
   Checkboxes,
   DropDown,
+  DropDownInput,
   MultipleDropDown,
+  MultipleDropDownInput,
   Radio,
   WebhookDropDown,
 
