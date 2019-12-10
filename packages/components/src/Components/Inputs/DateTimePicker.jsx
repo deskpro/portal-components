@@ -37,7 +37,7 @@ class DateTimePicker extends DatePicker {
 
 DateTimePicker.defaultProps = {
   ...Field.defaultProps,
-  format: 'DD/MM/Y HH:mm'
+  format: 'DD/MM/YYYY HH:mm'
 };
 
 export default DateTimePicker;
