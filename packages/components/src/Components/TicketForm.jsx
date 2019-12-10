@@ -31,19 +31,30 @@ class TicketForm extends React.Component {
     department:    PropTypes.number,
     fileUploadUrl: PropTypes.string.isRequired,
     csrfToken:     PropTypes.string.isRequired,
-    showHover:     PropTypes.bool
+    showHover:     PropTypes.bool,
+    errors:        PropTypes.object,
   };
 
   static defaultProps = {
+    errors:     {},
     department: null,
     showHover:  true
   };
 
   constructor(props) {
     super(props);
+    this.formik = React.createRef();
     this.state = {
       department: props.department
     };
+  }
+
+  componentDidMount() {
+    this.formik.current.setErrors(this.props.errors);
+  }
+
+  componentDidUpdate() {
+    this.formik.current.setErrors(this.props.errors);
   }
 
   getLayout = () => {
@@ -59,8 +70,13 @@ class TicketForm extends React.Component {
     this.getLayout()
       .get('fields', [])
       .forEach((field) => {
-        if (field.get('field_id') === 'department') {
+        if (field.get('field_type') === 'department') {
           initialValues.department = this.state.department;
+        } else if (field.get('field_type') === 'person') {
+          initialValues.person = {
+            user_name:  '',
+            user_email: '',
+          };
         } else {
           let defaultValue = field.getIn(['data', 'default_value'], '');
           if (defaultValue instanceof List) {
@@ -163,10 +179,11 @@ class TicketForm extends React.Component {
     const { showHover } = this.props;
     return (
       <Formik
+        ref={this.formik}
         enableReinitialize
+        validationSchema={this.getValidationSchema()}
         initialValues={this.getInitialValues()}
         onSubmit={this.props.onSubmit}
-        validationSchema={this.getValidationSchema()}
       >
         {() => (
           <Form showHover={showHover}>
