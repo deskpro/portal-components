@@ -1,22 +1,29 @@
 @import url('https://fonts.googleapis.com/css?family=Rubik');
 
 :root {
+  --grey-darkest: #4c4f50;
+  --grey-lightest: #f7f7f7;
+  --grey-light: #d3d6d7;
+  --grey: #a9b0b0;
+
   --brand-primary: #3d88f3;
+  --brand-secondary: #a9b0b0;
   --error-color: #f16c7c;
-  --label-color: #7d95aa;
-  --text-color: #5f768a;
+  --label-color: var(--grey-darkest);
+  --text-color: var(--grey-darkest);
   --description-color: #5f768a;
-  --light-grey: #9fb3c4;
-  --divider-color: #dee4eb;
   --valid-label: #4eba5c;
   --box-shadow-30: rgba(39, 41, 86, 0.3);
-  --option-background: #eff0f2;
+  --option-background: var(--grey-lightest);
   --checkbox-border: #dce4eb;
-  --input-padding: 11px 10px 1px 0;
-  --input-height: 59px;
-  --textarea-background: #f8fafc;
-}
+  --input-background: var(--grey-lightest);
+  --input-border: var(--grey-light);
+  --input-height: 44px;
+  --input-padding: 17px 12px;
+  --textarea-background: var(--grey-lightest);
+  --placeholder-color: var(--grey);
 
+}
 
 .dp-pc_form {
   box-sizing: border-box;
@@ -39,7 +46,7 @@
     border: 0;
     transition: 0.2s ease all;
     &:hover, &:focus {
-      background-color: color(var(--brand-primary) alpha(-20%));
+      background-color: color-mod(var(--brand-primary) blackness(-20%));
       box-shadow: 4px 4px 6px var(--box-shadow-30);
       outline: none;
     }
@@ -51,101 +58,46 @@
 
 .dp-pc_field {
   position: relative;
+  margin-bottom: 15px;
 
   & input.dp-pc_input {
-    font-size: 18px;
-    padding: var(--input-padding);
-    margin-left: 10px;
-    display: block;
-    height: var(--input-height);
-    width: calc(100% - 20px);
+    border: 1.5px solid var(--input-border);
+    border-radius: 3px;
+    background-color: var(--input-background);
     color: var(--text-color);
-    border: none;
+    display: block;
+    font-size: 18px;
+    height: var(--input-height);
+    margin-left: 10px;
+    padding: var(--input-padding);
+    width: calc(100% - 20px);
   }
-  & input:-webkit-autofill {
+  & input:-webkit-autofill,
+  & input:-internal-autofill-selected
+  {
     -webkit-box-shadow: 0 0 0 50px white inset;
     -webkit-text-fill-color: var(--text-color) !important;
+    background-color: var(--input-background) !important;
+    color: var(--text-color) !important;
   }
   & input:focus {
     outline: none;
   }
   & .dp-pc_label {
     color: var(--label-color);
-    font-size: 16px;
+    font-size: 14px;
     font-weight: normal;
-    position: absolute;
     pointer-events: none;
-    left: 10px;
-    top: 25px;
-    transition: 0.2s ease all;
-  }
-  & input:focus ~ .dp-pc_label,
-  &:not(.dp-pc_empty) .dp-pc_label,
-  & .react-select__is-focused ~ .dp-pc_label {
-    top: 11px;
-    left: 10px;
-    font-size: 10px;
-    color: var(--brand-primary);
-  }
-
-  &:not(.dp-pc_empty):not(.dp-pc_error) input:not(:focus) ~ .dp-pc_label {
-    color: var(--valid-label);
-  }
-
-  & .indicator {
-    position: absolute;
-    display: inline-block;
-    height: 48px;
-    top: 11px;
-    left: 0;
-  }
-  & .indicator:before,
-  & .indicator:after {
-    content: '';
-    height: 0;
-    width: 3px;
-    left: 1px;
-    position: absolute;
-    background: var(--brand-primary);
-    transition: 0.2s ease all;
-  }
-  & .indicator:before {
-    top: 50%;
-  }
-  & .indicator:after {
-    bottom: 50%;
-  }
-
-  /* active state */
-  & input:focus ~ .indicator:before,
-  & input:focus ~ .indicator:after {
-    height: 50%;
-  }
-
-  & input:invalid .indicator:before,
-  & input:invalid .indicator:after,
-  &.dp-pc_error .indicator:before,
-  &.dp-pc_error .indicator:after {
-    height: 50%;
-    background: var(--error-color);
-  }
-
-  /* DIVIDER ================================== */
-  & .divider {
-    margin-left: 10px;
-    width: calc(100% - 20px);
-    margin-top: 10px;
-    height: 1px;
-    background-color: var(--divider-color);
+    margin: 0 0 16px 10px;
   }
 
   & .dp-pc_error_message,
   & .dp-pc_description {
     font-size: 12px;
-    margin-left: 10px;
-    bottom: 5px;
-    left: 11px;
+    margin-left: 12px;
+    margin-top: 10px;
     color: var(--label-color);
+    display: block;
   }
 
   /* Error Message */
@@ -178,10 +130,10 @@
     margin-left: 10px;
     display: block;
     color: var(--text-color);
-    border: 1px solid var(--checkbox-border);
-    border-radius: 4px;
+    border: 1.5px solid var(--input-border);
+    border-radius: 3px;
     background-color: var(--textarea-background);
-    margin-top: 40px;
+    min-height: 100px;
   }
   & textarea:focus {
     outline: none;
@@ -205,31 +157,24 @@
     height: 50%;
   }
   & textarea ~ .dp-pc_label,
-  &:not(.dp-pc_empty) textarea ~ .dp-pc_label {
-    position: absolute;
-    top: -30px;
-    font-size: 18px;
-    color: var(--label-color);
-    left: 10px;
-  }
 
   /******************************
       Dropdown
   *******************************/
 
   & .react-select__control {
-    border: none;
-    border-radius: 0;
-    padding: var(--input-padding);
-    background-color: transparent;
+    border: 1.5px solid var(--grey-light);
+    border-radius: 3px;
+    background-color: var(--input-background);
     margin-left: 10px;
     height: var(--input-height);
     width: calc(100% - 20px);
     font-size: 18px;
     box-shadow: none;
+    padding: 0 11px 0 12px;
 
     & .react-select__placeholder {
-      color: transparent;
+      color: var(--placeholder-color);
     }
     & .Select-value-label {
       top: 18px;
@@ -301,7 +246,8 @@
     }
   }
   & .react-select__menu {
-    margin-top: -20px;
+    margin-top: -12px;
+    margin-left: 12px;
     width: calc(100% - 20px);
     border: none;
     box-shadow: 4px 4px 6px var(--box-shadow-30);
@@ -310,13 +256,14 @@
       font-size: 16px;
       padding: 10px;
       position: relative;
+      background-color: var(--option-background);
       &.react-select__option--is-focused {
-        background-color: var(--option-background);
+        background-color: var(--brand-secondary);
         color: var(--brand-primary);
       }
       &.react-select__option--is-selected {
-        color: var(--text-color);
-        background-color: color(var(--brand-primary) alpha(10%));
+        color: var(--brand-primary);
+        background-color: var(--brand-secondary);
       }
     }
     & .react-select__option--arrow {
@@ -475,18 +422,11 @@
       border-color: var(--error-color);
     }
   }
-
-  & .dp-pc_checkbox.focused ~ .indicator:before,
-  & .dp-pc_checkbox.focused ~ .indicator:after {
-    height: 50%;
-  }
   /******************************
         Input checkboxes
   *******************************/
   & .dp-pc_checkboxes {
-    padding: 23px 10px 11px 0;
     margin-left: 10px;
-    height: var(--input-height);
     width: calc(100% - 20px);
   }
   & .dp-pc_checkboxes_checkbox {
@@ -543,17 +483,11 @@
     }
   }
   & .dp-pc_checkboxes_label {
-    position: absolute;
-    top: 7px;
-    font-size: 18px;
+    font-size: 14px;
     color: var(--label-color);
-    left: 10px;
+    margin-left: 10px;
   }
 
-  & .dp-pc_checkboxes.focused ~ .indicator:before,
-  & .dp-pc_checkboxes.focused ~ .indicator:after {
-    height: 50%;
-  }
 
   /******************************
       Input radio
@@ -695,14 +629,14 @@
         font-size: 14px;
         color: var(--description-color);
         & .dp-pc_file-upload_remove-file {
-          color: var(--light-grey);
+          color: var(--grey-light);
           margin-left: 5px;
           font-size: 12px;
           cursor: pointer;
           & svg {
             width: 9px;
             & path {
-              fill: var(--light-grey);
+              fill: var(--grey-light);
             }
           }
           &:hover {
@@ -748,26 +682,29 @@
       Date Picker
   *******************************/
   & .dp-pc_date-picker {
-    width: calc(100% - 20px);
+    width: calc(100% - 25px);
+    background-color: var(--input-background);
+    border: 1.5px solid var(--input-border);
     margin-left: 10px;
+
     & input.dp-pc_date-picker_input {
       font-size: 18px;
       padding: var(--input-padding);
+      background-color: var(--input-background);
       display: block;
       height: var(--input-height);
       color: var(--text-color);
       margin-left: 10px;
       border: none;
-      width: 100%;
     }
     & svg {
       width: 20px;
-      margin-left: 0;
+      margin-left: 5px;
       margin-bottom: -4px;
     }
     & svg + div {
       display: inline-block;
-      width: calc(100% - 20px);
+      width: calc(100% - 25px);
     }
     & .react-datepicker-wrapper {
       width: 100%;
@@ -776,18 +713,8 @@
       width: 100%;
     }
     &.focused {
-      & ~ .indicator:before,
-      & ~ .indicator:after {
-        height: 50%;
-      }
       & svg [class$=st0] {
         fill: var(--brand-primary);
-      }
-      & ~ .dp-pc_label {
-        top: 11px;
-        left: 10px;
-        font-size: 10px;
-        color: var(--brand-primary);
       }
     }
     & .react-datepicker__current-month--hasYearDropdown.react-datepicker__current-month--hasMonthDropdown {
@@ -866,7 +793,6 @@
       height: 72px;
     }
   }
-  &:not(.dp-pc_empty) .dp-pc_likert ~ .dp-pc_label,
   & .dp-pc_likert ~ .dp-pc_label,
   &.dp-pc_field--tel .dp-pc_label,
   &.dp-pc_field--tel input:focus ~ .dp-pc_label {
@@ -893,7 +819,7 @@
         display: none;
       }
       & .react-select__placeholder {
-        color: var(--light-grey);
+        color: var(--grey-light);
       }
     }
     & .dp-pc_input {
@@ -904,16 +830,16 @@
     }
 
     & ::-webkit-input-placeholder { /* WebKit browsers */
-      color: var(--light-grey);
+      color: var(--grey-light);
     }
     & :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-      color: var(--light-grey);
+      color: var(--grey-light);
     }
     & ::-moz-placeholder { /* Mozilla Firefox 19+ */
-      color: var(--light-grey);
+      color: var(--grey-light);
     }
     & :-ms-input-placeholder { /* Internet Explorer 10+ */
-      color: var(--light-grey);
+      color: var(--grey-light);
     }
   }
 }
@@ -921,12 +847,6 @@
   margin-top: 45px;
 }
 .dp-pc_form.show-hover {
-  & .dp-pc_field:hover {
-    & .indicator:before,
-    & .indicator:after {
-      height: 50%;
-    }
-  }
   & .dp-pc_likert .dp-pc_likert_input:hover {
     & .dp-pc_likert_number {
       background-color: var(--brand-primary);

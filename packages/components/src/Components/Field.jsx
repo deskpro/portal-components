@@ -73,10 +73,6 @@ class Field extends React.Component {
     /* eslint-enable jsx-a11y/label-has-for */
   };
 
-  renderIndicator = () => <span className="indicator" />;
-
-  renderDivider = () => <div className="divider" />;
-
   render() {
     const { name } = this.props;
     return (
@@ -85,19 +81,13 @@ class Field extends React.Component {
         render={({ form }) => {
           const error = getIn(form.errors, name);
           const touch = getIn(form.touched, name);
-          const value = getIn(form.values, name);
           return (
             <div
-              className={classNames('dp-pc_field', this.className, {
-                'dp-pc_error': touch && error,
-                'dp-pc_empty': !value || value === null || value.length === 0
-              })}
+              className={classNames('dp-pc_field', this.className, { 'dp-pc_error': touch && error })}
             >
+              {this.renderLabel()}
               {this.renderField(form)}
               {touch && error ? <ErrorMessage name={name} form={form} /> : this.renderDescription()}
-              {this.renderIndicator()}
-              {this.renderLabel()}
-              {this.renderDivider()}
             </div>
           );
         }}

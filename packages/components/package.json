@@ -21,6 +21,7 @@
     "lodash": "4.17.13",
     "moment": "^2.22.1",
     "moment-hijri": "^2.0.1",
+    "postcss-color-mod-function": "^3.0.3",
     "raw-loader": "^0.5.1",
     "react-dropzone": "10.1.10",
     "react-select": "^2.0.0",
