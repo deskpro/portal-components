@@ -190,8 +190,8 @@ class DropDown extends Field {
 
   onChange = (form, value) => {
     const { name, handleChange } = this.props;
-
-    const newValue = value ? value.value : null;
+    const actualVale = typeof value === 'object' ? value.value : value;
+    const newValue = actualVale || null;
     form.setFieldValue(name, newValue);
     handleChange(newValue);
   };
