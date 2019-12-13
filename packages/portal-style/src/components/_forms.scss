@@ -26,13 +26,17 @@
 
   .checkboxes,
   .radios {
+    &:focus-within {
+      border-color: $brand-primary;
+    }
 
     label {
       cursor: pointer;
       display: inline-block;
 
       &>input {
-        display: none;
+        opacity: 0;
+        position: absolute;
 
         &+i {
           background-color: #fff;
@@ -60,6 +64,10 @@
             transform: rotate(-60deg);
             width: 11px;
           }
+        }
+
+        &:focus+i {
+          border-color: $grey-dark;
         }
 
         &:checked+i::after {
@@ -106,6 +114,17 @@
         width: 8px;
       }
     }
+    label>input:focus {
+      &+i {
+        border: 2px solid $grey-dark;
+      }
+      &:checked+i::after {
+        height: 8px;
+        left: 2px;
+        top: 2px;
+        width: 8px;
+      }
+    }
   }
   .dp-pc_file-upload {
     padding: 0;
@@ -119,7 +138,8 @@
   height: auto;
   padding: 7px 15px 6px;
 
-  &:focus {
+  &:focus,
+  &.focused {
     background: $grey-lightest;
     border-color: $brand-primary;
     box-shadow: none;
