@@ -195,8 +195,7 @@
           </div>
           <div class="col-sm-3">
             <div class="d-none d-sm-block">
-              <div class="d-none d-sm-block">
-                <div class="dp-po-subscribe dp-po-subscribe-large">
+              <div class="dp-po-subscribe dp-po-subscribe-large">
   <div class="dropdown">
     <!--class : dp-po-subscribe-activebtn -->
     <button class="dp-po-subscribe-btn" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
@@ -216,7 +215,6 @@
   </div>
 </div>
 
-              </div>
             </div>
           </div>
         </div>
@@ -722,6 +720,7 @@
   $('.dp-po-category-title-expand').on('click', function () {
     $(this).toggleClass('active');
     $(this).parents('.dp-po-category-title').next('.dp-po-kb-category-list').slideToggle();
+    $(this).parents('.dp-po-category-title').siblings('.dp-po-viewall').toggleClass('active');
     return false;
   })
 
