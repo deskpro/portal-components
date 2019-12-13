@@ -4,6 +4,7 @@ import { getIn } from 'formik';
 import { css } from 'emotion';
 import ReactSelect, { components } from 'react-select';
 import AsyncSelect from 'react-select/lib/Async';
+import { deepMerge } from '@deskpro/js-utils/dist/objects';
 import classNames from 'classnames';
 import Field from '../Field';
 
@@ -52,27 +53,60 @@ const Option = (props) => {
         <span className="react-select__option--arrow" />
       </div>
     );
-  } return <components.Option {...props} />;
+  }
+  if (data.value === 'select-back') {
+    return (
+      <div
+        ref={innerRef}
+        className={cx(
+          css(getStyles('option', props)),
+          {
+            option:                true,
+            'option--is-disabled': isDisabled,
+            'option--is-focused':  isFocused,
+            'option--is-selected': isSelected,
+            'option--is-back':     true,
+          },
+          className,
+
+        )}
+        {...innerProps}
+      >
+        <span className="react-select__option--back-arrow" />
+        {label}
+      </div>
+    );
+  }
+  return <components.Option {...props} />;
 };
 
 Option.propTypes = components.Option.propTypes;
+
+const I18N = {
+  back: 'Back',
+};
 
 export class DropDownInput extends React.Component {
   static propType = {
     dataSource: PropTypes.shape({
       getOptions: PropTypes.oneOfType([PropTypes.func, PropTypes.array]).isRequired,
     }).isRequired,
+    i18n:        PropTypes.object,
     onChange:    PropTypes.func,
     isClearable: PropTypes.bool,
   };
 
   static defaultProps = {
+    i18n: {},
     onBlur() {},
     onFocus() {},
   };
 
   constructor(props) {
     super(props);
+
+    this.i18n = deepMerge(I18N, props.i18n);
+
     this.state = {
       value:      null,
       menuIsOpen: false,
@@ -98,7 +132,7 @@ export class DropDownInput extends React.Component {
     if (value && value.children && value.children.length) {
       const { children } = value;
       const options = [{
-        label:   'Back',
+        label:   this.i18n.back,
         value:   'select-back',
         parents: this.state.options,
       }].concat(children);

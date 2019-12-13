@@ -173,6 +173,9 @@
     font-size: 18px;
     box-shadow: none;
     padding: 0 11px 0 12px;
+    &:hover {
+      border-color: var(--brand-primary);
+     }
 
     & .react-select__placeholder {
       color: var(--placeholder-color);
@@ -266,6 +269,9 @@
         color: var(--brand-primary);
         background-color: var(--brand-secondary);
       }
+      &.react-select__option--is-back {
+       padding-left: 25px;
+      }
     }
     & .react-select__option--arrow {
       position: absolute;
@@ -289,6 +295,29 @@
         top: 7px;
         transform: rotate(45deg);
         transition: 0.2s ease all;
+      }
+    }
+    & .react-select__option--back-arrow {
+      position: absolute;
+      left: 10px;
+      top: 9px;
+      &:before,
+      &:after {
+         position: absolute;
+         left: 0;
+         top: 0;
+         content: ' ';
+         height: 12px;
+         width: 2px;
+         background-color: var(--brand-primary);
+      }
+      &:before {
+         transform: rotate(45deg);
+         transition: 0.2s ease all;
+      }
+      &:after {
+         top: 7px;
+         transform: rotate(-45deg);
       }
     }
   }
