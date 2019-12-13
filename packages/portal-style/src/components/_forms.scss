@@ -424,3 +424,7 @@ select.form-control:not([multiple="multiple"]) {
 .field_more_attachments {
   display: none;
 }
+
+.react-datepicker-popper {
+  z-index: 3000;
+}
