@@ -14,4 +14,25 @@
   }
 }
 
-@include media-breakpoint-down(sm) {}
+@include media-breakpoint-down(sm) {
+  .dp-po-news {
+    &-head {
+      &-left {
+        position: absolute;
+        top: 6px;
+      }
+
+      &-right {
+        .dp-po-title {
+          padding-left: 70px;
+          min-height: 85px;
+          align-items: flex-start;
+        }
+
+        svg {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,10 @@
 @include media-breakpoint-down(sm) {
   .breadcrumb-outer {
     border: none;
+
+    .container {
+      height: auto;
+    }
   }
 
   .breadcrumb-image {
@@ -28,19 +32,23 @@
       margin-right: 21px;
     }
   }
+
   .breadcrumb-item:first-child:nth-last-child(1) {
     width: 100%;
   }
+
   .breadcrumb-item:first-child:nth-last-child(2),
-  .breadcrumb-item:first-child:nth-last-child(2) ~ li {
+  .breadcrumb-item:first-child:nth-last-child(2)~li {
     width: 50%;
   }
+
   .breadcrumb-item:first-child:nth-last-child(3),
-  .breadcrumb-item:first-child:nth-last-child(3) ~ li {
+  .breadcrumb-item:first-child:nth-last-child(3)~li {
     width: 33.3333%;
   }
+
   .breadcrumb-item:first-child:nth-last-child(4),
-  .breadcrumb-item:first-child:nth-last-child(4) ~ li {
+  .breadcrumb-item:first-child:nth-last-child(4)~li {
     width: 25%;
   }
 }

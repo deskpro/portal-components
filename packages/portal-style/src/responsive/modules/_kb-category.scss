@@ -7,11 +7,19 @@
     &-list {
       margin: 0;
       display: none;
-      padding: 0 0 20px;
+      padding: 0;
     }
 
     .dp-po-viewall {
       display: none;
+      position: relative;
+      width: 100%;
+      left: 0;
+      margin: 0 0 30px;
+
+      &.active {
+        display: flex;
+      }
     }
 
     .dp-po-category-title {
