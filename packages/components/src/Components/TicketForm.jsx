@@ -64,7 +64,7 @@ class TicketForm extends React.Component {
     if (layout) {
       return layout;
     }
-    return this.props.deskproLayout.find(d => d.get('department') === null);
+    return this.props.deskproLayout.find(d => d.get('department') === 0);
   };
 
   getInitialValues = () => {
