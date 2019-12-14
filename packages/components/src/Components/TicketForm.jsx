@@ -33,12 +33,14 @@ class TicketForm extends React.Component {
     csrfToken:     PropTypes.string.isRequired,
     showHover:     PropTypes.bool,
     errors:        PropTypes.object,
+    initialValues: PropTypes.object,
   };
 
   static defaultProps = {
-    errors:     {},
-    department: null,
-    showHover:  true
+    errors:        {},
+    initialValues: {},
+    department:    null,
+    showHover:     true
   };
 
   constructor(props) {
@@ -66,26 +68,27 @@ class TicketForm extends React.Component {
   };
 
   getInitialValues = () => {
-    const initialValues = {};
+    const values = {};
     this.getLayout()
       .get('fields', [])
       .forEach((field) => {
         if (field.get('field_type') === 'department') {
-          initialValues.department = this.state.department;
+          values.department = this.state.department;
         } else if (field.get('field_type') === 'person') {
-          initialValues.person = {
-            user_name:  '',
-            user_email: '',
+          const { initialValues: { person } } = this.props;
+          values.person = {
+            user_name:  person && person.name ? person.name : '',
+            user_email: person && person.email ? person.email : '',
           };
         } else {
           let defaultValue = field.getIn(['data', 'default_value'], '');
           if (defaultValue instanceof List) {
             defaultValue = defaultValue.toArray();
           }
-          initialValues[field.get('field_id')] = defaultValue;
+          values[field.get('field_id')] = defaultValue;
         }
       });
-    return initialValues;
+    return values;
   };
 
   getValidationSchema = () => {
