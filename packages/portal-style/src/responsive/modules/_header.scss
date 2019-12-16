@@ -6,6 +6,12 @@
           display: none;
         }
       }
+      &.d-sm-block {
+        display: none!important;
+      }
+      &.d-sm-none {
+        display: block!important;
+      }
     }
 
     .dp-po-brand-name {

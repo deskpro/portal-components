@@ -4,7 +4,7 @@
   padding: 12px 0px;
 
   .dp-po-homelink {
-    display: flex;
+    display: flex!important;
     align-items: center;
     text-decoration: none;
 
@@ -26,6 +26,9 @@
         right: 28px;
         top: 11px;
       }
+    }
+    &.d-sm-none {
+      display: none!important;
     }
   }
 
