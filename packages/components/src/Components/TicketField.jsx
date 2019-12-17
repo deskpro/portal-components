@@ -10,6 +10,7 @@ import Checkboxes from './Choices/Checkboxes';
 import DropDown from './Choices/DropDown';
 import MultipleDropDown from './Choices/MultipleDropDown';
 import Radio from './Choices/Radio';
+import Hidden from './Inputs/Hidden';
 
 class TicketField extends React.Component {
   static propTypes = {
@@ -83,8 +84,10 @@ class TicketField extends React.Component {
         return <Textarea name="message" label="Message" />;
       case 'subject':
         return <Text name="subject" label="Subject" />;
-      case 'Email':
+      case 'email':
         return <Email name={field.get('field_id')} label={field.get('field_id')} />;
+      case 'hidden':
+        return <Hidden name={field.get('field_id')} label={field.get('field_id')} />;
       case 'attachments':
         return (
           <FileUpload

@@ -7,6 +7,7 @@ import * as Yup from 'yup';
 import Form from './Form';
 import Submit from './Submit';
 import TicketField from './TicketField';
+import Hidden from './Inputs/Hidden';
 import Person from './Inputs/Person';
 import TicketDepartment from './TicketDepartment';
 
@@ -90,6 +91,7 @@ class TicketForm extends React.Component {
           values[field.get('field_id')] = defaultValue;
         }
       });
+
     return values;
   };
 
@@ -159,7 +161,10 @@ class TicketForm extends React.Component {
         switch (field.get('field_type')) {
           case 'department':
             return (
-              <TicketDepartment
+              field.get('is_hidden') ? <Hidden
+                key="department"
+                name={this.props.departmentPropName}
+              /> : <TicketDepartment
                 key="department"
                 name={this.props.departmentPropName}
                 departments={departments.toArray().map(d => ({ label: d.get('title'), value: d.get('id') }))}
