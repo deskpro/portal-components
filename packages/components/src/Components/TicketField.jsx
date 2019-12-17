@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import FileUpload from './Inputs/FileUpload';
 import Text from './Inputs/Text';
+import Email from './Inputs/Email';
 import Textarea from './Inputs/Textarea';
 import DatePicker from './Inputs/DatePicker';
 import DateTimePicker from './Inputs/DateTimePicker';
@@ -74,7 +75,7 @@ class TicketField extends React.Component {
 
   render() {
     const { field, fileUploadUrl, csrfToken } = this.props;
-    if (field.get('field_type').match(/^ticket_field/)) {
+    if (field.get('field_type').match(/^ticket_field/) || field.get('field_type').match(/^chat_field/)) {
       return this.renderCustomField();
     }
     switch (field.get('field_type')) {
@@ -82,6 +83,8 @@ class TicketField extends React.Component {
         return <Textarea name="message" label="Message" />;
       case 'subject':
         return <Text name="subject" label="Subject" />;
+      case 'Email':
+        return <Email name={field.get('field_id')} label={field.get('field_id')} />;
       case 'attachments':
         return (
           <FileUpload
