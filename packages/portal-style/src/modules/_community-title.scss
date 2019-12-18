@@ -60,6 +60,7 @@
     color: $brand-primary;
     position: relative;
     top: 3px;
+    vertical-align: 3px;
   }
 
   .dropdown-menu {
@@ -98,7 +99,7 @@
 
     &-dropdown {
       border-left: 1px solid $brand-primary;
-      padding: 10px;
+      padding: 9px 10px;
       text-align: center;
     }
 
