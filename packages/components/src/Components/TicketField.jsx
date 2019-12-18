@@ -11,6 +11,7 @@ import DropDown from './Choices/DropDown';
 import MultipleDropDown from './Choices/MultipleDropDown';
 import Radio from './Choices/Radio';
 import Hidden from './Inputs/Hidden';
+import Checkbox from './Inputs/Checkbox';
 
 class TicketField extends React.Component {
   static propTypes = {
@@ -41,6 +42,9 @@ class TicketField extends React.Component {
         Component = Checkboxes;
         props.options = field.getIn(['data', 'choices'], [])
           .toArray().map(option => ({ value: option.get('id'), label: option.get('title') }));
+        break;
+      case 'toggle':
+        Component = Checkbox;
         break;
       case 'choice':
         Component = DropDown;
