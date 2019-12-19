@@ -63,7 +63,8 @@ class TicketForm extends React.Component {
   }
 
   getLayout = () => {
-    const layout = this.props.deskproLayout.find(d => d.get('department') === this.state[this.props.departmentPropName]);
+    const layout = this.props.deskproLayout
+      .find(d => d.get('department') === this.state[this.props.departmentPropName]);
     if (layout) {
       return layout;
     }
