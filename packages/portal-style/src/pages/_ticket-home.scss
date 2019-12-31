@@ -100,6 +100,12 @@
     }
   }
 
+  &-default {
+    #{$self}-cell-indicator {
+      color: $grey !important;
+    }
+  }
+
   .dp-po-avatar {
     display: inline-block;
   }
@@ -155,6 +161,14 @@
       background: $neutral;
     }
   }
+
+  &-default {
+    background: $grey-light;
+
+    #{$self}-number {
+      background: $grey;
+    }
+  }
 }
 
 .dp-po-ticket-search {
@@ -184,6 +198,13 @@
     padding: 0;
     color: $brand-primary;
     background-color: white;
+  }
+
+  &-no-results {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 22px;
   }
 }
 

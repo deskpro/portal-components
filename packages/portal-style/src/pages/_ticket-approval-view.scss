@@ -1,0 +1,176 @@
+.dp-po-ticket-approval-view {
+  $self: '.dp-po-ticket-approval';
+
+  #{$self}-header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $grey-light;
+    margin-bottom: 15px;
+
+    &-title {
+      font-weight: bold;
+      display: flex;
+      align-items: flex-end;
+      text-transform: uppercase;
+      font-size: 15px;
+    }
+
+    &-status {
+      padding: 5px 20px;
+      border-radius: 5px;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 15px;
+
+      &-danger {
+        color: $white;
+        background: $danger;
+      }
+
+      &-success {
+        color: $white;
+        background: $success;
+      }
+
+      &-neutral {
+        color: $white;
+        background: $neutral;
+      }
+
+      &-default {
+        color: $white;
+        background: $grey-dark;
+      }
+    }
+  }
+
+  #{$self}-response {
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    background: $grey-lighter;
+    border-left: 2px solid $grey-dark;
+
+    &-danger {
+      background: $danger-light;
+      border-color: $danger;
+    }
+
+    &-success {
+      background: $success-light;
+      border-color: $success;
+    }
+
+    &-name {
+      font-weight: bold;
+    }
+
+    &-date {
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    &-message {
+      font-size: 17px;
+    }
+  }
+
+  #{$self}-description {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 28px;
+  }
+
+  #{$self}-info {
+    padding: 15px;
+    background-color: $grey-lighter;
+
+    &-item {
+      padding: 10px 0;
+
+      &-label {
+        margin-right: 5px;
+      }
+
+      &-person-name {
+        font-weight: bold;
+      }
+
+      &-response-count {
+        font-weight: bold;
+
+        &-success {
+          color: $success;
+        }
+
+        &-danger {
+          color: $danger;
+        }
+      }
+
+      &-comma-list {
+        &:after {
+          content: ", ";
+        }
+
+        &:last-child:after {
+          content: "";
+        }
+      }
+
+      &-list {
+        display: block;
+        padding: 5px 0;
+
+        &:first-child {
+          padding-top: 15px;
+        }
+      }
+    }
+
+    &-criteria {
+      margin-top: 20px;
+      border-top: 1px solid $grey-light;
+      padding: 15px 0;
+      font-size: 16px;
+
+      &-item {
+        font-weight: bold;
+        font-size: 15px;
+
+        &-success {
+          color: $success;
+        }
+
+        &-danger {
+          color: $danger;
+        }
+      }
+
+      &-delimeter {
+        padding: 0 3px;
+      }
+    }
+  }
+
+  #{$self}-form {
+    &-actions {
+      display: flex;
+      margin-top: 20px;
+
+      button {
+        margin-right: 20px;
+      }
+    }
+
+    &-success {
+      background-color: $success;
+      border: 0;
+    }
+
+    &-danger {
+      background-color: $danger;
+      border: 0;
+    }
+  }
+}
