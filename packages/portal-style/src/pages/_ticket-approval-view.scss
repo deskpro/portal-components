@@ -126,6 +126,12 @@
           padding-top: 15px;
         }
       }
+
+      &-ticket-link {
+        text-decoration: underline;
+        font-weight: bold;
+        color: var(--text-color);
+      }
     }
 
     &-criteria {
