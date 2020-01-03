@@ -113,3 +113,13 @@
     }
   }
 }
+@at-root {
+  .guides-body {
+    .breadcrumb-outer {
+      .container {
+        max-width: none;
+        padding-left: 30px;
+      }
+    }
+  }
+}
