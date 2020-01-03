@@ -4,7 +4,7 @@
   padding: 12px 0px;
 
   .dp-po-homelink {
-    display: flex!important;
+    display: flex !important;
     align-items: center;
     text-decoration: none;
 
@@ -27,8 +27,9 @@
         top: 11px;
       }
     }
+
     &.d-sm-none {
-      display: none!important;
+      display: none !important;
     }
   }
 
@@ -64,7 +65,7 @@
       font-weight: 700;
       color: $text-color;
       font-size: $p2-font-size;
-      padding: 10px 30px;
+      padding: 10px 15px 10px 30px;
       display: flex;
 
       &:hover {
@@ -195,17 +196,21 @@
     margin-right: 30px;
 
     &-link {
-      display: flex;
-      align-items: center;
-      min-width: 120px;
-      justify-content: space-between;
       color: $text-color;
       font-size: $p2-font-size;
-      white-space: nowrap;
+      height: 30px;
+      display: flex;
+      align-items: center;
 
       &:hover {
         text-decoration: none;
         color: $brand-primary;
+      }
+
+      &-text {
+        display: flex;
+        align-items: center;
+        line-height: 1;
       }
 
       img {

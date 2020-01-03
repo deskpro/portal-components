@@ -34,6 +34,7 @@
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
+      font-size: $s15;
 
       &:after {
         content: '';

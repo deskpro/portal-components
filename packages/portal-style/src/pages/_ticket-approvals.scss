@@ -1,0 +1,99 @@
+.dp-po-tickets-approvals {
+  $self: '.dp-po-table';
+
+  #{$self}-cell {
+    min-height: 61px;
+
+    &-large {
+      width: 38%;
+    }
+
+    &-medium-2 {
+      width: 24%;
+    }
+
+    &-medium {
+      width: 15%;
+    }
+
+    &-small {
+      width: 8%;
+    }
+
+    &-initials {
+      display:inline-block;
+      width: 30px;
+      height: 30px;
+      border: 2px solid $grey;
+      border-radius: 15px;
+      line-height: 25px;
+      text-align: center;
+      color: $grey;
+
+      &-danger {
+        border-color: $danger !important;
+        color: $danger !important;
+      }
+
+      &-success {
+        border-color: $success !important;
+        color: $success !important;
+      }
+    }
+
+    &-initials-count {
+      margin-left: 5px;
+      color: $grey;
+    }
+  }
+
+  #{$self}-row {
+    &.with-vote-buttons {
+      .dp-po-show-on-hover {
+        display: none;
+      }
+
+      &:hover {
+        #{$self}-cell {
+          &-large {
+            width: 68%;
+          }
+        }
+
+        .dp-po-show-on-hover {
+          display: block;
+        }
+        .dp-po-hide-on-hover {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .dp-po-approve-button {
+    img {
+      &.dp-po-hovered {
+        display: none;
+      }
+    }
+
+    &:hover {
+      img {
+        &.dp-po-normal {
+          display: none;
+        }
+        &.dp-po-hovered {
+          display: inline-block;
+        }
+      }
+    }
+
+    &:first-child {
+      padding-right: 20px;
+      border-right: 1px solid $grey-light;
+    }
+    &:last-child {
+      padding-left: 20px;
+    }
+  }
+}
