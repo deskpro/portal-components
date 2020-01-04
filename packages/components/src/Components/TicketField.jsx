@@ -67,6 +67,7 @@ class TicketField extends React.Component {
         break;
       case 'multichoice':
         Component = MultipleDropDown;
+        props.fClassName = 'dp-pc_multi-select';
         props.dataSource = {};
         props.dataSource.getOptions = field.getIn(['data', 'choices'], [])
           .toArray().map(option => ({ value: option.get('id'), label: option.get('title') }));

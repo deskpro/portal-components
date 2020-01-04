@@ -12,6 +12,7 @@ class Field extends React.Component {
     description: PropTypes.string,
     id:          PropTypes.string,
     className:   PropTypes.string,
+    fClassName:  PropTypes.string,
     children:    PropTypes.node
   };
 
@@ -19,6 +20,7 @@ class Field extends React.Component {
     label:       '',
     description: '',
     className:   '',
+    fClassName:  '',
     id:          null,
     children:    null
   };
@@ -74,7 +76,7 @@ class Field extends React.Component {
   };
 
   render() {
-    const { name } = this.props;
+    const { name, fClassName } = this.props;
     return (
       <FormikField
         name={name}
@@ -83,7 +85,7 @@ class Field extends React.Component {
           const touch = getIn(form.touched, name);
           return (
             <div
-              className={classNames('dp-pc_field', this.className, { 'dp-pc_error': touch && error })}
+              className={classNames('dp-pc_field', this.className, fClassName, { 'dp-pc_error': touch && error })}
             >
               {this.type !== 'hidden' ? this.renderLabel() : null}
               {this.renderField(form)}

@@ -86,6 +86,7 @@ export class MultipleDropDownInput extends React.Component {
 
   onFocus = () => {
     this.props.onFocus();
+    this.setState({ menuIsOpen: true });
   };
 
   loadOptions = (inputValue) => {
