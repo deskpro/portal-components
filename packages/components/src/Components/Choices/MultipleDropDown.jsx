@@ -141,6 +141,12 @@ class MultipleDropDown extends Field {
     }
   };
 
+  onChange = (form, value) => {
+    const { name } = this.props;
+    form.setFieldValue(name, value);
+    this.props.handleChange(value);
+  };
+
   renderField(form) {
     return (
       <MultipleDropDownInput
@@ -159,10 +165,12 @@ MultipleDropDown.propTypes = {
     getOptions: PropTypes.oneOfType([PropTypes.func, PropTypes.array]).isRequired,
   }).isRequired,
   handleChange: PropTypes.func,
+  onBlur:       PropTypes.func,
 };
 
 MultipleDropDown.defaultProps = {
   handleChange() {},
+  onBlur() {},
 };
 
 export default MultipleDropDown;
