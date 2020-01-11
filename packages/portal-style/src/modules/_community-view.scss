@@ -122,7 +122,9 @@
 
     &-link {
       color: $grey-dark;
-      display: block;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
 
       &:hover {
         text-decoration: none;
