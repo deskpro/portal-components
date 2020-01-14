@@ -11,19 +11,12 @@ if [ ! -d ./packages/portal-style/.build ]; then
   exit 1
 fi
 
-if [ ! -d ./packages/style/website/build/style ]; then
-  echo "Missing: packages/style/website/build/style"
-  echo "Did you build first?"
-  exit 1
-fi
-
 if [ -d ./target/portal-components ]; then
   rm -rf ./target/portal-components
 fi
 
 mkdir -p ./target/portal-components
 
-mv ./packages/style/website/build/style ./target/portal-components/style
 mv ./packages/portal-style/.build/portal-components/portal-style ./target/portal-components/portal-style
 mv ./packages/components-demo/storybook-static ./target/portal-components/demo
 

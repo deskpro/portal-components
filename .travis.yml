@@ -19,8 +19,6 @@ cache:
   directories:
     - .npm
     - node_modules
-    - packages/style/website/node_modules
-    - packages/style/node_modules
     - packages/portal-style/website/node_modules
     - packages/portal-style/node_modules
 deploy:
