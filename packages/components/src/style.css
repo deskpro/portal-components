@@ -252,11 +252,11 @@
   }
 
   & .react-select__menu {
-    margin-top: -12px;
-    margin-left: 12px;
+    margin-top: 8px;
+    margin-left: 10px;
     width: calc(100% - 20px);
-    border: none;
-    box-shadow: 4px 4px 6px var(--box-shadow-30);
+    border: 1px solid #D3D6D7;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
     color: var(--text-color);
     & .react-select__option {
       font-size: 16px;
@@ -358,7 +358,6 @@
     }
   }
   & .react-select__menu {
-    margin-top: -5px;
     & .react-select__menu-list--is-multi {
       & .dp-pc_checkbox {
         height: auto;
