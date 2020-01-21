@@ -90,7 +90,7 @@ class TicketField extends React.Component {
       case 'subject':
         return <Text name="subject" label="Subject" />;
       case 'email':
-        return <Email name={field.get('field_id')} label={field.get('field_id')} />;
+        return <Email name={field.get('field_id')} label={field.getIn(['data', 'title']) || field.get('field_id')} />;
       case 'hidden':
         return <Hidden name={field.get('field_id')} label={field.get('field_id')} />;
       case 'attachments':
@@ -106,7 +106,7 @@ class TicketField extends React.Component {
         return (
           <Text
             name={field.get('field_id')}
-            label={field.get('field_id')}
+            label={field.getIn(['data', 'title']) || field.get('field_id')}
           />
         );
     }
