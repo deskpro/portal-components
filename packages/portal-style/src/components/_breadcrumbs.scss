@@ -2,7 +2,9 @@
   border-bottom: 2px solid $grey-light;
 
   .container {
-    height: 36px;
+    height: 40px;
+    overflow: hidden;
+    margin: -2px auto;
   }
 }
 
