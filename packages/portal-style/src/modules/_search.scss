@@ -23,7 +23,7 @@
       background: $white;
       border: 2px solid $brand-primary;
       border-radius: 4px;
-      padding: 13px 60px;
+      padding: 13px 20px 13px 60px;
       @include typo($s23, 400, "head");
       color: $grey-dark;
       outline: none;
@@ -46,7 +46,6 @@
       font-size: 26px;
       padding: 0;
       color: $brand-primary;
-      background-color: $white;
 
       span {
         display: none;

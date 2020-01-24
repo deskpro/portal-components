@@ -10,7 +10,6 @@
   padding: 0;
   background: none;
   flex-wrap: nowrap;
-  overflow: hidden;
 
   &-item {
     color: $breadcrumb-inactive-color;
@@ -33,7 +32,6 @@
       color: $breadcrumb-inactive-color;
       text-overflow: ellipsis;
       white-space: nowrap;
-      overflow: hidden;
       font-size: $s15;
 
       &:after {
@@ -42,7 +40,7 @@
         height: 2px;
         background: $brand-primary;
         position: absolute;
-        bottom: -2px;
+        bottom: -4px;
         left: 0;
         opacity: 0;
       }
@@ -89,6 +87,10 @@
     .dp-po-icon {
       color: $brand-primary;
     }
+
+    :after {
+      opacity: 1;
+    }
   }
 
   &-image {
@@ -100,6 +102,7 @@
       max-width: 64px;
       max-height: 28px;
       margin-right: 20px;
+      vertical-align: -7px;
     }
 
     &:after {
