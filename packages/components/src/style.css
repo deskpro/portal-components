@@ -15,7 +15,7 @@
   --description-color: #5f768a;
   --valid-label: #4eba5c;
   --box-shadow-30: rgba(39, 41, 86, 0.3);
-  --option-background: var(--grey-lightest);
+  --option-background: #fff;
   --checkbox-border: var(--grey-light);
   --input-background: var(--grey-lightest);
   --input-border: var(--grey-light);
