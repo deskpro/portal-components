@@ -34,6 +34,11 @@ class Checkbox extends Field {
     });
   };
 
+  onChange = (e, form, name) => {
+    e.preventDefault();
+    form.setFieldValue(name, !getIn(form.values, name));
+  };
+
   renderField = (form) => {
     const {
       name, id, label, ...props
@@ -52,15 +57,18 @@ class Checkbox extends Field {
           onKeyPress={e => this.handleKeyPress(e, form)}
           onFocus={this.handleFocus}
           onBlur={this.handleBlur}
+          onClick={e => this.onChange(e, form, name)}
         >
           <FormikField
             id={id}
             type="checkbox"
             name={name}
+            value={1}
             checked={getIn(form.values, name)}
+            onClick={e => this.onChange(e, form, name)}
             {...objectKeyFilter(props, Field.propTypes)}
           />
-          <i />
+          <i onClick={e => this.onChange(e, form, name)} />
           <span className="dp-pc_checkbox__label">
             {label}
           </span>
