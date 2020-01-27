@@ -73,17 +73,20 @@ class TicketForm extends React.Component {
 
   getInitialValues = () => {
     const values = {};
+    const { initialValues } = this.props;
     this.getLayout()
       .get('fields', [])
       .forEach((field) => {
         if (field.get('field_type') === 'department') {
           values[this.props.departmentPropName] = this.state[this.props.departmentPropName];
         } else if (field.get('field_type') === 'person') {
-          const { initialValues: { person } } = this.props;
+          const { person } = initialValues;
           values.person = {
             user_name:  person && person.name ? person.name : '',
             user_email: person && person.email ? person.email : '',
           };
+        } else if (initialValues[field.get('field_id')]) {
+          values[field.get('field_id')] = initialValues[field.get('field_id')];
         } else {
           let defaultValue = field.getIn(['data', 'default_value'], '');
           if (defaultValue instanceof List) {
