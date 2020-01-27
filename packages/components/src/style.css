@@ -702,9 +702,10 @@
       Date Picker
   *******************************/
   & .dp-pc_date-picker {
-    width: calc(100% - 25px);
+    width: 100%;
     background-color: var(--input-background);
     border: 1.5px solid var(--input-border);
+    border-radius: 3px;
 
     & input.dp-pc_date-picker_input {
       font-size: 18px;
