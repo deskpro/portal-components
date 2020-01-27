@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Field as FormikField, getIn } from 'formik';
 import newid from '@deskpro/js-utils/dist/newid';
+import { objectKeyFilter } from '@deskpro/js-utils/dist/objects';
 import ErrorMessage from './ErrorMessage';
 
 class Field extends React.Component {
@@ -47,7 +48,7 @@ class Field extends React.Component {
         name={name}
         type={this.type}
         className={classNames('dp-pc_input', className)}
-        {...props}
+        {...objectKeyFilter(props, Field.propTypes)}
       >
         {children}
       </FormikField>
