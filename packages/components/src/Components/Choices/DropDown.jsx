@@ -257,7 +257,7 @@ DropDown.propTypes = {
 
 DropDown.defaultProps = {
   handleChange() {},
-  isClearable: true,
+  isClearable: false,
   onBlur() {},
   onFocus() {},
 };
