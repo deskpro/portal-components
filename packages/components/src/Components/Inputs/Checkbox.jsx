@@ -44,6 +44,7 @@ class Checkbox extends Field {
       name, id, label, ...props
     } = this.props;
     /* eslint-disable jsx-a11y/label-has-for */
+    /* eslint-disable jsx-a11y/click-events-have-key-events */
     /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
     /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
     return (
@@ -76,6 +77,7 @@ class Checkbox extends Field {
       </div>
     );
     /* eslint-enable jsx-a11y/label-has-for */
+    /* eslint-disable jsx-a11y/click-events-have-key-events */
     /* eslint-enable jsx-a11y/no-noninteractive-tabindex */
     /* eslint-enable jsx-a11y/no-noninteractive-element-interactions */
   };

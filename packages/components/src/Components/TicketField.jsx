@@ -22,7 +22,11 @@ class TicketField extends React.Component {
   };
 
   renderCustomField = () => {
-    const rec = opts => opts.map(option => ({ value: option.get('id'), label: option.get('title'), children: rec(option.get('children', new List()).toArray()) }));
+    const rec = opts => opts.map(option => ({
+      value:    option.get('id'),
+      label:    option.get('title'),
+      children: rec(option.get('children', new List()).toArray())
+    }));
     const { field, fileUploadUrl, csrfToken } = this.props;
     const name = field.get('field_id');
     const props = {
