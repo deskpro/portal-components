@@ -37,6 +37,16 @@ class Checkboxes extends Field {
     });
   };
 
+  onChange = (e, form, name, value, arrayHelpers) => {
+    e.preventDefault();
+    const idx = getIn(form.values, name).indexOf(value);
+    if (idx === -1) {
+      arrayHelpers.push(value);
+    } else {
+      arrayHelpers.remove(idx);
+    }
+  };
+
   renderLabel = () => {
     const {
       label,
@@ -73,6 +83,7 @@ class Checkboxes extends Field {
                 onKeyPress={e => this.handleKeyPress(e, form, arrayHelpers, option.value)}
                 onFocus={this.handleFocus}
                 onBlur={this.handleBlur}
+                onClick={(e) => { this.onChange(e, form, name, option.value, arrayHelpers); }}
               >
                 <input
                   id={`${this.id}-${option.value}`}
@@ -80,15 +91,9 @@ class Checkboxes extends Field {
                   type="checkbox"
                   value={option.value}
                   checked={!!form.values[name] && form.values[name].includes(option.value)}
-                  onChange={(e) => {
-                    if (e.target.checked) arrayHelpers.push(option.value);
-                    else {
-                      const idx = getIn(form.values, name).indexOf(option.value);
-                      arrayHelpers.remove(idx);
-                    }
-                  }}
+                  onChange={(e) => { this.onChange(e, form, name, option.value, arrayHelpers); }}
                 />
-                <i />
+                <i onClick={(e) => { this.onChange(e, form, name, option.value, arrayHelpers); }} />
                 {' '}
                 <span className="label">
                   {option.label}

@@ -89,7 +89,7 @@ class TicketForm extends React.Component {
           values[field.get('field_id')] = initialValues[field.get('field_id')];
         } else {
           let defaultValue = field.getIn(['data', 'default_value'], '');
-          if (defaultValue instanceof List) {
+          if (List.isList(defaultValue)) {
             defaultValue = defaultValue.toArray();
           }
           values[field.get('field_id')] = defaultValue;

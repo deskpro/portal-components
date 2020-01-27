@@ -42,7 +42,7 @@ class TicketField extends React.Component {
         break;
       case 'checkbox':
         Component = Checkboxes;
-        props.options = field.getIn(['data', 'choices'], [])
+        props.options = field.getIn(['data', 'choices'], new List())
           .toArray().map(option => ({ value: option.get('id'), label: option.get('title') }));
         break;
       case 'toggle':
