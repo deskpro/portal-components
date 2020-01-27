@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { List } from 'immutable';
 import FileUpload from './Inputs/FileUpload';
 import Text from './Inputs/Text';
 import Email from './Inputs/Email';
@@ -21,6 +22,7 @@ class TicketField extends React.Component {
   };
 
   renderCustomField = () => {
+    const rec = opts => opts.map(option => ({ value: option.get('id'), label: option.get('title'), children: rec(option.get('children', new List()).toArray()) }));
     const { field, fileUploadUrl, csrfToken } = this.props;
     const name = field.get('field_id');
     const props = {
@@ -49,8 +51,7 @@ class TicketField extends React.Component {
       case 'choice':
         Component = DropDown;
         props.dataSource = {};
-        props.dataSource.getOptions = field.getIn(['data', 'choices'], [])
-          .toArray().map(option => ({ value: option.get('id'), label: option.get('title') }));
+        props.dataSource.getOptions = rec(field.getIn(['data', 'choices'], new List()).toArray());
         break;
       case 'radio':
         Component = Radio;
@@ -69,8 +70,7 @@ class TicketField extends React.Component {
         Component = MultipleDropDown;
         props.fClassName = 'dp-pc_multi-select';
         props.dataSource = {};
-        props.dataSource.getOptions = field.getIn(['data', 'choices'], [])
-          .toArray().map(option => ({ value: option.get('id'), label: option.get('title') }));
+        props.dataSource.getOptions = rec(field.getIn(['data', 'choices'], new List()));
         break;
       case 'text':
       default:
