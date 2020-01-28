@@ -26,6 +26,10 @@
 
   .checkboxes,
   .radios {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+
     &:focus-within {
       border-color: $brand-primary;
     }
@@ -33,6 +37,7 @@
     label {
       cursor: pointer;
       display: inline-block;
+      margin-bottom: 0;
 
       &>input {
         opacity: 0;
@@ -84,6 +89,9 @@
         margin-left: 5px;
         margin-right: 20px;
       }
+      &:hover>input+i {
+        border-color: $brand-primary;
+      }
     }
   }
 
@@ -128,6 +136,20 @@
   }
   .dp-pc_file-upload {
     padding: 0;
+  }
+  .dp-money-field {
+    position: relative;
+    &>span {
+      position: absolute;
+      left: 15px;
+      line-height: 1.6;
+      padding: 9px 0 8px;
+      height: auto;
+      color: #8b9293;
+    }
+    &>input {
+      padding-left: 30px;
+    }
   }
 }
 
