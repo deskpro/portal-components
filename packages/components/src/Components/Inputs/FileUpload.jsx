@@ -11,20 +11,6 @@ import { Progress } from '../index';
 
 import Field from '../Field';
 
-if (!XMLHttpRequest.prototype.sendAsBinary) {
-  // eslint-disable-next-line func-names
-  XMLHttpRequest.prototype.sendAsBinary = function (sData) {
-    const nBytes = sData.length;
-    const ui8Data = new Uint8Array(nBytes);
-    for (let nIdx = 0; nIdx < nBytes; nIdx++) {
-      ui8Data[nIdx] = sData.charCodeAt(nIdx) & 0xff; // eslint-disable-line  no-bitwise
-    }
-    /* send as ArrayBufferView...: */
-    this.send(ui8Data);
-    /* ...or as ArrayBuffer (legacy)...: this.send(ui8Data.buffer); */
-  };
-}
-
 const I18N = {
   dragNDrop:   'Drag and drop',
   or:          'or',
@@ -34,10 +20,9 @@ const I18N = {
 
 // eslint-disable-next-line func-names
 const AJAXSubmit = (function () {
-  function submitData(oData, config) {
+  function submitData(config, formData) {
     /* the AJAX request... */
     const oAjaxReq = new XMLHttpRequest();
-    oAjaxReq.submittedData = oData;
 
     if (config.updateProgress) {
       oAjaxReq.upload.addEventListener('progress', config.updateProgress);
@@ -55,48 +40,18 @@ const AJAXSubmit = (function () {
     oAjaxReq.withCredentials = true;
     /* method is POST */
     oAjaxReq.responseType = 'json';
-    oAjaxReq.open('post', oData.receiver, true);
-    /* enctype is multipart/form-data */
-    const sBoundary = `---------------------------${Date.now().toString(16)}`;
-    oAjaxReq.setRequestHeader('Content-Type', `multipart/form-data; boundary=${sBoundary}`);
-    oAjaxReq.sendAsBinary(`--${sBoundary}\r\n${
-      oData.segments.join(`--${sBoundary}\r\n`)}--${sBoundary}--\r\n`);
-  }
-
-  function processStatus(oData, config = {}) {
-    if (oData.status > 0) { return; }
-    /* the form is now totally serialized! do something before sending it to the server... */
-    // /* doSomething(oData); */
-    // /* console.log("AJAXSubmit - The form is now serialized. Submitting..."); */
-    submitData(oData, config);
-  }
-
-  function pushSegment(oFREvt) {
-    this.owner.segments[this.segmentIdx] += `${oFREvt.target.result}\r\n`;
-    this.owner.status = this.owner.status - 1;
-    processStatus(this.owner, this.config);
+    oAjaxReq.open('post', config.url, true);
+    oAjaxReq.send(formData);
   }
 
   function SubmitRequest(config) {
-    this.receiver = config.url;
-    this.status = 0;
-    this.segments = [];
+    const formData = new FormData();
     for (let nFile = 0; nFile < config.files.length; nFile++) {
       const oFile = config.files[nFile];
-      const oSegmReq = new FileReader();
-      /* (custom properties:) */
-      oSegmReq.segmentIdx = this.segments.length;
-      oSegmReq.owner = this;
-      oSegmReq.config = config;
-      /* (end of custom properties) */
-      oSegmReq.onload = pushSegment;
-      this.segments.push(`Content-Disposition: form-data; name="file[${
-        config.name}]"; filename="${oFile.name}"\r\nContent-Type: ${oFile.type}\r\n\r\n`);
-      this.status = this.status + 1;
-      oSegmReq.readAsBinaryString(oFile);
+      formData.append(`file[${config.name}]`, oFile);
     }
-    this.segments.push(`Content-Disposition: form-data; name="file[_dp_csrf_token]"\r\n\r\n${config.token}\r\n`);
-    processStatus(this, config);
+    formData.append('file[_dp_csrf_token]', config.token);
+    submitData(config, formData);
   }
 
   // eslint-disable-next-line func-names
