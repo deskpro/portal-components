@@ -136,6 +136,34 @@
   }
   .dp-pc_file-upload {
     padding: 0;
+    &__dropzone {
+      position: relative;
+      input {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+      }
+    }
+    &__error {
+      color: $danger;
+      font-size: 12px;
+    }
+    &__attached {
+      li {
+        font-size: 14px;
+        a {
+          padding: 0 5px;
+        }
+        .remove-attachement {
+          i {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
   }
   .dp-money-field {
     position: relative;
