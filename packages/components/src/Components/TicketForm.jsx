@@ -73,20 +73,23 @@ class TicketForm extends React.Component {
 
   getInitialValues = () => {
     const values = {};
+    const { initialValues } = this.props;
     this.getLayout()
       .get('fields', [])
       .forEach((field) => {
         if (field.get('field_type') === 'department') {
           values[this.props.departmentPropName] = this.state[this.props.departmentPropName];
         } else if (field.get('field_type') === 'person') {
-          const { initialValues: { person } } = this.props;
+          const { person } = initialValues;
           values.person = {
             user_name:  person && person.name ? person.name : '',
             user_email: person && person.email ? person.email : '',
           };
+        } else if (initialValues[field.get('field_id')]) {
+          values[field.get('field_id')] = initialValues[field.get('field_id')];
         } else {
           let defaultValue = field.getIn(['data', 'default_value'], '');
-          if (defaultValue instanceof List) {
+          if (List.isList(defaultValue)) {
             defaultValue = defaultValue.toArray();
           }
           values[field.get('field_id')] = defaultValue;
@@ -105,10 +108,13 @@ class TicketForm extends React.Component {
       .forEach((field) => {
         let validationRule = Yup.string();
         if (field.get('required', false) || field.getIn(['data', 'options', 'validation_type']) === 'required') {
-          validationRule = validationRule.required('Field is required');
+          const fieldName = field.hasIn(['data', 'title'])
+            ? field.getIn(['data', 'title'])
+            : `${field.get('field_type').charAt(0).toUpperCase()}${field.get('field_type').slice(1)}`;
+          validationRule = validationRule.required(`The '${fieldName}' field is required`);
         }
         if (field.get('field_type') === 'email') {
-          validationRule = validationRule.email();
+          validationRule = validationRule.email('A valid email is required');
         }
         const regex = field.getIn(['data', 'options', 'regex']);
         const widgetType = field.getIn(['data', 'widget_type'], null);
@@ -138,7 +144,7 @@ class TicketForm extends React.Component {
         }
         if (field.get('field_type') === 'person') {
           shape[field.get('field_id')] = Yup.object().shape({
-            user_email: validationRule.email(),
+            user_email: validationRule.email('A valid email is required'),
             user_name:  validationRule
           });
         } else {

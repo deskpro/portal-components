@@ -128,6 +128,20 @@
     #{$self}-block-header {
       z-index: 1;
     }
+
+    .with-splash {
+      &#{$self}-section {
+        margin-top: 201px;
+      }
+      #{$self}-search {
+        top: 255px;
+        max-height: calc(100vh - 283px);
+      }
+      #{$self}-block-article-right,
+      #{$self}-block-header {
+        top: 255px;
+      }
+    }
   }
 
   &-loading {

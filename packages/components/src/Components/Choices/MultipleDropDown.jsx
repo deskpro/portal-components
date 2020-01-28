@@ -66,7 +66,8 @@ export class MultipleDropDownInput extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: null
+      value:      null,
+      menuIsOpen: false
     };
   }
 
@@ -76,6 +77,16 @@ export class MultipleDropDownInput extends React.Component {
     });
     const newValue = value ? value.map(e => e.value) : null;
     this.props.onChange(newValue);
+  };
+
+  onBlur = () => {
+    this.props.onBlur();
+    this.setState({ menuIsOpen: false });
+  };
+
+  onFocus = () => {
+    this.props.onFocus();
+    this.setState({ menuIsOpen: true });
   };
 
   loadOptions = (inputValue) => {
@@ -101,6 +112,7 @@ export class MultipleDropDownInput extends React.Component {
             dataSource.getOptions.filter(o => value && value.includes(o.value))
           }
           name={name}
+          menuIsOpen={this.state.menuIsOpen}
           isClearable={false}
           options={dataSource.getOptions}
           hideSelectedOptions={false}
@@ -108,6 +120,8 @@ export class MultipleDropDownInput extends React.Component {
           classNamePrefix="react-select"
           isMulti
           {...props}
+          onFocus={this.onFocus}
+          onBlur={this.onBlur}
           onChange={this.onChange}
         />
       );
@@ -141,6 +155,12 @@ class MultipleDropDown extends Field {
     }
   };
 
+  onChange = (form, value) => {
+    const { name } = this.props;
+    form.setFieldValue(name, value);
+    this.props.handleChange(value);
+  };
+
   renderField(form) {
     return (
       <MultipleDropDownInput
@@ -159,10 +179,12 @@ MultipleDropDown.propTypes = {
     getOptions: PropTypes.oneOfType([PropTypes.func, PropTypes.array]).isRequired,
   }).isRequired,
   handleChange: PropTypes.func,
+  onBlur:       PropTypes.func,
 };
 
 MultipleDropDown.defaultProps = {
   handleChange() {},
+  onBlur() {},
 };
 
 export default MultipleDropDown;

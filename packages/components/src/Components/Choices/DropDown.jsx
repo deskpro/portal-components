@@ -250,12 +250,14 @@ DropDown.propTypes = {
   }).isRequired,
   form:         PropTypes.object,
   handleChange: PropTypes.func,
+  onBlur:       PropTypes.func,
+  onFocus:      PropTypes.func,
   isClearable:  PropTypes.bool,
 };
 
 DropDown.defaultProps = {
   handleChange() {},
-  isClearable: true,
+  isClearable: false,
   onBlur() {},
   onFocus() {},
 };

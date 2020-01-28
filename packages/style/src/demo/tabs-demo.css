@@ -1,8 +1,0 @@
-.Tabs--Large .dp-po-Tabs-item.is-hover {
-  border-bottom: 2px solid var(--grey-dark);
-  color: var(--grey);
-}
-
-.Tabs--Small .dp-po-Tabs-item.is-hover {
-  color: var(--grey-dark);
-}

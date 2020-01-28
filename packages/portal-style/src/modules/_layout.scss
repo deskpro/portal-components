@@ -1,10 +1,11 @@
 .container {
-  max-width: 1270px;
+  max-width: 1300px;
 }
 
 .dp-po-main {
   background: var(--background-color);
   padding: 50px 0;
+  min-height: 100vh;
 }
 
 .dp-po-section {

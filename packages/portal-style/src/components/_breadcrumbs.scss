@@ -2,7 +2,9 @@
   border-bottom: 2px solid $grey-light;
 
   .container {
-    height: 36px;
+    height: 40px;
+    overflow: hidden;
+    margin: -2px auto;
   }
 }
 
@@ -10,7 +12,6 @@
   padding: 0;
   background: none;
   flex-wrap: nowrap;
-  overflow: hidden;
 
   &-item {
     color: $breadcrumb-inactive-color;
@@ -33,7 +34,7 @@
       color: $breadcrumb-inactive-color;
       text-overflow: ellipsis;
       white-space: nowrap;
-      overflow: hidden;
+      font-size: $s15;
 
       &:after {
         content: '';
@@ -41,7 +42,7 @@
         height: 2px;
         background: $brand-primary;
         position: absolute;
-        bottom: -2px;
+        bottom: -4px;
         left: 0;
         opacity: 0;
       }
@@ -88,6 +89,10 @@
     .dp-po-icon {
       color: $brand-primary;
     }
+
+    :after {
+      opacity: 1;
+    }
   }
 
   &-image {
@@ -99,6 +104,7 @@
       max-width: 64px;
       max-height: 28px;
       margin-right: 20px;
+      vertical-align: -7px;
     }
 
     &:after {
@@ -110,6 +116,16 @@
       top: -1px;
       display: block;
       position: absolute;
+    }
+  }
+}
+@at-root {
+  .guides-body {
+    .breadcrumb-outer {
+      .container {
+        max-width: none;
+        padding-left: 30px;
+      }
     }
   }
 }

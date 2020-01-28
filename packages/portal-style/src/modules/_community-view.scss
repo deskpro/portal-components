@@ -36,6 +36,7 @@
     align-items: center;
 
     .dp-po-avatar {
+
       &-image,
       &-name {
         width: 20px;
@@ -121,7 +122,9 @@
 
     &-link {
       color: $grey-dark;
-      display: block;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
 
       &:hover {
         text-decoration: none;
@@ -276,7 +279,6 @@
 
         &-image {
           margin: 0;
-          border: 2px solid $white;
         }
       }
 
@@ -289,6 +291,10 @@
             border-color: $brand-primary !important;
           }
         }
+      }
+
+      .dp-po-avatar-name {
+        margin: 0;
       }
     }
 

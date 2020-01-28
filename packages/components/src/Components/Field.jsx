@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Field as FormikField, getIn } from 'formik';
 import newid from '@deskpro/js-utils/dist/newid';
+import { objectKeyFilter } from '@deskpro/js-utils/dist/objects';
 import ErrorMessage from './ErrorMessage';
 
 class Field extends React.Component {
@@ -12,6 +13,7 @@ class Field extends React.Component {
     description: PropTypes.string,
     id:          PropTypes.string,
     className:   PropTypes.string,
+    fClassName:  PropTypes.string,
     children:    PropTypes.node
   };
 
@@ -19,6 +21,7 @@ class Field extends React.Component {
     label:       '',
     description: '',
     className:   '',
+    fClassName:  '',
     id:          null,
     children:    null
   };
@@ -45,7 +48,7 @@ class Field extends React.Component {
         name={name}
         type={this.type}
         className={classNames('dp-pc_input', className)}
-        {...props}
+        {...objectKeyFilter(props, Field.propTypes)}
       >
         {children}
       </FormikField>
@@ -74,7 +77,7 @@ class Field extends React.Component {
   };
 
   render() {
-    const { name } = this.props;
+    const { name, fClassName } = this.props;
     return (
       <FormikField
         name={name}
@@ -83,7 +86,7 @@ class Field extends React.Component {
           const touch = getIn(form.touched, name);
           return (
             <div
-              className={classNames('dp-pc_field', this.className, { 'dp-pc_error': touch && error })}
+              className={classNames('dp-pc_field', this.className, fClassName, { 'dp-pc_error': touch && error })}
             >
               {this.type !== 'hidden' ? this.renderLabel() : null}
               {this.renderField(form)}

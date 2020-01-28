@@ -37,6 +37,16 @@ class Checkboxes extends Field {
     });
   };
 
+  onChange = (e, form, name, value, arrayHelpers) => {
+    e.preventDefault();
+    const idx = getIn(form.values, name).indexOf(value);
+    if (idx === -1) {
+      arrayHelpers.push(value);
+    } else {
+      arrayHelpers.remove(idx);
+    }
+  };
+
   renderLabel = () => {
     const {
       label,
@@ -54,6 +64,7 @@ class Checkboxes extends Field {
     const {
       name, label, options, className, ...props
     } = this.props;
+    /* eslint-disable jsx-a11y/click-events-have-key-events */
     /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
     /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
     return (
@@ -73,6 +84,7 @@ class Checkboxes extends Field {
                 onKeyPress={e => this.handleKeyPress(e, form, arrayHelpers, option.value)}
                 onFocus={this.handleFocus}
                 onBlur={this.handleBlur}
+                onClick={(e) => { this.onChange(e, form, name, option.value, arrayHelpers); }}
               >
                 <input
                   id={`${this.id}-${option.value}`}
@@ -80,15 +92,9 @@ class Checkboxes extends Field {
                   type="checkbox"
                   value={option.value}
                   checked={!!form.values[name] && form.values[name].includes(option.value)}
-                  onChange={(e) => {
-                    if (e.target.checked) arrayHelpers.push(option.value);
-                    else {
-                      const idx = getIn(form.values, name).indexOf(option.value);
-                      arrayHelpers.remove(idx);
-                    }
-                  }}
+                  onChange={(e) => { this.onChange(e, form, name, option.value, arrayHelpers); }}
                 />
-                <i />
+                <i onClick={(e) => { this.onChange(e, form, name, option.value, arrayHelpers); }} />
                 {' '}
                 <span className="label">
                   {option.label}
@@ -99,6 +105,7 @@ class Checkboxes extends Field {
         )}
       />
     );
+    /* eslint-disable jsx-a11y/click-events-have-key-events */
     /* eslint-enable jsx-a11y/no-noninteractive-tabindex */
     /* eslint-enable jsx-a11y/no-noninteractive-element-interactions */
   }

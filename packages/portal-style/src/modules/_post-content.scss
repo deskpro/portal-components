@@ -7,11 +7,13 @@
 
   p {
     margin: 0.67em 0;
-    line-height: 1.25;
+    line-height: 1.75;
   }
+
   p:first-child {
     margin-top: 0;
   }
+
   p,
   ul,
   ol {
@@ -26,22 +28,32 @@
   li {
     margin-top: 5px;
   }
-  h2, h3, h4, h5, h6 {
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
     margin: 0.75em 0 0.25em;
     font-weight: 600;
-    line-height: 1.28571429em;;
+    line-height: 1.28571429em;
+    ;
   }
+
   h2 {
     font-size: 1.5em;
     font-weight: normal;
   }
+
   h3 {
     font-size: 1.3em;
   }
+
   h4 {
     font-size: 1.15em;
   }
+
   h5 {
     font-size: 1.1em;
   }
@@ -63,21 +75,22 @@
     color: #9D9D9D;
   }
 
-  &-note {
+  &-note,
+  &-warning {
     background: $info-light;
     border-radius: 4px;
-    border: 1px solid $brand-primary;
+    border: 1px solid $info;
     padding: 20px;
     margin-bottom: 1.5rem;
 
-    p {
+    & > p {
       padding-left: 30px;
     }
 
     &-title {
       display: flex;
       align-items: center;
-      color: $brand-primary;
+      color: $info;
       @include typo($s19, 500, 'head');
 
       .dp-po-icon {
@@ -86,13 +99,22 @@
     }
   }
 
+  &-warning {
+    background-color: $warning-light;
+    border-color: $warning;
+    &-title {
+      color: $warning;
+    }
+  }
+
+
   &-figure {
     padding: 10px;
     border: 1px solid $grey-light;
     margin-bottom: 1.5rem;
   }
 
-  :not(pre) > code {
+  :not(pre)>code {
     padding: 0.1em 0.25em;
     background: rgba(0, 0, 0, 0.01);
     border: 1px solid rgba(0, 0, 0, 0.05);
@@ -108,9 +130,11 @@
     padding: 10px;
     font-family: Courier;
   }
+
   .fr-video iframe {
     max-width: 100%;
   }
+
   ul,
   ol {
     list-style-image: none;
@@ -122,12 +146,15 @@
     margin: 1em 0;
   }
 
-  ul ul, ol ul {
+  ul ul,
+  ol ul {
     list-style-type: circle;
     list-style-position: inside;
     margin-left: 15px;
   }
-  ol ol, ul ol {
+
+  ol ol,
+  ul ol {
     list-style-type: lower-latin;
     list-style-position: inside;
     margin-left: 15px;

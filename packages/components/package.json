@@ -1,6 +1,6 @@
 {
   "name": "@deskpro/portal-components",
-  "version": "0.3.30",
+  "version": "0.3.44",
   "description": "Deskpro Portal Components",
   "private": false,
   "homepage": "https://deskpro.github.io/portal-components",
@@ -93,9 +93,9 @@
     "promise": "8.0.1",
     "prop-types": "^15.6.1",
     "raf": "3.4.0",
-    "react": "^16.8.0",
+    "react": "16.10.2",
     "react-dev-utils": "^5.0.1",
-    "react-dom": "^16.8.0",
+    "react-dom": "16.10.2",
     "react-test-renderer": "^16.3.2",
     "resolve": "1.8.1",
     "style-loader": "0.19.0",
@@ -109,7 +109,8 @@
   "peerDependencies": {
     "formik": "^1.1.1",
     "prop-types": "^15.6.1",
-    "react": "^16.8.0"
+    "react": "16.10.2",
+    "react-dom": "16.10.2"
   },
   "jest": {
     "collectCoverageFrom": [

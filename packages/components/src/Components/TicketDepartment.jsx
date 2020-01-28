@@ -21,7 +21,7 @@ class TicketDepartment extends React.Component {
         label="Department"
         dataSource={{ getOptions: departments }}
         handleChange={handleChange}
-        clearable={false}
+        isClearable={false}
       />
     );
   }
