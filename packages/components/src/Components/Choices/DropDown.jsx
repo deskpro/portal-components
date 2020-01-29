@@ -140,12 +140,14 @@ export class DropDownInput extends React.Component {
         value: null,
         options,
       });
+      this.props.onChange(null);
       return false;
     } else if (value && value.parents) {
       this.setState({
         value:   null,
         options: value.parents
       });
+      this.props.onChange(null);
       return false;
     }
     this.setState({
@@ -224,7 +226,7 @@ class DropDown extends Field {
 
   onChange = (form, value) => {
     const { name, handleChange } = this.props;
-    const actualVale = typeof value === 'object' ? value.value : value;
+    const actualVale = typeof value === 'object' && value !== null ? value.value : value;
     const newValue = actualVale || null;
     form.setFieldValue(name, newValue);
     handleChange(newValue);
