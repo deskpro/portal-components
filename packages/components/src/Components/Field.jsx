@@ -93,7 +93,7 @@ class Field extends React.Component {
             >
               {this.type !== 'hidden' ? this.renderLabel() : null}
               {this.renderField(form)}
-              {touch && error ? <ErrorMessage name={searchName} form={form} /> : this.renderDescription()}
+              {touch && error && typeof error === 'string' ? <ErrorMessage name={searchName} form={form} /> : this.renderDescription()}
             </div>
           );
         }}

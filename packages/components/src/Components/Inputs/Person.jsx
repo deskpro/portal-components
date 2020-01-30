@@ -16,14 +16,14 @@ class Person extends React.Component {
     return [
       <Text
         key="person_name"
-        name={`${name}.user_name`}
+        name={`${name}.name`}
         label="Name"
         placeholder={namePlaceholder}
         errorsName={name}
       />,
       <Email
         key="person_email"
-        name={`${name}.user_email`}
+        name={`${name}.email`}
         label="Email"
         errorsName={name}
         placeholder={emailPlaceholder}
