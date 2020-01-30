@@ -129,7 +129,7 @@ export class DropDownInput extends React.Component {
   };
 
   onChange = (value) => {
-    if (value && value.children && value.children.length) {
+    if (value && value.children && value.children.length > 0) {
       const { children } = value;
       const options = [{
         label:   this.i18n.back,
@@ -142,7 +142,7 @@ export class DropDownInput extends React.Component {
       });
       this.props.onChange(null);
       return false;
-    } else if (value && value.parents) {
+    } else if (value && value.parents && value.parents.length > 0) {
       this.setState({
         value:   null,
         options: value.parents
@@ -176,11 +176,12 @@ export class DropDownInput extends React.Component {
     const {
       name, dataSource, isClearable, value, ...props
     } = this.props;
+    const { options } = this.state;
     if (Array.isArray(dataSource.getOptions)) {
       return (
         <ReactSelect
           ref={(c) => { this.select = c; }}
-          value={dataSource.getOptions.find(o => o.value === value)}
+          value={options.find(o => o.value === value) || null}
           name={name}
           isClearable={isClearable}
           components={{ SelectContainer, Option }}
