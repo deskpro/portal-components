@@ -19,11 +19,13 @@ class Person extends React.Component {
         name={`${name}.user_name`}
         label="Name"
         placeholder={namePlaceholder}
+        errorsName={name}
       />,
       <Email
         key="person_email"
         name={`${name}.user_email`}
         label="Email"
+        errorsName={name}
         placeholder={emailPlaceholder}
       />
     ];
