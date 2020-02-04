@@ -129,7 +129,7 @@ export class DropDownInput extends React.Component {
   };
 
   onChange = (value) => {
-    if (value && value.children && value.children.length) {
+    if (value && value.children && value.children.length > 0) {
       const { children } = value;
       const options = [{
         label:   this.i18n.back,
@@ -140,12 +140,14 @@ export class DropDownInput extends React.Component {
         value: null,
         options,
       });
+      this.props.onChange(null);
       return false;
-    } else if (value && value.parents) {
+    } else if (value && value.parents && value.parents.length > 0) {
       this.setState({
         value:   null,
         options: value.parents
       });
+      this.props.onChange(null);
       return false;
     }
     this.setState({
@@ -174,11 +176,12 @@ export class DropDownInput extends React.Component {
     const {
       name, dataSource, isClearable, value, ...props
     } = this.props;
+    const { options } = this.state;
     if (Array.isArray(dataSource.getOptions)) {
       return (
         <ReactSelect
           ref={(c) => { this.select = c; }}
-          value={dataSource.getOptions.find(o => o.value === value)}
+          value={options.find(o => o.value === value) || null}
           name={name}
           isClearable={isClearable}
           components={{ SelectContainer, Option }}
@@ -224,7 +227,7 @@ class DropDown extends Field {
 
   onChange = (form, value) => {
     const { name, handleChange } = this.props;
-    const actualVale = typeof value === 'object' ? value.value : value;
+    const actualVale = typeof value === 'object' && value !== null ? value.value : value;
     const newValue = actualVale || null;
     form.setFieldValue(name, newValue);
     handleChange(newValue);

@@ -9,6 +9,7 @@ import ErrorMessage from './ErrorMessage';
 class Field extends React.Component {
   static propTypes = {
     name:        PropTypes.string.isRequired,
+    errorsName:  PropTypes.string,
     label:       PropTypes.string,
     description: PropTypes.string,
     id:          PropTypes.string,
@@ -19,6 +20,7 @@ class Field extends React.Component {
 
   static defaultProps = {
     label:       '',
+    errorsName:  '',
     description: '',
     className:   '',
     fClassName:  '',
@@ -77,20 +79,25 @@ class Field extends React.Component {
   };
 
   render() {
-    const { name, fClassName } = this.props;
+    const { name, errorsName, fClassName } = this.props;
+    const searchName = errorsName || name;
     return (
       <FormikField
         name={name}
         render={({ form }) => {
-          const error = getIn(form.errors, name);
-          const touch = getIn(form.touched, name);
+          const error = getIn(form.errors, searchName);
+          const touch = getIn(form.touched, name.split('.'));
           return (
             <div
               className={classNames('dp-pc_field', this.className, fClassName, { 'dp-pc_error': touch && error })}
             >
               {this.type !== 'hidden' ? this.renderLabel() : null}
               {this.renderField(form)}
-              {touch && error ? <ErrorMessage name={name} form={form} /> : this.renderDescription()}
+              {
+                touch && error && typeof error === 'string'
+                  ? <ErrorMessage name={searchName} form={form} />
+                  : this.renderDescription()
+              }
             </div>
           );
         }}

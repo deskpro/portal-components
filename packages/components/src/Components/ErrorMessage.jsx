@@ -5,6 +5,7 @@ import { getIn } from 'formik';
 const ErrorMessage = ({ name, form }) => {
   const error = getIn(form.errors, name);
   const touch = getIn(form.touched, name);
+
   return touch && error ? <span className="dp-pc_error_message">{error}</span> : null;
 };
 
