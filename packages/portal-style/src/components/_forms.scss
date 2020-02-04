@@ -179,6 +179,13 @@
       padding-left: 30px;
     }
   }
+  .medium-editor-action {
+    padding: 7px;
+    border: 1px solid transparent;
+  }
+  .medium-editor-action:focus {
+    border-color: #b8bfc0;
+  }
 }
 
 .form-control {
@@ -418,9 +425,12 @@ select.form-control:not([multiple="multiple"]) {
 .dp-po-form-captcha {
   &-text {
     border: 2px dashed $grey-light;
-    width: 100%;
-    height: 40px;
     border-radius: 4px;
+    display: inline-block;
+    height: 74px;
+    & img {
+      border-radius: 2px;
+    }
   }
 }
 
