@@ -120,6 +120,8 @@
 
   .slick-track {
     margin: 0;
+    display: flex;
+    align-items: baseline;
   }
 
   &-arrow {
