@@ -144,8 +144,8 @@ class TicketForm extends React.Component {
         }
         if (field.get('field_type') === 'person') {
           shape[field.get('field_id')] = Yup.object().shape({
-            user_email: validationRule.email('A valid email is required'),
-            user_name:  validationRule
+            email: validationRule.email('A valid email is required'),
+            name:  validationRule
           });
         } else {
           shape[field.get('field_id')] = validationRule;
