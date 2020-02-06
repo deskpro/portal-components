@@ -21,6 +21,14 @@ class Radio extends Field {
     }
   };
 
+  handleClick = (e, form, value) => {
+    const { name } = this.props;
+    if (value) {
+      e.preventDefault();
+      form.setFieldValue(name, value);
+    }
+  };
+
   handleBlur = () => {
     this.setState({
       focused: false
@@ -53,6 +61,7 @@ class Radio extends Field {
     } = this.props;
     const htmlId = this.id;
     const value = getIn(form.values, name);
+    /* eslint-disable jsx-a11y/click-events-have-key-events */
     /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
     /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
     return (
@@ -67,6 +76,7 @@ class Radio extends Field {
             tabIndex="0"
             className="dp-pc_radio"
             onKeyPress={e => this.handleKeyPress(e, form, option.value)}
+            onClick={e => this.handleClick(e, form, option.value)}
             onFocus={this.handleFocus}
             onBlur={this.handleBlur}
           >
@@ -76,18 +86,21 @@ class Radio extends Field {
               type="radio"
               value={option.value}
               checked={value === option.value}
-              onChange={form.handleChange}
+              onChange={e => this.handleClick(e, form, false)}
               onBlur={form.handleBlur}
             />
             <i />
             {' '}
-            <span className="label">
+            <span
+              className="label"
+            >
               {option.label}
             </span>
           </label>
         ))}
       </div>
     );
+    /* eslint-disable jsx-a11y/click-events-have-key-events */
     /* eslint-enable jsx-a11y/no-noninteractive-tabindex */
     /* eslint-enable jsx-a11y/no-noninteractive-element-interactions */
   }
