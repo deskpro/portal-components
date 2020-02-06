@@ -37,22 +37,30 @@ class DatePicker extends Field {
   }
 
   getProps = (form) => {
-    const { name, className, ...props } = this.props;
-    let openToDate = null;
+    const {
+      format,
+      name,
+      className,
+      ...props
+    } = this.props;
+    let openToDate = moment();
     if (getIn(form.values, name)) {
-      openToDate = moment(getIn(form.values, name), this.props.format);
+      openToDate = moment(getIn(form.values, name), format);
     }
     return {
-      value:             getIn(form.values, name),
       name,
       openToDate,
-      onChange:          value => this.handleChange(value, form),
-      onBlur:            () => this.handleBlur(form),
-      onFocus:           this.handleFocus,
-      className:         'dp-pc_date-picker_input',
-      showMonthDropdown: true,
-      showYearDropdown:  true,
-      dropdownMode:      'select',
+      value:              getIn(form.values, name),
+      onChange:           value => this.handleChange(value, form),
+      onBlur:             () => this.handleBlur(form),
+      onFocus:            this.handleFocus,
+      className:          'dp-pc_date-picker_input',
+      showMonthDropdown:  true,
+      showYearDropdown:   true,
+      dropdownMode:       'select',
+      preventOpenOnFocus: true,
+      assumeNearbyYear:   true,
+      dateFormat:         format,
       ...props
     };
   };
