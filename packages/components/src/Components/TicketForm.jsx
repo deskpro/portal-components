@@ -204,7 +204,7 @@ class TicketForm extends React.Component {
         onSubmit={this.props.onSubmit}
       >
         {() => (
-          <Form showHover={showHover}>
+          <Form noValidate showHover={showHover}>
             {this.renderFields()}
             <Submit>Submit</Submit>
           </Form>
