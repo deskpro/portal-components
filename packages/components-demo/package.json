@@ -1,6 +1,6 @@
 {
   "name": "components-demo",
-  "version": "0.3.61",
+  "version": "0.3.62",
   "description": "> TODO: description",
   "author": "Julien Ducro <julien.ducro@deskpro.com>",
   "homepage": "https://github.com/deskpro/portal-components#readme",
@@ -27,7 +27,7 @@
     "url": "https://github.com/deskpro/portal-components/issues"
   },
   "dependencies": {
-    "@deskpro/portal-components": "^0.3.61",
+    "@deskpro/portal-components": "^0.3.62",
     "@deskpro/react-datepicker-hijri": "^1.5.0",
     "formik": "^1.5.7",
     "immutable": "^4.0.0-rc.12",
