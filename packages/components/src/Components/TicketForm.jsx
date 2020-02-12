@@ -174,7 +174,17 @@ class TicketForm extends React.Component {
               /> : <TicketDepartment
                 key="department"
                 name={this.props.departmentPropName}
-                departments={departments.toArray().map(d => ({ label: d.get('title'), value: d.get('id') }))}
+                departments={departments
+                  .toArray()
+                  .map(d => (
+                    {
+                      label:    d.get('title'),
+                      value:    d.get('id'),
+                      children: d.get('children', new List())
+                        .toArray()
+                        .map(cd => ({ label: cd.get('title'), value: cd.get('id') }))
+                    }))
+                }
                 handleChange={this.handleDepartmentChange}
               />
             );

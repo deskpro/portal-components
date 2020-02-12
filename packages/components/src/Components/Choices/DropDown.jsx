@@ -33,7 +33,7 @@ const Option = (props) => {
     isSelected,
     innerProps
   } = props;
-  if (data.children && data.children.length > 1) {
+  if (data.children && data.children.length > 0) {
     return (
       <div
         ref={innerRef}
