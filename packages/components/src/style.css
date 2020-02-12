@@ -5,6 +5,7 @@
   --grey-lightest: #f7f7f7;
   --grey-light: #d3d6d7;
   --grey: #a9b0b0;
+  --grey-200: #e9ecef;
 
   --brand-primary: #3d88f3;
   --brand-dark-primary: color-mod(var(--brand-primary) blackness(-20%));
@@ -69,6 +70,12 @@
     height: var(--input-height);
     padding: var(--input-padding);
     width: 100%;
+    &.disabled,
+    &:disabled,
+    &[readonly] {
+      background-color: var(--grey-200);
+      opacity: 1;
+    }
   }
   & input:-webkit-autofill,
   & input:-internal-autofill-selected
@@ -132,6 +139,12 @@
     border-radius: 3px;
     background-color: var(--textarea-background);
     min-height: 100px;
+
+    &:disabled,
+    &[readonly] {
+      background-color: var(--grey-200);
+      opacity: 1;
+    }
   }
   & textarea:focus {
     outline: none;

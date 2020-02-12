@@ -179,7 +179,12 @@ class TicketForm extends React.Component {
               />
             );
           case 'person':
-            return <Person name="person" namePlaceholder="John Doe" emailPlaceholder="john.doe@company.com" />;
+            return (<Person
+              isDisabled={field.get('is_disabled')}
+              name="person"
+              namePlaceholder="John Doe"
+              emailPlaceholder="john.doe@company.com"
+            />);
           default:
             return (
               <TicketField

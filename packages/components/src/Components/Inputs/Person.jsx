@@ -11,7 +11,21 @@ class Person extends React.Component {
       name,
       namePlaceholder,
       emailPlaceholder,
+      isDisabled,
     } = this.props;
+
+    const emailProps = {
+      key:         'person_email',
+      name:        `${name}.email`,
+      label:       'Email',
+      errorsName:  name,
+      placeholder: emailPlaceholder,
+    };
+
+    if (isDisabled) {
+      emailProps.disabled = 'disabled';
+      emailProps.className = 'disabled';
+    }
 
     return [
       <Text
@@ -21,13 +35,7 @@ class Person extends React.Component {
         placeholder={namePlaceholder}
         errorsName={name}
       />,
-      <Email
-        key="person_email"
-        name={`${name}.email`}
-        label="Email"
-        errorsName={name}
-        placeholder={emailPlaceholder}
-      />
+      <Email {...emailProps} />
     ];
   }
 }
