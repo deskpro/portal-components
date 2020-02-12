@@ -50,4 +50,22 @@
       }
     }
   }
+  &:not(.dp-po-table-col5) {
+    display: table;
+    #{$self}-row {
+      display: table-row;
+    }
+    #{$self}-cell {
+      display: table-cell;
+      &:first-child {
+        padding-left: 30px;
+      }
+      &:last-child {
+        padding-right: 30px;
+      }
+      &-small {
+        width: 5%;
+      }
+    }
+  }
 }
