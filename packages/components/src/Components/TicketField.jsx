@@ -55,6 +55,8 @@ class TicketField extends React.Component {
       case 'choice':
         Component = DropDown;
         props.dataSource = {};
+        props.isClearable = false;
+        props.isSearchable = false;
         props.dataSource.getOptions = rec(field.getIn(['data', 'choices'], new List()).toArray());
         break;
       case 'radio':

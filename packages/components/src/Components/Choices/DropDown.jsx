@@ -174,7 +174,7 @@ export class DropDownInput extends React.Component {
 
   render() {
     const {
-      name, dataSource, isClearable, value, ...props
+      name, dataSource, isClearable, isSearchable, value, ...props
     } = this.props;
     const { options } = this.state;
     if (Array.isArray(dataSource.getOptions)) {
@@ -184,6 +184,7 @@ export class DropDownInput extends React.Component {
           value={options.find(o => o.value === value) || null}
           name={name}
           isClearable={isClearable}
+          isSearchable={isSearchable}
           components={{ SelectContainer, Option }}
           menuIsOpen={this.state.menuIsOpen}
           options={this.state.options}
@@ -202,6 +203,7 @@ export class DropDownInput extends React.Component {
         value={this.state.value}
         name={name}
         isClearable={isClearable}
+        isSearchable={isSearchable}
         defaultOptions
         cacheOptions
         components={{ SelectContainer, Option }}
@@ -256,11 +258,13 @@ DropDown.propTypes = {
   onBlur:       PropTypes.func,
   onFocus:      PropTypes.func,
   isClearable:  PropTypes.bool,
+  isSearchable: PropTypes.bool,
 };
 
 DropDown.defaultProps = {
   handleChange() {},
-  isClearable: false,
+  isClearable:  false,
+  isSearchable: true,
   onBlur() {},
   onFocus() {},
 };

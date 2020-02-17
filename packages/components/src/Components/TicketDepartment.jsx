@@ -22,6 +22,7 @@ class TicketDepartment extends React.Component {
         dataSource={{ getOptions: departments }}
         handleChange={handleChange}
         isClearable={false}
+        isSearchable={false}
       />
     );
   }
