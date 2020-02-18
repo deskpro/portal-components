@@ -83,7 +83,7 @@ class TicketForm extends React.Component {
           const { person } = initialValues;
           values.person = {
             name:  person && person.name ? person.name : '',
-            email: person && person.email ? person.email : '',
+            email: { email: person && person.email ? person.email : '' },
           };
         } else if (initialValues[field.get('field_id')]) {
           values[field.get('field_id')] = initialValues[field.get('field_id')];

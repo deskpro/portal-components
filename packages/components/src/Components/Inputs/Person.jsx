@@ -16,9 +16,8 @@ class Person extends React.Component {
 
     const emailProps = {
       key:         'person_email',
-      name:        `${name}.email`,
+      name:        `${name}.email.email`,
       label:       'Email',
-      errorsName:  name,
       placeholder: emailPlaceholder,
     };
 
@@ -33,7 +32,6 @@ class Person extends React.Component {
         name={`${name}.name`}
         label="Name"
         placeholder={namePlaceholder}
-        errorsName={name}
       />,
       <Email {...emailProps} />
     ];
