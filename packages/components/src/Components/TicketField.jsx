@@ -92,7 +92,7 @@ class TicketField extends React.Component {
     }
     switch (field.get('field_type')) {
       case 'message':
-        return <Textarea name="message" label="Message" />;
+        return <Textarea name="message" label="Message" errorsName="message.message" />;
       case 'subject':
         return field.get('is_hidden') ? <Hidden name="subject" /> : <Text name="subject" label="Subject" />;
       case 'email':

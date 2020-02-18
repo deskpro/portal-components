@@ -214,7 +214,6 @@ class TicketForm extends React.Component {
       <Formik
         ref={this.formik}
         enableReinitialize
-        validationSchema={this.getValidationSchema()}
         initialValues={this.getInitialValues()}
         onSubmit={this.props.onSubmit}
       >

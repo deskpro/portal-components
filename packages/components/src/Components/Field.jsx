@@ -80,12 +80,19 @@ class Field extends React.Component {
 
   render() {
     const { name, errorsName, fClassName } = this.props;
-    const searchName = errorsName || name;
     return (
       <FormikField
         name={name}
         render={({ form }) => {
-          const error = getIn(form.errors, searchName);
+          let error;
+          let searchName = errorsName;
+          if (errorsName) {
+            error = getIn(form.errors, errorsName.split('.'));
+          }
+          if (!error || typeof error !== 'string') {
+            error = getIn(form.errors, name.split('.'));
+            searchName = name;
+          }
           const touch = getIn(form.touched, name.split('.'));
           return (
             <div
@@ -95,7 +102,7 @@ class Field extends React.Component {
               {this.renderField(form)}
               {
                 touch && error && typeof error === 'string'
-                  ? <ErrorMessage name={searchName} form={form} />
+                  ? <ErrorMessage name={searchName} form={form} touchName={name} />
                   : this.renderDescription()
               }
             </div>
