@@ -13,6 +13,7 @@ import MultipleDropDown from './Choices/MultipleDropDown';
 import Radio from './Choices/Radio';
 import Hidden from './Inputs/Hidden';
 import Checkbox from './Inputs/Checkbox';
+import Display from './Display';
 
 class TicketField extends React.Component {
   static propTypes = {
@@ -78,6 +79,9 @@ class TicketField extends React.Component {
         props.dataSource = {};
         props.dataSource.getOptions = rec(field.getIn(['data', 'choices'], new List()).toArray());
         break;
+      case 'display':
+        Component = Display;
+        break;
       case 'text':
       default:
         Component = Text;
@@ -96,6 +100,7 @@ class TicketField extends React.Component {
       case 'subject':
         return field.get('is_hidden') ? <Hidden name="subject" /> : <Text name="subject" label="Subject" />;
       case 'email':
+      case 'cc':
         return <Email name={field.get('field_id')} label={field.getIn(['data', 'title']) || field.get('field_id')} />;
       case 'hidden':
         return <Hidden name={field.get('field_id')} label={field.get('field_id')} />;

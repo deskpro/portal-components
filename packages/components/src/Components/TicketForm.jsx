@@ -76,6 +76,7 @@ class TicketForm extends React.Component {
     const { initialValues } = this.props;
     this.getLayout()
       .get('fields', [])
+      .filter(f => f.getIn(['data', 'widget_type'], '') !== 'display')
       .forEach((field) => {
         if (field.get('field_type') === 'department') {
           values[this.props.departmentPropName] = this.state[this.props.departmentPropName];
