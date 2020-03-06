@@ -49,7 +49,7 @@
 
         &+i {
           background-color: #fff;
-          border: 2px solid $grey-light;
+          border: 1px solid $grey-light;
           border-radius: 4px;
           display: inline-block;
           height: 16px;
@@ -60,28 +60,38 @@
 
           &::after {
             background: transparent;
-            border: 2px solid $brand-primary;
+            border: 2px solid white;
             border-right: none;
             border-top: none;
             box-sizing: border-box;
             content: "";
             height: 6px;
-            left: 1px;
+            left: 2px;
             opacity: 0;
             position: absolute;
-            top: 2px;
-            transform: rotate(-60deg);
+            top: 3px;
+            transform: rotate(-45deg);
             width: 11px;
           }
         }
 
-        &:focus+i {
-          border-color: $grey-dark;
+        &:checked+i {
+          background-color: $brand-primary;
+          border-color: $brand-primary;
+          &::after {
+            opacity: 1 !important;
+            transition: 0.2s;
+            background-color: $brand-primary;
+          }
         }
 
-        &:checked+i::after {
-          opacity: 1 !important;
-          transition: 0.2s;
+        &:focus+i {
+          border: 2px solid $grey-dark;
+          &::after {
+            left: 1px;
+            top: 2px;
+            transition: 0s;
+          }
         }
 
         &:disabled+i {
@@ -108,7 +118,7 @@
         border: 1px solid $grey-dark;
 
         &::after {
-          background-color: $brand-primary;
+          background-color: white;
           border: none;
           border-radius: 50%;
           height: 0;
@@ -119,11 +129,16 @@
         }
       }
 
-      &:checked+i::after {
-        height: 8px;
-        left: 3px;
-        top: 3px;
-        width: 8px;
+      &:checked+i {
+        background-color: $brand-primary;
+        border-color: $brand-primary;
+        &::after {
+          background-color: white;
+          height: 6px;
+          left: 4px;
+          top: 4px;
+          width: 6px;
+        }
       }
     }
     label>input:focus {
@@ -131,10 +146,10 @@
         border: 2px solid $grey-dark;
       }
       &:checked+i::after {
-        height: 8px;
-        left: 2px;
-        top: 2px;
-        width: 8px;
+        height: 6px;
+        left: 3px;
+        top: 3px;
+        width: 6px;
       }
     }
   }

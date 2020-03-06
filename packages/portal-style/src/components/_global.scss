@@ -16,3 +16,6 @@ e.g. Modal Backdrop
     opacity: 0.5;
   }
 }
+img[class$="-svg"] {
+  display: none;
+}
