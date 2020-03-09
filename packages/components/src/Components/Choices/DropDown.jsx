@@ -13,7 +13,10 @@ import Field from '../Field';
 export const SelectContainer = ({ children, ...props }) => (
   <components.SelectContainer
     {...props}
-    className={classNames('react-select', { 'react-select__is-focused': props.isFocused, 'react-select-multi': props.isMulti })}
+    className={classNames(
+      'react-select',
+      { 'react-select__is-focused': props.isFocused, 'react-select-multi': props.isMulti }
+    )}
   >
     {children}
   </components.SelectContainer>
