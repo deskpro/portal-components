@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { css } from 'emotion';
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
 import { getIn } from 'formik';
 import ReactSelect, { components } from 'react-select';
-import AsyncSelect from 'react-select/lib/Async';
+import AsyncSelect from 'react-select/async';
 import { SelectContainer } from './DropDown';
 import Field from '../Field';
 
@@ -22,8 +23,8 @@ const Option = (props) => {
   return (
     <div
       ref={innerRef}
+      css={getStyles('option', props)}
       className={cx(
-        css(getStyles('option', props)),
         {
           option:                true,
           'option--is-disabled': isDisabled,
@@ -112,7 +113,7 @@ export class MultipleDropDownInput extends React.Component {
             dataSource.getOptions.filter(o => value && value.includes(o.value))
           }
           name={name}
-          menuIsOpen={this.state.menuIsOpen}
+          menuIsOpen={true || this.state.menuIsOpen}
           isClearable={false}
           options={dataSource.getOptions}
           hideSelectedOptions={false}
@@ -120,6 +121,7 @@ export class MultipleDropDownInput extends React.Component {
           classNamePrefix="react-select"
           isMulti
           {...props}
+          className="react-select-multi"
           onFocus={this.onFocus}
           onBlur={this.onBlur}
           onChange={this.onChange}

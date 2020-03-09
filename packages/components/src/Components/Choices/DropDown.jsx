@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { getIn } from 'formik';
-import { css } from 'emotion';
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
 import ReactSelect, { components } from 'react-select';
-import AsyncSelect from 'react-select/lib/Async';
+import AsyncSelect from 'react-select/async';
 import { deepMerge } from '@deskpro/js-utils/dist/objects';
 import classNames from 'classnames';
 import Field from '../Field';
@@ -12,7 +13,7 @@ import Field from '../Field';
 export const SelectContainer = ({ children, ...props }) => (
   <components.SelectContainer
     {...props}
-    className={classNames('react-select', { 'react-select__is-focused': props.isFocused })}
+    className={classNames('react-select', { 'react-select__is-focused': props.isFocused, 'react-select-multi': props.isMulti })}
   >
     {children}
   </components.SelectContainer>
@@ -37,8 +38,8 @@ const Option = (props) => {
     return (
       <div
         ref={innerRef}
+        css={getStyles('option', props)}
         className={cx(
-          css(getStyles('option', props)),
           {
             option:                true,
             'option--is-disabled': isDisabled,
@@ -58,8 +59,8 @@ const Option = (props) => {
     return (
       <div
         ref={innerRef}
+        css={getStyles('option', props)}
         className={cx(
-          css(getStyles('option', props)),
           {
             option:                true,
             'option--is-disabled': isDisabled,

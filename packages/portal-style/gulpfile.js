@@ -92,6 +92,7 @@ function serverTask() {
     livereload: true,
     root: ".build",
     localhost: 'localhost',
+    https: process.env.HTTPS,
     middleware: function() {
       return [cors()];
     }

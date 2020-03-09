@@ -19,7 +19,7 @@
   --option-background: #fff;
   --checkbox-border: var(--grey-light);
   --input-background: var(--grey-lightest);
-  --input-border: var(--grey-light);
+  --input-border: #3A8DDE;
   --input-height: 44px;
   --input-padding: 17px 12px;
   --textarea-background: var(--grey-lightest);
@@ -342,8 +342,10 @@
       Multiple Dropdown
   *******************************/
 
-  & .react-select__control {
+  & .react-select-multi .react-select__control {
+    padding-left: 6px;
     & .react-select__value-container--is-multi {
+      padding: 0;
       & .react-select__multi-value {
         line-height: 1.2;
         background-color: var(--option-background);
@@ -354,7 +356,8 @@
     }
     & .react-select__multi-value__label {
       position: static;
-      font-size: 12px;
+      font-size: 14px;
+      padding: 4px;
     }
     & .react-select__multi-value__remove {
       border-right: none;
@@ -372,6 +375,43 @@
         padding-left: 0;
         & .dp-pc_checkbox__checkbox {
           margin-top: 0;
+          & > input {
+            display: none;
+          }
+          & > i {
+            width: 16px;
+            height: 16px;
+            top: 2px;
+            border-radius: 4px;
+            border: 1px solid var(--checkbox-border);
+            display: inline-block;
+            position: relative;
+            background-color: #FFF;
+            margin: 0 7px 0 14px;
+            &::after {
+              content: '';
+              width: 11px;
+              height: 6px;
+              position: absolute;
+              top: 3px;
+              left: 2px;
+              border: 2px solid white;
+              border-top: none;
+              border-right: none;
+              background: transparent;
+              opacity: 0;
+              transform: rotate(-45deg);
+              box-sizing: border-box;
+            }
+          }
+          & > input:checked + i {
+            background-color: var(--brand-primary);
+            border-color: var(--brand-primary);
+            &::after {
+              opacity: 1 !important;
+              transition: .2s;
+            }
+          }
           & .dp-pc_checkbox__label {
             padding: 0;
             color: var(--label-color);
