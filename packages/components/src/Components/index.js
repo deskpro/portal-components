@@ -11,6 +11,7 @@ import DatePicker from './Inputs/DatePicker';
 import DateTimePicker from './Inputs/DateTimePicker';
 import Email from './Inputs/Email';
 import FileUpload, { FileUploadInput } from './Inputs/FileUpload';
+import FullDragDrop from './Inputs/FullDragDrop';
 import LikertScale from './Inputs/LikertScale';
 import Number from './Inputs/Number';
 import Password from './Inputs/Password';
@@ -45,6 +46,7 @@ export {
   Email,
   FileUpload,
   FileUploadInput,
+  FullDragDrop,
   LikertScale,
   Number,
   Password,

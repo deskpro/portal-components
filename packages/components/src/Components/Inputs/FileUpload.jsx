@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import DropZone from 'react-dropzone';
-import { formatFileSize } from '@deskpro/js-utils/dist/numbers';
 import { deepMerge } from '@deskpro/js-utils/dist/objects';
 import FileIcon from '../../assets/file-icon.svg';
 import DndIcon from '../../assets/drag-and-drop.svg';
-import DeleteIcon from '../../assets/delete.svg';
 import { Progress } from '../index';
 
 import Field from '../Field';
+import AJAXSubmit from '../../utils/AJAXSubmit';
+import File from '../File';
 
 const I18N = {
   dragNDrop:   'Drag and drop',
@@ -17,96 +17,6 @@ const I18N = {
   chooseAFile: 'Choose a file',
   chooseFiles: 'Choose files',
 };
-
-// eslint-disable-next-line func-names
-const AJAXSubmit = (function () {
-  function submitData(config, formData) {
-    /* the AJAX request... */
-    const oAjaxReq = new XMLHttpRequest();
-
-    if (config.updateProgress) {
-      oAjaxReq.upload.addEventListener('progress', config.updateProgress);
-    }
-    if (config.transferComplete) {
-      oAjaxReq.addEventListener('load', config.transferComplete);
-    }
-    if (config.transferFailed) {
-      oAjaxReq.addEventListener('error', config.transferFailed);
-    }
-    if (config.transferCanceled) {
-      oAjaxReq.addEventListener('abort', config.transferCanceled);
-    }
-
-    oAjaxReq.withCredentials = true;
-    /* method is POST */
-    oAjaxReq.responseType = 'json';
-    oAjaxReq.open('post', config.url, true);
-    oAjaxReq.send(formData);
-  }
-
-  function SubmitRequest(config) {
-    const formData = new FormData();
-    for (let nFile = 0; nFile < config.files.length; nFile++) {
-      const oFile = config.files[nFile];
-      formData.append(`file[${config.name}]`, oFile);
-    }
-    formData.append('file[_dp_csrf_token]', config.token);
-    submitData(config, formData);
-  }
-
-  // eslint-disable-next-line func-names
-  return function (config) {
-    if (!config.url) { return; }
-    config.req = new SubmitRequest(config);
-  };
-}());
-
-class File extends React.Component {
-  static propTypes = {
-    inputName: PropTypes.string.isRequired,
-    onRemove:  PropTypes.func.isRequired,
-    file:      PropTypes.object.isRequired
-  };
-
-  onClickRemove = () => {
-    this.props.onRemove(this.props.file);
-  };
-
-  onHandleKeyDown = (ev) => {
-    if (ev.ctrlKey && ev.altKey && ev.keyCode === 68) {
-      this.props.onRemove(this.props.file);
-    }
-  };
-
-
-  renderRemove = () => (
-    <span className="dp-pc_file-upload_remove-file" onClick={this.onClickRemove} onKeyDown={this.onHandleKeyDown}>
-      <DeleteIcon /> remove
-    </span>
-  );
-
-  renderSize = () => {
-    const { file } = this.props;
-    if (typeof file.size === 'string') {
-      return `(${file.size})`;
-    } else if (typeof file.size === 'number') {
-      return `(${formatFileSize(file.size)})`;
-    }
-    return null;
-  };
-
-  render() {
-    const { file, inputName } = this.props;
-    const formName = `${inputName}[${file.id}][blob_auth]`;
-
-    return (
-      <li>
-        {file.filename} {this.renderSize()} {this.renderRemove()}
-        <input type="hidden" name={formName} value={file.authcode} />
-      </li>
-    );
-  }
-}
 
 export class FileUploadInput extends React.Component {
   static propTypes = {
@@ -118,6 +28,7 @@ export class FileUploadInput extends React.Component {
     label:     PropTypes.string,
     onChange:  PropTypes.func,
     i18n:      PropTypes.object,
+    files:     PropTypes.array,
   };
 
   static defaultProps = {

@@ -2,6 +2,7 @@
 
 :root {
   --grey-darkest: #4c4f50;
+  --grey-dark: #8b9293;
   --grey-lightest: #f7f7f7;
   --grey-light: #d3d6d7;
   --grey: #a9b0b0;
@@ -679,6 +680,22 @@
         height: 50%;
       }
     }
+    .dp-pc_file-full-dnd {
+      font-size: 14px;
+      display: flex;
+      flex-direction: row;
+      & * {
+        line-height: 150%;
+        color: var(--grey-darkest);
+        vertical-align: middle;
+      }
+      & label {
+        cursor: pointer;
+      }
+      & .or {
+        color: var(--grey-light);
+      }
+    }
   }
   &.dp-pc_error .dp-pc_file-upload__dropzone {
     border-color: var(--error-color);
@@ -856,6 +873,30 @@
     }
     & :-ms-input-placeholder { /* Internet Explorer 10+ */
       color: var(--grey-light);
+    }
+  }
+}
+
+.dp-pc_full-dnd__droparea {
+  position: absolute;
+  background-color: #FFF;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  border: solid 2px var(--brand-primary);
+  border-radius: 4px;
+
+  & > div {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+    & p {
+      color: var(--grey-dark);
     }
   }
 }
