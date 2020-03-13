@@ -19,6 +19,13 @@
         "ignorePattern": "^import\\s.+"
       }
     ],
+    "jsx-a11y/label-has-for": [ 2, {
+      "components": [ "Label" ],
+      "required": {
+        "every": [ "id" ]
+      },
+      "allowChildren": false
+    }],
     "react/no-find-dom-node": 0,
     "react/no-multi-comp": 0,
     "jsx-quotes": [
