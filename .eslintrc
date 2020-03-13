@@ -65,13 +65,6 @@
     "no-console": 2,
     "no-class-assign": 0,
     "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
-    "indent": [
-      2,
-      2,
-      {
-        "SwitchCase": 1
-      }
-    ],
     "valid-jsdoc": 0,
     "import/no-extraneous-dependencies": ["off"],
     "jsx-a11y/no-static-element-interactions": 0,
