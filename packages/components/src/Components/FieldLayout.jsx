@@ -149,7 +149,6 @@ class FieldLayout extends PureComponent {
               <DropArea
                 isDragActive={isDragActive}
                 progress={progress}
-                {...getInputProps()}
               />
               {this.renderLayout(getInputProps())}
             </div>

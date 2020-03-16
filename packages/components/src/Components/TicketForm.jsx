@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment-hijri';
+import classNames from 'classnames';
 import { List } from 'immutable';
 import { Formik } from 'formik';
+import DropZone from 'react-dropzone';
 import * as Yup from 'yup';
 import Form from './Form';
 import Submit from './Submit';
@@ -10,6 +12,8 @@ import TicketField from './TicketField';
 import Hidden from './Inputs/Hidden';
 import Person from './Inputs/Person';
 import TicketDepartment from './TicketDepartment';
+import DropArea from './DropArea';
+import AJAXSubmit from '../utils/AJAXSubmit';
 
 const invalidDate = new Date('');
 function parseDateFromFormats(formats, parseStrict) {
@@ -50,7 +54,9 @@ class TicketForm extends React.Component {
     super(props);
     this.formik = React.createRef();
     this.state = {
-      [props.departmentPropName]: props.department
+      [props.departmentPropName]: props.department,
+      files:                      [],
+      progress:                   -1,
     };
   }
 
@@ -155,13 +161,51 @@ class TicketForm extends React.Component {
     return Yup.object().shape(shape);
   };
 
+  handleDrop = (accepted) => {
+    AJAXSubmit({
+      url:              this.props.url,
+      files:            accepted,
+      name:             'blob',
+      token:            this.props.csrfToken,
+      transferComplete: this.handleTransferComplete,
+      transferFailed:   this.handleTransferFailed,
+      updateProgress:   this.handleUpdateProgress,
+    });
+  };
+
+  handleTransferComplete = (e) => {
+    const { name, onChange } = this.props;
+    const files = this.state.files.concat([e.target.response.blob]);
+    this.setState({ files });
+    onChange(name, files);
+    this.setState({ progress: -1 });
+  };
+
+  handleTransferFailed = () => {
+    this.setState({ progress: -1 });
+  };
+
+  handleUpdateProgress = (e) => {
+    if (e.lengthComputable) {
+      const percentComplete = e.loaded / e.total * 100;
+      this.setState({ progress: percentComplete });
+    } else {
+      this.setState({ progress: -1 });
+    }
+  };
+
+  handleRemove = (file) => {
+    const files = this.state.files.filter(f => f.id !== file.id);
+    this.setState({ files });
+  };
+
   handleDepartmentChange = (department) => {
     this.setState({
       [this.props.departmentPropName]: department
     });
   };
 
-  renderFields = () => {
+  renderFields = (fileInputProps = {}) => {
     const { departments, fileUploadUrl, csrfToken } = this.props;
     return this.getLayout()
       .get('fields', [])
@@ -203,6 +247,9 @@ class TicketForm extends React.Component {
                 field={field}
                 fileUploadUrl={fileUploadUrl}
                 csrfToken={csrfToken}
+                fileInputProps={fileInputProps}
+                files={this.state.files}
+                handleRemove={this.handleRemove}
               />
             );
         }
@@ -211,6 +258,45 @@ class TicketForm extends React.Component {
 
   render() {
     const { showHover } = this.props;
+
+    const hasAttachment = this.getLayout().get('fields', []).find(f => f.get('field_type') === 'attachments');
+
+    if (hasAttachment) {
+      return (
+        <Formik
+          ref={this.formik}
+          enableReinitialize
+          initialValues={this.getInitialValues()}
+          onSubmit={this.props.onSubmit}
+        >
+          {() => (
+            <Form noValidate showHover={showHover}>
+              <DropZone
+                onDrop={this.handleDrop}
+                noClick
+                noKeyboard
+                multiple
+                ref={(c) => { this.dropZone = c; }}
+              >
+                {({ getRootProps, getInputProps, isDragActive }) => (
+                  <div
+                    className={classNames('dp-pc_full-dnd__dropzone', { active: isDragActive })}
+                    {...getRootProps()}
+                  >
+                    <DropArea
+                      isDragActive={isDragActive}
+                      progress={this.state.progress}
+                    />
+                    {this.renderFields(getInputProps())}
+                    <Submit>Submit</Submit>
+                  </div>
+                )}
+              </DropZone>
+            </Form>
+          )}
+        </Formik>
+      );
+    }
     return (
       <Formik
         ref={this.formik}

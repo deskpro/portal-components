@@ -14,12 +14,22 @@ import Radio from './Choices/Radio';
 import Hidden from './Inputs/Hidden';
 import Checkbox from './Inputs/Checkbox';
 import Display from './Display';
+import FullDragDrop from './Inputs/FullDragDrop';
 
 class TicketField extends React.Component {
   static propTypes = {
-    field:         PropTypes.object.isRequired,
-    fileUploadUrl: PropTypes.string.isRequired,
-    csrfToken:     PropTypes.string.isRequired,
+    field:          PropTypes.object.isRequired,
+    fileUploadUrl:  PropTypes.string.isRequired,
+    csrfToken:      PropTypes.string.isRequired,
+    fileInputProps: PropTypes.object,
+    files:          PropTypes.array,
+    handleRemove:   PropTypes.func,
+  };
+
+  static defaultProps = {
+    fileInputProps: {},
+    files:          [],
+    handleRemove() {},
   };
 
   renderCustomField = () => {
@@ -90,7 +100,14 @@ class TicketField extends React.Component {
   };
 
   render() {
-    const { field, fileUploadUrl, csrfToken } = this.props;
+    const {
+      field,
+      fileUploadUrl,
+      csrfToken,
+      fileInputProps,
+      files,
+      handleRemove
+    } = this.props;
     if (field.get('field_type').match(/^ticket_field/) || field.get('field_type').match(/^chat_field/)) {
       return this.renderCustomField();
     }
@@ -106,11 +123,14 @@ class TicketField extends React.Component {
         return <Hidden name={field.get('field_id')} label={field.get('field_id')} />;
       case 'attachments':
         return (
-          <FileUpload
+          <FullDragDrop
             name="attachments"
             label="Attachments"
             url={fileUploadUrl}
             csrfToken={csrfToken}
+            inputProps={fileInputProps}
+            files={files}
+            handleRemove={handleRemove}
           />
         );
       default:
