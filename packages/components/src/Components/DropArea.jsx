@@ -50,8 +50,7 @@ class DropArea extends PureComponent {
   render() {
     const {
       isDragActive,
-      progress,
-      ...inputProps
+      progress
     } = this.props;
 
     return (
@@ -64,7 +63,6 @@ class DropArea extends PureComponent {
         >
           {progress === -1 ? this.renderDrop() : this.renderProgress()}
         </div>
-        <input {...inputProps} />
       </Fragment>
     );
   }
