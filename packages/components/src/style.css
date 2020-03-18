@@ -731,6 +731,7 @@
       height: var(--input-height);
       color: var(--text-color);
       border: none;
+      margin-bottom: 1px;
     }
     & svg {
       width: 20px;

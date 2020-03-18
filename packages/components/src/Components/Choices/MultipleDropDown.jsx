@@ -113,7 +113,7 @@ export class MultipleDropDownInput extends React.Component {
             dataSource.getOptions.filter(o => value && value.includes(o.value))
           }
           name={name}
-          menuIsOpen={true || this.state.menuIsOpen}
+          menuIsOpen={this.state.menuIsOpen}
           isClearable={false}
           options={dataSource.getOptions}
           hideSelectedOptions={false}
