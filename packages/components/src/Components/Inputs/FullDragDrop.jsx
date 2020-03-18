@@ -99,7 +99,7 @@ export class FullDragDropInput extends React.Component {
           {Array.from(this.props.files).map(file => (<File
             onRemove={this.handleRemove}
             inputName={name}
-            key={`key_${file.name}`}
+            key={`key_${file.filename}`}
             file={file}
           />))}
         </ul>

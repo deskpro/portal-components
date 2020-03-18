@@ -161,22 +161,24 @@ class TicketForm extends React.Component {
     return Yup.object().shape(shape);
   };
 
-  handleDrop = (accepted, handleChange) => {
-    AJAXSubmit({
-      url:              this.props.fileUploadUrl,
-      files:            accepted,
-      name:             'blob',
-      token:            this.props.csrfToken,
-      transferComplete: e => this.handleTransferComplete(e, handleChange),
-      transferFailed:   this.handleTransferFailed,
-      updateProgress:   this.handleUpdateProgress,
+  handleDrop = (accepted, setFieldValue) => {
+    accepted.forEach((file) => {
+      AJAXSubmit({
+        url:              this.props.fileUploadUrl,
+        files:            [file],
+        name:             'blob',
+        token:            this.props.csrfToken,
+        transferComplete: e => this.handleTransferComplete(e, setFieldValue),
+        transferFailed:   this.handleTransferFailed,
+        updateProgress:   this.handleUpdateProgress,
+      });
     });
   };
 
-  handleTransferComplete = (e, handleChange) => {
+  handleTransferComplete = (e, setFieldValue) => {
     const files = this.state.files.concat([e.target.response.blob]);
     this.setState({ files });
-    handleChange(e.target.name, files);
+    setFieldValue('attachments', files);
     this.setState({ progress: -1 });
   };
 
@@ -193,8 +195,9 @@ class TicketForm extends React.Component {
     }
   };
 
-  handleRemove = (file) => {
+  handleRemove = (setFieldValue, file) => {
     const files = this.state.files.filter(f => f.id !== file.id);
+    setFieldValue('attachments', files);
     this.setState({ files });
   };
 
@@ -204,7 +207,7 @@ class TicketForm extends React.Component {
     });
   };
 
-  renderFields = (fileInputProps = {}) => {
+  renderFields = (setFieldValue = () => {}, fileInputProps = {}) => {
     const { departments, fileUploadUrl, csrfToken } = this.props;
     return this.getLayout()
       .get('fields', [])
@@ -249,7 +252,7 @@ class TicketForm extends React.Component {
                 csrfToken={csrfToken}
                 fileInputProps={fileInputProps}
                 files={this.state.files}
-                handleRemove={this.handleRemove}
+                handleRemove={file => this.handleRemove(setFieldValue, file)}
               />
             );
         }
@@ -272,7 +275,7 @@ class TicketForm extends React.Component {
           {props => (
             <Form noValidate showHover={showHover}>
               <DropZone
-                onDrop={acceptedFiles => this.handleDrop(acceptedFiles, props.handleChange)}
+                onDrop={acceptedFiles => this.handleDrop(acceptedFiles, props.setFieldValue)}
                 noClick
                 noKeyboard
                 multiple
@@ -287,7 +290,7 @@ class TicketForm extends React.Component {
                       isDragActive={isDragActive}
                       progress={this.state.progress}
                     />
-                    {this.renderFields(getInputProps())}
+                    {this.renderFields(props.handleChange, getInputProps())}
                     <Submit>Submit</Submit>
                   </div>
                 )}

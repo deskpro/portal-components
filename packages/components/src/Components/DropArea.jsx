@@ -17,7 +17,7 @@ class DropArea extends PureComponent {
   };
 
   static defaultProps = {
-    progress: -1,
+    progress: 100,
     i18n:     {},
   };
 

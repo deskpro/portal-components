@@ -900,6 +900,9 @@
       color: var(--grey-dark);
     }
   }
+  & .dp-progress {
+    width: 80%;
+  }
 }
 
 .dp-pc_field.dp-pc_multi-select .react-select__control {
