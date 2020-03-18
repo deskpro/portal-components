@@ -73,7 +73,7 @@ export class FullDragDropInput extends React.Component {
   render() {
     const { name, inputProps } = this.props;
 
-    let id = this.props;
+    let { id } = this.props;
     if (!id) {
       id = 'file-input';
     }

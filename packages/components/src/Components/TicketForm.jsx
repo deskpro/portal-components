@@ -161,23 +161,22 @@ class TicketForm extends React.Component {
     return Yup.object().shape(shape);
   };
 
-  handleDrop = (accepted) => {
+  handleDrop = (accepted, handleChange) => {
     AJAXSubmit({
-      url:              this.props.url,
+      url:              this.props.fileUploadUrl,
       files:            accepted,
       name:             'blob',
       token:            this.props.csrfToken,
-      transferComplete: this.handleTransferComplete,
+      transferComplete: e => this.handleTransferComplete(e, handleChange),
       transferFailed:   this.handleTransferFailed,
       updateProgress:   this.handleUpdateProgress,
     });
   };
 
-  handleTransferComplete = (e) => {
-    const { name, onChange } = this.props;
+  handleTransferComplete = (e, handleChange) => {
     const files = this.state.files.concat([e.target.response.blob]);
     this.setState({ files });
-    onChange(name, files);
+    handleChange(e.target.name, files);
     this.setState({ progress: -1 });
   };
 
@@ -237,6 +236,7 @@ class TicketForm extends React.Component {
             return (<Person
               isDisabled={field.get('is_disabled')}
               name="person"
+              key="person"
               namePlaceholder="John Doe"
               emailPlaceholder="john.doe@company.com"
             />);
@@ -269,10 +269,10 @@ class TicketForm extends React.Component {
           initialValues={this.getInitialValues()}
           onSubmit={this.props.onSubmit}
         >
-          {() => (
+          {props => (
             <Form noValidate showHover={showHover}>
               <DropZone
-                onDrop={this.handleDrop}
+                onDrop={acceptedFiles => this.handleDrop(acceptedFiles, props.handleChange)}
                 noClick
                 noKeyboard
                 multiple

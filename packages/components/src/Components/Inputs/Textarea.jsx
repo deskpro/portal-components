@@ -14,6 +14,8 @@ class Textarea extends Field {
     const {
       name,
       className,
+      errorsName,
+      fClassName,
       ...props
     } = this.props;
     return (
