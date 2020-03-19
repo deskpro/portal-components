@@ -5,7 +5,7 @@ import { Progress } from '../index';
 import DropzoneImage from '../assets/dropzone-image.svg';
 
 const I18N = {
-  uploading:       'uploading',
+  uploading:       'Uploading',
   dragAndDropHere: 'Drag and drop file here',
 };
 
@@ -17,7 +17,7 @@ class DropArea extends PureComponent {
   };
 
   static defaultProps = {
-    progress: 100,
+    progress: -1,
     i18n:     {},
   };
 
@@ -40,7 +40,7 @@ class DropArea extends PureComponent {
     const { progress } = this.props;
     return (
       <div>
-        {progress > 0 ? <span>{progress} %</span> : null}
+        {progress > 0 ? <span>{Math.round(progress)} %</span> : null}
         <Progress percent={progress} />
         <p>{this.i18n.uploading}...</p>
       </div>
@@ -61,7 +61,7 @@ class DropArea extends PureComponent {
             display: isDragActive || progress !== -1 ? 'block' : 'none'
           }}
         >
-          {progress === -1 ? this.renderDrop() : this.renderProgress()}
+          {progress < 0 ? this.renderDrop() : this.renderProgress()}
         </div>
       </Fragment>
     );

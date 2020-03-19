@@ -489,7 +489,7 @@
     & span.label {
       color: var(--label-color);
       margin-right: 20px;
-      font-size: 16px;
+      font-size: 14px;
     }
     &:focus,
     &:hover {
@@ -502,7 +502,6 @@
   & .dp-pc_checkboxes_label {
     font-size: 14px;
     color: var(--label-color);
-    margin-left: 10px;
   }
 
 
@@ -559,7 +558,7 @@
     & span.label {
       color: var(--label-color);
       margin-right: 20px;
-      font-size: 16px;
+      font-size: 14px;
     }
     &:focus {
       outline: none;
@@ -571,9 +570,8 @@
   & .dp-pc_radio_label {
     position: absolute;
     top: 7px;
-    font-size: 18px;
+    font-size: 14px;
     color: var(--label-color);
-    left: 10px;
   }
 
   &.dp-pc_error .dp-pc_radio {
@@ -684,6 +682,7 @@
       font-size: 14px;
       display: flex;
       flex-direction: row;
+      margin-left: -7px;
       & * {
         line-height: 150%;
         color: var(--grey-darkest);
