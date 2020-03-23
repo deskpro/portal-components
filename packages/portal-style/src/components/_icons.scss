@@ -1,13 +1,9 @@
 .dp-po-icon {
   $self: '.dp-po-icon';
 
-  svg {
-    vertical-align: -.125em;
-
-    .fa-secondary,
-    .fa-primary {
-      fill: $brand-primary;
-    }
+  &.fa-secondary,
+  &.fa-primary {
+    fill: $brand-primary;
   }
 
   &#{$self}-white {

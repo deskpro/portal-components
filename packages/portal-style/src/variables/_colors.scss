@@ -15,8 +15,8 @@ $text-color: var(--text-color);
 **** Secondary colours ****
 **************************/
 
-$grey-darkest: #4C4F50;
-$grey-dark: #8B9293;
+$grey-darkest: var(--text-color);
+$grey-dark: var(--text-color-lighter);
 $grey: #A9B0B0;
 $grey-light: #D3D6D7;
 $grey-lighter: #EFF0F0;
