@@ -1,11 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import DateTimeIcon from 'assets/date-time.svg';
-import moment from 'moment-hijri';
+import { parse as dateParse } from 'date-fns';
 import { getIn } from 'formik';
 import DatePicker from './DatePicker';
 import Field from '../Field';
-
-moment.locale('en');
 
 class DateTimePicker extends DatePicker {
   getProps = (form) => {
@@ -15,9 +14,9 @@ class DateTimePicker extends DatePicker {
       className,
       ...props
     } = this.props;
-    let openToDate = moment();
+    let openToDate = new Date();
     if (getIn(form.values, name)) {
-      openToDate = moment(getIn(form.values, name), format);
+      openToDate = dateParse(getIn(form.values, name), format, new Date());
     }
 
     return {
@@ -37,6 +36,7 @@ class DateTimePicker extends DatePicker {
       dateFormat:         format,
       preventOpenOnFocus: true,
       assumeNearbyYear:   true,
+      locale:             'en',
       ...props
     };
   };
@@ -44,9 +44,14 @@ class DateTimePicker extends DatePicker {
   renderIcon = () => <DateTimeIcon />;
 }
 
+DateTimePicker.propTypes = {
+  ...Field.propTypes,
+  format: PropTypes.string,
+};
+
 DateTimePicker.defaultProps = {
   ...Field.defaultProps,
-  format: 'DD/MM/YYYY HH:mm'
+  format: 'dd/MM/yyyy HH:mm'
 };
 
 export default DateTimePicker;

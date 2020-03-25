@@ -42,7 +42,7 @@ storiesOf('Input', module)
       )}
     />
   ))
-  .add('Progress Bar', () => (
+  .add('Progress Bar Drop', () => (
     <div>
       <Progress percent={50} />
       <Progress percent={100} />

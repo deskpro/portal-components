@@ -1,16 +1,14 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import moment from 'moment';
 import { action } from '@storybook/addon-actions';
-import '@deskpro/react-datepicker-hijri/dist/react-datepicker.css';
+import 'react-datepicker/dist/react-datepicker.css';
 import { Form, DateTimePicker, Submit, Formik } from '@deskpro/portal-components';
 
-moment.locale('en');
 
 storiesOf('Input', module)
   .add('DateTimePicker', () => (
     <Formik
-      initialValues={{ date: '14/05/1984' }}
+      initialValues={{ date: '14/05/1984 15:00' }}
       onSubmit={action('submit')}
       render={() => (
         <Form>

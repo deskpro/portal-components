@@ -742,7 +742,7 @@
       width: calc(100% - 25px);
     }
     & .react-datepicker-wrapper {
-      width: 100%;
+      width: calc(100% - 25px);
     }
     & .react-datepicker__input-container {
       width: 100%;

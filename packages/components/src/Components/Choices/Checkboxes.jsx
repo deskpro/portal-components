@@ -62,7 +62,7 @@ class Checkboxes extends Field {
   };
   renderField = (form) => {
     const {
-      name, label, options, className, ...props
+      name, label, options, className, fClassName, errorsName, ...props
     } = this.props;
     /* eslint-disable jsx-a11y/click-events-have-key-events */
     /* eslint-disable jsx-a11y/no-noninteractive-tabindex */

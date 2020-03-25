@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import moment from 'moment-hijri';
-import ReactDatePicker from '@deskpro/react-datepicker-hijri';
+import ReactDatePicker, { registerLocale } from 'react-datepicker';
+import en from 'date-fns/locale/en-US';
+import { format as dateFormat, parse as dateParse } from 'date-fns';
 import { getIn } from 'formik';
 import CalendarIcon from 'assets/calendar.svg';
 
 import Field from '../Field';
 
-moment.locale('en');
+registerLocale('en', en);
 
 class DatePicker extends Field {
   constructor(props) {
@@ -33,7 +34,7 @@ class DatePicker extends Field {
   };
 
   handleChange(date, form) {
-    form.setFieldValue(this.props.name, date.format(this.props.format));
+    form.setFieldValue(this.props.name, dateFormat(date, this.props.format));
   }
 
   getProps = (form) => {
@@ -43,9 +44,9 @@ class DatePicker extends Field {
       className,
       ...props
     } = this.props;
-    let openToDate = moment();
+    let openToDate = new Date();
     if (getIn(form.values, name)) {
-      openToDate = moment(getIn(form.values, name), format);
+      openToDate = dateParse(getIn(form.values, name), format, new Date());
     }
     return {
       name,
@@ -61,6 +62,7 @@ class DatePicker extends Field {
       preventOpenOnFocus: true,
       assumeNearbyYear:   true,
       dateFormat:         format,
+      locale:             'en',
       ...props
     };
   };
@@ -101,7 +103,7 @@ DatePicker.propTypes = {
 
 DatePicker.defaultProps = {
   ...Field.defaultProps,
-  format: 'DD/MM/YYYY'
+  format: 'dd/MM/yyyy'
 };
 
 export default DatePicker;
