@@ -428,6 +428,11 @@
         & .dp-pc_checkbox__checkbox i {
           border-color: var(--text-color);
         }
+        > span[class$='a11yText'] {
+          height: 1px;
+          width: 1px;
+          position: absolute;
+        }
       }
       & .react-select__option--is-selected {
         background: none;
