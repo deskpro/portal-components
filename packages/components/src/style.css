@@ -345,14 +345,18 @@
 
   & .react-select-multi .react-select__control {
     padding-left: 6px;
+    height: auto;
+    min-height: var(--input-height);
     & .react-select__value-container--is-multi {
-      padding: 0;
+      padding: 6px 0 0;
       & .react-select__multi-value {
-        line-height: 1.2;
+        line-height: 1;
         background-color: var(--option-background);
         color: var(--text-color);
         border-radius: 4px;
         border: 2px solid var(--checkbox-border);
+        margin-top: 0;
+        margin-bottom: 6px;
       }
     }
     & .react-select__multi-value__label {
@@ -366,7 +370,7 @@
       padding: 0 5px;
     }
     & .react-select__input > input {
-      margin-top: 12px;
+      margin-top: 0;
     }
   }
   & .react-select__menu {

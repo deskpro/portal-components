@@ -7,6 +7,7 @@ import Email from './Inputs/Email';
 import Textarea from './Inputs/Textarea';
 import DatePicker from './Inputs/DatePicker';
 import DateTimePicker from './Inputs/DateTimePicker';
+import HijriDatePicker from './Inputs/HijriDatePicker';
 import Checkboxes from './Choices/Checkboxes';
 import DropDown from './Choices/DropDown';
 import MultipleDropDown from './Choices/MultipleDropDown';
@@ -48,8 +49,11 @@ class TicketField extends React.Component {
     let Component = Text;
     switch (field.getIn(['data', 'widget_type'])) {
       case 'date':
-        Component = DatePicker;
         props.calendar = field.getIn(['data', 'options', 'calendar'], 'gregorian');
+        Component = DatePicker;
+        if (props.calendar === 'hijri') {
+          Component = HijriDatePicker;
+        }
         break;
       case 'datetime':
         Component = DateTimePicker;

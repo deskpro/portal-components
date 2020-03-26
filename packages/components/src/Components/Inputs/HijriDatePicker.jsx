@@ -1,17 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import ReactDatePicker, { registerLocale } from 'react-datepicker';
-import en from 'date-fns/locale/en-US';
-import { format as dateFormat, parse as dateParse } from 'date-fns';
+import ReactHijriDatePicker from 'hijri-date-picker';
+import moment from 'moment-hijri';
 import { getIn } from 'formik';
 import CalendarIcon from 'assets/calendar.svg';
 
 import Field from '../Field';
 
-registerLocale('en', en);
-
-class DatePicker extends Field {
+class HijriDatePicker extends Field {
   constructor(props) {
     super(props);
     this.state = {
@@ -34,7 +31,7 @@ class DatePicker extends Field {
   };
 
   handleChange(date, form) {
-    form.setFieldValue(this.props.name, dateFormat(date, this.props.format));
+    form.setFieldValue(this.props.name, date.format(this.props.format));
   }
 
   getProps = (form) => {
@@ -44,26 +41,21 @@ class DatePicker extends Field {
       className,
       ...props
     } = this.props;
-    let openToDate = new Date();
+    let openToDate = moment();
     if (getIn(form.values, name)) {
-      openToDate = dateParse(getIn(form.values, name), format, new Date());
+      openToDate = moment(getIn(form.values, name), format);
     }
     return {
       name,
       openToDate,
-      value:              getIn(form.values, name),
-      onChange:           value => this.handleChange(value, form),
-      onBlur:             () => this.handleBlur(form),
-      onClickOutside:     () => this.handleBlur(form),
-      onFocus:            this.handleFocus,
-      className:          'dp-pc_date-picker_input',
-      showMonthDropdown:  true,
-      showYearDropdown:   true,
-      dropdownMode:       'select',
-      preventOpenOnFocus: true,
-      assumeNearbyYear:   true,
-      dateFormat:         format,
-      locale:             'en',
+      quickSelect:  true,
+      selectedDate: getIn(form.values, name),
+      onChange:     value => this.handleChange(value, form),
+      onBlur:       () => this.handleBlur(form),
+      onFocus:      this.handleFocus,
+      className:    'dp-pc_date-picker_input',
+      dateFormat:   format,
+      locale:       'en',
       ...props
     };
   };
@@ -89,7 +81,7 @@ class DatePicker extends Field {
     return (
       <div className={classNames('dp-pc_date-picker', { focused: this.state.focused }, className)}>
         {this.renderIcon()}
-        <ReactDatePicker
+        <ReactHijriDatePicker
           {...this.getProps(form)}
         />
       </div>
@@ -97,14 +89,14 @@ class DatePicker extends Field {
   }
 }
 
-DatePicker.propTypes = {
+HijriDatePicker.propTypes = {
   ...Field.propTypes,
   format: PropTypes.string,
 };
 
-DatePicker.defaultProps = {
+HijriDatePicker.defaultProps = {
   ...Field.defaultProps,
-  format: 'dd/MM/yyyy'
+  format: 'iYYYY/iMM/iDD'
 };
 
-export default DatePicker;
+export default HijriDatePicker;

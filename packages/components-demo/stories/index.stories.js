@@ -6,6 +6,7 @@ import './form';
 import './checkboxes';
 import './datepicker';
 import './datetimepicker';
+import './hijridatepicker';
 import './dropdown';
 import './email';
 import './file_upload';
