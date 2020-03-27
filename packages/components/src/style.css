@@ -213,6 +213,7 @@
       }
       & .react-select__dropdown-indicator {
         position: relative;
+        cursor: pointer;
         & svg {
           display: none;
         }
@@ -235,6 +236,14 @@
           transform: rotate(45deg);
           transition: 0.2s ease all;
         }
+      }
+      & .dp-react-select__dropdown-indicator {
+        position: absolute;
+        top: -10px;
+        left: -15px;
+        bottom: -10px;
+        right: -5px;
+        cursor: pointer;
       }
     }
     &.react-select__control--is-focused {

@@ -5,7 +5,7 @@ import { jsx } from '@emotion/core';
 import { getIn } from 'formik';
 import ReactSelect, { components } from 'react-select';
 import AsyncSelect from 'react-select/async';
-import { SelectContainer } from './DropDown';
+import { SelectContainer, DropdownIndicator } from './DropDown';
 import Field from '../Field';
 
 const Option = (props) => {
@@ -66,6 +66,8 @@ export class MultipleDropDownInput extends React.Component {
 
   constructor(props) {
     super(props);
+    this.select = React.createRef();
+
     this.state = {
       value:      null,
       menuIsOpen: false
@@ -90,6 +92,10 @@ export class MultipleDropDownInput extends React.Component {
     this.setState({ menuIsOpen: true });
   };
 
+  closeMenu = () => {
+    this.select.current.select.blurInput();
+  };
+
   loadOptions = (inputValue) => {
     const { dataSource } = this.props;
     const propValue = this.props.value;
@@ -109,6 +115,7 @@ export class MultipleDropDownInput extends React.Component {
     if (Array.isArray(dataSource.getOptions)) {
       return (
         <ReactSelect
+          ref={this.select}
           value={
             dataSource.getOptions.filter(o => value && value.includes(o.value))
           }
@@ -117,7 +124,13 @@ export class MultipleDropDownInput extends React.Component {
           isClearable={false}
           options={dataSource.getOptions}
           hideSelectedOptions={false}
-          components={{ Option, SelectContainer }}
+          components={{
+            SelectContainer,
+            Option,
+            DropdownIndicator: dropdownProps => (
+              <DropdownIndicator closeMenu={this.closeMenu} {...dropdownProps} />
+            )
+          }}
           classNamePrefix="react-select"
           isMulti
           {...props}
@@ -131,11 +144,18 @@ export class MultipleDropDownInput extends React.Component {
 
     return (
       <AsyncSelect
+        ref={this.select}
         value={this.state.value}
         name={name}
         isClearable={false}
         hideSelectedOptions={false}
-        components={{ Option, SelectContainer }}
+        components={{
+          SelectContainer,
+          Option,
+          DropdownIndicator: dropdownProps => (
+            <DropdownIndicator closeMenu={this.closeMenu} {...dropdownProps} />
+          )
+        }}
         defaultOptions
         cacheOptions
         loadOptions={inputValue => this.loadOptions(inputValue)}

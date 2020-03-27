@@ -9,6 +9,13 @@ import { deepMerge } from '@deskpro/js-utils/dist/objects';
 import classNames from 'classnames';
 import Field from '../Field';
 
+export const DropdownIndicator = ({ closeMenu, ...props }) => (
+  <components.DropdownIndicator {...props}>
+    <span className="dp-react-select__dropdown-indicator" onClick={closeMenu} />
+  </components.DropdownIndicator>
+);
+
+DropdownIndicator.propTypes = components.DropdownIndicator.propTypes;
 
 export const SelectContainer = ({ children, ...props }) => (
   <components.SelectContainer
@@ -110,6 +117,7 @@ export class DropDownInput extends React.Component {
     super(props);
 
     this.i18n = deepMerge(I18N, props.i18n);
+    this.select = React.createRef();
 
     this.state = {
       value:      null,
@@ -158,10 +166,14 @@ export class DropDownInput extends React.Component {
       value,
       menuIsOpen: false,
     });
-    this.select.blur();
+    this.select.current.select.blurInput();
     const newValue = value ? value.value : null;
     this.props.onChange(newValue);
     return true;
+  };
+
+  closeMenu = () => {
+    this.select.current.select.blurInput();
   };
 
   loadOptions = (inputValue) => {
@@ -184,12 +196,17 @@ export class DropDownInput extends React.Component {
     if (Array.isArray(dataSource.getOptions)) {
       return (
         <ReactSelect
-          ref={(c) => { this.select = c; }}
+          ref={this.select}
           value={options.find(o => o.value === value) || null}
           name={name}
           isClearable={isClearable}
           isSearchable={isSearchable}
-          components={{ SelectContainer, Option }}
+          components={{
+            SelectContainer,
+            Option,
+            DropdownIndicator: dropdownProps =>
+              <DropdownIndicator closeMenu={this.closeMenu} {...dropdownProps} />
+          }}
           menuIsOpen={this.state.menuIsOpen}
           options={this.state.options}
           closeMenuOnSelect={this.closeMenuOnSelect}
@@ -203,14 +220,19 @@ export class DropDownInput extends React.Component {
     }
     return (
       <AsyncSelect
-        ref={(c) => { this.select = c; }}
+        ref={this.select}
         value={this.state.value}
         name={name}
         isClearable={isClearable}
         isSearchable={isSearchable}
         defaultOptions
         cacheOptions
-        components={{ SelectContainer, Option }}
+        components={{
+          SelectContainer,
+          Option,
+          DropdownIndicator: dropdownProps =>
+            <DropdownIndicator closeMenu={this.closeMenu} {...dropdownProps} />
+        }}
         loadOptions={inputValue => this.loadOptions(inputValue)}
         classNamePrefix="react-select"
         {...props}
