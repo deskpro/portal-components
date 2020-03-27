@@ -129,7 +129,9 @@ class TicketField extends React.Component {
       case 'message':
         return <Textarea name="message" label={capitalize(this.renderLabel())} errorsName="message.message" />;
       case 'subject':
-        return field.get('is_hidden') ? <Hidden name="subject" /> : <Text name="subject" label={capitalize(this.renderLabel())} />;
+        return field.get('is_hidden') ?
+          <Hidden name="subject" />
+          : <Text name="subject" label={capitalize(this.renderLabel())} />;
       case 'email':
       case 'cc':
         return <Email name={field.get('field_id')} label={this.renderLabel()} />;
