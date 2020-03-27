@@ -25,7 +25,7 @@ SelectContainer.propTypes = components.SelectContainer.propTypes;
 
 const DropdownIndicator = ({ closeMenu, ...props }) => (
   <components.DropdownIndicator {...props}>
-    <span className="dp-react-select__dropdown-indicator" onClick={closeMenu} />
+    <span className="dp-react-select__dropdown-indicator" onClick={closeMenu} onKeyDown={() => true} />
   </components.DropdownIndicator>
 );
 

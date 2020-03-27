@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { List } from 'immutable';
+import { capitalize } from '@deskpro/js-utils/dist/strings';
 import FileUpload from './Inputs/FileUpload';
 import Text from './Inputs/Text';
 import Email from './Inputs/Email';
@@ -33,6 +34,15 @@ class TicketField extends React.Component {
     handleRemove() {},
   };
 
+  renderLabel = () => {
+    const { field } = this.props;
+    let label = field.getIn(['data', 'title']) || field.get('field_id');
+    if (field.get('required')) {
+      label = `${label} *`;
+    }
+    return label;
+  };
+
   renderCustomField = () => {
     const rec = opts => opts.map(option => ({
       value:    option.get('id'),
@@ -42,7 +52,7 @@ class TicketField extends React.Component {
     const { field, fileUploadUrl, csrfToken } = this.props;
     const name = field.get('field_id');
     const props = {
-      label:       field.getIn(['data', 'title'], name),
+      label:       this.renderLabel(),
       description: field.getIn(['data', 'description'], ''),
       name
     };
@@ -117,12 +127,12 @@ class TicketField extends React.Component {
     }
     switch (field.get('field_type')) {
       case 'message':
-        return <Textarea name="message" label="Message" errorsName="message.message" />;
+        return <Textarea name="message" label={capitalize(this.renderLabel())} errorsName="message.message" />;
       case 'subject':
-        return field.get('is_hidden') ? <Hidden name="subject" /> : <Text name="subject" label="Subject" />;
+        return field.get('is_hidden') ? <Hidden name="subject" /> : <Text name="subject" label={capitalize(this.renderLabel())} />;
       case 'email':
       case 'cc':
-        return <Email name={field.get('field_id')} label={field.getIn(['data', 'title']) || field.get('field_id')} />;
+        return <Email name={field.get('field_id')} label={this.renderLabel()} />;
       case 'hidden':
         return <Hidden name={field.get('field_id')} label={field.get('field_id')} />;
       case 'attachments':
@@ -141,7 +151,7 @@ class TicketField extends React.Component {
         return (
           <Text
             name={field.get('field_id')}
-            label={field.getIn(['data', 'title']) || field.get('field_id')}
+            label={this.renderLabel()}
           />
         );
     }

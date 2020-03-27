@@ -369,7 +369,7 @@ const ticketLayoutRaw = {
             on_editticket:      true,
             criteria:           null
           },
-          required: null,
+          required: true,
           data:     null
         },
         {
