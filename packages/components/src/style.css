@@ -367,6 +367,10 @@
         margin-top: 0;
         margin-bottom: 6px;
       }
+      & > [class$=-Input] {
+        margin-top: 0;
+        padding-top: 0;
+      }
     }
     & .react-select__multi-value__label {
       position: static;
@@ -565,8 +569,8 @@
       &::after {
         width: 6px;
         height: 6px;
-        top: 30%;
-        left: 30%;
+        top: 4px;
+        left: 4px;
         transition: .2s;
       }
     }

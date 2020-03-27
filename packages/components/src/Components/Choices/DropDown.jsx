@@ -9,15 +9,7 @@ import { deepMerge } from '@deskpro/js-utils/dist/objects';
 import classNames from 'classnames';
 import Field from '../Field';
 
-export const DropdownIndicator = ({ closeMenu, ...props }) => (
-  <components.DropdownIndicator {...props}>
-    <span className="dp-react-select__dropdown-indicator" onClick={closeMenu} />
-  </components.DropdownIndicator>
-);
-
-DropdownIndicator.propTypes = components.DropdownIndicator.propTypes;
-
-export const SelectContainer = ({ children, ...props }) => (
+const SelectContainer = ({ children, ...props }) => (
   <components.SelectContainer
     {...props}
     className={classNames(
@@ -30,6 +22,14 @@ export const SelectContainer = ({ children, ...props }) => (
 );
 
 SelectContainer.propTypes = components.SelectContainer.propTypes;
+
+const DropdownIndicator = ({ closeMenu, ...props }) => (
+  <components.DropdownIndicator {...props}>
+    <span className="dp-react-select__dropdown-indicator" onClick={closeMenu} />
+  </components.DropdownIndicator>
+);
+
+DropdownIndicator.propTypes = components.DropdownIndicator.propTypes;
 
 const Option = (props) => {
   const {
@@ -295,4 +295,8 @@ DropDown.defaultProps = {
   onFocus() {},
 };
 
+export {
+  SelectContainer,
+  DropdownIndicator
+};
 export default DropDown;
