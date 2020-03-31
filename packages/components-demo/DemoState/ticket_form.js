@@ -174,21 +174,7 @@ const ticketLayoutRaw = {
           field_type: 'ticket_field',
           field_id:   'ticket_field_7',
           options:    {
-            criteria: {
-              version: 1,
-              mode:    'all',
-              terms:   [
-                {
-                  type:    'CheckProduct',
-                  op:      'is',
-                  options: {
-                    product_ids: [
-                      '1'
-                    ]
-                  }
-                }
-              ]
-            },
+            criteria:           null,
             on_newticket:       true,
             on_viewticket:      true,
             on_viewticket_mode: 'always',
@@ -326,7 +312,25 @@ const ticketLayoutRaw = {
           field_type: 'ticket_field',
           field_id:   'ticket_field_34',
           options:    {
-            criteria:           null,
+            criteria: {
+              version: 1,
+              mode:    'all',
+              terms:   [
+                {
+                  type:    'CheckTicketField11',
+                  op:      'between',
+                  options: {
+                    date1_relative:      1,
+                    date1_relative_type: 'weeks',
+                    date2_relative:      1,
+                    date2_relative_type: 'days',
+                    type_name:           'date',
+                    value:               'date',
+                    field_id:            '11'
+                  }
+                }
+              ]
+            },
             on_newticket:       true,
             on_viewticket:      true,
             on_viewticket_mode: 'always',

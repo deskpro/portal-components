@@ -6,6 +6,7 @@ import { List } from 'immutable';
 import { Formik } from 'formik';
 import DropZone from 'react-dropzone';
 import * as Yup from 'yup';
+import { capitalize } from '@deskpro/js-utils/dist/strings';
 import Form from './Form';
 import Submit from './Submit';
 import TicketField from './TicketField';
@@ -215,6 +216,14 @@ class TicketForm extends React.Component {
     });
   };
 
+  renderLabel = (field) => {
+    let label = field.getIn(['data', 'title']) || field.get('field_id');
+    if (field.get('required')) {
+      label = `${label} *`;
+    }
+    return capitalize(label);
+  };
+
   renderFields = (form, setFieldValue = () => {}, fileInputProps = {}) => {
     const {
       departments, categories, priorities, products, fileUploadUrl, csrfToken
@@ -250,7 +259,8 @@ class TicketForm extends React.Component {
             return (
               <DropDown
                 name="category"
-                label="Category"
+                key="category"
+                label={this.renderLabel(field)}
                 dataSource={{
                   getOptions: categories
                     .sort((a, b) => {
@@ -277,7 +287,7 @@ class TicketForm extends React.Component {
                         value: c.get('id'),
                       }))
                   }}
-                isClearable={false}
+                isClearable={!field.get('required')}
                 isSearchable={false}
               />
             );
@@ -285,7 +295,8 @@ class TicketForm extends React.Component {
             return (
               <DropDown
                 name="priority"
-                label="Priority"
+                key="priority"
+                label={this.renderLabel(field)}
                 dataSource={{
                   getOptions: priorities
                     .sort((a, b) => {
@@ -304,7 +315,7 @@ class TicketForm extends React.Component {
                         value: p.get('id'),
                       }))
                    }}
-                isClearable={false}
+                isClearable={!field.get('required')}
                 isSearchable={false}
               />
             );
@@ -312,7 +323,8 @@ class TicketForm extends React.Component {
             return (
               <DropDown
                 name="product"
-                label="Product"
+                key="product"
+                label={this.renderLabel(field)}
                 dataSource={{
                   getOptions: products
                     .sort((a, b) => {
@@ -339,7 +351,7 @@ class TicketForm extends React.Component {
                         value: p.get('id'),
                       }))
                   }}
-                isClearable={false}
+                isClearable={!field.get('required')}
                 isSearchable={false}
               />
             );
