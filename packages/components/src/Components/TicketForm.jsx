@@ -13,7 +13,9 @@ import Hidden from './Inputs/Hidden';
 import Person from './Inputs/Person';
 import TicketDepartment from './TicketDepartment';
 import DropArea from './DropArea';
+import DropDown from './Choices/DropDown';
 import AJAXSubmit from '../utils/AJAXSubmit';
+import DynamicForm from '../utils/DynamicForm';
 
 const invalidDate = new Date('');
 function parseDateFromFormats(formats, parseStrict) {
@@ -32,6 +34,9 @@ class TicketForm extends React.Component {
   static propTypes = {
     deskproLayout:      PropTypes.object.isRequired,
     departments:        PropTypes.object.isRequired,
+    products:           PropTypes.object,
+    categories:         PropTypes.object,
+    priorities:         PropTypes.object,
     departmentPropName: PropTypes.string,
     onSubmit:           PropTypes.func.isRequired,
     department:         PropTypes.number,
@@ -45,6 +50,9 @@ class TicketForm extends React.Component {
   static defaultProps = {
     errors:             {},
     initialValues:      {},
+    products:           new List(),
+    categories:         new List(),
+    priorities:         new List(),
     department:         null,
     showHover:          true,
     departmentPropName: 'department'
@@ -207,10 +215,13 @@ class TicketForm extends React.Component {
     });
   };
 
-  renderFields = (setFieldValue = () => {}, fileInputProps = {}) => {
-    const { departments, fileUploadUrl, csrfToken } = this.props;
+  renderFields = (form, setFieldValue = () => {}, fileInputProps = {}) => {
+    const {
+      departments, categories, priorities, products, fileUploadUrl, csrfToken
+    } = this.props;
     return this.getLayout()
       .get('fields', [])
+      .filter(field => DynamicForm.filterField(field, form))
       .map((field) => {
         switch (field.get('field_type')) {
           case 'department':
@@ -233,6 +244,103 @@ class TicketForm extends React.Component {
                     }))
                 }
                 handleChange={this.handleDepartmentChange}
+              />
+            );
+          case 'category':
+            return (
+              <DropDown
+                name="category"
+                label="Category"
+                dataSource={{
+                  getOptions: categories
+                    .sort((a, b) => {
+                      if (a.get('display_order') < b.get('display_order')) {
+                        return -1;
+                      }
+                      if (a.get('display_order') > b.get('display_order')) {
+                        return 1;
+                      }
+                      if (a.get('display_order') === b.get('display_order')) {
+                        if (a.get('id') < b.get('id')) {
+                          return -1;
+                        }
+                        if (a.get('id') > b.get('id')) {
+                          return 1;
+                        }
+                      }
+                      return 0;
+                    })
+                    .toArray()
+                    .map(c => (
+                      {
+                        label: c.get('title'),
+                        value: c.get('id'),
+                      }))
+                  }}
+                isClearable={false}
+                isSearchable={false}
+              />
+            );
+          case 'priority':
+            return (
+              <DropDown
+                name="priority"
+                label="Priority"
+                dataSource={{
+                  getOptions: priorities
+                    .sort((a, b) => {
+                      if (a.get('priority') < b.get('priority')) {
+                        return -1;
+                      }
+                      if (a.get('priority') > b.get('priority')) {
+                        return 1;
+                      }
+                      return 0;
+                    })
+                    .toArray()
+                    .map(p => (
+                      {
+                        label: p.get('title'),
+                        value: p.get('id'),
+                      }))
+                   }}
+                isClearable={false}
+                isSearchable={false}
+              />
+            );
+          case 'product':
+            return (
+              <DropDown
+                name="product"
+                label="Product"
+                dataSource={{
+                  getOptions: products
+                    .sort((a, b) => {
+                      if (a.get('display_order') < b.get('display_order')) {
+                        return -1;
+                      }
+                      if (a.get('display_order') > b.get('display_order')) {
+                        return 1;
+                      }
+                      if (a.get('display_order') === b.get('display_order')) {
+                        if (a.get('id') < b.get('id')) {
+                          return -1;
+                        }
+                        if (a.get('id') > b.get('id')) {
+                          return 1;
+                        }
+                      }
+                      return 0;
+                    })
+                    .toArray()
+                    .map(p => (
+                      {
+                        label: p.get('title'),
+                        value: p.get('id'),
+                      }))
+                  }}
+                isClearable={false}
+                isSearchable={false}
               />
             );
           case 'person':
@@ -290,7 +398,7 @@ class TicketForm extends React.Component {
                       isDragActive={isDragActive}
                       progress={this.state.progress}
                     />
-                    {this.renderFields(props.handleChange, getInputProps())}
+                    {this.renderFields(props, props.handleChange, getInputProps())}
                     <Submit>Submit</Submit>
                   </div>
                 )}
@@ -307,9 +415,9 @@ class TicketForm extends React.Component {
         initialValues={this.getInitialValues()}
         onSubmit={this.props.onSubmit}
       >
-        {() => (
+        {props => (
           <Form noValidate showHover={showHover}>
-            {this.renderFields()}
+            {this.renderFields(props)}
             <Submit>Submit</Submit>
           </Form>
         )}

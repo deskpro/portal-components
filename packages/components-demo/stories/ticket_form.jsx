@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean } from '@storybook/addon-knobs/react';
 import { action } from '@storybook/addon-actions';
 import { TicketForm } from '@deskpro/portal-components';
-import { ticketLayout, departments } from '../DemoState/ticket_form';
+import { ticketLayout, departments, categories, priorities, products } from '../DemoState/ticket_form';
 
 function setCookie(name, value, days, domain) {
   let expires = '';
@@ -24,7 +24,10 @@ storiesOf('TicketForm', module)
       showHover={boolean('Show hover', false)}
       deskproLayout={ticketLayout}
       departments={departments}
-      department={7}
+      categories={categories}
+      priorities={priorities}
+      products={products}
+      department={5}
       onSubmit={action('submit')}
       fileUploadUrl="http://deskpro5.local/en/dpblob"
       csrfToken="123456"

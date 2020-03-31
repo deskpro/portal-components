@@ -35,9 +35,9 @@ export default [
         label:        'Widget Description',
         type:         'textarea',
         defaultValue:
-          'Assumenda alias vel recusandae in. Eaque eum excepturi quos nam nam. ' +
-          'Similique consequuntur ea suscipit et vero at odit. ' +
-          'Asperiores voluptatem illo reprehenderit enim delectus dolorum iure.'
+          'Assumenda alias vel recusandae in. Eaque eum excepturi quos nam nam. '
+          + 'Similique consequuntur ea suscipit et vero at odit. '
+          + 'Asperiores voluptatem illo reprehenderit enim delectus dolorum iure.'
       },
       {
         name:         'ticket_field_7',
