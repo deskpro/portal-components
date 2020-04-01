@@ -7,6 +7,7 @@ import { Formik } from 'formik';
 import DropZone from 'react-dropzone';
 import * as Yup from 'yup';
 import { capitalize } from '@deskpro/js-utils/dist/strings';
+import { deepMerge } from '@deskpro/js-utils/dist/objects';
 import Form from './Form';
 import Submit from './Submit';
 import TicketField from './TicketField';
@@ -31,6 +32,23 @@ function parseDateFromFormats(formats, parseStrict) {
 
 Yup.addMethod(Yup.date, 'format', parseDateFromFormats);
 
+const I18N = {
+  name:        'Name',
+  email:       'Email',
+  department:  'Department',
+  message:     'Message',
+  product:     'Product',
+  priority:    'Priority',
+  category:    'Category',
+  submit:      'Submit',
+  dragNDrop:   'Drag and drop',
+  or:          'or',
+  chooseAFile: 'Choose a file',
+  chooseFiles: 'Choose files',
+  select:      'Select',
+  back:        'Back',
+};
+
 class TicketForm extends React.Component {
   static propTypes = {
     deskproLayout:      PropTypes.object.isRequired,
@@ -46,6 +64,8 @@ class TicketForm extends React.Component {
     showHover:          PropTypes.bool,
     errors:             PropTypes.object,
     initialValues:      PropTypes.object,
+    languageId:         PropTypes.number,
+    i18n:               PropTypes.object,
   };
 
   static defaultProps = {
@@ -56,12 +76,17 @@ class TicketForm extends React.Component {
     priorities:         new List(),
     department:         null,
     showHover:          true,
-    departmentPropName: 'department'
+    departmentPropName: 'department',
+    languageId:         0,
+    i18n:               {},
   };
 
   constructor(props) {
     super(props);
     this.formik = React.createRef();
+
+    this.i18n = deepMerge(I18N, props.i18n);
+
     this.state = {
       [props.departmentPropName]: props.department,
       files:                      [],
@@ -218,6 +243,9 @@ class TicketForm extends React.Component {
 
   renderLabel = (field) => {
     let label = field.getIn(['data', 'title']) || field.get('field_id');
+    if (this.i18n[field.get('field_id')] && !field.getIn(['data', 'title'])) {
+      label = this.i18n[field.get('field_id')];
+    }
     if (field.get('required')) {
       label = `${label} *`;
     }
@@ -226,7 +254,7 @@ class TicketForm extends React.Component {
 
   renderFields = (form, setFieldValue = () => {}, fileInputProps = {}) => {
     const {
-      departments, categories, priorities, products, fileUploadUrl, csrfToken
+      departments, categories, priorities, products, fileUploadUrl, csrfToken, languageId
     } = this.props;
     return this.getLayout()
       .get('fields', [])
@@ -241,6 +269,7 @@ class TicketForm extends React.Component {
               /> : <TicketDepartment
                 key="department"
                 name={this.props.departmentPropName}
+                i18n={this.i18n}
                 departments={departments
                   .toArray()
                   .map(d => (
@@ -261,6 +290,7 @@ class TicketForm extends React.Component {
                 name="category"
                 key="category"
                 label={this.renderLabel(field)}
+                i18n={this.i18n}
                 dataSource={{
                   getOptions: categories
                     .sort((a, b) => {
@@ -297,6 +327,7 @@ class TicketForm extends React.Component {
                 name="priority"
                 key="priority"
                 label={this.renderLabel(field)}
+                i18n={this.i18n}
                 dataSource={{
                   getOptions: priorities
                     .sort((a, b) => {
@@ -325,6 +356,7 @@ class TicketForm extends React.Component {
                 name="product"
                 key="product"
                 label={this.renderLabel(field)}
+                i18n={this.i18n}
                 dataSource={{
                   getOptions: products
                     .sort((a, b) => {
@@ -362,6 +394,7 @@ class TicketForm extends React.Component {
               key="person"
               namePlaceholder="John Doe"
               emailPlaceholder="john.doe@company.com"
+              i18n={this.i18n}
             />);
           default:
             return (
@@ -372,7 +405,9 @@ class TicketForm extends React.Component {
                 csrfToken={csrfToken}
                 fileInputProps={fileInputProps}
                 files={this.state.files}
+                languageId={languageId}
                 handleRemove={file => this.handleRemove(setFieldValue, file)}
+                i18n={this.i18n}
               />
             );
         }
@@ -411,7 +446,7 @@ class TicketForm extends React.Component {
                       progress={this.state.progress}
                     />
                     {this.renderFields(props, props.handleChange, getInputProps())}
-                    <Submit>Submit</Submit>
+                    <Submit>{this.i18n.submit}</Submit>
                   </div>
                 )}
               </DropZone>
@@ -430,7 +465,7 @@ class TicketForm extends React.Component {
         {props => (
           <Form noValidate showHover={showHover}>
             {this.renderFields(props)}
-            <Submit>Submit</Submit>
+            <Submit>{this.i18n.submit}</Submit>
           </Form>
         )}
       </Formik>

@@ -94,7 +94,8 @@ const Option = (props) => {
 Option.propTypes = components.Option.propTypes;
 
 const I18N = {
-  back: 'Back',
+  back:   'Back',
+  select: 'Select',
 };
 
 export class DropDownInput extends React.Component {
@@ -211,6 +212,7 @@ export class DropDownInput extends React.Component {
           options={this.state.options}
           closeMenuOnSelect={this.closeMenuOnSelect}
           classNamePrefix="react-select"
+          placeholder={`${this.i18n.select}...`}
           {...props}
           onFocus={this.onFocus}
           onBlur={this.onBlur}

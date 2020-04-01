@@ -97,8 +97,8 @@ const ticketLayoutRaw = {
               },
               6: {
                 language:    6,
-                title:       'Widget Type',
-                description: 'A custom  field'
+                title:       'Type de widget',
+                description: 'Un champ personalis\u00e9'
               }
             },
             aliases: []
@@ -162,7 +162,7 @@ const ticketLayoutRaw = {
               },
               6: {
                 language:    6,
-                title:       'Widget Description',
+                title:       'Description de Widget',
                 description: 'A custom  field'
               }
             },
@@ -242,7 +242,7 @@ const ticketLayoutRaw = {
               },
               6: {
                 language:    6,
-                title:       'Desired Sizes',
+                title:       'Taille d\u00e9sir\u00e9e',
                 description: 'A custom  field'
               }
             },
@@ -300,7 +300,7 @@ const ticketLayoutRaw = {
               },
               6: {
                 language:    6,
-                title:       'Manufacture Date',
+                title:       'Date de fabrication',
                 description: 'A custom  field'
               }
             },
@@ -380,8 +380,8 @@ const ticketLayoutRaw = {
               },
               6: {
                 language:    6,
-                title:       'Item Serial Number',
-                description: 'Item Serial Number'
+                title:       'Num\u00e9ro de s\u00e9rie',
+                description: 'Num\u00e9ro de s\u00e9rie'
               }
             },
             aliases: [
@@ -474,7 +474,7 @@ const ticketLayoutRaw = {
               },
               6: {
                 language:    6,
-                title:       'Type of enquiry',
+                title:       'Type de demande',
                 description: ''
               }
             },
@@ -670,7 +670,7 @@ const ticketLayoutRaw = {
               },
               6: {
                 language:    6,
-                title:       'Reason for Complaint',
+                title:       'Raison de la plainte',
                 description: 'A custom  field'
               }
             },
@@ -816,8 +816,8 @@ const ticketLayoutRaw = {
               },
               6: {
                 language:    6,
-                title:       'Item Serial Number',
-                description: 'Item Serial Number'
+                title:       'Num\u00e9ro de s\u00e9rie',
+                description: 'Num\u00e9ro de s\u00e9rie'
               }
             },
             aliases: [
@@ -896,7 +896,7 @@ const ticketLayoutRaw = {
               },
               6: {
                 language:    6,
-                title:       'Type of enquiry',
+                title:       'Type de demande',
                 description: ''
               }
             },
@@ -1092,7 +1092,7 @@ const ticketLayoutRaw = {
               },
               6: {
                 language:    6,
-                title:       'Reason for Complaint',
+                title:       'Raison de la plainte',
                 description: 'A custom  field'
               }
             },
@@ -1238,8 +1238,8 @@ const ticketLayoutRaw = {
               },
               6: {
                 language:    6,
-                title:       'Item Serial Number',
-                description: 'Item Serial Number'
+                title:       'Num\u00e9ro de s\u00e9rie',
+                description: 'Num\u00e9ro de s\u00e9rie'
               }
             },
             aliases: [
@@ -1318,7 +1318,7 @@ const ticketLayoutRaw = {
               },
               6: {
                 language:    6,
-                title:       'Type of enquiry',
+                title:       'Type de demande',
                 description: ''
               }
             },
@@ -1645,8 +1645,8 @@ const ticketLayoutRaw = {
               },
               6: {
                 language:    6,
-                title:       'Item Serial Number',
-                description: 'Item Serial Number'
+                title:       'Num\u00e9ro de s\u00e9rie',
+                description: 'Num\u00e9ro de s\u00e9rie'
               }
             },
             aliases: [
@@ -1725,7 +1725,7 @@ const ticketLayoutRaw = {
               },
               6: {
                 language:    6,
-                title:       'Type of enquiry',
+                title:       'Type de demande',
                 description: ''
               }
             },
@@ -1906,7 +1906,7 @@ const ticketLayoutRaw = {
               },
               6: {
                 language:    6,
-                title:       'Type of enquiry',
+                title:       'Type de demande',
                 description: ''
               }
             },
@@ -1984,8 +1984,8 @@ const ticketLayoutRaw = {
               },
               6: {
                 language:    6,
-                title:       'Item Serial Number',
-                description: 'Item Serial Number'
+                title:       'Num\u00e9ro de s\u00e9rie',
+                description: 'Num\u00e9ro de s\u00e9rie'
               }
             },
             aliases: [

@@ -26,6 +26,7 @@ class TicketField extends React.Component {
     fileInputProps: PropTypes.object,
     files:          PropTypes.array,
     handleRemove:   PropTypes.func,
+    languageId:     PropTypes.number.isRequired,
   };
 
   static defaultProps = {
@@ -35,12 +36,32 @@ class TicketField extends React.Component {
   };
 
   renderLabel = () => {
-    const { field } = this.props;
-    let label = field.getIn(['data', 'title']) || field.get('field_id');
+    const { field, languageId } = this.props;
+    let label;
+    label = field.getIn(['data', 'title']) || field.get('field_id');
+    if (languageId) {
+      const translations = field.getIn(['data', 'translations']);
+      if (translations) {
+        label = field.getIn(['data', 'translations', languageId.toString(), 'title'], label);
+      }
+    }
     if (field.get('required')) {
       label = `${label} *`;
     }
     return label;
+  };
+
+  renderDescription = () => {
+    const { field, languageId } = this.props;
+    let description;
+    description = field.getIn(['data', 'description'], '');
+    if (languageId) {
+      const translations = field.getIn(['data', 'translations']);
+      if (translations) {
+        description = field.getIn(['data', 'translations', languageId.toString(), 'description'], description);
+      }
+    }
+    return description;
   };
 
   renderCustomField = () => {
@@ -49,11 +70,13 @@ class TicketField extends React.Component {
       label:    option.get('title'),
       children: rec(option.get('children', new List()).toArray())
     }));
-    const { field, fileUploadUrl, csrfToken } = this.props;
+    const {
+      field, fileUploadUrl, csrfToken, i18n
+    } = this.props;
     const name = field.get('field_id');
     const props = {
       label:       this.renderLabel(),
-      description: field.getIn(['data', 'description'], ''),
+      description: this.renderDescription(),
       name
     };
     let Component = Text;
@@ -82,6 +105,7 @@ class TicketField extends React.Component {
         props.dataSource = {};
         props.isClearable = false;
         props.isSearchable = false;
+        props.i18n = i18n;
         props.dataSource.getOptions = rec(field.getIn(['data', 'choices'], new List()).toArray());
         break;
       case 'radio':
@@ -93,6 +117,7 @@ class TicketField extends React.Component {
         Component = FileUpload;
         props.url = fileUploadUrl;
         props.csrfToken = csrfToken;
+        props.i18n = i18n;
         break;
       case 'textarea':
         Component = Textarea;
@@ -101,6 +126,7 @@ class TicketField extends React.Component {
         Component = MultipleDropDown;
         props.fClassName = 'dp-pc_multi-select';
         props.dataSource = {};
+        props.i18n = i18n;
         props.dataSource.getOptions = rec(field.getIn(['data', 'choices'], new List()).toArray());
         break;
       case 'display':
@@ -120,7 +146,8 @@ class TicketField extends React.Component {
       csrfToken,
       fileInputProps,
       files,
-      handleRemove
+      handleRemove,
+      i18n,
     } = this.props;
     if (field.get('field_type').match(/^ticket_field/) || field.get('field_type').match(/^chat_field/)) {
       return this.renderCustomField();
@@ -147,6 +174,7 @@ class TicketField extends React.Component {
             inputProps={fileInputProps}
             files={files}
             handleRemove={handleRemove}
+            i18n={i18n}
           />
         );
       default:
