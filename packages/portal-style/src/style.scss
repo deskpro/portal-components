@@ -46,6 +46,7 @@
   /**************************
   ******* MODULES ********
   **************************/
+  @import "modules/accessibility";
   @import "modules/account-email";
   @import "modules/account-sidebar";
   @import "modules/anchors";
@@ -142,4 +143,9 @@ body {
   &.mobile-modal-open {
     overflow: hidden;
   }
+}
+h1.aria-hide {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
 }
