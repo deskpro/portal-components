@@ -7,3 +7,46 @@
     color: $grey-darkest;
   }
 }
+.dp-po-ticket-create-suggestions {
+  $self: '.dp-po-ticket-create-suggestions';
+
+  padding: 15px;
+  border-radius: 4px;
+  &-title {
+    font-size: 18px;
+    color: #8b9293;;
+  }
+  &-image {
+    margin-right: 10px;
+  }
+  header {
+    border-bottom: 1px solid $grey-lighter;
+    margin: 0 -15px;
+    padding: 0 15px 15px;
+  }
+  &-list {
+    list-style: none;
+    padding-inline-start: 0;
+    line-height: 150%;
+    padding: 15px 5px 0;
+  }
+  &-link:hover {
+    text-decoration: none;
+    #{$self}-text {
+      text-decoration: underline;
+    }
+  }
+  &-text {
+    color: $text-color;
+    margin-left: 5px;
+  }
+  &-more {
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+    a {
+      margin-left: auto;;
+      font-size: 14px;
+    }
+  }
+}
