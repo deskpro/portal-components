@@ -27,7 +27,7 @@ storiesOf('TicketForm', module)
       categories={categories}
       priorities={priorities}
       products={products}
-      department={5}
+      department={null}
       onSubmit={action('submit')}
       fileUploadUrl="http://deskpro5.local/en/dpblob"
       csrfToken="123456"
