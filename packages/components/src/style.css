@@ -382,6 +382,10 @@
       font-size: 18px;
       padding: 0 5px;
     }
+    & .react-select__indicators {
+      align-self: flex-start;
+      margin-top: 12px;
+    }
     & .react-select__input > input {
       margin-top: 0;
     }
