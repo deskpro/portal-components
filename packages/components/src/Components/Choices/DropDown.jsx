@@ -48,7 +48,7 @@ const Option = (props) => {
     return (
       <div
         ref={innerRef}
-        style={getStyles('option', props)}
+        css={getStyles('option', props)}
         className={cx(
           {
             option:                true,
@@ -69,7 +69,7 @@ const Option = (props) => {
     return (
       <div
         ref={innerRef}
-        style={getStyles('option', props)}
+        css={getStyles('option', props)}
         className={cx(
           {
             option:                true,
