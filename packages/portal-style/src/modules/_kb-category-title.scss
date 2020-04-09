@@ -1,5 +1,5 @@
 .dp-po-category-title {
-  .dp-po-icon {
+  &-icon {
     background: $grey-lightest;
     width: 58px;
     height: 58px;
@@ -9,9 +9,12 @@
     justify-content: center;
     display: flex;
     margin: 0 20px 0 0;
-    img {
-      max-width: 26px;
-      max-height: 26px;
+    .dp-po-icon {
+
+      img {
+        max-width: 26px;
+        max-height: 26px;
+      }
     }
   }
 

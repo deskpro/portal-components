@@ -30,7 +30,7 @@
       font-size: 22px;
       line-height: 0;
 
-      .fa-check {
+      &.fa-check {
         position: absolute;
         right: 10px;
         top: 9px;
@@ -44,14 +44,14 @@
       color: $white;
       border-color: $brand-primary;
 
-      .dp-po-icon {
-        .fa-check {
+      svg.dp-po-icon {
+        &.fa-check {
           display: block;
           color: $white;
         }
 
-        svg .fa-primary,
-        svg .fa-secondary {
+        .fa-primary,
+        .fa-secondary {
           fill: $white;
         }
       }
@@ -62,8 +62,8 @@
     border-color: $grey-dark;
     color: $grey-dark;
 
-    .dp-po-icon {
-      .fa-check {
+    svg.dp-po-icon {
+      &.fa-check {
         display: block;
         color: $success;
       }
@@ -74,14 +74,14 @@
       color: $white;
       border-color: $brand-primary;
 
-      .dp-po-icon {
-        .fa-check {
+      svg.dp-po-icon {
+        &.fa-check {
           display: block;
           color: $white;
         }
 
-        svg .fa-primary,
-        svg .fa-secondary {
+        .fa-primary,
+        .fa-secondary {
           fill: $white;
         }
       }
@@ -94,16 +94,16 @@
       color: $white;
       border-color: $brand-primary;
 
-      .dp-po-icon {
+      svg.dp-po-icon {
         color: $white;
 
-        .fa-check {
+        &.fa-check {
           display: block;
           color: $white;
         }
 
-        svg .fa-primary,
-        svg .fa-secondary {
+        .fa-primary,
+        .fa-secondary {
           fill: $white;
         }
       }
@@ -124,7 +124,7 @@
       margin: 0 10px 0 0;
       color: $grey-dark;
 
-      .fa-check {
+      &.fa-check {
         position: absolute;
         right: 0;
         top: 0;
@@ -140,7 +140,7 @@
       .dp-po-icon {
         color: $brand-primary;
 
-        .fa-check {
+        &.fa-check {
           display: block;
           color: $success;
         }
@@ -179,22 +179,15 @@
       padding: 8px 50px 8px 20px;
       border: 1px solid $brand-primary;
 
-      .dp-po-icon {
-        font-size: $s23;
-
-        .fa-check {
-          right: 20px;
-          display: none;
-          font-size: 24px;
-        }
+      .dp-po-icon.fa-check {
+        display: none;
+        font-size: 24px;
       }
 
       &:hover {
-        .dp-po-icon {
-          .fa-check {
-            display: block;
-            color: $white;
-          }
+        .dp-po-icon.fa-check {
+          display: block;
+          color: $white;
         }
       }
     }
@@ -203,14 +196,14 @@
       border-color: $grey-dark;
       color: $grey-dark;
 
-      .dp-po-icon {
-        .fa-check {
+      svg.dp-po-icon {
+        &.fa-check {
           display: block;
           color: $success;
         }
 
-        svg .fa-primary,
-        svg .fa-secondary {
+        .fa-primary,
+        .fa-secondary {
           fill: $grey-dark;
         }
       }
@@ -220,14 +213,14 @@
         color: $white;
         border-color: $brand-primary;
 
-        .dp-po-icon {
-          .fa-check {
+        svg.dp-po-icon {
+          &.fa-check {
             display: block;
             color: $white;
           }
 
-          svg .fa-primary,
-          svg .fa-secondary {
+          .fa-primary,
+          .fa-secondary {
             fill: $white;
           }
         }

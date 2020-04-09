@@ -1,88 +1,64 @@
 .dp-po-icon {
   $self: '.dp-po-icon';
 
-  &.fa-secondary,
-  &.fa-primary {
+  .fa-secondary,
+  .fa-primary {
     fill: $brand-primary;
   }
 
   &#{$self}-white {
-    svg {
-
-      .fa-secondary,
-      .fa-primary {
-        fill: $white;
-      }
+    .fa-secondary,
+    .fa-primary {
+      fill: $white;
     }
   }
 
   &#{$self}-danger {
-    svg {
-
-      .fa-secondary,
-      .fa-primary {
-        fill: $danger;
-      }
+    .fa-secondary,
+    .fa-primary {
+      fill: $danger;
     }
   }
 
   &#{$self}-purple {
-    svg {
-
-      .fa-secondary,
-      .fa-primary {
-        fill: $purple;
-      }
+    .fa-secondary,
+    .fa-primary {
+      fill: $purple;
     }
   }
 
   &#{$self}-neutral {
-    svg {
-
-      .fa-secondary,
-      .fa-primary {
-        fill: $neutral;
-      }
+    .fa-secondary,
+    .fa-primary {
+      fill: $neutral;
     }
   }
 
   &#{$self}-warning {
-    svg {
-
-      .fa-secondary,
-      .fa-primary {
-        fill: $warning;
-      }
+    .fa-secondary,
+    .fa-primary {
+      fill: $warning;
     }
   }
 
   &#{$self}-success {
-    svg {
-
-      .fa-secondary,
-      .fa-primary {
-        fill: $success;
-      }
+    .fa-secondary,
+    .fa-primary {
+      fill: $success;
     }
   }
 
   &#{$self}-info {
-    svg {
-
-      .fa-secondary,
-      .fa-primary {
-        fill: $info;
-      }
+    .fa-secondary,
+    .fa-primary {
+      fill: $info;
     }
   }
 
   &#{$self}-pink {
-    svg {
-
-      .fa-secondary,
-      .fa-primary {
-        fill: $pink;
-      }
+    .fa-secondary,
+    .fa-primary {
+      fill: $pink;
     }
   }
 }
