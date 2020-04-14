@@ -9,8 +9,8 @@ const ticketLayoutRaw = {
           version:    1,
           field_type: 'person',
           field_id:   'person',
+          required:   true,
           options:    {
-            required:           true,
             criteria:           null,
             on_newticket:       true,
             on_viewticket:      true,
@@ -22,8 +22,8 @@ const ticketLayoutRaw = {
           version:    1,
           field_type: 'department',
           field_id:   'department',
+          required:   true,
           options:    {
-            required:           true,
             criteria:           null,
             on_newticket:       true,
             on_viewticket:      true,
@@ -36,8 +36,8 @@ const ticketLayoutRaw = {
           version:    1,
           field_type: 'subject',
           field_id:   'subject',
+          required:   true,
           options:    {
-            required:           true,
             criteria:           null,
             on_newticket:       true,
             on_viewticket:      true,
@@ -524,8 +524,8 @@ const ticketLayoutRaw = {
           version:    1,
           field_type: 'message',
           field_id:   'message',
+          required:   true,
           options:    {
-            required:           true,
             criteria:           null,
             on_newticket:       true,
             on_viewticket:      true,
@@ -554,8 +554,8 @@ const ticketLayoutRaw = {
           version:    1,
           field_type: 'person',
           field_id:   'person',
+          required:   true,
           options:    {
-            required:           true,
             criteria:           null,
             on_newticket:       true,
             on_viewticket:      true,
@@ -567,8 +567,8 @@ const ticketLayoutRaw = {
           version:    1,
           field_type: 'department',
           field_id:   'department',
+          required:   true,
           options:    {
-            required:           true,
             criteria:           null,
             on_newticket:       true,
             on_viewticket:      true,
@@ -581,8 +581,8 @@ const ticketLayoutRaw = {
           version:    1,
           field_type: 'subject',
           field_id:   'subject',
+          required:   true,
           options:    {
-            required:           true,
             criteria:           null,
             on_newticket:       true,
             on_viewticket:      true,
@@ -950,8 +950,8 @@ const ticketLayoutRaw = {
           version:    1,
           field_type: 'message',
           field_id:   'message',
+          required:   true,
           options:    {
-            required:           true,
             criteria:           null,
             on_newticket:       true,
             on_viewticket:      true,
@@ -980,8 +980,8 @@ const ticketLayoutRaw = {
           version:    1,
           field_type: 'person',
           field_id:   'person',
+          required:   true,
           options:    {
-            required:           true,
             criteria:           null,
             on_newticket:       true,
             on_viewticket:      true,
@@ -993,8 +993,8 @@ const ticketLayoutRaw = {
           version:    1,
           field_type: 'department',
           field_id:   'department',
+          required:   true,
           options:    {
-            required:           true,
             criteria:           null,
             on_newticket:       true,
             on_viewticket:      true,
@@ -1007,8 +1007,8 @@ const ticketLayoutRaw = {
           version:    1,
           field_type: 'subject',
           field_id:   'subject',
+          required:   true,
           options:    {
-            required:           true,
             criteria:           null,
             on_newticket:       true,
             on_viewticket:      true,
@@ -1376,8 +1376,8 @@ const ticketLayoutRaw = {
           version:    1,
           field_type: 'message',
           field_id:   'message',
+          required:   true,
           options:    {
-            required:           true,
             criteria:           null,
             on_newticket:       true,
             on_viewticket:      true,
@@ -1406,8 +1406,8 @@ const ticketLayoutRaw = {
           version:    1,
           field_type: 'person',
           field_id:   'person',
+          required:   true,
           options:    {
-            required:           true,
             criteria:           null,
             on_newticket:       true,
             on_viewticket:      true,
@@ -1419,8 +1419,8 @@ const ticketLayoutRaw = {
           version:    1,
           field_type: 'department',
           field_id:   'department',
+          required:   true,
           options:    {
-            required:           true,
             criteria:           null,
             on_newticket:       true,
             on_viewticket:      true,
@@ -1433,8 +1433,8 @@ const ticketLayoutRaw = {
           version:    1,
           field_type: 'subject',
           field_id:   'subject',
+          required:   true,
           options:    {
-            required:           true,
             criteria:           null,
             on_newticket:       true,
             on_viewticket:      true,
@@ -1787,8 +1787,8 @@ const ticketLayoutRaw = {
           version:    1,
           field_type: 'message',
           field_id:   'message',
+          required:   true,
           options:    {
-            required:           true,
             criteria:           null,
             on_newticket:       true,
             on_viewticket:      true,
@@ -1817,8 +1817,8 @@ const ticketLayoutRaw = {
           version:    1,
           field_type: 'person',
           field_id:   'person',
+          required:   true,
           options:    {
-            required:           true,
             criteria:           null,
             on_newticket:       true,
             on_viewticket:      true,
@@ -1830,8 +1830,8 @@ const ticketLayoutRaw = {
           version:    1,
           field_type: 'department',
           field_id:   'department',
+          required:   true,
           options:    {
-            required:           true,
             criteria:           null,
             on_newticket:       true,
             on_viewticket:      true,
@@ -1844,8 +1844,8 @@ const ticketLayoutRaw = {
           version:    1,
           field_type: 'subject',
           field_id:   'subject',
+          required:   true,
           options:    {
-            required:           true,
             criteria:           null,
             on_newticket:       true,
             on_viewticket:      true,
@@ -2052,8 +2052,8 @@ const ticketLayoutRaw = {
           version:    1,
           field_type: 'message',
           field_id:   'message',
+          required:   true,
           options:    {
-            required:           true,
             criteria:           null,
             on_newticket:       true,
             on_viewticket:      true,
