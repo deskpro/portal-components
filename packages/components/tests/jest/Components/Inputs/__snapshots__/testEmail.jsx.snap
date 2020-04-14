@@ -9,28 +9,21 @@ exports[`>>> Email --- Snapshot +++capturing Snapshot of Email 1`] = `
   <div
     className="dp-pc_field"
   >
-    <input
-      className="dp-pc_input"
-      description=""
-      id={null}
-      label=""
-      name="email"
-      onBlur={[Function]}
-      onChange={[Function]}
-      type="email"
-      value="test@deskpro.com"
-    />
-    <span
-      className="indicator"
-    />
     <label
       className="dp-pc_label"
       htmlFor="field_1"
     >
       
     </label>
-    <div
-      className="divider"
+    <input
+      className="dp-pc_input"
+      id="field_1"
+      name="email"
+      onBlur={[Function]}
+      onChange={[Function]}
+      required={false}
+      type="email"
+      value="test@deskpro.com"
     />
   </div>
 </form>

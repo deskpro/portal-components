@@ -7,17 +7,25 @@ exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="dp-pc_field dp-pc_empty"
+    className="dp-pc_field"
   >
+    <label
+      className="dp-pc_checkboxes_label"
+      htmlFor="field_1"
+    >
+      
+    </label>
     <div
       className="dp-pc_checkboxes"
       description=""
       id={null}
+      required={false}
     >
       <label
         className="dp-pc_checkboxes_checkbox"
         htmlFor="field_1-first"
         onBlur={[Function]}
+        onClick={[Function]}
         onFocus={[Function]}
         onKeyPress={[Function]}
         tabIndex="0"
@@ -30,7 +38,9 @@ exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes 1`] = `
           type="checkbox"
           value="first"
         />
-        <i />
+        <i
+          onClick={[Function]}
+        />
          
         <span
           className="label"
@@ -42,6 +52,7 @@ exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes 1`] = `
         className="dp-pc_checkboxes_checkbox"
         htmlFor="field_1-second"
         onBlur={[Function]}
+        onClick={[Function]}
         onFocus={[Function]}
         onKeyPress={[Function]}
         tabIndex="0"
@@ -54,7 +65,9 @@ exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes 1`] = `
           type="checkbox"
           value="second"
         />
-        <i />
+        <i
+          onClick={[Function]}
+        />
          
         <span
           className="label"
@@ -66,6 +79,7 @@ exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes 1`] = `
         className="dp-pc_checkboxes_checkbox"
         htmlFor="field_1-last"
         onBlur={[Function]}
+        onClick={[Function]}
         onFocus={[Function]}
         onKeyPress={[Function]}
         tabIndex="0"
@@ -78,7 +92,9 @@ exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes 1`] = `
           type="checkbox"
           value="last"
         />
-        <i />
+        <i
+          onClick={[Function]}
+        />
          
         <span
           className="label"
@@ -87,18 +103,6 @@ exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes 1`] = `
         </span>
       </label>
     </div>
-    <span
-      className="indicator"
-    />
-    <label
-      className="dp-pc_checkboxes_label"
-      htmlFor="field_1"
-    >
-      
-    </label>
-    <div
-      className="divider"
-    />
   </div>
 </form>
 `;
@@ -112,15 +116,23 @@ exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes with ex
   <div
     className="dp-pc_field"
   >
+    <label
+      className="dp-pc_checkboxes_label"
+      htmlFor="checkbox"
+    >
+      
+    </label>
     <div
       className="dp-pc_checkboxes"
       description=""
       id="checkbox"
+      required={false}
     >
       <label
         className="dp-pc_checkboxes_checkbox"
         htmlFor="checkbox-first"
         onBlur={[Function]}
+        onClick={[Function]}
         onFocus={[Function]}
         onKeyPress={[Function]}
         tabIndex="0"
@@ -133,7 +145,9 @@ exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes with ex
           type="checkbox"
           value="first"
         />
-        <i />
+        <i
+          onClick={[Function]}
+        />
          
         <span
           className="label"
@@ -145,6 +159,7 @@ exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes with ex
         className="dp-pc_checkboxes_checkbox"
         htmlFor="checkbox-second"
         onBlur={[Function]}
+        onClick={[Function]}
         onFocus={[Function]}
         onKeyPress={[Function]}
         tabIndex="0"
@@ -157,7 +172,9 @@ exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes with ex
           type="checkbox"
           value="second"
         />
-        <i />
+        <i
+          onClick={[Function]}
+        />
          
         <span
           className="label"
@@ -169,6 +186,7 @@ exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes with ex
         className="dp-pc_checkboxes_checkbox"
         htmlFor="checkbox-last"
         onBlur={[Function]}
+        onClick={[Function]}
         onFocus={[Function]}
         onKeyPress={[Function]}
         tabIndex="0"
@@ -181,7 +199,9 @@ exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes with ex
           type="checkbox"
           value="last"
         />
-        <i />
+        <i
+          onClick={[Function]}
+        />
          
         <span
           className="label"
@@ -190,18 +210,6 @@ exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes with ex
         </span>
       </label>
     </div>
-    <span
-      className="indicator"
-    />
-    <label
-      className="dp-pc_checkboxes_label"
-      htmlFor="checkbox"
-    >
-      
-    </label>
-    <div
-      className="divider"
-    />
   </div>
 </form>
 `;

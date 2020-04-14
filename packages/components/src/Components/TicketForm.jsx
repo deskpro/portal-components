@@ -246,7 +246,7 @@ class TicketForm extends React.Component {
     if (this.i18n[field.get('field_id')] && !field.getIn(['data', 'title'])) {
       label = this.i18n[field.get('field_id')];
     }
-    if (field.get('required')) {
+    if (field.getIn(['options', 'required'], false)) {
       label = `${label} *`;
     }
     return capitalize(label);
@@ -270,6 +270,7 @@ class TicketForm extends React.Component {
                 key="department"
                 name={this.props.departmentPropName}
                 i18n={this.i18n}
+                required={field.getIn(['options', 'required'], false)}
                 departments={departments
                   .toArray()
                   .map(d => (
@@ -290,6 +291,7 @@ class TicketForm extends React.Component {
                 name="category"
                 key="category"
                 label={this.renderLabel(field)}
+                required={field.getIn(['options', 'required'], false)}
                 i18n={this.i18n}
                 dataSource={{
                   getOptions: categories
@@ -327,6 +329,7 @@ class TicketForm extends React.Component {
                 name="priority"
                 key="priority"
                 label={this.renderLabel(field)}
+                required={field.getIn(['options', 'required'], false)}
                 i18n={this.i18n}
                 dataSource={{
                   getOptions: priorities
@@ -356,6 +359,7 @@ class TicketForm extends React.Component {
                 name="product"
                 key="product"
                 label={this.renderLabel(field)}
+                required={field.getIn(['options', 'required'], false)}
                 i18n={this.i18n}
                 dataSource={{
                   getOptions: products
@@ -390,6 +394,7 @@ class TicketForm extends React.Component {
           case 'person':
             return (<Person
               isDisabled={field.get('is_disabled')}
+              required={field.getIn(['options', 'required'], false)}
               name="person"
               key="person"
               namePlaceholder="John Doe"
@@ -428,7 +433,7 @@ class TicketForm extends React.Component {
           onSubmit={this.props.onSubmit}
         >
           {props => (
-            <Form noValidate showHover={showHover}>
+            <Form showHover={showHover}>
               <DropZone
                 onDrop={acceptedFiles => this.handleDrop(acceptedFiles, props.setFieldValue)}
                 noClick
@@ -463,7 +468,7 @@ class TicketForm extends React.Component {
         onSubmit={this.props.onSubmit}
       >
         {props => (
-          <Form noValidate showHover={showHover}>
+          <Form showHover={showHover}>
             {this.renderFields(props)}
             <Submit>{this.i18n.submit}</Submit>
           </Form>

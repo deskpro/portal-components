@@ -9,28 +9,21 @@ exports[`>>> Text --- Snapshot +++capturing Snapshot of Text 1`] = `
   <div
     className="dp-pc_field"
   >
-    <input
-      className="dp-pc_input"
-      description=""
-      id={null}
-      label=""
-      name="text"
-      onBlur={[Function]}
-      onChange={[Function]}
-      type="text"
-      value="Test text"
-    />
-    <span
-      className="indicator"
-    />
     <label
       className="dp-pc_label"
       htmlFor="field_1"
     >
       
     </label>
-    <div
-      className="divider"
+    <input
+      className="dp-pc_input"
+      id="field_1"
+      name="text"
+      onBlur={[Function]}
+      onChange={[Function]}
+      required={false}
+      type="text"
+      value="Test text"
     />
   </div>
 </form>

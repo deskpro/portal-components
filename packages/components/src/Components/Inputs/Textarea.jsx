@@ -2,6 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import AutosizeTextarea from 'react-textarea-autosize';
 import { getIn } from 'formik';
+import { objectKeyFilter } from '@deskpro/js-utils/dist/objects';
 import Field from '../Field';
 
 class Textarea extends Field {
@@ -16,8 +17,10 @@ class Textarea extends Field {
       className,
       errorsName,
       fClassName,
+      required,
       ...props
     } = this.props;
+
     return (
       <AutosizeTextarea
         id={this.id}
@@ -27,7 +30,8 @@ class Textarea extends Field {
         onChange={e => form.setFieldValue(name, e.target.value)}
         onBlur={() => form.setFieldTouched(name, true)}
         value={getIn(form.values, name)}
-        {...props}
+        required={required}
+        {...objectKeyFilter(props, Field.propTypes)}
       />
     );
   };

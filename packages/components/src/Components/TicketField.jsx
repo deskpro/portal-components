@@ -45,7 +45,7 @@ class TicketField extends React.Component {
         label = field.getIn(['data', 'translations', languageId.toString(), 'title'], label);
       }
     }
-    if (field.get('required')) {
+    if (field.getIn(['options', 'required'], false)) {
       label = `${label} *`;
     }
     return label;
@@ -77,6 +77,7 @@ class TicketField extends React.Component {
     const props = {
       label:       this.renderLabel(),
       description: this.renderDescription(),
+      required:    field.getIn(['options', 'required'], false),
       name
     };
     let Component = Text;
@@ -154,11 +155,11 @@ class TicketField extends React.Component {
     }
     switch (field.get('field_type')) {
       case 'message':
-        return <Textarea name="message" label={capitalize(this.renderLabel())} errorsName="message.message" />;
+        return <Textarea name="message" label={capitalize(this.renderLabel())} errorsName="message.message" required={field.getIn(['options', 'required'], false)} />;
       case 'subject':
         return field.get('is_hidden') ?
           <Hidden name="subject" />
-          : <Text name="subject" label={capitalize(this.renderLabel())} />;
+          : <Text name="subject" label={capitalize(this.renderLabel())} required={field.getIn(['options', 'required'], false)} />;
       case 'email':
       case 'cc':
         return <Email name={field.get('field_id')} label={this.renderLabel()} />;

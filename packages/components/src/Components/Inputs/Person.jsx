@@ -22,13 +22,15 @@ class Person extends React.Component {
       namePlaceholder,
       emailPlaceholder,
       isDisabled,
+      required,
     } = this.props;
 
     const emailProps = {
-      key:         'person_email',
+      key:         'user_email',
       name:        `${name}.email.email`,
-      label:       this.i18n.email,
+      label:       required ? `${this.i18n.email} *` : this.i18n.email,
       placeholder: emailPlaceholder,
+      required,
     };
 
     if (isDisabled) {
@@ -38,9 +40,10 @@ class Person extends React.Component {
 
     return [
       <Text
-        key="person_name"
+        key="user_name"
         name={`${name}.name`}
-        label={this.i18n.name}
+        label={required ? `${this.i18n.name} *` : this.i18n.name}
+        required
         placeholder={namePlaceholder}
       />,
       <Email {...emailProps} />
@@ -53,13 +56,15 @@ Person.propTypes = {
   namePlaceholder:  PropTypes.string,
   emailPlaceholder: PropTypes.string,
   i18n:             PropTypes.object,
+  required:         PropTypes.bool,
 };
 
 Person.defaultProps = {
   ...Field.defaultProps,
   namePlaceholder:  'John Doe',
   emailPlaceholder: 'john.doe@company.com',
-  i18n:             {}
+  i18n:             {},
+  required:         false,
 };
 
 export default Person;

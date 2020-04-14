@@ -9,28 +9,21 @@ exports[`>>> Number --- Snapshot +++capturing Snapshot of Number 1`] = `
   <div
     className="dp-pc_field"
   >
-    <input
-      className="dp-pc_input"
-      description=""
-      id={null}
-      label=""
-      name="number"
-      onBlur={[Function]}
-      onChange={[Function]}
-      type="number"
-      value={6}
-    />
-    <span
-      className="indicator"
-    />
     <label
       className="dp-pc_label"
       htmlFor="field_1"
     >
       
     </label>
-    <div
-      className="divider"
+    <input
+      className="dp-pc_input"
+      id="field_1"
+      name="number"
+      onBlur={[Function]}
+      onChange={[Function]}
+      required={false}
+      type="number"
+      value={6}
     />
   </div>
 </form>

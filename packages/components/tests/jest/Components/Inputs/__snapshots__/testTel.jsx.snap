@@ -9,12 +9,16 @@ exports[`>>> Tel --- Snapshot +++capturing Snapshot of Tel 1`] = `
   <div
     className="dp-pc_field"
   >
+    <label
+      className="dp-pc_label"
+      htmlFor="field_1"
+    >
+      
+    </label>
     <input
       className="dp-pc_input"
-      description=""
       excludeCountries={Array []}
-      id={null}
-      label=""
+      id="field_1"
       name="tel"
       onBlur={[Function]}
       onChange={[Function]}
@@ -26,21 +30,10 @@ exports[`>>> Tel --- Snapshot +++capturing Snapshot of Tel 1`] = `
           "gb",
         ]
       }
+      required={false}
       type="tel"
       value="0123456789"
       withIndicator={false}
-    />
-    <span
-      className="indicator"
-    />
-    <label
-      className="dp-pc_label"
-      htmlFor="field_1"
-    >
-      
-    </label>
-    <div
-      className="divider"
     />
   </div>
 </form>

@@ -15,11 +15,13 @@ class TicketDepartment extends React.Component {
     handleChange: PropTypes.func.isRequired,
     name:         PropTypes.string,
     i18n:         PropTypes.object,
+    required:     PropTypes.bool,
   };
 
   static defaultProps = {
-    name: 'department',
-    i18n: {},
+    name:     'department',
+    i18n:     {},
+    required: false,
   };
 
   constructor(props) {
@@ -28,16 +30,17 @@ class TicketDepartment extends React.Component {
   }
 
   render() {
-    const { departments, handleChange } = this.props;
+    const { departments, handleChange, required } = this.props;
     return (
       <DropDown
         name={this.props.name}
-        label={this.i18n.department}
+        label={required ? `${this.i18n.department} *` : this.i18n.department}
         dataSource={{ getOptions: departments }}
         handleChange={handleChange}
         isClearable={false}
         isSearchable={false}
         i18n={this.i18n}
+        required
       />
     );
   }

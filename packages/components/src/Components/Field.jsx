@@ -15,7 +15,8 @@ class Field extends React.Component {
     id:          PropTypes.string,
     className:   PropTypes.string,
     fClassName:  PropTypes.string,
-    children:    PropTypes.node
+    children:    PropTypes.node,
+    required:    PropTypes.bool,
   };
 
   static defaultProps = {
@@ -25,7 +26,8 @@ class Field extends React.Component {
     className:   '',
     fClassName:  '',
     id:          null,
-    children:    null
+    children:    null,
+    required:    false,
   };
 
   constructor(props) {
@@ -39,9 +41,18 @@ class Field extends React.Component {
     this.renderField = this.renderField.bind(this);
   }
 
+  validate = (value) => {
+    let error;
+    const { required } = this.props;
+    if (!value && required) {
+      error = 'Required';
+    }
+    return error;
+  };
+
   renderField() {
     const {
-      name, children, className, ...props
+      name, children, className, required, ...props
     } = this.props;
 
     return (
@@ -50,6 +61,7 @@ class Field extends React.Component {
         name={name}
         type={this.type}
         className={classNames('dp-pc_input', className)}
+        required={required}
         {...objectKeyFilter(props, Field.propTypes)}
       >
         {children}
@@ -83,6 +95,7 @@ class Field extends React.Component {
     return (
       <FormikField
         name={name}
+        validate={this.validate}
         render={({ form }) => {
           let error;
           let searchName = errorsName;

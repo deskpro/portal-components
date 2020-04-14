@@ -9,28 +9,21 @@ exports[`>>> Url --- Snapshot +++capturing Snapshot of Url 1`] = `
   <div
     className="dp-pc_field"
   >
-    <input
-      className="dp-pc_input"
-      description=""
-      id={null}
-      label=""
-      name="url"
-      onBlur={[Function]}
-      onChange={[Function]}
-      type="url"
-      value="www.deskpro.com"
-    />
-    <span
-      className="indicator"
-    />
     <label
       className="dp-pc_label"
       htmlFor="field_1"
     >
       
     </label>
-    <div
-      className="divider"
+    <input
+      className="dp-pc_input"
+      id="field_1"
+      name="url"
+      onBlur={[Function]}
+      onChange={[Function]}
+      required={false}
+      type="url"
+      value="www.deskpro.com"
     />
   </div>
 </form>

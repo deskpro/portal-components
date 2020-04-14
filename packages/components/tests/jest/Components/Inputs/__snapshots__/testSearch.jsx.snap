@@ -9,28 +9,21 @@ exports[`>>> Search --- Snapshot +++capturing Snapshot of Search 1`] = `
   <div
     className="dp-pc_field"
   >
-    <input
-      className="dp-pc_input"
-      description=""
-      id={null}
-      label=""
-      name="search"
-      onBlur={[Function]}
-      onChange={[Function]}
-      type="search"
-      value="Test search"
-    />
-    <span
-      className="indicator"
-    />
     <label
       className="dp-pc_label"
       htmlFor="field_1"
     >
       
     </label>
-    <div
-      className="divider"
+    <input
+      className="dp-pc_input"
+      id="field_1"
+      name="search"
+      onBlur={[Function]}
+      onChange={[Function]}
+      required={false}
+      type="search"
+      value="Test search"
     />
   </div>
 </form>

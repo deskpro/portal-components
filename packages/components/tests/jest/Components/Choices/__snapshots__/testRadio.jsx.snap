@@ -9,16 +9,24 @@ exports[`>>> Radio --- Snapshot +++capturing Snapshot of Radio 1`] = `
   <div
     className="dp-pc_field"
   >
+    <label
+      className="dp-pc_radio_label"
+      htmlFor="field_1"
+    >
+      
+    </label>
     <div
       className="dp-pc_radios"
       description=""
       id={null}
       label=""
+      required={false}
     >
       <label
         className="dp-pc_radio"
         htmlFor="field_1-first"
         onBlur={[Function]}
+        onClick={[Function]}
         onFocus={[Function]}
         onKeyPress={[Function]}
         tabIndex="0"
@@ -44,6 +52,7 @@ exports[`>>> Radio --- Snapshot +++capturing Snapshot of Radio 1`] = `
         className="dp-pc_radio"
         htmlFor="field_1-second"
         onBlur={[Function]}
+        onClick={[Function]}
         onFocus={[Function]}
         onKeyPress={[Function]}
         tabIndex="0"
@@ -69,6 +78,7 @@ exports[`>>> Radio --- Snapshot +++capturing Snapshot of Radio 1`] = `
         className="dp-pc_radio"
         htmlFor="field_1-last"
         onBlur={[Function]}
+        onClick={[Function]}
         onFocus={[Function]}
         onKeyPress={[Function]}
         tabIndex="0"
@@ -91,18 +101,6 @@ exports[`>>> Radio --- Snapshot +++capturing Snapshot of Radio 1`] = `
         </span>
       </label>
     </div>
-    <span
-      className="indicator"
-    />
-    <label
-      className="dp-pc_radio_label"
-      htmlFor="field_1"
-    >
-      
-    </label>
-    <div
-      className="divider"
-    />
   </div>
 </form>
 `;
