@@ -77,7 +77,7 @@ class TicketField extends React.Component {
     const props = {
       label:       this.renderLabel(),
       description: this.renderDescription(),
-      required:    field.get('required', false),
+      required:    !!field.get('required', false),
       name
     };
     let Component = Text;
@@ -160,16 +160,22 @@ class TicketField extends React.Component {
             name="message"
             label={capitalize(this.renderLabel())}
             errorsName="message.message"
-            required={field.get('required', false)}
+            required={!!field.get('required', false)}
           />
         );
       case 'subject':
         return field.get('is_hidden') ?
           <Hidden name="subject" />
-          : <Text name="subject" label={capitalize(this.renderLabel())} required={field.get('required', false)} />;
+          : <Text name="subject" label={capitalize(this.renderLabel())} required={!!field.get('required', false)} />;
       case 'email':
       case 'cc':
-        return <Email name={field.get('field_id')} label={this.renderLabel()} />;
+        return (
+          <Email
+            name={field.get('field_id')}
+            label={this.renderLabel()}
+            required={!!field.get('required', false)}
+          />
+        );
       case 'hidden':
         return <Hidden name={field.get('field_id')} label={field.get('field_id')} />;
       case 'attachments':
@@ -190,6 +196,7 @@ class TicketField extends React.Component {
           <Text
             name={field.get('field_id')}
             label={this.renderLabel()}
+            required={!!field.get('required', false)}
           />
         );
     }
