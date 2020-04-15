@@ -3,8 +3,12 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Field as FormikField, getIn } from 'formik';
 import newid from '@deskpro/js-utils/dist/newid';
-import { objectKeyFilter } from '@deskpro/js-utils/dist/objects';
+import { deepMerge, objectKeyFilter } from '@deskpro/js-utils/dist/objects';
 import ErrorMessage from './ErrorMessage';
+
+const I18N = {
+  required: 'Required',
+};
 
 class Field extends React.Component {
   static propTypes = {
@@ -17,6 +21,7 @@ class Field extends React.Component {
     fClassName:  PropTypes.string,
     children:    PropTypes.node,
     required:    PropTypes.bool,
+    i18n:        PropTypes.object,
   };
 
   static defaultProps = {
@@ -28,11 +33,13 @@ class Field extends React.Component {
     id:          null,
     children:    null,
     required:    false,
+    i18n:        {},
   };
 
   constructor(props) {
     super(props);
 
+    this.i18n = deepMerge(I18N, props.i18n);
     this.id = props.id;
     this.className = '';
     if (!this.id) {

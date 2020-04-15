@@ -78,6 +78,7 @@ class TicketField extends React.Component {
       label:       this.renderLabel(),
       description: this.renderDescription(),
       required:    !!field.get('required', false),
+      i18n,
       name
     };
     let Component = Text;
@@ -106,7 +107,6 @@ class TicketField extends React.Component {
         props.dataSource = {};
         props.isClearable = false;
         props.isSearchable = false;
-        props.i18n = i18n;
         props.dataSource.getOptions = rec(field.getIn(['data', 'choices'], new List()).toArray());
         break;
       case 'radio':
@@ -118,7 +118,6 @@ class TicketField extends React.Component {
         Component = FileUpload;
         props.url = fileUploadUrl;
         props.csrfToken = csrfToken;
-        props.i18n = i18n;
         break;
       case 'textarea':
         Component = Textarea;
@@ -127,7 +126,6 @@ class TicketField extends React.Component {
         Component = MultipleDropDown;
         props.fClassName = 'dp-pc_multi-select';
         props.dataSource = {};
-        props.i18n = i18n;
         props.dataSource.getOptions = rec(field.getIn(['data', 'choices'], new List()).toArray());
         break;
       case 'display':
@@ -160,13 +158,21 @@ class TicketField extends React.Component {
             name="message"
             label={capitalize(this.renderLabel())}
             errorsName="message.message"
+            i18n={i18n}
             required={!!field.get('required', false)}
           />
         );
       case 'subject':
         return field.get('is_hidden') ?
           <Hidden name="subject" />
-          : <Text name="subject" label={capitalize(this.renderLabel())} required={!!field.get('required', false)} />;
+          : (
+            <Text
+              name="subject"
+              label={capitalize(this.renderLabel())}
+              required={!!field.get('required', false)}
+              i18n={i18n}
+            />
+          );
       case 'email':
       case 'cc':
         return (
@@ -174,6 +180,7 @@ class TicketField extends React.Component {
             name={field.get('field_id')}
             label={this.renderLabel()}
             required={!!field.get('required', false)}
+            i18n={i18n}
           />
         );
       case 'hidden':
@@ -197,6 +204,7 @@ class TicketField extends React.Component {
             name={field.get('field_id')}
             label={this.renderLabel()}
             required={!!field.get('required', false)}
+            i18n={i18n}
           />
         );
     }

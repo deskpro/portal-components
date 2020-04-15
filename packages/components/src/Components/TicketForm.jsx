@@ -47,6 +47,7 @@ const I18N = {
   chooseFiles: 'Choose files',
   select:      'Select',
   back:        'Back',
+  required:    'Required',
 };
 
 class TicketForm extends React.Component {
