@@ -156,7 +156,7 @@ class TicketField extends React.Component {
         return (
           <Textarea
             name="message"
-            label={capitalize(this.renderLabel())}
+            label={field.get('required', false) ? `${i18n.message} *` : i18n.message}
             errorsName="message.message"
             i18n={i18n}
             required={!!field.get('required', false)}
