@@ -3,10 +3,12 @@ import PropTypes from 'prop-types';
 import { deepMerge } from '@deskpro/js-utils/dist/objects';
 import { Progress } from '../index';
 import DropzoneImage from '../assets/dropzone-image.svg';
+import ExclamationTriangle from '../assets/exclamation-triangle.svg';
 
 const I18N = {
   uploading:       'Uploading',
   dragAndDropHere: 'Drag and drop file here',
+  ok:              'OK',
 };
 
 class DropArea extends PureComponent {
@@ -14,11 +16,15 @@ class DropArea extends PureComponent {
     progress:     PropTypes.number,
     isDragActive: PropTypes.bool.isRequired,
     i18n:         PropTypes.object,
+    error:        PropTypes.object,
+    clearError:   PropTypes.func,
   };
 
   static defaultProps = {
     progress: -1,
     i18n:     {},
+    clearError() {},
+    error:    null,
   };
 
   constructor(props) {
@@ -46,6 +52,19 @@ class DropArea extends PureComponent {
       </div>
     );
   };
+
+  renderError = () => {
+    const { error, clearError } = this.props;
+    return (
+      <div className="dp-pc_full-dnd__droparea_progress">
+        <ExclamationTriangle />
+        <p>{error.message}</p>
+        <button className="dpmsg-Button Button-large Button--danger" onClick={clearError}>
+          {this.i18n.ok}
+        </button>
+      </div>
+    );
+  }
 
   render() {
     const {

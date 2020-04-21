@@ -92,6 +92,7 @@ class TicketForm extends React.Component {
       [props.departmentPropName]: props.department,
       files:                      [],
       progress:                   -1,
+      error:                      null,
     };
   }
 
@@ -217,8 +218,11 @@ class TicketForm extends React.Component {
     this.setState({ progress: -1 });
   };
 
-  handleTransferFailed = () => {
-    this.setState({ progress: -1 });
+  handleTransferFailed = (e) => {
+    this.setState({
+      progress: -1,
+      error:    e
+    });
   };
 
   handleUpdateProgress = (e) => {
@@ -229,6 +233,12 @@ class TicketForm extends React.Component {
       this.setState({ progress: -1 });
     }
   };
+
+  clearError = () => {
+    this.setState({
+      error: null
+    });
+  }
 
   handleRemove = (setFieldValue, file) => {
     const files = this.state.files.filter(f => f.id !== file.id);
@@ -450,6 +460,8 @@ class TicketForm extends React.Component {
                     <DropArea
                       isDragActive={isDragActive}
                       progress={this.state.progress}
+                      error={this.state.error}
+                      clearError={this.clearError}
                     />
                     {this.renderFields(props, props.handleChange, getInputProps())}
                     <Submit>{this.i18n.submit}</Submit>

@@ -17,6 +17,21 @@ const AJAXSubmit = (function () {
       oAjaxReq.addEventListener('abort', config.transferCanceled);
     }
 
+    oAjaxReq.onreadystatechange = () => { // Call a function when the state changes.
+      if (this.readyState === XMLHttpRequest.DONE) {
+        if (this.status >= 400) {
+          let message = this.statusText;
+          if (this.response && this.response.errors && this.response.errors.file) {
+            message = this.response.errors.file;
+          }
+          config.transferFailed({
+            code: this.status,
+            message
+          });
+        }
+      }
+    };
+
     oAjaxReq.withCredentials = true;
     /* method is POST */
     oAjaxReq.responseType = 'json';
