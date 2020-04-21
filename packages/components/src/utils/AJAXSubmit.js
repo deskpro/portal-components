@@ -18,14 +18,14 @@ const AJAXSubmit = (function () {
     }
 
     oAjaxReq.onreadystatechange = () => { // Call a function when the state changes.
-      if (this.readyState === XMLHttpRequest.DONE) {
-        if (this.status >= 400) {
-          let message = this.statusText;
-          if (this.response && this.response.errors && this.response.errors.file) {
-            message = this.response.errors.file;
+      if (oAjaxReq.readyState === XMLHttpRequest.DONE) {
+        if (oAjaxReq.status >= 400) {
+          let message = oAjaxReq.statusText;
+          if (oAjaxReq.response && oAjaxReq.response.errors && oAjaxReq.response.errors.file) {
+            message = oAjaxReq.response.errors.file;
           }
           config.transferFailed({
-            code: this.status,
+            code: oAjaxReq.status,
             message
           });
         }
