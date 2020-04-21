@@ -212,10 +212,12 @@ class TicketForm extends React.Component {
   };
 
   handleTransferComplete = (e, setFieldValue) => {
-    const files = this.state.files.concat([e.target.response.blob]);
-    this.setState({ files });
-    setFieldValue('attachments', files);
-    this.setState({ progress: -1 });
+    if (e.target.response && e.target.response.blob) {
+      const files = this.state.files.concat([e.target.response.blob]);
+      this.setState({ files });
+      setFieldValue('attachments', files);
+      this.setState({ progress: -1 });
+    }
   };
 
   handleTransferFailed = (e) => {
