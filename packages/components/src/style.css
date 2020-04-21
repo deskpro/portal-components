@@ -928,6 +928,25 @@
   & .dp-progress {
     width: 80%;
   }
+
+  div.dp-pc_full-dnd__droparea_error {
+    svg {
+      width: 56px;
+      height: 56px;
+      color: var(--error-color);
+    }
+    & > p {
+      color: var(--error-color);
+    }
+    button {
+      background: var(--error-color);
+      border-radius: 4px;
+      color: white;
+      font-size: 16px;
+      padding: 10px 1rem;
+      cursor: pointer;
+    }
+  }
 }
 
 .dp-pc_field.dp-pc_multi-select .react-select__control {

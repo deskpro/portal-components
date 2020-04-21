@@ -29,7 +29,7 @@ storiesOf('TicketForm', module)
       products={products}
       department={null}
       onSubmit={action('submit')}
-      fileUploadUrl="https://www.test-cors.org/"
+      fileUploadUrl="http://localhost:6006/"
       csrfToken="123456"
     />
   ));

@@ -56,7 +56,7 @@ class DropArea extends PureComponent {
   renderError = () => {
     const { error, clearError } = this.props;
     return (
-      <div className="dp-pc_full-dnd__droparea_progress">
+      <div className="dp-pc_full-dnd__droparea_error">
         <ExclamationTriangle />
         <p>{error.message}</p>
         <button className="dpmsg-Button Button-large Button--danger" onClick={clearError}>
@@ -69,18 +69,27 @@ class DropArea extends PureComponent {
   render() {
     const {
       isDragActive,
-      progress
+      progress,
+      error
     } = this.props;
 
+    let content;
+    if (error !== null) {
+      content = this.renderError();
+    } else if (progress < 0) {
+      content = this.renderDrop();
+    } else {
+      content = this.renderProgress();
+    }
     return (
       <Fragment>
         <div
           className="dp-pc_full-dnd__droparea"
           style={{
-            display: isDragActive || progress !== -1 ? 'block' : 'none'
+            display: isDragActive || progress !== -1 || error !== null ? 'block' : 'none'
           }}
         >
-          {progress < 0 ? this.renderDrop() : this.renderProgress()}
+          {content}
         </div>
       </Fragment>
     );
