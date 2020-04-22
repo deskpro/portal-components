@@ -8,6 +8,7 @@ const {
   series,
   parallel
 } = require('gulp');
+const fs = require('fs');
 // Importing all the Gulp-related packages we want to use
 const sourcemaps = require('gulp-sourcemaps');
 const sass = require('gulp-sass');
@@ -91,8 +92,12 @@ function serverTask() {
     port: 3000,
     livereload: true,
     root: ".build",
-    localhost: 'localhost',
-    https: process.env.HTTPS,
+    localhost: 'deskpro5.local',
+    host: '0.0.0.0',
+    https: process.env.HTTPS && {
+      key: fs.readFileSync('sslcert/server.key'),
+      cert: fs.readFileSync('sslcert/server.cert'),
+    },
     middleware: function() {
       return [cors()];
     }

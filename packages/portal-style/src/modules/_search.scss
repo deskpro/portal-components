@@ -1,7 +1,7 @@
 .dp-po-search {
   $self: ".dp-po-search";
   background: linear-gradient(
-    90deg,
+    to right,
     var(--brand-primary-d-100) 0%,
     var(--brand-primary) 49.48%,
     var(--brand-primary-l-100) 100%
@@ -16,6 +16,7 @@
     max-width: 860px;
     position: absolute;
     top: calc(50% - 30px);
+    left: calc(50% - 430px);
     width: 100%;
 
     input[type="search"] {
@@ -432,5 +433,11 @@
   }
   &-no-results {
     padding: 30px;
+  }
+}
+
+@media all and (max-width: 860px) {
+  .dp-po-search-form {
+    left: 0;
   }
 }
