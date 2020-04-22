@@ -639,6 +639,7 @@
       }
       & svg {
         height: 17px;
+        width: 17px;
         margin-right: 8px;
         margin-bottom: -2px;
       }
