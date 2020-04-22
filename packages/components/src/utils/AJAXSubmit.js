@@ -34,7 +34,9 @@ const AJAXSubmit = (function () {
 
     oAjaxReq.withCredentials = true;
     /* method is POST */
-    oAjaxReq.responseType = 'json';
+    oAjaxReq.onloadstart = () => {
+      oAjaxReq.responseType = 'json';
+    };
     oAjaxReq.open('post', config.url, true);
     oAjaxReq.send(formData);
   }

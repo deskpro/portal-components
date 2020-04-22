@@ -671,6 +671,7 @@
       margin: 0;
       & > li {
         margin-top: 8px;
+        height: 17px;
         font-size: 14px;
         color: var(--description-color);
         & .dp-pc_file-upload_remove-file {

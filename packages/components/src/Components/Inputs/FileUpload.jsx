@@ -67,7 +67,11 @@ export class FileUploadInput extends React.Component {
 
   handleTransferComplete = (e) => {
     const { name, onChange } = this.props;
-    const files = this.state.files.concat([e.target.response.blob]);
+    let { response } = e.target;
+    if (typeof response === 'string') {
+      response = JSON.parse(response);
+    }
+    const files = this.state.files.concat([response.blob]);
     this.setState({ files });
     onChange(name, files);
     this.setState({ progress: -1 });
