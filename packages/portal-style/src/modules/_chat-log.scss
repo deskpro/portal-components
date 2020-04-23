@@ -113,5 +113,9 @@
     .dp-po-avatar {
       @include typo($s19, 400, 'head');
     }
+
+    img {
+      max-width: 100%;
+    }
   }
 }
