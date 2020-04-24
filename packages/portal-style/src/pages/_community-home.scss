@@ -69,6 +69,9 @@
     flex: 0 0 40%;
     padding: 30px;
     overflow: hidden;
+    .dp-po-avatar {
+      flex-shrink: 0;
+    }
   }
 
   &-icon {
@@ -285,5 +288,14 @@
   &-svg {
     width: 25px;
     margin-right: 10px;
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .dp-po-community-row-left {
+    max-width: 60%;
+  }
+  .dp-po-community-row-right {
+    max-width: 40%;
   }
 }
