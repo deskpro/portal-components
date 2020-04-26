@@ -515,3 +515,11 @@ select.form-control:not([multiple="multiple"]) {
     padding-left: 0;
   }
 }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .form-control {
+    line-height: 10px;
+    padding-top: 10px;
+    padding-bottom: 9px;
+  }
+}
