@@ -73,6 +73,11 @@
     max-width: 100%;
   }
 
+  &-content table {
+    table-layout: fixed;
+    max-width: 100%;
+  }
+
   &-msg {
     margin: 15px 0 0;
     line-height: 1.5;
