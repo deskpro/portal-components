@@ -1,0 +1,36 @@
+.dp-po-post-official-response {
+  $self: '.dp-po-post-official-response';
+  margin-top: 10px;
+
+  & h3 {
+    color: #8B9293;
+    font-family: $headings-font-family;
+    font-size: 19px;
+    font-weight: normal;
+    line-height: 140%;
+
+    & .fa-flag-alt {
+      color: #9384BD;
+      vertical-align: -2px;
+      margin-right: 5px;
+    }
+  }
+  &-block {
+    border: 1px solid #D3D6D7;
+    border-radius: 6px;
+    padding: 12px;
+
+    p {
+      padding-left: 40px;
+    }
+  }
+  &-avatar {
+    font-size: 18px;
+    margin-bottom: 10px;
+
+    img {
+      height: 30px;
+      width: 30px;
+    }
+  }
+}
