@@ -911,10 +911,10 @@
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
-"@deskpro/js-utils@1.0.11":
-  version "1.0.11"
-  resolved "https://registry.yarnpkg.com/@deskpro/js-utils/-/js-utils-1.0.11.tgz#850d4b73d0d7696c9560415af52a2407d2b85ec4"
-  integrity sha512-NiFSPddaDHPwSDrW6rQPNzw9ny5LGCYGyLuU6S44hq24F/LgNnwDrwo+IA+0XTfOyb4EVJPKuHeHihFLll3wpQ==
+"@deskpro/js-utils@1.0.13":
+  version "1.0.13"
+  resolved "https://registry.yarnpkg.com/@deskpro/js-utils/-/js-utils-1.0.13.tgz#f95652c218b545cb1957fdf6ba21935d2b433c82"
+  integrity sha512-yWYnMXdp1UxeNHr62rUJafisCVMIK6S55YN2ZBxUwTubHyG9N5pxomSCQ/J/XAS4AxTdwiJtRRI4zxpB3uscTg==
   dependencies:
     immutable "3.8.2"
 
