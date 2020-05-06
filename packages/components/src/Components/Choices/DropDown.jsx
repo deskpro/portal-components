@@ -106,6 +106,7 @@ export class DropDownInput extends React.Component {
     i18n:        PropTypes.object,
     onChange:    PropTypes.func,
     isClearable: PropTypes.bool,
+    value:       PropTypes.oneOfType([PropTypes.number, PropTypes.string])
   };
 
   static defaultProps = {
@@ -125,6 +126,46 @@ export class DropDownInput extends React.Component {
       menuIsOpen: false,
       options:    props.dataSource.getOptions,
     };
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    const { value: stateValue } = this.state;
+    const { value: propValue, dataSource } = this.props;
+
+    if (Array.isArray(dataSource.getOptions) && propValue && (!stateValue || stateValue.value !== propValue)) {
+      const updateOptions = (options, parentOptions) => {
+        if (options.map(option => option.value).indexOf(propValue) !== -1) {
+          if (prevState.options
+            && JSON.stringify(options) === JSON.stringify(prevState.options.filter(o => o.value !== 'select-back'))
+          ) {
+            return;
+          }
+
+          const newValue = options.find(o => o.value === propValue);
+
+          if (parentOptions) {
+            this.setState({
+              value:   newValue,
+              options: [{
+                label:   this.i18n.back,
+                value:   'select-back',
+                parents: parentOptions,
+              }].concat(options)
+            });
+          } else {
+            this.setState({ value: newValue, options });
+          }
+        } else {
+          options.forEach((childOption) => {
+            if (childOption.children) {
+              updateOptions(childOption.children, options);
+            }
+          });
+        }
+      };
+
+      updateOptions(dataSource.getOptions);
+    }
   }
 
   onBlur = () => {
