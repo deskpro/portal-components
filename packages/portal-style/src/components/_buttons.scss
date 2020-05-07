@@ -47,6 +47,21 @@
   &-li {
     background: $linkedin;
   }
+
+  &.auth-google {
+    background: $google;
+  }
+
+  &.auth-facebook {
+    background: $facebook;
+  }
+
+  &.auth-twitter {
+    background: $twitter;
+  }
+  &.auth-one {
+    background: $one;
+  }
 }
 
 .btn + .btn {

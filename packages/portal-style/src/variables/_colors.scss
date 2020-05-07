@@ -70,6 +70,8 @@ $twitter: #1DA1F2;
 $whatsapp: #25d366;
 $instagram: #3f729b;
 $pinterest: #c8232c;
+$google: #d6452e;
+$one: #008ca9;
 
 @function darken($color, $amount) {
   @if type_of($color) == string {
