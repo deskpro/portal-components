@@ -26,6 +26,10 @@
     color: $text-color;
     margin: 0 0 10px;
     display: block;
+
+    &[for$="_delete"] {
+      display: inline-block;
+    }
   }
 
   .checkboxes,

@@ -152,6 +152,10 @@
         font-size: 20px;
       }
     }
+
+    .search-result-collection-empty {
+      padding: 10px;
+    }
   }
   &-hint-tickets.no-results #{$self}-hint-header {
     &-title {
