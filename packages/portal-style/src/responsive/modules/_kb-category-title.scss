@@ -3,7 +3,21 @@
     .dp-po-icon {
       background: $grey-lighter;
       margin-right: 10px;
-      flex: 0 0 58px;
+      flex: 0 0 50px;
+      border-radius: 50px;
+      margin-bottom: 0;
+      height: 50px;
+      svg {
+        height: 24px;
+        width: 24px;
+        margin: 13px;
+      }
+    }
+
+    &-icon {
+      height: 50px;
+      width: 50px;
+      margin-right: 8px;
     }
 
     &-text {
@@ -38,9 +52,14 @@
       top: 0;
       z-index: 1;
       display: block;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      vertical-align: bottom;
 
       .dp-po-icon {
         margin: 0;
+        width: 15px;
         background: $grey-lightest;
       }
 
