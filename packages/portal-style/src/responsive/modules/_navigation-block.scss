@@ -48,11 +48,12 @@
           display: flex;
           height: 100%;
         }
+
+        #{$self}-desc {
+          display: block;
+        }
       }
     }
 
-    &-desc {
-      display: block;
-    }
   }
 }
