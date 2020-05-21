@@ -31,12 +31,17 @@
     font-size: 24px;
     flex: 0 0 24px;
     margin-right: 10px;
+
+    svg {
+      vertical-align: 0;
+    }
   }
 
   &-image {
     max-height: 30px;
     max-width: 25px;
     filter: grayscale(100%);
+    margin: 0 2px;
   }
 
   &-link {
@@ -56,11 +61,12 @@
   &-desc {
     flex: 0 0 calc(100% - 34px);
     padding: 0 130px 0 0;
+    align-self: flex-start;
   }
 
   .dp-po-time {
     position: absolute;
     right: 0;
-    top: 23px;
+    top: 24px;
   }
 }

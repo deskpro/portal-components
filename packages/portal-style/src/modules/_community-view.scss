@@ -23,7 +23,7 @@
     }
   }
 
-  &-votes {
+  &-likes {
     flex: 0 0 50px;
     margin-right: 20px;
   }
@@ -191,7 +191,7 @@
       align-items: center;
     }
 
-    #{$self}-votes {
+    #{$self}-likes {
       flex: 0 0 80px;
     }
 

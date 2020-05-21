@@ -253,7 +253,7 @@ export class DropDownInput extends React.Component {
           options={this.state.options}
           closeMenuOnSelect={this.closeMenuOnSelect}
           classNamePrefix="react-select"
-          placeholder={`${this.i18n.select}...`}
+          placeholder={this.i18n.select}
           {...props}
           onFocus={this.onFocus}
           onBlur={this.onBlur}
