@@ -23,6 +23,9 @@
 
     .dp-po-icon {
       margin-right: 10px;
+      svg {
+        vertical-align: -2px;
+      }
     }
   }
 }
