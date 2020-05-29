@@ -74,8 +74,9 @@
     & .dp-po-time {
       white-space: nowrap;
       .dp-po-icon {
-        margin-left: 7px;
-        margin-right: 0;
+        margin-left: 0;
+        margin-right: 7px;
+        margin-top: 1px;
       }
     }
   }
@@ -348,11 +349,28 @@
 
       &:hover {
       }
+
+      &.no-results {
+        #{$self}-sidebar-count {
+          background: $grey;
+        }
+
+        #{$self}-sidebar-image {
+          color: var(--text-color-lighter);
+        }
+
+        &:hover {
+          color: var(--text-color-lighter);
+          text-decoration: none;
+          cursor: inherit;
+        }
+      }
     }
 
     &-image {
       margin-right: 10px;
       width: 24px;
+      color: $brand-primary;
     }
 
     &-count {
@@ -367,6 +385,21 @@
   }
 
   &-details {
+    &-title {
+      border-bottom: 1px solid $grey-lighter;
+      font-family: $headings-font-family;
+      font-size: 19px;
+      font-weight: 500;
+      color: #8b9293;
+      margin-top: -10px;
+      padding-bottom: 12px;
+      & .query {
+        color: $grey-darkest;
+      }
+      & .count {
+        color: $brand-primary;
+      }
+    }
     &-list {
       margin: 0;
       padding: 0;
@@ -376,10 +409,6 @@
       list-style: none;
       border-bottom: 1px solid $grey-lighter;
       padding: 12px 0;
-
-      &:first-child {
-        padding-top: 0;
-      }
 
       &:last-child {
         padding-bottom: 0;
@@ -411,14 +440,14 @@
       display: flex;
       justify-content: flex-end;
       white-space: nowrap;
-      .dp-po-icon {
-        margin-right: 0;
-        margin-left: 7px;
+      .date-ago {
+        min-width: 30px;
       }
-    }
-
-    &-title {
-      margin: 0;
+      .dp-po-icon {
+        margin-left: 0;
+        margin-right: 7px;
+        margin-top: 1px;
+      }
     }
 
     &-tag {
