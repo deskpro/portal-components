@@ -16,6 +16,7 @@
 
   .dp-po-avatar {
     margin-bottom: 1em;
+    align-self: flex-start;
   }
 
   &-cc {
@@ -57,6 +58,8 @@
 
     &-name {
       font-size: $s16;
+      display: block;
+      line-height: 27px;
     }
 
     &-email {
@@ -85,7 +88,7 @@
       &:hover {
         text-decoration: none;
         border-color: $brand-primary;
-        background: $info-light;
+        background: var(--brand-primary-l-350);
         color: $brand-primary;
       }
     }
@@ -100,6 +103,19 @@
       top: 30px;
       right: 0;
       z-index: 1;
+
+      label {
+        font-family: $headings-font-family;
+        font-weight: normal;
+        font-size: 17px;
+      }
+    }
+
+    &-submit {
+      .dp-po-icon {
+        margin-left: 10px;
+        display: none;
+      }
     }
 
     &-remove {
