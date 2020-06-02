@@ -9,6 +9,7 @@
     opacity: 0;
   }
 
+  & .dp-po-clipboard-link:focus,
   &:hover {
     .dp-po-icon {
       opacity: 1;
