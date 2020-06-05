@@ -209,6 +209,26 @@
   .medium-editor-action:focus {
     border-color: #b8bfc0;
   }
+  &.dp-toggle-checkbox {
+    legend {
+      font-size: $s15;
+      font-weight: 700;
+      color: $text-color;
+      margin: 0 0 10px;
+      display: block;
+    }
+    input {
+      display: inline-block;
+      width: 14px;
+      margin-right: 10px;
+      vertical-align: -1px;
+    }
+    label {
+      display: inline-block;
+      margin-bottom: 2px;
+      width: calc(100% - 30px);
+    }
+  }
 }
 
 .form-control {
