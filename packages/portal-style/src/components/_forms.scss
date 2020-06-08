@@ -229,6 +229,12 @@
       width: calc(100% - 30px);
     }
   }
+  .dp-medium-rte:focus {
+    outline: none;
+  }
+  .react-datepicker__input-container input:focus {
+    outline: 0;
+  }
 }
 
 .form-control {
@@ -239,6 +245,8 @@
   padding: 7px 15px 6px;
 
   &:focus,
+  &:focus-within,
+  .react-select__control--is-focused,
   &.focused {
     background: $grey-lightest;
     border-color: $brand-primary;
@@ -309,6 +317,9 @@ select.form-control:not([multiple="multiple"]) {
       background-color: inherit;
       color: var(--brand-primary);
     }
+  }
+  .react-select__control--is-focused {
+    border-color: var(--brand-primary);
   }
 }
 

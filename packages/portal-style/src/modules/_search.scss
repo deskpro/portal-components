@@ -29,6 +29,13 @@
       color: $grey-dark;
       outline: none;
 
+      &:focus {
+        border-color: var(--brand-primary-d-150);
+        & + label {
+          color: var(--brand-primary-d-150);
+        }
+      }
+
       &::-webkit-search-cancel-button,
       &::-ms-clear {
         -webkit-appearance: none;
