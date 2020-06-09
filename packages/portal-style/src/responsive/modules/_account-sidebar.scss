@@ -3,3 +3,13 @@
     display: none;
   }
 }
+@include media-breakpoint-up(md) {
+  .dp-po-your-account {
+    .card-header {
+      display: none;
+    }
+    .card {
+      border: none;
+    }
+  }
+}

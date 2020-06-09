@@ -1,0 +1,37 @@
+@include media-breakpoint-down(sm) {
+  .dp-po-your-account {
+    $self: '.dp-po-your-account';
+
+    .card {
+      border: none;
+    }
+
+    .card-header {
+      background: none;
+      padding: 25px 0 15px;
+      border-bottom: 2px solid $grey-light;
+
+      .dp-po-icon {
+        color: $brand-primary;
+        width: 15px;
+        height: 27px;
+      }
+
+      button {
+        font-size: 22px;
+        line-height: 130%;
+        color: $grey-darkest;
+        padding: 0;
+        width: 100%;
+        text-align: left;
+        justify-content: space-between;
+      }
+      .dp-po-icon {
+
+      }
+    }
+    .collapse {
+      margin-top: 15px;
+    }
+  }
+}
