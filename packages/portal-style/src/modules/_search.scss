@@ -18,6 +18,8 @@
     top: calc(50% - 30px);
     left: calc(50% - 430px);
     width: 100%;
+    display: flex;
+    flex-direction: row;
 
     input[type="search"] {
       width: 100%;
@@ -30,9 +32,15 @@
       outline: none;
 
       &:focus {
-        border-color: var(--brand-primary-d-150);
+        border-color: var(--grey-dark);
+        border-radius: 4px 0 0 4px;
         & + label {
-          color: var(--brand-primary-d-150);
+          color: var(--grey-dark);
+        }
+        & ~ input[type=submit] {
+          position: relative;
+          top: 0;
+          left: 0;
         }
       }
 
@@ -50,9 +58,44 @@
       }
 
       &.opened {
-        border-radius: 4px 4px 0 0;
+        border-radius: 4px 0 0 0;
       }
     }
+
+    input[type="submit"] {
+      position: absolute;
+      top: -10000px;
+      left: -10000px;
+      background: $white;
+      border: 2px solid var(--grey-dark);
+      border-radius: 0 4px 4px 0;
+      margin-left: -2px;
+      padding: 0 12px;
+      color: var(--grey-dark);
+      height: 57px;
+      align-self: stretch;
+      font-weight: 600;
+
+      &:focus {
+        display: inline-block;
+        position: relative;
+        top: 0;
+        left: 0;
+        color: var(--text-color);
+        background: var(--grey-light);
+        border-color: $brand-primary;
+        outline: 0;
+
+        & ~ input[type="search"] {
+          border-radius: 4px 0 0 4px;
+        }
+      }
+      &:hover {
+        color: $brand-primary;
+      }
+    }
+
+
 
     label {
       position: absolute;
@@ -103,6 +146,8 @@
 
   &-hint {
     position: absolute;
+    left: 0;
+    top: 57px;
     background: $white;
     border-radius: 0 0 4px 4px;
     display: block;
