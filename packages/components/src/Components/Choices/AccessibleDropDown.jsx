@@ -10,14 +10,22 @@ export class AccessibleDropDownInput extends React.Component {
     dataSource: PropTypes.shape({
       getOptions: PropTypes.oneOfType([PropTypes.func, PropTypes.array]).isRequired,
     }).isRequired,
-    onChange:      PropTypes.func.isRequired,
+    onChange:      PropTypes.func,
     showAllValues: PropTypes.bool,
     value:         PropTypes.oneOfType([PropTypes.number, PropTypes.string])
   };
 
   static defaultProps = {
     showAllValues: true,
-    value:         null
+    value:         '',
+    onChange() {}
+  }
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      children: []
+    };
   }
 
   getSource = (query, populateResults) => {
@@ -38,6 +46,16 @@ export class AccessibleDropDownInput extends React.Component {
   getDropdownArrow = () => <span className="dp-react-select__dropdown-indicator" />;
 
   handleConfirm = (value) => {
+    if (value && value.children) {
+      this.setState({
+        children: value.children
+      });
+    } else {
+      this.props.onChange(value);
+    }
+  }
+
+  handleChildrenChange = (value) => {
     this.props.onChange(value);
   }
 
@@ -47,19 +65,29 @@ export class AccessibleDropDownInput extends React.Component {
     } = this.props;
 
     return (
-      <Autocomplete
-        showAllValues
-        onConfirm={this.handleConfirm}
-        displayMenu="overlay"
-        source={this.getSource}
-        defaultValue={value}
-        dropdownArrow={this.getDropdownArrow}
-        templates={{
-          inputValue: this.getInputValue,
-          suggestion: this.getInputValue
-        }}
-        {...props}
-      />
+      <React.Fragment>
+        <Autocomplete
+          showAllValues
+          onConfirm={this.handleConfirm}
+          displayMenu="overlay"
+          source={this.getSource}
+          defaultValue={value}
+          dropdownArrow={this.getDropdownArrow}
+          templates={{
+            inputValue: this.getInputValue,
+            suggestion: this.getInputValue
+          }}
+          {...props}
+        />
+        {this.state.children.length > 0 ?
+          <div className="children">
+            <AccessibleDropDownInput
+              dataSource={{ getOptions: this.state.children }}
+              onChange={this.handleChildrenChange}
+            />
+          </div>
+        : null}
+      </React.Fragment>
     );
   }
 }
