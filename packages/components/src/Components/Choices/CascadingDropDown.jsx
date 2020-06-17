@@ -31,6 +31,45 @@ const DropdownIndicator = ({ closeMenu, ...props }) => (
 
 DropdownIndicator.propTypes = components.DropdownIndicator.propTypes;
 
+const Option = (props) => {
+  const {
+    className,
+    cx,
+    data,
+    getStyles,
+    innerRef,
+    label,
+    isDisabled,
+    isFocused,
+    isSelected,
+    innerProps
+  } = props;
+  if (data.children && data.children.length > 0) {
+    return (
+      <div
+        ref={innerRef}
+        css={getStyles('option', props)}
+        className={cx(
+          {
+            option:                true,
+            'option--is-disabled': isDisabled,
+            'option--is-focused':  isFocused,
+            'option--is-selected': isSelected,
+          },
+          className
+        )}
+        {...innerProps}
+      >
+        {label}
+        <span className="react-select__option--arrow" />
+      </div>
+    );
+  }
+  return <components.Option {...props} />;
+};
+
+Option.propTypes = components.Option.propTypes;
+
 const I18N = {
   select: 'Select',
 };
@@ -158,6 +197,7 @@ export class CascadingDropDownInput extends React.Component {
             isSearchable={isSearchable}
             components={{
               SelectContainer,
+              Option,
               DropdownIndicator: dropdownProps =>
                 <DropdownIndicator closeMenu={this.closeMenu} {...dropdownProps} />
             }}
@@ -200,6 +240,7 @@ export class CascadingDropDownInput extends React.Component {
         cacheOptions
         components={{
           SelectContainer,
+          Option,
           DropdownIndicator: dropdownProps =>
             <DropdownIndicator closeMenu={this.closeMenu} {...dropdownProps} />
         }}
