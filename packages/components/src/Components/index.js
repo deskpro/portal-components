@@ -1,6 +1,7 @@
 import Checkboxes from './Choices/Checkboxes';
 import DropDown, { DropDownInput } from './Choices/DropDown';
 import AccessibleDropDown, { AccessibleDropDownInput } from './Choices/AccessibleDropDown';
+import CascadingDropDown, { CascadingDropDownInput } from './Choices/CascadingDropDown';
 import MultipleDropDown, { MultipleDropDownInput } from './Choices/MultipleDropDown';
 import Radio from './Choices/Radio';
 import WebhookDropDown from './Choices/WebhookDropDown';
@@ -35,6 +36,8 @@ export {
   Checkboxes,
   AccessibleDropDown,
   AccessibleDropDownInput,
+  CascadingDropDown,
+  CascadingDropDownInput,
   DropDown,
   DropDownInput,
   MultipleDropDown,

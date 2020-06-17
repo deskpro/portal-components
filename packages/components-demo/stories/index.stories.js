@@ -13,6 +13,7 @@ import './file_upload';
 import './full_drag_drop';
 import './likert_scale';
 import './multilevel_accessible_dropdown';
+import './multilevel_cascading_dropdown';
 import './multilevel_dropdown';
 import './multiple_dropdown';
 import './password';

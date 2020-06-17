@@ -31,74 +31,11 @@ const DropdownIndicator = ({ closeMenu, ...props }) => (
 
 DropdownIndicator.propTypes = components.DropdownIndicator.propTypes;
 
-const Option = (props) => {
-  const {
-    className,
-    cx,
-    data,
-    getStyles,
-    innerRef,
-    label,
-    isDisabled,
-    isFocused,
-    isSelected,
-    innerProps
-  } = props;
-  if (data.children && data.children.length > 0) {
-    return (
-      <div
-        ref={innerRef}
-        css={getStyles('option', props)}
-        className={cx(
-          {
-            option:                true,
-            'option--is-disabled': isDisabled,
-            'option--is-focused':  isFocused,
-            'option--is-selected': isSelected,
-          },
-          className
-        )}
-        {...innerProps}
-      >
-        {label}
-        <span className="react-select__option--arrow" />
-      </div>
-    );
-  }
-  if (data.value === 'select-back') {
-    return (
-      <div
-        ref={innerRef}
-        css={getStyles('option', props)}
-        className={cx(
-          {
-            option:                true,
-            'option--is-disabled': isDisabled,
-            'option--is-focused':  isFocused,
-            'option--is-selected': isSelected,
-            'option--is-back':     true,
-          },
-          className,
-
-        )}
-        {...innerProps}
-      >
-        <span className="react-select__option--back-arrow" />
-        {label}
-      </div>
-    );
-  }
-  return <components.Option {...props} />;
-};
-
-Option.propTypes = components.Option.propTypes;
-
 const I18N = {
-  back:   'Back',
   select: 'Select',
 };
 
-export class DropDownInput extends React.Component {
+export class CascadingDropDownInput extends React.Component {
   static propType = {
     dataSource: PropTypes.shape({
       getOptions: PropTypes.oneOfType([PropTypes.func, PropTypes.array]).isRequired,
@@ -121,51 +58,34 @@ export class DropDownInput extends React.Component {
     this.i18n = deepMerge(I18N, props.i18n);
     this.select = React.createRef();
 
-    this.state = {
-      value:      null,
-      menuIsOpen: false,
-      options:    props.dataSource.getOptions,
-    };
-  }
+    const { dataSource } = props;
+    let { value } = props;
 
-  componentDidUpdate(prevProps, prevState) {
-    const { value: stateValue } = this.state;
-    const { value: propValue, dataSource } = this.props;
-
-    if (Array.isArray(dataSource.getOptions) && propValue && (!stateValue || stateValue.value !== propValue)) {
-      const updateOptions = (options, parentOptions) => {
-        if (options.map(option => option.value).indexOf(propValue) !== -1) {
-          if (prevState.options
-            && JSON.stringify(options) === JSON.stringify(prevState.options.filter(o => o.value !== 'select-back'))
-          ) {
-            return;
-          }
-
-          const newValue = options.find(o => o.value === propValue);
-
-          if (parentOptions) {
-            this.setState({
-              value:   newValue,
-              options: [{
-                label:   this.i18n.back,
-                value:   'select-back',
-                parents: parentOptions,
-              }].concat(options)
+    if (value && Array.isArray(dataSource.getOptions)) {
+      if (!dataSource.getOptions.find(o => o.value === value.value)) {
+        value = dataSource.getOptions.find((o) => {
+          if (o.children) {
+            return o.children.find((oo) => {
+              if (oo.value === value.value) {
+                return true;
+              }
+              if (oo.children) {
+                return oo.children.find(ooo => ooo.value === value.value);
+              }
+              return false;
             });
-          } else {
-            this.setState({ value: newValue, options });
           }
-        } else {
-          options.forEach((childOption) => {
-            if (childOption.children) {
-              updateOptions(childOption.children, options);
-            }
-          });
-        }
-      };
-
-      updateOptions(dataSource.getOptions);
+          return false;
+        });
+      }
     }
+
+    this.state = {
+      value,
+      defaultValue: props.value,
+      menuIsOpen:   false,
+      options:      props.dataSource.getOptions,
+    };
   }
 
   onBlur = () => {
@@ -184,35 +104,28 @@ export class DropDownInput extends React.Component {
 
   onChange = (value) => {
     if (value && value.children && value.children.length > 0) {
-      const { children } = value;
-      const options = [{
-        label:   this.i18n.back,
-        value:   'select-back',
-        parents: this.state.options,
-      }].concat(children);
       this.setState({
-        value: null,
-        options,
+        value,
+        defaultValue: null,
+        menuIsOpen:   false,
       });
-      this.props.onChange(null);
-      return false;
-    } else if (value && value.parents && value.parents.length > 0) {
-      this.setState({
-        value:   null,
-        options: value.parents
-      });
-      this.props.onChange(null);
-      return false;
+      this.select.current.select.blurInput();
+      return true;
     }
     this.setState({
       value,
-      menuIsOpen: false,
+      defaultValue: null,
+      menuIsOpen:   false,
     });
     this.select.current.select.blurInput();
     const newValue = value ? value.value : null;
     this.props.onChange(newValue);
     return true;
   };
+
+  handleChildrenChange = (value) => {
+    this.props.onChange(value);
+  }
 
   closeMenu = () => {
     this.select.current.select.blurInput();
@@ -232,33 +145,48 @@ export class DropDownInput extends React.Component {
 
   render() {
     const {
-      name, dataSource, isClearable, isSearchable, value, ...props
+      name, dataSource, isClearable, isSearchable, ...props
     } = this.props;
-    const { options } = this.state;
+    const { options, value } = this.state;
     if (Array.isArray(dataSource.getOptions)) {
       return (
-        <ReactSelect
-          ref={this.select}
-          value={options.find(o => o.value === value) || null}
-          name={name}
-          isClearable={isClearable}
-          isSearchable={isSearchable}
-          components={{
-            SelectContainer,
-            Option,
-            DropdownIndicator: dropdownProps =>
-              <DropdownIndicator closeMenu={this.closeMenu} {...dropdownProps} />
-          }}
-          menuIsOpen={this.state.menuIsOpen}
-          options={this.state.options}
-          closeMenuOnSelect={this.closeMenuOnSelect}
-          classNamePrefix="react-select"
-          placeholder={this.i18n.select}
-          {...props}
-          onFocus={this.onFocus}
-          onBlur={this.onBlur}
-          onChange={this.onChange}
-        />
+        <div className="dp-cascading-dropdown">
+          <ReactSelect
+            ref={this.select}
+            name={name}
+            isClearable={isClearable}
+            isSearchable={isSearchable}
+            components={{
+              SelectContainer,
+              DropdownIndicator: dropdownProps =>
+                <DropdownIndicator closeMenu={this.closeMenu} {...dropdownProps} />
+            }}
+            menuIsOpen={this.state.menuIsOpen}
+            options={options}
+            closeMenuOnSelect={this.closeMenuOnSelect}
+            classNamePrefix="react-select"
+            placeholder={this.i18n.select}
+            {...props}
+            value={options.find((o) => {
+              if (value) {
+                return o.value.toString() === value.value.toString();
+              }
+              return false;
+            }) || null}
+            onFocus={this.onFocus}
+            onBlur={this.onBlur}
+            onChange={this.onChange}
+          />
+          {value && value.children && value.children.length > 0 ?
+            <div className="children">
+              <CascadingDropDownInput
+                value={this.state.defaultValue}
+                dataSource={{ getOptions: value.children }}
+                onChange={this.handleChildrenChange}
+              />
+            </div>
+          : null}
+        </div>
       );
     }
     return (
@@ -272,7 +200,6 @@ export class DropDownInput extends React.Component {
         cacheOptions
         components={{
           SelectContainer,
-          Option,
           DropdownIndicator: dropdownProps =>
             <DropdownIndicator closeMenu={this.closeMenu} {...dropdownProps} />
         }}
@@ -287,7 +214,7 @@ export class DropDownInput extends React.Component {
   }
 }
 
-class DropDown extends Field {
+class CascadingDropDown extends Field {
   onBlur = (form) => {
     const { name } = this.props;
     this.props.onBlur();
@@ -307,7 +234,7 @@ class DropDown extends Field {
 
   renderField(form) {
     return (
-      <DropDownInput
+      <CascadingDropDownInput
         onBlur={() => this.onBlur(form)}
         onChange={value => this.onChange(form, value)}
         value={getIn(form.values, this.props.name)}
@@ -317,7 +244,7 @@ class DropDown extends Field {
   }
 }
 
-DropDown.propTypes = {
+CascadingDropDown.propTypes = {
   ...Field.propTypes,
   dataSource: PropTypes.shape({
     getOptions: PropTypes.oneOfType([PropTypes.func, PropTypes.array]).isRequired,
@@ -330,7 +257,7 @@ DropDown.propTypes = {
   isSearchable: PropTypes.bool,
 };
 
-DropDown.defaultProps = {
+CascadingDropDown.defaultProps = {
   handleChange() {},
   isClearable:  false,
   isSearchable: true,
@@ -342,4 +269,4 @@ export {
   SelectContainer,
   DropdownIndicator
 };
-export default DropDown;
+export default CascadingDropDown;
