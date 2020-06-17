@@ -31,7 +31,8 @@ export class AccessibleDropDownInput extends React.Component {
   getSource = (query, populateResults) => {
     const { dataSource } = this.props;
     if (Array.isArray(dataSource.getOptions)) {
-      populateResults(query ? dataSource.getOptions.filter(result => result.label.toLowerCase().indexOf(query.toLowerCase()) !== -1)
+      populateResults(query ? dataSource.getOptions.filter(result =>
+        result.label.toLowerCase().indexOf(query.toLowerCase()) !== -1)
         : dataSource.getOptions);
     }
   }
