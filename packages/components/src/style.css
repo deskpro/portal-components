@@ -1142,7 +1142,21 @@
   }
 }
 .dp-cascading-dropdown {
-  .children {
-
+  & .children {
+    margin-top: 10px;
+    margin-left: 50px;
+    position: relative;
+    & .dp-cascading-dropdown:before {
+      width: 50px;
+      height: 44px;
+      position: absolute;
+      top: 0;
+      left: -50px;
+      content: ' ';
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAzMiAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMSAwLjVWMjEuMjVIMjYuMjUiIHN0cm9rZT0iI0E5QjBCMCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLWRhc2hhcnJheT0iNCAyIi8+PHBhdGggZD0iTTMyIDIxLjI1TDIzIDI2LjQ0NjJMMjMgMTYuMDUzOEwzMiAyMS4yNVoiIGZpbGw9IiNBOUIwQjAiLz48L3N2Zz4=");
+      background-position: top -4px left 20px;
+      background-repeat: no-repeat;
+      background-size: 26px 90%;
+    }
   }
 }
