@@ -292,8 +292,15 @@
 
   &.closed {
     #{$self}-btn {
+      background-color: #fff;
       border-color: $grey-dark;
       color: $grey;
+      &:hover {
+        color: $grey;
+        .fa-circle {
+          background-color: #fff;
+        }
+      }
     }
 
     .fa-envelope {
