@@ -17,6 +17,11 @@
     &:first-child {
       padding-top: 0;
     }
+
+    h2 {
+      border-bottom: 0;
+      line-height: 1.25;
+    }
   }
 
   &-linktitle {
