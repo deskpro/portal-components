@@ -128,44 +128,12 @@ export class DropDownInput extends React.Component {
     };
   }
 
+  componentDidMount() {
+    this.setOptions();
+  }
+
   componentDidUpdate(prevProps, prevState) {
-    const { value: stateValue } = this.state;
-    const { value: propValue, dataSource } = this.props;
-
-    if (Array.isArray(dataSource.getOptions) && propValue && (!stateValue || stateValue.value !== propValue)) {
-      const updateOptions = (options, parentOptions) => {
-        if (options.map(option => option.value).indexOf(propValue) !== -1) {
-          if (prevState.options
-            && JSON.stringify(options) === JSON.stringify(prevState.options.filter(o => o.value !== 'select-back'))
-          ) {
-            return;
-          }
-
-          const newValue = options.find(o => o.value === propValue);
-
-          if (parentOptions) {
-            this.setState({
-              value:   newValue,
-              options: [{
-                label:   this.i18n.back,
-                value:   'select-back',
-                parents: parentOptions,
-              }].concat(options)
-            });
-          } else {
-            this.setState({ value: newValue, options });
-          }
-        } else {
-          options.forEach((childOption) => {
-            if (childOption.children) {
-              updateOptions(childOption.children, options);
-            }
-          });
-        }
-      };
-
-      updateOptions(dataSource.getOptions);
-    }
+    this.setOptions(prevState);
   }
 
   onBlur = () => {
@@ -228,6 +196,46 @@ export class DropDownInput extends React.Component {
       });
       return options;
     });
+  };
+
+  setOptions = (prevState = null) => {
+    const { value: stateValue } = this.state;
+    const { value: propValue, dataSource } = this.props;
+
+    if (Array.isArray(dataSource.getOptions) && propValue && (!stateValue || stateValue.value !== propValue)) {
+      const updateOptions = (options, parentOptions) => {
+        if (options.map(option => option.value).indexOf(propValue) !== -1) {
+          if (prevState && prevState.options
+            && JSON.stringify(options) === JSON.stringify(prevState.options.filter(o => o.value !== 'select-back'))
+          ) {
+            return;
+          }
+
+          const newValue = options.find(o => o.value === propValue);
+
+          if (parentOptions) {
+            this.setState({
+              value:   newValue,
+              options: [{
+                label:   this.i18n.back,
+                value:   'select-back',
+                parents: parentOptions,
+              }].concat(options)
+            });
+          } else {
+            this.setState({ value: newValue, options });
+          }
+        } else {
+          options.forEach((childOption) => {
+            if (childOption.children) {
+              updateOptions(childOption.children, options);
+            }
+          });
+        }
+      };
+
+      updateOptions(dataSource.getOptions);
+    }
   };
 
   render() {
