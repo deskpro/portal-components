@@ -173,7 +173,10 @@ export class CascadingDropDownInput extends React.Component {
       return;
     }
 
-    const findValue = opts => (Array.isArray(opts) ? opts.find(o => o.value === propValue || !!findValue(o.children)) : null);
+    const findValue = opts => (Array.isArray(opts)
+      ? opts.find(o => o.value === propValue || !!findValue(o.children))
+      : null
+    );
     const newValue = findValue(options);
 
     if (Array.isArray(options)
