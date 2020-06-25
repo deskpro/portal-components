@@ -178,8 +178,15 @@
   }
 
   &-rate {
+    &-feedback {
+      display: flex;
+      justify-content: space-between;
+    }
     .dp-po-time {
       top: 100px;
+    }
+    .dp-po-avatar {
+      color: $grey-dark;
     }
   }
 
@@ -207,13 +214,22 @@
     color: $grey-dark;
 
     .dp-po-avatar {
-      margin: 0 10px;
+      margin-right: 10px;
       color: $text-color;
     }
   }
 
   &-rating {
-    margin-left: 10px;
+    margin-left: 5px;
+    display: inline-block;
+    vertical-align: 1px;
+
+    &-label {
+      border: 1px solid $grey;
+      border-radius: 4px;
+      padding: 4px 6px 5px;
+      color: $text-color;
+    }
   }
 }
 
@@ -298,7 +314,7 @@
       &:hover {
         color: $grey;
         .fa-circle {
-          background-color: #fff;
+          color: #fff;
         }
       }
     }
