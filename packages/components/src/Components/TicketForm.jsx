@@ -268,7 +268,7 @@ class TicketForm extends React.Component {
 
   renderFields = (form, setFieldValue = () => {}, fileInputProps = {}) => {
     const {
-      departments, priorities, products, fileUploadUrl, csrfToken, languageId
+      departments, priorities, fileUploadUrl, csrfToken, languageId
     } = this.props;
     return this.getLayout()
       .get('fields', [])
@@ -354,32 +354,10 @@ class TicketForm extends React.Component {
                 required={!!field.get('required', false)}
                 i18n={this.i18n}
                 dataSource={{
-                  getOptions: products
-                    .sort((a, b) => {
-                      if (a.get('display_order') < b.get('display_order')) {
-                        return -1;
-                      }
-                      if (a.get('display_order') > b.get('display_order')) {
-                        return 1;
-                      }
-                      if (a.get('display_order') === b.get('display_order')) {
-                        if (a.get('id') < b.get('id')) {
-                          return -1;
-                        }
-                        if (a.get('id') > b.get('id')) {
-                          return 1;
-                        }
-                      }
-                      return 0;
-                    })
-                    .toArray()
-                    .map(p => (
-                      {
-                        label: p.get('title'),
-                        value: p.get('id'),
-                      }))
-                  }}
-                isClearable={!field.get('required')}
+                  getOptions: recursiveDropdownChoicesWithSorting(field.getIn(['data', 'choices'], new List())
+                    .toArray())
+                }}
+                isClearable={false}
                 isSearchable={false}
               />
             );
