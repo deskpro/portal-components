@@ -18,7 +18,7 @@ import DropArea from './DropArea';
 import DropDown from './Choices/DropDown';
 import AJAXSubmit from '../utils/AJAXSubmit';
 import DynamicForm from '../utils/DynamicForm';
-import { recursiveDropdownChoices } from '../utils/helpers';
+import { recursiveDropdownChoicesWithSorting } from '../utils/helpers';
 
 const invalidDate = new Date('');
 function parseDateFromFormats(formats, parseStrict) {
@@ -308,7 +308,7 @@ class TicketForm extends React.Component {
                 required={!!field.get('required', false)}
                 i18n={this.i18n}
                 dataSource={{
-                  getOptions: recursiveDropdownChoices(field.getIn(['data', 'choices'], new List()).toArray())
+                  getOptions: recursiveDropdownChoicesWithSorting(field.getIn(['data', 'choices'], new List()).toArray())
                 }}
                 isClearable={false}
                 isSearchable={false}
