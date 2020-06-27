@@ -8,7 +8,6 @@ import Email from './Inputs/Email';
 import Textarea from './Inputs/Textarea';
 import DatePicker from './Inputs/DatePicker';
 import DateTimePicker from './Inputs/DateTimePicker';
-// import HijriDatePicker from './Inputs/HijriDatePicker';
 import Checkboxes from './Choices/Checkboxes';
 import DropDown from './Choices/DropDown';
 import MultipleDropDown from './Choices/MultipleDropDown';
@@ -17,6 +16,7 @@ import Hidden from './Inputs/Hidden';
 import Checkbox from './Inputs/Checkbox';
 import Display from './Display';
 import FullDragDrop from './Inputs/FullDragDrop';
+import { recursiveDropdownChoices } from '../utils/helpers';
 
 class TicketField extends React.Component {
   static propTypes = {
@@ -65,11 +65,6 @@ class TicketField extends React.Component {
   };
 
   renderCustomField = () => {
-    const rec = opts => opts.map(option => ({
-      value:    option.get('id'),
-      label:    option.get('title'),
-      children: rec(option.get('children', new List()).toArray())
-    }));
     const {
       field, fileUploadUrl, csrfToken, i18n
     } = this.props;
@@ -107,7 +102,7 @@ class TicketField extends React.Component {
         props.dataSource = {};
         props.isClearable = false;
         props.isSearchable = false;
-        props.dataSource.getOptions = rec(field.getIn(['data', 'choices'], new List()).toArray());
+        props.dataSource.getOptions = recursiveDropdownChoices(field.getIn(['data', 'choices'], new List()).toArray());
         break;
       case 'radio':
         Component = Radio;
@@ -126,7 +121,7 @@ class TicketField extends React.Component {
         Component = MultipleDropDown;
         props.fClassName = 'dp-pc_multi-select';
         props.dataSource = {};
-        props.dataSource.getOptions = rec(field.getIn(['data', 'choices'], new List()).toArray());
+        props.dataSource.getOptions = recursiveDropdownChoices(field.getIn(['data', 'choices'], new List()).toArray());
         break;
       case 'display':
         Component = Display;

@@ -18,6 +18,7 @@ import DropArea from './DropArea';
 import DropDown from './Choices/DropDown';
 import AJAXSubmit from '../utils/AJAXSubmit';
 import DynamicForm from '../utils/DynamicForm';
+import { recursiveDropdownChoices } from '../utils/helpers';
 
 const invalidDate = new Date('');
 function parseDateFromFormats(formats, parseStrict) {
@@ -267,7 +268,7 @@ class TicketForm extends React.Component {
 
   renderFields = (form, setFieldValue = () => {}, fileInputProps = {}) => {
     const {
-      departments, categories, priorities, products, fileUploadUrl, csrfToken, languageId
+      departments, priorities, products, fileUploadUrl, csrfToken, languageId
     } = this.props;
     return this.getLayout()
       .get('fields', [])
@@ -307,32 +308,9 @@ class TicketForm extends React.Component {
                 required={!!field.get('required', false)}
                 i18n={this.i18n}
                 dataSource={{
-                  getOptions: categories
-                    .sort((a, b) => {
-                      if (a.get('display_order') < b.get('display_order')) {
-                        return -1;
-                      }
-                      if (a.get('display_order') > b.get('display_order')) {
-                        return 1;
-                      }
-                      if (a.get('display_order') === b.get('display_order')) {
-                        if (a.get('id') < b.get('id')) {
-                          return -1;
-                        }
-                        if (a.get('id') > b.get('id')) {
-                          return 1;
-                        }
-                      }
-                      return 0;
-                    })
-                    .toArray()
-                    .map(c => (
-                      {
-                        label: c.get('title'),
-                        value: c.get('id'),
-                      }))
-                  }}
-                isClearable={!field.get('required')}
+                  getOptions: recursiveDropdownChoices(field.getIn(['data', 'choices'], new List()).toArray())
+                }}
+                isClearable={false}
                 isSearchable={false}
               />
             );
