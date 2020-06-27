@@ -308,7 +308,8 @@ class TicketForm extends React.Component {
                 required={!!field.get('required', false)}
                 i18n={this.i18n}
                 dataSource={{
-                  getOptions: recursiveDropdownChoicesWithSorting(field.getIn(['data', 'choices'], new List()).toArray())
+                  getOptions: recursiveDropdownChoicesWithSorting(field.getIn(['data', 'choices'], new List())
+                    .toArray())
                 }}
                 isClearable={false}
                 isSearchable={false}
