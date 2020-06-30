@@ -209,6 +209,9 @@
   .medium-editor-action:focus {
     border-color: #b8bfc0;
   }
+  .medium-editor-dragover {
+    background: inherit;
+  }
   &.dp-toggle-checkbox {
     legend {
       font-size: $s15;
