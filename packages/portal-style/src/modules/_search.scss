@@ -406,6 +406,11 @@
         #{$self}-sidebar-count {
           background: $grey;
         }
+        .dp-po-icon .fa-primary,
+        .dp-po-icon .fa-secondary {
+          fill: currentColor;
+        }
+
 
         #{$self}-sidebar-image {
           color: var(--text-color-lighter);
