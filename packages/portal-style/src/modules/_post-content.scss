@@ -159,4 +159,15 @@
     list-style-position: inside;
     margin-left: 15px;
   }
+
+  span.fr-img-caption.fr-dii.fr-fil {
+    float: left;
+    margin: 5px 5px 5px 0;
+    max-width: calc(100% - 5px);
+  }
+  span.fr-img-caption.fr-dii.fr-fir {
+    float: right;
+    margin: 5px 0 5px 5px;
+    max-width: calc(100% - 5px);
+  }
 }
