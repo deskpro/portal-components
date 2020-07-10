@@ -115,9 +115,10 @@ class TicketForm extends React.Component {
   };
 
   getInitialValues = () => {
-    const values = {};
+    const values            = {};
     const { initialValues } = this.props;
-    this.getLayout()
+    const layout            = this.getLayout();
+    layout
       .get('fields', [])
       .filter(f => f.getIn(['data', 'widget_type'], '') !== 'display')
       .forEach((field) => {
@@ -139,6 +140,10 @@ class TicketForm extends React.Component {
           values[field.get('field_id')] = defaultValue;
         }
       });
+
+    layout
+      .get('fields', [])
+      .filter(field => DynamicForm.filterField(field, { values }));
 
     return values;
   };
