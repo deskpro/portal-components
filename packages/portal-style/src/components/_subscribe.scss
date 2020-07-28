@@ -31,11 +31,24 @@
       line-height: 0;
 
       &.fa-check {
-        position: absolute;
-        right: 10px;
-        top: 9px;
         color: $success;
         font-size: 14px;
+      }
+      &.fa-angle-down {
+        position: absolute;
+        right: 10px;
+        top: 6px;
+        font-size: 32px;
+      }
+    }
+    &.active {
+      .dp-po-icon {
+        &.fa-envelope {
+          display: none;
+        }
+        &.fa-check {
+          display: block;
+        }
       }
     }
 
@@ -45,10 +58,6 @@
       border-color: $brand-primary;
 
       svg.dp-po-icon {
-        &.fa-check {
-          display: block;
-          color: $white;
-        }
 
         .fa-primary,
         .fa-secondary {
@@ -98,8 +107,10 @@
         color: $white;
 
         &.fa-check {
-          display: block;
           color: $white;
+        }
+        &.fa-angle-down {
+          transform: rotate(0.5turn);;
         }
 
         .fa-primary,
@@ -181,13 +192,22 @@
 
       .dp-po-icon.fa-check {
         display: none;
-        font-size: 24px;
+        font-size: 14px;
       }
 
       &:hover {
         .dp-po-icon.fa-check {
-          display: block;
           color: $white;
+        }
+      }
+      &.active {
+        .dp-po-icon {
+          &.fa-envelope {
+            display: none;
+          }
+          &.fa-check {
+            display: block;
+          }
         }
       }
     }
@@ -215,7 +235,6 @@
 
         svg.dp-po-icon {
           &.fa-check {
-            display: block;
             color: $white;
           }
 
