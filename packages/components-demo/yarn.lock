@@ -958,10 +958,10 @@
   dependencies:
     immutable "3.8.2"
 
-"@deskpro/portal-components@^0.4.64":
-  version "0.4.64"
-  resolved "https://registry.yarnpkg.com/@deskpro/portal-components/-/portal-components-0.4.64.tgz#c7a3e06faa9b0db9b287061f77d2f6ad2f44af10"
-  integrity sha512-qhxpOsoAhgcYaWseFYMYEAzCfJbKFY/r6VM2dbtYbkLJMApptdE7yujew/m8jc8eyBVrONSNPHWLe4mGZmq0LQ==
+"@deskpro/portal-components@^0.4.67":
+  version "0.4.67"
+  resolved "https://registry.yarnpkg.com/@deskpro/portal-components/-/portal-components-0.4.67.tgz#9c7621689a834d7f9ef5db3f37798764f2920fff"
+  integrity sha512-8OCxfHKdaiGCT/wnDsoMZsCSs6fd3PEd6zlOlVEhU7Mufcb1/fk7WM4UFUGunthiB+e0BvL6F9y+XB4yfo6W6A==
   dependencies:
     "@deskpro/js-utils" "1.0.13"
     "@deskpro/react-datepicker-hijri" "^1.5.0"
@@ -9787,9 +9787,9 @@ websocket-driver@>=0.5.1:
     websocket-extensions ">=0.1.1"
 
 websocket-extensions@>=0.1.1:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/websocket-extensions/-/websocket-extensions-0.1.3.tgz#5d2ff22977003ec687a4b87073dfbbac146ccf29"
-  integrity sha512-nqHUnMXmBzT0w570r2JpJxfiSD1IzoI+HGVdd3aZ0yNi3ngvQ4jv1dtHt5VGxfI2yj5yqImPhOK4vmIh2xMbGg==
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/websocket-extensions/-/websocket-extensions-0.1.4.tgz#7f8473bc839dfd87608adb95d7eb075211578a42"
+  integrity sha512-OqedPIGOfsDlo31UNwYbCFMSaO9m9G/0faIHj5/dZFDMFqPTcx6UwqyOy3COEaEOg/9VsGIpdqn62W5KhoKSpg==
 
 whatwg-encoding@^1.0.1, whatwg-encoding@^1.0.3:
   version "1.0.5"
