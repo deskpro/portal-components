@@ -100,6 +100,7 @@ export class CascadingDropDownInput extends React.Component {
       menuIsOpen: false,
       options:    props.dataSource.getOptions,
     };
+    this.childInput = React.createRef();
   }
 
   componentDidMount() {
@@ -125,6 +126,9 @@ export class CascadingDropDownInput extends React.Component {
   };
 
   onChange = (value) => {
+    if (this.childInput && this.childInput.current) {
+      this.childInput.current.clearValue();
+    }
     if (value && value.children && value.children.length > 0) {
       this.setState({
         value,
@@ -132,6 +136,7 @@ export class CascadingDropDownInput extends React.Component {
         subChoice:  true
       });
       this.select.current.select.blurInput();
+      this.props.onChange(null);
       return true;
     }
     this.setState({
@@ -165,10 +170,15 @@ export class CascadingDropDownInput extends React.Component {
     });
   };
 
+  clearValue = () => {
+    this.setState({
+      value: null
+    });
+  }
+
   setStateValue = () => {
     const { value: stateValue, options, subChoice } = this.state;
     const { value: propValue } = this.props;
-
     if (subChoice) {
       return;
     }
@@ -177,7 +187,7 @@ export class CascadingDropDownInput extends React.Component {
       ? opts.find(o => o.value === propValue || !!findValue(o.children))
       : null
     );
-    const newValue = findValue(options);
+    const newValue = findValue(options) || null;
 
     if (Array.isArray(options)
       && JSON.stringify(newValue) !== JSON.stringify(stateValue)
@@ -191,7 +201,7 @@ export class CascadingDropDownInput extends React.Component {
     const {
       name, dataSource, isClearable, isSearchable, value: propValue, ...props
     } = this.props;
-    const { options, value: stateValue } = this.state;
+    const { value: stateValue } = this.state;
 
     if (Array.isArray(dataSource.getOptions)) {
       return (
@@ -207,7 +217,7 @@ export class CascadingDropDownInput extends React.Component {
               DropdownIndicator: dropdownProps => <DropdownIndicator closeMenu={this.closeMenu} {...dropdownProps} />
             }}
             menuIsOpen={this.state.menuIsOpen}
-            options={options}
+            options={dataSource.getOptions}
             closeMenuOnSelect={this.closeMenuOnSelect}
             classNamePrefix="react-select"
             placeholder={this.i18n.select}
@@ -224,6 +234,7 @@ export class CascadingDropDownInput extends React.Component {
                   value={propValue}
                   dataSource={{ getOptions: stateValue.children }}
                   onChange={this.handleChildrenChange}
+                  ref={this.childInput}
                 />
               </div>
             )

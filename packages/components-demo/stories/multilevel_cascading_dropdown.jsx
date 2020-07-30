@@ -6,7 +6,64 @@ import { Form, CascadingDropDown, Submit, Formik } from '@deskpro/portal-compone
 const options = [
   { value: '1', label: 'Option 1' },
   { value: '2', label: 'Option 2' },
-  { value: '3', label: 'Option 3' },
+  {
+    value:    '3',
+    label:    'Option 3',
+    children: [
+      {
+        value:    '3-A',
+        label:    'Option 3 - A',
+        children: [
+          {
+            value: '3-A-I',
+            label: 'Option 3 - A - I'
+          },
+          {
+            value: '3-A-II',
+            label: 'Option 3 - A - II'
+          },
+          {
+            value: '3-A-III',
+            label: 'Option 3 - A - III'
+          },
+          {
+            value: '3-A-IV',
+            label: 'Option 3 - A - IV'
+          },
+        ]
+      },
+      {
+        value:    '3-B',
+        label:    'Option 3 - B',
+        children: [
+          {
+            value: '3-B-I',
+            label: 'Option 3 - B - I'
+          },
+          {
+            value: '3-B-II',
+            label: 'Option 3 - B - II'
+          },
+          {
+            value: '3-B-III',
+            label: 'Option 3 - B - III'
+          },
+          {
+            value: '3-B-IV',
+            label: 'Option 3 - B - IV'
+          },
+        ]
+      },
+      {
+        value: '3-C',
+        label: 'Option 3 - C'
+      },
+      {
+        value: '3-D',
+        label: 'Option 3 - D'
+      },
+    ]
+  },
   {
     value:    '4',
     label:    'Option 4',
@@ -51,24 +108,42 @@ const options = [
   { value: '6', label: 'Option 6' },
 ];
 
+class Story extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: {
+        value: '4-A-III',
+        label: 'Option 4 - B'
+      }
+    };
+  }
+
+  handleChange = (value) => {
+    this.setState({ value: value });
+  }
+
+  render() {
+    const { value } = this.state;
+    return (
+      <Formik
+        onSubmit={action('submit')}
+        render={() => (
+          <Form>
+            <CascadingDropDown
+              value={value}
+              dataSource={{ getOptions: options }}
+              onChange={this.handleChange}
+              name="multilevel"
+              label="Label"
+            />
+            <Submit>Submit</Submit>
+          </Form>
+        )}
+      />
+    )
+  }
+}
+
 storiesOf('Choices', module)
-  .add('Multilevel Cascading Dropdown', () => (
-    <Formik
-      onSubmit={action('submit')}
-      render={() => (
-        <Form>
-          <CascadingDropDown
-            value={{
-              value: '4-A-III',
-              label: 'Option 4 - B'
-            }}
-            dataSource={{ getOptions: options }}
-            onChange={action('change')}
-            name="multilevel"
-            label="Label"
-          />
-          <Submit>Submit</Submit>
-        </Form>
-      )}
-    />
-  ));
+  .add('Multilevel Cascading Dropdown', () => <Story />);
