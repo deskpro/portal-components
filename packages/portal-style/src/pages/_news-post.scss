@@ -60,6 +60,7 @@
       display: inline-block;
       width: 60px;
       text-align: center;
+      text-transform: uppercase;
       @include typo($s14, 600);
     }
 
