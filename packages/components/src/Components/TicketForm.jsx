@@ -304,6 +304,9 @@ class TicketForm extends React.Component {
                 handleChange={this.handleDepartmentChange}
               />
             );
+          case 'captcha':
+            // captcha is not something we can use at we can use in the widget. Keeping it as it was in the old widget.
+            return null;
           case 'category':
             return (
               <DropDown
