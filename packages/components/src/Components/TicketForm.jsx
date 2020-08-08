@@ -68,6 +68,7 @@ class TicketForm extends React.Component {
     initialValues:      PropTypes.object,
     languageId:         PropTypes.number,
     i18n:               PropTypes.object,
+    onChange:           PropTypes.func,
   };
 
   static defaultProps = {
@@ -81,6 +82,7 @@ class TicketForm extends React.Component {
     departmentPropName: 'department',
     languageId:         0,
     i18n:               {},
+    onChange:           () => {},
   };
 
   constructor(props) {
@@ -103,6 +105,10 @@ class TicketForm extends React.Component {
 
   componentDidUpdate() {
     this.formik.current.setErrors(this.props.errors);
+  }
+
+  componentWillUnmount() {
+    this.props.onChange(this.formik.current.state);
   }
 
   getLayout = () => {
@@ -254,7 +260,9 @@ class TicketForm extends React.Component {
     this.setState({ files });
   };
 
-  handleDepartmentChange = (department) => {
+  handleDepartmentChange = (form, department) => {
+    const { onChange } = this.props;
+    onChange(form);
     this.setState({
       [this.props.departmentPropName]: department
     });
@@ -272,9 +280,11 @@ class TicketForm extends React.Component {
   };
 
   renderFields = (form, setFieldValue = () => {}, fileInputProps = {}) => {
+    this.form = form;
     const {
       departments, priorities, fileUploadUrl, csrfToken, languageId
     } = this.props;
+
     return this.getLayout()
       .get('fields', [])
       .filter(field => DynamicForm.filterField(field, form))
@@ -301,7 +311,7 @@ class TicketForm extends React.Component {
                         .map(cd => ({ label: cd.get('title'), value: cd.get('id') }))
                     }))
                 }
-                handleChange={this.handleDepartmentChange}
+                handleChange={dep => this.handleDepartmentChange(form, dep)}
               />
             );
           case 'captcha':

@@ -141,7 +141,7 @@ class TicketField extends React.Component {
       fileInputProps,
       files,
       handleRemove,
-      i18n,
+      i18n
     } = this.props;
     if (field.get('field_type').match(/^ticket_field/) || field.get('field_type').match(/^chat_field/)) {
       return this.renderCustomField();

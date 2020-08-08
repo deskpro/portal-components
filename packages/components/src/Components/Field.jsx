@@ -21,7 +21,7 @@ class Field extends React.Component {
     fClassName:  PropTypes.string,
     children:    PropTypes.node,
     required:    PropTypes.bool,
-    i18n:        PropTypes.object,
+    i18n:        PropTypes.object
   };
 
   static defaultProps = {
@@ -33,7 +33,7 @@ class Field extends React.Component {
     id:          null,
     children:    null,
     required:    false,
-    i18n:        {},
+    i18n:        {}
   };
 
   constructor(props) {
