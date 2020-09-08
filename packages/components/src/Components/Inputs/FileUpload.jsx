@@ -189,6 +189,7 @@ export class FileUploadInput extends React.Component {
             onRemove={this.handleRemove}
             inputName={name}
             key={`key_${file.name}`}
+            i18n={this.i18n}
             file={file}
           />))}
         </ul>
