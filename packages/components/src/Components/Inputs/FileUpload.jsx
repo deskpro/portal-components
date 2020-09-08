@@ -16,6 +16,7 @@ const I18N = {
   or:          'or',
   chooseAFile: 'Choose a file',
   chooseFiles: 'Choose files',
+  remove:      'remove',
 };
 
 export class FileUploadInput extends React.Component {
