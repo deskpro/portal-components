@@ -108,7 +108,9 @@ class TicketForm extends React.Component {
   }
 
   componentWillUnmount() {
-    this.props.onChange(this.formik.current.state);
+    if (this.props.onChange && typeof this.props.onChange === 'function') {
+      this.props.onChange(this.formik.current.state);
+    }
   }
 
   getLayout = () => {
