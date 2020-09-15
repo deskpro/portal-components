@@ -68,28 +68,24 @@
 }
 
 .dp-po-guides-meta {
-  background: $white;
-  border: 1px solid $grey-light;
-  border-radius: 4px;
-  padding: 20px;
+  display: block;
+  color: #8B9293;
+  font-size: $s15;
+  line-height: 150%;
 
-  .dp-po-post-avatars {
-    margin-bottom: 1em;
-
-    &-item,
-    &-link {
-      border-color: $white;
-    }
+  strong {
+    font-weight: normal;
+    color: #4C4F50;
   }
 
-  p {
-    color: $grey-dark;
-    font-size: $s16;
-
-    &:last-child {
-      margin: 0;
-    }
+  .separator {
+    margin: 0 8px;
   }
+}
+
+.dp-po-post-avatars {
+  margin-top: 10px;
+  flex: 0 0 100%;
 }
 
 .dp-po-guides-section {
@@ -114,6 +110,7 @@
       border-top: none;
       background: $white;
       padding-bottom: 20px;
+      border-radius: 3px 3px 0 0;
     }
 
     &-right {
@@ -123,19 +120,22 @@
   }
 
   &-header {
-    background: #FAFBFB;
+    background: #F7F7F7;
     padding: 20px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid $grey-light;
     border-top: 1px solid $grey-light;
     position: sticky;
+    border-radius: 3px 3px 0 0;
   }
 
   &-title {
-    font-size: $s28;
+    font-size: $s26;
     margin: 0;
+    flex: 0 0 100%;
 
     .dp-po-icon {
       font-size: 20px;
@@ -144,6 +144,12 @@
     .dp-po-icon.dp-info {
       opacity: 1;
     }
+  }
+
+  &-title-section {
+    flex: 0 0 100%;
+    color: #8B9293;
+    font-size: $s14;
   }
 
   &-chapter {
