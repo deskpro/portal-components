@@ -3,10 +3,14 @@
   margin-bottom: -6px;
   background: $grey-lightest;
   min-height: 10px;
-  max-width: 1545px;
 
   &-list {
     margin: 0 28px;
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    max-width: calc(78% - 26px);
+    flex-direction: row-reverse;
   }
 
   &-item {
@@ -17,34 +21,33 @@
     display: inline-block;
     margin: 0 0 0 -3px;
     max-width: 315px;
+    min-width: 178px;
     position: relative;
-    :first-of-type {
-      margin-left: 0;
+    flex-shrink: 1;
+    &:first-child {
+      margin-right: auto;
+    }
+    &::before, &::after {
+      position: absolute;
+      right: -26px;
+      border-right: 26px solid transparent;
+      content: '';
+      width: 0;
+      height: 0;
     }
     &::before {
-      position: absolute;
-      right: -40px;
       top: -1px;
-      content: '';
-      width: 0;
-      height: 0;
-      border-bottom: 100px solid #EFF0F0;
-      border-right: 40px solid transparent;
+      border-bottom: 65px solid #EFF0F0;
+
     }
     &::after {
-      position: absolute;
-      right: -40px;
       top: 1px;
-      content: '';
-      width: 0;
-      height: 0;
-      border-bottom: 100px solid #FBFBFB;
-      border-right: 40px solid transparent;
+      border-bottom: 65px solid #FBFBFB;
     }
 
     &.active {
       background-color: #FFF;
-      border-color: #D3D6D7;
+      border-color: currentColor;
       color: #4C4F50;
       z-index: 1;
       &::after {
@@ -52,7 +55,7 @@
         z-index: 1;
       }
       &::before {
-        border-bottom-color: #D3D6D7;
+        border-bottom-color: currentColor;
         z-index: 1;
       }
       #{$self}-link {
@@ -69,7 +72,7 @@
     text-overflow: ellipsis;
     overflow: hidden;
     width: 100%;
-    padding: 15px 20px 15px 30px;
+    padding: 10px 10px 13px 20px;
 
     .dp-po-icon {
       width: 40px;
@@ -226,11 +229,23 @@
     color: #4C4F50;
     background: none;
     font-size: $s23;
+    margin-bottom: 12px;
+    white-space: nowrap;
+    display: flex;
+    max-width: 100%;
+    span {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      display: inline-block;
+      margin-top: 4px;
+    }
+
     .fa-angle-down {
       margin-left: 10px;
       font-size: 25px;
+      margin-top: 8px;
     }
-    margin-bottom: 20px;
   }
   &.opened {
     #{$self}-button .fa-angle-down {
@@ -264,6 +279,7 @@
     text-overflow: ellipsis;
     overflow: hidden;
     width: 100%;
+    max-width: 230px;
     line-height: 150%;
     padding: 10px 20px;
   }
