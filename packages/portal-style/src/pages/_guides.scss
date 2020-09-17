@@ -1003,6 +1003,7 @@
   }
 }
 .dp-po-guides-subtopic {
+  $self: '.dp-po-guides-subtopic';
   flex-grow: 0;
   background-color: white;
   border-radius: 3px 3px 0 0;
@@ -1011,6 +1012,13 @@
   margin: 0 10px 10px;
   min-width: 100px;
   flex-basis: calc(50% - 20px);
+  &:hover {
+    text-decoration: none;
+    border-bottom-color: var(--brand-primary);
+    #{$self}-title {
+      color: var(--brand-primary);
+    }
+  }
 
   &-title {
     font-family: Rubik, sans-serif;
