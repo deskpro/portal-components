@@ -114,16 +114,15 @@
     }
     #{$self}-search {
       position: fixed;
-      top: 129px;
+      top: 28px;
       overflow-y: auto;
       max-height: calc(100vh - 157px);
     }
     #{$self}-image {
       display: none;
     }
-    #{$self}-block-article-right,
-    #{$self}-block-header {
-      top: 129px;
+    #{$self}-block-article-right {
+      top: 28px;
     }
     #{$self}-block-header {
       z-index: 1;

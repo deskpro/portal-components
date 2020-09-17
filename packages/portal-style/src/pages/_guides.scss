@@ -105,18 +105,28 @@
     }
 
     &-left {
-      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-      border: 1px solid $grey-light;
       border-top: none;
-      background: $white;
       padding-bottom: 20px;
       border-radius: 3px 3px 0 0;
+
+      .dp-po-comments {
+        padding-top: 30px;
+        border-top: 1px solid #d3d6d7;
+        .dp-po-avatar strong {
+          color: #8B9293;
+        }
+      }
     }
 
     &-right {
       position: sticky;
       align-self: flex-start;
     }
+  }
+
+  &-main {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
   }
 
   &-header {
@@ -126,9 +136,8 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid $grey-light;
-    border-top: 1px solid $grey-light;
-    position: sticky;
+    border: 1px solid $grey-light;
+    border-bottom-width: 0;
     border-radius: 3px 3px 0 0;
   }
 
@@ -205,6 +214,64 @@
 
   &-content {
     padding: 20px;
+    background: white;
+    border: 1px solid #D3D6D7;
+    border-radius: 0 0 4px 4px;
+    z-index: 1;
+  }
+
+  &-next-topic,
+  &-previous-topic {
+    height: 88px;
+    border-top: 1px solid #d3d6d7;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    .title {
+      font-family: 'Rubik', sans-serif;
+      font-size: $s26;
+      line-height: 150%;
+      color: #8B9293;
+      width: calc(100% - 100px);
+    }
+    .sup {
+      font-family: Lato, Helvetica Neue, Arial, Helvetica, sans-serif;
+      font-size: $s14;
+      color: #8B9293;
+      text-transform: uppercase;
+      width: calc(100% - 100px);
+      height: 15px;
+      margin-top: 20px;
+    }
+    .dp-po-icon {
+      color: var(--brand-primary);
+      padding: 5px 20px;
+      height: 48px;
+      border-right: 1px solid #8B9293;
+      margin: 20px 20px 20px 0;
+      order: -1;
+      svg {
+        font-size: 41px;
+      }
+    }
+    &:hover {
+      background-color: var(--brand-primary-l-350);
+      text-decoration: none;
+      .title {
+        color: var(--brand-primary);
+      }
+    }
+  }
+  &-next-topic {
+    .title, .sup {
+      text-align: right;
+    }
+    .dp-po-icon {
+      border-right: none;
+      border-left: 1px solid #8b9293;
+      margin: 20px 0 20px 20px;
+      order: 1;
+    }
   }
 }
 
