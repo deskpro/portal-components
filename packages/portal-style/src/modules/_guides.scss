@@ -109,9 +109,6 @@
         background-color: $grey-lightest;
       }
     }
-    #{$self}-section {
-      margin-top: 75px;
-    }
     #{$self}-search {
       position: fixed;
       top: 28px;
@@ -152,6 +149,6 @@
     top: 0;
     bottom: 0;
     width: calc(100% - 30px);
-    padding: calc(50% - 27px);
+    padding: calc(40vh - 27px) calc(50% - 27px);
   }
 }

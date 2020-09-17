@@ -1,11 +1,11 @@
 .dp-po-guides-tabs {
   $self: '.dp-po-guides-tabs';
-  margin-bottom: -6px;
+  margin-bottom: -5px;
   background: $grey-lightest;
   min-height: 10px;
 
   &-list {
-    margin: 0 28px;
+    margin: 0 3px;
     display: flex;
     flex-wrap: nowrap;
     white-space: nowrap;
@@ -15,8 +15,9 @@
 
   &-item {
     border-radius:  4px 0 0 0;
-    border: 1px solid #EFF0F0;
+    border: 1px solid #d3d6d7;
     border-right-color: #FFF !important;
+    border-bottom-width: 0;
     background: #FBFBFB;
     display: inline-block;
     margin: 0 0 0 -3px;
@@ -37,7 +38,7 @@
     }
     &::before {
       top: -1px;
-      border-bottom: 65px solid #EFF0F0;
+      border-bottom: 65px solid #d3d6d7;
 
     }
     &::after {
@@ -72,11 +73,12 @@
     text-overflow: ellipsis;
     overflow: hidden;
     width: 100%;
+    font-size: $s19;
     padding: 10px 10px 13px 20px;
 
     .dp-po-icon {
-      width: 40px;
-      height: 40px;
+      width: 30px;
+      height: 30px;
       align-items: center;
       justify-content: center;
       display: inline-flex;
@@ -85,7 +87,7 @@
       border-radius: 50%;
       margin-right: 5px;
       margin-bottom: 0;
-      font-size: 20px;
+      font-size: 15px;
       vertical-align: middle;
 
       img {
@@ -221,7 +223,7 @@
 }
 .dp-po-guides-dropdown {
   $self: '.dp-po-guides-dropdown';
-  margin: 0 28px;
+  margin: 0 21px;
   position: relative;
   &-button {
     border: 0;
@@ -229,16 +231,18 @@
     color: #4C4F50;
     background: none;
     font-size: $s23;
-    margin-bottom: 12px;
+    margin-bottom: 5px;
     white-space: nowrap;
     display: flex;
     max-width: 100%;
+    padding: 8px 0 3px;
     span {
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden;
       display: inline-block;
       margin-top: 4px;
+      align-self: start;
     }
 
     .fa-angle-down {
@@ -286,15 +290,17 @@
   figure.dp-po-icon {
     margin-right: 10px;
     color: white;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     vertical-align: -3px;
     margin-bottom: 0;
-    font-size: 20px;
+    font-size: 15px;
     background: var(--warning);
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     align-items: center;
+    align-self: flex-end;
+    flex-shrink: 0;
   }
 }
