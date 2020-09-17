@@ -988,3 +988,64 @@
     }
   }
 }
+.dp-po-guides-subtopics {
+  display: flex;
+  margin: 0;
+  flex-wrap: wrap;
+  border-top: 1px solid $grey-light;
+  padding: 20px 10px;
+  h3 {
+    text-transform: uppercase;
+    font-size: $s14;
+    font-family: Lato, sans-serif;
+    width: 100%;
+    padding: 0 10px 15px;
+  }
+}
+.dp-po-guides-subtopic {
+  flex-grow: 0;
+  background-color: white;
+  border-radius: 3px 3px 0 0;
+  border-bottom: 2px solid #d3d6d7;
+  padding: 15px 18px;
+  margin: 0 10px 10px;
+  min-width: 100px;
+  flex-basis: calc(50% - 20px);
+
+  &-title {
+    font-family: Rubik, sans-serif;
+    font-size: $s17;
+    color: #4C4F50;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+
+  .dp-po-post-avatars {
+    display: inline-block;;
+    height: 50px;
+    padding-right: 13px;
+    .dp-po-post-avatars-item,
+    .dp-po-post-avatars-link {
+      border-color: white;
+    }
+  }
+
+  &-dates {
+    display: inline-block;
+    font-size: $s12;
+    color: #8b9293;
+    line-height: 150%;
+    white-space: nowrap;
+    max-width: calc(100% - 100px);
+    span.title {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    strong {
+      color: #4C4F50;
+    }
+  }
+}
