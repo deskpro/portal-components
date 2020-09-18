@@ -48,7 +48,7 @@
 
     &.active {
       background-color: #FFF;
-      border-color: currentColor;
+      border-color: #A9B0B0;
       color: #4C4F50;
       z-index: 1;
       &::after {
@@ -56,7 +56,7 @@
         z-index: 1;
       }
       &::before {
-        border-bottom-color: currentColor;
+        border-bottom-color: #A9B0B0;
         z-index: 1;
       }
       #{$self}-link {

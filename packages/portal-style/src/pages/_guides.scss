@@ -145,6 +145,10 @@
     font-size: $s26;
     margin: 0;
     flex: 0 0 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    overflow: hidden;
 
     .dp-po-icon {
       font-size: 20px;
@@ -233,6 +237,10 @@
       line-height: 150%;
       color: #8B9293;
       width: calc(100% - 100px);
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      max-width: 100%;
+      overflow: hidden;
     }
     .sup {
       font-family: Lato, Helvetica Neue, Arial, Helvetica, sans-serif;
@@ -248,10 +256,12 @@
       padding: 5px 20px;
       height: 48px;
       border-right: 1px solid #8B9293;
-      margin: 20px 20px 20px 0;
+      margin: 20px 10px 20px 0;
       order: -1;
+      width: 60px;
       svg {
         font-size: 41px;
+        width: 20px;
       }
     }
     &:hover {
@@ -265,12 +275,14 @@
   &-next-topic {
     .title, .sup {
       text-align: right;
+      width: calc(100% - 80px);
     }
     .dp-po-icon {
       border-right: none;
       border-left: 1px solid #8b9293;
-      margin: 20px 0 20px 20px;
+      margin: 20px 0 20px 0;
       order: 1;
+      width: 40px;
     }
   }
 }
@@ -993,13 +1005,13 @@
   margin: 0;
   flex-wrap: wrap;
   border-top: 1px solid $grey-light;
-  padding: 20px 10px;
+  padding: 14px 10px 20px;
   h3 {
     text-transform: uppercase;
     font-size: $s14;
     font-family: Lato, sans-serif;
     width: 100%;
-    padding: 0 10px 15px;
+    padding: 0 10px 8px;
   }
 }
 .dp-po-guides-subtopic {
