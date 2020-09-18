@@ -11,8 +11,8 @@
       background: $white;
       border: 1px solid $grey-light;
       border-radius: 4px;
-      padding: 10px 10px 10px 50px;
-      font-size: $p2-font-size;
+      padding: 11px 10px 11px 48px;
+      font-size: $s17;
       color: $grey-dark;
       outline: none;
 
@@ -26,11 +26,10 @@
       position: absolute;
       border: none;
       height: 32px;
-      left: 25px;
-      position: absolute;
+      left: 13px;
       top: calc(50% - 16px);
       width: 32px;
-      font-size: 20px;
+      font-size: 18px;
       padding: 0;
       color: $brand-primary;
       background-color: $white;
@@ -46,23 +45,6 @@
   }
 
   &-content {
-    .fa-caret-down {
-      margin-left: 10px;
-      display: none;
-      vertical-align: -3px;
-    }
-
-    a:hover {
-      text-decoration: none;
-      .fa-caret-down {
-        display: inline;
-      }
-    }
-
-    .expanded .fa-caret-down {
-      transform: rotate(180deg);
-    }
-
     &-accordion {
       margin-bottom: 10px;
     }
@@ -75,6 +57,14 @@
       display: block;
       padding: 10px;
       border-radius: 2px;
+      max-width: 100%;
+      .title {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: inline-block;
+        max-width: calc(100% - 14px);
+      }
 
       .dp-po-icon {
         float: right;
@@ -110,8 +100,33 @@
       margin: 0;
       padding: 10px;
 
+      .dp-po-icon {
+        margin-bottom: 0;
+        display: inline-block;
+        padding-right: 3px;
+      }
+      .fa-caret-down {
+        margin-left: 10px;
+        opacity: 0;
+        vertical-align: 1px;
+      }
+
+      a:hover {
+        text-decoration: none;
+        .fa-caret-down {
+          opacity: 1;
+        }
+      }
+
+      .expanded .fa-caret-down {
+        transform: rotate(180deg);
+      }
+
       .chapter {
         text-transform: uppercase;
+        &:hover {
+          color: var(--brand-primary);
+        }
       }
     }
 
@@ -168,10 +183,6 @@
     &-subitem {
       list-style: none;
       margin-top: 10px;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      max-width: 100%;
-      overflow: hidden;
     }
 
     &-sublink {
@@ -221,9 +232,8 @@
       position: relative;
       white-space: nowrap;
       text-overflow: ellipsis;
-      max-width: calc(100% - 20px);
-      overflow: hidden;
-      display: inline-block;
+      max-width: 100%;
+      display: block;
 
       &.active {
         color: $brand-primary;
@@ -240,4 +250,12 @@
       }
     }
   }
+}
+
+.dp-po-guide-topic-list-item {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  display: inline-block;
+  overflow: hidden;
 }

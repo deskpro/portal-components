@@ -19,7 +19,7 @@
     list-style: none;
     display: inline-block;
     margin: 0 0 0 -15px;
-    border: 3px solid $grey-lightest;
+    border: 4px solid $grey-lightest;
     border-radius: 50%;
     vertical-align: bottom;
 
@@ -47,6 +47,7 @@
     display: block;
     border-radius: 50%;
     border: 2px solid $grey-lightest;
+    margin: -1px;
   }
 
   &-image {

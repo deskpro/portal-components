@@ -137,7 +137,6 @@
     align-items: center;
     justify-content: space-between;
     border: 1px solid $grey-light;
-    border-bottom-width: 0;
     border-radius: 3px 3px 0 0;
   }
 
@@ -221,6 +220,7 @@
     background: white;
     border: 1px solid #D3D6D7;
     border-radius: 0 0 4px 4px;
+    border-top-width: 0;
     z-index: 1;
   }
 
@@ -1040,6 +1040,8 @@
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 100%;
+    width: 100%;
+    display: inline-block;
   }
 
   .dp-po-post-avatars {
