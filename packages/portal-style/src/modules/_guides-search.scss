@@ -124,6 +124,7 @@
 
       .chapter {
         text-transform: uppercase;
+        font-weight: bold;
         &:hover {
           color: var(--brand-primary);
         }

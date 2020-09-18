@@ -112,8 +112,8 @@
       .dp-po-comments {
         padding-top: 30px;
         border-top: 1px solid #d3d6d7;
-        .dp-po-avatar strong {
-          color: #8B9293;
+        .dp-po-comments-add button .dp-po-icon {
+          margin: 0;
         }
       }
     }
@@ -131,7 +131,7 @@
 
   &-header {
     background: #F7F7F7;
-    padding: 20px;
+    padding: 10px 20px 20px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;

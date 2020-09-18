@@ -1,6 +1,5 @@
 .dp-po-guides-tabs {
   $self: '.dp-po-guides-tabs';
-  margin-bottom: -5px;
   background: $grey-lightest;
   min-height: 10px;
 
@@ -74,7 +73,7 @@
     overflow: hidden;
     width: 100%;
     font-size: $s19;
-    padding: 10px 10px 13px 20px;
+    padding: 10px 10px 10px 20px;
 
     .dp-po-icon {
       width: 30px;
@@ -223,7 +222,6 @@
 }
 .dp-po-guides-dropdown {
   $self: '.dp-po-guides-dropdown';
-  margin: 0 21px;
   position: relative;
   &-button {
     border: 0;
@@ -231,7 +229,7 @@
     color: #4C4F50;
     background: none;
     font-size: $s23;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
     white-space: nowrap;
     display: flex;
     max-width: 30%;
