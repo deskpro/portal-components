@@ -635,26 +635,26 @@
     margin: 10px 0;
     border-radius: 2px;
     box-sizing: border-box;
-    &::before {
-      font: normal normal normal 24px 'Font Awesome 5 Free';
-      font-weight: 900;
-      float: left;
-      margin-right: 10px;
-    }
-    &.info {
-      background-color: #e7f2fa;
-      border: 1px solid #6ab0de;
-      &::before {
-        content: "\f05a";
-      }
-    }
-    &.warning {
-      background-color: #fffbb5;
-      border: solid 1px #f6982e;
-      &::before {
-        content: "\f071";
-      }
-    }
+    //&::before {
+    //  font: normal normal normal 24px 'Font Awesome 5 Free';
+    //  font-weight: 900;
+    //  float: left;
+    //  margin-right: 10px;
+    //}
+    //&.info {
+    //  background-color: #e7f2fa;
+    //  border: 1px solid #6ab0de;
+    //  &::before {
+    //    content: "\f05a";
+    //  }
+    //}
+    //&.warning {
+    //  background-color: #fffbb5;
+    //  border: solid 1px #f6982e;
+    //  &::before {
+    //    content: "\f071";
+    //  }
+    //}
     p {
       padding-left: 35px;
     }
@@ -1040,6 +1040,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-weight: 500;
     max-width: 100%;
     width: 100%;
     display: inline-block;

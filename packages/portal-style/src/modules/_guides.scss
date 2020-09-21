@@ -112,6 +112,8 @@
     #{$self}-search {
       position: fixed;
       top: 28px;
+    }
+    #{$self}-search-block {
       overflow-y: auto;
       max-height: calc(100vh - 157px);
     }
@@ -147,8 +149,9 @@
     z-index: 4;
     top: 0;
     bottom: 0;
-    width: calc(100% - 30px);
-    padding: calc(50vh - 27px) calc(50% - 27px);
+    border-radius: 4px 4px 0 0;
+    width: 100%;
+    padding: calc(50vh - 27px) calc(50% - 145px);
     margin-bottom: 40px;
   }
 }
