@@ -170,4 +170,24 @@
     margin: 5px 0 5px 5px;
     max-width: calc(100% - 5px);
   }
+  table {
+    margin: 1rem 0;
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+
+  table th,
+  table td {
+    position: relative;
+    padding: 0 0.5em;
+    border: 1px solid rgba(0,0,0,0.075);
+    font-weight: normal;
+    text-align: left;
+  }
+
+  table th {
+    font-weight: 500;
+    background: rgba(0, 0, 0, 0.025);
+  }
 }
