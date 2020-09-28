@@ -100,14 +100,18 @@
   & .dp-pc_error_message,
   & .dp-pc_description {
     font-size: 12px;
-    margin-top: 7px;
-    color: var(--label-color);
     display: block;
+  }
+
+  & .dp-pc_description {
+    color: var(--label-color);
+    margin-bottom: 7px;
   }
 
   /* Error Message */
   & .dp-pc_error_message {
     color: var(--error-color);
+    margin-top: 7px;
   }
 
   & ::-webkit-input-placeholder { /* WebKit browsers */

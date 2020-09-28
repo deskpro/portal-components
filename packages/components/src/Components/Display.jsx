@@ -34,8 +34,8 @@ class Display extends Field {
     return (
       <div className={classNames('dp-pc_field', this.className)}>
         {this.type !== 'hidden' ? this.renderLabel() : null}
-        {this.renderField()}
         {this.renderDescription()}
+        {this.renderField()}
       </div>
     );
   }

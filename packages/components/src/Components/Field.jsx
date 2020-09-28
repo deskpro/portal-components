@@ -119,11 +119,12 @@ class Field extends React.Component {
               className={classNames('dp-pc_field', this.className, fClassName, { 'dp-pc_error': touch && error })}
             >
               {this.type !== 'hidden' ? this.renderLabel() : null}
+              {this.renderDescription()}
               {this.renderField(form)}
               {
                 touch && error && typeof error === 'string'
                   ? <ErrorMessage name={searchName} form={form} touchName={name} />
-                  : this.renderDescription()
+                  : null
               }
             </div>
           );
