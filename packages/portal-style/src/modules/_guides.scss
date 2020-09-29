@@ -3,41 +3,43 @@
 
   &-item {
     margin-bottom: 30px;
-    border: 1px solid #D3D6D7;
     box-sizing: border-box;
-    border-radius: 10px;
     height: 260px;
+    &:hover {
+      filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.1));
+    }
   }
 
   &-card {
     display: flex;
     color: $text-color;
+    border: 1px solid #D3D6D7;
+    border-radius: 10px;
 
     &:hover {
-      text-decoration: none;
+      border-color: $brand-primary;
 
       #{$self}-content {
         color: $text-color;
       }
 
       #{$self}-title {
-        text-decoration: underline;
-      }
-
-      #{$self}-btn {
-        opacity: 0.8;
+        a {
+          color: $brand-primary;
+        }
       }
     }
   }
 
   &-left {
     text-align: center;
-    height: 260px;
+    height: 258px;
     width: 162px;
     flex-shrink: 0;
     position: relative;
     overflow: hidden;
     border-radius: 10px 0 0 10px;
+    background-color: #FBFBFB;
 
     #{$self}-image {
       height: 100%;
@@ -48,7 +50,7 @@
 
     #{$self}-icon-background {
       position: absolute;
-      top: calc(50% - 110px);
+      top: calc(50% - 109px);
       left: calc(50% - 110px);
       width: 220px;
       height: 220px;
@@ -74,7 +76,7 @@
 
     #{$self}-icon {
       position: absolute;
-      top: calc(50% - 33px);
+      top: calc(50% - 32px);
       left: calc(50% - 33px);
       flex: 0 0 140px;
       width: 66px;
@@ -119,6 +121,9 @@
       white-space: nowrap;
       max-height: 35px;
       height: 35px;
+      a {
+        color: $grey-darkest;
+      }
     }
   }
 
@@ -134,6 +139,14 @@
     align-self: flex-end;
     margin-bottom: 0;
     margin-top: auto;
+    color: #8B9293;
+    border: 1px solid #A9B0B0;
+    transition: none;
+    &:hover {
+      border-color: $brand-primary;
+      color: $brand-primary;
+      background: none;
+    }
   }
 
   .fixed {
