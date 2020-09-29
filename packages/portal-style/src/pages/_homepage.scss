@@ -78,7 +78,15 @@
     border-radius: 4px;
   }
 
-  &-guides {}
+  &-guides {
+    .dp-po-title {
+      .dp-po-title-link {
+        .dp-po-title-svg {
+          margin-right: 19px;
+        }
+      }
+    }
+  }
 }
 
 .dp-po-mobile-community-tags {

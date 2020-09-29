@@ -3,9 +3,13 @@
 
   &-item {
     margin-bottom: 30px;
+    border: 1px solid #D3D6D7;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 260px;
   }
 
-  &-link {
+  &-card {
     display: flex;
     color: $text-color;
 
@@ -28,65 +32,108 @@
 
   &-left {
     text-align: center;
-    flex: 0 0 50%;
+    height: 260px;
+    width: 162px;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px 0 0 10px;
+
+    #{$self}-image {
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+    }
+
+    #{$self}-icon-background {
+      position: absolute;
+      top: calc(50% - 110px);
+      left: calc(50% - 110px);
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      filter: grayscale(1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.5;
+      background: #e9e9e9;
+
+      .dp-po-icon {
+        font-size: 150px;
+        width: 150px;
+        margin-bottom: 0;
+        svg {
+          width: 100%;
+          height: auto;
+          vertical-align: -16px;
+        }
+      }
+    }
+
+    #{$self}-icon {
+      position: absolute;
+      top: calc(50% - 33px);
+      left: calc(50% - 33px);
+      flex: 0 0 140px;
+      width: 66px;
+      height: 66px;
+      background: $info-light;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+
+      .dp-po-icon {
+        font-size: 40px;
+        width: 40px;
+        margin-bottom: 0;
+        svg {
+          width: 100%;
+          height: auto;
+          vertical-align: -6px;
+        }
+      }
+    }
   }
 
   &-right {
-    flex: 0 0 50%;
+    flex-grow: 1;
     display: flex;
     flex-wrap: wrap;
-  }
+    padding: 40px 40px 30px;
+    max-width: calc(100% - 162px);
+    background: #FFFFFF;
+    max-height: 258px;
+    border-radius: 0 10px 10px 0;
+    justify-content: space-between;
 
-  &-icon {
-    flex: 0 0 140px;
-    width: 140px;
-    height: 140px;
-    background: $info-light;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-
-    .dp-po-icon {
-      font-size: 70px;
+    #{$self}-title {
+      flex-grow: 0;
+      max-width: 100%;
+      width: 100%;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      max-height: 35px;
+      height: 35px;
     }
-
-    &-purple {
-      background: $purple-light;
-    }
-
-    &-neutral {
-      background: $neutral-light;
-    }
-
-    &-warning {
-      background: $warning-light;
-    }
-
-    &-success {
-      background: $success-light;
-    }
-
-    &-pink {
-      background: $pink-light;
-    }
-
-    &-danger {
-      background: $danger-light;
-    }
-  }
-
-  &-title {
-    margin: 25px 0 0;
   }
 
   &-content {
+    flex-grow: 1;
     line-height: 1.5;
+    width: 100%;
+    justify-content: flex-start;
+    height: calc(100% - 106px);
   }
 
   &-btn {
     align-self: flex-end;
+    margin-bottom: 0;
+    margin-top: auto;
   }
 
   .fixed {
