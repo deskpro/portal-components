@@ -206,4 +206,24 @@
       }
     }
   }
+
+  .dp-po-message-bar {
+    border: 1px solid $success;
+    border-radius: 4px;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+  }
+
+  .dp-po-message-bar-error {
+    border: 1px solid $danger;
+    border-radius: 4px;
+    padding: 5px 10px;
+    margin: 10px 0;
+    color: $danger;
+  }
+
+  // Fix for red border in Firefox by default in Guides comments
+  textarea:invalid {
+    box-shadow: none;
+  }
 }
