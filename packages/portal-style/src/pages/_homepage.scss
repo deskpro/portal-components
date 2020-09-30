@@ -80,11 +80,36 @@
 
   &-guides {
     .dp-po-title {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 18px;
       .dp-po-title-link {
         .dp-po-title-svg {
           margin-right: 19px;
         }
       }
+    }
+    &-all-guides {
+      align-self: flex-end;
+      border-color: $grey-light;
+      color: $brand-primary;
+      background-color: $white;
+      margin-bottom: 5px;
+      .dp-po-icon {
+        font-size: 21px;
+        margin-left: 10px;
+      }
+      &:hover {
+        color: white;
+        background: $brand-primary;
+        .dp-po-icon {
+          color: $brand-primary;
+        }
+      }
+    }
+    .dp-po-guides {
+      padding-top: 0;
     }
   }
 }

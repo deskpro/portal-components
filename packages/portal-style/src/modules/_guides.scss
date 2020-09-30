@@ -38,7 +38,7 @@
     flex-shrink: 0;
     position: relative;
     overflow: hidden;
-    border-radius: 10px 0 0 10px;
+    border-radius: 9px 0 0 9px;
     background-color: #FBFBFB;
 
     #{$self}-image {
@@ -59,18 +59,21 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      opacity: 0.5;
-      background: #e9e9e9;
-
-      .dp-po-icon {
-        font-size: 150px;
-        width: 150px;
-        margin-bottom: 0;
-        svg {
-          width: 100%;
-          height: auto;
-          vertical-align: -16px;
-        }
+      opacity: 0.1;
+      background: #f0f0f0;
+      color: white;
+      font-size: 150px;
+      margin-bottom: 0;
+      img, svg {
+        width: 60%;
+        height: auto;
+        vertical-align: -16px;
+        color: white !important;
+      }
+      span.dp-po-icon {
+        width: 100%;
+        height: 100%;
+        display: block;
       }
     }
 
@@ -87,16 +90,13 @@
       align-items: center;
       justify-content: center;
       margin: 0 auto;
-
-      .dp-po-icon {
-        font-size: 40px;
-        width: 40px;
-        margin-bottom: 0;
-        svg {
-          width: 100%;
-          height: auto;
-          vertical-align: -6px;
-        }
+      font-size: 40px;
+      color: white;
+      img, svg {
+        width: 60%;
+        height: auto;
+        vertical-align: -6px;
+        color: white !important;
       }
     }
   }
@@ -109,20 +109,23 @@
     max-width: calc(100% - 162px);
     background: #FFFFFF;
     max-height: 258px;
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 9px 9px 0;
     justify-content: space-between;
 
     #{$self}-title {
       flex-grow: 0;
-      max-width: 100%;
-      width: 100%;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
       max-height: 35px;
       height: 35px;
+      max-width: 100%;
+      width: 100%;
       a {
         color: $grey-darkest;
+        max-width: 100%;
+        width: 100%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        display: inline-block;
       }
     }
   }
@@ -133,6 +136,11 @@
     width: 100%;
     justify-content: flex-start;
     height: calc(100% - 106px);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    position: relative;
+    overflow: hidden;
   }
 
   &-btn {
