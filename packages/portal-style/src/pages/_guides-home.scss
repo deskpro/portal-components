@@ -1,0 +1,43 @@
+.dp-po-guides-home {
+  .dp-po-title {
+    width: 100%;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #D3D6D7;
+    display: flex;
+    margin-bottom: 10px;
+  }
+  .dp-po-guides-filter {
+    margin-left: auto;
+    align-self: flex-end;
+    position: relative;
+    input {
+      background-color: white;
+      border-radius: 4px;
+      border: 1px solid #A9B0B0;
+      font-family: Rubik, sans-serif;
+      font-size: 17px;
+      padding: 9px 30px 10px 50px;
+      width: 360px;
+      line-height: 150%;
+      &:focus {
+        border-color: $brand-primary;
+        outline: none;
+      }
+    }
+    .fa-search {
+      position: absolute;
+      left: 21px;
+      top: 14px;
+      color: $brand-primary;
+    }
+  }
+  .dp-po-guides-item {
+    margin-bottom: 20px;
+  }
+  .dp-po-guides > .row > .col-md-6:nth-child(2n - 1) {
+    padding-right: 32px;
+  }
+  .dp-po-guides > .row > .col-md-6:nth-child(2n) {
+    padding-left: 32px;
+  }
+}
