@@ -538,9 +538,17 @@
   /******************************
       Input radio
   *******************************/
+  & .dp-pc_radio_description {
+    position: absolute;
+    top: 28px;
+  }
+
   & .dp-pc_radios {
     padding: 23px 10px 0 0;
     width: 100%;
+    &.dp-pc_radio-with-desc {
+      padding-top: 36px;
+    }
   }
   & .dp-pc_radio {
     margin-top: 10px;
@@ -602,6 +610,9 @@
     top: 7px;
     font-size: 14px;
     color: var(--label-color);
+    &.dp-pc_radio-with-desc {
+      top: 0;
+    }
   }
 
   &.dp-pc_error .dp-pc_radio {

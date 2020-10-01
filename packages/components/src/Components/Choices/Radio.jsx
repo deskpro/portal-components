@@ -44,20 +44,30 @@ class Radio extends Field {
   renderLabel = () => {
     const {
       label,
+      description
     } = this.props;
     const htmlFor = this.id;
     /* eslint-disable jsx-a11y/label-has-for */
     return (
-      <label className="dp-pc_radio_label" htmlFor={htmlFor}>
+      <label className={classNames('dp-pc_radio_label', { 'dp-pc_radio-with-desc': description })} htmlFor={htmlFor}>
         {label}
       </label>
     );
     /* eslint-enable jsx-a11y/label-has-for */
   };
 
+  renderDescription = () => {
+    const { description } = this.props;
+
+    if (description) {
+      return <span className="dp-pc_description dp-pc_radio_description">{description}</span>;
+    }
+    return null;
+  };
+
   renderField = (form) => {
     const {
-      name, options, className, fClassName, errorsName, ...props
+      description, name, options, className, fClassName, errorsName, ...props
     } = this.props;
     const htmlId = this.id;
     const value = getIn(form.values, name);
@@ -66,7 +76,7 @@ class Radio extends Field {
     /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
     return (
       <div
-        className={classNames('dp-pc_radios', { focused: this.state.focused }, className)}
+        className={classNames('dp-pc_radios', { focused: this.state.focused, 'dp-pc_radio-with-desc': description }, className)}
         {...props}
       >
         {options.map(option => (
