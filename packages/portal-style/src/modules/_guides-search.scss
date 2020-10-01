@@ -1,4 +1,5 @@
 .dp-po-guides-search {
+  $self: '.dp-po-guides-search';
   height: 100%;
 
   &-form {
@@ -42,24 +43,25 @@
   }
 
   &-block {
-    padding: 20px;
+    padding: 0 20px;
     background: white;
     border-radius: 4px;
     border: 1px solid #D3D6D7;
   }
 
   &-content {
-    &-accordion {
-      margin-bottom: 10px;
-    }
-
     &-title {
-      background: $info-light;
       color: $grey-darkest;
+      border-bottom: 1px solid $brand-primary;
+      text-transform: uppercase;
+      cursor: pointer;
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-between;
 
       @include typo($s17, 500, 'head');
-      display: block;
-      padding: 10px;
+      padding: 11px 10px 11px 0;
       border-radius: 2px;
       max-width: 100%;
       .title {
@@ -70,33 +72,47 @@
         max-width: calc(100% - 14px);
       }
 
-      .dp-po-icon {
-        float: right;
+      .guide-icon {
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        color: white;
+        margin-bottom: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        svg {
+          width: 14px;
+        }
+      }
+
+      .dp-po-icon.fa-angle-down {
         color: $brand-primary;
         font-size: 20px;
         line-height: 0;
         transform: rotate(180deg);
+        margin-left: auto;
+      }
+
+      &.collapsed {
+        &:not(:hover) {
+          color: $grey-dark;
+          border-bottom-color: $grey-light;
+
+          .guide-icon {
+            background-color: #A9B0B0 !important;
+          }
+        }
+
+        .dp-po-icon.fa-angle-down {
+          transform: rotate(0);
+        }
       }
 
       &:hover {
         text-decoration: none;
-        background: $info-light;
-        color: $grey-darkest;
-      }
-
-      &.collapsed {
-        background: $grey-lighter;
-        color: $grey-dark;
-
-        .dp-po-icon {
-          transform: rotate(0);
-        }
-
-        &:hover {
-          text-decoration: none;
-          background: $info-light;
-          color: $grey-darkest;
-        }
+        color: $brand-primary;
       }
     }
 
@@ -224,6 +240,21 @@
         top: 3px;
         background: $grey-light;
       }
+
+      #{$self}-content-underlink {
+        &.active {
+
+          &:before {
+            content: '';
+            width: 2px;
+            height: 100%;
+            position: absolute;
+            left: -20px;
+            top: 0;
+            background: $brand-primary;
+          }
+        }
+      }
     }
 
     &-underitem {
@@ -242,16 +273,6 @@
 
       &.active {
         color: $brand-primary;
-
-        &:before {
-          content: '';
-          width: 2px;
-          height: 100%;
-          position: absolute;
-          left: -20px;
-          top: 0;
-          background: $brand-primary;
-        }
       }
     }
   }
