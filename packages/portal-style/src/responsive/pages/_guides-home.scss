@@ -1,11 +1,11 @@
 @include media-breakpoint-down(md) {
   .dp-po-guides-home {
-    .dp-po-guides > .row > .col-md-6:nth-child(2n - 1) {
-      padding-right: 15px;
-    }
-    .dp-po-guides > .row > .col-md-6:nth-child(2n) {
-      padding-left: 15px;
-    }
+    //.dp-po-guides > .row > .col-md-6:nth-child(2n - 1) {
+    //  padding-right: 15px;
+    //}
+    //.dp-po-guides > .row > .col-md-6:nth-child(2n) {
+    //  padding-left: 15px;
+    //}
     .dp-po-guides-item {
       border: none;
       box-shadow: none;

@@ -1,6 +1,10 @@
 .dp-po-guides {
   $self: '.dp-po-guides';
 
+  &-search-block {
+    min-height: calc(100vh - 556px);
+  }
+
   &-item {
     margin-bottom: 30px;
     box-sizing: border-box;
@@ -223,5 +227,32 @@
     margin-bottom: 40px;
   }
 
-
+  &-landing {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #D3D6D7;
+    min-height: calc(100vh - 490px);
+    &-splash {
+      display: block;
+      object-fit: cover;
+      height: 440px;
+      width: 100%;
+      border-radius: 9px 9px 0 0;
+    }
+    &-title {
+      padding: 30px;
+      border-bottom: 1px solid #d3d6d7;
+      h1 {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: 100%;
+        overflow: hidden;
+        margin-bottom: 18px;
+      }
+    }
+    &-body {
+      padding: 30px;
+    }
+  }
 }

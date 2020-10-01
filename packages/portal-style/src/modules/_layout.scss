@@ -5,7 +5,7 @@
 .dp-po-main {
   background: var(--background-color);
   padding: 50px 0;
-  min-height: 100vh;
+  min-height: calc(100vh - 398px);
 }
 
 .dp-po-section {
