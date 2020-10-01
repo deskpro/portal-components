@@ -96,6 +96,7 @@
       color: $brand-primary;
       background-color: $white;
       margin-bottom: 5px;
+      white-space: nowrap;
       .dp-po-icon {
         font-size: 21px;
         margin-left: 10px;
@@ -103,9 +104,6 @@
       &:hover {
         color: white;
         background: $brand-primary;
-        .dp-po-icon {
-          color: $brand-primary;
-        }
       }
     }
     .dp-po-guides {
