@@ -76,7 +76,10 @@ class Radio extends Field {
     /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
     return (
       <div
-        className={classNames('dp-pc_radios', { focused: this.state.focused, 'dp-pc_radio-with-desc': description }, className)}
+        className={classNames('dp-pc_radios', {
+          focused:                 this.state.focused,
+          'dp-pc_radio-with-desc': description
+        }, className)}
         {...props}
       >
         {options.map(option => (
