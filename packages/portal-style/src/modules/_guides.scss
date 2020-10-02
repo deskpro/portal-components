@@ -241,7 +241,7 @@
       border-radius: 9px 9px 0 0;
     }
     &-title {
-      padding: 30px;
+      padding: 27px 30px;
       border-bottom: 1px solid #d3d6d7;
       h1 {
         white-space: nowrap;
@@ -251,8 +251,14 @@
         margin-bottom: 18px;
       }
     }
+    &-splash + .dp-po-guides-landing-title {
+      padding-top: 17px;
+    }
     &-body {
       padding: 30px;
+      .dp-po-guides-btn {
+        margin-top: 5px;
+      }
     }
   }
 }
