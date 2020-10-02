@@ -7,7 +7,7 @@
     position: sticky;
     width: 100%;
 
-    input[type="text"] {
+    input[type="search"] {
       width: 100%;
       background: $white;
       border: 1px solid $grey-light;
@@ -17,8 +17,11 @@
       color: $grey-dark;
       outline: none;
 
+      &:hover {
+        border-color: $brand-primary;
+      }
+
       &:focus {
-        color: $brand-primary;
         border-color: $brand-primary;
       }
     }
