@@ -290,6 +290,23 @@
       }
     }
   }
+  &-no-results {
+    color: $grey-darkest;
+    font-family: Lato, sans-serif;
+    font-size: 15px;
+    margin-top: 12px;
+    span {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    .fa-search {
+      color: $danger;
+      width: 16px;
+      margin-right: 10px;
+      vertical-align: -2px;
+    }
+  }
   mark.filter-highlight {
     padding: 0;
     background-color: inherit;
