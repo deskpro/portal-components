@@ -19,19 +19,20 @@
     border-bottom: 1px solid $grey-light;
     padding: 15px 20px;
     margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    white-space: nowrap;
   }
 
   &-list {
     margin: 0;
-    padding: 20px;
+    padding: 0 0 14px;
   }
 
   &-item {
     display: block;
-    margin: 0 0 7px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    margin: 0;
     max-width: 100%;
 
     &:last-child {
@@ -40,20 +41,34 @@
   }
 
   &-link {
-    color: $grey-darkest;
+    color: $grey-dark;
     align-items: center;
     @include typo($s14, 600, 'body');
     line-height: 1.5;
+    padding: 7px 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    display: block;
 
     &:hover {
       color: $brand-primary;
     }
 
     &.active {
-      color: $brand-primary;
+      color: $grey-darkest;
+      background: #E1EEFB;
+      position: relative;
 
-      .dp-po-icon {
-        opacity: 1;
+      &:before {
+        content: "";
+        width: 2px;
+        height: 23px;
+        position: absolute;
+        left: 0;
+        top: 5px;
+        background: $brand-primary;
       }
     }
 
