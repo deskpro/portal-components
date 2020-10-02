@@ -36,6 +36,7 @@ class Checkbox extends Field {
 
   onChange = (e, form, name) => {
     e.preventDefault();
+    e.stopPropagation();
     form.setFieldValue(name, !getIn(form.values, name));
   };
 
@@ -51,29 +52,19 @@ class Checkbox extends Field {
       <div
         className={classNames('dp-pc_checkbox', { focused: this.state.focused })}
       >
-        <label
-          htmlFor={this.id}
-          tabIndex="0"
-          className="dp-pc_checkbox__checkbox"
-          onKeyPress={e => this.handleKeyPress(e, form)}
+        <FormikField
+          id={id}
+          type="checkbox"
+          name={name}
+          checked={getIn(form.values, name)}
           onFocus={this.handleFocus}
           onBlur={this.handleBlur}
-          onClick={e => this.onChange(e, form, name)}
-        >
-          <FormikField
-            id={id}
-            type="checkbox"
-            name={name}
-            value={1}
-            checked={getIn(form.values, name)}
-            onClick={e => this.onChange(e, form, name)}
-            {...objectKeyFilter(props, Field.propTypes)}
-          />
-          <i onClick={e => this.onChange(e, form, name)} />
-          <span className="dp-pc_checkbox__label">
-            {label}
-          </span>
-        </label>
+          {...objectKeyFilter(props, Field.propTypes)}
+        />
+        <i onClick={e => this.onChange(e, form, name)} />
+        <span className="dp-pc_checkbox__label" onClick={e => this.onChange(e, form, name)} >
+          {label}
+        </span>
       </div>
     );
     /* eslint-enable jsx-a11y/label-has-for */

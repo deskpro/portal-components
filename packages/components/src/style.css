@@ -1174,3 +1174,9 @@
     }
   }
 }
+
+.dp-pc_checkbox__checkbox {
+  &:focus {
+    outline: none;
+  }
+}
