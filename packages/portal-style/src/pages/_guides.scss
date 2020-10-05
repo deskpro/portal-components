@@ -608,34 +608,10 @@
       background-color: $light;
       color: $brand-primary;
     }
-    &:before {
-      font-family: 'Font Awesome 5 Free';
-      font-weight: 900;
-      font-size: 1.20em;
+    .svg-inline--fa {
       margin-right: 5px;
       display: inline-block;
-      vertical-align: middle;
-    }
-    &.article:before,
-    &.knowledgebase:before,
-    &.knowledgebase_article:before {
-      content: "\F022";
-      font-weight: 400;
-    }
-    &.download:before {
-      content: "\f019";
-    }
-    &.news:before {
-      content: "\F133";
-      font-weight: 400;
-    }
-    &.community:before {
-      content: "\F164";
-      font-weight: 400;
-    }
-    &.guide:before,
-    &.topic:before {
-      content: "\F02D";
+      vertical-align: -2px;
     }
   }
   p {
@@ -671,7 +647,14 @@
     //  }
     //}
     p {
-      padding-left: 35px;
+      padding-left: 26px;
+    }
+    p > p {
+      padding-left: 0;
+    }
+    .dp-po-post-content-warning-title,
+    .dp-po-post-content-info-title {
+      font-weight: 500;
     }
   }
   code.hljs {
