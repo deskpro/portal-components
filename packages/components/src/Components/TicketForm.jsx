@@ -34,21 +34,22 @@ function parseDateFromFormats(formats, parseStrict) {
 Yup.addMethod(Yup.date, 'format', parseDateFromFormats);
 
 const I18N = {
-  name:        'Name',
-  email:       'Email',
-  department:  'Department',
-  message:     'Message',
-  product:     'Product',
-  priority:    'Priority',
-  category:    'Category',
-  submit:      'Submit',
-  dragNDrop:   'Drag and drop',
-  or:          'or',
-  chooseAFile: 'Choose a file',
-  chooseFiles: 'Choose files',
-  select:      'Select',
-  back:        'Back',
-  required:    'Required',
+  name:          'Name',
+  email:         'Email',
+  department:    'Department',
+  message:       'Message',
+  product:       'Product',
+  priority:      'Priority',
+  category:      'Category',
+  submit:        'Submit',
+  dragNDrop:     'Drag and drop',
+  addAttachment: 'Add attachment',
+  or:            'or',
+  chooseAFile:   'Choose a file',
+  chooseFiles:   'Choose files',
+  select:        'Select',
+  back:          'Back',
+  required:      'Required',
 };
 
 class TicketForm extends React.Component {
