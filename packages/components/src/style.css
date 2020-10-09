@@ -1180,3 +1180,8 @@
     outline: none;
   }
 }
+
+.dp-pc_checkboxes_description {
+  margin-bottom: -5px;
+  margin-top: 12px;
+}

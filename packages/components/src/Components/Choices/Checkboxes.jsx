@@ -60,6 +60,16 @@ class Checkboxes extends Field {
     );
     /* eslint-enable jsx-a11y/label-has-for */
   };
+
+  renderDescription = () => {
+    const { description } = this.props;
+
+    if (description) {
+      return <span className="dp-pc_description dp-pc_checkboxes_description">{description}</span>;
+    }
+    return null;
+  }
+
   renderField = (form) => {
     const {
       name, label, options, className, fClassName, errorsName, ...props
