@@ -259,7 +259,7 @@ class TicketForm extends React.Component {
 
   handleRemove = (setFieldValue, file) => {
     const files = this.state.files.filter(f => f.id !== file.id);
-    setFieldValue('attachments', files);
+    setFieldValue('attachments', files.length > 0 ? files : null);
     this.setState({ files });
   };
 
@@ -443,7 +443,7 @@ class TicketForm extends React.Component {
                       error={this.state.error}
                       clearError={this.clearError}
                     />
-                    {this.renderFields(props, props.handleChange, getInputProps())}
+                    {this.renderFields(props, props.setFieldValue, getInputProps())}
                     <Submit>{this.i18n.submit}</Submit>
                   </div>
                 )}
