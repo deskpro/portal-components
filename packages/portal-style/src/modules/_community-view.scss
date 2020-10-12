@@ -68,7 +68,8 @@
   }
 
   &-status {
-    flex: 0 0 150px;
+    box-sizing: content-box;
+    flex: 0 0 130px;
     padding-left: 20px;
   }
 
@@ -78,7 +79,8 @@
   }
 
   &-activity {
-    flex: 0 0 180px;
+    box-sizing: content-box;
+    flex: 0 0 160px;
     padding: 0 10px;
 
     &-list {
@@ -299,7 +301,7 @@
     }
 
     #{$self}-activity {
-      flex: 0 0 150px;
+      flex: 0 0 130px;
 
       &-list {}
 
