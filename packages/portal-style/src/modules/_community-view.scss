@@ -198,7 +198,8 @@
     }
 
     #{$self}-title {
-      flex: 0 0 calc(100% - 640px);
+      width: calc(100% - 640px);
+      flex: 0 0 auto;
     }
 
     #{$self}-office {
@@ -324,7 +325,8 @@
 
   &-statuschange {
     #{$self}-title {
-      flex: 0 0 calc(100% - 620px);
+      width: calc(100% - 620px);
+      flex: 0 0 auto;
     }
 
     #{$self}-status {
