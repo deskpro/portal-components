@@ -12,6 +12,7 @@
   padding: 0;
   background: none;
   flex-wrap: nowrap;
+  width: 100%;
 
   &-item {
     color: $breadcrumb-inactive-color;
@@ -21,7 +22,8 @@
     display: flex;
     align-items: center;
     margin: 0 15px;
-    min-width: 0;
+    min-width: 40px;
+    flex-shrink: 2;
 
     &:first-child {
       margin-left: 0;
@@ -34,6 +36,7 @@
       color: $breadcrumb-inactive-color;
       text-overflow: ellipsis;
       white-space: nowrap;
+      overflow: hidden;
       font-size: $s15;
 
       &:after {
@@ -81,6 +84,7 @@
   }
 
   &-item.active {
+    flex-shrink: 0;
     color: $breadcrumb-active-color;
 
     a {

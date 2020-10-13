@@ -45,7 +45,7 @@
     align-items: center;
     @include typo($s14, 600, 'body');
     line-height: 1.5;
-    padding: 7px 16px;
+    padding: 7px 16px 7px 20px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
