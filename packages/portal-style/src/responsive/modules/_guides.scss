@@ -114,7 +114,7 @@
         display: block !important;
       }
       #{$self}-search {
-        width: 100%;
+        width: 100% !important;
 
         &-block {
           border: none;
