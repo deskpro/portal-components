@@ -1,11 +1,13 @@
 @include media-breakpoint-down(sm) {
   .dp-po-guides {
+    $self: '.dp-po-guides';
     &-item {
       box-shadow: 0 5px 5px rgba(0, 0, 0, .15);
       border: 1px solid $grey-lighter;
     }
 
     &-section {
+      padding-top: 0;
       background: white;
     }
 
@@ -42,6 +44,82 @@
 
     &-dropdown-button {
       max-width: 80%;
+    }
+
+    &-landing {
+      min-height: auto;
+      border-radius: 6px;
+    }
+
+    &-landing-splash {
+      height: 226px;
+      border-radius: 5px 5px 0 0;
+    }
+
+    &-landing-title {
+      padding: 15px 15px 22px;
+      h1 {
+        font-size: 19px;
+        font-weight: 500;
+      }
+
+
+      #{$self}-meta {
+        & > span {
+          display: block;
+          font-size: 12px;
+        }
+        .separator {
+          display: none;
+        }
+      }
+    }
+
+    &-landing-body {
+      padding: 15px 15px 20px;
+      font-size: 16px;
+    }
+
+    &-mobile-menu {
+      width: 100%;
+      border-bottom: 1px solid $grey-light;
+      padding: 18px 0;
+      margin-bottom: 20px;
+      color: $grey-dark;
+      .menu {
+        cursor: pointer;
+      }
+    }
+
+    .page-list {
+      position: fixed;
+      top:0;
+      left: 14px;
+      right: 0;
+      bottom: 0;
+      z-index: 1000;
+      width: calc(100vw - 14px);
+      background: white;
+      padding: 86px 10px 10px;
+      box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.1);
+      .close-menu {
+        position: absolute;
+        top: 30px;
+        right: 22px;
+        cursor: pointer;
+        font-size: 17px;
+      }
+      &.mobile-visible {
+        display: block !important;
+      }
+      #{$self}-search {
+        width: 100%;
+
+        &-block {
+          border: none;
+          padding: 0;
+        }
+      }
     }
   }
 }

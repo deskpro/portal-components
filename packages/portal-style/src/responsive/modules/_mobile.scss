@@ -1,4 +1,8 @@
 @include media-breakpoint-down(sm) {
+  #main > .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .dp-po-mobile {
     &-collapse {
       position: relative;
@@ -10,7 +14,7 @@
         position: absolute;
         font-size: 30px;
         right: 0;
-        top: 0px;
+        top: 0;
         line-height: 1;
         color: $brand-primary;
       }
