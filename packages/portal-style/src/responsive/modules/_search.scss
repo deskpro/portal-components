@@ -6,17 +6,26 @@
     border-bottom: 1px solid $grey-lighter;
 
     &-form {
-      position: static;
+      position: relative;
 
       input[type="search"] {
-        border: none;
-        background: $grey-lighter;
-        padding: 13px 5px 13px 45px;
+        border: 1px solid $grey;
+        background: $white;
+        padding: 13px 5px 13px 41px;
         font-size: $s18;
       }
 
       button[type="submit"] {
         background: transparent;
+      }
+
+      label {
+        font-size: 22px;
+        width: 22px;
+        left: 10px;
+        svg {
+          vertical-align: -7px;
+        }
       }
     }
 

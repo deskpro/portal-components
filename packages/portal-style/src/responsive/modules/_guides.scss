@@ -5,6 +5,10 @@
       border: 1px solid $grey-lighter;
     }
 
+    &-section {
+      background: white;
+    }
+
     &-link {
       display: block;
       padding: 20px;
@@ -34,6 +38,10 @@
 
     &-content {
       margin: 15px 0;
+    }
+
+    &-dropdown-button {
+      max-width: 80%;
     }
   }
 }
