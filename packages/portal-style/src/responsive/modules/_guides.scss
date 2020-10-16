@@ -1,9 +1,8 @@
 @include media-breakpoint-down(sm) {
   .dp-po-guides {
     $self: '.dp-po-guides';
-    &-item {
+    &-card {
       box-shadow: 0 5px 5px rgba(0, 0, 0, .15);
-      border: 1px solid $grey-lighter;
     }
 
     &-section {
@@ -120,6 +119,20 @@
           border: none;
           padding: 0;
         }
+      }
+    }
+
+    &-subtopic {
+      flex-basis: calc(100% - 20px);
+      background: $grey-lightest;
+
+      .dp-po-post-avatars .dp-po-post-avatars-item,
+      .dp-po-post-avatars .dp-po-post-avatars-link {
+        border-color: $grey-lightest;
+      }
+
+      &-dates {
+        line-height: 180%;
       }
     }
   }

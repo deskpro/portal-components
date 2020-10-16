@@ -36,10 +36,10 @@
 
     .dp-po-title {
       display: flex;
+      border-bottom: 1px solid $grey-light;
 
       &-link {
         display: flex;
-        border-bottom: 1px solid $grey-light;
         width: 100%;
       }
 
