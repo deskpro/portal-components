@@ -267,14 +267,27 @@
     box-sizing: border-box;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
     border-radius: 4px;
-    max-height: 430px;
-    min-width: 270px;
+    max-height: 287px;
     z-index: 10;
     overflow-y: auto;
     ul {
       list-style: none;
       margin: 0;
       padding: 0;
+      li {
+        display: inline;
+        text-indent: 0;
+        a {
+          margin-block-start: 0;
+          position: relative;
+          padding-left: 65px;
+          max-width: none;
+          figure {
+            position: absolute;
+            left: 20px;
+          }
+        }
+      }
     }
   }
   &-link {
