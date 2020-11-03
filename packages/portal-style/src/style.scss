@@ -131,11 +131,13 @@
   ******* RESPONSIVE ********
   **************************/
   @import "responsive/responsive";
+
 }
 
 @import "print";
 
 @import "components/global";
+@import "components/widget-mode";
 
 body {
   margin: 0;

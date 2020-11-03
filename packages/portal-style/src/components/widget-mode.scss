@@ -1,0 +1,20 @@
+body.portal-mode-focus-window {
+  header.dp-po-header {
+    display: none;
+  }
+  section.dp-po-search {
+    display: none;
+  }
+  .breadcrumb-outer {
+    display: none;
+  }
+  .dp-po-notification {
+    display: none;
+  }
+  .dp-po .dp-po-block {
+    box-shadow: none;
+  }
+  .dp-po-title-text {
+    white-space: nowrap;
+  }
+}
