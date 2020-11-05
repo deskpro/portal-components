@@ -46,13 +46,21 @@
   }
 
   &-block {
-    padding: 0 20px;
+    padding: 0;
     background: white;
     border-radius: 4px;
     border: 1px solid #D3D6D7;
   }
 
+  &-main {
+    margin: 0 20px;
+    #{$self}-content-list {
+      padding: 0;
+    }
+  }
+
   &-content {
+    margin: 0 20px;
     &-title {
       color: $grey-darkest;
       border-bottom: 1px solid $brand-primary;
@@ -126,7 +134,7 @@
 
     &-list {
       margin: 0;
-      padding: 10px;
+      padding: 13px 0;
 
       .dp-po-icon {
         margin-bottom: 0;
@@ -176,7 +184,7 @@
 
     &-suplist {
       margin: 0;
-      padding: 0 0 0 20px;
+      padding: 0;
     }
 
     &-supitem {
@@ -186,16 +194,24 @@
       text-overflow: ellipsis;
       max-width: 100%;
       overflow: hidden;
+      &:first-child {
+        margin-top: 3px;
+      }
     }
 
     &-suplink {
       @include typo($s15, 400, 'body');
       color: $grey-darkest;
+
+      &.active {
+        color: $brand-primary;
+      }
     }
 
     &-sublist {
       margin: 0;
       padding: 0 0 0 20px;
+      //padding: 0;
       position: relative;
 
       &:before {
@@ -204,7 +220,7 @@
         height: calc(100% - 4px);
         position: absolute;
         left: 0;
-        top: 3px;
+        top: 2px;
         background: $grey-light;
       }
     }
@@ -221,16 +237,6 @@
 
       &.active {
         color: $brand-primary;
-
-        &:before {
-          content: '';
-          width: 2px;
-          height: 100%;
-          position: absolute;
-          left: -20px;
-          top: 0;
-          background: $brand-primary;
-        }
       }
     }
 
@@ -245,23 +251,8 @@
         height: calc(100% - 4px);
         position: absolute;
         left: 0;
-        top: 3px;
+        top: 2px;
         background: $grey-light;
-      }
-
-      #{$self}-content-underlink {
-        &.active {
-
-          &:before {
-            content: '';
-            width: 2px;
-            height: 100%;
-            position: absolute;
-            left: -20px;
-            top: 0;
-            background: $brand-primary;
-          }
-        }
       }
     }
 
@@ -281,6 +272,16 @@
 
       &.active {
         color: $brand-primary;
+
+        &:before {
+          content: '';
+          width: 2px;
+          height: calc(100% - 4px);
+          position: absolute;
+          left: -20px;
+          top: 2px;
+          background: $brand-primary;
+        }
       }
     }
 

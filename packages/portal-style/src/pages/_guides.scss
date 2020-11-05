@@ -87,6 +87,7 @@
   color: #8B9293;
   font-size: $s15;
   line-height: 150%;
+  margin-top: 8px;
 
   strong {
     font-weight: normal;
@@ -99,7 +100,7 @@
 }
 
 .dp-po-post-avatars {
-  margin-top: 10px;
+  margin-top: 15px;
   flex: 0 0 100%;
 }
 
@@ -146,7 +147,7 @@
 
   &-header {
     background: #F7F7F7;
-    padding: 10px 20px 20px;
+    padding: 10px 20px 15px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -1022,7 +1023,7 @@
   background-color: white;
   border-radius: 3px 3px 0 0;
   border-bottom: 2px solid #d3d6d7;
-  padding: 15px 18px;
+  padding: 17px 18px 7px;
   margin: 0 10px 10px;
   min-width: 100px;
   flex-basis: calc(50% - 20px);
@@ -1061,7 +1062,7 @@
     display: inline-block;
     font-size: $s12;
     color: #8b9293;
-    line-height: 150%;
+    line-height: 180%;
     white-space: nowrap;
     max-width: calc(100% - 100px);
     span.title {

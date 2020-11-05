@@ -123,9 +123,17 @@
       }
     }
 
+    &-subtopics {
+      padding: 14px 0 20px;
+      h3 {
+        padding: 0 0 8px;
+      }
+    }
+
     &-subtopic {
-      flex-basis: calc(100% - 20px);
+      flex-basis: 100%;
       background: $grey-lightest;
+      margin: 0 0 10px;
 
       .dp-po-post-avatars .dp-po-post-avatars-item,
       .dp-po-post-avatars .dp-po-post-avatars-link {
