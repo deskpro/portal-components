@@ -4,7 +4,7 @@
   &-item {
     display: flex;
     border-top: 1px solid $grey-light;
-    padding: 20px 0;
+    padding: 17px 0;
     flex-wrap: wrap;
 
     &-head {
@@ -39,10 +39,10 @@
 
       &-image,
       &-name {
-        width: 20px;
-        height: 20px;
-        font-size: 11px;
-        padding: 3px 0;
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
+        padding: 4px 0;
         font-weight: normal;
         display: inline-block;
       }
@@ -87,6 +87,7 @@
       display: flex;
       margin: 0;
       padding: 0;
+      flex-direction: row-reverse;
     }
 
     &-item {
@@ -96,29 +97,35 @@
 
       text-align: center;
       flex: 0 0 34px;
+
+      &:first-child {
+        margin-right: auto;
+      }
     }
 
     &-image {
       border-radius: 50%;
-      width: 30px;
-      height: 30px;
+      width: 40px;
+      height: 40px;
       margin-bottom: 8px;
-      border: 2px solid $white;
+      border: 5px solid $white;
       display: inline-block;
+      background-size: cover;
     }
 
     &-name {
       border-radius: 50%;
-      width: 30px;
-      height: 30px;
+      width: 40px;
+      height: 40px;
       margin-bottom: 8px;
-      border: 2px solid $white;
+      border: 5px solid $white;
       display: inline-block;
-      background: $grey;
-      color: $white;
-      font-weight: 700;
+      background: var(--brand-primary-l-350);
+      color: $grey-darkest;
+      font-weight: normal;
       padding: 5px 0;
       text-align: center;
+      font-size: $s15;
     }
 
 
@@ -132,9 +139,20 @@
         text-decoration: none;
 
         #{$self}-activity-image {
-          border-color: $brand-primary;
           position: relative;
           z-index: 10;
+
+          &:before {
+            content: " ";
+            position: absolute;
+            z-index: -1;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            border: 2px solid $brand-primary;
+            border-radius: 50%;
+          }
         }
       }
     }
@@ -276,6 +294,7 @@
     #{$self}-author {
       flex: 0 0 70px;
       text-align: center;
+      height: 30px;
 
       .dp-po-avatar {
         justify-content: center;
@@ -318,7 +337,7 @@
 
       &-image,
       &-name {
-        margin: 0 0 0 -5px;
+        margin: 0 -8px 0 0;
       }
     }
   }

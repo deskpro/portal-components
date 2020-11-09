@@ -15,13 +15,13 @@
   }
 
   .dp-po-avatar-name {
-    background: $grey;
-    color: $white;
+    background: var(--brand-primary-l-350);
+    color: $grey-darkest;
     display: inline-block;
-    font-size: 15px;
-    font-weight: 700;
+    font-size: 12px;
+    font-weight: normal;
     height: 30px;
-    padding: 5px 0;
+    padding: 7px 0;
     text-align: center;
     text-transform: uppercase;
   }
@@ -35,6 +35,14 @@
     img {
       border-radius: 50%;
       margin-right: 10px;
+    }
+  }
+  &-small {
+    .dp-po-avatar-name,
+    .dp-po-avatar-image {
+      width: 24px;
+      height: 24px;
+      font-size: 10px;
     }
   }
 }

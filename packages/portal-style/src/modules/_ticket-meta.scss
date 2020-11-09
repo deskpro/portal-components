@@ -137,4 +137,13 @@
       margin-right: 5px;
     }
   }
+
+  .dp-po-avatar {
+    font-size: $s16;
+    .dp-po-avatar-image,
+    .dp-po-avatar-name {
+      width: 25px;
+      height: 25px;
+    }
+  }
 }

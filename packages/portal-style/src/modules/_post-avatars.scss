@@ -5,20 +5,12 @@
     margin-bottom: 0;
     padding: 0;
     display: inline-block;
-
-    &:hover {
-
-      §-image,
-      #{$self}-name {
-        opacity: 0.5;
-      }
-    }
   }
 
   &-item {
     list-style: none;
     display: inline-block;
-    margin: 0 0 0 -15px;
+    margin: 0 0 0 -12px;
     border: 4px solid $grey-lightest;
     border-radius: 50%;
     vertical-align: bottom;
@@ -60,16 +52,16 @@
   }
 
   &-name {
-    background: $grey;
-    color: $white;
+    background: var(--brand-primary-l-350);
+    color: $grey-darkest;
     text-transform: uppercase;
     border-radius: 50%;
     width: 30px;
     height: 30px;
     display: block;
-    font-weight: 700;
+    font-weight: normal;
     text-align: center;
-    padding: 5px 0;
-    font-size: 15px;
+    padding: 7px 0;
+    font-size: 12px;
   }
 }
