@@ -34,3 +34,4 @@ deploy:
     script: npm run publish-npm -- $(node bin/lerna-version.js)
     on:
       tags: true
+      branch: develop
