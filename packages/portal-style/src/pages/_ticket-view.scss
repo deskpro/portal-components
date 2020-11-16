@@ -78,6 +78,16 @@
     max-width: 100%;
   }
 
+  &-content pre {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background: #F7F7F7;
+    max-height: 340px;
+    overflow: auto;
+    padding: 6px;
+    color: #303030;
+  }
+
   &-msg {
     margin: 15px 0 0;
     line-height: 1.5;
