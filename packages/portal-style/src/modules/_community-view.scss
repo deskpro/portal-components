@@ -138,6 +138,7 @@
       &:hover {
         text-decoration: none;
 
+        #{$self}-activity-name,
         #{$self}-activity-image {
           position: relative;
           z-index: 10;
