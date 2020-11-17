@@ -154,6 +154,9 @@
     justify-content: space-between;
     border: 1px solid $grey-light;
     border-radius: 3px 3px 0 0;
+    .dp-po-post-avatars-item {
+      margin-left: -7px;
+    }
   }
 
   &-title {
@@ -1054,9 +1057,20 @@
     display: inline-block;;
     height: 50px;
     padding-right: 13px;
-    .dp-po-post-avatars-item,
-    .dp-po-post-avatars-link {
+    .dp-po-post-avatars-item {
       border-color: white;
+      margin-left: -7px;
+      .dp-po-post-avatars-link {
+        border-color: white;
+      }
+      &:hover {
+        &:before {
+          background-color: white;
+        }
+        .dp-po-post-avatars-link {
+          border-color: $brand-primary;
+        }
+      }
     }
   }
 
