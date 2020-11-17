@@ -9,7 +9,7 @@
 
     &-head {
       border: none;
-      padding: 0 0 10px;
+      padding: 0;
       @include typo($s17, 500, 'head');
       color: $grey-dark;
 
@@ -359,4 +359,17 @@
     }
   }
 
+  .no-data {
+    text-align: center;
+    display: block;
+    width: 100%;
+    font-size: $s23;
+    border-top: 1px solid $grey-light;
+    padding-top: 27px;
+    .dp-po-icon {
+      color: $danger;
+      margin-right: 6px;
+      vertical-align: -4px;
+    }
+  }
 }
