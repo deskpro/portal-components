@@ -174,18 +174,20 @@
     }
 
     #{$self}-wrap {
-      background: $grey-lightest;
-      border-radius: 4px;
       padding: 40px;
       display: inline-block;
 
       svg {
+        &.dp-po-news-carousel-svg {
+          width: 70px;
+          height: 65px;
+        }
         fill: var(--brand-primary);
       }
     }
 
     #{$self}-allink {
-      @include typo($s19, 400, 'head');
+      @include typo($s17, 400, 'head');
       display: flex;
       align-items: center;
       margin: 20px 0 0;
@@ -194,7 +196,8 @@
         color: $brand-primary;
         margin-left: 10px;
         position: relative;
-        top: 2px;
+        top: 1px;
+        font-size: 24px;
       }
     }
 
