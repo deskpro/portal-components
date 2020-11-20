@@ -100,7 +100,7 @@
 }
 
 .dp-po-post-avatars {
-  margin-top: 15px;
+  margin-bottom: 5px;
   flex: 0 0 100%;
 }
 
@@ -156,6 +156,10 @@
     border-radius: 3px 3px 0 0;
     .dp-po-post-avatars-item {
       margin-left: -7px;
+    }
+    .dp-po-post-avatars {
+      margin-top: 15px;
+      margin-bottom: 0;
     }
   }
 
@@ -1019,6 +1023,9 @@
     width: 100%;
     padding: 0 10px 8px;
     color: #8B9293;
+  }
+  .dp-po-post-avatars-list {
+    margin-top: 8px;
   }
 }
 .dp-po-guides-subtopic {
