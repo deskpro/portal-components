@@ -161,7 +161,11 @@ export class FileUploadInput extends React.Component {
     /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
     return (
       <div className={
-        classNames('dp-pc_file-upload', { focused: this.state.focused, hovered: this.state.hovered, error: this.state.error })
+        classNames('dp-pc_file-upload', {
+          focused: this.state.focused,
+          hovered: this.state.hovered,
+          error:   this.state.error
+        })
       }
       >
         <DropZone
