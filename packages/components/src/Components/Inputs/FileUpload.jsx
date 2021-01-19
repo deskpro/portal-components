@@ -18,6 +18,7 @@ const I18N = {
   chooseFiles:  'Choose files',
   remove:       'remove',
   error413:     'File too large',
+  errorMaxSize: 'File too large: {max} maximum',
   generalError: 'Upload failed',
 };
 
@@ -76,6 +77,23 @@ export class FileUploadInput extends React.Component {
       return this.setState({
         progress: -1,
         error:    this.i18n.error413,
+      });
+    } else if (e.target.status === 400) {
+      if (response && response.error && response.error.message) {
+        return this.setState({
+          progress: -1,
+          error:    response.error.message,
+        });
+      }
+      if (response && response.error && response.error.code === 'size') {
+        return this.setState({
+          progress: -1,
+          error:    this.i18n.errorMaxSize.replace(/\{max\}/, response.error.detail),
+        });
+      }
+      return this.setState({
+        progress: -1,
+        error:    this.i18n.generalError,
       });
     }
     if (typeof response === 'string') {
