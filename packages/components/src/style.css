@@ -679,6 +679,9 @@
         }
       }
     }
+    &.error .dp-pc_file-upload__dropzone {
+      border-color: var(--danger);
+    }
     & > ul {
       list-style: none;
       padding-left: 0;

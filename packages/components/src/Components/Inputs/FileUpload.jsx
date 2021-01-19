@@ -12,11 +12,13 @@ import AJAXSubmit from '../../utils/AJAXSubmit';
 import File from '../File';
 
 const I18N = {
-  dragNDrop:   'Drag and drop',
-  or:          'or',
-  chooseAFile: 'Choose a file',
-  chooseFiles: 'Choose files',
-  remove:      'remove',
+  dragNDrop:    'Drag and drop',
+  or:           'or',
+  chooseAFile:  'Choose a file',
+  chooseFiles:  'Choose files',
+  remove:       'remove',
+  error413:     'File too large',
+  generalError: 'Upload failed',
 };
 
 export class FileUploadInput extends React.Component {
@@ -51,6 +53,7 @@ export class FileUploadInput extends React.Component {
       progress: -1,
       focused:  false,
       hovered:  false,
+      error:    '',
     };
   }
 
@@ -69,25 +72,34 @@ export class FileUploadInput extends React.Component {
   handleTransferComplete = (e) => {
     const { name, onChange } = this.props;
     let { response } = e.target;
+    if (e.target.status === 413) {
+      return this.setState({
+        progress: -1,
+        error:    this.i18n.error413,
+      });
+    }
     if (typeof response === 'string') {
       response = JSON.parse(response);
     }
     const files = this.state.files.concat([response.blob]);
     this.setState({ files });
     onChange(name, files);
-    this.setState({ progress: -1 });
+    return this.setState({ progress: -1 });
   };
 
   handleTransferFailed = () => {
-    this.setState({ progress: -1 });
+    this.setState({
+      progress: -1,
+      error:    this.i18n.generalError,
+    });
   };
 
   handleUpdateProgress = (e) => {
     if (e.lengthComputable) {
       const percentComplete = e.loaded / e.total * 100;
-      this.setState({ progress: percentComplete });
+      this.setState({ progress: percentComplete, error: '' });
     } else {
-      this.setState({ progress: -1 });
+      this.setState({ progress: -1, error: '' });
     }
   };
 
@@ -149,7 +161,7 @@ export class FileUploadInput extends React.Component {
     /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
     return (
       <div className={
-        classNames('dp-pc_file-upload', { focused: this.state.focused, hovered: this.state.hovered })
+        classNames('dp-pc_file-upload', { focused: this.state.focused, hovered: this.state.hovered, error: this.state.error })
       }
       >
         <DropZone
@@ -185,6 +197,7 @@ export class FileUploadInput extends React.Component {
             </div>
           )}
         </DropZone>
+        {this.state.error && <span className="dp-pc_file-upload__error">{this.state.error}</span>}
         <ul>
           {Array.from(this.state.files).map(file => (<File
             onRemove={this.handleRemove}

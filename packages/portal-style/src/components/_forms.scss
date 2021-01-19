@@ -170,6 +170,9 @@
         opacity: 0;
       }
     }
+    &.error {
+
+    }
     &__error {
       color: $danger;
       font-size: 12px;
