@@ -78,7 +78,8 @@ export class FileUploadInput extends React.Component {
         progress: -1,
         error:    this.i18n.error413,
       });
-    } else if (e.target.status === 400) {
+    }
+    if (e.target.status !== 200) {
       if (response && response.error && response.error.message) {
         return this.setState({
           progress: -1,
