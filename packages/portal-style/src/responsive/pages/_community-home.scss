@@ -82,3 +82,21 @@
     padding: 4px 10px;
   }
 }
+
+@media (min-width: 1388px) {
+  .dp-po-like-box {
+    display: block;
+  }
+  .dp-po-like-box-sm {
+    display: none;
+  }
+}
+
+@media (max-width: 1387px) {
+  .dp-po-like-box {
+    display: none;
+  }
+  .dp-po-like-box-sm {
+    display: block;
+  }
+}
