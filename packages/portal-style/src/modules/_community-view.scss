@@ -373,3 +373,14 @@
     }
   }
 }
+
+
+.community-container {
+  display: flex;
+}
+
+@media (max-width: 576px) {
+.community-flex-container {
+  flex-direction: column;
+}
+}
