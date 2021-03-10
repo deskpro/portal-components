@@ -33,8 +33,15 @@
 
 @include media-breakpoint-up(sm) {
 .dp-po-sticky {
+  display: block;
   position: sticky;
   align-self: flex-start;
   top: 10px;
 }
 }
+
+@include media-breakpoint-down(sm) {
+  .dp-po-sticky {
+    display: none;
+  }
+  }
