@@ -60,6 +60,7 @@
 
   img {
     max-width: 100%;
+    image-rendering: -webkit-optimize-contrast;
   }
 
   p:last-child {
