@@ -242,6 +242,15 @@
       color: $text-color;
     }
   }
+
+  blockquote {
+    font-style: normal;
+    background: white;
+    padding: 0 1em;
+    color: $grey-darkest;
+    border: 0.25em solid $brand-primary;
+    border-width: 0 0.25em 0 0.25em;
+  }
 }
 
 .dp-po-ticket-attachments {
@@ -445,3 +454,5 @@
     }
   }
 }
+
+
