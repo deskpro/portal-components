@@ -37,6 +37,7 @@ const I18N = {
   name:          'Name',
   email:         'Email',
   department:    'Department',
+  subject:       'Subject',
   message:       'Message',
   product:       'Product',
   priority:      'Priority',
