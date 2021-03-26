@@ -163,7 +163,7 @@ class TicketField extends React.Component {
           : (
             <Text
               name="subject"
-              label={capitalize(this.renderLabel())}
+              label={field.get('required', false) ? `${i18n.subject} *` : i18n.subject}
               required={!!field.get('required', false)}
               i18n={i18n}
             />
