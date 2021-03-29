@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { List } from 'immutable';
-import { capitalize } from '@deskpro/js-utils/dist/strings';
 import FileUpload from './Inputs/FileUpload';
 import Text from './Inputs/Text';
 import Email from './Inputs/Email';
