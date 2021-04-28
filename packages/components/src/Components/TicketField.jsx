@@ -126,6 +126,9 @@ class TicketField extends React.Component {
       case 'display':
         Component = Display;
         break;
+      case 'hidden':
+        Component = Hidden;
+        break;
       case 'text':
       default:
         Component = Text;
