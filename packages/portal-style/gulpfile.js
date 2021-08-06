@@ -89,7 +89,7 @@ function watchTask() {
 // Server task for local web dev
 function serverTask() {
   connect.server({
-    port: 3000,
+    port: 3001,
     livereload: true,
     root: ".build",
     localhost: 'deskpro5.local',

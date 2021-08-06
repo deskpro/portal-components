@@ -1,4 +1,4 @@
-:root {
+.dp-po-post-content {
   --brandshade-100: #1C3E55;
   --cyan20: #E1EEFB;
   --cyan40: #CFE5F9;
@@ -24,7 +24,7 @@
 }
 
 // TODO to update, copy and paste from content-editor/styles/content.css
-// Find and replace `.dp-po-post-content` with `.dp-po-post-content`
+// Find and replace `.dp-editor-content` with `.dp-po-post-content`
 
 /* placeholder styles */
 .dp-po-post-content {
@@ -147,7 +147,8 @@
   margin-bottom: 16px;
 }
 
-.dp-po-post-content [data-callout] i {
+.dp-po-post-content [data-callout] i,
+.dp-po-post-content [data-callout] svg {
   font-family: var(--font-awesome);
   font-weight: 900;
   margin-right: 12px;
@@ -159,6 +160,9 @@
   border-radius: 100px;
   font-size: 12px;
   line-height: 24px;
+}
+.dp-po-post-content [data-callout] svg {
+  padding: 6px;
 }
 .dp-po-post-content [data-callout] .callout-title {
   background-color: var(--cyan20);
@@ -175,7 +179,8 @@
   background-color: var(--grey3);
 }
 
-.dp-po-post-content [data-callout][data-callout-type="default"] i {
+.dp-po-post-content [data-callout][data-callout-type="default"] i,
+.dp-po-post-content [data-callout][data-callout-type="default"] svg {
   opacity: 0.5;
 }
 
@@ -187,7 +192,8 @@
   color: var(--red100);
   background-color: var(--red20);
 }
-.dp-po-post-content [data-callout][data-callout-type="error"] .callout-title i {
+.dp-po-post-content [data-callout][data-callout-type="error"] .callout-title i,
+.dp-po-post-content [data-callout][data-callout-type="error"] .callout-title svg {
   background-color: var(--red40);
 }
 
@@ -199,7 +205,8 @@
   color: var(--cyan100);
   background-color: var(--cyan20);
 }
-.dp-po-post-content [data-callout][data-callout-type="note"] .callout-title i {
+.dp-po-post-content [data-callout][data-callout-type="note"] .callout-title i,
+.dp-po-post-content [data-callout][data-callout-type="note"] .callout-title svg {
   background-color: var(--cyan40);
 }
 
@@ -211,7 +218,8 @@
   color: var(--green100);
   background-color: var(--green20);
 }
-.dp-po-post-content [data-callout][data-callout-type="question"] .callout-title i {
+.dp-po-post-content [data-callout][data-callout-type="question"] .callout-title i,
+.dp-po-post-content [data-callout][data-callout-type="question"] .callout-title svg {
   background-color: var(--green40);
 }
 
@@ -223,7 +231,8 @@
   color: var(--yellow100);
   background-color: var(--yellow20);
 }
-.dp-po-post-content [data-callout][data-callout-type="warning"] .callout-title i {
+.dp-po-post-content [data-callout][data-callout-type="warning"] .callout-title i,
+.dp-po-post-content [data-callout][data-callout-type="warning"] .callout-title svg {
   background-color: var(--yellow40);
 }
 
@@ -235,7 +244,8 @@
   color: var(--purple100);
   background-color: var(--purple20);
 }
-.dp-po-post-content [data-callout][data-callout-type="example"] .callout-title i {
+.dp-po-post-content [data-callout][data-callout-type="example"] .callout-title i,
+.dp-po-post-content [data-callout][data-callout-type="example"] .callout-title svg {
   background-color: var(--purple40);
 }
 
