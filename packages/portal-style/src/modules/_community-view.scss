@@ -377,6 +377,11 @@
 
 .community-container {
   display: flex;
+  width: 100%;
+}
+
+.community-flex-container {
+  width: calc(100% - 40px);
 }
 
 @media (max-width: 576px) {
