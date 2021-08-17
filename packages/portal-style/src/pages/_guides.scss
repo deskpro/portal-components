@@ -668,20 +668,16 @@
   }
   code.hljs {
     display: inline-block;
-    padding: 0 0.5em;
     overflow-x: visible;
-    border: solid 1px #e6e7e6;
     border-radius: 2px;
     margin: 0 0.5em;
   }
   pre code.hljs {
     display: block;
-    padding: 0.5em;
     margin: 0;
     overflow-x: auto;
-    border: solid 1px #e6e7e6;
-    border-radius: 2px;
-    background-color: #f8f8f8;
+    border-radius: 5px;
+    background-color: #1C3E55;
     position: relative;
     .code-block {
       .code-copy {
@@ -690,8 +686,8 @@
         position: absolute;
         top: 5px;
         right: 5px;
-        color: $brand-primary;
-        border: 2px solid #4696dc;
+        color: white;
+        border: 2px solid white;
         border-radius: 20px;
         padding: 0 8px;
         &.copied {
