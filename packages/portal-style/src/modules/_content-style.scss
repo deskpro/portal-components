@@ -778,6 +778,11 @@
 .dp-po-post-content ol:not(.footnotes-list) p {
   display: inline-block;
   margin: 6px 0;
+  max-width: calc(100% - 35px);
+  vertical-align: top;
+}
+.dp-po-post-content ol:not(.footnotes-list) p + p {
+  margin-left: 27px;
 }
 
 .dp-po-post-content ol:not(.footnotes-list) ol:not(.footnotes-list) {
@@ -796,6 +801,9 @@
   min-width: 20px;
   display: inline-block;
   padding: 2px 2px 2px 5px;
+  height: 22px;
+  line-height: 18px;
+  vertical-align: text-top;
 }
 .dp-po-post-content dt {
   font-weight: 600;
