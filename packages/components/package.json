@@ -29,6 +29,7 @@
     "react-datepicker": "^2.14.1",
     "react-dropzone": "10.1.10",
     "react-select": "3.0.8",
+    "react-svg-inline": "^2.1.1",
     "react-textarea-autosize": "^7.0.4",
     "style": "^0.0.3",
     "url-polyfill": "^1.0.13",
