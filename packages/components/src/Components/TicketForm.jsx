@@ -19,6 +19,7 @@ import DropDown from './Choices/DropDown';
 import AJAXSubmit from '../utils/AJAXSubmit';
 import DynamicForm from '../utils/DynamicForm';
 import { recursiveDropdownChoicesWithSorting } from '../utils/helpers';
+import Loader from './Loader';
 
 const invalidDate = new Date('');
 function parseDateFromFormats(formats, parseStrict) {
@@ -62,6 +63,7 @@ class TicketForm extends React.Component {
     priorities:         PropTypes.object,
     departmentPropName: PropTypes.string,
     onSubmit:           PropTypes.func.isRequired,
+    submitDisabled:     PropTypes.bool,
     department:         PropTypes.number,
     fileUploadUrl:      PropTypes.string.isRequired,
     csrfToken:          PropTypes.string.isRequired,
@@ -85,6 +87,7 @@ class TicketForm extends React.Component {
     languageId:         0,
     i18n:               {},
     onChange:           () => {},
+    submitDisabled:     false,
   };
 
   constructor(props) {
@@ -416,6 +419,13 @@ class TicketForm extends React.Component {
 
     const hasAttachment = this.getLayout().get('fields', []).find(f => f.get('field_type') === 'attachments');
 
+    let submitProps = {};
+    if (this.props.submitDisabled) {
+      submitProps = {
+        disabled: 'disabled'
+      };
+    }
+
     if (hasAttachment) {
       return (
         <Formik
@@ -445,7 +455,7 @@ class TicketForm extends React.Component {
                       clearError={this.clearError}
                     />
                     {this.renderFields(props, props.setFieldValue, getInputProps())}
-                    <Submit>{this.i18n.submit}</Submit>
+                    <Submit {...submitProps}>{this.i18n.submit}</Submit>
                   </div>
                 )}
               </DropZone>
@@ -464,7 +474,7 @@ class TicketForm extends React.Component {
         {props => (
           <Form showHover={showHover}>
             {this.renderFields(props)}
-            <Submit>{this.i18n.submit}</Submit>
+            <Submit {...submitProps}>{submitProps.disabled ? <Loader size="xsmall" /> : this.i18n.submit}</Submit>
           </Form>
         )}
       </Formik>

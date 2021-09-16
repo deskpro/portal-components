@@ -8,6 +8,13 @@
   --grey: #a9b0b0;
   --grey-200: #e9ecef;
 
+
+  --dp-loader-size-xs: 1rem;
+  --dp-loader-size-s: 2rem;
+  --dp-loader-size-m: 3rem;
+  --dp-loader-size-l: 4rem;
+  --dp-loader-size-xl: 5rem;
+
   --brand-primary: #3d88f3;
   --brand-dark-primary: color-mod(var(--brand-primary) blackness(-20%));
   --brand-secondary: #a9b0b0;
@@ -1187,4 +1194,98 @@
 .dp-pc_description.dp-pc_checkboxes_description {
   margin-bottom: -5px;
   margin-top: 12px;
+}
+
+.dp-loader {
+  display: inline-block;
+  margin: 12px;
+
+  svg {
+    animation-duration: 1s;
+    transform-origin: 50% 50%;
+    animation-name: loader-rotate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    .st0 {
+      opacity: 1;
+    }
+
+    .st1 {
+      fill: var(--brand-primary)
+    }
+
+    .st2 {
+      fill: var(--brand-dark-primary);
+    }
+
+    .st3 {
+      fill: var(--brand-secondary);
+    }
+  }
+}
+
+.dp-loader--xs {
+  height: var(--dp-loader-size-xs);
+  width:  var(--dp-loader-size-xs);
+
+  svg {
+    height: var(--dp-loader-size-xs);
+    width:  var(--dp-loader-size-xs);
+  }
+}
+
+.dp-loader--s {
+  height: var(--dp-loader-size-s);
+  width:  var(--dp-loader-size-s);
+
+  svg {
+    height: var(--dp-loader-size-s);
+    width:  var(--dp-loader-size-s);
+  }
+}
+
+.dp-loader--m {
+  height: var(--dp-loader-size-m);
+  width:  var(--dp-loader-size-m);
+
+  svg {
+    height: var(--dp-loader-size-m);
+    width:  var(--dp-loader-size-m);
+  }
+}
+
+.dp-loader--l {
+  height: var(--dp-loader-size-l);
+  width:  var(--dp-loader-size-l);
+
+  svg {
+    height: var(--dp-loader-size-l);
+    width:  var(--dp-loader-size-l);
+  }
+}
+
+.dp-loader--xl {
+  height: var(--dp-loader-size-xl);
+  width:  var(--dp-loader-size-xl);
+
+  svg {
+    height: var(--dp-loader-size-xl);
+    width:  var(--dp-loader-size-xl);
+  }
+}
+
+.dp-loader--hidden {
+  svg {
+    display: none;
+  }
+}
+
+@keyframes loader-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
