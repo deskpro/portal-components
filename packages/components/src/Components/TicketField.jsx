@@ -26,11 +26,13 @@ class TicketField extends React.Component {
     files:          PropTypes.array,
     handleRemove:   PropTypes.func,
     languageId:     PropTypes.number.isRequired,
+    i18n:           PropTypes.object,
   };
 
   static defaultProps = {
     fileInputProps: {},
     files:          [],
+    i18n:           {},
     handleRemove() {},
   };
 
@@ -38,11 +40,10 @@ class TicketField extends React.Component {
     const { field, languageId } = this.props;
     let label;
     label = field.getIn(['data', 'title']) || field.get('field_id');
-    if (languageId) {
-      const translations = field.getIn(['data', 'translations']);
-      if (translations) {
-        label = field.getIn(['data', 'translations', languageId.toString(), 'title'], label);
-      }
+    if (languageId && field.hasIn(['data', 'translations'])) {
+      label = field.getIn(['data', 'translations', languageId.toString(), 'title'], label);
+    } else if (this.props.i18n[field.get('field_id')]) {
+      label = this.props.i18n[field.get('field_id')];
     }
     if (field.get('required', false)) {
       label = `${label} *`;
