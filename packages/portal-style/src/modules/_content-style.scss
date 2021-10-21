@@ -751,8 +751,14 @@
   border-bottom: 0;
 }
 .dp-po-post-content ul {
-  counter-reset: counter;
   padding-inline-start: 32px;
+}
+.dp-po-post-content ul ol {
+  counter-set: none;
+  counter-reset: counter;
+}
+.dp-po-post-content ol ul {
+  padding-inline-start: 35px;
 }
 .dp-po-post-content ul li::marker {
   margin-right: 8px;
@@ -780,7 +786,11 @@
 }
 
 .dp-po-post-content ol:not(.footnotes-list) ol:not(.footnotes-list) {
-  padding-inline-start: 24px;
+  padding-inline-start: 35px;
+}
+.dp-po-post-content ol:not(.footnotes-list) ol:not(.footnotes-list) ul,
+.dp-po-post-content ol:not(.footnotes-list) ol:not(.footnotes-list) ol:not(.footnotes-list) {
+  padding-inline-start: 38px;
 }
 
 .dp-po-post-content ol:not(.footnotes-list) li:before {
@@ -795,9 +805,10 @@
   min-width: 20px;
   display: inline-block;
   padding: 2px 2px 2px 5px;
-  height: 22px;
-  line-height: 18px;
-  vertical-align: text-top;
+  height: 27px;
+  line-height: 21px;
+  vertical-align: middle;
+  text-align: center;
 }
 .dp-po-post-content ol:not(.footnotes-list) ul li:before {
   content: "•";
@@ -809,6 +820,12 @@
   font-size: 12px;
   line-height: 12px;
   height: 12px;
+}
+.dp-po-post-content ul ol:not(.footnotes-list) li {
+  counter-increment: ulCounter;
+}
+.dp-po-post-content ul ol:not(.footnotes-list) li:before {
+  content: counters(ulCounter, ".") " ";
 }
 .dp-po-post-content dt {
   font-weight: 600;
