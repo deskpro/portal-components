@@ -35,6 +35,11 @@
 
     &:hover {
       color: $brand-primary;
+      text-decoration: none;
+
+      .dp-po-category-title-text {
+        text-decoration: underline;
+      }
 
       .dp-po-icon {
         background: $info-light;
