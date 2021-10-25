@@ -98,7 +98,7 @@ class TicketForm extends React.Component {
 
     this.state = {
       [props.departmentPropName]: props.department,
-      files:                      [],
+      files:                      props.initialValues.attachments || [],
       progress:                   -1,
       error:                      null,
     };
