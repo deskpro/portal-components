@@ -125,6 +125,7 @@ class TicketField extends React.Component {
         break;
       case 'display':
         Component = Display;
+        props.html = field.getIn(['data', 'options', 'html']);
         break;
       case 'hidden':
         Component = Hidden;

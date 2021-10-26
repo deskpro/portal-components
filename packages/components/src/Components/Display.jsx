@@ -1,13 +1,12 @@
+import { sanitize } from 'dompurify';
 import React from 'react';
 import classNames from 'classnames';
 import Field from './Field';
 
 class Display extends Field {
-  /* eslint-disable class-methods-use-this */
   renderField() {
-    return null;
+    return <div dangerouslySetInnerHTML={{ __html: sanitize(this.props.html) }} />;
   }
-  /* eslint-disable class-methods-use-this */
 
   renderDescription = () => {
     const { description } = this.props;
@@ -21,13 +20,11 @@ class Display extends Field {
   renderLabel = () => {
     const { label } = this.props;
     const htmlFor = this.id;
-    /* eslint-disable jsx-a11y/label-has-for */
     return (
       <label className="dp-pc_label" htmlFor={htmlFor}>
         {label}
       </label>
     );
-    /* eslint-enable jsx-a11y/label-has-for */
   };
 
   render() {
