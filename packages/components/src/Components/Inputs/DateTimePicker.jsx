@@ -18,7 +18,6 @@ class DateTimePicker extends DatePicker {
     if (getIn(form.values, name)) {
       openToDate = dateParse(getIn(form.values, name), format, new Date());
     }
-
     return {
       name,
       openToDate,

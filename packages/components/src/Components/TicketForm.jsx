@@ -188,7 +188,7 @@ class TicketForm extends React.Component {
         }
         if (widgetType === 'datetime' || widgetType === 'date') {
           // just a stab - format is not passed
-          const format = widgetType === 'datetime' ? 'DD/MM/YYYY HH:MM' : 'DD/MM/YYYY';
+          const format = widgetType === 'datetime' ? 'YYYY-MM-DD HH:MM' : 'YYYY-MM-DD';
           validationRule = Yup.date().format(format);
           const dateValidType = field.getIn(['data', 'options', 'date_valid_type']);
           if (dateValidType === 'range') {

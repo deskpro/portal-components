@@ -80,6 +80,7 @@ class TicketField extends React.Component {
     switch (field.getIn(['data', 'widget_type'])) {
       case 'date':
         props.calendar = field.getIn(['data', 'options', 'calendar'], 'gregorian');
+        props.format = field.getIn(['data', 'options', 'format'], 'yyyy-MM-dd');
         Component = DatePicker;
         if (props.calendar === 'hijri') {
           // Component = HijriDatePicker;
@@ -88,6 +89,7 @@ class TicketField extends React.Component {
       case 'datetime':
         Component = DateTimePicker;
         props.calendar = field.getIn(['data', 'options', 'calendar'], 'gregorian');
+        props.format = field.getIn(['data', 'options', 'format'], 'yyyy-MM-dd HH:mm');
         break;
       case 'checkbox':
         Component = Checkboxes;
