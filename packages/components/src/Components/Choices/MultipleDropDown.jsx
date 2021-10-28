@@ -56,7 +56,8 @@ export class MultipleDropDownInput extends React.Component {
     dataSource: PropTypes.shape({
       getOptions: PropTypes.oneOfType([PropTypes.func, PropTypes.array]).isRequired,
     }).isRequired,
-    onChange: PropTypes.func,
+    onChange:    PropTypes.func,
+    closeOnBlur: PropTypes.bool.isRequired
   };
 
   static defaultProps = {
@@ -84,7 +85,9 @@ export class MultipleDropDownInput extends React.Component {
 
   onBlur = () => {
     this.props.onBlur();
-    this.setState({ menuIsOpen: false });
+    if (this.props.closeOnBlur) {
+      this.setState({ menuIsOpen: false });
+    }
   };
 
   onFocus = () => {
@@ -93,7 +96,10 @@ export class MultipleDropDownInput extends React.Component {
   };
 
   closeMenu = () => {
-    this.select.current.select.blurInput();
+    if (!this.props.closeOnBlur) {
+      this.setState({ menuIsOpen: false });
+      this.select.current.select.blurInput();
+    }
   };
 
   loadOptions = (inputValue) => {
@@ -202,9 +208,11 @@ MultipleDropDown.propTypes = {
   }).isRequired,
   handleChange: PropTypes.func,
   onBlur:       PropTypes.func,
+  closeOnBlur:  PropTypes.bool
 };
 
 MultipleDropDown.defaultProps = {
+  closeOnBlur: true,
   handleChange() {},
   onBlur() {},
 };

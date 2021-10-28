@@ -101,6 +101,7 @@ class TicketField extends React.Component {
         break;
       case 'choice':
         Component = DropDown;
+        props.closeOnBlur = field.getIn(['data', 'options', 'closeOnBlur'], true);
         props.dataSource = {};
         props.isClearable = false;
         props.isSearchable = false;
@@ -121,6 +122,7 @@ class TicketField extends React.Component {
         break;
       case 'multichoice':
         Component = MultipleDropDown;
+        props.closeOnBlur = field.getIn(['data', 'options', 'closeOnBlur'], true);
         props.fClassName = 'dp-pc_multi-select';
         props.dataSource = {};
         props.dataSource.getOptions = recursiveDropdownChoices(field.getIn(['data', 'choices'], new List()).toArray());
