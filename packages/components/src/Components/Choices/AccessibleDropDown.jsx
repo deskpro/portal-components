@@ -11,6 +11,7 @@ export class AccessibleDropDownInput extends React.Component {
       getOptions: PropTypes.oneOfType([PropTypes.func, PropTypes.array]).isRequired,
     }).isRequired,
     onChange:      PropTypes.func,
+    name:          PropTypes.string.isRequired,
     showAllValues: PropTypes.bool,
     value:         PropTypes.oneOfType([PropTypes.number, PropTypes.string])
   };
@@ -31,8 +32,8 @@ export class AccessibleDropDownInput extends React.Component {
   getSource = (query, populateResults) => {
     const { dataSource } = this.props;
     if (Array.isArray(dataSource.getOptions)) {
-      populateResults(query ? dataSource.getOptions.filter(result =>
-        result.label.toLowerCase().indexOf(query.toLowerCase()) !== -1)
+      populateResults(query
+        ? dataSource.getOptions.filter(result => result.label.toLowerCase().indexOf(query.toLowerCase()) !== -1)
         : dataSource.getOptions);
     }
   }
@@ -47,23 +48,27 @@ export class AccessibleDropDownInput extends React.Component {
   getDropdownArrow = () => <span className="dp-react-select__dropdown-indicator" />;
 
   handleConfirm = (value) => {
+    const { onChange } = this.props;
+
     if (value && value.children) {
       this.setState({
         children: value.children
       });
     } else {
-      this.props.onChange(value);
+      onChange(value);
     }
   }
 
   handleChildrenChange = (value) => {
-    this.props.onChange(value);
+    const { onChange } = this.props;
+    onChange(value);
   }
 
   render() {
     const {
       name, dataSource, value, showAllValues, ...props
     } = this.props;
+    const { children } = this.state;
 
     return (
       <React.Fragment>
@@ -80,14 +85,16 @@ export class AccessibleDropDownInput extends React.Component {
           }}
           {...props}
         />
-        {this.state.children.length > 0 ?
-          <div className="children">
-            <AccessibleDropDownInput
-              dataSource={{ getOptions: this.state.children }}
-              onChange={this.handleChildrenChange}
-            />
-          </div>
-        : null}
+        {children.length > 0
+          ? (
+            <div className="children">
+              <AccessibleDropDownInput
+                dataSource={{ getOptions: children }}
+                onChange={this.handleChildrenChange}
+              />
+            </div>
+          )
+          : null}
       </React.Fragment>
     );
   }

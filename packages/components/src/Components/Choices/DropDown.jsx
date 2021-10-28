@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { getIn } from 'formik';
+
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import ReactSelect, { components } from 'react-select';
@@ -9,7 +10,7 @@ import { deepMerge } from '@deskpro/js-utils/dist/objects';
 import classNames from 'classnames';
 import Field from '../Field';
 
-const SelectContainer = ({ children, ...props }) => (
+const SelectContainer = ({  children, ...props }) => (
   <components.SelectContainer
     {...props}
     className={classNames(
@@ -106,7 +107,8 @@ export class DropDownInput extends React.Component {
     i18n:        PropTypes.object,
     onChange:    PropTypes.func,
     isClearable: PropTypes.bool,
-    value:       PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+    value:       PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    closeOnBlur: PropTypes.bool.isRequired
   };
 
   static defaultProps = {
@@ -138,9 +140,9 @@ export class DropDownInput extends React.Component {
 
   onBlur = () => {
     this.props.onBlur();
-    this.setState({
-      menuIsOpen: false
-    });
+    if (this.props.closeOnBlur) {
+      this.setState({ menuIsOpen: false });
+    }
   };
 
   onFocus = () => {
@@ -164,7 +166,7 @@ export class DropDownInput extends React.Component {
       });
       this.props.onChange(null);
       return false;
-    } else if (value && value.parents && value.parents.length > 0) {
+    } if (value && value.parents && value.parents.length > 0) {
       this.setState({
         value:   null,
         options: value.parents
@@ -183,7 +185,10 @@ export class DropDownInput extends React.Component {
   };
 
   closeMenu = () => {
-    this.select.current.select.blurInput();
+    if (!this.props.closeOnBlur) {
+      this.setState({ menuIsOpen: false });
+      this.select.current.select.blurInput();
+    }
   };
 
   loadOptions = (inputValue) => {
@@ -246,6 +251,7 @@ export class DropDownInput extends React.Component {
     if (Array.isArray(dataSource.getOptions)) {
       return (
         <ReactSelect
+          styles={{ menuPortal: base => ({ ...base, position: 'relative' }) }}
           ref={this.select}
           value={options.find(o => o.value === value) || null}
           name={name}
@@ -254,12 +260,14 @@ export class DropDownInput extends React.Component {
           components={{
             SelectContainer,
             Option,
-            DropdownIndicator: dropdownProps =>
-              <DropdownIndicator closeMenu={this.closeMenu} {...dropdownProps} />
+            DropdownIndicator: dropdownProps => <DropdownIndicator closeMenu={this.closeMenu} {...dropdownProps} />
           }}
+          menuPosition="auto"
           menuIsOpen={this.state.menuIsOpen}
           options={this.state.options}
           closeMenuOnSelect={this.closeMenuOnSelect}
+          closeMenuOnScroll={false}
+          onMenuClose={this.onMenuClose}
           classNamePrefix="react-select"
           placeholder={this.i18n.select}
           {...props}
@@ -281,8 +289,7 @@ export class DropDownInput extends React.Component {
         components={{
           SelectContainer,
           Option,
-          DropdownIndicator: dropdownProps =>
-            <DropdownIndicator closeMenu={this.closeMenu} {...dropdownProps} />
+          DropdownIndicator: dropdownProps => <DropdownIndicator closeMenu={this.closeMenu} {...dropdownProps} />
         }}
         loadOptions={inputValue => this.loadOptions(inputValue)}
         classNamePrefix="react-select"
@@ -297,10 +304,12 @@ export class DropDownInput extends React.Component {
 
 class DropDown extends Field {
   onBlur = (form) => {
-    const { name } = this.props;
     this.props.onBlur();
-    if (form) {
-      form.setFieldTouched(name, true);
+    if (this.props.closeOnBlur) {
+      const { name } = this.props;
+      if (form) {
+        form.setFieldTouched(name, true);
+      }
     }
   };
 
@@ -332,6 +341,7 @@ DropDown.propTypes = {
   }).isRequired,
   form:         PropTypes.object,
   handleChange: PropTypes.func,
+  closeOnBlur:  PropTypes.bool,
   onBlur:       PropTypes.func,
   onFocus:      PropTypes.func,
   isClearable:  PropTypes.bool,
@@ -342,6 +352,7 @@ DropDown.defaultProps = {
   handleChange() {},
   isClearable:  false,
   isSearchable: true,
+  closeOnBlur:  true,
   onBlur() {},
   onFocus() {},
 };

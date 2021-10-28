@@ -80,6 +80,7 @@ class TicketField extends React.Component {
     switch (field.getIn(['data', 'widget_type'])) {
       case 'date':
         props.calendar = field.getIn(['data', 'options', 'calendar'], 'gregorian');
+        props.format = field.getIn(['data', 'options', 'format'], 'yyyy-MM-dd');
         Component = DatePicker;
         if (props.calendar === 'hijri') {
           // Component = HijriDatePicker;
@@ -88,6 +89,7 @@ class TicketField extends React.Component {
       case 'datetime':
         Component = DateTimePicker;
         props.calendar = field.getIn(['data', 'options', 'calendar'], 'gregorian');
+        props.format = field.getIn(['data', 'options', 'format'], 'yyyy-MM-dd HH:mm');
         break;
       case 'checkbox':
         Component = Checkboxes;
@@ -99,6 +101,7 @@ class TicketField extends React.Component {
         break;
       case 'choice':
         Component = DropDown;
+        props.closeOnBlur = field.getIn(['data', 'options', 'closeOnBlur'], true);
         props.dataSource = {};
         props.isClearable = false;
         props.isSearchable = false;
@@ -119,12 +122,14 @@ class TicketField extends React.Component {
         break;
       case 'multichoice':
         Component = MultipleDropDown;
+        props.closeOnBlur = field.getIn(['data', 'options', 'closeOnBlur'], true);
         props.fClassName = 'dp-pc_multi-select';
         props.dataSource = {};
         props.dataSource.getOptions = recursiveDropdownChoices(field.getIn(['data', 'choices'], new List()).toArray());
         break;
       case 'display':
         Component = Display;
+        props.html = field.getIn(['data', 'options', 'html']);
         break;
       case 'hidden':
         Component = Hidden;
@@ -146,7 +151,7 @@ class TicketField extends React.Component {
       handleRemove,
       i18n
     } = this.props;
-    if (field.get('field_type').match(/^ticket_field/) || field.get('field_type').match(/^chat_field/)) {
+    if (['ticket_field', 'chat_field', 'user_field', 'org_field'].indexOf(field.get('field_type')) !== -1) {
       return this.renderCustomField();
     }
     switch (field.get('field_type')) {

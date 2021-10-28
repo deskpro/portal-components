@@ -28,6 +28,7 @@
     }],
     "react/no-find-dom-node": 0,
     "react/no-multi-comp": 0,
+    "react/no-danger": 0,
     "jsx-quotes": [
       2,
       "prefer-double"
@@ -93,11 +94,13 @@
       "error",
       {"props": false}
     ],
-    "no-mixed-operators": "off"
+    "no-mixed-operators": "off",
+    "risxss/catch-potential-xss-react": "error"
   },
   "plugins": [
     "react",
-    "jsx-a11y"
+    "jsx-a11y",
+    "risxss"
   ],
   "settings": {
     "import/resolver": {
