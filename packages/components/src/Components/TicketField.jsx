@@ -151,7 +151,7 @@ class TicketField extends React.Component {
       handleRemove,
       i18n
     } = this.props;
-    if (['ticket_field', 'chat_field', 'user_field', 'org_field'].indexOf(field.get('field_type')) !== -1) {
+    if (['ticket_field', 'chat_field', 'user_field', 'org_field', 'custom_field'].indexOf(field.get('field_type')) !== -1) {
       return this.renderCustomField();
     }
     switch (field.get('field_type')) {
