@@ -550,6 +550,50 @@ select.form-control:not([multiple="multiple"]) {
   }
 }
 
+.dp-po-page-login-multi-list {
+  list-style-type: none;
+  margin-left: -40px;
+  margin-top: 10px;
+  font-size: 1rem;
+  color: black;
+
+  > li {
+    cursor: pointer;
+    &:hover, &.active {
+      background-color: lighten($brand-primary, 35%);
+    }
+
+    .dp-po-page-login-multi-list-keys {
+      list-style-type: none;
+      margin-left: -30px;
+      color: $grey;
+    }
+  }
+}
+
+.dp-po-multi-login {
+  list-style-type: none;
+  margin-left: -35px;
+  margin-top: 5px;
+  font-size: 12px;
+
+  > li {
+    cursor: pointer;
+    &:hover, &.active {
+      background-color: lighten($brand-primary, 35%);
+    }
+
+    & .dp-po-multi-name {
+      font-size: 1rem;
+    }
+
+    & .dp-po-multi-keys {
+      color: $grey;
+      font-size: 0.75rem;
+    }
+  }
+}
+
 .field_more_attachments {
   display: none;
 }
