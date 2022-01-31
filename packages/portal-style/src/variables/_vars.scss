@@ -1,4 +1,5 @@
 $font-family-sans-serif: var(--font-family-sans-serif) !default;
+$font-family-heading: var(--font-family-heading) !default;
 $font-family-monospace: var(--font-family-monospace) !default;
 $font-family-base: $font-family-sans-serif !default;
 
@@ -12,7 +13,7 @@ $font-weight-base: $font-weight-normal !default;
 $line-height-base: 1.6 !default;
 $headings-line-height: 1.5 !default;
 
-$headings-font-family: "Rubik",
+$headings-font-family: $font-family-heading,
 $font-family-sans-serif;
 $headings-font-weight: normal;
 $h1-font-size: $font-size-base * 2 !default; // 36px
@@ -98,10 +99,8 @@ $s10: $font-size-base * 0.555 !default; // 10px
 
 $btn-box-shadow: 0 0 0 0.2rem rgba(88, 158, 227, .5);
 
-$head-font: 'Rubik',
-sans-serif;
-$body-font: 'Lato',
-sans-serif;
+$head-font: $font-family-heading;
+$body-font: $font-family-sans-serif;
 
 @mixin typo($size, $weight : 400, $family : 'body') {
   @if $family=='head' {

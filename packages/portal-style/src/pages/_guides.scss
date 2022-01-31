@@ -255,7 +255,7 @@
     flex-wrap: wrap;
     flex-direction: column;
     .title {
-      font-family: 'Rubik', sans-serif;
+      font-family: $font-family-heading;
       font-size: $s26;
       line-height: 150%;
       color: #8B9293;
@@ -1044,7 +1044,7 @@
   }
 
   &-title {
-    font-family: Rubik, sans-serif;
+    font-family: $font-family-heading;
     font-size: $s17;
     color: #4C4F50;
     white-space: nowrap;
