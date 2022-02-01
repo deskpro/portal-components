@@ -29,7 +29,7 @@
 /* placeholder styles */
 .dp-po-post-content {
   position: relative;
-  font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: $font-family-sans-serif;
   overflow: auto;
 }
 
@@ -109,7 +109,7 @@
 .dp-po-post-content :not(pre) > code {
   font-size: 14px;
   color: #FFF;
-  font-family: Roboto Mono, monospace;
+  font-family: $font-family-monospace;
   background-color: var(--brandshade-100);
   border-radius: 3px;
   padding: 1px 6px;
@@ -120,7 +120,7 @@
   display: block;
   color: #FFF;
   padding: 24px 22px 24px 24px;
-  font-family: Roboto Mono, monospace;
+  font-family: $font-family-monospace;
   font-size: 14px;
   border-radius: 5px;
   white-space: break-spaces;
