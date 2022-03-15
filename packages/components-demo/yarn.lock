@@ -958,10 +958,10 @@
   dependencies:
     immutable "3.8.2"
 
-"@deskpro/portal-components@^0.7.0":
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/@deskpro/portal-components/-/portal-components-0.7.1.tgz#000bbfab400d3530a1f01aba03c213dde5b949dd"
-  integrity sha512-RTGZV3HEEkqc7sHaN9HnK6HhCHJVjw3aiSgYLBHZcvFt7Q0EsGJeUSQNjpj1mAZ1JjJHZ6oPdyBEcwNOPLA9rw==
+"@deskpro/portal-components@^0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@deskpro/portal-components/-/portal-components-0.8.0.tgz#56535a146da6f2fe2a3e45bd92fe9fb79ea7b2ad"
+  integrity sha512-vy53torldB+XbEV50BPUwwJeDVdDSVpiQGP0IEDrwQEFf3d/ul1SbGbkDukuki9SbAU58I6W1X1B4p1dFshATw==
   dependencies:
     "@deskpro/js-utils" "1.0.13"
     "@deskpro/react-datepicker-hijri" "^1.5.0"
@@ -5951,9 +5951,9 @@ locate-path@^5.0.0:
     p-locate "^4.1.0"
 
 lodash-es@^4.17.14:
-  version "4.17.15"
-  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.15.tgz#21bd96839354412f23d7a10340e5eac6ee455d78"
-  integrity sha512-rlrc3yU3+JNOpZ9zj5pQtxnx2THmvRykwL4Xlxoa8I9lHBlVbbyPhgyPMioxVZ4NqyxaVVtaJnzsyOidQIhyyQ==
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.21.tgz#43e626c46e6591b7750beb2b50117390c609e3ee"
+  integrity sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==
 
 lodash._reinterpolate@^3.0.0:
   version "3.0.0"
