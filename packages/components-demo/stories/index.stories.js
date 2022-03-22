@@ -1,4 +1,3 @@
-import '../../components/src/style.css';
 
 // import './async_dropdown';
 // import './async_multiple_dropdown';

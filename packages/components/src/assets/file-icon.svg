@@ -1,14 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg enable-background="new 0 0 600 600" version="1.1" viewBox="0 0 600 600" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
 <style type="text/css">
 	.st0{fill:#6E8293;}
 </style>
-<path class="st0" d="M471,588H129.3c-29.8,0-54-24.2-54-54v-472c0-29.8,24.2-54,54-54H471c29.8,0,54,24.2,54,54v472
-	C525,563.8,500.8,588,471,588z M129.3,58.5c-1.9,0-3.6,1.7-3.6,3.6v472c0,1.9,1.7,3.6,3.6,3.6H471c1.9,0,3.6-1.7,3.6-3.6v-472
-	c0-1.9-1.7-3.6-3.6-3.6H129.3z"/>
-<rect x="182.5" y="122.7" class="st0" width="238.7" height="50.4"/>
-<rect x="182.5" y="222.9" class="st0" width="238.7" height="50.4"/>
-<rect x="182.5" y="323.1" transform="matrix(0.9999 -1.227757e-02 1.227757e-02 0.9999 -4.2566 3.2686)" class="st0" width="163.1" height="50.4"/>
+  <path class="st0" d="m471 588h-341.7c-29.8 0-54-24.2-54-54v-472c0-29.8 24.2-54 54-54h341.7c29.8 0 54 24.2 54 54v472c0 29.8-24.2 54-54 54zm-341.7-529.5c-1.9 0-3.6 1.7-3.6 3.6v472c0 1.9 1.7 3.6 3.6 3.6h341.7c1.9 0 3.6-1.7 3.6-3.6v-472c0-1.9-1.7-3.6-3.6-3.6h-341.7z"/>
+  <rect class="st0" x="182.5" y="122.7" width="238.7" height="50.4"/>
+  <rect class="st0" x="182.5" y="222.9" width="238.7" height="50.4"/>
+  <rect class="st0" transform="matrix(.9999 -.012278 .012278 .9999 -4.2566 3.2686)" x="182.5" y="323.1" width="163.1" height="50.4"/>
 </svg>
