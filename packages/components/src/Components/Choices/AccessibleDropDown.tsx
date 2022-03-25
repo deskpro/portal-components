@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { getIn } from 'formik';
 import Autocomplete from 'accessible-autocomplete/react';
-import 'accessible-autocomplete/dist/accessible-autocomplete.min.css';
+// import 'accessible-autocomplete/dist/accessible-autocomplete.min.css';
 import Field, { FieldProps } from '../Field';
 import type { DataSource } from "../../types/dataSource";
 

@@ -11,23 +11,19 @@
   ],
   "dependencies": {
     "@deskpro/js-utils": "1.0.13",
-    "@deskpro/react-datepicker-hijri": "^1.5.0",
     "@emotion/react": "^11.8.2",
-    "accessible-autocomplete": "^2.0.2",
+    "accessible-autocomplete": "2.0.4",
     "classnames": "^2.2.5",
     "date-fns": "2.28.0",
     "dompurify": "2.3.6",
     "es6-promise": "^4.2.4",
-    "hijri-date-picker": "^1.2.1",
     "immutable": "^3.8.2",
     "isomorphic-fetch": "^2.2.1",
-    "libphonenumber-js": "^1.3.1",
+    "libphonenumber-js": "1.9.50",
     "lodash": "4.17.21",
     "moment": "^2.22.1",
-    "moment-hijri": "2.1.2",
     "postcss-color-mod-function": "^3.0.3",
-    "raw-loader": "^0.5.1",
-    "react-datepicker": "^2.14.1",
+    "react-datepicker": "4.7.0",
     "react-dropzone": "10.1.10",
     "react-select": "5.2.2",
     "react-svg-inline": "^2.1.1",
@@ -38,11 +34,10 @@
     "yup": "0.24.1"
   },
   "scripts": {
-    "start": "node scripts/start.js",
     "build": "rollup -c config/rollup.config.js",
-    "dist": "NODE_ENV=production node --max-old-space-size=8192 ./node_modules/webpack/bin/webpack --config config/webpack.config.dist.js --progress",
+    "dist": "rollup -c config/rollup.config.js",
     "lint": "eslint . --cache --cache-location=.cache/eslint --ext .js,.jsx",
-    "test": "node scripts/test.js --env=jsdom",
+    "test": " jest",
     "travis-test": "npm run test -- --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "precommit": "lint-staged",
     "prepare": "npm run dist"
@@ -58,36 +53,25 @@
     "@rollup/plugin-node-resolve": "^13.1.3",
     "@svgr/rollup": "^6.2.1",
     "@svgr/webpack": "^4.3.3",
+    "@testing-library/react": "^12.1.4",
     "@types/dompurify": "^2.3.3",
-    "@wessberg/cjs-to-esm-transformer": "^0.0.22",
+    "@types/jest": "^27.4.1",
     "ajv": "^6.5.2",
     "autoprefixer": "7.1.6",
-    "babel-core": "6.26.3",
-    "babel-eslint": "7.2.3",
-    "babel-jest": "20.0.3",
-    "babel-loader": "7.1.2",
-    "babel-plugin-module-resolver": "^3.1.1",
-    "babel-plugin-transform-decorators-legacy": "^1.3.4",
-    "babel-preset-react-app": "^3.1.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "babel-runtime": "6.26.0",
     "case-sensitive-paths-webpack-plugin": "2.1.2",
     "chalk": "1.1.3",
     "coveralls": "^3.0.0",
     "css-loader": "0.28.7",
     "dotenv": "4.0.0",
     "dotenv-expand": "4.2.0",
-    "extract-text-webpack-plugin": "3.0.2",
-    "file-loader": "1.1.5",
     "formik": "1.5.8",
     "fs-extra": "3.0.1",
     "html-webpack-plugin": "2.29.0",
     "husky": "^0.14.3",
-    "jest": "20.0.4",
-    "jest-webpack-resolver": "^0.3.0",
+    "jest": "^27.5.1",
     "lint-staged": "10.1.0",
     "object-assign": "4.1.1",
-    "postcss": "^8.2.13",
+    "postcss": "8.2.15",
     "postcss-flexbugs-fixes": "3.2.0",
     "postcss-import": "^12.0.1",
     "postcss-loader": "2.0.8",
@@ -96,10 +80,9 @@
     "promise": "8.0.1",
     "prop-types": "^15.6.1",
     "raf": "3.4.0",
-    "react": "16.10.2",
-    "react-dev-utils": "^5.0.1",
-    "react-dom": "16.10.2",
-    "react-test-renderer": "^16.3.2",
+    "react": "16.14.0",
+    "react-dom": "16.14.0",
+    "react-test-renderer": "^17.0.2",
     "resolve": "1.8.1",
     "rollup": "^2.70.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
@@ -107,49 +90,14 @@
     "rollup-plugin-typescript2": "^0.31.2",
     "style-loader": "0.19.0",
     "sw-precache-webpack-plugin": "0.11.5",
+    "ts-jest": "^27.1.3",
     "typescript": "^4.6.2",
-    "url-loader": "0.6.2",
     "whatwg-fetch": "2.0.4"
   },
   "peerDependencies": {
     "formik": "1.5.8",
-    "prop-types": "^15.6.1",
     "react": "16.10.2",
     "react-dom": "16.10.2"
-  },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx,mjs}"
-    ],
-    "setupFiles": [
-      "<rootDir>/config/polyfills.js"
-    ],
-    "testMatch": [
-      "<rootDir>/tests/jest/**/?(*).js?(x)"
-    ],
-    "testEnvironment": "node",
-    "testURL": "http://localhost",
-    "transform": {
-      "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest",
-      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
-      "^(?!.*\\.(js|jsx|mjs|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
-    },
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
-    ],
-    "moduleNameMapper": {
-      "Components(.*)$": "<rootDir>/src/Components/$1",
-      "^react-native$": "react-native-web"
-    },
-    "moduleFileExtensions": [
-      "web.js",
-      "js",
-      "json",
-      "web.jsx",
-      "jsx",
-      "node",
-      "mjs"
-    ]
   },
   "lint-staged": {
     "*.{js,jsx}": [

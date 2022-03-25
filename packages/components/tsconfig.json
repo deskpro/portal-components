@@ -10,8 +10,6 @@
     "jsx": "react-jsx",
     "moduleResolution": "node",
     "allowJs": true,
-//    "allowSyntheticDefaultImports": true,
-//    "esModuleInterop": true,
     "jsxImportSource": "@emotion/react",
     "resolveJsonModule": true,
   },

@@ -1,1 +1,1 @@
-// import '@deskpro/portal-components/dist/style.css';
+import '@deskpro/portal-components/dist/style.css';

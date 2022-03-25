@@ -75,7 +75,7 @@ class Radio extends Field<RadioProps, RadioState> {
 
   renderField = (form) => {
     const {
-      description, name, options, className, fClassName, errorsName, ...props
+      description, name, options, className, fClassName, errorsName, i18n, ...props
     } = this.props;
     const htmlId = this.id;
     const value = getIn(form.values, name);

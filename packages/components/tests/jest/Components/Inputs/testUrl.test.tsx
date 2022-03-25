@@ -1,7 +1,8 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
+import * as React from 'react';
+import * as renderer from 'react-test-renderer';
 import { withFormik } from 'formik';
-import { Form, Url } from 'Components';
+import Form from '../../../../src/Components/Form';
+import Url from '../../../../src/Components/Inputs/Url';
 
 describe('>>> Url --- Snapshot', () => {
   it('+++capturing Snapshot of Url', () => {

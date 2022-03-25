@@ -14,7 +14,7 @@
     "build": "gulp"
   },
   "dependencies": {
-    "bootstrap": "^4.3.1"
+    "bootstrap": "4.6"
   },
   "devDependencies": {
     "autoprefixer": "^9.6.0",
@@ -28,10 +28,10 @@
     "eslint-plugin-import": "^2.18.2",
     "gulp": "^4.0.2",
     "gulp-connect": "^5.7.0",
+    "gulp-dart-sass": "^1.0.2",
     "gulp-ejs": "^4.1.1",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5"
   }
 }

@@ -1,21 +1,22 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
+import * as React from 'react';
+import * as renderer from 'react-test-renderer';
 import { withFormik } from 'formik';
-import { Form, Email } from 'Components';
+import Form from '../../../../src/Components/Form';
+import Text from '../../../../src/Components/Inputs/Text';
 
-describe('>>> Email --- Snapshot', () => {
-  it('+++capturing Snapshot of Email', () => {
+describe('>>> Text --- Snapshot', () => {
+  it('+++capturing Snapshot of Text', () => {
     const App = () => (
       <Form>
-        <Email name="email" />
+        <Text name="text" />
       </Form>
     );
     const FormikApp = withFormik({
       mapPropsToValues({
-        email
+        text
       }) {
         return {
-          email: email || 'test@deskpro.com'
+          text: text || 'Test text'
         };
       },
       handleSubmit(values, { setSubmitting }) {

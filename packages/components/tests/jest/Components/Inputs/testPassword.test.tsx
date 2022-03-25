@@ -1,7 +1,8 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
+import * as React from 'react';
+import * as renderer from 'react-test-renderer';
 import { withFormik } from 'formik';
-import { Form, Password } from 'Components';
+import Form from '../../../../src/Components/Form';
+import Password from '../../../../src/Components/Inputs/Password';
 
 describe('>>> Password --- Snapshot', () => {
   it('+++capturing Snapshot of Password', () => {

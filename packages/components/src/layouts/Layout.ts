@@ -88,7 +88,7 @@ export class Layout {
  * High-level wrapper for the layout variations configuration.
  */
 export class LayoutConfig {
-  private layouts: Layout[];
+  layouts: Layout[];
 
   constructor(layouts) {
     this.layouts = layouts.map(layout => new Layout(layout));

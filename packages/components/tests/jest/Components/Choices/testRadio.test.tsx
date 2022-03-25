@@ -1,7 +1,8 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
+import * as React from 'react';
+import * as renderer from 'react-test-renderer';
 import { withFormik } from 'formik';
-import { Form, Radio } from 'Components';
+import Form from '../../../../src/Components/Form';
+import Radio from '../../../../src/Components/Choices/Radio';
 
 describe('>>> Radio --- Snapshot', () => {
   it('+++capturing Snapshot of Radio', () => {

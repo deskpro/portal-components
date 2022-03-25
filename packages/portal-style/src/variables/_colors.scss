@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $black: #000;
 $white: #fff;
 
@@ -77,7 +79,7 @@ $one: #008ca9;
   @if type_of($color) == string {
     $color: str-replace($color, 'var(');
     $color: str-replace($color, ')');
-    $amount: $amount / 100% * 1000;
+    $amount: math.div($amount, 100%) * 1000;
     @return var(#{$color + '-d-' + $amount});
   }
   @return scale-color($color, $lightness: -$amount);
@@ -87,7 +89,7 @@ $one: #008ca9;
   @if type_of($color) == string {
     $color: str-replace($color, 'var(');
     $color: str-replace($color, ')');
-    $amount: $amount / 100% * 1000;
+    $amount: math.div($amount, 100%) * 1000;
     @return var(#{$color + '-l-' + $amount});
   }
   @return scale-color($color, $lightness: $amount);

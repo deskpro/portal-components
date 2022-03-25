@@ -1,7 +1,8 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
+import * as React from 'react';
+import * as renderer from 'react-test-renderer';
 import { withFormik } from 'formik';
-import { Form, DropDown } from 'Components';
+import Form from '../../../../src/Components/Form';
+import DropDown from '../../../../src/Components/Choices/DropDown';
 
 describe('>>> DropDown --- Snapshot', () => {
   it('+++capturing Snapshot of DropDown', () => {

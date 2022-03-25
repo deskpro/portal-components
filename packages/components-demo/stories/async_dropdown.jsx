@@ -1,5 +1,4 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { Form, DropDown, Submit, Formik } from '@deskpro/portal-components';
 
@@ -20,21 +19,26 @@ const fakeAPI = (filter, delay, value) => new Promise((resolve) => {
   }, delay);
 });
 
-storiesOf('Choices', module)
-  .add('Async Dropdown', () => (
-    <Formik
-      initialValues={{ filling: 'bacon' }}
-      onSubmit={action('submit')}
-      render={() => (
-        <Form>
-          <DropDown
-            name="filling"
-            dataSource={{ getOptions: filter => fakeAPI(filter, 300, options) }}
-            label="Filling"
-            multiple
-          />
-          <Submit>Submit</Submit>
-        </Form>
-      )}
-    />
-  ));
+export default {
+  title: "Choices"
+}
+
+export const AsyncDropdown = () => (
+  <Formik
+    initialValues={{ filling: 'bacon' }}
+    onSubmit={action('submit')}
+    render={() => (
+      <Form>
+        <DropDown
+          name="filling"
+          dataSource={{ getOptions: filter => fakeAPI(filter, 300, options) }}
+          label="Filling"
+          multiple
+        />
+        <Submit>Submit</Submit>
+      </Form>
+    )}
+  />
+);
+
+AsyncDropdown.storyName = 'Async Dropdown';

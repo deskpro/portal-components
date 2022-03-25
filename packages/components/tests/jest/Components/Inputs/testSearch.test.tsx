@@ -1,21 +1,22 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
+import * as React from 'react';
+import * as renderer from 'react-test-renderer';
 import { withFormik } from 'formik';
-import { Form, Number } from 'Components';
+import Form from '../../../../src/Components/Form';
+import Search from '../../../../src/Components/Inputs/Search';
 
-describe('>>> Number --- Snapshot', () => {
-  it('+++capturing Snapshot of Number', () => {
+describe('>>> Search --- Snapshot', () => {
+  it('+++capturing Snapshot of Search', () => {
     const App = () => (
       <Form>
-        <Number name="number" />
+        <Search name="search" />
       </Form>
     );
     const FormikApp = withFormik({
       mapPropsToValues({
-        number
+        search
       }) {
         return {
-          number: number || 6
+          search: search || 'Test search'
         };
       },
       handleSubmit(values, { setSubmitting }) {

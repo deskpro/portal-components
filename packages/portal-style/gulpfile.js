@@ -11,7 +11,7 @@ const {
 const fs = require('fs');
 // Importing all the Gulp-related packages we want to use
 const sourcemaps = require('gulp-sourcemaps');
-const sass = require('gulp-sass');
+const sass = require('gulp-dart-sass');
 const postcss = require('gulp-postcss');
 const connect = require('gulp-connect');
 const cors = require('cors');

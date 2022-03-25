@@ -20,21 +20,25 @@ const fakeAPI = (filter, delay, value) => new Promise((resolve) => {
   }, delay);
 });
 
-storiesOf('Choices', module)
-  .add('Async MultipleDropdown', () => (
-    <Formik
-      initialValues={{ filling: 'bacon' }}
-      onSubmit={action('submit')}
-      render={() => (
-        <Form>
-          <MultipleDropDown
-            name="filling"
-            dataSource={{ getOptions: filter => fakeAPI(filter, 300, options) }}
-            label="Filling"
-            multiple
-          />
-          <Submit>Submit</Submit>
-        </Form>
-      )}
-    />
-  ));
+export default {
+  title: "Choices"
+}
+
+export const AsyncMultipleDropdown = () => (
+  <Formik
+    initialValues={{ filling: 'bacon' }}
+    onSubmit={action('submit')}
+    render={() => (
+      <Form>
+        <MultipleDropDown
+          name="filling"
+          dataSource={{ getOptions: filter => fakeAPI(filter, 300, options) }}
+          label="Filling"
+          multiple
+        />
+        <Submit>Submit</Submit>
+      </Form>
+    )}
+  />
+);
+AsyncMultipleDropdown.storyName = 'Async MultipleDropdown';

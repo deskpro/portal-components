@@ -1,5 +1,5 @@
 import * as React from 'react';
-import moment from 'moment-hijri';
+import * as moment from 'moment';
 import classNames from 'classnames';
 import * as Immutable from 'immutable';
 import { Formik } from 'formik';
@@ -27,7 +27,7 @@ function parseDateFromFormats(formats, parseStrict) {
   return this.transform((value, originalValue) => {
     if (this.isType(value)) return value;
 
-    const newValue = moment(originalValue, formats, parseStrict);
+    const newValue = moment.call(originalValue, formats, parseStrict);
 
     return newValue.isValid() ? newValue.toDate() : invalidDate;
   });

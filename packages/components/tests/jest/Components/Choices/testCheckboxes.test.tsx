@@ -1,7 +1,8 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
+import * as React from 'react';
+import * as renderer from 'react-test-renderer';
 import { withFormik } from 'formik';
-import { Form, Checkboxes } from 'Components';
+import Form from '../../../../src/Components/Form';
+import Checkboxes from '../../../../src/Components/Choices/Checkboxes';
 
 describe('>>> Checkboxes --- Snapshot', () => {
   it('+++capturing Snapshot of Checkboxes', () => {

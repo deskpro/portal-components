@@ -1,11 +1,13 @@
-import Ajv from 'ajv';
+import * as Ajv from 'ajv';
 
 import ticketFormLayout from '../../DemoState/ticketFormLayout';
-import layoutSchema from '../../../src/layouts/schema.json';
 import { LayoutConfig, LayoutField } from '../../../src/layouts/Layout';
+
+import layoutSchema from "../../../src/layouts/schema.json";
 
 describe('>>> Layout Schema — valid', () => {
   const ajv = new Ajv();
+  console.log('layoutSchema', layoutSchema);
   const schemaValidator = ajv.compile(layoutSchema);
 
   it('TicketForm valid layout config', () => {

@@ -1,21 +1,22 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
+import * as React from 'react';
+import * as renderer from 'react-test-renderer';
 import { withFormik } from 'formik';
-import { Form, Tel } from 'Components';
+import Form from '../../../../src/Components/Form';
+import Number from '../../../../src/Components/Inputs/Number';
 
-describe('>>> Tel --- Snapshot', () => {
-  it('+++capturing Snapshot of Tel', () => {
+describe('>>> Number --- Snapshot', () => {
+  it('+++capturing Snapshot of Number', () => {
     const App = () => (
       <Form>
-        <Tel name="tel" />
+        <Number name="number" />
       </Form>
     );
     const FormikApp = withFormik({
       mapPropsToValues({
-        tel
+        number
       }) {
         return {
-          tel: tel || '0123456789'
+          number: number || 6
         };
       },
       handleSubmit(values, { setSubmitting }) {
