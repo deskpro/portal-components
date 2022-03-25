@@ -95,7 +95,7 @@ class DatePicker extends Field<DatePickerProps, DatePickerState> {
     );
   };
 
-  renderField = (form) => {
+  renderField = ({ form }) => {
     const { className } = this.props;
     return (
       <div className={classNames('dp-pc_date-picker', { focused: this.state.focused }, className)}>

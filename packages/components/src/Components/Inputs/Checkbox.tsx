@@ -42,7 +42,7 @@ class Checkbox extends Field<FieldProps, CheckBoxState> {
     form.setFieldValue(name, !getIn(form.values, name));
   };
 
-  renderField = (form) => {
+  renderField = ({ form }) => {
     const {
       name, id, label
     } = this.props;

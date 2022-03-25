@@ -99,7 +99,7 @@ class Tel extends Field<TelProps, TelState> {
     return this.countries;
   };
 
-  renderField = (form) => {
+  renderField = ({ form }) => {
     const {
       name,
       className,

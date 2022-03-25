@@ -1,4 +1,5 @@
-import moment from 'moment';
+import {isAfter, isBefore, isDate, isWithinInterval, parse as dateParse} from 'date-fns';
+
 
 const formatError = (message, params) => {
   if (typeof message === 'string') {
@@ -44,21 +45,27 @@ export const minLength = (value, [lengthValue], defaultMessage) => {
 export const regex = (value, [pattern], message = 'Value does not match the pattern "{pattern}"') =>
   value && !new RegExp(pattern).test(String(value)) && formatError(message, { value, pattern });
 
-export const dateRange = (value, [from, to, ...args], defaultMessage) => {
+export const dateRange = (value, [from, to], defaultMessage) => {
   let message;
   if (!value) {
-    return message;
+    return undefined;
   }
   const params = { value, from, to };
+  let date = value;
+  if (!isDate(date)) {
+    date = dateParse(value, 'yyyy-MM-dd', new Date());
+  }
+  const dateFrom = from ? dateParse(from, 'yyyy-MM-dd', new Date()) : new Date();
+  const dateTo = dateParse(to, 'yyyy-MM-dd', new Date());
   if (from && to) {
-    if (!moment(value).isBetween(from, to, ...args)) {
+    if (!isWithinInterval(date, { start: dateFrom, end: dateTo})) {
       message = defaultMessage || 'Date should be between {from} and {to}';
     }
   } else if (to) {
-    if (!moment(value).isBefore(to, ...args)) {
+    if (!isBefore(date, dateTo)) {
       message = defaultMessage || 'Date should be before {to}';
     }
-  } else if (!moment(value).isAfter(from, ...args)) {
+  } else if (!isAfter(date, dateFrom)) {
     message = defaultMessage || 'Date should be after {from}';
     if (!from) {
       params.from = 'now';

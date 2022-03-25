@@ -26,6 +26,7 @@ export interface FieldProps {
   children?:    React.ReactElement;
   onBlur?:      () => void;
   onFocus?:     () => void;
+  validate?:    () => void;
 }
 
 export interface FieldState {
@@ -76,7 +77,7 @@ abstract class Field<
 
   renderField(_form: any) {
     const {
-      name, children, className, required, errorsName, label, fClassName, id, i18n, description, ...rest
+      name, children, className, required, errorsName, label, fClassName, id, i18n, description, validate, ...rest
     } = this.props;
 
     return (

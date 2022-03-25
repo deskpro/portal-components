@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "composite": true,
     "declaration": true,
     "declarationDir": "build",
     "module": "esnext",
@@ -13,11 +12,10 @@
     "jsxImportSource": "@emotion/react",
     "resolveJsonModule": true,
   },
-  "include": ["src/**/*"],
+  "include": ["src", "tests","src/layouts/schema.json"],
   "exclude": [
     "node_modules",
     "build",
-    "src/**/*.stories.tsx",
-    "src/**/*.test.tsx"
+    "src/**/*.stories.tsx"
   ]
 }

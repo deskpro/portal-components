@@ -9,7 +9,6 @@ import { ContainerProps } from "react-select/dist/declarations/src/components/co
 import { DropdownIndicatorProps as ReactSelectDropdownIndicatorProps } from "react-select/dist/declarations/src/components/indicators";
 import { OptionProps as ReactSelectOptionProps } from "react-select/dist/declarations/src/components/Option";
 import type { DataSource } from "../../types/dataSource";
-import { isArray } from "react-select/dist/declarations/src/utils";
 
 const SelectContainer = ({ children, ...props }: ContainerProps) => (
   <components.SelectContainer
@@ -183,7 +182,7 @@ export class CascadingDropDownInput extends React.Component<CascadingDropDownInp
   loadOptions = (inputValue) => {
     const { dataSource } = this.props;
     const propValue = this.props.value;
-    if (isArray(dataSource.getOptions)){
+    if (Array.isArray(dataSource.getOptions)){
       return dataSource.getOptions;
     }
     return dataSource.getOptions(inputValue).then((options) => {
@@ -325,7 +324,7 @@ class CascadingDropDown extends Field<CascadingDropDownProps> {
   };
 
 
-  renderField(form) {
+  renderField({ form }) {
     return (
       <CascadingDropDownInput
         onBlur={() => this.onBlur(form)}

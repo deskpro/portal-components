@@ -206,7 +206,7 @@ class MultipleDropDown extends Field<MultipleDropDownProps> {
     this.props.handleChange(value);
   };
 
-  renderField(form) {
+  renderField({ form }) {
     return (
       <MultipleDropDownInput
         onBlur={() => this.onBlur(form)}

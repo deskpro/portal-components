@@ -78,9 +78,9 @@ class Checkboxes extends Field<CheckboxesProps, CheckboxesState> {
     return null;
   }
 
-  renderField = (form) => {
+  renderField = ({ form }) => {
     const {
-      name, label, options, className, fClassName, errorsName, ...props
+      name, label, options, className, fClassName, errorsName, i18n, ...props
     } = this.props;
     return (
       <FieldArray

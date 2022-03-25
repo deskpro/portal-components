@@ -10,7 +10,7 @@ class Textarea extends Field {
     this.type = 'textarea';
   }
 
-  renderField = (form) => {
+  renderField = ({ form }) => {
     const {
       name,
       className,

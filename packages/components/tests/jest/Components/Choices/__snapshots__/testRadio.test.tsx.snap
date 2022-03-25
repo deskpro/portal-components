@@ -17,7 +17,6 @@ exports[`>>> Radio --- Snapshot +++capturing Snapshot of Radio 1`] = `
     </label>
     <div
       className="dp-pc_radios"
-      description=""
       id={null}
       label=""
       required={false}
@@ -29,7 +28,7 @@ exports[`>>> Radio --- Snapshot +++capturing Snapshot of Radio 1`] = `
         onClick={[Function]}
         onFocus={[Function]}
         onKeyPress={[Function]}
-        tabIndex="0"
+        tabIndex={0}
       >
         <input
           checked={true}
@@ -55,7 +54,7 @@ exports[`>>> Radio --- Snapshot +++capturing Snapshot of Radio 1`] = `
         onClick={[Function]}
         onFocus={[Function]}
         onKeyPress={[Function]}
-        tabIndex="0"
+        tabIndex={0}
       >
         <input
           checked={false}
@@ -81,7 +80,7 @@ exports[`>>> Radio --- Snapshot +++capturing Snapshot of Radio 1`] = `
         onClick={[Function]}
         onFocus={[Function]}
         onKeyPress={[Function]}
-        tabIndex="0"
+        tabIndex={0}
       >
         <input
           checked={false}

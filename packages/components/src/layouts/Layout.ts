@@ -1,12 +1,24 @@
-import _get from 'lodash/get';
+import { get } from 'lodash';
 import conditions from './conditions';
 import * as validations from './validations';
+import {WidgetType} from "../types/formConfig";
+import {ConditionOp} from "../types/conditions";
+
+export type Rule = {
+  field: string;
+  op: ConditionOp;
+  value: string|number;
+}
 
 /**
  * Class with handlers for the layout's field.
  */
 export class LayoutField {
   private validation;
+  public name: string;
+  public label: string;
+  public type: WidgetType;
+  public defaultValue: string;
 
   constructor(fieldConfig) {
     Object.entries(fieldConfig).forEach(([key, value]) => {
@@ -19,8 +31,8 @@ export class LayoutField {
     this.get = this.get.bind(this);
   }
 
-  get(path, defaultValue) {
-    return _get(this, path, defaultValue);
+  get(path: string, defaultValue?: string) {
+    return get(this, path, defaultValue);
   }
 
   /**
@@ -53,8 +65,8 @@ export class LayoutField {
  * Wrapper for the layout variation.
  */
 export class Layout {
-  private rules;
-  public fields;
+  private rules: Rule[];
+  public fields: LayoutField[];
 
   constructor({ rules = [], fields }) {
     this.rules = rules;

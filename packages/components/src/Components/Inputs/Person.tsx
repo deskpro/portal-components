@@ -50,7 +50,7 @@ const Person = ({
         label={required ? `${mergedI18n.name} *` : mergedI18n.name}
         required
         placeholder={namePlaceholder}
-      />,
+      />
       <Email {...emailProps} />
     </>
   );

@@ -28,7 +28,7 @@ exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes 1`] = `
         onClick={[Function]}
         onFocus={[Function]}
         onKeyPress={[Function]}
-        tabIndex="0"
+        tabIndex={0}
       >
         <input
           checked={false}
@@ -55,7 +55,7 @@ exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes 1`] = `
         onClick={[Function]}
         onFocus={[Function]}
         onKeyPress={[Function]}
-        tabIndex="0"
+        tabIndex={0}
       >
         <input
           checked={false}
@@ -82,7 +82,7 @@ exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes 1`] = `
         onClick={[Function]}
         onFocus={[Function]}
         onKeyPress={[Function]}
-        tabIndex="0"
+        tabIndex={0}
       >
         <input
           checked={false}
@@ -135,7 +135,7 @@ exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes with ex
         onClick={[Function]}
         onFocus={[Function]}
         onKeyPress={[Function]}
-        tabIndex="0"
+        tabIndex={0}
       >
         <input
           checked={true}
@@ -162,7 +162,7 @@ exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes with ex
         onClick={[Function]}
         onFocus={[Function]}
         onKeyPress={[Function]}
-        tabIndex="0"
+        tabIndex={0}
       >
         <input
           checked={false}
@@ -189,7 +189,7 @@ exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes with ex
         onClick={[Function]}
         onFocus={[Function]}
         onKeyPress={[Function]}
-        tabIndex="0"
+        tabIndex={0}
       >
         <input
           checked={false}

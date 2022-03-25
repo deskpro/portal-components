@@ -133,7 +133,7 @@ class AccessibleDropDown extends Field<AccessibleDropDownProps> {
   };
 
 
-  renderField(form) {
+  renderField({ form }) {
     return (
       <AccessibleDropDownInput
         onBlur={() => this.onBlur(form)}

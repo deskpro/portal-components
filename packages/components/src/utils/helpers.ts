@@ -3,7 +3,7 @@ import { List } from 'immutable';
 export const recursiveDropdownChoices = opts => opts.map(option => ({
   value:    option.get('id'),
   label:    option.get('title'),
-  children: recursiveDropdownChoices(option.get('children', new List()).toArray())
+  children: recursiveDropdownChoices(option.get('children', List()).toArray())
 }));
 
 export const recursiveDropdownChoicesWithSorting = opts => opts
@@ -27,5 +27,5 @@ export const recursiveDropdownChoicesWithSorting = opts => opts
   .map(option => ({
     value:    option.get('id'),
     label:    option.get('title'),
-    children: recursiveDropdownChoicesWithSorting(option.get('children', new List()).toArray())
+    children: recursiveDropdownChoicesWithSorting(option.get('children', List()).toArray())
   }));

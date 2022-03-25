@@ -2,6 +2,8 @@ export enum WidgetType {
   Text = 'text',
   TextArea = 'textarea',
   Choice = 'choice',
+  MultiChoice = 'multichoice',
+  Checkbox = 'checkbox',
   Toggle = 'toggle',
   Date = 'date',
   DateTime = 'datetime',

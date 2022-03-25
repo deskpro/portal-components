@@ -17,7 +17,7 @@ const I18N = {
 interface FullDragDropInputProps {
   multiple:     boolean;
   id:           string;
-  url:          string;
+  url?:         string;
   csrfToken:    string;
   name?:        string;
   label:        string;

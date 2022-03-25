@@ -1,5 +1,4 @@
 import * as React from 'react';
-import * as moment from 'moment';
 import classNames from 'classnames';
 import * as Immutable from 'immutable';
 import { Formik } from 'formik';
@@ -21,15 +20,16 @@ import { recursiveDropdownChoicesWithSorting } from '../utils/helpers';
 import Loader, { LoaderSize } from './Loader';
 import type { DpBlob } from "../types/blob";
 import type { I18nType } from "../types/i18n";
+import { isValid, parse } from "date-fns";
 
 const invalidDate = new Date('');
 function parseDateFromFormats(formats, parseStrict) {
   return this.transform((value, originalValue) => {
     if (this.isType(value)) return value;
 
-    const newValue = moment.call(originalValue, formats, parseStrict);
+    const newValue = parse(originalValue, formats, parseStrict);
 
-    return newValue.isValid() ? newValue.toDate() : invalidDate;
+    return isValid(newValue) ? newValue : invalidDate;
   });
 }
 
@@ -122,6 +122,7 @@ class TicketForm extends React.Component<TicketFormProps, TicketFormState> {
 
   constructor(props) {
     super(props);
+    console.log('TicketForm', TicketForm);
     this.formik = React.createRef();
 
     this.i18n = deepMerge(I18N, props.i18n);
@@ -218,7 +219,7 @@ class TicketForm extends React.Component<TicketFormProps, TicketFormState> {
         }
         if (widgetType === 'datetime' || widgetType === 'date') {
           // just a stab - format is not passed
-          const format = widgetType === 'datetime' ? 'YYYY-MM-DD HH:MM' : 'YYYY-MM-DD';
+          const format = widgetType === 'datetime' ? 'yyyy-MM-dd HH:mm' : 'yyyy-MM-dd';
           validationRule = Yup.date().format(format);
           const dateValidType = field.getIn(['data', 'options', 'date_valid_type']);
           if (dateValidType === 'range') {

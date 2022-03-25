@@ -106,7 +106,7 @@ class DropDown extends Field<DropDownProps, DropDownState> {
     });
   };
 
-  renderField = (form) => {
+  renderField = ({ form }) => {
     const {
       name,
       isClearable,

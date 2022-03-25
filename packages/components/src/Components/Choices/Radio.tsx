@@ -73,7 +73,7 @@ class Radio extends Field<RadioProps, RadioState> {
     return null;
   };
 
-  renderField = (form) => {
+  renderField = ({ form }) => {
     const {
       description, name, options, className, fClassName, errorsName, i18n, ...props
     } = this.props;

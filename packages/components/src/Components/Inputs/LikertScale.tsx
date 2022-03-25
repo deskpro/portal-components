@@ -47,7 +47,7 @@ class LikertScale extends Field<LikertScaleProps> {
     });
   };
 
-  renderField = (form) => {
+  renderField = ({ form }) => {
     const { name, labels } = this.props;
     const inputs = [];
     const htmlId = this.id;

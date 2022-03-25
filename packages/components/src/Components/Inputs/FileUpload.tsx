@@ -256,7 +256,7 @@ class FileUpload extends Field<FileUploadProps> {
     multiple: false,
   }
 
-  renderField = form =>
+  renderField = ({ form }) =>
     (
       <FileUploadInput
         onChange={form.setFieldValue}

@@ -361,7 +361,7 @@ class DropDown extends Field<DropDownProps> {
   };
 
 
-  renderField(form) {
+  renderField({ form }) {
     return (
       <DropDownInput
         onBlur={() => this.onBlur(form)}

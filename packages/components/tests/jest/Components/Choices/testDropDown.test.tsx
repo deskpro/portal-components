@@ -4,6 +4,12 @@ import { withFormik } from 'formik';
 import Form from '../../../../src/Components/Form';
 import DropDown from '../../../../src/Components/Choices/DropDown';
 
+jest.mock("react-select", () => {
+  return {
+    default: ({...props}) => <div>{JSON.stringify(props)}</div>
+  }
+});
+
 describe('>>> DropDown --- Snapshot', () => {
   it('+++capturing Snapshot of DropDown', () => {
     const options = [
