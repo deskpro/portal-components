@@ -21,7 +21,6 @@ class Textarea extends Field {
       <AutosizeTextarea
         id={this.id}
         name={name}
-        component="textarea"
         className={classNames('dp-pc_input', className)}
         onChange={e => form.setFieldValue(name, e.target.value)}
         onBlur={() => form.setFieldTouched(name, true)}
