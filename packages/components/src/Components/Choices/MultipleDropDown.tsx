@@ -7,6 +7,8 @@ import Field, { FieldProps } from '../Field';
 import { OptionProps } from "react-select/dist/declarations/src/components/Option";
 import type { DataSource } from "../../types/dataSource";
 import type { Option } from "../../types/options";
+import classNames from "classnames";
+import { css } from "@emotion/css";
 
 const Option = (props: OptionProps) => {
   const {
@@ -23,15 +25,16 @@ const Option = (props: OptionProps) => {
   return (
     <div
       ref={innerRef}
-      css={getStyles('option', props)}
-      className={cx(
+      className={classNames(
+        cx(
         {
-          option:                true,
-          'option--is-disabled': isDisabled,
-          'option--is-focused':  isFocused,
-          'option--is-selected': isSelected,
-        },
-        className ?? 'dp-pc_checkbox'
+            option:                true,
+            'option--is-disabled': isDisabled,
+            'option--is-focused':  isFocused,
+            'option--is-selected': isSelected,
+          },
+          className ?? 'dp-pc_checkbox'),
+        css(getStyles('option', props))
       )}
       {...innerProps}
     >

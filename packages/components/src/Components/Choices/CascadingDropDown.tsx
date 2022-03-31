@@ -9,6 +9,7 @@ import { ContainerProps } from "react-select/dist/declarations/src/components/co
 import { DropdownIndicatorProps as ReactSelectDropdownIndicatorProps } from "react-select/dist/declarations/src/components/indicators";
 import { OptionProps as ReactSelectOptionProps } from "react-select/dist/declarations/src/components/Option";
 import type { DataSource } from "../../types/dataSource";
+import { css } from "@emotion/css";
 
 const SelectContainer = ({ children, ...props }: ContainerProps) => (
   <components.SelectContainer
@@ -55,15 +56,16 @@ const Option = (props: OptionProps) => {
     return (
       <div
         ref={innerRef}
-        css={getStyles('option', props)}
-        className={cx(
+        className={classNames(
+          cx(
           {
             option:                true,
             'option--is-disabled': isDisabled,
             'option--is-focused':  isFocused,
             'option--is-selected': isSelected,
           },
-          className
+          className),
+          css(getStyles('option', props))
         )}
         {...innerProps}
       >

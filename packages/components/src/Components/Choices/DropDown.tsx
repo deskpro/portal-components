@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { getIn } from 'formik';
-
+import { css } from '@emotion/css'
 import ReactSelect, { components } from 'react-select';
 import AsyncSelect from 'react-select/async';
 import { deepMerge } from '@deskpro/js-utils/dist/objects';
@@ -60,15 +60,17 @@ const Option = (props: OptionProps) => {
     return (
       <div
         ref={innerRef}
-        css={getStyles('option', props)}
-        className={cx(
-          {
-            option:                true,
-            'option--is-disabled': isDisabled,
-            'option--is-focused':  isFocused,
-            'option--is-selected': isSelected,
-          },
-          className
+        className={classNames(
+          cx(
+            {
+              option:                true,
+              'option--is-disabled': isDisabled,
+              'option--is-focused':  isFocused,
+              'option--is-selected': isSelected,
+            },
+            className
+          ),
+          css(getStyles('option', props))
         )}
         {...innerProps}
       >
@@ -81,8 +83,8 @@ const Option = (props: OptionProps) => {
     return (
       <div
         ref={innerRef}
-        css={getStyles('option', props)}
-        className={cx(
+        className={classNames(
+          cx(
           {
             option:                true,
             'option--is-disabled': isDisabled,
@@ -90,8 +92,8 @@ const Option = (props: OptionProps) => {
             'option--is-selected': isSelected,
             'option--is-back':     true,
           },
-          className,
-
+          className),
+          css(getStyles('option', props))
         )}
         {...innerProps}
       >
