@@ -82,9 +82,6 @@ class TicketField extends React.Component {
         props.calendar = field.getIn(['data', 'options', 'calendar'], 'gregorian');
         props.format = field.getIn(['data', 'options', 'format'], 'yyyy-MM-dd');
         Component = DatePicker;
-        if (props.calendar === 'hijri') {
-          // Component = HijriDatePicker;
-        }
         break;
       case 'datetime':
         Component = DateTimePicker;

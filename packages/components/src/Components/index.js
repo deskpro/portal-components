@@ -11,7 +11,6 @@ import Progress from './Elements/Progress';
 import Checkbox from './Inputs/Checkbox';
 import DatePicker from './Inputs/DatePicker';
 import DateTimePicker from './Inputs/DateTimePicker';
-// import HijriDatePicker from './Inputs/HijriDatePicker';
 import Email from './Inputs/Email';
 import FileUpload, { FileUploadInput } from './Inputs/FileUpload';
 import FullDragDrop from './Inputs/FullDragDrop';
@@ -54,7 +53,6 @@ export {
   FileUpload,
   FileUploadInput,
   FullDragDrop,
-  // HijriDatePicker,
   LikertScale,
   Number,
   Password,
