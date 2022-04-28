@@ -6,7 +6,6 @@
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://github.com/deskpro/portal-components/blob/master/LICENSE)
 [![npm version](https://img.shields.io/npm/v/@deskpro/portal-components.svg?style=flat)](https://www.npmjs.com/package/@deskpro/portal-components)
 [![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@master/badge/badge-storybook.svg)](https://deskpro.github.io/portal-components)
-[![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/Deskpro/portal-components)
 
 ## Overview
 
