@@ -30,6 +30,7 @@ export class FileUploadInput extends React.Component {
     csrfToken: PropTypes.string.isRequired,
     name:      PropTypes.string.isRequired,
     label:     PropTypes.string,
+    maxSize:   PropTypes.number,
     onChange:  PropTypes.func,
     i18n:      PropTypes.object,
     files:     PropTypes.array,
@@ -42,6 +43,7 @@ export class FileUploadInput extends React.Component {
     files:    [],
     onChange() {},
     i18n:     {},
+    maxSize:  Infinity,
   };
 
   constructor(props) {
@@ -175,7 +177,9 @@ export class FileUploadInput extends React.Component {
   };
 
   render() {
-    const { multiple, name, id } = this.props;
+    const {
+      multiple, name, id, maxSize
+    } = this.props;
 
     /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
     return (
@@ -190,6 +194,7 @@ export class FileUploadInput extends React.Component {
         <DropZone
           onDrop={this.handleDrop}
           multiple={multiple}
+          maxSize={maxSize}
           ref={(c) => { this.dropZone = c; }}
         >
           {({ getRootProps, getInputProps, isDragActive }) => (
