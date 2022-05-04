@@ -26,6 +26,8 @@
     "publish-npm": "lerna publish --force-publish --no-git-tag-version --no-push --yes"
   },
   "dependencies": {
+    "@deskpro/portal-components": "^0.8.2",
+    "@deskpro/portal-style": "^0.8.2",
     "@percy/agent": "0.28.6",
     "@percy/script": "^1.0.0",
     "eslint-plugin-risxss": "^2.1.0",
