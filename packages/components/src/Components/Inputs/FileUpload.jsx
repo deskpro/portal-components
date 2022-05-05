@@ -60,16 +60,33 @@ export class FileUploadInput extends React.Component {
     };
   }
 
-  handleDrop = (accepted) => {
-    AJAXSubmit({
-      url:              this.props.url,
-      files:            accepted,
-      name:             'blob',
-      token:            this.props.csrfToken,
-      transferComplete: this.handleTransferComplete,
-      transferFailed:   this.handleTransferFailed,
-      updateProgress:   this.handleUpdateProgress,
-    });
+  handleDrop = (accepted, fileRejections) => {
+    let files;
+    files = this.state.files.filter(f =>  !f.error);
+    this.setState({ files });
+    if (fileRejections.length > 0) {
+      const errorFiles = [];
+      fileRejections.forEach((file) => {
+        file.errors.forEach((err) => {
+          const errorFile = file.file;
+          errorFile.error = err;
+          errorFiles.push(errorFile);
+        });
+      });
+      files = files.concat(errorFiles);
+      this.setState({ files });
+    }
+    if (accepted.length > 0) {
+      AJAXSubmit({
+        url:              this.props.url,
+        files:            accepted,
+        name:             'blob',
+        token:            this.props.csrfToken,
+        transferComplete: this.handleTransferComplete,
+        transferFailed:   this.handleTransferFailed,
+        updateProgress:   this.handleUpdateProgress,
+      });
+    }
   };
 
   handleTransferComplete = (e) => {
@@ -226,7 +243,7 @@ export class FileUploadInput extends React.Component {
           )}
         </DropZone>
         {this.state.error && <span className="dp-pc_file-upload__error">{this.state.error}</span>}
-        <ul>
+        <ul className="dp-pc_file-upload__attached">
           {Array.from(this.state.files).map(file => (<File
             onRemove={this.handleRemove}
             inputName={name}

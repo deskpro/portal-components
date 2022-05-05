@@ -1,7 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { Form, FileUpload, Submit, Formik, Progress } from '@deskpro/portal-components';
+import {
+  Form, FileUpload, Submit, Formik, Progress
+} from '@deskpro/portal-components';
 
 function setCookie(name, value, days, domain) {
   let expires = '';
@@ -31,7 +33,7 @@ storiesOf('Input', module)
             multiple
             files={[
               {
-                name: 'Test file',
+                name:     'Test file',
                 filename: 'Test file.pdf'
               }
             ]}
