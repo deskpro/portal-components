@@ -12,14 +12,16 @@ import AJAXSubmit from '../../utils/AJAXSubmit';
 import File from '../File';
 
 const I18N = {
-  dragNDrop:    'Drag and drop',
-  or:           'or',
-  chooseAFile:  'Choose a file',
-  chooseFiles:  'Choose files',
-  remove:       'remove',
-  error413:     'File too large',
-  errorMaxSize: 'File too large: {max} maximum',
-  generalError: 'Upload failed',
+  dragNDrop:     'Drag and drop',
+  or:            'or',
+  chooseAFile:   'Choose a file',
+  chooseFiles:   'Choose files',
+  remove:        'remove',
+  error413:      'File too large',
+  errorMaxSize:  'File too large: {max} maximum',
+  generalError:  'Upload failed',
+  tooLargeError: 'File too big',
+  error:         'Error',
 };
 
 export class FileUploadInput extends React.Component {
