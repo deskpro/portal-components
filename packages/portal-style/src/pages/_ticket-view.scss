@@ -243,6 +243,25 @@
     }
   }
 
+  &-chat-message {
+    &-content {
+      margin-left: 40px;
+      margin-top: 11px;
+      span {
+        font-size: 16px;
+        color: $grey-dark;
+      }
+    }
+    &-link {
+      margin-left: 40px;
+      margin-top: 13px;
+      font-size: 14px;
+      a {
+        color: $grey;
+      }
+    }
+  }
+
   blockquote {
     font-style: normal;
     background: white;
