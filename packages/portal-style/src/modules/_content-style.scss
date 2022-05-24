@@ -258,6 +258,28 @@
   background-color: var(--purple40);
 }
 
+.dp-po-post-content *[data-indent="1"] {
+  margin-left: 18pt;
+}
+.dp-po-post-content *[data-indent="2"] {
+  margin-left: 42pt;
+}
+.dp-po-post-content *[data-indent="3"] {
+  margin-left: 66pt;
+}
+.dp-po-post-content *[data-indent="4"] {
+  margin-left: 80pt;
+}
+.dp-po-post-content *[data-indent="5"] {
+  margin-left: 98pt;
+}
+.dp-po-post-content *[data-indent="6"] {
+  margin-left: 122pt;
+}
+.dp-po-post-content *[data-indent="7"] {
+  margin-left: 150pt;
+}
+
 .dp-po-post-content hr {
   clear: both;
   margin: 0.75em 0;
