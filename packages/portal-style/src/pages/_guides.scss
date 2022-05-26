@@ -22,7 +22,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 100%;
-    white-space: initial;
+    white-space: nowrap;
   }
 
   &-list {
@@ -167,7 +167,7 @@
     font-size: $s26;
     margin: 0;
     flex: 0 0 100%;
-    white-space: nowrap;
+    white-space: initial;
     text-overflow: ellipsis;
     max-width: 100%;
     overflow: hidden;
