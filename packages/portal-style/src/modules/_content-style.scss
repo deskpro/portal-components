@@ -827,18 +827,18 @@
   font-weight: 700;
   color: var(--grey-darkest);
   margin-right: 8px;
-  min-width: 20px;
+  min-width: 27px;
   display: inline-block;
-  padding: 2px 2px 2px 5px;
+  padding: 2px 2px 2px 3px;
   height: 27px;
   line-height: 21px;
   vertical-align: middle;
   text-align: center;
 }
-.dp-po-post-content ul ol:not(.footnotes-list) li {
+.dp-po-post-content ul ol:not(.footnotes-list) > li {
   counter-increment: ulCounter;
 }
-.dp-po-post-content ul ol:not(.footnotes-list) li:before {
+.dp-po-post-content ul ol:not(.footnotes-list) > li:before {
   content: counters(ulCounter, ".") " ";
 }
 .dp-po-post-content dt {
