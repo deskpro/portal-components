@@ -796,11 +796,11 @@
   counter-reset: counter;
   padding-inline-start: 16px;
 }
-.dp-po-post-content ol:not(.footnotes-list) li {
+.dp-po-post-content ol:not(.footnotes-list) > li {
   display: block;
   counter-increment: counter;
 }
-.dp-po-post-content ol:not(.footnotes-list) p {
+.dp-po-post-content ol:not(.footnotes-list) > li > p {
   display: inline-block;
   margin: 6px 0;
   max-width: calc(100% - 35px);
@@ -818,7 +818,7 @@
   padding-inline-start: 38px;
 }
 
-.dp-po-post-content ol:not(.footnotes-list) li:before {
+.dp-po-post-content ol:not(.footnotes-list) > li:before {
   content: counters(counter, ".") " ";
   background-color: var(--grey10);
   border: 1px solid var(--grey20);
@@ -834,17 +834,6 @@
   line-height: 21px;
   vertical-align: middle;
   text-align: center;
-}
-.dp-po-post-content ol:not(.footnotes-list) ul li:before {
-  content: "•";
-  border: none;
-  padding: 0;
-  min-width: 0;
-  background: none;
-  vertical-align: middle;
-  font-size: 12px;
-  line-height: 12px;
-  height: 12px;
 }
 .dp-po-post-content ul ol:not(.footnotes-list) li {
   counter-increment: ulCounter;
