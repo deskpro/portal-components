@@ -143,9 +143,12 @@
 
 /* scrollbar itself */
 .dp-po-post-content pre code::-webkit-scrollbar-thumb {
-  background-color: #babac0;
+  background-color: rgba(0,0,0,0);
   border-radius: 16px;
   border: 4px solid var(--brandshade-100);
+}
+.dp-po-post-content pre code:hover::-webkit-scrollbar-thumb {
+  background-color: #babac0;
 }
 .dp-po-post-content pre code .code-block .code-copy {
   opacity: 0;
