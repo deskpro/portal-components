@@ -123,7 +123,28 @@
   font-family: $font-family-monospace;
   font-size: 14px;
   border-radius: 5px;
-  white-space: break-spaces;
+  overflow: scroll;
+}
+.dp-po-post-content pre code::-webkit-scrollbar {
+  background-color: #fff;
+  width: 16px;
+}
+
+/* background of the scrollbar except button or resizer */
+.dp-po-post-content pre code::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+/* scrollbar itself */
+.dp-po-post-content pre code::-webkit-scrollbar-thumb {
+  background-color: #babac0;
+  border-radius: 16px;
+  border: 4px solid #fff;
+}
+
+/* set button(top and bottom of the scrollbar) */
+.dp-po-post-content pre code::-webkit-scrollbar-button {
+  display:none;
 }
 .dp-po-post-content pre code .code-block .code-copy {
   opacity: 0;
