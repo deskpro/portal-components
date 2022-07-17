@@ -107,12 +107,12 @@ class DynamicForm {
     switch (op) {
       case 'is':
         if (typeName === 'choice') {
-          return targetValue.indexOf(value) !== -1;
+          return targetValue.findIndex(immVal => immVal === value || `${immVal}` === `${value}`) !== -1;
         }
         return targetValue === value;
       case 'not':
         if (typeName === 'choice') {
-          return targetValue.indexOf(value) === -1;
+          return targetValue.findIndex(immVal => immVal === value || `${immVal}` === `${value}`) === -1;
         }
         return targetValue !== value;
       case 'isset':
