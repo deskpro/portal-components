@@ -89,6 +89,16 @@
     white-space: normal;
   }
 
+  &-content ol > li > ol {
+    list-style-type: upper-alpha;
+  }
+  &-content ol > li > ol > li > ol {
+    list-style-type: lower-roman;
+  }
+  &-content ol > li > ol > li > ol > li > ol {
+    list-style-type: lower-alpha;
+  }
+
   &-msg {
     margin: 15px 0 0;
     line-height: 1.5;
