@@ -53,7 +53,6 @@ export {
   FileUpload,
   FileUploadInput,
   FullDragDrop,
-  // HijriDatePicker,
   LikertScale,
   Number,
   Password,

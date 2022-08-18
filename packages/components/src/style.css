@@ -716,6 +716,9 @@
             }
           }
         }
+        &.error {
+          color: var(--danger);
+        }
       }
     }
     & ~ .indicator {

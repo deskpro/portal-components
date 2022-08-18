@@ -13,14 +13,16 @@ import type { DpBlob } from "../../types/blob";
 import type { I18nType } from "../../types/i18n";
 
 const I18N = {
-  dragNDrop:    'Drag and drop',
-  or:           'or',
-  chooseAFile:  'Choose a file',
-  chooseFiles:  'Choose files',
-  remove:       'remove',
-  error413:     'File too large',
-  errorMaxSize: 'File too large: {max} maximum',
-  generalError: 'Upload failed',
+  dragNDrop:     'Drag and drop',
+  or:            'or',
+  chooseAFile:   'Choose a file',
+  chooseFiles:   'Choose files',
+  remove:        'remove',
+  error413:      'File too large',
+  errorMaxSize:  'File too large: {max} maximum',
+  generalError:  'Upload failed',
+  tooLargeError: 'File too big',
+  error:         'Error',
 };
 
 interface FileUploadInputProps {
@@ -52,6 +54,7 @@ export class FileUploadInput extends React.Component<FileUploadInputProps, FileU
     files:    [],
     onChange() {},
     i18n:     {},
+    maxSize:  Infinity,
   };
   private i18n: I18nType;
   private dropZone: any;
@@ -70,16 +73,33 @@ export class FileUploadInput extends React.Component<FileUploadInputProps, FileU
     };
   }
 
-  handleDrop = (accepted) => {
-    AJAXSubmit({
-      url:              this.props.url,
-      files:            accepted,
-      name:             'blob',
-      token:            this.props.csrfToken,
-      transferComplete: this.handleTransferComplete,
-      transferFailed:   this.handleTransferFailed,
-      updateProgress:   this.handleUpdateProgress,
-    });
+  handleDrop = (accepted, fileRejections) => {
+    let files;
+    files = this.state.files.filter(f =>  !f.error);
+    this.setState({ files });
+    if (fileRejections.length > 0) {
+      const errorFiles = [];
+      fileRejections.forEach((file) => {
+        file.errors.forEach((err) => {
+          const errorFile = file.file;
+          errorFile.error = err;
+          errorFiles.push(errorFile);
+        });
+      });
+      files = files.concat(errorFiles);
+      this.setState({ files });
+    }
+    if (accepted.length > 0) {
+      AJAXSubmit({
+        url:              this.props.url,
+        files:            accepted,
+        name:             'blob',
+        token:            this.props.csrfToken,
+        transferComplete: this.handleTransferComplete,
+        transferFailed:   this.handleTransferFailed,
+        updateProgress:   this.handleUpdateProgress,
+      });
+    }
   };
 
   handleTransferComplete = (e) => {
@@ -185,7 +205,9 @@ export class FileUploadInput extends React.Component<FileUploadInputProps, FileU
   };
 
   render() {
-    const { multiple, name, id } = this.props;
+    const {
+      multiple, name, id, maxSize
+    } = this.props;
 
     return (
       <div className={
@@ -199,6 +221,7 @@ export class FileUploadInput extends React.Component<FileUploadInputProps, FileU
         <DropZone
           onDrop={this.handleDrop}
           multiple={multiple}
+          maxSize={maxSize}
           ref={(c) => { this.dropZone = c; }}
         >
           {({ getRootProps, getInputProps, isDragActive }) => (
@@ -230,7 +253,7 @@ export class FileUploadInput extends React.Component<FileUploadInputProps, FileU
           )}
         </DropZone>
         {this.state.error && <span className="dp-pc_file-upload__error">{this.state.error}</span>}
-        <ul>
+        <ul className="dp-pc_file-upload__attached">
           {Array.from(this.state.files).map(file => (<File
             onRemove={this.handleRemove}
             inputName={name}

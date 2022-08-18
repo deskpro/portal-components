@@ -203,8 +203,8 @@ export class CascadingDropDownInput extends React.Component<CascadingDropDownInp
   }
 
   setStateValue = () => {
-    const { value: stateValue, options, subChoice } = this.state;
-    const { value: propValue } = this.props;
+    const { value: stateValue, subChoice } = this.state;
+    const { value: propValue, dataSource } = this.props;
     if (subChoice) {
       return;
     }
@@ -213,9 +213,9 @@ export class CascadingDropDownInput extends React.Component<CascadingDropDownInp
       ? opts.find(o => o.value === propValue || !!findValue(o.children))
       : null
     );
-    const newValue = findValue(options) || null;
+    const newValue = findValue(dataSource.getOptions) || null;
 
-    if (Array.isArray(options)
+    if (Array.isArray(dataSource.getOptions)
       && JSON.stringify(newValue) !== JSON.stringify(stateValue)
       && !(stateValue && !isString(stateValue) && typeof stateValue !== 'number' && stateValue.children)
     ) {

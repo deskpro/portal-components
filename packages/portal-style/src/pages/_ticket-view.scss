@@ -89,9 +89,33 @@
     white-space: normal;
   }
 
+  &-content ol > li > ol {
+    list-style-type: upper-alpha;
+  }
+  &-content ol > li > ol > li > ol {
+    list-style-type: lower-roman;
+  }
+  &-content ol > li > ol > li > ol > li > ol {
+    list-style-type: lower-alpha;
+  }
+
   &-msg {
     margin: 15px 0 0;
     line-height: 1.5;
+  }
+
+  &-rate-links {
+    font-size: 14px;
+    color: var(--text-color-lighter);
+
+    a {
+      font-size: 14px;
+      color: #a9b0b0;
+      border: 1px solid #d3d6d7;
+      display: inline-block;
+      padding: 2px 7px;
+      border-radius: 2px;
+    }
   }
 
   &-showmore {
@@ -240,6 +264,25 @@
       border-radius: 4px;
       padding: 4px 6px 5px;
       color: $text-color;
+    }
+  }
+
+  &-chat-message {
+    &-content {
+      margin-left: 40px;
+      margin-top: 11px;
+      span {
+        font-size: 16px;
+        color: $grey-dark;
+      }
+    }
+    &-link {
+      margin-left: 40px;
+      margin-top: 13px;
+      font-size: 14px;
+      a {
+        color: $grey;
+      }
     }
   }
 

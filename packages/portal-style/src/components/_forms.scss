@@ -204,6 +204,18 @@
     &>input {
       padding-left: 30px;
     }
+
+    &.aud {
+      &>input {
+        padding-left: 40px;
+      }
+    }
+
+    &.nzd, &.cad, &.chf, &.hkd, &.sek {
+      &>input {
+        padding-left: 50px;
+      }
+    }
   }
   .medium-editor-action {
     padding: 7px;
