@@ -217,7 +217,7 @@ export class CascadingDropDownInput extends React.Component<CascadingDropDownInp
 
     if (Array.isArray(dataSource.getOptions)
       && JSON.stringify(newValue) !== JSON.stringify(stateValue)
-      && !(stateValue && !isString(stateValue) && typeof stateValue !== 'number' && stateValue.children)
+      && !(stateValue && !isString(stateValue) && typeof stateValue !== 'number' && stateValue.children && stateValue.children.length)
     ) {
       this.setState({ value: newValue });
     }

@@ -1,4 +1,5 @@
 export type DpBlob = {
+  error: string;
   id: string;
   filename: string;
   name?:   string;

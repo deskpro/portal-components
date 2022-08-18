@@ -35,6 +35,7 @@ interface FileUploadInputProps {
   onChange:  (name: string, files: DpBlob[]) => void;
   i18n:      object;
   files:     DpBlob[];
+  maxSize:   number;
 }
 
 interface FileUploadInputState {
