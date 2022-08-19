@@ -1,5 +1,4 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean } from '@storybook/addon-knobs/react';
 import { action } from '@storybook/addon-actions';
 import { TicketForm } from '@deskpro/portal-components';
@@ -17,19 +16,23 @@ function setCookie(name, value, days, domain) {
 
 setCookie('_dp_csrf_token', '123456', 1, 'deskpro5.local');
 
-storiesOf('TicketForm', module)
-  .addDecorator(withKnobs)
-  .add('TicketForm', () => (
-    <TicketForm
-      showHover={boolean('Show hover', false)}
-      deskproLayout={ticketLayout}
-      departments={departments}
-      categories={categories}
-      priorities={priorities}
-      products={products}
-      department={null}
-      onSubmit={action('submit')}
-      fileUploadUrl="http://localhost:6006/"
-      csrfToken="123456"
-    />
-  ));
+export default {
+  title: 'TicketForm',
+  decorators: [withKnobs],
+};
+
+export const TicketFormStory = () => (
+  <TicketForm
+    showHover={boolean('Show hover', false)}
+    deskproLayout={ticketLayout}
+    departments={departments}
+    categories={categories}
+    priorities={priorities}
+    products={products}
+    department={null}
+    onSubmit={action('submit')}
+    fileUploadUrl="http://localhost:6006/"
+    csrfToken="123456"
+  />
+);
+TicketFormStory.storyName = 'TicketForm';

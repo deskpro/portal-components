@@ -4,3 +4,8 @@ node_modules
 lerna-debug.log
 target
 
+/yarn-error.log
+packages/components/.cache/eslint
+packages/components-demo/yarn-error.log
+packages/components/tsconfig.tsbuildinfo
+.cache/eslint

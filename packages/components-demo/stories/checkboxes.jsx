@@ -1,5 +1,4 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { Form, Checkboxes, Submit, Formik } from '@deskpro/portal-components';
 
@@ -12,20 +11,24 @@ const options = [
   { value: 'pickles', label: 'Pickles' },
 ];
 
-storiesOf('Choices', module)
-  .add('Checkboxes', () => (
-    <Formik
-      initialValues={{ filling: ['bacon'] }}
-      onSubmit={action('submit')}
-      render={() => (
-        <Form>
-          <Checkboxes
-            name="filling"
-            options={options}
-            label="Filling"
-          />
-          <Submit>Submit</Submit>
-        </Form>
-      )}
-    />
-  ));
+export default {
+  title: "Choices"
+}
+
+export const CheckboxesStory = () => (
+  <Formik
+    initialValues={{ filling: ['bacon'] }}
+    onSubmit={action('submit')}
+    render={() => (
+      <Form>
+        <Checkboxes
+          name="filling"
+          options={options}
+          label="Filling"
+        />
+        <Submit>Submit</Submit>
+      </Form>
+    )}
+  />
+);
+CheckboxesStory.storyName = 'Checkboxes';

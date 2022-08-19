@@ -1,0 +1,215 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes 1`] = `
+<form
+  className="dp-pc_form show-hover"
+  onReset={[Function]}
+  onSubmit={[Function]}
+>
+  <div
+    className="dp-pc_field"
+  >
+    <label
+      className="dp-pc_checkboxes_label"
+      htmlFor="field_1"
+    >
+      
+    </label>
+    <div
+      className="dp-pc_checkboxes"
+      description=""
+      id={null}
+      required={false}
+    >
+      <label
+        className="dp-pc_checkboxes_checkbox"
+        htmlFor="field_1-first"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyPress={[Function]}
+        tabIndex={0}
+      >
+        <input
+          checked={false}
+          id="field_1-first"
+          name="checkboxes"
+          onChange={[Function]}
+          type="checkbox"
+          value="first"
+        />
+        <i
+          onClick={[Function]}
+        />
+         
+        <span
+          className="label"
+        >
+          First
+        </span>
+      </label>
+      <label
+        className="dp-pc_checkboxes_checkbox"
+        htmlFor="field_1-second"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyPress={[Function]}
+        tabIndex={0}
+      >
+        <input
+          checked={false}
+          id="field_1-second"
+          name="checkboxes"
+          onChange={[Function]}
+          type="checkbox"
+          value="second"
+        />
+        <i
+          onClick={[Function]}
+        />
+         
+        <span
+          className="label"
+        >
+          Second
+        </span>
+      </label>
+      <label
+        className="dp-pc_checkboxes_checkbox"
+        htmlFor="field_1-last"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyPress={[Function]}
+        tabIndex={0}
+      >
+        <input
+          checked={false}
+          id="field_1-last"
+          name="checkboxes"
+          onChange={[Function]}
+          type="checkbox"
+          value="last"
+        />
+        <i
+          onClick={[Function]}
+        />
+         
+        <span
+          className="label"
+        >
+          Last
+        </span>
+      </label>
+    </div>
+  </div>
+</form>
+`;
+
+exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes with existing value 1`] = `
+<form
+  className="dp-pc_form show-hover"
+  onReset={[Function]}
+  onSubmit={[Function]}
+>
+  <div
+    className="dp-pc_field"
+  >
+    <label
+      className="dp-pc_checkboxes_label"
+      htmlFor="checkbox"
+    >
+      
+    </label>
+    <div
+      className="dp-pc_checkboxes"
+      description=""
+      id="checkbox"
+      required={false}
+    >
+      <label
+        className="dp-pc_checkboxes_checkbox"
+        htmlFor="checkbox-first"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyPress={[Function]}
+        tabIndex={0}
+      >
+        <input
+          checked={true}
+          id="checkbox-first"
+          name="checkboxes"
+          onChange={[Function]}
+          type="checkbox"
+          value="first"
+        />
+        <i
+          onClick={[Function]}
+        />
+         
+        <span
+          className="label"
+        >
+          First
+        </span>
+      </label>
+      <label
+        className="dp-pc_checkboxes_checkbox"
+        htmlFor="checkbox-second"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyPress={[Function]}
+        tabIndex={0}
+      >
+        <input
+          checked={false}
+          id="checkbox-second"
+          name="checkboxes"
+          onChange={[Function]}
+          type="checkbox"
+          value="second"
+        />
+        <i
+          onClick={[Function]}
+        />
+         
+        <span
+          className="label"
+        >
+          Second
+        </span>
+      </label>
+      <label
+        className="dp-pc_checkboxes_checkbox"
+        htmlFor="checkbox-last"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyPress={[Function]}
+        tabIndex={0}
+      >
+        <input
+          checked={false}
+          id="checkbox-last"
+          name="checkboxes"
+          onChange={[Function]}
+          type="checkbox"
+          value="last"
+        />
+        <i
+          onClick={[Function]}
+        />
+         
+        <span
+          className="label"
+        >
+          Last
+        </span>
+      </label>
+    </div>
+  </div>
+</form>
+`;
