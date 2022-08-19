@@ -32,7 +32,7 @@
     "@storybook/addon-postcss": "^2.0.0",
     "formik": "^1.5.7",
     "immutable": "3.8.2",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "react": "16.14.0",
     "react-datepicker": "^2.14.1",
     "react-dom": "16.14.0",
