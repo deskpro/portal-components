@@ -71,8 +71,9 @@ export class AccessibleDropDownInput extends React.Component<AccessibleDropDownI
     } = this.props;
     const { children } = this.state;
 
+    console.log(Autocomplete)
     return (
-      <React.Fragment>
+      <>
         <Autocomplete
           showAllValues
           onConfirm={this.handleConfirm}
@@ -96,7 +97,7 @@ export class AccessibleDropDownInput extends React.Component<AccessibleDropDownI
             </div>
           )
           : null}
-      </React.Fragment>
+      </>
     );
   }
 }

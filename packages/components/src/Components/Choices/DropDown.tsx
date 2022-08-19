@@ -14,7 +14,7 @@ import {
 import type { Option } from "../../types/options";
 import { DataSource } from "../../types/dataSource";
 
-const SelectContainer = ({  children, ...props }: ContainerProps) => (
+const SelectContainer = ({ children, ...props }: ContainerProps) => (
   <components.SelectContainer
     {...props}
     className={classNames(
@@ -120,7 +120,10 @@ interface DropDownInputProps extends FieldProps {
 }
 
 interface DropDownInputState extends FieldState {
-  value: any;
+  value?: {
+    value: string;
+    children: string[];
+  };
   menuIsOpen: boolean;
   options: Option[];
 }
@@ -282,11 +285,13 @@ export class DropDownInput extends React.Component<DropDownInputProps, DropDownI
           components={{
             SelectContainer,
             Option,
-            DropdownIndicator: dropdownProps => <DropdownIndicator closeMenu={this.closeMenu} {...dropdownProps} />
+            DropdownIndicator: dropdownProps => (
+              <DropdownIndicator closeMenu={this.closeMenu} {...dropdownProps} />
+            )
           }}
           menuPlacement="auto"
           menuIsOpen={this.state.menuIsOpen}
-          options={this.state.options}
+          options={options}
           closeMenuOnScroll={false}
           classNamePrefix="react-select"
           placeholder={this.i18n.select}
@@ -376,7 +381,8 @@ class DropDown extends Field<DropDownProps> {
 }
 
 export {
+  DropdownIndicator,
+  OptionProps,
   SelectContainer,
-  DropdownIndicator
 };
 export default DropDown;

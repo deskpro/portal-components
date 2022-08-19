@@ -2,9 +2,9 @@ import * as React from 'react';
 import { getIn } from 'formik';
 import ReactSelect from 'react-select';
 import AsyncSelect from 'react-select/async';
-import { SelectContainer, DropdownIndicator } from './DropDown';
+import { deepMerge } from '@deskpro/js-utils/dist/objects';
+import { SelectContainer, DropdownIndicator, OptionProps } from './DropDown';
 import Field, { FieldProps } from '../Field';
-import { OptionProps } from "react-select/dist/declarations/src/components/Option";
 import type { DataSource } from "../../types/dataSource";
 import type { Option } from "../../types/options";
 import classNames from "classnames";
@@ -14,6 +14,7 @@ const Option = (props: OptionProps) => {
   const {
     className,
     cx,
+    data,
     getStyles,
     label,
     isDisabled,
@@ -22,12 +23,65 @@ const Option = (props: OptionProps) => {
     innerRef,
     innerProps
   } = props;
+  if (data.children && data.children.length > 0) {
+    return (
+      <div
+        ref={innerRef}
+        className={classNames(
+          cx(
+          {
+            option:                true,
+            'option--is-disabled': isDisabled,
+            'option--is-focused':  isFocused,
+            'option--is-selected': isSelected,
+          },
+          className ?? 'dp-pc_checkbox'),
+          css(getStyles('option', props))
+        )}
+        {...innerProps}
+      >
+        <span
+          className="dp-pc_checkbox__checkbox"
+        >
+        <input type="checkbox" checked={isSelected} readOnly />
+        <i style={{visibility: "hidden"}} />
+        <span className="dp-pc_checkbox__label">
+          {label}
+        </span>
+      </span>
+        <span className="react-select__option--arrow" />
+      </div>
+    );
+  }
+  if (data.value === 'select-back') {
+    return (
+      <div
+        ref={innerRef}
+        className={classNames(
+          cx(
+            {
+              option:                true,
+              'option--is-disabled': isDisabled,
+              'option--is-focused':  isFocused,
+              'option--is-selected': isSelected,
+              'option--is-back':     true,
+            },
+            className),
+          css(getStyles('option', props))
+        )}
+        {...innerProps}
+      >
+        <span className="react-select__option--back-arrow" />
+        {label}
+      </div>
+    );
+  }
   return (
     <div
       ref={innerRef}
       className={classNames(
         cx(
-        {
+          {
             option:                true,
             'option--is-disabled': isDisabled,
             'option--is-focused':  isFocused,
@@ -51,41 +105,58 @@ const Option = (props: OptionProps) => {
   );
 };
 
+const I18N = {
+  back:   'Back',
+  select: 'Select',
+};
+
 interface MultipleDropDownInputProps extends MultipleDropDownProps {
-  onChange:     (value: any) => void;
-  value:        string[];
-  closeOnBlur?: boolean;
+  dataSource: DataSource;
+  onChange: (value: number | string) => void;
+  onBlur: () => void;
+  onFocus: () => void;
+  isClearable?: boolean;
+  value: number[] | string[];
+  isSearchable?: boolean;
+  closeOnBlur?:  boolean;
 }
 
 interface MultipleDropDownInputState {
-  value:      Option;
   menuIsOpen: boolean;
+  value?: Option[];
+  subChoice?: boolean;
+  options: Option[];
 }
 
 export class MultipleDropDownInput extends React.Component<MultipleDropDownInputProps, MultipleDropDownInputState> {
   static defaultProps = {
+    i18n: {},
     onBlur() {},
     onFocus() {},
   };
-  private select: React.RefObject<any>;
+  private i18n: any;
+  private readonly select: React.RefObject<any>;
 
   constructor(props) {
     super(props);
+
+    this.i18n = deepMerge(I18N, props.i18n);
     this.select = React.createRef();
 
     this.state = {
       value:      null,
-      menuIsOpen: false
+      menuIsOpen: false,
+      options:    props.dataSource.getOptions,
     };
   }
 
-  onChange = (value) => {
-    this.setState({
-      value
-    });
-    const newValue = value ? value.map(e => e.value) : null;
-    this.props.onChange(newValue);
-  };
+  componentDidMount() {
+    this.setOptions();
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    // this.setOptions(prevState);
+  }
 
   onBlur = () => {
     this.props.onBlur();
@@ -97,6 +168,34 @@ export class MultipleDropDownInput extends React.Component<MultipleDropDownInput
   onFocus = () => {
     this.props.onFocus();
     this.setState({ menuIsOpen: true });
+  };
+
+  onChange = (value, meta) => {
+    if (meta.option && meta.option.children && meta.option.children.length > 0) {
+      const { children } = meta.option;
+      const options: Option[] = [{
+        label:   this.i18n.back,
+        value:   'select-back',
+        parents: this.state.options,
+      }].concat(children);
+      this.setState({
+        options,
+      });
+      return false;
+    } if (meta.option && meta.option.parents && meta.option.parents.length > 0) {
+      this.setState({
+        options: meta.option.parents
+      });
+      return false;
+    }
+    this.setState({
+      value
+    });
+    // @TODO Fix that
+    // this.select.current.blur();
+    const newValue = value ? value.map(e => e.value) : null;
+    this.props.onChange(newValue);
+    return true;
   };
 
   closeMenu = () => {
@@ -114,7 +213,12 @@ export class MultipleDropDownInput extends React.Component<MultipleDropDownInput
       return dataSource.getOptions;
     }
     return dataSource.getOptions(inputValue).then((options: Option[]) => {
-      const value = options.find(o => propValue && propValue.includes(o.value));
+      const value = [];
+      options.forEach(o => {
+        if (propValue && propValue.some((e) => e === o.value)) {
+          value.push(o);
+        }
+      });
       this.setState({
         value
       });
@@ -122,21 +226,45 @@ export class MultipleDropDownInput extends React.Component<MultipleDropDownInput
     });
   };
 
+  setOptions = () => {
+    const { value: stateValue } = this.state;
+    const { value: propValue, dataSource } = this.props;
+
+    if (Array.isArray(dataSource.getOptions) && propValue && !stateValue) {
+      const newValues = (options) => {
+        const values = [];
+        options.forEach(o => {
+          if (propValue && propValue.some((e) => e === o.value)) {
+            values.push(o);
+          }
+          if (o.children && o.children.length) {
+            const childrenValues = newValues(o.children);
+            values.push(...childrenValues);
+          }
+        });
+        return values;
+      }
+
+      const newValue = newValues(dataSource.getOptions);
+      this.setState({
+        value: newValue
+      });
+    }
+  };
+
   render() {
     const {
-      name, dataSource, value, ...props
+      name, dataSource, isClearable, isSearchable, value: propValue, ...props
     } = this.props;
+    const { value: stateValue, options } = this.state;
+
     if (Array.isArray(dataSource.getOptions)) {
       return (
         <ReactSelect
           ref={this.select}
-          value={
-            dataSource.getOptions.filter(o => value && value.includes(o.value))
-          }
           name={name}
-          menuIsOpen={this.state.menuIsOpen}
-          isClearable={false}
-          options={dataSource.getOptions}
+          isClearable={isClearable}
+          isSearchable={isSearchable}
           hideSelectedOptions={false}
           components={{
             SelectContainer,
@@ -145,10 +273,14 @@ export class MultipleDropDownInput extends React.Component<MultipleDropDownInput
               <DropdownIndicator closeMenu={this.closeMenu} {...dropdownProps} />
             )
           }}
+          menuIsOpen={this.state.menuIsOpen}
+          options={options}
           classNamePrefix="react-select"
+          placeholder={this.i18n.select}
           isMulti
           {...props}
           className="react-select-multi"
+          value={stateValue}
           onFocus={this.onFocus}
           onBlur={this.onBlur}
           onChange={this.onChange}
@@ -192,7 +324,10 @@ class MultipleDropDown extends Field<MultipleDropDownProps> {
     ...Field.defaultProps,
     closeOnBlur: true,
     handleChange() {},
+    isClearable:  false,
+    isSearchable: true,
     onBlur() {},
+    onFocus() {},
   };
 
   onBlur = (form) => {

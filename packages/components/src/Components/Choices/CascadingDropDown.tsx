@@ -5,33 +5,10 @@ import AsyncSelect from 'react-select/async';
 import { deepMerge } from '@deskpro/js-utils/dist/objects';
 import classNames from 'classnames';
 import Field, { FieldProps } from '../Field';
-import { ContainerProps } from "react-select/dist/declarations/src/components/containers";
-import { DropdownIndicatorProps as ReactSelectDropdownIndicatorProps } from "react-select/dist/declarations/src/components/indicators";
 import { OptionProps as ReactSelectOptionProps } from "react-select/dist/declarations/src/components/Option";
 import type { DataSource } from "../../types/dataSource";
 import { css } from "@emotion/css";
-
-const SelectContainer = ({ children, ...props }: ContainerProps) => (
-  <components.SelectContainer
-    {...props}
-    className={classNames(
-      'react-select',
-      { 'react-select__is-focused': props.isFocused, 'react-select-multi': props.isMulti }
-    )}
-  >
-    {children}
-  </components.SelectContainer>
-);
-
-interface DropdownIndicatorProps extends ReactSelectDropdownIndicatorProps {
-  closeMenu: () => void;
-}
-
-const DropdownIndicator = ({ closeMenu, ...props }: DropdownIndicatorProps) => (
-  <components.DropdownIndicator {...props}>
-    <span className="dp-react-select__dropdown-indicator" onClick={closeMenu} onKeyDown={() => true} />
-  </components.DropdownIndicator>
-);
+import { DropdownIndicator, SelectContainer } from './DropDown';
 
 interface OptionProps extends ReactSelectOptionProps {
   data: {
@@ -338,8 +315,4 @@ class CascadingDropDown extends Field<CascadingDropDownProps> {
   }
 }
 
-export {
-  SelectContainer,
-  DropdownIndicator
-};
 export default CascadingDropDown;
