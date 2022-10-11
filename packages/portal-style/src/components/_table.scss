@@ -52,6 +52,15 @@
     }
   }
 
+  &-col2 {
+    #{$self}-cell {
+      width: 80%;
+    }
+    #{$self}-cell:first-child {
+      width: 20%;
+    }
+  }
+
   &-col3 {
     #{$self}-cell {
       width: calc(100% / 3);
