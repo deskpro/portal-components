@@ -56,7 +56,7 @@
     #{$self}-cell {
       width: 80%;
     }
-    #{$self}-cell:first-child {
+    #{$self}-cell:nth-child(2) {
       width: 20%;
     }
   }
