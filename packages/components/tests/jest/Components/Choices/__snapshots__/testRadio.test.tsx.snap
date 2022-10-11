@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>>> Radio --- Snapshot +++capturing Snapshot of Radio 1`] = `
+<form
+  className="dp-pc_form show-hover"
+  onReset={[Function]}
+  onSubmit={[Function]}
+>
+  <div
+    className="dp-pc_field"
+  >
+    <label
+      className="dp-pc_radio_label"
+      htmlFor="field_1"
+    >
+      
+    </label>
+    <div
+      className="dp-pc_radios"
+      id={null}
+      label=""
+      required={false}
+    >
+      <label
+        className="dp-pc_radio"
+        htmlFor="field_1-first"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyPress={[Function]}
+        tabIndex={0}
+      >
+        <input
+          checked={true}
+          id="field_1-first"
+          name="radio"
+          onBlur={[Function]}
+          onChange={[Function]}
+          type="radio"
+          value="first"
+        />
+        <i />
+         
+        <span
+          className="label"
+        >
+          First
+        </span>
+      </label>
+      <label
+        className="dp-pc_radio"
+        htmlFor="field_1-second"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyPress={[Function]}
+        tabIndex={0}
+      >
+        <input
+          checked={false}
+          id="field_1-second"
+          name="radio"
+          onBlur={[Function]}
+          onChange={[Function]}
+          type="radio"
+          value="second"
+        />
+        <i />
+         
+        <span
+          className="label"
+        >
+          Second
+        </span>
+      </label>
+      <label
+        className="dp-pc_radio"
+        htmlFor="field_1-last"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyPress={[Function]}
+        tabIndex={0}
+      >
+        <input
+          checked={false}
+          id="field_1-last"
+          name="radio"
+          onBlur={[Function]}
+          onChange={[Function]}
+          type="radio"
+          value="last"
+        />
+        <i />
+         
+        <span
+          className="label"
+        >
+          Last
+        </span>
+      </label>
+    </div>
+  </div>
+</form>
+`;

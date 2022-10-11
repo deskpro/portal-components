@@ -1,41 +1,43 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { Form, Tel, Submit, Formik } from '@deskpro/portal-components';
 
-
-storiesOf('Input', module)
-  .add('Tel', () => (
-    <Formik
-      initialValues={{ text: '' }}
-      onSubmit={action('submit')}
-      render={() => (
-        <Form>
-          <Tel
-            name="phone"
-            label="Phone"
-            description="Phone number"
-          />
-          <Submit>Submit</Submit>
-        </Form>
-      )}
-    />
-  ))
-  .add('Tel with indicator', () => (
-    <Formik
-      initialValues={{ text: '' }}
-      onSubmit={action('submit')}
-      render={() => (
-        <Form>
-          <Tel
-            name="phone"
-            label="Phone"
-            withIndicator
-            description="Phone number"
-          />
-          <Submit>Submit</Submit>
-        </Form>
-      )}
-    />
-  ));
+export default {
+  title: 'Input'
+};
+export const TelStory = () => (
+  <Formik
+    initialValues={{ text: '' }}
+    onSubmit={action('submit')}
+    render={() => (
+      <Form>
+        <Tel
+          name="phone"
+          label="Phone"
+          description="Phone number"
+        />
+        <Submit>Submit</Submit>
+      </Form>
+    )}
+  />
+);
+TelStory.storyName = 'Tel';
+export const TelWithIndicator = () => (
+  <Formik
+    initialValues={{ text: '' }}
+    onSubmit={action('submit')}
+    render={() => (
+      <Form>
+        <Tel
+          name="phone"
+          label="Phone"
+          withIndicator
+          description="Phone number"
+        />
+        <Submit>Submit</Submit>
+      </Form>
+    )}
+  />
+);
+TelWithIndicator.storyName = 'Tel With Indicator';
 

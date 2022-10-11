@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>>> DropDown --- Snapshot +++capturing Snapshot of DropDown 1`] = `
+<form
+  className="dp-pc_form show-hover"
+  onReset={[Function]}
+  onSubmit={[Function]}
+>
+  <div
+    className="dp-pc_field"
+  >
+    <label
+      className="dp-pc_label"
+      htmlFor="field_1"
+    >
+      
+    </label>
+    <div>
+      {"styles":{},"value":{"value":"first","label":"First"},"name":"dropDown","isClearable":false,"isSearchable":true,"components":{},"menuPlacement":"auto","menuIsOpen":false,"options":[{"value":"first","label":"First"},{"value":"second","label":"Second"},{"value":"last","label":"Last"}],"closeMenuOnScroll":false,"classNamePrefix":"react-select","placeholder":"Select","label":"","errorsName":"","description":"","className":"","fClassName":"","id":null,"children":null,"required":false,"i18n":{},"closeOnBlur":true}
+    </div>
+  </div>
+</form>
+`;

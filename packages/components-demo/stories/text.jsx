@@ -1,23 +1,24 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { Form, Text, Submit, Formik } from '@deskpro/portal-components';
 
+export default {
+  title: "Input",
+}
 
-storiesOf('Input', module)
-  .add('Text', () => (
-    <Formik
-      initialValues={{ text: '' }}
-      onSubmit={action('submit')}
-      render={() => (
-        <Form>
-          <Text
-            name="text"
-            label="Text"
-            description="Test description"
-          />
-          <Submit>Submit</Submit>
-        </Form>
-      )}
-    />
-  ));
+export const Input = () => (
+  <Formik
+    initialValues={{ text: '' }}
+    onSubmit={action('submit')}
+    render={() => (
+      <Form>
+        <Text
+          name="text"
+          label="Text"
+          description="Test description"
+        />
+        <Submit>Submit</Submit>
+      </Form>
+    )}
+  />
+);

@@ -123,7 +123,32 @@
   font-family: $font-family-monospace;
   font-size: 14px;
   border-radius: 5px;
-  white-space: break-spaces;
+  overflow-x: scroll;
+}
+.dp-po-post-content pre code::-webkit-scrollbar {
+  background-color: var(--brandshade-100);
+  width: 16px;
+  border-radius: 5px;
+}
+.dp-po-post-content pre code::-webkit-scrollbar-corner {
+  background-color: var(--brandshade-100);
+  border-radius: 0 0 5px 0;
+}
+
+/* background of the scrollbar except button or resizer */
+.dp-po-post-content pre code::-webkit-scrollbar-track {
+  background-color: var(--brandshade-100);
+  border-radius: 5px;
+}
+
+/* scrollbar itself */
+.dp-po-post-content pre code::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0);
+  border-radius: 16px;
+  border: 4px solid var(--brandshade-100);
+}
+.dp-po-post-content pre code:hover::-webkit-scrollbar-thumb {
+  background-color: #babac0;
 }
 .dp-po-post-content pre code .code-block .code-copy {
   opacity: 0;
@@ -796,11 +821,11 @@
   counter-reset: counter;
   padding-inline-start: 16px;
 }
-.dp-po-post-content ol:not(.footnotes-list) li {
+.dp-po-post-content ol:not(.footnotes-list) > li {
   display: block;
   counter-increment: counter;
 }
-.dp-po-post-content ol:not(.footnotes-list) p {
+.dp-po-post-content ol:not(.footnotes-list) > li > p {
   display: inline-block;
   margin: 6px 0;
   max-width: calc(100% - 35px);
@@ -818,7 +843,7 @@
   padding-inline-start: 38px;
 }
 
-.dp-po-post-content ol:not(.footnotes-list) li:before {
+.dp-po-post-content ol:not(.footnotes-list) > li:before {
   content: counters(counter, ".") " ";
   background-color: var(--grey10);
   border: 1px solid var(--grey20);
@@ -827,29 +852,18 @@
   font-weight: 700;
   color: var(--grey-darkest);
   margin-right: 8px;
-  min-width: 20px;
+  min-width: 27px;
   display: inline-block;
-  padding: 2px 2px 2px 5px;
+  padding: 2px 2px 2px 3px;
   height: 27px;
   line-height: 21px;
   vertical-align: middle;
   text-align: center;
 }
-.dp-po-post-content ol:not(.footnotes-list) ul li:before {
-  content: "•";
-  border: none;
-  padding: 0;
-  min-width: 0;
-  background: none;
-  vertical-align: middle;
-  font-size: 12px;
-  line-height: 12px;
-  height: 12px;
-}
-.dp-po-post-content ul ol:not(.footnotes-list) li {
+.dp-po-post-content ul ol:not(.footnotes-list) > li {
   counter-increment: ulCounter;
 }
-.dp-po-post-content ul ol:not(.footnotes-list) li:before {
+.dp-po-post-content ul ol:not(.footnotes-list) > li:before {
   content: counters(ulCounter, ".") " ";
 }
 .dp-po-post-content dt {

@@ -62,6 +62,10 @@
     }
   }
 
+  &-content{
+    overflow: hidden;
+  }
+
   &-content,
   &-like,
   &-cc,
@@ -87,6 +91,16 @@
     padding: 6px;
     color: #303030;
     white-space: normal;
+  }
+
+  &-content ol > li > ol {
+    list-style-type: upper-alpha;
+  }
+  &-content ol > li > ol > li > ol {
+    list-style-type: lower-roman;
+  }
+  &-content ol > li > ol > li > ol > li > ol {
+    list-style-type: lower-alpha;
   }
 
   &-msg {
