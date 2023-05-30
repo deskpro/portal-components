@@ -3,19 +3,19 @@ import { fromUnixTime, subDays, subWeeks, subHours, subMinutes, subMonths, subYe
 
 const builtIn = {
   CheckProduct: {
-    value:        'product',
+    value: 'product',
     targetValues: 'product_ids',
   },
   CheckDepartment: {
-    value:        'department',
+    value: 'department',
     targetValues: 'department_ids',
   },
   CheckCategory: {
-    value:        'category',
+    value: 'category',
     targetValues: 'category_ids',
   },
   CheckPriority: {
-    value:        'priority',
+    value: 'priority',
     targetValues: 'priority_ids',
   },
 };
@@ -88,7 +88,7 @@ class DynamicForm {
 
   static validate = (value, term) => {
     const typeName = term.getIn(['options', 'type_name']);
-    const targetValue = term.getIn(['options', 'value']);
+    let targetValue = term.getIn(['options', 'value']);
     const type = term.get('type', '');
     const op = term.get('op');
     let re;
@@ -104,6 +104,11 @@ class DynamicForm {
       default:
         break;
     }
+
+    if (typeName === 'number') {
+      value = parseInt(value, 10);
+    }
+
     switch (op) {
       case 'is':
         if (typeName === 'choice') {
@@ -132,19 +137,21 @@ class DynamicForm {
       case 'lte':
       case 'gte':
       case 'between': {
-        const targetDate = DynamicForm.getDate(term);
         if (!value) {
           return false;
         }
-        const dateValue = parse(value, 'dd/MM/yyyy', new Date());
+        if (typeName === 'date' || typeName === 'datetime') {
+          value = parse(value, 'dd/MM/yyyy', new Date());
+          targetValue = DynamicForm.getDate(term);
+        }
         if (op === 'lte') {
-          return dateValue <= targetDate;
+          return value <= targetValue;
         }
         if (op === 'gte') {
-          return dateValue >= targetDate;
+          return value >= targetValue;
         }
         const targetDate2 = DynamicForm.getDate(term, 2);
-        return dateValue >= targetDate && dateValue <= targetDate2;
+        return value >= targetValue && value <= targetDate2;
       }
       default:
         return false;
