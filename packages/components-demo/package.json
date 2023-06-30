@@ -35,7 +35,7 @@
     "react": "16.14.0",
     "react-datepicker": "^2.14.1",
     "react-dom": "16.14.0",
-    "yup": "^0.27.0"
+    "yup": "1.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
