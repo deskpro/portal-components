@@ -21,7 +21,6 @@
     "concurrently": "^4.1.0",
     "contrast": "^1.0.1",
     "cors": "^2.8.5",
-    "cpx": "^1.5.0",
     "cssnano": "^4.1.10",
     "eslint": "^6.1.0",
     "eslint-config-airbnb-base": "^13.2.0",
