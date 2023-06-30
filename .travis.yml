@@ -9,7 +9,7 @@ before_install:
 before_script:
   - yarn
 script:
-  - npm run build
+  - yarn build
   - ./bin/travis-prep-website.sh
 cache:
   directories:

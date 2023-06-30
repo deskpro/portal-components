@@ -14,7 +14,7 @@
     "@emotion/css": "^11.7.1",
     "@emotion/react": "^11.8.2",
     "accessible-autocomplete": "2.0.4",
-    "classnames": "^2.2.5",
+    "classnames": "^2.3.2",
     "date-fns": "2.28.0",
     "dompurify": "2.3.6",
     "es6-promise": "^4.2.4",
