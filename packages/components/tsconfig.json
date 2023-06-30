@@ -10,11 +10,13 @@
     "moduleResolution": "node",
     "allowJs": true,
     "resolveJsonModule": true,
+    "typeRoots": ["node_modules/@types", "src/types"],
   },
   "include": ["src", "tests","src/layouts/schema.json"],
   "exclude": [
     "node_modules",
     "build",
-    "src/**/*.stories.tsx"
+    "src/**/*.stories.tsx",
+    "src/types",
   ]
 }

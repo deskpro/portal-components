@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import * as Immutable from 'immutable';
 import { Formik } from 'formik';
 import DropZone, { DropzoneRef } from 'react-dropzone';
-import * as Yup from 'yup';
+import * as yup from 'yup';
 import { capitalize } from '@deskpro/js-utils/dist/strings';
 import { deepMerge } from '@deskpro/js-utils/dist/objects';
 import Form from './Form';
@@ -33,7 +33,7 @@ function parseDateFromFormats(formats, parseStrict) {
   });
 }
 
-Yup.addMethod(Yup.date, 'format', parseDateFromFormats);
+yup.addMethod(yup.date, 'format', parseDateFromFormats);
 
 const I18N = {
   name:          'Name',
@@ -199,12 +199,12 @@ class TicketForm extends React.Component<TicketFormProps, TicketFormState> {
     this.getLayout()
       .get('fields', [])
       .forEach((field) => {
-        let validationRule = Yup.string();
+        let validationRule: yup.StringSchema | yup.DateSchema = yup.string();
         if (field.get('required', false) || field.getIn(['data', 'options', 'validation_type']) === 'required') {
           const fieldName = field.hasIn(['data', 'title'])
             ? field.getIn(['data', 'title'])
             : `${field.get('field_type').charAt(0).toUpperCase()}${field.get('field_type').slice(1)}`;
-          validationRule = validationRule.required(`The '${fieldName}' field is required`);
+            validationRule = validationRule.required(`The '${fieldName}' field is required`);
         }
         if (field.get('field_type') === 'email') {
           validationRule = validationRule.email('A valid email is required');
@@ -219,8 +219,8 @@ class TicketForm extends React.Component<TicketFormProps, TicketFormState> {
         }
         if (widgetType === 'datetime' || widgetType === 'date') {
           // just a stab - format is not passed
-          const format = widgetType === 'datetime' ? 'yyyy-MM-dd HH:mm' : 'yyyy-MM-dd';
-          validationRule = Yup.date().format(format);
+          const format: string = widgetType === 'datetime' ? 'yyyy-MM-dd HH:mm' : 'yyyy-MM-dd';
+          validationRule = yup.date().format(format);
           const dateValidType = field.getIn(['data', 'options', 'date_valid_type']);
           if (dateValidType === 'range') {
             if (field.getIn(['data', 'options', 'date_valid_range1'])) {
@@ -234,9 +234,9 @@ class TicketForm extends React.Component<TicketFormProps, TicketFormState> {
               validationRule = validationRule.max(range2);
             }
           }
-        }
-        if (field.get('field_type') === 'person') {
-          shape[field.get('field_id')] = Yup.object().shape({
+          shape[field.get('field_id')] = validationRule;
+        } else if (field.get('field_type') === 'person') {
+          shape[field.get('field_id')] = yup.object().shape({
             email: validationRule.email('A valid email is required'),
             name:  validationRule
           });
@@ -244,7 +244,7 @@ class TicketForm extends React.Component<TicketFormProps, TicketFormState> {
           shape[field.get('field_id')] = validationRule;
         }
       });
-    return Yup.object().shape(shape);
+    return yup.object().shape(shape);
   };
 
   handleDrop = (accepted, setFieldValue) => {
