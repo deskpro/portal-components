@@ -39,7 +39,6 @@
     "lint": "eslint . --cache --cache-location=.cache/eslint --ext .js,.jsx",
     "test": " jest",
     "tsc:check": "tsc --noEmit",
-    "travis-test": "npm run test -- --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "precommit": "lint-staged",
     "prepare": "npm run dist"
   },
