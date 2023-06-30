@@ -27,7 +27,7 @@
     "url": "https://github.com/deskpro/portal-components/issues"
   },
   "dependencies": {
-    "@deskpro/js-utils": "1.0.9",
+    "@deskpro/js-utils": "^1.0.13",
     "@deskpro/portal-components": "^1.0.10",
     "@storybook/addon-postcss": "^2.0.0",
     "formik": "^1.5.8",
