@@ -16,6 +16,7 @@
   "include": ["src", "tests","src/layouts/schema.json"],
   "exclude": [
     "node_modules",
+    "../../node_modules/",
     "build",
     "src/**/*.stories.tsx",
     "src/types",

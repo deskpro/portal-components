@@ -10,7 +10,8 @@ global["navigator"] = {
     return false;
   },
   clipboard: undefined,
-  connection: undefined,
+  locks: undefined,
+  pdfViewerEnabled: undefined,
   cookieEnabled: false,
   credentials: undefined,
   doNotTrack: "",
