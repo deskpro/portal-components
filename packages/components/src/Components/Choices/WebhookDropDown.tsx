@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { components } from 'react-select';
+import { GroupBase, OptionsOrGroups, components } from 'react-select';
 import AsyncSelect from 'react-select/async';
 import classNames from 'classnames';
 import Field, { FieldProps, FieldState } from '../Field';
@@ -17,7 +17,7 @@ interface DropDownProps extends FieldProps {
     authMethod:      'param';
     method:          string;
     auth:            object;
-    parseData:       (data: object) => object;
+    parseData:       (data: object) => OptionsOrGroups<any, GroupBase<any>>;
     inputValidation: (value: object) => boolean;
     params:          object;
   };
@@ -84,9 +84,9 @@ class DropDown extends Field<DropDownProps, DropDownState> {
 
   loadOptions = (form, inputValue) => {
     const { dataSource, name } = this.props;
-    return new Promise((resolve) => {
+    return new Promise<OptionsOrGroups<any, GroupBase<any>>>((resolve) => {
       if (!dataSource.inputValidation(inputValue)) {
-        resolve(false);
+        resolve([]);
         return false;
       }
       return fetch(this.getUrl(inputValue), this.getParams())
