@@ -23,13 +23,13 @@
     "libphonenumber-js": "1.9.50",
     "lodash": "4.17.21",
     "react-datepicker": "4.7.0",
-    "react-dropzone": "14.2.2",
-    "react-select": "5.2.2",
+    "react-dropzone": "^14.2.2",
+    "react-select": "^5.2.2",
     "react-textarea-autosize": "8.3.3",
     "style": "^0.0.3",
     "url-polyfill": "^1.0.13",
     "world-countries": "^4.0.0",
-    "yup": "1.2.0"
+    "yup": "^1.2.0"
   },
   "scripts": {
     "build": "yarn build:ts && yarn build:style",
@@ -61,7 +61,7 @@
     "coveralls": "^3.0.0",
     "dotenv": "4.0.0",
     "dotenv-expand": "4.2.0",
-    "formik": "1.5.8",
+    "formik": "^1.5.8",
     "fs-extra": "3.0.1",
     "husky": "^0.14.3",
     "jest": "^27.5.1",
@@ -87,9 +87,9 @@
     "whatwg-fetch": "2.0.4"
   },
   "peerDependencies": {
-    "formik": "1.5.8",
-    "react": "16.10.2",
-    "react-dom": "16.10.2"
+    "formik": "^1.5.8",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
   },
   "lint-staged": {
     "*.{js,jsx}": [
