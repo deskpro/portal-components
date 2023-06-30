@@ -7,8 +7,7 @@ before_install:
   - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > packages/portal-style/.npmrc
 
 before_script:
-  - npm install -g lerna gulp
-  - lerna bootstrap
+  - yarn
 script:
   - npm run build
   - ./bin/travis-prep-website.sh
