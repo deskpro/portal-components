@@ -1,14 +1,12 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import { withKnobs, text } from '@storybook/addon-knobs';
 import { Form, Textarea, Submit, Formik } from '@deskpro/portal-components';
 
 export default {
   title: 'Input',
-  decorators: [withKnobs],
 }
 
-export const TextareaStory = () => (
+export const TextareaStory = (args) => (
   <Formik
     initialValues={{ message: 'Initial message' }}
     onSubmit={action('submit')}
@@ -17,11 +15,14 @@ export const TextareaStory = () => (
         <Textarea
           name="message"
           label="Message"
-          description={text('description', 'Test description')}
+          description={args.description}
         />
         <Submit>Submit</Submit>
       </Form>
     )}
   />
 );
+TextareaStory.args = {
+  description: 'Test description',
+};
 TextareaStory.storyName = 'Textarea';

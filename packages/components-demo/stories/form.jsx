@@ -1,10 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import * as Yup from 'yup';
 import {
   Form, Email, Password, DropDown, Checkbox, Submit, withFormik
 } from '@deskpro/portal-components';
-import { withKnobs, boolean } from "@storybook/addon-knobs";
 
 const options = [
   { value: 'free', label: 'Free' },
@@ -12,11 +10,9 @@ const options = [
   { value: 'premium', label: 'Premium' },
 ];
 
-const App = ({
-  isSubmitting
-}) => (
+const App = (args) => (
   <Form
-    showHover={boolean('Show hover', false)}
+    showHover={args.showHover}
   >
     <Email name="email" placeholder="Email" label="Email" />
     <Password
@@ -35,16 +31,13 @@ const App = ({
       name="plan"
       label="Plan"
     />
-    <Submit disabled={isSubmitting}>Submit</Submit>
+    <Submit disabled={args.isSubmitting}>Submit</Submit>
   </Form>
 );
 
-App.propTypes = {
-  isSubmitting: PropTypes.bool,
-};
-
-App.defaultProps = {
+App.args = {
   isSubmitting: false,
+  showHover: false,
 };
 
 const FormikApp = withFormik({
@@ -77,7 +70,6 @@ const FormikApp = withFormik({
 
 export default {
   title: 'Forms',
-  decorators: [withKnobs],
 };
 
 export const BasicForm = () => <FormikApp />;

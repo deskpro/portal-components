@@ -1,5 +1,4 @@
 import React from 'react';
-import { withKnobs, boolean } from '@storybook/addon-knobs/react';
 import { action } from '@storybook/addon-actions';
 import { TicketForm } from '@deskpro/portal-components';
 import { ticketLayout, departments, categories, priorities, products } from '../DemoState/ticket_form';
@@ -18,12 +17,11 @@ setCookie('_dp_csrf_token', '123456', 1, 'deskpro5.local');
 
 export default {
   title: 'TicketForm',
-  decorators: [withKnobs],
 };
 
-export const TicketFormStory = () => (
+export const TicketFormStory = (args) => (
   <TicketForm
-    showHover={boolean('Show hover', false)}
+    showHover={args.showHover}
     deskproLayout={ticketLayout}
     departments={departments}
     categories={categories}
@@ -35,4 +33,7 @@ export const TicketFormStory = () => (
     csrfToken="123456"
   />
 );
+TicketFormStory.args = {
+  showHover: false,
+};
 TicketFormStory.storyName = 'TicketForm';
