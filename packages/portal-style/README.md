@@ -46,18 +46,6 @@ For example:
   * When you're working on your computer, that'd be [localhost](http://localhost:3000/portal-components/style/docs/components/dp-po-Buttons) instead.
 
 
-
-# Working with demos
-
-The demo pages are full static pages. The source for the demos is at [`packages/style/website/static/demos`](https://github.com/deskpro/portal-components/blob/develop/packages/style/website/static/demos). These are completely static HTML pages (there will be a lot of copy+paste between them!).
-
-For example:
-
-* [`.../static/demos/kb-view.html`](https://github.com/deskpro/portal-components/blob/develop/packages/style/website/static/demos/kb-view.html) -- static HTML for the KB View page
-* [`http://.../demos/kb-view.html`](https://deskpro.github.io/portal-components/style/demos/kb-view.html) -- built demo page
-  * When you're working on your computer, that'd be [localhost](http://localhost:3000/portal-components/style/demos/kb-view.html) instead.
-
-
 # Browser Requirements
 
 * Google Chrome: latest two versions

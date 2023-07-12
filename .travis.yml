@@ -1,16 +1,15 @@
 language: node_js
 node_js:
-  - '14'
+  - '16'
 before_install:
   - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
   - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > packages/components/.npmrc
   - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > packages/portal-style/.npmrc
 
 before_script:
-  - npm install -g lerna gulp
-  - lerna bootstrap
+  - yarn
 script:
-  - npm run build
+  - yarn build
   - ./bin/travis-prep-website.sh
 cache:
   directories:

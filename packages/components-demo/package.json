@@ -1,6 +1,6 @@
 {
   "name": "components-demo",
-  "version": "1.0.10",
+  "version": "1.0.13",
   "description": "> TODO: description",
   "author": "Julien Ducro <julien.ducro@deskpro.com>",
   "homepage": "https://github.com/deskpro/portal-components#readme",
@@ -27,24 +27,24 @@
     "url": "https://github.com/deskpro/portal-components/issues"
   },
   "dependencies": {
-    "@deskpro/js-utils": "1.0.9",
-    "@deskpro/portal-components": "^1.0.10",
+    "@deskpro/js-utils": "^1.0.13",
+    "@deskpro/portal-components": "^1.0.13",
+    "@storybook/addon-controls": "^6.5.16",
     "@storybook/addon-postcss": "^2.0.0",
-    "formik": "^1.5.7",
+    "formik": "^1.5.8",
     "immutable": "3.8.2",
     "react": "16.14.0",
     "react-datepicker": "^2.14.1",
     "react-dom": "16.14.0",
-    "yup": "^0.27.0"
+    "yup": "1.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
-    "@storybook/addon-actions": "6.5.10",
-    "@storybook/addon-knobs": "5.3.17",
-    "@storybook/addon-links": "6.5.10",
-    "@storybook/addons": "6.5.10",
-    "@storybook/react": "6.5.10",
-    "babel-loader": "^8.0.6",
+    "@storybook/addon-actions": "^6.5.16",
+    "@storybook/addon-links": "^6.5.16",
+    "@storybook/addons": "^6.5.16",
+    "@storybook/react": "^6.5.16",
+    "babel-loader": "^9.1.2",
     "postcss-import": "^12.0.1",
     "postcss-nested": "^4.1.2",
     "postcss-preset-env": "6.7.0"

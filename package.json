@@ -15,19 +15,22 @@
     "eslint-plugin-react": "^7.13.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "eslint-plugin-storybook": "^0.5.7",
-    "lerna": "6.6.2",
+    "lerna": "7.1.1",
     "prettier": "^2.6.0",
     "typescript": "^4.6.2"
   },
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "dev": "lerna run dev --parallel",
-    "build": "lerna run --stream build",
+    "build": "lerna run --stream build --sort",
     "test": "lerna run --stream test",
     "lint": "eslint . --cache --cache-location=.cache/eslint --ext .js,.jsx",
     "publish-git": "lerna publish --force-publish --skip-npm --yes",
     "publish-npm": "lerna publish --force-publish --no-git-tag-version --no-push --yes"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "dependencies": {
     "eslint-plugin-risxss": "^2.1.0",
     "lint-staged": "13.2.3"

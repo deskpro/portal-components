@@ -1,6 +1,5 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import { withKnobs, text } from '@storybook/addon-knobs';
 import { Form, WebhookDropDown, Submit, Formik } from '@deskpro/portal-components';
 
 export default {
@@ -8,7 +7,7 @@ export default {
   decorators: [withKnobs],
 }
 
-export const GetAddressIO = () => (
+export const GetAddressIO = (args) => (
   <Formik
     initialValues={{}}
     onSubmit={action('submit')}
@@ -19,7 +18,7 @@ export const GetAddressIO = () => (
           dataSource={{
             url:       'https://api.getaddress.io/find/__FILTER__',
             method:    'param',
-            auth:      { 'api-key': text('API key') },
+            auth:      { 'api-key': args.apiKey },
             parseData: (data) => {
               if (data) {
                 return data.addresses.map(address => ({ value: address, label: address }));
@@ -37,6 +36,9 @@ export const GetAddressIO = () => (
   />
 );
 GetAddressIO.storyName = 'Get Address IO';
+GetAddressIO.args = {
+  apiKey: 'YOUR_API_KEY',
+};
 
 export const FrenchPostalCode = () => (
   <Formik
