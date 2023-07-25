@@ -22,7 +22,7 @@ const cssnano = require('cssnano');
 const files = {
   scssPath: 'src/**/*.scss',
   srcAssetsPath: 'src/assets/**/*',
-  websiteStaticImgPath: 'website/static/img/**/*'
+  staticImgPath: 'src/images/**/*'
 };
 
 // Sass task: compiles the style.scss file into style.css
@@ -48,7 +48,7 @@ function styleAssetsTask() {
 
 // website static assets
 function websiteStaticImgTask() {
-  return src(files.websiteStaticImgPath)
+  return src(files.staticImgPath)
     .pipe(dest('.build/portal-components/portal-style/dist/img'))
     .pipe(dest('dist/img'))
     .pipe(connect.reload());
@@ -59,7 +59,7 @@ function websiteStaticImgTask() {
 function watchTask() {
   watch([files.scssPath], parallel(scssTask));
   watch([files.srcAssetsPath], parallel(styleAssetsTask));
-  watch([files.websiteStaticImgPath], parallel(websiteStaticImgTask));
+  watch([files.staticImgPath], parallel(websiteStaticImgTask));
 }
 
 // Server task for local web dev
