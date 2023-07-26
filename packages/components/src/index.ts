@@ -1,3 +1,4 @@
+import 'core-js';
 import FileIcon from './tsx-assets/FileIcon';
 import DndIcon from './tsx-assets/DragAndDrop';
 import DeleteIcon from './tsx-assets/Delete';
