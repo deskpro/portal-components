@@ -50,6 +50,18 @@ interface IState {
 class FieldLayout extends PureComponent<IProps, IState> {
   private dropZone: DropzoneRef;
 
+  constructor(props) {
+    super(props);
+    this.dropZone = null;
+
+    this.state = {
+      progress:     -1,
+      activeLayout: null,
+      files:        [],
+    };
+  }
+
+
   static getDerivedStateFromProps({ layouts, values }, { activeLayout }) {
     const newLayout = layouts.getMatchingLayout(values);
     if (newLayout !== activeLayout) {

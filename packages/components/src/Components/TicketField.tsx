@@ -71,7 +71,7 @@ const TicketField = ({
     const props = {
       label:       renderLabel(),
       description: renderDescription(),
-      required:    !!field.get('required', ''),
+      required:    field.get('required', 'false') !== 'false',
       i18n,
       name
     };

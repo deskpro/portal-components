@@ -4,7 +4,6 @@ import { Form, WebhookDropDown, Submit, Formik } from '@deskpro/portal-component
 
 export default {
   title: 'Websources choices',
-  decorators: [withKnobs],
 }
 
 export const GetAddressIO = (args) => (
