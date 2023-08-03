@@ -20,7 +20,7 @@ import * as Immutable from "immutable";
 import type { I18nType } from "../types/i18n";
 
 interface IProps {
-  field:          Immutable.Map<string, string>;
+  field:          Immutable.Map<string, any>;
   fileUploadUrl:  string;
   csrfToken:      string;
   fileInputProps: object;
@@ -48,7 +48,7 @@ const TicketField = ({
     } else if (i18n[field.get('field_id')]) {
       label = i18n[field.get('field_id')];
     }
-    if (field.get('required', '') !== '') {
+    if (field.get('required', false) !== false) {
       label = `${label} *`;
     }
     return label;
@@ -71,14 +71,10 @@ const TicketField = ({
     const props = {
       label:       renderLabel(),
       description: renderDescription(),
-      required:    field.get('required', 'false') !== 'false',
+      required:    field.get('required', false) !== false,
       i18n,
       name
     };
-
-    console.log('name', field.get('field_id'));
-    console.log('field', field.toJS());
-    console.log('required', field.get('required', 'false'));
 
     let options;
     switch (field.getIn(['data', 'widget_type'])) {
@@ -150,7 +146,7 @@ const TicketField = ({
   ) {
     return renderCustomField();
   }
-  const required = field.get('required', '') !== '';
+  const required = field.get('required', false) !== false;
   switch (field.get('field_type')) {
     case 'message':
       return (
