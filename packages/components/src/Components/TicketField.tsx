@@ -76,6 +76,10 @@ const TicketField = ({
       name
     };
 
+    console.log('name', field.get('field_id'));
+    console.log('field', field.toJS());
+    console.log('required', field.get('required', 'false'));
+
     let options;
     switch (field.getIn(['data', 'widget_type'])) {
       case 'date':
