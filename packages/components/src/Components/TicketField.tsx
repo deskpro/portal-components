@@ -82,7 +82,7 @@ const TicketField = ({
         return (
           <DatePicker
             calendar={field.getIn(['data', 'options', 'calendar'], 'gregorian')}
-            format={field.getIn(['data', 'options', 'format'], 'yyyy-MM-dd HH:mm')}
+            format={field.getIn(['data', 'options', 'format'], 'yyyy-MM-dd')}
             {...props}
           />
         );
