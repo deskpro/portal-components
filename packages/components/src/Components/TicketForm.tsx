@@ -122,7 +122,7 @@ class TicketForm extends React.Component<TicketFormProps, TicketFormState> {
 
   constructor(props) {
     super(props);
-    console.log('TicketForm', TicketForm);
+    
     this.formik = React.createRef();
 
     this.i18n = deepMerge(I18N, props.i18n);
