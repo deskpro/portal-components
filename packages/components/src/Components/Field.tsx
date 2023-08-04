@@ -1,6 +1,6 @@
 import * as React from 'react';
 import classNames from 'classnames';
-import { Field as FormikField, FormikProps, getIn } from 'formik';
+import { Field as FormikField, FieldProps as FormikFieldProps, getIn } from 'formik';
 import newid from '@deskpro/js-utils/dist/newid';
 import { deepMerge } from '@deskpro/js-utils/dist/objects';
 import ErrorMessage from './ErrorMessage';
@@ -120,17 +120,17 @@ abstract class Field<
         name={name}
         validate={this.validate}
       >
-        {(form: FormikProps<any>) => {
+        {(form: FormikFieldProps <any>) => {
           let error;
           let searchName = errorsName;
           if (errorsName) {
-            error = getIn(form.errors, errorsName.split('.'));
+            error = getIn(form.form.errors, errorsName.split('.'));
           }
           if (!error || typeof error !== 'string') {
-            error = getIn(form.errors, name.split('.'));
+            error = getIn(form.form.errors, name.split('.'));
             searchName = name;
           }
-          const touch = getIn(form.touched, name.split('.'));
+          const touch = getIn(form.form.touched, name.split('.'));
           return (
             <div
               className={classNames('dp-pc_field', this.className, fClassName, { 'dp-pc_error': touch && error })}
@@ -140,7 +140,7 @@ abstract class Field<
               {this.renderField(form)}
               {
                 touch && error && typeof error === 'string'
-                  ? <ErrorMessage name={searchName} form={form} touchName={name} />
+                  ? <ErrorMessage name={searchName} form={form.form} touchName={name} />
                   : null
               }
             </div>
