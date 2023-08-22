@@ -72,7 +72,7 @@ interface TicketFormValues {
 }
 
 interface TicketFormProps {
-  deskproLayout:      any;
+  deskproLayout:      Immutable.List<Immutable.Map<string, any>>;
   departments:        Immutable.List<any>;
   products:           object;
   categories:         Immutable.List<any>;
