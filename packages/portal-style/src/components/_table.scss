@@ -15,7 +15,11 @@
       #{$self}-cell {
         color: $grey-dark;
         display: flex;
-        overflow: inherit !important;
+
+        span {
+          text-overflow: ellipsis;
+          overflow: inherit !important;
+        }
 
         a {
           color: $grey-dark;
@@ -96,8 +100,10 @@
     font-size: $p3-font-size;
     padding: 15px 5px;
     white-space: nowrap;
-    text-overflow: ellipsis;
     overflow: hidden !important;
+    span {
+      text-overflow: ellipsis;
+    }
 
     &-link {
       color: $text-color;
