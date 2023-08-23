@@ -1,9 +1,11 @@
 .dp-po-table-ticket {
   $self: '.dp-po-table';
+  overflow-x: auto;
+  min-width: 100%;
 
   #{$self}-row {
-    padding-left: 55px;
-
+    display: table-row;
+    min-width: calc(100% + 60px);
     &:hover {
       #{$self}-cell-rating {
         display: none;
@@ -16,11 +18,15 @@
   }
 
   #{$self}-cell {
+    display: table-cell;
+    width: auto;
+    max-width: 300px;
+    min-width: 100px;
+    text-overflow: ellipsis;
     &-indicator {
-      position: absolute;
-      top: 0;
-      left: 25px;
-      width: auto;
+      width: 22px;
+      padding-left: 25px;
+      min-width: unset;
 
       .dp-po-icon {
         font-size: 12px;
