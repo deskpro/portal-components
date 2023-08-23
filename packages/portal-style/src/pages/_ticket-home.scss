@@ -3,6 +3,12 @@
   overflow-x: auto;
   min-width: 100%;
 
+  #{$self}-wrapper {
+    display: table;
+    width: 100%;
+  }
+
+
   #{$self}-row {
     display: table-row;
     min-width: calc(100% + 60px);
