@@ -201,8 +201,7 @@ export class MultipleDropDownInput extends React.Component<MultipleDropDownInput
   closeMenu = () => {
     if (!this.props.closeOnBlur) {
       this.setState({ menuIsOpen: false });
-      // @TODO fix that
-      //this.select.current.select.blurInput();
+      this.select.current.inputRef.blur();
     }
   };
 

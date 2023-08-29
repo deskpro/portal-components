@@ -198,8 +198,7 @@ export class DropDownInput extends React.Component<DropDownInputProps, DropDownI
       value,
       menuIsOpen: false,
     });
-    // @TODO Fix that
-    // this.select.current.select.blurInput();
+    this.select.current.inputRef.blur();
     const newValue = value ? value.value : null;
     this.props.onChange(newValue);
     return true;
@@ -208,8 +207,7 @@ export class DropDownInput extends React.Component<DropDownInputProps, DropDownI
   closeMenu = () => {
     if (!this.props.closeOnBlur) {
       this.setState({ menuIsOpen: false });
-      // @TODO Fix that
-      // this.select.current.select.blurInput();
+      this.select.current.inputRef.blur();
     }
   };
 

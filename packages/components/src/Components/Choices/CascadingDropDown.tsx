@@ -154,8 +154,7 @@ export class CascadingDropDownInput extends React.Component<CascadingDropDownInp
   }
 
   closeMenu = () => {
-    // @TODO Fix that
-    // this.select.current.select.blurInput();
+    this.select.current.inputRef.blur();
   };
 
   loadOptions = (inputValue) => {

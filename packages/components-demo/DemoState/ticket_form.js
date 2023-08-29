@@ -486,42 +486,6 @@ const ticketLayoutRaw = {
         },
         {
           version:    1,
-          field_type: 'product',
-          field_id:   'product',
-          options:    {
-            criteria:           null,
-            on_newticket:       true,
-            on_viewticket:      true,
-            on_viewticket_mode: 'always',
-            on_editticket:      true
-          }
-        },
-        {
-          version:    1,
-          field_type: 'category',
-          field_id:   'category',
-          options:    {
-            criteria:           null,
-            on_newticket:       true,
-            on_viewticket:      true,
-            on_viewticket_mode: 'always',
-            on_editticket:      true
-          }
-        },
-        {
-          version:    1,
-          field_type: 'priority',
-          field_id:   'priority',
-          options:    {
-            criteria:           null,
-            on_newticket:       true,
-            on_viewticket:      true,
-            on_viewticket_mode: 'always',
-            on_editticket:      true
-          }
-        },
-        {
-          version:    1,
           field_type: 'message',
           field_id:   'message',
           required:   true,
@@ -908,42 +872,6 @@ const ticketLayoutRaw = {
               }
             },
             aliases: []
-          }
-        },
-        {
-          version:    1,
-          field_type: 'product',
-          field_id:   'product',
-          options:    {
-            criteria:           null,
-            on_newticket:       true,
-            on_viewticket:      true,
-            on_viewticket_mode: 'always',
-            on_editticket:      true
-          }
-        },
-        {
-          version:    1,
-          field_type: 'category',
-          field_id:   'category',
-          options:    {
-            criteria:           null,
-            on_newticket:       true,
-            on_viewticket:      true,
-            on_viewticket_mode: 'always',
-            on_editticket:      true
-          }
-        },
-        {
-          version:    1,
-          field_type: 'priority',
-          field_id:   'priority',
-          options:    {
-            criteria:           null,
-            on_newticket:       true,
-            on_viewticket:      true,
-            on_viewticket_mode: 'always',
-            on_editticket:      true
           }
         },
         {
@@ -1338,42 +1266,6 @@ const ticketLayoutRaw = {
         },
         {
           version:    1,
-          field_type: 'product',
-          field_id:   'product',
-          options:    {
-            criteria:           null,
-            on_newticket:       true,
-            on_viewticket:      true,
-            on_viewticket_mode: 'always',
-            on_editticket:      true
-          }
-        },
-        {
-          version:    1,
-          field_type: 'category',
-          field_id:   'category',
-          options:    {
-            criteria:           null,
-            on_newticket:       true,
-            on_viewticket:      true,
-            on_viewticket_mode: 'always',
-            on_editticket:      true
-          }
-        },
-        {
-          version:    1,
-          field_type: 'priority',
-          field_id:   'priority',
-          options:    {
-            criteria:           null,
-            on_newticket:       true,
-            on_viewticket:      true,
-            on_viewticket_mode: 'always',
-            on_editticket:      true
-          }
-        },
-        {
-          version:    1,
           field_type: 'message',
           field_id:   'message',
           required:   true,
@@ -1749,42 +1641,6 @@ const ticketLayoutRaw = {
         },
         {
           version:    1,
-          field_type: 'product',
-          field_id:   'product',
-          options:    {
-            criteria:           null,
-            on_newticket:       true,
-            on_viewticket:      true,
-            on_viewticket_mode: 'always',
-            on_editticket:      true
-          }
-        },
-        {
-          version:    1,
-          field_type: 'category',
-          field_id:   'category',
-          options:    {
-            criteria:           null,
-            on_newticket:       true,
-            on_viewticket:      true,
-            on_viewticket_mode: 'always',
-            on_editticket:      true
-          }
-        },
-        {
-          version:    1,
-          field_type: 'priority',
-          field_id:   'priority',
-          options:    {
-            criteria:           null,
-            on_newticket:       true,
-            on_viewticket:      true,
-            on_viewticket_mode: 'always',
-            on_editticket:      true
-          }
-        },
-        {
-          version:    1,
           field_type: 'message',
           field_id:   'message',
           required:   true,
@@ -2010,42 +1866,6 @@ const ticketLayoutRaw = {
             aliases: [
               'SerialNumber'
             ]
-          }
-        },
-        {
-          version:    1,
-          field_type: 'product',
-          field_id:   'product',
-          options:    {
-            criteria:           null,
-            on_newticket:       true,
-            on_viewticket:      true,
-            on_viewticket_mode: 'always',
-            on_editticket:      true
-          }
-        },
-        {
-          version:    1,
-          field_type: 'category',
-          field_id:   'category',
-          options:    {
-            criteria:           null,
-            on_newticket:       true,
-            on_viewticket:      true,
-            on_viewticket_mode: 'always',
-            on_editticket:      true
-          }
-        },
-        {
-          version:    1,
-          field_type: 'priority',
-          field_id:   'priority',
-          options:    {
-            criteria:           null,
-            on_newticket:       true,
-            on_viewticket:      true,
-            on_viewticket_mode: 'always',
-            on_editticket:      true
           }
         },
         {
