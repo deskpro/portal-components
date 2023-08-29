@@ -375,6 +375,7 @@
         border: 1px solid var(--checkbox-border);
         margin-top: 0;
         margin-bottom: 6px;
+        display: inline-block;
       }
       & > [class$=-Input] {
         margin-top: 0;
@@ -385,11 +386,13 @@
       position: static;
       font-size: 14px;
       padding: 4px;
+      display: inline-block;
     }
     & .react-select__multi-value__remove {
       border-right: none;
       font-size: 18px;
       padding: 0 5px;
+      display: inline-block;
     }
     & .react-select__indicators {
       align-self: flex-start;
