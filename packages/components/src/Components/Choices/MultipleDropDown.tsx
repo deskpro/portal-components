@@ -191,8 +191,7 @@ export class MultipleDropDownInput extends React.Component<MultipleDropDownInput
     this.setState({
       value
     });
-    // @TODO Fix that
-    // this.select.current.blur();
+    this.select.current.inputRef.blur();
     const newValue = value ? value.map(e => e.value) : null;
     this.props.onChange(newValue);
     return true;

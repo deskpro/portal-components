@@ -132,8 +132,7 @@ export class CascadingDropDownInput extends React.Component<CascadingDropDownInp
         menuIsOpen: false,
         subChoice:  true
       });
-      // @TODO Fix that
-      // this.select.current.blur();
+      this.select.current.inputRef.blur();
       this.props.onChange(null);
       return true;
     }
@@ -142,8 +141,7 @@ export class CascadingDropDownInput extends React.Component<CascadingDropDownInp
       menuIsOpen: false,
       subChoice:  false
     });
-    // @TODO Fix that
-    // this.select.current.blur();
+    this.select.current.inputRef.blur();
     const newValue = value ? value.value : null;
     this.props.onChange(newValue);
     return true;
