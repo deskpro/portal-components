@@ -204,6 +204,13 @@ export class MultipleDropDownInput extends React.Component<MultipleDropDownInput
     }
   };
 
+  onClickout = () => {
+    if (!this.props.closeOnBlur && this.state.menuIsOpen) {
+      this.setState({ menuIsOpen: false });
+      this.select.current.inputRef.blur();
+    }
+  };
+
   loadOptions = (inputValue) => {
     const { dataSource } = this.props;
     const propValue = this.props.value;
@@ -258,31 +265,45 @@ export class MultipleDropDownInput extends React.Component<MultipleDropDownInput
 
     if (Array.isArray(dataSource.getOptions)) {
       return (
-        <ReactSelect
-          ref={this.select}
-          name={name}
-          isClearable={isClearable}
-          isSearchable={isSearchable}
-          hideSelectedOptions={false}
-          components={{
-            SelectContainer,
-            Option,
-            DropdownIndicator: dropdownProps => (
-              <DropdownIndicator closeMenu={this.closeMenu} {...dropdownProps} />
-            )
-          }}
-          menuIsOpen={this.state.menuIsOpen}
-          options={options}
-          classNamePrefix="react-select"
-          placeholder={this.i18n.select}
-          isMulti
-          {...props}
-          className="react-select-multi"
-          value={stateValue}
-          onFocus={this.onFocus}
-          onBlur={this.onBlur}
-          onChange={this.onChange}
-        />
+        <>
+          <div 
+            className='react-select__dropdown-multi_clickout'
+            style={{
+              position: 'fixed', 
+              top: 0, 
+              left: 0, 
+              width: '100%', 
+              height: '100%', 
+              display: this.state.menuIsOpen ? 'block' : 'none',
+            }} 
+            onClick={this.onClickout}
+          />
+          <ReactSelect
+            ref={this.select}
+            name={name}
+            isClearable={isClearable}
+            isSearchable={isSearchable}
+            hideSelectedOptions={false}
+            components={{
+              SelectContainer,
+              Option,
+              DropdownIndicator: dropdownProps => (
+                <DropdownIndicator closeMenu={this.closeMenu} {...dropdownProps} />
+              )
+            }}
+            menuIsOpen={this.state.menuIsOpen}
+            options={options}
+            classNamePrefix="react-select"
+            placeholder={this.i18n.select}
+            isMulti
+            {...props}
+            className="react-select-multi"
+            value={stateValue}
+            onFocus={this.onFocus}
+            onBlur={this.onBlur}
+            onChange={this.onChange}
+          />
+        </>
       );
     }
 
