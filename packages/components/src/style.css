@@ -688,7 +688,7 @@
       }
     }
     &.error .dp-pc_file-upload__dropzone {
-      border-color: var(--danger);
+      border-color: var(--danger, #E84954);
     }
     & > ul {
       list-style: none;
@@ -720,7 +720,7 @@
           }
         }
         &.error {
-          color: var(--danger);
+          color: var(--danger, #E84954);
         }
       }
     }
