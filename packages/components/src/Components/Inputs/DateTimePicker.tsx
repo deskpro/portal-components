@@ -11,6 +11,14 @@ class DateTimePicker extends DatePicker {
     format: 'dd/MM/yyyy HH:mm'
   }
 
+  handleCalendarOpen = () => {
+    console.log('handleCalendarOpen');
+  };
+
+  handleCalendarClose = () => {
+    console.log('handleCalendarClose');
+  };
+
   getProps = (form) => {
     const {
       format,
@@ -41,6 +49,8 @@ class DateTimePicker extends DatePicker {
       preventOpenOnFocus: true,
       assumeNearbyYear:   true,
       locale:             'en',
+      onCalendarOpen:     this.handleCalendarOpen,
+      onCalendarClose:    this.handleCalendarClose,
       ...props
     };
   };

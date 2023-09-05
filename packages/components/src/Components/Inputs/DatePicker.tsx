@@ -33,11 +33,20 @@ class DatePicker extends Field<DatePickerProps, DatePickerState> {
   }
 
   handleBlur = (form) => {
+    console.log('handleBlur');
     const { name } = this.props;
     form.setFieldTouched(name, true);
     this.setState({
       focused: false
     });
+  };
+
+  handleCalendarOpen = () => {
+    console.log('handleCalendarOpen');
+  };
+
+  handleCalendarClose = () => {
+    console.log('handleCalendarClose');
   };
 
   handleFocus = () => {
@@ -77,6 +86,8 @@ class DatePicker extends Field<DatePickerProps, DatePickerState> {
       assumeNearbyYear:   true,
       dateFormat:         format,
       locale:             'en',
+      onCalendarOpen:     this.handleCalendarOpen,
+      onCalendarClose:    this.handleCalendarClose,
       ...props
     };
   };
