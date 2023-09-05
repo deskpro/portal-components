@@ -97,6 +97,7 @@ class DatePicker extends Field<DatePickerProps, DatePickerState> {
 
   renderField = ({ form }) => {
     const { className } = this.props;
+    console.log('props', this.getProps(form));
     return (
       <div className={classNames('dp-pc_date-picker', { focused: this.state.focused }, className)}>
         {this.renderIcon()}
