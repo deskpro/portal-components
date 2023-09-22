@@ -170,7 +170,6 @@ const TicketField = ({
           />
         );
     case 'email':
-    case 'cc':
       return (
         <Email
           name={field.get('field_id')}
