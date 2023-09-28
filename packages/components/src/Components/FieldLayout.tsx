@@ -50,9 +50,9 @@ interface IState {
 class FieldLayout extends PureComponent<IProps, IState> {
   private dropZone: DropzoneRef;
 
-  static getDerivedStateFromProps({ layouts, values }, { activeLayout }) {
+  static getDerivedStateFromProps({ layouts, values }, state) {
     const newLayout = layouts.getMatchingLayout(values);
-    if (newLayout !== activeLayout) {
+    if (!state || newLayout !== state.activeLayout) {
       return { activeLayout: newLayout };
     }
     return null;
@@ -60,7 +60,7 @@ class FieldLayout extends PureComponent<IProps, IState> {
 
   componentDidUpdate(_, { activeLayout }) {
     // Reset form with new defaults when the layout is changed.
-    if (activeLayout !== this.state.activeLayout && this.state.activeLayout) {
+    if (!this.state || activeLayout !== this.state.activeLayout && this.state.activeLayout) {
       const defaults = this.state.activeLayout.getDefaultValues();
       this.props.resetForm({ ...defaults, ...this.props.values });
     }

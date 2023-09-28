@@ -162,6 +162,7 @@ class TicketForm extends React.Component<TicketFormProps, TicketFormState> {
     const values: TicketFormValues = {};
     const { initialValues } = this.props;
     const layout            = this.getLayout();
+    const previousValues = this.formik.current ? this.formik.current.state.values : [];
     layout
       .get('fields', [])
       .filter(f => f.getIn(['data', 'widget_type'], '') !== 'display')
@@ -170,10 +171,19 @@ class TicketForm extends React.Component<TicketFormProps, TicketFormState> {
           values[this.props.departmentPropName] = this.state[this.props.departmentPropName];
         } else if (field.get('field_type') === 'person') {
           const { person } = initialValues;
-          values.person = {
-            name:  person && person.name ? person.name : '',
-            email: { email: person && person.email ? person.email : '' },
-          };
+          if (previousValues.person && (previousValues.person.name || previousValues.person.email.email)) {
+            values.person = {
+              name:  previousValues.person.name || '',
+              email: { email: previousValues.person.email.email || '' },
+            };
+          } else {
+            values.person = {
+              name:  person && person.name ? person.name : '',
+              email: { email: person && person.email ? person.email : '' },
+            };
+          }
+        } else if (previousValues[field.get('field_id')]) {
+          values[field.get('field_id')] = previousValues[field.get('field_id')];
         } else if (initialValues[field.get('field_id')]) {
           values[field.get('field_id')] = initialValues[field.get('field_id')];
         } else {
