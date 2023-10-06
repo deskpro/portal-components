@@ -75,7 +75,7 @@ export class FileUploadInput extends React.Component<FileUploadInputProps, FileU
   }
 
   handleDrop = (accepted, fileRejections) => {
-    let files;
+    let files: DpBlob[];
     files = this.state.files.filter(f =>  !f.error);
     this.setState({ files });
     if (fileRejections.length > 0) {
@@ -99,6 +99,9 @@ export class FileUploadInput extends React.Component<FileUploadInputProps, FileU
         transferComplete: this.handleTransferComplete,
         transferFailed:   this.handleTransferFailed,
         updateProgress:   this.handleUpdateProgress,
+        headers:          {
+          'X-CSRF-Token': this.props.csrfToken,
+        }
       });
     }
   };

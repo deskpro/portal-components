@@ -1,3 +1,16 @@
+
+type AjaxSubmitConfig = {
+  url: string;
+  name: string;
+  token: string;
+  files: File[];
+  req?: (config: AjaxSubmitConfig) => void;
+  headers?: Record<string, string>;
+  updateProgress?: (event: ProgressEvent) => void;
+  transferComplete?: (event: ProgressEvent) => void;
+  transferFailed?: (event: ProgressEvent) => void;
+  transferCanceled?: (event: ProgressEvent) => void;
+};
 // eslint-disable-next-line func-names
 const AJAXSubmit = (function () {
   function submitData(config, formData) {
@@ -15,6 +28,11 @@ const AJAXSubmit = (function () {
     }
     if (config.transferCanceled) {
       oAjaxReq.addEventListener('abort', config.transferCanceled);
+    }
+    if (config.headers) {
+      Object.keys(config.headers).forEach((key) => {
+        oAjaxReq.setRequestHeader(key, config.headers[key]);
+      });
     }
 
     oAjaxReq.onreadystatechange = () => { // Call a function when the state changes.
@@ -41,7 +59,7 @@ const AJAXSubmit = (function () {
     oAjaxReq.send(formData);
   }
 
-  function SubmitRequest(config) {
+  function SubmitRequest(config: AjaxSubmitConfig) {
     const formData = new FormData();
     for (let nFile = 0; nFile < config.files.length; nFile++) {
       const oFile = config.files[nFile];
@@ -52,7 +70,7 @@ const AJAXSubmit = (function () {
   }
 
   // eslint-disable-next-line func-names
-  return function (config) {
+  return function (config: AjaxSubmitConfig) {
     if (!config.url) { return; }
     config.req = new SubmitRequest(config);
   };
