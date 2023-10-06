@@ -29,11 +29,6 @@ const AJAXSubmit = (function () {
     if (config.transferCanceled) {
       oAjaxReq.addEventListener('abort', config.transferCanceled);
     }
-    if (config.headers) {
-      Object.keys(config.headers).forEach((key) => {
-        oAjaxReq.setRequestHeader(key, config.headers[key]);
-      });
-    }
 
     oAjaxReq.onreadystatechange = () => { // Call a function when the state changes.
       if (oAjaxReq.readyState === XMLHttpRequest.DONE) {
@@ -56,6 +51,12 @@ const AJAXSubmit = (function () {
       oAjaxReq.responseType = 'json';
     };
     oAjaxReq.open('post', config.url, true);
+
+    if (config.headers) {
+      Object.keys(config.headers).forEach((key) => {
+        oAjaxReq.setRequestHeader(key, config.headers[key]);
+      });
+    }
     oAjaxReq.send(formData);
   }
 
