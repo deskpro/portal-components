@@ -822,8 +822,12 @@
   padding-inline-start: 16px;
 }
 .dp-po-post-content ol:not(.footnotes-list) > li {
-  display: block;
+  display: flex;
   counter-increment: counter;
+}
+.dp-po-post-content ol:not(.footnotes-list) > div,
+.dp-po-post-content ol:not(.footnotes-list) > p {
+  width: 100%;
 }
 .dp-po-post-content ol:not(.footnotes-list) > li > p {
   display: inline-block;
