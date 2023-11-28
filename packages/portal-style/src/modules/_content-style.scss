@@ -823,6 +823,7 @@
 }
 .dp-po-post-content ol:not(.footnotes-list) > li {
   display: flex;
+  flex-wrap: wrap;
   counter-increment: counter;
 }
 .dp-po-post-content ol:not(.footnotes-list) > div,
@@ -833,6 +834,7 @@
   display: inline-block;
   margin: 6px 0;
   max-width: calc(100% - 35px);
+  width: calc(100% - 35px);
   vertical-align: middle;
 }
 .dp-po-post-content ol:not(.footnotes-list) p + p {
