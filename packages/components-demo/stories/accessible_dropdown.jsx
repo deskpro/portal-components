@@ -19,7 +19,8 @@ export const AccessibleDropdown = () => (
   <Formik
     initialValues={{ filling: 'bacon' }}
     onSubmit={action('submit')}
-    render={() => (
+  >
+    {() => (
       <Form>
         <AccessibleDropDown
           dataSource={{ getOptions: options }}
@@ -30,6 +31,6 @@ export const AccessibleDropdown = () => (
         <Submit>Submit</Submit>
       </Form>
     )}
-  />
+  </Formik>
 );
 AccessibleDropdown.storyName = 'Accessible Dropdown';

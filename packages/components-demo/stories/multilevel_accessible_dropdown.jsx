@@ -55,7 +55,8 @@ storiesOf('Choices', module)
   .add('Multilevel Accessible Dropdown', () => (
     <Formik
       onSubmit={action('submit')}
-      render={() => (
+    >
+      {() => (
         <Form>
           <AccessibleDropDown
             dataSource={{ getOptions: options }}
@@ -66,5 +67,5 @@ storiesOf('Choices', module)
           <Submit>Submit</Submit>
         </Form>
       )}
-    />
+    </Formik>
   ));

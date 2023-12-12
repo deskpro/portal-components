@@ -122,7 +122,7 @@ class TicketForm extends React.Component<TicketFormProps, TicketFormState> {
 
   constructor(props) {
     super(props);
-    
+
     this.formik = React.createRef();
 
     this.i18n = deepMerge(I18N, props.i18n);
@@ -145,7 +145,7 @@ class TicketForm extends React.Component<TicketFormProps, TicketFormState> {
 
   componentWillUnmount() {
     if (this.props.onChange && typeof this.props.onChange === 'function') {
-      this.props.onChange(this.formik.current.state);
+      this.props.onChange(this.formik.current.values);
     }
   }
 
@@ -162,7 +162,7 @@ class TicketForm extends React.Component<TicketFormProps, TicketFormState> {
     const values: TicketFormValues = {};
     const { initialValues } = this.props;
     const layout            = this.getLayout();
-    const previousValues = this.formik.current ? this.formik.current.state.values : [];
+    const previousValues = this.formik.current ? this.formik.current.values : [];
     layout
       .get('fields', [])
       .filter(f => f.getIn(['data', 'widget_type'], '') !== 'display')
@@ -412,7 +412,7 @@ class TicketForm extends React.Component<TicketFormProps, TicketFormState> {
                         label: p.get('title'),
                         value: p.get('id'),
                       }))
-                   }}
+                  }}
                 isClearable={!field.get('required')}
                 isSearchable={false}
               />
@@ -478,7 +478,7 @@ class TicketForm extends React.Component<TicketFormProps, TicketFormState> {
     if (hasAttachment) {
       return (
         <Formik
-          ref={this.formik}
+          innerRef={this.formik}
           enableReinitialize
           initialValues={this.getInitialValues()}
           onSubmit={this.props.onSubmit}
@@ -515,7 +515,7 @@ class TicketForm extends React.Component<TicketFormProps, TicketFormState> {
     }
     return (
       <Formik
-        ref={this.formik}
+        innerRef={this.formik}
         enableReinitialize
         initialValues={this.getInitialValues()}
         onSubmit={this.props.onSubmit}

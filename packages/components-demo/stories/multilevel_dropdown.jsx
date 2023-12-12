@@ -55,7 +55,8 @@ storiesOf('Choices', module)
   .add('Multilevel Dropdown', () => (
     <Formik
       onSubmit={action('submit')}
-      render={() => (
+    >
+      {() => (
         <Form>
           <DropDown
             dataSource={{ getOptions: options }}
@@ -65,5 +66,5 @@ storiesOf('Choices', module)
           <Submit>Submit</Submit>
         </Form>
       )}
-    />
+    </Formik>
   ));

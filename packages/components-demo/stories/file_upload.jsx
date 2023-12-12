@@ -23,7 +23,8 @@ storiesOf('Input', module)
     <Formik
       initialValues={{ files: [] }}
       onSubmit={action('submit')}
-      render={() => (
+    >
+      {() => (
         <Form>
           <FileUpload
             label="Attachments"
@@ -41,7 +42,7 @@ storiesOf('Input', module)
           <Submit>submit</Submit>
         </Form>
       )}
-    />
+    </Formik>
   ))
   .add('Progress Bar', () => (
     <div>

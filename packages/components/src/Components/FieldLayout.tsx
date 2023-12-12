@@ -62,7 +62,9 @@ class FieldLayout extends PureComponent<IProps, IState> {
     // Reset form with new defaults when the layout is changed.
     if (!this.state || activeLayout !== this.state.activeLayout && this.state.activeLayout) {
       const defaults = this.state.activeLayout.getDefaultValues();
-      this.props.resetForm({ ...defaults, ...this.props.values });
+      this.props.resetForm({
+        values: { ...defaults, ...this.props.values }
+      });
     }
   }
 

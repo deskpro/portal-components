@@ -11,7 +11,8 @@ export const DateTimePickerStory = () => (
   <Formik
     initialValues={{ date: '14/05/1984 15:00' }}
     onSubmit={action('submit')}
-    render={() => (
+  >
+    {() => (
       <Form>
         <DateTimePicker
           name="date"
@@ -20,6 +21,6 @@ export const DateTimePickerStory = () => (
         <Submit>Submit</Submit>
       </Form>
     )}
-  />
+  </Formik>
 );
 DateTimePickerStory.storyName = 'DateTimePicker';

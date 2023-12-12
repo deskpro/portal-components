@@ -9,7 +9,8 @@ storiesOf('Input', module)
     <Formik
       initialValues={{ likert_scale: '' }}
       onSubmit={action('submit')}
-      render={() => (
+    >
+      {() => (
         <Form>
           <LikertScale
             name="likert_scale"
@@ -20,5 +21,5 @@ storiesOf('Input', module)
           <Submit>Submit</Submit>
         </Form>
       )}
-    />
+    </Formik>
   ));

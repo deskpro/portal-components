@@ -9,7 +9,8 @@ export const TelStory = () => (
   <Formik
     initialValues={{ text: '' }}
     onSubmit={action('submit')}
-    render={() => (
+  >
+    {() => (
       <Form>
         <Tel
           name="phone"
@@ -19,14 +20,15 @@ export const TelStory = () => (
         <Submit>Submit</Submit>
       </Form>
     )}
-  />
+  </Formik>
 );
 TelStory.storyName = 'Tel';
 export const TelWithIndicator = () => (
   <Formik
     initialValues={{ text: '' }}
     onSubmit={action('submit')}
-    render={() => (
+  >
+    {() => (
       <Form>
         <Tel
           name="phone"
@@ -37,7 +39,7 @@ export const TelWithIndicator = () => (
         <Submit>Submit</Submit>
       </Form>
     )}
-  />
+  </Formik>
 );
 TelWithIndicator.storyName = 'Tel With Indicator';
 

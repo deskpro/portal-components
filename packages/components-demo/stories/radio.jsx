@@ -17,7 +17,8 @@ storiesOf('Choices', module)
     <Formik
       initialValues={{ colour: 'pink' }}
       onSubmit={action('submit')}
-      render={() => (
+    >
+      {() => (
         <Form>
           <Radio
             name="colour"
@@ -28,5 +29,5 @@ storiesOf('Choices', module)
           <Submit>Submit</Submit>
         </Form>
       )}
-    />
+    </Formik>
   ));
