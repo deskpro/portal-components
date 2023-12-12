@@ -74,6 +74,13 @@
   &-content {
     line-height: 1.6;
     word-break: break-word;
+
+    blockquote {
+      border-left: 2px solid var(--grey80);
+      padding: 1px 0 1px 8px;
+      margin: 16px 64px 16px 48px;
+      background: rgba(0, 0, 0, 0.02);
+    }
   }
 
   &-vote {
