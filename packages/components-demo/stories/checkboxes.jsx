@@ -19,7 +19,8 @@ export const CheckboxesStory = () => (
   <Formik
     initialValues={{ filling: ['bacon'] }}
     onSubmit={action('submit')}
-    render={() => (
+  >
+    {() => (
       <Form>
         <Checkboxes
           name="filling"
@@ -29,6 +30,6 @@ export const CheckboxesStory = () => (
         <Submit>Submit</Submit>
       </Form>
     )}
-  />
+  </Formik>
 );
 CheckboxesStory.storyName = 'Checkboxes';

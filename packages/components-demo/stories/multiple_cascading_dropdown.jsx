@@ -134,7 +134,8 @@ class Story extends React.Component {
       <Formik
         onSubmit={action('submit')}
         initialValues={{ multilevel: ['2', '4-A-III'] }}
-        render={() => (
+      >
+        {() => (
           <Form>
             <MultipleDropDown
               dataSource={{ getOptions: options }}
@@ -145,7 +146,7 @@ class Story extends React.Component {
             <Submit>Submit</Submit>
           </Form>
         )}
-      />
+      </Formik>
     )
   }
 }

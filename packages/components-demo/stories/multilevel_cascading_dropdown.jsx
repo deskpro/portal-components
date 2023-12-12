@@ -128,7 +128,8 @@ class Story extends React.Component {
     return (
       <Formik
         onSubmit={action('submit')}
-        render={() => (
+      >
+        {() => (
           <Form>
             <CascadingDropDown
               value={value}
@@ -140,7 +141,7 @@ class Story extends React.Component {
             <Submit>Submit</Submit>
           </Form>
         )}
-      />
+      </Formik>
     )
   }
 }

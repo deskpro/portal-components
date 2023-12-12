@@ -10,7 +10,8 @@ export const Input = () => (
   <Formik
     initialValues={{ text: '' }}
     onSubmit={action('submit')}
-    render={() => (
+  >
+    {() => (
       <Form>
         <Text
           name="text"
@@ -20,5 +21,5 @@ export const Input = () => (
         <Submit>Submit</Submit>
       </Form>
     )}
-  />
+  </Formik>
 );

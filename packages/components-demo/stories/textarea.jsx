@@ -10,7 +10,8 @@ export const TextareaStory = (args) => (
   <Formik
     initialValues={{ message: 'Initial message' }}
     onSubmit={action('submit')}
-    render={() => (
+  >
+    {() => (
       <Form>
         <Textarea
           name="message"
@@ -20,7 +21,7 @@ export const TextareaStory = (args) => (
         <Submit>Submit</Submit>
       </Form>
     )}
-  />
+  </Formik>
 );
 TextareaStory.args = {
   description: 'Test description',

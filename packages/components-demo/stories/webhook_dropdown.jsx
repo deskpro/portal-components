@@ -10,7 +10,8 @@ export const GetAddressIO = (args) => (
   <Formik
     initialValues={{}}
     onSubmit={action('submit')}
-    render={() => (
+  >
+    {() => (
       <Form>
         <WebhookDropDown
           name="address"
@@ -32,7 +33,7 @@ export const GetAddressIO = (args) => (
         <Submit>Submit</Submit>
       </Form>
     )}
-  />
+  </Formik>
 );
 GetAddressIO.storyName = 'Get Address IO';
 GetAddressIO.args = {
@@ -43,7 +44,8 @@ export const FrenchPostalCode = () => (
   <Formik
     initialValues={{}}
     onSubmit={action('submit')}
-    render={() => (
+  >
+    {() => (
       <Form>
         <WebhookDropDown
           name="address"
@@ -65,7 +67,7 @@ export const FrenchPostalCode = () => (
         <Submit>Submit</Submit>
       </Form>
     )}
-  />
+  </Formik>
 );
 FrenchPostalCode.storyName = 'French postal code';
 

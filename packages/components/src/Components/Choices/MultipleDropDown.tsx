@@ -154,7 +154,7 @@ export class MultipleDropDownInput extends React.Component<MultipleDropDownInput
     this.setOptions();
   }
 
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate() {
     // this.setOptions(prevState);
   }
 
@@ -266,16 +266,16 @@ export class MultipleDropDownInput extends React.Component<MultipleDropDownInput
     if (Array.isArray(dataSource.getOptions)) {
       return (
         <>
-          <div 
+          <div
             className='react-select__dropdown-multi_clickout'
             style={{
-              position: 'fixed', 
-              top: 0, 
-              left: 0, 
-              width: '100%', 
-              height: '100%', 
+              position: 'fixed',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
               display: this.state.menuIsOpen ? 'block' : 'none',
-            }} 
+            }}
             onClick={this.onClickout}
           />
           <ReactSelect

@@ -9,7 +9,8 @@ storiesOf('Input', module)
     <Formik
       initialValues={{ password: '' }}
       onSubmit={action('submit')}
-      render={() => (
+    >
+      {() => (
         <Form>
           <Password
             name="password"
@@ -19,5 +20,5 @@ storiesOf('Input', module)
           <Submit>Submit</Submit>
         </Form>
       )}
-    />
+    </Formik>
   ));

@@ -10,7 +10,8 @@ export const EmailStory = () => (
   <Formik
     initialValues={{ email: '' }}
     onSubmit={action('submit')}
-    render={() => (
+  >
+    {() => (
       <Form>
         <Email
           name="email"
@@ -20,6 +21,6 @@ export const EmailStory = () => (
         <Submit>Submit</Submit>
       </Form>
     )}
-  />
+  </Formik>
 );
 EmailStory.storyName = 'Email';

@@ -17,7 +17,8 @@ storiesOf('Choices', module)
     <Formik
       initialValues={{ filling: ['bacon'] }}
       onSubmit={action('submit')}
-      render={() => (
+    >
+      {() => (
         <Form>
           <MultipleDropDown
             name="filling"
@@ -27,5 +28,5 @@ storiesOf('Choices', module)
           <Submit>Submit</Submit>
         </Form>
       )}
-    />
+    </Formik>
   ));

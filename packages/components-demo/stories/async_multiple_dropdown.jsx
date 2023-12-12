@@ -27,7 +27,8 @@ export const AsyncMultipleDropdown = () => (
   <Formik
     initialValues={{ filling: 'bacon' }}
     onSubmit={action('submit')}
-    render={() => (
+  >
+    {() => (
       <Form>
         <MultipleDropDown
           name="filling"
@@ -38,6 +39,6 @@ export const AsyncMultipleDropdown = () => (
         <Submit>Submit</Submit>
       </Form>
     )}
-  />
+  </Formik>
 );
 AsyncMultipleDropdown.storyName = 'Async MultipleDropdown';

@@ -19,7 +19,8 @@ export const DropdownStory = () => (
   <Formik
     initialValues={{ filling: 'bacon' }}
     onSubmit={action('submit')}
-    render={() => (
+  >
+    {() => (
       <Form>
         <DropDown
           dataSource={{ getOptions: options }}
@@ -29,6 +30,6 @@ export const DropdownStory = () => (
         <Submit>Submit</Submit>
       </Form>
     )}
-  />
+  </Formik>
 );
 DropdownStory.storyName = 'Dropdown';
