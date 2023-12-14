@@ -194,6 +194,10 @@ export class FileUploadInput extends React.Component<FileUploadInputProps, FileU
     this.setState({ files });
   };
 
+  reset = () => {
+    this.setState({ files: [] });
+  }
+
   renderDivider = () => null;
 
   renderLabel = () => {
@@ -240,7 +244,7 @@ export class FileUploadInput extends React.Component<FileUploadInputProps, FileU
               <div
                 className="choose"
                 tabIndex={0}
-                onKeyPress={this.handleKeyPress}
+                onKeyDown={this.handleKeyPress}
                 onFocus={this.handleFocus}
                 onBlur={this.handleBlur}
               >
