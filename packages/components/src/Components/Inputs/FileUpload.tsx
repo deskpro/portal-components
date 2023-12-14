@@ -36,6 +36,9 @@ interface FileUploadInputProps {
   i18n:      object;
   files:     DpBlob[];
   maxSize:   number;
+  form?:     {
+    on: (event: string, callback: () => void) => void;
+  };
 }
 
 interface FileUploadInputState {
@@ -56,6 +59,7 @@ export class FileUploadInput extends React.Component<FileUploadInputProps, FileU
     onChange() {},
     i18n:     {},
     maxSize:  Infinity,
+    form:     null,
   };
   private i18n: I18nType;
   private dropZone: any;
@@ -105,6 +109,16 @@ export class FileUploadInput extends React.Component<FileUploadInputProps, FileU
       });
     }
   };
+
+  componentDidMount(): void {
+    if (!this.props.form) {
+      this.props.form.on('reset', () => {
+        this.setState({
+          files: []
+        });
+      });
+    }
+  }
 
   handleTransferComplete = (e) => {
     const { name, onChange } = this.props;
@@ -193,10 +207,6 @@ export class FileUploadInput extends React.Component<FileUploadInputProps, FileU
     const files = this.state.files.filter(f => f.id !== file.id);
     this.setState({ files });
   };
-
-  reset = () => {
-    this.setState({ files: [] });
-  }
 
   renderDivider = () => null;
 
