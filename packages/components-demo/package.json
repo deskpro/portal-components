@@ -1,6 +1,6 @@
 {
   "name": "components-demo",
-  "version": "1.2.1",
+  "version": "1.2.4",
   "description": "> TODO: description",
   "author": "Julien Ducro <julien.ducro@deskpro.com>",
   "homepage": "https://github.com/deskpro/portal-components#readme",
@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@deskpro/js-utils": "^1.0.13",
-    "@deskpro/portal-components": "^1.2.1",
+    "@deskpro/portal-components": "^1.2.4",
     "@storybook/addon-controls": "^6.5.16",
     "@storybook/addon-postcss": "^2.0.0",
     "formik": "2.4.5",
