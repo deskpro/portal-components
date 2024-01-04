@@ -9,7 +9,17 @@ interface DisplayProps extends FieldProps {
 
 class Display extends Field<DisplayProps> {
   renderField() {
-    return <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(this.props.html) }} />;
+    return <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(this.props.html, { ADD_ATTR: ['target'] }) }} />;
+  }
+
+  componentDidMount(): void {
+    DOMPurify.addHook('afterSanitizeAttributes', function (node) {
+      // set all elements owning target to target=_blank
+      if ('target' in node) {
+        node.setAttribute('target', '_blank');
+        node.setAttribute('rel', 'noopener');
+      }
+    });
   }
 
   renderDescription = () => {

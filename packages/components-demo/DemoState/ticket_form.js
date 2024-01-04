@@ -485,6 +485,47 @@ const ticketLayoutRaw = {
           }
         },
         {
+          "field_type": "chat_field",
+          "field_id": "chat_field_10",
+          "data": {
+            "id": 10,
+            "title": "Test display field",
+            "description": "",
+            "options": {
+              "custom_css_classname": "",
+              "html": "<a target=\"_blank\" href=\"https://deskpro.com\">test</a>"
+            },
+            "is_user_enabled": true,
+            "is_enabled": true,
+            "display_order": 90,
+            "is_agent_field": false,
+            "choices": [],
+            "widget_type": "display",
+            "type_name": "display",
+            "translations": {
+              "1": {
+                "language": 1,
+                "title": "Test display field",
+                "user_title": "",
+                "description": ""
+              },
+              "2": {
+                "language": 2,
+                "title": "Test display field",
+                "user_title": "",
+                "description": ""
+              },
+              "3": {
+                "language": 3,
+                "title": "Test display field",
+                "user_title": "",
+                "description": ""
+              }
+            },
+            "aliases": []
+          }
+        },
+        {
           version:    1,
           field_type: 'message',
           field_id:   'message',
