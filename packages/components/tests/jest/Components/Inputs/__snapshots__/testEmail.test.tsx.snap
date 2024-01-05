@@ -2,6 +2,7 @@
 
 exports[`>>> Email --- Snapshot +++capturing Snapshot of Email 1`] = `
 <form
+  action="#"
   className="dp-pc_form show-hover"
   onReset={[Function]}
   onSubmit={[Function]}

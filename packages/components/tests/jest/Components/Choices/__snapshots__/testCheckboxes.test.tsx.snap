@@ -2,6 +2,7 @@
 
 exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes 1`] = `
 <form
+  action="#"
   className="dp-pc_form show-hover"
   onReset={[Function]}
   onSubmit={[Function]}
@@ -109,6 +110,7 @@ exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes 1`] = `
 
 exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes with existing value 1`] = `
 <form
+  action="#"
   className="dp-pc_form show-hover"
   onReset={[Function]}
   onSubmit={[Function]}
@@ -138,7 +140,7 @@ exports[`>>> Checkboxes --- Snapshot +++capturing Snapshot of Checkboxes with ex
         tabIndex={0}
       >
         <input
-          checked={true}
+          checked={false}
           id="checkbox-first"
           name="checkboxes"
           onChange={[Function]}

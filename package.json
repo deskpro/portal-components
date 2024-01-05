@@ -25,7 +25,7 @@
     "build": "lerna run --stream build --sort",
     "build-storybook": "lerna run --stream build-storybook --sort",
     "test": "lerna run --stream test",
-    "lint": "eslint . --cache --cache-location=.cache/eslint --ext .js,.jsx",
+    "lint": "lerna run --stream lint",
     "publish-git": "lerna publish --force-publish --skip-npm --yes",
     "publish-npm": "lerna publish --force-publish --no-git-tag-version --no-push --yes"
   },

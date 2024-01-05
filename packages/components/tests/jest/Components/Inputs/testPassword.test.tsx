@@ -5,6 +5,14 @@ import { describe, expect, it } from '@jest/globals';
 import Form from '../../../../src/Components/Form';
 import Password from '../../../../src/Components/Inputs/Password';
 
+interface FormValues {
+  password?: string;
+}
+
+interface MyFormikProps {
+  password?: string;
+}
+
 describe('>>> Password --- Snapshot', () => {
   it('+++capturing Snapshot of Password', () => {
     const App = () => (
@@ -12,7 +20,7 @@ describe('>>> Password --- Snapshot', () => {
         <Password name="password" />
       </Form>
     );
-    const FormikApp = withFormik({
+    const FormikApp = withFormik<MyFormikProps, FormValues>({
       mapPropsToValues({
         password
       }) {
