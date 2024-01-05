@@ -23,6 +23,7 @@
     "bootstrap": "lerna bootstrap",
     "dev": "lerna run dev --parallel",
     "build": "lerna run --stream build --sort",
+    "build-storybook": "lerna run --stream build-storybook --sort",
     "test": "lerna run --stream test",
     "lint": "eslint . --cache --cache-location=.cache/eslint --ext .js,.jsx",
     "publish-git": "lerna publish --force-publish --skip-npm --yes",
