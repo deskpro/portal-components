@@ -10,6 +10,7 @@ before_install:
 before_script:
   - yarn
 script:
+  - yarn test
   - yarn build
   - yarn build-storybook
   - ./bin/travis-prep-website.sh
