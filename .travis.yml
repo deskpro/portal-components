@@ -10,6 +10,7 @@ before_script:
   - yarn
 script:
   - yarn build
+  - yarn build-storybook
   - ./bin/travis-prep-website.sh
 cache:
   directories:
