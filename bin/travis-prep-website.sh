@@ -18,7 +18,7 @@ fi
 mkdir -p ./target/portal-components
 
 mv ./packages/portal-style/.build/portal-components/portal-style ./target/portal-components/portal-style
-mv ./packages/components-demo/storybook-static ./target/portal-components/demo
+mv ./packages/components/storybook-static ./target/portal-components/demo
 
 cat << EOF > ./target/portal-components/index.html
 <html>

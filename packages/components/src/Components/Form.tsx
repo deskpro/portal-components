@@ -5,7 +5,7 @@ import classNames from 'classnames';
 interface IProps {
   className?: string;
   showHover?: boolean;
-  children:   React.ReactElement;
+  children:   React.ReactNode;
 }
 
 const Form = ({
