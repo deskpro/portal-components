@@ -217,8 +217,8 @@
     }
 
     #{$self}-title {
-      width: calc(100% - 640px);
       flex: 0 0 auto;
+      width: calc(100% - 640px);
     }
 
     #{$self}-office {
