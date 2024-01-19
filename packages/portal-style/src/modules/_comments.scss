@@ -85,6 +85,36 @@
     img {
       max-width: 100%;
     }
+
+    /* table styles */
+    table {
+      margin: 1rem 0;
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+
+    table th,
+    table td {
+      position: relative;
+      padding: 0 0.5em;
+      border: 1px solid rgba(0,0,0,0.075);
+      font-weight: normal;
+      text-align: left;
+      word-wrap: break-word;
+    }
+
+    table th {
+      font-weight: 500;
+      background: rgba(0, 0, 0, 0.025);
+    }
+
+    table th.selectedCell,
+    table td.selectedCell {
+      box-shadow: 0 0 0 1px #c0e3fc inset;
+      background: rgba(65, 150, 212, 0.125);
+      z-index: 10;
+    }
   }
 
   &-vote {
