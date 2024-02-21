@@ -5,6 +5,14 @@ import { describe, expect, it } from '@jest/globals';
 import Form from '../../../../src/Components/Form';
 import Search from '../../../../src/Components/Inputs/Search';
 
+interface FormValues {
+  search?: string;
+}
+
+interface MyFormikProps {
+  search?: string;
+}
+
 describe('>>> Search --- Snapshot', () => {
   it('+++capturing Snapshot of Search', () => {
     const App = () => (
@@ -12,7 +20,7 @@ describe('>>> Search --- Snapshot', () => {
         <Search name="search" />
       </Form>
     );
-    const FormikApp = withFormik({
+    const FormikApp = withFormik<MyFormikProps, FormValues>({
       mapPropsToValues({
         search
       }) {

@@ -5,8 +5,6 @@
     "babel-preset-stage-0"
   ],
   "plugins": [
-    "babel-plugin-transform-decorators-legacy",
-    "babel-plugin-transform-flow-strip-types",
     ["babel-plugin-module-resolver", {
       "root": ["./src"],
       "extensions": [".js", ".jsx"]

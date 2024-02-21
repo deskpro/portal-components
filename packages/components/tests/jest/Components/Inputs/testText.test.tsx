@@ -5,6 +5,14 @@ import { withFormik } from 'formik';
 import Form from '../../../../src/Components/Form';
 import Text from '../../../../src/Components/Inputs/Text';
 
+interface FormValues {
+  text?: string;
+}
+
+interface MyFormikProps {
+  text?: string;
+}
+
 describe('>>> Text --- Snapshot', () => {
   it('+++capturing Snapshot of Text', () => {
     const App = () => (
@@ -12,7 +20,7 @@ describe('>>> Text --- Snapshot', () => {
         <Text name="text" />
       </Form>
     );
-    const FormikApp = withFormik({
+    const FormikApp = withFormik<MyFormikProps, FormValues>({
       mapPropsToValues({
         text
       }) {

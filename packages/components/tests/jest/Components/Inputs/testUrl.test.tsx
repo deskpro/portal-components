@@ -5,6 +5,14 @@ import Form from '../../../../src/Components/Form';
 import Url from '../../../../src/Components/Inputs/Url';
 import { describe, expect, it } from '@jest/globals';
 
+interface FormValues {
+  url?: string;
+}
+
+interface MyFormikProps {
+  url?: string;
+}
+
 describe('>>> Url --- Snapshot', () => {
   it('+++capturing Snapshot of Url', () => {
     const App = () => (
@@ -12,7 +20,7 @@ describe('>>> Url --- Snapshot', () => {
         <Url name="url" />
       </Form>
     );
-    const FormikApp = withFormik({
+    const FormikApp = withFormik<MyFormikProps, FormValues>({
       mapPropsToValues({
         url
       }) {

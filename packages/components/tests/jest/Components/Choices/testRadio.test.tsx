@@ -5,6 +5,14 @@ import { describe, expect, it } from '@jest/globals';
 import Form from '../../../../src/Components/Form';
 import Radio from '../../../../src/Components/Choices/Radio';
 
+interface FormValues {
+  radio: string;
+}
+
+interface MyFormikProps {
+  radio: string;
+}
+
 describe('>>> Radio --- Snapshot', () => {
   it('+++capturing Snapshot of Radio', () => {
     const options = [
@@ -17,7 +25,7 @@ describe('>>> Radio --- Snapshot', () => {
         <Radio name="radio" options={options} />
       </Form>
     );
-    const FormikApp = withFormik({
+    const FormikApp = withFormik<MyFormikProps, FormValues>({
       mapPropsToValues({
         radio
       }) {
@@ -29,7 +37,7 @@ describe('>>> Radio --- Snapshot', () => {
         setSubmitting(false);
       }
     })(App);
-    const renderedValue = renderer.create(<FormikApp />).toJSON();
+    const renderedValue = renderer.create(<FormikApp radio='' />).toJSON();
     expect(renderedValue).toMatchSnapshot();
   });
 });

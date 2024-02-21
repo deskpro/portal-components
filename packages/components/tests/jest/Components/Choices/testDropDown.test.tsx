@@ -5,6 +5,14 @@ import { describe, expect, it, jest } from '@jest/globals';
 import Form from '../../../../src/Components/Form';
 import DropDown from '../../../../src/Components/Choices/DropDown';
 
+interface FormValues {
+  dropDown: string;
+}
+
+interface MyFormikProps {
+  dropDown: string;
+}
+
 jest.mock("react-select", () => {
   return {
     default: ({...props}) => <div>{JSON.stringify(props)}</div>
@@ -23,7 +31,7 @@ describe('>>> DropDown --- Snapshot', () => {
         <DropDown name="dropDown" dataSource={{ getOptions: options }} />
       </Form>
     );
-    const FormikApp = withFormik({
+    const FormikApp = withFormik<MyFormikProps, FormValues>({
       mapPropsToValues({
         dropDown
       }) {
@@ -35,7 +43,7 @@ describe('>>> DropDown --- Snapshot', () => {
         setSubmitting(false);
       }
     })(App);
-    const renderedValue = renderer.create(<FormikApp />).toJSON();
+    const renderedValue = renderer.create(<FormikApp dropDown='' />).toJSON();
     expect(renderedValue).toMatchSnapshot();
   });
 });

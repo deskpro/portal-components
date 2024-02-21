@@ -5,6 +5,14 @@ import { describe, expect, it } from '@jest/globals';
 import Form from '../../../../src/Components/Form';
 import Email from '../../../../src/Components/Inputs/Email';
 
+interface FormValues {
+  email?: string;
+}
+
+interface MyFormikProps {
+  email?: string;
+}
+
 describe('>>> Email --- Snapshot', () => {
   it('+++capturing Snapshot of Email', () => {
     const App = () => (
@@ -12,7 +20,7 @@ describe('>>> Email --- Snapshot', () => {
         <Email name="email" />
       </Form>
     );
-    const FormikApp = withFormik({
+    const FormikApp = withFormik<MyFormikProps, FormValues>({
       mapPropsToValues({
         email
       }) {

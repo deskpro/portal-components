@@ -1,9 +1,33 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { Form, MultipleDropDown, Submit, Formik } from '@deskpro/portal-components';
+import React from 'react';
 
-const options = [
+import CascadingDropDown from '../Components/Choices/CascadingDropDown';
+import Form from '../Components/Form';
+import Submit from '../Components/Submit';
+import { Formik } from 'formik';
+
+// More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
+const meta: Meta<typeof CascadingDropDown> = {
+  title: 'Choices/Cascading Dropdown',
+  component: CascadingDropDown,
+  parameters: {
+    // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
+    layout: 'centered',
+    formik: {
+      initialValues: {
+        filling: 'bacon',
+      },
+    },
+  },
+  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
+  tags: ['autodocs'],
+};
+
+export default meta;
+type Story = StoryObj<typeof CascadingDropDown>;
+
+const multiLevelOptions = [
   { value: '1', label: 'Option 1' },
   { value: '2', label: 'Option 2' },
   {
@@ -108,48 +132,25 @@ const options = [
   { value: '6', label: 'Option 6' },
 ];
 
-class Story extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      value: [
-        {
-          value: '4-A-III',
-          label: 'Option 4 - B'
-        },
-        {
-          value: '2',
-          label: 'Option 2'
-        },
-      ]
-    };
-  }
-
-  handleChange = (value) => {
-    this.setState({ value: value });
-  }
-
-  render() {
-    return (
-      <Formik
-        onSubmit={action('submit')}
-        initialValues={{ multilevel: ['2', '4-A-III'] }}
-      >
-        {() => (
-          <Form>
-            <MultipleDropDown
-              dataSource={{ getOptions: options }}
-              onChange={this.handleChange}
-              name="multilevel"
-              label="Label"
-            />
-            <Submit>Submit</Submit>
-          </Form>
-        )}
-      </Formik>
-    )
-  }
+export const MultiLevel: Story = {
+  args: {
+    name: 'multilevel',
+    dataSource: { getOptions: multiLevelOptions },
+    label: 'Multi Level',
+    handleChanged: action('change'),
+  },
+  render: (args) => (
+    <Formik
+      initialValues={{ multilevel: '1' }}
+      onSubmit={action('submit')}
+    >
+      {() => (
+        <Form>
+          <CascadingDropDown {...args} />
+          <Submit>Submit</Submit>
+        </Form>
+      )}
+    </Formik>
+  ),
 }
 
-storiesOf('Choices', module)
-  .add('Multiple Cascading Dropdown', () => <Story />);

@@ -5,6 +5,14 @@ import { describe, expect, it } from '@jest/globals';
 import Form from '../../../../src/Components/Form';
 import Checkboxes from '../../../../src/Components/Choices/Checkboxes';
 
+interface FormValues {
+  checkboxes: string[];
+}
+
+interface MyFormikProps {
+  checkboxes: string[];
+}
+
 describe('>>> Checkboxes --- Snapshot', () => {
   it('+++capturing Snapshot of Checkboxes', () => {
     const options = [
@@ -17,7 +25,7 @@ describe('>>> Checkboxes --- Snapshot', () => {
         <Checkboxes name="checkboxes" options={options} />
       </Form>
     );
-    const FormikApp = withFormik({
+    const FormikApp = withFormik<MyFormikProps, FormValues>({
       mapPropsToValues({
         checkboxes
       }) {
@@ -29,7 +37,7 @@ describe('>>> Checkboxes --- Snapshot', () => {
         setSubmitting(false);
       }
     })(App);
-    const renderedValue = renderer.create(<FormikApp />).toJSON();
+    const renderedValue = renderer.create(<FormikApp checkboxes={[]} />).toJSON();
     expect(renderedValue).toMatchSnapshot();
   });
 
@@ -44,7 +52,7 @@ describe('>>> Checkboxes --- Snapshot', () => {
         <Checkboxes name="checkboxes" id="checkbox" options={options} />
       </Form>
     );
-    const FormikApp = withFormik({
+    const FormikApp = withFormik<MyFormikProps, FormValues>({
       mapPropsToValues({
         checkboxes
       }) {
@@ -56,7 +64,7 @@ describe('>>> Checkboxes --- Snapshot', () => {
         setSubmitting(false);
       }
     })(App);
-    const renderedValue = renderer.create(<FormikApp />).toJSON();
+    const renderedValue = renderer.create(<FormikApp checkboxes={[]} />).toJSON();
     expect(renderedValue).toMatchSnapshot();
   });
 });
