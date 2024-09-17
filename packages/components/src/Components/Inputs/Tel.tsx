@@ -1,6 +1,6 @@
 import * as React from 'react';
 import ReactSelect from 'react-select';
-import * as worldCountries from 'world-countries/dist/countries.json';
+import worldCountries from 'world-countries/dist/countries.json';
 import classNames from 'classnames';
 import { AsYouType, CountryCode } from 'libphonenumber-js';
 import Field, { FieldProps, FieldState } from '../Field';
