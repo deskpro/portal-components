@@ -26,17 +26,18 @@ const I18N = {
 };
 
 interface FileUploadInputProps {
-  multiple:  boolean;
-  id:        string;
-  url:       string;
+  multiple: boolean;
+  id: string;
+  url: string;
   csrfToken: string;
-  name?:     string;
-  label:     string;
-  onChange:  (name: string, files: DpBlob[]) => void;
-  i18n:      object;
-  files:     DpBlob[];
-  maxSize:   number;
-  form?:     {
+  name?: string;
+  label: string;
+  onChange: (name: string, files: DpBlob[]) => void;
+  onTransferFailed?: () => void;
+  i18n: object;
+  files: DpBlob[];
+  maxSize: number;
+  form?: {
     on: (event: string, callback: () => void) => void;
   };
 }
@@ -157,10 +158,14 @@ export class FileUploadInput extends React.Component<FileUploadInputProps, FileU
   };
 
   handleTransferFailed = () => {
-    this.setState({
-      progress: -1,
-      error:    this.i18n.generalError,
-    });
+    if (this.props.onTransferFailed) {
+      this.props.onTransferFailed();
+    } else {
+      this.setState({
+        progress: -1,
+        error:    this.i18n.generalError,
+      });
+    }
   };
 
   handleUpdateProgress = (e) => {
