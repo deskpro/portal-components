@@ -33,7 +33,7 @@ interface FileUploadInputProps {
   name?: string;
   label: string;
   onChange: (name: string, files: DpBlob[]) => void;
-  onTransferFailed?: () => void;
+  onTransferFailed?: (event: ProgressEvent) => void;
   i18n: object;
   files: DpBlob[];
   maxSize: number;
@@ -157,9 +157,9 @@ export class FileUploadInput extends React.Component<FileUploadInputProps, FileU
     return this.setState({ progress: -1 });
   };
 
-  handleTransferFailed = () => {
+  handleTransferFailed = (e: ProgressEvent) => {
     if (this.props.onTransferFailed) {
-      this.props.onTransferFailed();
+      this.props.onTransferFailed(e);
     } else {
       this.setState({
         progress: -1,
