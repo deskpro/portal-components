@@ -17,7 +17,7 @@ const I18N = {
   remove: 'remove'
 };
 
-const renderSize = (file: DpBlob) => {
+export const renderSize = (file: DpBlob) => {
   if (typeof file.size === 'string') {
     return `(${file.size})`;
   } else if (typeof file.size === 'number') {

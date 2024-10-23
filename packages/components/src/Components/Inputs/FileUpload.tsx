@@ -2,15 +2,17 @@ import * as React from 'react';
 import classNames from 'classnames';
 import DropZone from 'react-dropzone';
 import { deepMerge } from '@deskpro/js-utils/dist/objects';
+import { formatFileSize } from '@deskpro/js-utils/dist/numbers';
 import FileIcon from '../../tsx-assets/FileIcon';
 import DndIcon from '../../tsx-assets/DragAndDrop';
 import Progress from '../Elements/Progress';
 
 import Field, { FieldProps } from '../Field';
 import AJAXSubmit from '../../utils/AJAXSubmit';
-import File from '../File';
+import File, { renderSize } from '../File';
 import type { DpBlob } from "../../types/blob";
 import type { I18nType } from "../../types/i18n";
+import { useMemo } from 'react';
 
 const I18N = {
   dragNDrop:     'Drag and drop',
@@ -42,12 +44,41 @@ interface FileUploadInputProps {
   };
 }
 
+interface FileRejection {
+  file: DpBlob;
+  error: {
+    code: string;
+    message: string;
+  }
+}
+
 interface FileUploadInputState {
   files: DpBlob[];
+  pendingFiles: DpBlob[];
+  errorFiles: FileRejection[],
   progress: number;
   focused: boolean;
   hovered: boolean;
   error: string;
+}
+
+const FileError = ({
+  fileRejection,
+}: {
+  fileRejection: FileRejection;
+}) => {
+  const { file, error } = fileRejection;
+  let message = error.message;
+  if (error.code === 'file-too-large') {
+    const maxSize = message.match(/(\d+) bytes/);
+    message = message.replace(maxSize[0], formatFileSize({ size: parseInt(maxSize[1], 10) }));
+  }
+
+  return (
+    <li>
+      <span>{file.filename} {renderSize(file)}: {message}</span>
+    </li>
+  );
 }
 
 export class FileUploadInput extends React.Component<FileUploadInputProps, FileUploadInputState> {
@@ -72,6 +103,8 @@ export class FileUploadInput extends React.Component<FileUploadInputProps, FileU
 
     this.state = {
       files:    props.files,
+      pendingFiles: [],
+      errorFiles: [],
       progress: -1,
       focused:  false,
       hovered:  false,
@@ -81,23 +114,14 @@ export class FileUploadInput extends React.Component<FileUploadInputProps, FileU
 
   handleDrop = (accepted, fileRejections) => {
     let files: DpBlob[];
+    this.setState({
+      pendingFiles: accepted,
+      errorFiles:   fileRejections,
+    })
     files = this.state.files.filter(f =>  !f.error);
     console.log('files', files);
     console.log('accepted', accepted);
     console.log('fileRejections', fileRejections);
-    this.setState({ files });
-    if (fileRejections.length > 0) {
-      const errorFiles = [];
-      fileRejections.forEach((file) => {
-        file.errors.forEach((err) => {
-          const errorFile = file.file;
-          errorFile.error = err;
-          errorFiles.push(errorFile);
-        });
-      });
-      files = files.concat(errorFiles);
-      this.setState({ files });
-    }
     if (accepted.length > 0) {
       AJAXSubmit({
         url:              this.props.url,
@@ -155,14 +179,17 @@ export class FileUploadInput extends React.Component<FileUploadInputProps, FileU
       response = JSON.parse(response);
     }
     const files = this.state.files.concat([response.blob]);
-    this.setState({ files });
+    this.setState({
+      files,
+      pendingFiles: [],
+    });
     onChange(name, files);
     return this.setState({ progress: -1 });
   };
 
   handleTransferFailed = (e: ProgressEvent) => {
     if (this.props.onTransferFailed) {
-      this.props.onTransferFailed(e, this.state.files);
+      this.props.onTransferFailed(e, this.state.pendingFiles);
     } else {
       this.setState({
         progress: -1,
@@ -286,6 +313,9 @@ export class FileUploadInput extends React.Component<FileUploadInputProps, FileU
             key={`key_${file.name}`}
             i18n={this.i18n}
             file={file}
+          />))}
+          {Array.from(this.state.errorFiles).map((fileRejection) => (<FileError
+            fileRejection={fileRejection}
           />))}
         </ul>
       </div>
