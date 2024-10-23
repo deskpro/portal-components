@@ -46,10 +46,10 @@ interface FileUploadInputProps {
 
 interface FileRejection {
   file: DpBlob;
-  error: {
+  errors: {
     code: string;
     message: string;
-  }
+  }[]
 }
 
 interface FileUploadInputState {
@@ -67,9 +67,9 @@ const FileError = ({
 }: {
   fileRejection: FileRejection;
 }) => {
-  const { file, error } = fileRejection;
-  let message = error.message;
-  if (error.code === 'file-too-large') {
+  const { file, errors } = fileRejection;
+  let message = errors[0].message;
+  if (errors[0].code === 'file-too-large') {
     const maxSize = message.match(/(\d+) bytes/);
     message = message.replace(maxSize[0], formatFileSize({ size: parseInt(maxSize[1], 10) }));
   }
@@ -119,9 +119,6 @@ export class FileUploadInput extends React.Component<FileUploadInputProps, FileU
       errorFiles:   fileRejections,
     })
     files = this.state.files.filter(f =>  !f.error);
-    console.log('files', files);
-    console.log('accepted', accepted);
-    console.log('fileRejections', fileRejections);
     if (accepted.length > 0) {
       AJAXSubmit({
         url:              this.props.url,
