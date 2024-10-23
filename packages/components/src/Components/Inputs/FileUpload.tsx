@@ -71,12 +71,12 @@ const FileError = ({
   let message = errors[0].message;
   if (errors[0].code === 'file-too-large') {
     const maxSize = message.match(/(\d+) bytes/);
-    message = message.replace(maxSize[0], formatFileSize({ size: parseInt(maxSize[1], 10) }));
+    message = message.replace(maxSize[0], formatFileSize(parseInt(maxSize[1], 10)));
   }
 
   return (
     <li>
-      <span>{file.filename} {renderSize(file)}: {message}</span>
+      <span className="dp-pc_file-upload__error">{file.filename} {renderSize(file)}: {message}</span>
     </li>
   );
 }
