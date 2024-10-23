@@ -46,7 +46,7 @@ const File = ({
 
   return (
     <li>
-      {file.filename} {renderSize(file)}
+      {file.filename ? file.filename : file.name} {renderSize(file)}
       <span className="dp-pc_file-upload_remove-file" onClick={() => onRemove(file)} onKeyDown={onHandleKeyDown}>
         <DeleteIcon /> {mergedI18n.remove}
       </span>

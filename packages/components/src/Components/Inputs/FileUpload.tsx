@@ -76,7 +76,7 @@ const FileError = ({
 
   return (
     <li>
-      <span className="dp-pc_file-upload__error">{file.filename} {renderSize(file)}: {message}</span>
+      <span className="dp-pc_file-upload__error">{file.name} {renderSize(file)}: {message}</span>
     </li>
   );
 }
