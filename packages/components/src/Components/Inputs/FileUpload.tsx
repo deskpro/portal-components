@@ -82,6 +82,9 @@ export class FileUploadInput extends React.Component<FileUploadInputProps, FileU
   handleDrop = (accepted, fileRejections) => {
     let files: DpBlob[];
     files = this.state.files.filter(f =>  !f.error);
+    console.log('files', files);
+    console.log('accepted', accepted);
+    console.log('fileRejections', fileRejections);
     this.setState({ files });
     if (fileRejections.length > 0) {
       const errorFiles = [];
