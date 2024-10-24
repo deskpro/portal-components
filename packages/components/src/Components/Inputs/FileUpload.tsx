@@ -146,6 +146,12 @@ export class FileUploadInput extends React.Component<FileUploadInputProps, FileU
     }
   }
 
+  shouldComponentUpdate(nextProps: Readonly<FileUploadInputProps>, nextState: Readonly<FileUploadInputState>, nextContext: any): boolean {
+    console.log('shouldComponentUpdate', nextProps.files, this.props.files);
+    console.log(nextState.files, this.state.files);
+    return true;
+  }
+
   componentDidMount(): void {
     if (this.props.form) {
       this.props.form.on('reset', () => {
