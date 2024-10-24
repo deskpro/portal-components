@@ -39,7 +39,8 @@ const AJAXSubmit = (function () {
           }
           config.transferFailed({
             code: oAjaxReq.status,
-            message
+            message,
+            response: oAjaxReq.response,
           });
         }
       }
