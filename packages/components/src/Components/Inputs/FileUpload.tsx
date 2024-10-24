@@ -135,6 +135,15 @@ export class FileUploadInput extends React.Component<FileUploadInputProps, FileU
     }
   };
 
+  componentDidUpdate(prevProps: Readonly<FileUploadInputProps>, prevState: Readonly<FileUploadInputState>, snapshot?: any): void {
+    if (prevProps.files.length < this.props.files.length && this.state.files.length < this.props.files.length) {
+      this.setState({
+        files: this.props.files,
+        error: '',
+      });
+    }
+  }
+
   componentDidMount(): void {
     if (this.props.form) {
       this.props.form.on('reset', () => {
