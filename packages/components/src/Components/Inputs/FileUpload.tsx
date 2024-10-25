@@ -64,14 +64,15 @@ interface FileUploadInputState {
 
 const FileError = ({
   fileRejection,
+  tooLargeError,
 }: {
   fileRejection: FileRejection;
+  tooLargeError: string;
 }) => {
   const { file, errors } = fileRejection;
   let message = errors[0].message;
   if (errors[0].code === 'file-too-large') {
-    const maxSize = message.match(/(\d+) bytes/);
-    message = message.replace(maxSize[0], formatFileSize(parseInt(maxSize[1], 10)));
+    message = tooLargeError;
   }
 
   return (
@@ -314,6 +315,7 @@ export class FileUploadInput extends React.Component<FileUploadInputProps, FileU
           />))}
           {Array.from(this.state.errorFiles).map((fileRejection) => (<FileError
             fileRejection={fileRejection}
+            tooLargeError={this.i18n.tooLargeError}
           />))}
         </ul>
       </div>
