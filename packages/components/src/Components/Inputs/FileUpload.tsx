@@ -238,6 +238,7 @@ export class FileUploadInput extends React.Component<FileUploadInputProps, FileU
   handleRemove = (file) => {
     const files = this.state.files.filter(f => f.id !== file.id);
     this.setState({ files });
+    this.props.onChange(this.props.name, files);
   };
 
   renderDivider = () => null;
