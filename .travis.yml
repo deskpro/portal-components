@@ -20,6 +20,11 @@ cache:
     - node_modules
     - packages/portal-style/website/node_modules
     - packages/portal-style/node_modules
+before_deploy:
+  - yes | gem update --system --force
+  - gem install bundler
+  - gem install uri
+  - gem install logger
 deploy:
   - provider: pages
     skip_cleanup: true
