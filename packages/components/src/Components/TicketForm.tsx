@@ -72,11 +72,11 @@ interface TicketFormValues {
 }
 
 interface TicketFormProps {
-  deskproLayout:      Immutable.List<Immutable.Map<string, any>>;
-  departments:        Immutable.List<any>;
+  deskproLayout:      Immutable.List<Immutable.Map<string, any>>; // eslint-disable-line @typescript-eslint/no-explicit-any
+  departments:        Immutable.List<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
   products:           object;
-  categories:         Immutable.List<any>;
-  priorities:         Immutable.List<any>;
+  categories:         Immutable.List<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
+  priorities:         Immutable.List<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
   departmentPropName: 'department'|'chat_department';
   onSubmit:           () => void;
   submitDisabled:     boolean;
@@ -102,7 +102,7 @@ interface TicketFormState {
 class TicketForm extends React.Component<TicketFormProps, TicketFormState> {
   private formik;
   private i18n;
-  private form: any;
+  private form: any; // eslint-disable-line @typescript-eslint/no-explicit-any
   private dropZone: DropzoneRef;
 
   static defaultProps = {
