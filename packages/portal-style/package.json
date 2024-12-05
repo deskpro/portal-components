@@ -18,7 +18,6 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
-    "concurrently": "^4.1.0",
     "contrast": "^1.0.1",
     "cors": "^2.8.5",
     "cssnano": "^6.0.1",
