@@ -1,27 +1,27 @@
 .dp-po-messages {
-  $self: '.dp-po-messages';
+  $self: ".dp-po-messages";
 
   &-figure {
     margin: 0 20px 0 0;
 
     #{$self}-avatar-image,
     #{$self}-avatar-name {
+      display: inline-block;
       width: 50px;
       height: 50px;
-      background: $grey;
-      color: $white;
-      border-radius: 50%;
-      display: inline-block;
       padding: 11px 0;
-      text-align: center;
       font-size: 20px;
+      color: $white;
+      text-align: center;
       vertical-align: bottom;
+      background: $grey;
+      border-radius: 50%;
     }
   }
 
   &-list {
-    margin: 0;
     padding: 0;
+    margin: 0;
     border-top: 1px solid $grey-light;
   }
 
@@ -59,7 +59,7 @@
       }
 
       #{$self}-avatar {
-        opacity: 0.5;
+        opacity: .5;
       }
 
       #{$self}-block {
@@ -102,7 +102,7 @@
   }
 
   &-name {
-    @include typo($s17, 400, 'head');
+    @include typo($s17, 400, "head");
   }
 
   &-msg {
@@ -113,17 +113,17 @@
 
   &-block {
     position: absolute;
-    right: 100px;
     top: 15px;
+    right: 100px;
 
     &-btn {
-      border-radius: 4px;
-      border: 2px solid $grey-light;
-      @include typo($s14, 600, 'body');
       display: inline-flex;
-      color: $grey-light;
-      padding: 3px 8px;
       align-items: center;
+      padding: 3px 8px;
+      color: $grey-light;
+      border: 2px solid $grey-light;
+      border-radius: 4px;
+      @include typo($s14, 600, "body");
 
       .dp-po-icon {
         margin-right: 10px;
@@ -131,8 +131,8 @@
       }
 
       &:hover {
-        text-decoration: none;
         color: $danger;
+        text-decoration: none;
         border-color: $danger;
       }
     }
@@ -140,37 +140,37 @@
 
   .dp-po-time {
     position: absolute;
-    right: 0;
     top: 15px;
-    color: $grey-dark;
+    right: 0;
     font-size: $s12;
+    color: $grey-dark;
   }
 
   &-status {
-    color: $brand-primary;
     position: absolute;
-    right: 0;
     top: 34px;
-    font-size: 12px;
+    right: 0;
     display: none;
+    font-size: 12px;
+    color: $brand-primary;
   }
 
   &-back {
     display: flex;
     align-items: center;
+    margin: 0 0 15px;
     font-size: $s15;
     color: $text-color;
-    margin: 0 0 15px;
 
     .dp-po-icon {
       margin-right: 10px;
-      color: $brand-primary;
       font-size: 25px;
+      color: $brand-primary;
     }
 
     &:hover {
-      text-decoration: none;
       color: $brand-primary;
+      text-decoration: none;
     }
   }
 

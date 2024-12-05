@@ -4,12 +4,12 @@
   }
 
   .dp-po-icon {
-    color: $brand-primary;
     margin-left: 5px;
+    color: $brand-primary;
     opacity: 0;
   }
 
-  & .dp-po-clipboard-link:focus,
+  .dp-po-clipboard-link:focus,
   &:hover {
     .dp-po-icon {
       opacity: 1;

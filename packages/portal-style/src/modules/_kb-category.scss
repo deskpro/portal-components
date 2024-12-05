@@ -4,34 +4,34 @@
 
   .dp-po-category-title {
     &-link {
-      margin: 0 0 20px;
       height: 58px;
+      margin: 0 0 20px;
     }
   }
 
   &-list {
-    margin: 0 0 62px;
     padding: 0;
+    margin: 0 0 62px;
   }
 
   &-item {
-    display: block;
-    margin-bottom: 15px;
     position: relative;
+    display: block;
     padding-left: 23px;
+    margin-bottom: 15px;
 
-    &:before {
-      content: "\25A0";
-      color: $grey-light;
-      font-weight: 600;
+    &::before {
+      position: absolute;
+      top: 10px;
+      left: 0;
       display: inline-block;
       width: 4px;
       height: 4px;
-      position: absolute;
+      font-weight: 600;
       line-height: 0;
-      transform: scale(0.7);
-      top: 10px;
-      left: 0;
+      color: $grey-light;
+      content: "\25A0";
+      transform: scale(.7);
     }
 
     .badge {
@@ -40,10 +40,10 @@
   }
 
   &-link {
-    color: $text-color;
-    @include typo($s19, 400, 'head');
     display: flex;
     align-items: center;
+    color: $text-color;
+    @include typo($s19, 400, "head");
 
     &:hover {
       color: $brand-primary;
@@ -73,8 +73,8 @@
 
   .dp-po-viewall {
     position: absolute;
-    width: calc(100% - 30px);
-    left: 15px;
     bottom: 0;
+    left: 15px;
+    width: calc(100% - 30px);
   }
 }

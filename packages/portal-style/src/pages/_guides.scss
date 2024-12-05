@@ -3,37 +3,37 @@
 }
 
 .dp-po-guides-wrap {
-  margin: 0 -15px;
   max-width: 1560px;
+  margin: 0 -15px;
 }
 
 .dp-po-guides-contents {
+  margin: 0 0 25px;
   background: $white;
   border: 1px solid $grey-light;
   border-radius: 4px;
-  margin: 0 0 25px;
 
   &-title {
-    @include typo($s17, 500, 'head');
-    color: $grey-dark;
-    border-bottom: 1px solid $grey-light;
+    @include typo($s17, 500, "head");
+    max-width: 100%;
     padding: 15px 20px;
     margin: 0;
     overflow: hidden;
+    color: $grey-dark;
     text-overflow: ellipsis;
-    max-width: 100%;
     white-space: nowrap;
+    border-bottom: 1px solid $grey-light;
   }
 
   &-list {
-    margin: 0;
     padding: 0 0 14px;
+    margin: 0;
   }
 
   &-item {
     display: block;
-    margin: 0;
     max-width: 100%;
+    margin: 0;
 
     &:last-child {
       margin: 0;
@@ -41,57 +41,57 @@
   }
 
   &-link {
-    color: $grey-dark;
-    align-items: center;
-    @include typo($s14, 600, 'body');
-    line-height: 1.5;
-    padding: 7px 16px 7px 20px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 100%;
     display: block;
+    align-items: center;
+    max-width: 100%;
+    padding: 7px 16px 7px 20px;
+    overflow: hidden;
+    line-height: 1.5;
+    color: $grey-dark;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    @include typo($s14, 600, "body");
 
     &:hover {
       color: $brand-primary;
     }
 
     &.active {
-      color: $grey-darkest;
-      background: #E1EEFB;
       position: relative;
+      color: $grey-darkest;
+      background: #e1eefb;
 
-      &:before {
-        content: "";
+      &::before {
+        position: absolute;
+        top: 5px;
+        left: 0;
         width: 2px;
         height: 23px;
-        position: absolute;
-        left: 0;
-        top: 5px;
+        content: "";
         background: $brand-primary;
       }
     }
 
     .dp-po-icon {
+      margin-right: 10px;
       font-size: 20px;
       color: $brand-primary;
-      margin-right: 10px;
-      opacity: 0;
       vertical-align: -2px;
+      opacity: 0;
     }
   }
 }
 
 .dp-po-guides-meta {
   display: block;
-  color: #8B9293;
+  margin-top: 8px;
   font-size: $s15;
   line-height: 150%;
-  margin-top: 8px;
+  color: #8b9293;
 
   strong {
-    font-weight: normal;
-    color: #4C4F50;
+    font-weight: 400;
+    color: #4c4f50;
   }
 
   .separator {
@@ -100,16 +100,16 @@
 }
 
 .dp-po-post-avatars {
-  margin-bottom: 5px;
   flex: 0 0 100%;
+  margin-bottom: 5px;
 }
 
 .dp-po-guides-section {
-  border-top: 1px solid $grey-light;
-  padding: 30px 0;
   position: relative;
   z-index: 1;
+  padding: 30px 0;
   background-color: $grey-lightest;
+  border-top: 1px solid $grey-light;
 }
 
 .dp-po-guides-block {
@@ -121,8 +121,8 @@
     }
 
     &-left {
-      border-top: none;
       padding-bottom: 20px;
+      border-top: none;
       border-radius: 3px 3px 0 0;
 
       .dp-po-comments {
@@ -141,17 +141,17 @@
   }
 
   &-main {
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .1);
   }
 
   &-header {
-    background: #F7F7F7;
-    padding: 10px 20px 15px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    padding: 10px 20px 15px;
+    background: #f7f7f7;
     border: 1px solid $grey-light;
     border-radius: 3px 3px 0 0;
     .dp-po-post-avatars-item {
@@ -164,13 +164,13 @@
   }
 
   &-title {
-    font-size: $s26;
-    margin: 0;
     flex: 0 0 100%;
-    white-space: nowrap;
-    text-overflow: ellipsis;
     max-width: 100%;
+    margin: 0;
     overflow: hidden;
+    font-size: $s26;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 
     .dp-po-icon {
       font-size: 20px;
@@ -183,22 +183,22 @@
 
   &-title-section {
     flex: 0 0 100%;
-    color: #8B9293;
     font-size: $s14;
+    color: #8b9293;
   }
 
   &-chapter {
-    margin: 0;
-    @include typo($s14, 600, 'body');
-    color: $grey-dark;
     display: inline-flex;
     align-items: center;
+    margin: 0;
+    color: $grey-dark;
+    @include typo($s14, 600, "body");
 
     .dp-po-icon {
-      color: $brand-primary;
-      font-size: 20px;
       margin-right: 5px;
+      font-size: 20px;
       line-height: 0%;
+      color: $brand-primary;
     }
 
     &:hover {
@@ -210,27 +210,27 @@
     position: relative;
 
     &-list {
-      margin: 0;
-      padding: 0;
       display: flex;
       align-items: center;
+      padding: 0;
+      margin: 0;
     }
 
     &-item {
-      list-style: none;
       margin-left: 10px;
+      list-style: none;
     }
 
     &-link {
-      border-radius: 50%;
-      border: 1px solid $grey-light;
-      color: $grey-dark;
-      width: 40px;
-      height: 40px;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      display: inline-flex;
+      width: 40px;
+      height: 40px;
+      color: $grey-dark;
       background: $white;
+      border: 1px solid $grey-light;
+      border-radius: 50%;
 
       &:hover {
         border-color: $brand-primary;
@@ -238,74 +238,66 @@
     }
   }
 
-  &-content {
-    padding: 20px;
-    background: white;
-    border: 1px solid #D3D6D7;
-    border-radius: 0 0 4px 4px;
-    border-top-width: 0;
-    z-index: 1;
-  }
-
   &-next-topic,
   &-previous-topic {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     height: 88px;
     border-top: 1px solid #d3d6d7;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
     .title {
+      width: calc(100% - 100px);
+      max-width: 100%;
+      overflow: hidden;
       font-family: $font-family-heading;
       font-size: $s26;
       line-height: 150%;
-      color: #8B9293;
-      width: calc(100% - 100px);
-      white-space: nowrap;
+      color: #8b9293;
       text-overflow: ellipsis;
-      max-width: 100%;
-      overflow: hidden;
+      white-space: nowrap;
     }
     .sup {
-      font-family: $font-family-sans-serif;
-      font-size: $s14;
-      color: #8B9293;
-      text-transform: uppercase;
       width: calc(100% - 100px);
       height: 15px;
       margin-top: 20px;
+      font-family: $font-family-sans-serif;
+      font-size: $s14;
+      color: #8b9293;
+      text-transform: uppercase;
     }
     .dp-po-icon {
-      color: var(--brand-primary);
-      padding: 5px 20px;
-      height: 48px;
-      border-right: 1px solid #8B9293;
-      margin: 20px 10px 20px 0;
       order: -1;
       width: 60px;
+      height: 48px;
+      padding: 5px 20px;
+      margin: 20px 10px 20px 0;
+      color: var(--brand-primary);
+      border-right: 1px solid #8b9293;
       svg {
-        font-size: 41px;
         width: 20px;
+        font-size: 41px;
       }
     }
     &:hover {
-      background-color: var(--brand-primary-l-350);
       text-decoration: none;
+      background-color: var(--brand-primary-l-350);
       .title {
         color: var(--brand-primary);
       }
     }
   }
   &-next-topic {
-    .title, .sup {
-      text-align: right;
+    .title,
+    .sup {
       width: calc(100% - 80px);
+      text-align: right;
     }
     .dp-po-icon {
-      border-right: none;
-      border-left: 1px solid #8b9293;
-      margin: 20px 0 20px 0;
       order: 1;
       width: 40px;
+      margin: 20px 0;
+      border-right: none;
+      border-left: 1px solid #8b9293;
     }
   }
 }
@@ -314,24 +306,24 @@
 .multiselect {
   position: relative;
   margin-bottom: 10px;
+  font-size: 16px;
   cursor: default;
   background: $white;
-  font-size: 16px;
 
   .default {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+    background: $white;
     border: 1px solid $grey;
     border-radius: 2px;
-    width: 100%;
-    display: block;
-    background: $white;
-    line-height: 32px;
-    height: 32px;
-    position: relative;
 
     span {
+      display: block;
       padding: 0 12px;
       line-height: 32px - 1px;
-      display: block;
     }
 
     .filter-box {
@@ -340,14 +332,14 @@
         padding: 6px 12px;
         margin: 0;
         line-height: 100%;
-        border: none;
         background: transparent;
+        border: none;
         outline: none;
         box-shadow: none;
 
         &:focus {
-          border: none;
           background: transparent;
+          border: none;
           outline: none;
           box-shadow: none;
         }
@@ -355,50 +347,56 @@
     }
 
     &.expanded {
-      border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
       &:hover {
         color: $brand-primary;
-        border: 1px solid $grey;
         background: $white;
+        border: 1px solid $grey;
       }
     }
 
     &.collapsed {
       span {
-        overflow: hidden;
         height: 25px;
+        overflow: hidden;
       }
     }
 
     &:focus {
-      outline: none;
       border: 1px solid $brand-primary;
+      outline: none;
     }
 
-    i[class^='fa-caret'], i[class*=' fa-caret'], .svg-inline--fa[class*=' fa-caret'] {
+    i[class^="fa-caret"],
+    i[class*=" fa-caret"],
+    .svg-inline--fa[class*=" fa-caret"] {
       position: absolute;
       top: 9px;
-      color: $grey-dark;
       right: 12px;
+      color: $grey-dark;
     }
 
-    i[class^='fa-times'], i[class*=' fa-times'], .svg-inline--fa[class*=' fa-times'] {
-      padding: 10px;
-      height: 100%;
+    i[class^="fa-times"],
+    i[class*=" fa-times"],
+    .svg-inline--fa[class*=" fa-times"] {
       position: absolute;
       top: 0;
       right: 0;
+      z-index: 99;
+      height: 100%;
+      padding: 10px;
       &:hover {
         color: $grey-dark;
       }
-      z-index: 99;
     }
   }
 
   &.small .default {
     padding: 4px;
-    i[class^='fa-caret'], i[class*=' fa-caret'], .svg-inline--fa[class*=' fa-caret'] {
+    i[class^="fa-caret"],
+    i[class*=" fa-caret"],
+    .svg-inline--fa[class*=" fa-caret"] {
       top: 6px;
       right: 7px;
     }
@@ -412,8 +410,8 @@
   }
 
   &.borderless.right .default {
-    text-align: right;
     padding-right: 23px;
+    text-align: right;
   }
 
   &.level-1 {
@@ -431,42 +429,43 @@
     }
 
     ul {
-      padding: 0;
-      list-style: none;
       width: 100%;
-      border: 1px solid $grey;
       max-height: 320px;
+      padding: 0;
+      margin: -1px 0 0;
       overflow-y: auto;
-      margin: -1px 0 0 0;
+      list-style: none;
       background: $white;
+      border: 1px solid $grey;
+      border-bottom-right-radius: 2px;
 
       border-bottom-left-radius: 2px;
-      border-bottom-right-radius: 2px;
 
       a {
         display: block;
         width: 100%;
         padding: 5px 12px;
-        background: $input-bg;
         color: $text-color;
         text-decoration: none;
+        background: $input-bg;
 
-        &:hover, &.active {
-          background: darken($white, 10%);
+        &:hover,
+        &.active {
           color: $text-color;
+          background: darken($white, 10%);
           .checkbox {
             color: $text-color;
-            background: rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(0, 0, 0, 0.1);
+            background: rgba(0, 0, 0, .1);
+            border: 1px solid rgba(0, 0, 0, .1);
           }
         }
         &.active {
-          background: darken($white, 11%);
           color: $text-color;
+          background: darken($white, 11%);
           .checkbox {
             color: $text-color;
-            background: rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(0, 0, 0, 0.1);
+            background: rgba(0, 0, 0, .1);
+            border: 1px solid rgba(0, 0, 0, .1);
           }
         }
       }
@@ -474,15 +473,16 @@
       li {
         position: relative;
 
-        &:focus, &.focused {
+        &:focus,
+        &.focused {
           outline: none;
           a {
-            background: lighten(darken($white, 3%), 3%);
             color: $text-color;
+            background: lighten(darken($white, 3%), 3%);
             .checkbox {
               color: $text-color;
-              background: rgba(0, 0, 0, 0.1);
-              border: 1px solid rgba(0, 0, 0, 0.1);
+              background: rgba(0, 0, 0, .1);
+              border: 1px solid rgba(0, 0, 0, .1);
             }
           }
         }
@@ -492,84 +492,90 @@
 
   &.level-2 {
     @extend .level-1;
+    padding-right: 30px;
     margin-top: 10px;
     margin-left: 30px;
-    padding-right: 30px;
     .options-wrapper {
       padding-right: 30px;
     }
 
-    &:before {
+    &::before {
       position: absolute;
       top: 0;
       left: -20px;
       display: block;
       width: 10px;
       height: 20px;
+      content: " ";
       border: 1px dotted $grey-dark;
       border-top: none;
       border-right: none;
-      content: " ";
     }
   }
 
   &.level-3 {
     @extend .level-1;
     @extend .level-2;
-    margin-left: 60px;
     padding-right: 60px;
+    margin-left: 60px;
   }
 
   &.level-4 {
     @extend .level-1;
     @extend .level-2;
-    margin-left: 90px;
     padding-right: 90px;
+    margin-left: 90px;
   }
 
   &.level-5 {
     @extend .level-1;
     @extend .level-2;
-    margin-left: 120px;
     padding-right: 120px;
+    margin-left: 120px;
   }
 
   &.level-6 {
     @extend .level-1;
     @extend .level-2;
-    margin-left: 120px;
     padding-right: 120px;
+    margin-left: 120px;
   }
 }
 .dp-po-guides-block-content {
+  z-index: 1;
+  padding: 20px;
   font-family: $font-family-sans-serif;
+  background: #fff;
+  border: 1px solid #d3d6d7;
+  border-top-width: 0;
+  border-radius: 0 0 4px 4px;
 
   h1 {
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 15px;
     padding-top: 10px;
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: 700;
     &:first-child {
       padding-top: 0;
     }
     &.anchor::before {
-      content: "";
       display: block;
-      height: 50px; /* fixed header height*/
+      height: 50px; /* fixed header height */
       margin: -50px 0 0; /* negative fixed header height */
+      content: "";
     }
     &.anchor a {
-      margin-left: 5px;
-      text-decoration: none;
       display: none;
+      margin-left: 5px;
       color: inherit;
+      text-decoration: none;
       span {
         font-size: 12px;
         line-height: 12px;
       }
       .fa-anchor {
-        color: #5995d6;
         font-size: 18px;
+        color: #5995d6;
         cursor: pointer;
       }
     }
@@ -578,29 +584,29 @@
     }
   }
   h2 {
-    font-size: 18px;
-    font-weight: bold;
     margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: 700;
   }
   h3 {
-    font-size: 16px;
-    font-weight: bold;
     margin-bottom: 12px;
+    font-size: 16px;
+    font-weight: 700;
   }
   h4 {
-    font-size: 14px;
-    font-weight: bold;
     margin-bottom: 12px;
+    font-size: 14px;
+    font-weight: 700;
   }
   h5 {
-    font-size: 12px;
-    font-weight: bold;
     margin-bottom: 12px;
+    font-size: 12px;
+    font-weight: 700;
   }
   h6 {
-    font-size: 10px;
-    font-weight: bold;
     margin-bottom: 12px;
+    font-size: 10px;
+    font-weight: 700;
   }
   ul {
     list-style-type: disc;
@@ -608,28 +614,29 @@
   ol {
     list-style-type: decimal;
   }
-  ul, ol {
+  ul,
+  ol {
     display: block;
-    margin: 1em 0;
     padding-left: 40px;
+    margin: 1em 0;
   }
   a.internal_link {
-    text-decoration: none;
     display: inline-block;
+    padding: 1px 3px;
+    color: #6e6e6e;
+    text-decoration: none;
+    cursor: pointer;
     background-color: #f4f4f4;
     border: 1px solid #f4f4f4;
     border-radius: 2px;
-    padding: 1px 3px;
-    color: #6e6e6e;
-    cursor: pointer;
     &:hover {
-      border: 1px solid $brand-primary;
-      background-color: $light;
       color: $brand-primary;
+      background-color: $light;
+      border: 1px solid $brand-primary;
     }
     .svg-inline--fa {
-      margin-right: 5px;
       display: inline-block;
+      margin-right: 5px;
       vertical-align: -2px;
     }
   }
@@ -640,11 +647,11 @@
     margin-bottom: 0;
   }
   div.block {
-    padding: 10px 15px;
+    box-sizing: border-box;
     width: 100%;
+    padding: 10px 15px;
     margin: 10px 0;
     border-radius: 2px;
-    box-sizing: border-box;
     //&::before {
     //  font: normal normal normal 24px 'Font Awesome 5 Free';
     //  font-weight: 900;
@@ -678,28 +685,28 @@
   }
   code.hljs {
     display: inline-block;
+    margin: 0 .5em;
     overflow-x: visible;
     border-radius: 2px;
-    margin: 0 0.5em;
   }
   pre code.hljs {
+    position: relative;
     display: block;
     margin: 0;
     overflow-x: auto;
+    background-color: #1c3e55;
     border-radius: 5px;
-    background-color: #1C3E55;
-    position: relative;
     .code-block {
       .code-copy {
-        opacity: 0;
-        cursor: pointer;
         position: absolute;
         top: 5px;
         right: 5px;
-        color: white;
-        border: 2px solid white;
-        border-radius: 20px;
         padding: 0 8px;
+        color: #fff;
+        cursor: pointer;
+        border: 2px solid #fff;
+        border-radius: 20px;
+        opacity: 0;
         &.copied {
           color: $grey-lighter;
           border-color: $grey-lighter;
@@ -710,31 +717,31 @@
     .code-copy.copied {
       opacity: 1;
       transition: opacity .1s ease-in-out;
-      transition-delay: 0.5s;
+      transition-delay: .5s;
     }
   }
   blockquote {
-    font-style: normal;
-    background: white;
     padding: 0 1em;
+    font-style: normal;
     color: $grey-darkest;
-    border: 0.25em solid $brand-primary;
-    border-width: 0 0.25em 0 0.25em;
+    background: #fff;
+    border: .25em solid $brand-primary;
+    border-width: 0 .25em;
   }
 
   $table-radius: 2px;
 
   table {
-    border-collapse: separate;
-    border-spacing: 0;
     width: 98%;
     margin-bottom: 12px;
+    border-spacing: 0;
+    border-collapse: separate;
     thead {
       th {
-        border: solid #e6e7e6;
-        background-color: #f8f8f8;
-        border-width: 1px 0 2px 1px;
         padding: 5px;
+        background-color: #f8f8f8;
+        border: solid #e6e7e6;
+        border-width: 1px 0 2px 1px;
       }
       tr:first-child th:first-child {
         border-left-width: 1px;
@@ -748,10 +755,10 @@
     tr {
       border: solid 1px #e6e7e6;
       td {
+        padding: 5px;
+        color: #333;
         border: solid #e6e7e6;
         border-width: 0 0 1px 1px;
-        color: #333;
-        padding: 5px;
       }
       td:first-child {
         border-left-width: 1px;
@@ -780,9 +787,9 @@
   }
   .tabular.menu {
     .item {
+      display: inline-block;
       padding: 10px;
       color: #babbba;
-      display: inline-block;
       text-transform: uppercase;
       cursor: pointer;
       &.active {
@@ -792,96 +799,96 @@
     }
   }
   .tab {
+    display: none;
+    padding: 24px;
     margin-bottom: 1rem;
     background-color: #f8f8f8;
     border: 1px solid #e7e7e7;
     border-radius: 2px;
-    display: none;
-    padding: 24px;
     &.active {
       display: block;
     }
     pre code {
-      background-color: #FFF;
       margin-top: 0;
+      background-color: #fff;
     }
   }
   .section-header {
     h1 {
-      font-size: 24px;
-      font-weight: bold;
       margin-bottom: 10px;
+      font-size: 24px;
+      font-weight: 700;
     }
     .publication_date,
     .last_update_date {
+      margin-right: 20px;
       font-size: 12px;
       label {
         color: #8b8b8b;
       }
-      margin-right: 20px;
     }
     .sub-note {
-      background-color: #E8E8E8;
       padding: 4px;
-      font-size: 9pt;
       margin-top: 5px;
+      font-size: 9pt;
+      background-color: #e8e8e8;
     }
   }
   .topic-list {
+    display: inline-block;
     width: 216px;
     min-height: 300px;
-    border-right: 1px solid #efefef;
-    border-collapse: collapse;
     margin-right: -1px;
-    display: inline-block;
-    vertical-align: top;
     overflow-y: scroll;
+    vertical-align: top;
+    border-collapse: collapse;
+    border-right: 1px solid #efefef;
     &.fixed {
       position: fixed;
     }
-    & > .guide {
+    > .guide {
       font-size: 13px;
       color: #333;
     }
-    & > ul,
-    & .dp-react-widget > ul {
-      margin: 0;
+    > ul,
+    .dp-react-widget > ul {
       padding: 0;
-      & > li.topic-item {
+      margin: 0;
+      > li.topic-item {
         list-style: none;
-        & > a {
-          font-size: 12px;
-          font-weight: bold;
-          text-transform: uppercase;
-          text-decoration: none;
-          color: lighten($brand-primary, 25%);
+        > a {
           margin-bottom: 5px;
+          font-size: 12px;
+          font-weight: 700;
+          color: lighten($brand-primary, 25%);
+          text-decoration: none;
+          text-transform: uppercase;
         }
-        & a {
-          white-space: nowrap;
+        a {
+          position: relative;
+          display: inline-block;
+          width: 100%;
+          padding-right: 35px;
           overflow: hidden;
           text-overflow: ellipsis;
-          display: inline-block;
-          padding-right: 35px;
-          width: 100%;
-          position: relative;
+          white-space: nowrap;
         }
-        & > ul {
-          margin: 0 0 12px;
+        > ul {
           padding: 0;
+          margin: 0 0 12px;
           li.topic-item {
-            list-style: none;
-            clear: both;
             margin-top: -7px;
+            clear: both;
+            list-style: none;
             a {
-              font-size: 12px;
               height: 23px;
-              text-decoration: none;
+              font-size: 12px;
               color: #8b8b8b;
+              text-decoration: none;
             }
             ul {
-              margin: 0;
               padding: 0 0 0 15px;
+              margin: 0;
 
             }
           }
@@ -889,18 +896,18 @@
       }
     }
     li.topic-item > a.active {
-      background-color: rgba(var(--brand-primary-rgb), 0.08);
-      color: var(--brand-primary-l-250);
       height: 23px;
-      border-right: 2px solid var(--brand-primary-l-250);
       margin-right: -1px;
       line-height: 23px;
+      color: var(--brand-primary-l-250);
+      background-color: rgba(var(--brand-primary-rgb), .08);
+      border-right: 2px solid var(--brand-primary-l-250);
     }
     li.topic-item a .fa {
-      margin-right: -12px;
-      line-height: 24px;
       position: absolute;
       right: 20px;
+      margin-right: -12px;
+      line-height: 24px;
     }
     ul.hidden {
       display: none;
@@ -909,48 +916,48 @@
       padding-right: 10px;
       .guide-pdf {
         display: inline-block;
-        padding: 0 0.5em;
-        border: 1px solid #e6e6e6;
-        border-radius: 2px;
-        background: #fafafa;
+        padding: 0 .5em;
+        line-height: 2.28571;
         color: #333;
         text-decoration: none;
-        line-height: 2.28571;
         white-space: nowrap;
+        background: #fafafa;
+        border: 1px solid #e6e6e6;
+        border-radius: 2px;
         i {
           position: relative;
           top: -1px;
           margin-right: 2px;
           margin-left: 6px;
+          font-size: 13px;
           color: #7d7d7d;
           vertical-align: middle;
-          font-size: 13px;
         }
       }
     }
   }
   div.topic {
-    width: 664px;
-    border-left: 1px solid #efefef;
-    padding-left: 24px;
     position: relative;
     display: inline-block;
-    vertical-align: top;
+    width: 664px;
+    padding-left: 24px;
     margin-left: -3px;
+    vertical-align: top;
+    border-left: 1px solid #efefef;
     img {
       max-width: 600px;
     }
     .loading {
-      display: none;
       position: absolute;
-      top: 0!important;
-      left: 0!important;
+      top: 0 !important;
+      left: 0 !important;
+      z-index: 200;
+      display: none;
       width: 100%;
       height: 100%;
-      background-color: rgba(255,255,255,.85);
+      background-color: rgba(255, 255, 255, .85);
       background-repeat: no-repeat;
       background-position: center center;
-      z-index: 200;
     }
     .loading.active {
       display: block;
@@ -966,22 +973,22 @@
     margin-left: 215px;
   }
   .content-summary {
-    width: 126px;
     display: inline-block;
+    width: 126px;
     vertical-align: top;
     .topic-summary {
-      border-left: 1px solid #efefef;
-      padding-left: 18px;
       top: 20px;
       width: 126px;
       max-width: 126px;
+      padding-left: 18px;
+      border-left: 1px solid #efefef;
       &.fixed {
         position: fixed;
       }
       h2 {
+        font-size: 14px;
         color: $brand-primary;
         text-transform: uppercase;
-        font-size: 14px;
       }
       ul {
         padding: 0;
@@ -989,18 +996,18 @@
         li {
           list-style: none;
           a {
-            text-decoration: none;
-            color: #8b8b8b;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
             display: inline-block;
             width: 100%;
+            overflow: hidden;
             font-size: 12px;
+            color: #8b8b8b;
+            text-decoration: none;
+            text-overflow: ellipsis;
+            white-space: nowrap;
             &.active {
-              border-left: 2px solid lighten($brand-primary, 25%);
-              margin-left: -25px;
               padding-left: 23px;
+              margin-left: -25px;
+              border-left: 2px solid lighten($brand-primary, 25%);
             }
           }
         }
@@ -1018,67 +1025,67 @@
 }
 .dp-po-guides-subtopics {
   display: flex;
-  margin: 0;
   flex-wrap: wrap;
-  border-top: 1px solid $grey-light;
   padding: 14px 10px 20px;
+  margin: 0;
+  border-top: 1px solid $grey-light;
   h3 {
-    text-transform: uppercase;
-    font-size: $s14;
-    font-family: $font-family-sans-serif;
     width: 100%;
     padding: 0 10px 8px;
-    color: #8B9293;
+    font-family: $font-family-sans-serif;
+    font-size: $s14;
+    color: #8b9293;
+    text-transform: uppercase;
   }
   .dp-po-post-avatars-list {
     margin-top: 8px;
   }
 }
 .dp-po-guides-subtopic {
-  $self: '.dp-po-guides-subtopic';
+  $self: ".dp-po-guides-subtopic";
   flex-grow: 0;
-  background-color: white;
-  border-radius: 3px 3px 0 0;
-  border-bottom: 2px solid #d3d6d7;
+  flex-basis: calc(50% - 20px);
+  min-width: 100px;
   padding: 17px 18px 7px;
   margin: 0 10px 10px;
-  min-width: 100px;
-  flex-basis: calc(50% - 20px);
+  background-color: #fff;
+  border-bottom: 2px solid #d3d6d7;
+  border-radius: 3px 3px 0 0;
   &:hover {
     text-decoration: none;
     border-bottom-color: var(--brand-primary);
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .1);
     #{$self}-title {
       color: var(--brand-primary);
     }
   }
 
   &-title {
+    display: inline-block;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
     font-family: $font-family-heading;
     font-size: $s17;
-    color: #4C4F50;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
     font-weight: 500;
-    max-width: 100%;
-    width: 100%;
-    display: inline-block;
+    color: #4c4f50;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .dp-po-post-avatars {
-    display: inline-block;;
+    display: inline-block;
     height: 50px;
     padding-right: 13px;
     .dp-po-post-avatars-item {
-      border-color: white;
       margin-left: -7px;
+      border-color: #fff;
       .dp-po-post-avatars-link {
-        border-color: white;
+        border-color: #fff;
       }
       &:hover {
-        &:before {
-          background-color: white;
+        &::before {
+          background-color: #fff;
         }
         .dp-po-post-avatars-link {
           border-color: $brand-primary;
@@ -1089,18 +1096,18 @@
 
   &-dates {
     display: inline-block;
-    font-size: $s12;
-    color: #8b9293;
-    line-height: 180%;
-    white-space: nowrap;
     max-width: calc(100% - 100px);
+    font-size: $s12;
+    line-height: 180%;
+    color: #8b9293;
+    white-space: nowrap;
     span.title {
-      white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      white-space: nowrap;
     }
     strong {
-      color: #4C4F50;
+      color: #4c4f50;
     }
   }
 }

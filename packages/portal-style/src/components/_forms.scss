@@ -3,8 +3,8 @@
 }
 
 .form-group {
-  margin-bottom: 20px;
   position: relative;
+  margin-bottom: 20px;
 
   textarea {
     min-height: 150px;
@@ -15,17 +15,18 @@
     font-size: 12px;
     color: $grey-dark;
     &:not(.text-danger) {
-      margin-bottom: $form-text-margin-top;
       margin-top: 0;
+      margin-bottom: $form-text-margin-top;
     }
   }
 
-  label, legend {
+  label,
+  legend {
+    display: block;
+    margin: 0 0 10px;
     font-size: $s15;
     font-weight: 700;
     color: $text-color;
-    margin: 0 0 10px;
-    display: block;
 
     &[for$="_delete"] {
       display: inline-block;
@@ -34,80 +35,80 @@
 
   .checkboxes,
   .radios {
+    padding: 0;
     background-color: transparent;
     border: none;
-    padding: 0;
 
     &:focus-within {
       border-color: $brand-primary;
     }
 
     label {
-      cursor: pointer;
       display: inline-block;
       margin-bottom: 0;
+      cursor: pointer;
 
-      &>input {
-        opacity: 0;
+      > input {
         position: absolute;
+        opacity: 0;
 
-        &+i {
+        + i {
+          position: relative;
+          top: 2px;
+          display: inline-block;
+          width: 16px;
+          height: 16px;
+          margin-right: 3px;
           background-color: #fff;
           border: 1px solid $grey-light;
           border-radius: 4px;
-          display: inline-block;
-          height: 16px;
-          margin-right: 3px;
-          position: relative;
-          top: 2px;
-          width: 16px;
 
           &::after {
-            background: transparent;
-            border: 2px solid white;
-            border-right: none;
-            border-top: none;
-            box-sizing: border-box;
-            content: "";
-            height: 6px;
-            left: 2px;
-            opacity: 0;
             position: absolute;
             top: 3px;
-            transform: rotate(-45deg);
+            left: 2px;
+            box-sizing: border-box;
             width: 11px;
+            height: 6px;
+            content: "";
+            background: transparent;
+            border: 2px solid #fff;
+            border-top: none;
+            border-right: none;
+            opacity: 0;
+            transform: rotate(-45deg);
           }
         }
 
-        &:checked+i {
+        &:checked + i {
           background-color: $brand-primary;
           border-color: $brand-primary;
           &::after {
-            opacity: 1 !important;
-            transition: 0.2s;
             background-color: $brand-primary;
+            opacity: 1 !important;
+            transition: .2s;
           }
         }
 
-        &:focus+i {
+        &:focus + i {
           border: 2px solid $grey-dark;
           &::after {
-            left: 1px;
             top: 2px;
+            left: 1px;
             transition: 0s;
           }
         }
 
-        &:disabled+i {
+        &:disabled + i {
           border-color: $grey-light;
         }
       }
 
       span.label {
-        margin-left: 5px;
         margin-right: 20px;
+        margin-left: 5px;
       }
-      &:hover>input+i {
+      &:hover > input + i {
         border-color: $brand-primary;
       }
     }
@@ -115,45 +116,45 @@
 
   .radios {
 
-    label>input {
+    label > input {
 
-      &+i {
-        border-radius: 50%;
+      + i {
         border: 1px solid $grey-dark;
+        border-radius: 50%;
 
         &::after {
-          background-color: white;
+          top: 50%;
+          left: 50%;
+          width: 0;
+          height: 0;
+          background-color: #fff;
           border: none;
           border-radius: 50%;
-          height: 0;
-          left: 50%;
           opacity: 1;
-          top: 50%;
-          width: 0;
         }
       }
 
-      &:checked+i {
+      &:checked + i {
         background-color: $brand-primary;
         border-color: $brand-primary;
         &::after {
-          background-color: white;
-          height: 6px;
-          left: 4px;
           top: 4px;
+          left: 4px;
           width: 6px;
+          height: 6px;
+          background-color: #fff;
         }
       }
     }
-    label>input:focus {
-      &+i {
+    label > input:focus {
+      + i {
         border: 2px solid $grey-dark;
       }
-      &:checked+i::after {
-        height: 6px;
-        left: 3px;
+      &:checked + i::after {
         top: 3px;
+        left: 3px;
         width: 6px;
+        height: 6px;
       }
     }
   }
@@ -163,19 +164,16 @@
       position: relative;
       input {
         position: absolute;
-        width: 100%;
-        height: 100%;
         top: 0;
         left: 0;
+        width: 100%;
+        height: 100%;
         opacity: 0;
       }
     }
-    &.error {
-
-    }
     &__error {
-      color: $danger;
       font-size: 12px;
+      color: $danger;
     }
     &__attached {
       li {
@@ -193,26 +191,30 @@
   }
   .dp-money-field {
     position: relative;
-    &>span {
+    > span {
       position: absolute;
       left: 15px;
-      line-height: 1.6;
-      padding: 9px 0 8px;
       height: auto;
+      padding: 9px 0 8px;
+      line-height: 1.6;
       color: #8b9293;
     }
-    &>input {
+    > input {
       padding-left: 30px;
     }
 
     &.aud {
-      &>input {
+      > input {
         padding-left: 40px;
       }
     }
 
-    &.nzd, &.cad, &.chf, &.hkd, &.sek {
-      &>input {
+    &.nzd,
+    &.cad,
+    &.chf,
+    &.hkd,
+    &.sek {
+      > input {
         padding-left: 50px;
       }
     }
@@ -229,11 +231,11 @@
   }
   &.dp-toggle-checkbox {
     legend {
+      display: block;
+      margin: 0 0 10px;
       font-size: $s15;
       font-weight: 700;
       color: $text-color;
-      margin: 0 0 10px;
-      display: block;
     }
     input {
       display: inline-block;
@@ -243,8 +245,8 @@
     }
     label {
       display: inline-block;
-      margin-bottom: 2px;
       width: calc(100% - 30px);
+      margin-bottom: 2px;
     }
   }
   .dp-medium-rte:focus {
@@ -253,7 +255,8 @@
   .react-datepicker__input-container input:focus {
     outline: 0;
   }
-  .react-datepicker-wrapper, .react-datepicker__input-container {
+  .react-datepicker-wrapper,
+  .react-datepicker__input-container {
     width: 100%;
     input {
       width: 100%;
@@ -262,11 +265,11 @@
 }
 
 .form-control {
+  height: auto;
+  padding: 7px 15px 6px;
   background: $grey-lightest;
   border: 2px solid $grey-light;
   border-radius: 4px;
-  height: auto;
-  padding: 7px 15px 6px;
 
   &:focus,
   &:focus-within,
@@ -297,27 +300,27 @@ select.form-control:not([multiple="multiple"]) {
     //background-size: 0.65em auto;
   }
 
-  & option:disabled {
+  option:disabled {
     color: $grey-lightest;
   }
 
-  &+i {
+  + i {
     position: absolute;
     top: 38px;
     right: 15px;
 
-    & svg {
-      fill: $brand-primary;
+    svg {
       color: $brand-primary;
+      fill: $brand-primary;
     }
   }
 }
 
 .react-select {
   .react-select__control {
-    padding-top: 0;
-    min-height: 45px;
     width: 100%;
+    min-height: 45px;
+    padding-top: 0;
     margin-left: 0;
 
     .react-select__single-value {
@@ -333,13 +336,13 @@ select.form-control:not([multiple="multiple"]) {
   .react-select__menu {
     z-index: 3000;
     .react-select__option.react-select__option--is-selected {
-      background-color: inherit;
       color: inherit;
       text-decoration: underline;
+      background-color: inherit;
     }
     .react-select__option.react-select__option--is-focused {
-      background-color: inherit;
       color: var(--brand-primary);
+      background-color: inherit;
     }
   }
   .react-select__control--is-focused {
@@ -353,60 +356,60 @@ select.form-control:not([multiple="multiple"]) {
 
   label {
     position: relative;
-    margin: 0;
-    padding: 0 0 0 30px;
-    line-height: 21px;
     display: inline-block;
-    font-weight: normal;
+    padding: 0 0 0 30px;
+    margin: 0;
+    font-weight: 400;
+    line-height: 21px;
     cursor: pointer;
 
-    &:before {
-      background-color: $grey-lightest;
-      border: 1px solid $grey-light;
-      content: "";
-      display: block;
-      height: 20px;
-      left: 0;
+    &::before {
       position: absolute;
       top: 0;
+      left: 0;
+      display: block;
       width: 20px;
+      height: 20px;
+      content: "";
+      background-color: $grey-lightest;
+      border: 1px solid $grey-light;
       border-radius: 4px;
     }
 
-    &:after {
-      content: "";
-      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.21 4.81a.602.602 0 0 1 0-.751l.097-.112a.423.423 0 0 1 .65 0l1.688 1.95 4.43-5.12a.423.423 0 0 1 .65 0l.097.112a.602.602 0 0 1 0 .752L2.645 7.625.21 4.811z' fill='%233a8dde'/%3E%3C/svg%3E");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 11px auto;
-      width: 20px;
-      height: 20px;
-      display: block;
-      left: 0;
-      opacity: 0;
+    &::after {
       position: absolute;
       top: 0;
+      left: 0;
+      display: block;
+      width: 20px;
+      height: 20px;
       color: $brand-primary;
+      content: "";
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.21 4.81a.602.602 0 0 1 0-.751l.097-.112a.423.423 0 0 1 .65 0l1.688 1.95 4.43-5.12a.423.423 0 0 1 .65 0l.097.112a.602.602 0 0 1 0 .752L2.645 7.625.21 4.811z' fill='%233a8dde'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 11px auto;
+      opacity: 0;
     }
 
     img {
-      width: 22px;
-      height: 22px;
-      border-radius: 50%;
       position: relative;
       top: -2px;
+      width: 22px;
+      height: 22px;
       margin-right: 3px;
+      border-radius: 50%;
     }
   }
 
   input[type="checkbox"] {
-    height: 0;
-    opacity: 0;
     position: absolute;
     width: 0;
+    height: 0;
+    opacity: 0;
 
     &:checked {
-      &+label:after {
+      + label::after {
         opacity: 1;
       }
     }
@@ -415,30 +418,30 @@ select.form-control:not([multiple="multiple"]) {
 
 .dp-po-form-check-compact {
   label {
-    line-height: 15px;
     padding: 0 0 0 25px;
+    line-height: 15px;
     color: $grey-dark;
 
-    &:before {
-      height: 14px;
+    &::before {
       width: 14px;
-      border-radius: 0;
+      height: 14px;
       border: 1px solid $grey;
+      border-radius: 0;
     }
 
-    &:after {
-      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='11' height='10' viewBox='0 0 11 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.318604 5.9257C0.0812988 5.65139 0.0812988 5.18506 0.318604 4.91075L0.449121 4.75988C0.686426 4.48557 1.08984 4.48557 1.32715 4.75988L3.60527 7.39326L9.58535 0.480635C9.82266 0.206325 10.2261 0.206325 10.4634 0.480635L10.5939 0.631506C10.8312 0.905817 10.8312 1.37214 10.5939 1.64646L3.60527 9.7249L0.318604 5.9257Z' fill='white'/%3E%3C/svg%3E");
-      color: $white;
+    &::after {
       width: 14px;
       height: 14px;
+      color: $white;
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='11' height='10' viewBox='0 0 11 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.318604 5.9257C0.0812988 5.65139 0.0812988 5.18506 0.318604 4.91075L0.449121 4.75988C0.686426 4.48557 1.08984 4.48557 1.32715 4.75988L3.60527 7.39326L9.58535 0.480635C9.82266 0.206325 10.2261 0.206325 10.4634 0.480635L10.5939 0.631506C10.8312 0.905817 10.8312 1.37214 10.5939 1.64646L3.60527 9.7249L0.318604 5.9257Z' fill='white'/%3E%3C/svg%3E");
     }
   }
 
   input[type="checkbox"] {
     &:checked {
-      &+label:before {
-        border-color: $brand-primary;
+      + label::before {
         background-color: $brand-primary;
+        border-color: $brand-primary;
       }
     }
   }
@@ -447,12 +450,12 @@ select.form-control:not([multiple="multiple"]) {
 .dp-po-form-upload {
   &-wrap {
     display: inline-flex;
+    flex-wrap: wrap;
     align-items: center;
     padding: 20px;
+    cursor: pointer;
     border: 2px dashed $grey-light;
     border-radius: 3px;
-    cursor: pointer;
-    flex-wrap: wrap;
 
     &:hover {
       border-color: $brand-primary;
@@ -462,10 +465,10 @@ select.form-control:not([multiple="multiple"]) {
       }
     }
 
-    &>span {
-      color: $grey-dark;
-      font-size: 12px;
+    > span {
       margin: 0 15px;
+      font-size: 12px;
+      color: $grey-dark;
     }
 
     .dp-po-drag {
@@ -488,74 +491,74 @@ select.form-control:not([multiple="multiple"]) {
     }
 
     &-placehodler {
-      margin: 0;
-      margin-right: 20px;
-      width: 128px;
-      height: 128px;
-      border-radius: 50%;
-      background: $grey-lightest;
-      border: 1px solid $grey;
-      font-size: 15px;
-      color: $grey-dark;
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      width: 128px;
+      height: 128px;
+      margin: 0;
+      margin-right: 20px;
+      font-size: 15px;
+      color: $grey-dark;
+      background: $grey-lightest;
+      border: 1px solid $grey;
+      border-radius: 50%;
     }
   }
 }
 
 .dp-po-form-captcha {
   &-text {
-    border: 2px dashed $grey-light;
-    border-radius: 4px;
     display: inline-block;
     height: 74px;
-    & img {
+    border: 2px dashed $grey-light;
+    border-radius: 4px;
+    img {
       border-radius: 2px;
     }
   }
 }
 
 .dp-po-form-btntext {
-  color: $text-color;
-  font-size: $p4-font-size;
   display: table;
   margin-top: 10px;
+  font-size: $p4-font-size;
+  color: $text-color;
 
   &:hover {
-    text-decoration: none;
     color: $brand-primary;
+    text-decoration: none;
   }
 }
 
 .dp-po-form-password {
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: 1px solid $brand-primary;
-  padding: 20px;
-  display: inline-block;
   position: absolute;
-  background: $white;
   bottom: 0;
   z-index: 1;
+  display: inline-block;
+  padding: 20px;
+  background: $white;
+  border: 1px solid $brand-primary;
+  border-radius: 4px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, .15);
   transform: translateY(100%);
 
   &-title {
-    @include typo($s17, 500, 'head');
-    color: $grey-dark;
+    @include typo($s17, 500, "head");
     margin: 0 0 10px;
+    color: $grey-dark;
   }
 
   &-list {
-    margin: 0;
     padding: 0;
+    margin: 0;
   }
 
   &-item {
     display: flex;
     align-items: center;
-    color: $grey-dark;
     margin-bottom: 10px;
+    color: $grey-dark;
 
     &:last-child {
       margin: 0;
@@ -563,51 +566,53 @@ select.form-control:not([multiple="multiple"]) {
   }
 
   .dp-po-icon {
-    color: $success;
     margin-right: 10px;
+    color: $success;
   }
 }
 
 .dp-po-page-login-multi-list {
-  list-style-type: none;
-  margin-left: -40px;
   margin-top: 10px;
+  margin-left: -40px;
   font-size: 1rem;
-  color: black;
+  color: #000;
+  list-style-type: none;
 
   > li {
     cursor: pointer;
-    &:hover, &.active {
+    &:hover,
+    &.active {
       background-color: lighten($brand-primary, 35%);
     }
 
     .dp-po-page-login-multi-list-keys {
-      list-style-type: none;
       margin-left: -30px;
       color: $grey;
+      list-style-type: none;
     }
   }
 }
 
 .dp-po-multi-login {
-  list-style-type: none;
-  margin-left: -35px;
   margin-top: 5px;
+  margin-left: -35px;
   font-size: 12px;
+  list-style-type: none;
 
   > li {
     cursor: pointer;
-    &:hover, &.active {
+    &:hover,
+    &.active {
       background-color: lighten($brand-primary, 35%);
     }
 
-    & .dp-po-multi-name {
+    .dp-po-multi-name {
       font-size: 1rem;
     }
 
-    & .dp-po-multi-keys {
+    .dp-po-multi-keys {
+      font-size: .75rem;
       color: $grey;
-      font-size: 0.75rem;
     }
   }
 }
@@ -624,9 +629,9 @@ select.form-control:not([multiple="multiple"]) {
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  input[type=text].form-control {
-    line-height: 10px;
+  input[type="text"].form-control {
     padding-top: 10px;
     padding-bottom: 9px;
+    line-height: 10px;
   }
 }

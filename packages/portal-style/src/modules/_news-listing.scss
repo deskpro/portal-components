@@ -1,5 +1,5 @@
 .dp-po-news-listing {
-  $self: '.dp-po-news-listing';
+  $self: ".dp-po-news-listing";
 
   &-item {
     margin-bottom: 20px;
@@ -10,19 +10,19 @@
   }
 
   &-link {
-    display: flex;
-    color: $text-color;
-    padding: 20px;
     position: relative;
+    display: flex;
     align-items: center;
+    padding: 20px;
+    color: $text-color;
     border: 2px solid $grey-light;
     border-radius: 6px;
 
     &:hover {
-      box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
-      text-decoration: none;
       color: $text-color;
+      text-decoration: none;
       border-color: $brand-primary;
+      box-shadow: 0 5px 5px rgba(0, 0, 0, .15);
 
       #{$self}-title {
         color: $brand-primary;
@@ -30,9 +30,9 @@
       }
 
       #{$self}-date {
+        color: $brand-primary;
         background: $info-light;
         border-color: $brand-primary;
-        color: $brand-primary;
       }
 
       #{$self}-year {
@@ -42,14 +42,14 @@
   }
 
   &-date {
-    border: 1px solid $grey-light;
-    background: $grey-lightest;
-    border-radius: 4px;
-    height: 100%;
-    text-align: center;
-    @include typo($s18, 400, 'head');
-    margin: 0 20px 0 0;
     flex: 0 0 80px;
+    height: 100%;
+    margin: 0 20px 0 0;
+    text-align: center;
+    background: $grey-lightest;
+    border: 1px solid $grey-light;
+    border-radius: 4px;
+    @include typo($s18, 400, "head");
   }
 
   &-month {
@@ -60,9 +60,9 @@
 
   &-year {
     display: block;
-    border-top: 1px solid $grey-light;
-    padding: 6px;
     width: 100%;
+    padding: 6px;
+    border-top: 1px solid $grey-light;
   }
 
   &-figure {
@@ -80,23 +80,23 @@
   }
 
   &-title {
-    @include typo($s23, 400, 'head');
+    @include typo($s23, 400, "head");
     flex: 0 0 100%;
-    text-overflow: ellipsis;
-    overflow: hidden;
     padding-right: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   &-comments {
     display: inline-flex;
-    vertical-align: middle;
     margin-left: 20px;
+    vertical-align: middle;
 
     .dp-po-icon {
-      color: $grey-dark;
-      margin-right: 10px;
       position: relative;
       top: 2px;
+      margin-right: 10px;
+      color: $grey-dark;
     }
   }
 
@@ -105,16 +105,16 @@
     vertical-align: middle;
 
     strong {
-      font-weight: normal;
+      font-weight: 400;
     }
   }
 
   .badge {
     position: absolute;
-    right: 20px;
     top: 24px;
+    right: 20px;
     max-width: 100px;
-    text-overflow: ellipsis;
     overflow: hidden;
+    text-overflow: ellipsis;
   }
 }

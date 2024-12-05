@@ -1,11 +1,11 @@
 @include media-breakpoint-down(sm) {
   .dp-po-community-channel {
-    $self: '.dp-po-community-channel';
+    $self: ".dp-po-community-channel";
 
     &-icon {
+      flex: 0 0 60px;
       width: 60px;
       height: 60px;
-      flex: 0 0 60px;
 
       .dp-po-icon {
         font-size: 35px;
@@ -17,12 +17,12 @@
     }
 
     &-item {
-      box-shadow: 0 5px 5px rgba(0, 0, 0, .15);
-      border-radius: 4px;
       flex: 0 0 48%;
-      border: 1px solid $grey-lighter;
       padding: 10px 0;
       margin-bottom: 15px;
+      border: 1px solid $grey-lighter;
+      border-radius: 4px;
+      box-shadow: 0 5px 5px rgba(0, 0, 0, .15);
     }
 
     &-link {
@@ -30,8 +30,8 @@
     }
 
     &-name {
-      font-size: $s18;
       padding: 10px 0;
+      font-size: $s18;
     }
 
     &-right {
@@ -46,10 +46,10 @@
       #{$self}-item {
         flex: 0 0 100%;
         padding: 20px;
-        margin: 0 0 20px 0;
+        margin: 0 0 20px;
 
         &:nth-child(3n) {
-          margin: 0 0 20px 0;
+          margin: 0 0 20px;
         }
       }
 
@@ -58,9 +58,9 @@
       }
 
       #{$self}-icon {
+        flex: 0 0 60px;
         width: 60px;
         height: 60px;
-        flex: 0 0 60px;
         margin-right: 20px;
       }
     }

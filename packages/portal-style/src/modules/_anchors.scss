@@ -1,17 +1,22 @@
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   a .title-anchor-icon {
     display: none;
   }
   &:hover a .title-anchor-icon,
-  & a:focus .title-anchor-icon {
+  a:focus .title-anchor-icon {
     display: inline-block;
   }
   .dp-po-clipboard-link {
     span {
+      margin-left: 5px;
+      font-size: 12px;
       color: $grey-dark;
       text-decoration: none;
-      font-size: 12px;
-      margin-left: 5px;
       vertical-align: middle;
     }
 

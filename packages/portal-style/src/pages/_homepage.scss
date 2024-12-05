@@ -1,36 +1,36 @@
 .dp-po-community-channel-tags {
   &-list {
-    margin: 0 0 10px 0;
     padding: 0;
+    margin: 0 0 10px;
   }
 
   &-item {
     display: inline-block;
-    vertical-align: middle;
     margin: 0 10px 10px 0;
+    vertical-align: middle;
   }
 
   &-link {
-    border: 1px solid $grey-light;
-    background: $white;
-    @include typo($s19, 400, 'head');
-    color: $brand-primary;
-    text-decoration: none;
-    border-radius: 15px;
-    padding: 2px 20px;
     display: inline-flex;
     align-items: center;
+    padding: 2px 20px;
+    color: $brand-primary;
+    text-decoration: none;
+    background: $white;
+    border: 1px solid $grey-light;
+    border-radius: 15px;
+    @include typo($s19, 400, "head");
 
     &:hover {
-      background: $brand-primary;
       color: $white;
       text-decoration: none;
+      background: $brand-primary;
       border-color: $brand-primary;
     }
   }
 
   &-count {
-    @include typo($s12, 600, 'body');
+    @include typo($s12, 600, "body");
     margin-left: 5px;
   }
 }
@@ -43,14 +43,14 @@
   &-welcome-box {
     margin-bottom: 52px;
     h1 {
+      margin-bottom: 10px;
       font-size: 30px;
       font-weight: 300;
       line-height: 150%;
-      margin-bottom: 10px;
     }
     p {
-      font-size: 18px;
       margin-bottom: 0;
+      font-size: 18px;
     }
   }
 
@@ -80,9 +80,9 @@
 
   &-guides {
     .dp-po-title {
-      width: 100%;
       display: flex;
       justify-content: space-between;
+      width: 100%;
       margin-bottom: 18px;
       .dp-po-title-link {
         .dp-po-title-svg {
@@ -92,17 +92,17 @@
     }
     &-all-guides {
       align-self: flex-end;
-      border-color: $grey-light;
-      color: $brand-primary;
-      background-color: $white;
       margin-bottom: 5px;
+      color: $brand-primary;
       white-space: nowrap;
+      background-color: $white;
+      border-color: $grey-light;
       .dp-po-icon {
-        font-size: 21px;
         margin-left: 10px;
+        font-size: 21px;
       }
       &:hover {
-        color: white;
+        color: #fff;
         background: $brand-primary;
       }
     }

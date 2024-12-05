@@ -5,16 +5,16 @@
     }
 
     &-list {
-      margin: 0;
       display: none;
       padding: 0;
+      margin: 0;
     }
 
     .dp-po-viewall {
-      display: none;
       position: relative;
-      width: 100%;
       left: 0;
+      display: none;
+      width: 100%;
       margin: 0 0 30px;
 
       &.active {
@@ -24,8 +24,8 @@
 
     .dp-po-category-title {
       &-link {
-        margin: 0 0 15px;
         height: 50px;
+        margin: 0 0 15px;
       }
     }
   }

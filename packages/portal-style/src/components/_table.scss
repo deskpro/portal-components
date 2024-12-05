@@ -1,24 +1,24 @@
 .dp-po-table {
-  $self: '.dp-po-table';
+  $self: ".dp-po-table";
   margin: 20px -30px 0;
 
   &-row {
-    display: flex;
-    align-items: center;
-    flex-flow: row wrap;
-    padding: 0 30px;
     position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding: 0 30px;
 
     &-head {
       font-weight: 700;
 
       #{$self}-cell {
-        color: $grey-dark;
         display: flex;
+        color: $grey-dark;
 
         span {
-          text-overflow: ellipsis;
           overflow: inherit !important;
+          text-overflow: ellipsis;
         }
 
         a {
@@ -97,10 +97,10 @@
 
   &-cell {
     width: calc(100% / 6);
-    font-size: $p3-font-size;
     padding: 15px 5px;
-    white-space: nowrap;
     overflow: hidden !important;
+    font-size: $p3-font-size;
+    white-space: nowrap;
     span {
       text-overflow: ellipsis;
     }

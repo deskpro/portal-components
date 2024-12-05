@@ -1,16 +1,14 @@
 @include media-breakpoint-down(sm) {
   .dp-po-title {
-    $self: '.dp-po-title';
+    $self: ".dp-po-title";
 
     &-svg {
       flex: 0 0 40px;
     }
 
     &-text {
-      font-size: $s26;
       min-width: 200px;
-
-      &#{$self}-small {}
+      font-size: $s26;
     }
 
     &-link {
@@ -20,8 +18,8 @@
 
       #{$self}-text {
         font-size: $s26;
+        font-weight: 400;
         color: $grey-darkest;
-        font-weight: normal;
       }
     }
   }

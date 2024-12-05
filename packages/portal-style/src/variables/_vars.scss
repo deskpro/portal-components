@@ -14,24 +14,24 @@ $line-height-base: 1.6 !default;
 $headings-line-height: 1.5 !default;
 
 $headings-font-family: $font-family-heading,
-$font-family-sans-serif;
+  $font-family-sans-serif;
 $headings-font-weight: normal;
 $h1-font-size: $font-size-base * 2 !default; // 36px
 $h2-font-size: $font-size-base * 1.277 !default; // 23px
 $h3-font-size: $font-size-base * 1.055 !default; // 19px
 $h4-font-size: $font-size-base * 1.055 !default; // 19px
-$h5-font-size: $font-size-base * 0.944 !default; // 17px
-$h6-font-size: $font-size-base * 0.888 !default; // 17px
+$h5-font-size: $font-size-base * .944 !default; // 17px
+$h6-font-size: $font-size-base * .888 !default; // 17px
 
 $p1-font-size: $font-size-base * 1 !default; // 18px
-$p2-font-size: $font-size-base * 0.833 !default; // 15px
-$p3-font-size: $font-size-base * 0.833 !default; // 15px
-$p4-font-size: $font-size-base * 0.666 !default; // 12px
+$p2-font-size: $font-size-base * .833 !default; // 15px
+$p3-font-size: $font-size-base * .833 !default; // 15px
+$p4-font-size: $font-size-base * .666 !default; // 12px
 
 $button-font-family: $font-family-sans-serif;
-$button1-font-size: $font-size-base * 0.777 !default; // 14px
-$button2-font-size: $font-size-base * 0.666 !default; // 12px
-$button3-font-size: $font-size-base * 0.555 !default; // 10px
+$button1-font-size: $font-size-base * .777 !default; // 14px
+$button2-font-size: $font-size-base * .666 !default; // 12px
+$button3-font-size: $font-size-base * .555 !default; // 10px
 
 $primary: $brand-primary !default;
 $secondary: $grey !default;
@@ -59,9 +59,9 @@ $dropdown-font-size: $p1-font-size;
 $dropdown-link-hover-bg: $info-light !default;
 $dropdown-link-color: $grey-darkest !default;
 $dropdown-link-hover-color: $brand-primary !default;
-$dropdown-item-padding-y: .60rem !default;
+$dropdown-item-padding-y: .6rem !default;
 $dropdown-item-padding-x: 1.25rem !default;
-$dropdown-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15) !default;
+$dropdown-box-shadow: 5px 5px 5px rgba(0, 0, 0, .15) !default;
 $dropdown-border-radius: 4px !default;
 $dropdown-border-color: $grey-light !default;
 
@@ -83,31 +83,31 @@ $btn-border-radius-lg: 4px;
 $btn-border-radius-sm: 4px;
 
 
-$s36: $font-size-base * 2.000 !default; // 36px
+$s36: $font-size-base * 2 !default; // 36px
 $s30: $font-size-base * 1.666 !default; // 30px
 $s28: $font-size-base * 1.555 !default; // 28px
 $s26: $font-size-base * 1.444 !default; // 26px
 $s23: $font-size-base * 1.277 !default; // 23px
 $s19: $font-size-base * 1.055 !default; // 19px
-$s18: $font-size-base * 1.000 !default; // 18px
-$s17: $font-size-base * 0.944 !default; // 17px
-$s16: $font-size-base * 0.889 !default; // 16px
-$s15: $font-size-base * 0.833 !default; // 15px
-$s14: $font-size-base * 0.777 !default; // 14px
-$s12: $font-size-base * 0.666 !default; // 12px
-$s10: $font-size-base * 0.555 !default; // 10px
+$s18: $font-size-base * 1 !default; // 18px
+$s17: $font-size-base * .944 !default; // 17px
+$s16: $font-size-base * .889 !default; // 16px
+$s15: $font-size-base * .833 !default; // 15px
+$s14: $font-size-base * .777 !default; // 14px
+$s12: $font-size-base * .666 !default; // 12px
+$s10: $font-size-base * .555 !default; // 10px
 
-$btn-box-shadow: 0 0 0 0.2rem rgba(88, 158, 227, .5);
+$btn-box-shadow: 0 0 0 .2rem rgba(88, 158, 227, .5);
 
 $head-font: $font-family-heading;
 $body-font: $font-family-sans-serif;
 
-@mixin typo($size, $weight : 400, $family : 'body') {
-  @if $family=='head' {
+@mixin typo($size, $weight : 400, $family : "body") {
+  @if $family == "head" {
     font-family: $head-font;
   }
 
-  @if $family=='body' {
+  @if $family == "body" {
     font-family: $body-font;
   }
 
@@ -116,3 +116,7 @@ $body-font: $font-family-sans-serif;
 }
 
 //@include typo($s36, 400, 'body');
+
+$table-variants: ();
+
+$theme-colors: ();

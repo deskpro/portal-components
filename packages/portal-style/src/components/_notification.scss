@@ -1,14 +1,14 @@
 .dp-po-notification {
-  background: $info-light;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 25px 0;
+  background: $info-light;
   border-bottom: 1px solid $grey-light;
 
   &-title {
     margin: 0;
-    @include typo($s23, 400, 'head');
+    @include typo($s23, 400, "head");
   }
 
   &-link {
@@ -16,23 +16,23 @@
   }
 
   &-figure {
-    margin: 0 25px 0 0;
     position: relative;
+    margin: 0 25px 0 0;
   }
 
   &-count {
-    border-radius: 50%;
-    color: $white;
-    background: $danger;
-    width: 34px;
-    height: 34px;
+    position: absolute;
+    top: -17px;
+    right: -17px;
     display: flex;
     align-items: center;
     justify-content: center;
-    @include typo($s19, 500, 'head');
-    position: absolute;
-    right: -17px;
-    top: -17px;
+    width: 34px;
+    height: 34px;
+    color: $white;
+    background: $danger;
+    border-radius: 50%;
+    @include typo($s19, 500, "head");
   }
 
   &-image {

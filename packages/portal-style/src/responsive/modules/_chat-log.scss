@@ -1,10 +1,10 @@
 @include media-breakpoint-down(sm) {
   .dp-po-chat-log {
-    $self: '.dp-po-chat-log';
+    $self: ".dp-po-chat-log";
 
     &-notification {
-      margin: 0 -15px;
       padding: 10px 15px;
+      margin: 0 -15px;
 
       &-icon {
         flex: 0 0 24px;

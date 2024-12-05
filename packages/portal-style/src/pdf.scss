@@ -27,31 +27,32 @@
 
   .dp-po-post-avatars-item,
   .dp-po-post-avatars-link {
-    border-color: white;
+    border-color: #fff;
   }
 
   .dp-po-post-meta {
     padding: 0;
     margin: 0;
+    font-size: 16px;
+    color: #8b9293;
     background: none;
     border: none;
-    font-size: 16px;
-    color: #8B9293;
-    dd, dt {
+    dd,
+    dt {
       display: inline-block;
     }
     dt::after {
-      content: ':';
+      content: ":";
     }
     dd {
-      font-weight: bold;
+      font-weight: 700;
     }
   }
   h3 {
-    color: #8B9293;
+    color: #8b9293;
   }
   .dp-po-related-content-item {
-    color: #8B9293;
+    color: #8b9293;
   }
 
   .dp-po-news-head {

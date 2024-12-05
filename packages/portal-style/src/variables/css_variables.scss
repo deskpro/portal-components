@@ -1,31 +1,17 @@
 :root {
   --brand-primary: #3a8dde;
   --brand-secondary: #a9b0b0;
-  --danger: #E84954;
-  --warning: #EC6C4E;
-  --neutral: #F8AF3C;
-  --success: #54B162;
-  --info: #4B93CF;
-  --background-color: #F7F7F7;
-  --text-color: #4C4F50;
-  --text-color-lighter: #8B9293;
-  --font-family-sans-serif: Lato,
-  "Helvetica Neue",
-  Arial,
-  "Noto Sans",
-  sans-serif,
-  "Apple Color Emoji",
-  "Segoe UI Emoji",
-  "Segoe UI Symbol",
-  "Noto Color Emoji";
-  --font-family-heading: Rubik, "sans-serif";
-  --font-family-monospace: SFMono-Regular,
-  Menlo,
-  Monaco,
-  Consolas,
-  "Liberation Mono",
-  "Courier New",
-  monospace;
+  --danger: #e84954;
+  --warning: #ec6c4e;
+  --neutral: #f8af3c;
+  --success: #54b162;
+  --info: #4b93cf;
+  --background-color: #f7f7f7;
+  --text-color: #4c4f50;
+  --text-color-lighter: #8b9293;
+  --font-family-sans-serif: lato, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-heading: rubik, "sans-serif";
+  --font-family-monospace: sfmono-regular, menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace;
   --light: #d3d6d7;
   --light-rgb: 211, 214, 215;
   --light-yiq: #212529;

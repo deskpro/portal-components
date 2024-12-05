@@ -1,27 +1,27 @@
 .dp-po-ticket-approval-view {
-  $self: '.dp-po-ticket-approval';
+  $self: ".dp-po-ticket-approval";
 
   #{$self}-header {
     display: flex;
     justify-content: space-between;
     padding-bottom: 10px;
-    border-bottom: 1px solid $grey-light;
     margin-bottom: 15px;
+    border-bottom: 1px solid $grey-light;
 
     &-title {
-      font-weight: bold;
       display: flex;
       align-items: flex-end;
-      text-transform: uppercase;
       font-size: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
     }
 
     &-status {
       padding: 5px 20px;
-      border-radius: 5px;
-      text-transform: uppercase;
-      font-weight: bold;
       font-size: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+      border-radius: 5px;
 
       &-danger {
         color: $white;
@@ -62,7 +62,7 @@
     }
 
     &-name {
-      font-weight: bold;
+      font-weight: 700;
     }
 
     &-date {
@@ -93,11 +93,11 @@
       }
 
       &-person-name {
-        font-weight: bold;
+        font-weight: 700;
       }
 
       &-response-count {
-        font-weight: bold;
+        font-weight: 700;
 
         &-success {
           color: $success;
@@ -109,11 +109,11 @@
       }
 
       &-comma-list {
-        &:after {
+        &::after {
           content: ", ";
         }
 
-        &:last-child:after {
+        &:last-child::after {
           content: "";
         }
       }
@@ -128,21 +128,21 @@
       }
 
       &-ticket-link {
-        text-decoration: underline;
-        font-weight: bold;
+        font-weight: 700;
         color: var(--text-color);
+        text-decoration: underline;
       }
     }
 
     &-criteria {
-      margin-top: 20px;
-      border-top: 1px solid $grey-light;
       padding: 15px 0;
+      margin-top: 20px;
       font-size: 16px;
+      border-top: 1px solid $grey-light;
 
       &-item {
-        font-weight: bold;
         font-size: 15px;
+        font-weight: 700;
 
         &-success {
           color: $success;

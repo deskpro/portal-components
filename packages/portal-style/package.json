@@ -9,24 +9,22 @@
     "dist"
   ],
   "scripts": {
-    "dev": "gulp dev",
-    "prepare": "gulp",
-    "build": "gulp"
+    "build": "yarn css",
+    "css-compile": "sass --style compressed --source-map --embed-sources --no-error-css --load-path=node_modules src/:dist/",
+    "css-lint": "stylelint src/",
+    "css-prefix": "postcss --replace dist/**/*.css --use autoprefixer --map",
+    "css": "yarn css-compile && yarn css-prefix"
   },
   "dependencies": {
-    "bootstrap": "4.6"
+    "bootstrap": "5.2.3"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.14",
-    "contrast": "^1.0.1",
-    "cors": "^2.8.5",
-    "cssnano": "^6.0.1",
     "globals": "^15.13.0",
-    "gulp": "^5.0.0",
-    "gulp-connect": "^5.7.0",
-    "gulp-dart-sass": "^1.0.2",
-    "gulp-postcss": "^9.0.1",
-    "gulp-sourcemaps": "^2.6.5",
-    "postcss": "^8.0.0"
+    "postcss": "^8.0.0",
+    "postcss-cli": "^11.0.0",
+    "sass": "^1.82.0",
+    "stylelint": "^16.11.0",
+    "stylelint-config-twbs-bootstrap": "^15.1.0",
+    "stylelint-scss": "^6.10.0"
   }
 }

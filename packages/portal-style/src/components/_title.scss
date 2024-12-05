@@ -3,7 +3,7 @@
   align-items: center;
   margin-bottom: 15px;
   fill: $brand-primary;
-  $self: '.dp-po-title';
+  $self: ".dp-po-title";
 
   &-svg {
     margin: 0 10px 0 0;
@@ -11,7 +11,7 @@
   }
 
   &-text {
-    @include typo($s30, 400, 'head');
+    @include typo($s30, 400, "head");
     margin: 0;
 
     &#{$self}-small {
@@ -20,27 +20,27 @@
   }
 
   &-link {
-    text-decoration: none;
     display: inline-flex;
     align-items: center;
+    text-decoration: none;
 
 
     #{$self}-text {
-      color: $brand-primary;
       font-weight: 300;
+      color: $brand-primary;
     }
   }
 
   &-search {
+    position: relative;
     display: inline-block;
-    vertical-align: middle;
+    padding-left: 20px;
     margin-bottom: 20px;
     margin-left: 20px;
-    padding-left: 20px;
-    position: relative;
+    vertical-align: middle;
 
     &-text {
-      @include typo($s23, 400, 'head');
+      @include typo($s23, 400, "head");
       margin: 0 0 5px;
     }
 
@@ -48,13 +48,13 @@
       color: $brand-primary;
     }
 
-    &:before {
-      content: '';
+    &::before {
       position: absolute;
-      left: 0;
       top: 0;
-      height: 35px;
+      left: 0;
       width: 1px;
+      height: 35px;
+      content: "";
       background: $grey;
     }
   }

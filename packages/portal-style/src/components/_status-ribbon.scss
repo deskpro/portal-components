@@ -1,75 +1,75 @@
 .dp-po-status-ribbon {
-  $self: '.dp-po-status-ribbon';
-  color: $white;
+  $self: ".dp-po-status-ribbon";
   display: inline-flex;
   align-items: center;
-  font-size: $s12;
-  text-transform: uppercase;
   overflow: hidden;
+  font-size: $s12;
+  color: $white;
+  text-transform: uppercase;
 
 
   &-from {
+    position: relative;
+    padding: 4px 9px;
+    margin-right: 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     background: $grey-light;
     border-top-left-radius: 2px;
     border-bottom-left-radius: 2px;
-    padding: 4px 9px;
-    position: relative;
-    margin-right: 20px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
 
-    &:after {
-      content: '';
+    &::after {
+      position: absolute;
+      top: 0;
+      right: -11px;
       width: 0;
       height: 0;
+      content: "";
       border-top: 11px solid transparent;
       border-bottom: 12px solid transparent;
       border-left: 11px solid $grey-light;
-      position: absolute;
-      right: -11px;
-      top: 0;
     }
 
     span {
-      overflow: hidden;
-      text-overflow: ellipsis;
       display: block;
       width: 70px;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 
   &-time {
-    background: $grey;
-    padding: 4px 9px;
     position: relative;
+    padding: 4px 9px;
     margin-right: 20px;
+    background: $grey;
 
     &-arrow {
+      position: absolute;
+      top: 0;
+      right: -11px;
       width: 0;
       height: 0;
       border-top: 11px solid transparent;
       border-bottom: 12px solid transparent;
       border-left: 11px solid $grey;
-      position: absolute;
-      right: -11px;
-      top: 0;
     }
 
-    &:after,
-    &:before {
-      content: "";
+    &::after,
+    &::before {
+      position: absolute;
+      top: 0;
+      left: -12px;
       width: 0;
       height: 0;
-      border-top: 0px solid transparent;
+      content: "";
+      border-top: 0 solid transparent;
       border-bottom: 12px solid transparent;
       border-left: 12px solid $grey;
-      position: absolute;
-      left: -12px;
-      top: 0;
       transform: rotate(90deg);
     }
 
-    &:before {
+    &::before {
       top: auto;
       bottom: 0;
       transform: rotate(180deg);
@@ -77,37 +77,37 @@
   }
 
   &-to {
+    position: relative;
+    padding: 0 9px;
+    padding: 4px 9px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     background: $success;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
-    padding: 0 9px;
-    padding: 4px 9px;
-    position: relative;
-    white-space: nowrap;
-    text-overflow: ellipsis;
 
     span {
-      overflow: hidden;
-      text-overflow: ellipsis;
       display: block;
       width: 70px;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
-    &:after,
-    &:before {
-      content: "";
+    &::after,
+    &::before {
+      position: absolute;
+      top: 0;
+      left: -12px;
       width: 0;
       height: 0;
-      border-top: 0px solid transparent;
+      content: "";
+      border-top: 0 solid transparent;
       border-bottom: 12px solid transparent;
       border-left: 12px solid $success;
-      position: absolute;
-      left: -12px;
-      top: 0;
       transform: rotate(90deg);
     }
 
-    &:before {
+    &::before {
       top: auto;
       bottom: 0;
       transform: rotate(180deg);
@@ -116,8 +116,8 @@
     &#{$self}-to-success {
       background: $success;
 
-      &:after,
-      &:before {
+      &::after,
+      &::before {
         border-left-color: $success;
       }
     }
@@ -125,8 +125,8 @@
     &#{$self}-to-neutral {
       background: $neutral;
 
-      &:after,
-      &:before {
+      &::after,
+      &::before {
         border-left-color: $neutral;
       }
     }
@@ -134,8 +134,8 @@
     &#{$self}-to-purple {
       background: $purple;
 
-      &:after,
-      &:before {
+      &::after,
+      &::before {
         border-left-color: $purple;
       }
     }
@@ -143,8 +143,8 @@
     &#{$self}-to-info {
       background: $info;
 
-      &:after,
-      &:before {
+      &::after,
+      &::before {
         border-left-color: $info;
       }
     }
@@ -152,8 +152,8 @@
     &#{$self}-to-grey {
       background: $grey-dark;
 
-      &:after,
-      &:before {
+      &::after,
+      &::before {
         border-left-color: $grey-dark;
       }
     }

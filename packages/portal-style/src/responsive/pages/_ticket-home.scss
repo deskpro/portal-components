@@ -1,6 +1,6 @@
 @include media-breakpoint-down(sm) {
   .dp-po-table-ticket {
-    $self: '.dp-po-table';
+    $self: ".dp-po-table";
 
     #{$self}-row {
       padding: 15px 0 15px 20px;
@@ -21,27 +21,27 @@
         position: absolute;
         top: 18px;
         right: 0;
-        border: 1px solid $grey-light;
-        padding: 2px 5px;
         display: inline-block;
         width: auto;
+        padding: 2px 5px;
         font-size: 12px;
+        border: 1px solid $grey-light;
         border-radius: 4px;
       }
 
       &-date,
       &-ago {
         display: inline-block;
-        vertical-align: middle;
         width: auto;
         margin-right: 10px;
-        ;
+        vertical-align: middle;
+
       }
     }
   }
 
   .dp-po-ticket-filter {
-    $self: '.dp-po-ticket-filter';
+    $self: ".dp-po-ticket-filter";
 
     &-item {
 

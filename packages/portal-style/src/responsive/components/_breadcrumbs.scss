@@ -12,24 +12,24 @@
   }
 
   .breadcrumb {
-    padding: 0;
     width: 100%;
+    padding: 0;
     border-bottom: 1px solid $grey-light;
   }
 
   .breadcrumb-item {
-    white-space: nowrap;
-    margin: 0;
     display: none;
+    margin: 0;
+    white-space: nowrap;
 
     &:first-child {
       margin: 0;
     }
 
     a {
-      text-overflow: ellipsis;
-      overflow: hidden;
       margin-right: 21px;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     &:nth-last-child(2) {
       display: flex;

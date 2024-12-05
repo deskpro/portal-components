@@ -1,6 +1,6 @@
 @include media-breakpoint-down(sm) {
   .dp-po-navigation-block {
-    $self: '.dp-po-navigation-block';
+    $self: ".dp-po-navigation-block";
 
     &-list {
       flex-wrap: wrap;
@@ -8,16 +8,16 @@
     }
 
     &-link {
-      margin: 0 0 15px;
       height: 100px;
       padding: 10px;
+      margin: 0 0 15px;
     }
 
     &-item {
       flex: 0 0 100%;
 
       &:first-child:nth-last-child(n + 5),
-      &:first-child:nth-last-child(n + 5)~li {
+      &:first-child:nth-last-child(n + 5) ~ li {
         #{$self}-title {
           margin: 0;
           color: $brand-primary;
@@ -27,14 +27,14 @@
         #{$self}-link {
           height: 61px;
           padding: 0;
-          box-shadow: none;
           margin-bottom: 10px;
+          box-shadow: none;
         }
 
         #{$self}-figure {
-          background: $grey-lightest;
           flex: 0 0 30%;
           height: calc(100% - 1px);
+          background: $grey-lightest;
           border-radius: 6px 0 0 6px;
           svg {
             max-width: 42px;
@@ -43,10 +43,10 @@
         }
 
         #{$self}-right {
-          flex: 0 0 70%;
-          padding-left: 24px;
           display: flex;
+          flex: 0 0 70%;
           height: 100%;
+          padding-left: 24px;
         }
 
         #{$self}-desc {

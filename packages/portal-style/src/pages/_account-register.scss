@@ -2,28 +2,26 @@
   text-align: center;
 
   .dp-po-icon {
-    background: $brand-primary;
-    color: $white;
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 52px;
+    height: 52px;
     margin: 0 auto;
     font-size: 26px;
+    color: $white;
+    background: $brand-primary;
+    border-radius: 50%;
   }
 
   &-title {
-    @include typo($s23, 400, 'head');
+    @include typo($s23, 400, "head");
     margin: 20px 0 0;
   }
 
   &-msg {
-    @include typo($s19, 400, 'head');
-    color: $grey-dark;
+    @include typo($s19, 400, "head");
     margin: 30px 0 20px;
+    color: $grey-dark;
   }
-
-  &-link {}
 }

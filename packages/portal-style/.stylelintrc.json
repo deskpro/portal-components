@@ -1,0 +1,28 @@
+{
+  "extends": [
+    "stylelint-config-twbs-bootstrap"
+  ],
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "reportInvalidScopeDisables": true,
+  "reportNeedlessDisables": true,
+  "overrides": [
+    {
+      "files": "**/*.scss",
+      "rules": {
+        "scss/selector-no-union-class-name": null,
+        "declaration-no-important": null,
+        "selector-no-qualifying-type": null,
+        "selector-max-id": 1,
+        "selector-id-pattern": null,
+        "selector-class-pattern": null,
+        "selector-max-type": null,
+        "selector-max-class": 6,
+        "selector-max-attribute": 4,
+        "selector-max-combinators": null,
+        "selector-max-compound-selectors": null
+      }
+    }
+  ]
+}

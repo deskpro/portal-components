@@ -1,7 +1,7 @@
 .dp-po-table-ticket {
-  $self: '.dp-po-table';
-  overflow-x: auto;
+  $self: ".dp-po-table";
   min-width: 100%;
+  overflow-x: auto;
 
   #{$self}-ticket-wrapper {
     display: table;
@@ -26,13 +26,13 @@
   #{$self}-cell {
     display: table-cell;
     width: auto;
-    max-width: 300px;
     min-width: 100px;
+    max-width: 300px;
     text-overflow: ellipsis;
     &-indicator {
       width: 22px;
-      padding-left: 25px;
       min-width: unset;
+      padding-left: 25px;
 
       .dp-po-icon {
         font-size: 12px;
@@ -48,21 +48,21 @@
       align-items: center;
 
       &-img {
-        border-radius: 50%;
         width: 26px;
         height: 26px;
+        border-radius: 50%;
       }
 
       .dp-po-icon {
-
-        font-size: 20px;
         position: relative;
         left: -5px;
-        background: $white;
-        border-radius: 50%;
         width: 20px;
         height: 20px;
+
+        font-size: 20px;
         line-height: 0;
+        background: $white;
+        border-radius: 50%;
 
         .fa-smile {
           color: $success;
@@ -79,17 +79,17 @@
 
       &-link {
         display: none;
-        border-radius: 4px;
-        border: 1px solid $brand-primary;
+        padding: 5px 10px;
         font-size: $p2-font-size;
         font-weight: 700;
         color: $brand-primary;
-        padding: 5px 10px;
+        border: 1px solid $brand-primary;
+        border-radius: 4px;
 
         &:hover {
+          color: $white;
           text-decoration: none;
           background: $brand-primary;
-          color: $white;
         }
       }
     }
@@ -125,30 +125,30 @@
 }
 
 .dp-po-ticketbadge {
-  $self: '.dp-po-ticketbadge';
-  font-size: $h3-font-size;
-  font-family: $headings-font-family;
+  $self: ".dp-po-ticketbadge";
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  padding: 6px 25px 6px 6px;
+  font-family: $headings-font-family;
+  font-size: $h3-font-size;
   background: $danger-light;
   border-radius: 20px;
-  padding: 6px 25px 6px 6px;
 
   &-number {
-    font-size: $h6-font-size;
-    font-weight: 600;
-    color: $white;
-    font-family: $headings-font-family;
-    background: $danger;
-    border-radius: 50%;
-    min-width: 28px;
-    height: 28px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin: 0 10px 0 0;
+    min-width: 28px;
+    height: 28px;
     padding: 0 3px;
+    margin: 0 10px 0 0;
+    font-family: $headings-font-family;
+    font-size: $h6-font-size;
+    font-weight: 600;
+    color: $white;
+    background: $danger;
+    border-radius: 50%;
   }
 
   &-danger {
@@ -190,55 +190,54 @@
 
   input[type="text"] {
     width: 100%;
-    background: $white;
-    border: 1px solid $grey-light;
-    border-radius: 4px;
     padding: 10px 50px;
     font-size: $p2-font-size;
     color: $grey-dark;
+    background: $white;
+    border: 1px solid $grey-light;
+    border-radius: 4px;
     outline: none;
   }
 
   button[type="submit"] {
     position: absolute;
-    border: none;
-    height: 32px;
-    left: 5px;
-    position: absolute;
     top: calc(50% - 16px);
+    left: 5px;
     width: 32px;
-    font-size: 20px;
+    height: 32px;
     padding: 0;
+    font-size: 20px;
     color: $brand-primary;
-    background-color: white;
+    background-color: #fff;
+    border: none;
   }
 
   &-no-results {
     width: 100%;
-    text-align: center;
     margin-top: 20px;
     font-size: 22px;
+    text-align: center;
   }
 }
 
 .dp-po-ticket-sidebar {
+  padding: 20px;
+  background: $white;
   border: 1px solid $grey-light;
   border-radius: 4px;
-  background: $white;
-  padding: 20px;
 }
 
 .dp-po-ticket-filter {
-  $self: '.dp-po-ticket-filter';
+  $self: ".dp-po-ticket-filter";
 
   &-list {
-    margin: 0;
     padding: 0;
+    margin: 0;
   }
 
   &-item {
-    display: block;
     position: relative;
+    display: block;
 
     #{$self}-list {
       margin: 0 0 20px 30px;
@@ -256,21 +255,21 @@
   }
 
   &-title {
-    @include typo($s15, 400, 'body');
-    color: $grey-dark;
+    @include typo($s15, 400, "body");
     margin: 0;
+    color: $grey-dark;
   }
 
   &-clearall {
-    @include typo($s15, 400, 'body');
+    @include typo($s15, 400, "body");
     color: $brand-primary;
     text-decoration: underline;
   }
 
   &-collapse {
     position: absolute;
-    right: 0;
     top: -2px;
+    right: 0;
     font-size: 24px;
 
     &.collapsed {
@@ -280,19 +279,19 @@
 }
 
 .dp-po-ticket-pages {
-  $self: '.dp-po-ticket-pages';
+  $self: ".dp-po-ticket-pages";
 
   &-list {
-    margin: 0 0 25px;
     padding: 0 0 20px;
+    margin: 0 0 25px;
     border-bottom: 1px solid $grey-light;
 
   }
 
   &-item {
-    list-style: none;
     display: block;
     margin-bottom: 20px;
+    list-style: none;
 
     &:last-child {
       margin: 0;
@@ -309,16 +308,16 @@
     display: flex;
     align-items: flex-start;
     color: $grey-dark;
-    @include typo($s19, 400, 'head');
+    @include typo($s19, 400, "head");
 
     &:hover {
-      text-decoration: none;
       color: $brand-primary;
+      text-decoration: none;
     }
 
     .dp-po-icon {
-      margin-right: 15px;
       width: 26px;
+      margin-right: 15px;
     }
   }
 }

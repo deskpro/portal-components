@@ -5,16 +5,16 @@
 
   &-icon {
     .dp-po-icon {
-      font-size: 20px;
       margin-right: 10px;
+      font-size: 20px;
       line-height: 0;
     }
   }
 
   &-lg {
+    justify-content: center;
     width: 254px;
     max-width: 100%;
-    justify-content: center;
   }
 
   &-brand {
@@ -24,11 +24,11 @@
     .dp-po-icon {
       position: absolute;
       left: 0;
+      width: 30px;
       height: 100%;
-      border-right: 1px solid $grey-light;
       padding: 8px;
       font-size: 26px;
-      width: 30px;
+      border-right: 1px solid $grey-light;
     }
 
     span {
@@ -37,7 +37,7 @@
 
     &:hover {
       color: $white;
-      opacity: 0.8;
+      opacity: .8;
     }
   }
 
@@ -70,10 +70,10 @@
 }
 
 .btn-reset:hover {
+  color: $brand-primary;
   background-color: $white;
   border-color: $brand-primary;
-  color: $brand-primary;
 }
 .btn-reset:focus {
-  box-shadow: 0 0 0 .2rem rgba(var(--brand-secondary-rgb),.25);
+  box-shadow: 0 0 0 .2rem rgba(var(--brand-secondary-rgb), .25);
 }

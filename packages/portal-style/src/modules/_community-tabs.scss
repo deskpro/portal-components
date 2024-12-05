@@ -1,48 +1,48 @@
 .dp-po-community-tabs {
-  $self: '.dp-po-community-tabs';
+  $self: ".dp-po-community-tabs";
 
   &-list {
-    margin: 0;
     padding: 0;
+    margin: 0;
   }
 
   &-item {
+    position: relative;
     display: inline-block;
+    margin-left: -4px;
     vertical-align: middle;
     list-style: none;
-    margin-left: -4px;
-    position: relative;
 
     &.active {
       #{$self}-link {
-        border-top-color: $brand-primary;
         color: $text-color;
         background: $white;
+        border-top-color: $brand-primary;
 
         .dp-po-icon {
           color: $brand-primary;
         }
       }
 
-      &:after {
-        content: '';
-        width: calc(100% - 2px);
-        height: 2px;
-        background: $white;
+      &::after {
         position: absolute;
         bottom: -1px;
         left: 1px;
+        width: calc(100% - 2px);
+        height: 2px;
+        content: "";
+        background: $white;
       }
 
-      &:before {
-        content: '';
-        width: 100%;
-        height: 2px;
-        background: $brand-primary;
+      &::before {
         position: absolute;
         top: -1px;
         left: 0;
         z-index: 1;
+        width: 100%;
+        height: 2px;
+        content: "";
+        background: $brand-primary;
       }
     }
 
@@ -58,27 +58,27 @@
   }
 
   &-link {
-    background: $grey-lighter;
-    border-left: 1px solid $grey-light;
-    border-right: 1px solid $grey-light;
-    padding: 13px 20px;
-    color: $grey-dark;
     display: flex;
     align-items: center;
     justify-content: center;
-    @include typo($s19, 400, 'head');
+    padding: 13px 20px;
+    color: $grey-dark;
+    background: $grey-lighter;
+    border-right: 1px solid $grey-light;
+    border-left: 1px solid $grey-light;
+    @include typo($s19, 400, "head");
 
     .dp-po-icon {
-      margin-right: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
+      margin-right: 10px;
       font-size: 20px;
     }
 
     &:hover {
-      text-decoration: none;
       color: $text-color;
+      text-decoration: none;
 
       .dp-po-icon {
         color: $brand-primary;
@@ -86,7 +86,7 @@
     }
   }
 
-  &+.dp-po-block {
+  + .dp-po-block {
     position: relative;
   }
 }

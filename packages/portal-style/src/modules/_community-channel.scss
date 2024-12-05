@@ -1,19 +1,19 @@
 .dp-po-community-channel {
-  $self: '.dp-po-community-channel';
+  $self: ".dp-po-community-channel";
 
   &-list {
-    margin: 0;
-    padding: 0;
     display: inline-flex;
     align-items: flex-start;
     justify-content: space-between;
+    padding: 0;
+    margin: 0;
     text-align: center;
   }
 
   &-item {
-    list-style: none;
     flex-grow: 1;
     flex-basis: 0;
+    list-style: none;
   }
 
   &-link {
@@ -31,14 +31,14 @@
   }
 
   &-icon {
+    display: flex;
     flex: 0 0 140px;
+    align-items: center;
+    justify-content: center;
     width: 140px;
     height: 140px;
     background: $info-light;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
     .dp-po-icon {
       font-size: 70px;
@@ -74,22 +74,22 @@
     padding: 20px 0;
     overflow: hidden;
     text-overflow: ellipsis;
-    @include typo($s28, 300, 'head');
+    @include typo($s28, 300, "head");
   }
 
   &-topics {
-    flex: 0 0 100%;
-    color: $text-color;
     display: inline-flex;
+    flex: 0 0 100%;
     align-items: center;
     justify-content: center;
+    color: $text-color;
 
     .dp-po-icon {
-      color: $brand-primary;
-      font-size: 22px;
-      margin-left: 10px;
       position: relative;
       top: 2px;
+      margin-left: 10px;
+      font-size: 22px;
+      color: $brand-primary;
     }
   }
 
@@ -106,13 +106,13 @@
     }
 
     #{$self}-item {
-      box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
-      border-radius: 4px;
-      padding: 30px;
-      background: $white;
-      flex-grow: inherit;
       flex: 0 0 31.7%;
+      flex-grow: inherit;
+      padding: 30px;
       margin: 0 30px 30px 0;
+      background: $white;
+      border-radius: 4px;
+      box-shadow: 0 5px 5px rgba(0, 0, 0, .15);
 
       &:nth-child(3n) {
         margin: 0;
@@ -120,9 +120,9 @@
     }
 
     #{$self}-link {
+      display: flex;
       flex-wrap: nowrap;
       justify-content: space-between;
-      display: flex;
     }
 
     #{$self}-icon {
@@ -132,20 +132,20 @@
     }
 
     #{$self}-name {
-      font-size: $s23;
-      padding: 0;
       align-self: center;
+      padding: 0;
+      font-size: $s23;
     }
 
     #{$self}-topics {
-      justify-content: flex-start;
       align-self: center;
+      justify-content: flex-start;
     }
 
     #{$self}-right {
-      text-align: left;
       flex: 0 0 60%;
       max-width: 200px;
+      text-align: left;
     }
   }
 }

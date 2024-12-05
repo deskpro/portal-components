@@ -1,12 +1,12 @@
 @include media-breakpoint-down(sm) {
   .dp-po-subscribe {
-    $self: '.dp-po-subscribe';
+    $self: ".dp-po-subscribe";
     margin: 0;
 
     &-large {
       #{$self}-btn {
-        font-size: $s15;
         padding: 4px 10px;
+        font-size: $s15;
 
         .dp-po-icon {
           .fa-check {
@@ -14,9 +14,9 @@
             font-size: 14px;
           }
           &.fa-angle-down {
-            font-size: 18px;
             top: 5px;
             right: 5px;
+            font-size: 18px;
           }
         }
       }

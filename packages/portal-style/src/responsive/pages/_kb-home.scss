@@ -5,17 +5,17 @@
     }
 
     &-comments {
-      margin-left: 10px;
       position: relative;
       padding-left: 10px;
+      margin-left: 10px;
 
-      &:before {
-        content: '';
+      &::before {
         position: absolute;
-        left: 0;
-        height: 100%;
-        width: 1px;
         top: 2px;
+        left: 0;
+        width: 1px;
+        height: 100%;
+        content: "";
         background: $grey;
       }
     }
@@ -30,11 +30,11 @@
 
     &-linkauthor {
       strong {
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
         display: block;
         max-width: 80px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
     }
 

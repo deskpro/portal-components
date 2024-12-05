@@ -1,6 +1,6 @@
 @include media-breakpoint-down(sm) {
   .dp-po-profile-activity {
-    $self: '.dp-po-profile-activity';
+    $self: ".dp-po-profile-activity";
 
     &-desc {
       padding: 0;

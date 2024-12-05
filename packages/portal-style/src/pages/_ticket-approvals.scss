@@ -1,5 +1,5 @@
 .dp-po-tickets-approvals {
-  $self: '.dp-po-table';
+  $self: ".dp-po-table";
 
   #{$self}-cell {
     min-height: 61px;
@@ -21,23 +21,23 @@
     }
 
     &-initials {
-      display:inline-block;
+      display: inline-block;
       width: 30px;
       height: 30px;
+      line-height: 25px;
+      color: $grey;
+      text-align: center;
       border: 2px solid $grey;
       border-radius: 15px;
-      line-height: 25px;
-      text-align: center;
-      color: $grey;
 
       &-danger {
-        border-color: $danger !important;
         color: $danger !important;
+        border-color: $danger !important;
       }
 
       &-success {
-        border-color: $success !important;
         color: $success !important;
+        border-color: $success !important;
       }
     }
 

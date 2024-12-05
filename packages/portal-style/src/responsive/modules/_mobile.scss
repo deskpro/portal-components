@@ -2,15 +2,15 @@
   .dp-po-mobile {
     &-collapse {
       position: relative;
-      border-bottom: 1px solid $grey-light;
       padding-bottom: 10px;
       cursor: pointer;
+      border-bottom: 1px solid $grey-light;
 
       .dp-po-icon {
         position: absolute;
-        font-size: 30px;
-        right: 0;
         top: 0;
+        right: 0;
+        font-size: 30px;
         line-height: 1;
         color: $brand-primary;
       }

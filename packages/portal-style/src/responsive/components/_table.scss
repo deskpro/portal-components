@@ -1,7 +1,7 @@
 @include media-breakpoint-down(sm) {
   .dp-po-table {
-    $self: '.dp-po-table';
-    margin: 20px 0px 0;
+    $self: ".dp-po-table";
+    margin: 20px 0 0;
 
     &-row {
       display: block;
@@ -22,8 +22,8 @@
     }
 
     &-cell {
-      padding: 2px 0;
       display: block;
+      padding: 2px 0;
       overflow: auto !important;
       white-space: unset;
     }

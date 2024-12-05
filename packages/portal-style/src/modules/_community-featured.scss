@@ -1,11 +1,11 @@
 .dp-po-community-featured {
   &-title {
-    @include typo($s23, 400, 'head');
+    @include typo($s23, 400, "head");
   }
 
   &-list {
-    margin: 0;
     padding: 0;
+    margin: 0;
   }
 
   &-item {
@@ -15,11 +15,11 @@
   }
 
   &-link {
-    color: $text-color;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
     margin: 0 0 0 10px;
+    overflow: hidden;
+    color: $text-color;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .dp-po-viewall {

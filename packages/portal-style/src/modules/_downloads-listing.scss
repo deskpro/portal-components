@@ -1,5 +1,5 @@
 .dp-po-download-listing {
-  $self: '.dp-po-download-listing';
+  $self: ".dp-po-download-listing";
   margin-bottom: 30px;
 
   &:last-child {
@@ -15,22 +15,20 @@
   }
 
   &-heading {
-    @include typo($s23, 400, 'head');
+    @include typo($s23, 400, "head");
     margin: 0;
   }
 
-  &-item {}
-
   &-link {
-    display: flex;
-    color: $text-color;
     position: relative;
-    border-bottom: 1px solid $grey-light;
+    display: flex;
     padding: 20px 0;
+    color: $text-color;
+    border-bottom: 1px solid $grey-light;
 
     &:hover {
-      text-decoration: none;
       color: $text-color;
+      text-decoration: none;
 
       #{$self}-title {
         color: $brand-primary;
@@ -40,11 +38,9 @@
   }
 
   &-figure {
-    margin: 0 20px 0 0;
     flex: 0 0 35px;
+    margin: 0 20px 0 0;
   }
-
-  &-icon {}
 
   &-content {
     overflow: hidden;
@@ -52,68 +48,68 @@
   }
 
   &-title {
-    @include typo($s19, 400, 'head');
+    @include typo($s19, 400, "head");
     flex: 0 0 100%;
-    text-overflow: ellipsis;
-    overflow: hidden;
     padding-right: 120px;
-    line-height: 1.2;
     margin: 0 0 4px;
+    overflow: hidden;
+    line-height: 1.2;
+    text-overflow: ellipsis;
   }
 
   .dp-po-avatar {
     display: inline-flex;
-    vertical-align: middle;
-    color: $grey;
     font-size: $s15;
+    color: $grey;
+    vertical-align: middle;
 
     strong {
-      font-weight: normal;
+      font-weight: 400;
     }
 
     &-name,
     &-image {
       width: 24px;
       height: 24px;
-      font-size: 12px;
       padding: 4px 0;
-      font-weight: normal;
+      font-size: 12px;
+      font-weight: 400;
     }
   }
 
   &-count {
-    display: inline-flex;
-    vertical-align: middle;
-    margin-left: 20px;
-    @include typo($s14, 600, 'body');
     position: relative;
+    display: inline-flex;
+    margin-left: 20px;
+    vertical-align: middle;
+    @include typo($s14, 600, "body");
 
     .dp-po-icon {
-      color: $brand-primary;
-      margin-right: 10px;
       position: relative;
+      margin-right: 10px;
+      color: $brand-primary;
     }
 
-    &:before {
-      content: '';
+    &::before {
+      position: absolute;
+      top: 0;
+      left: -12px;
       width: 1px;
       height: 100%;
+      content: "";
       background: $grey-light;
-      position: absolute;
-      left: -12px;
-      top: 0;
     }
   }
 
   &-time {
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    font-weight: 600;
-    justify-content: flex-end;
     position: absolute;
     top: 20px;
     right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 14px;
+    font-weight: 600;
 
     .dp-po-icon {
       margin-right: 7px;

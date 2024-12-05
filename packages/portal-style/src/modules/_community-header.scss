@@ -1,9 +1,9 @@
 .dp-po-community-header {
-  $self: '.dp-po-community-header';
-  border: 1px solid $grey-light;
+  $self: ".dp-po-community-header";
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border: 1px solid $grey-light;
   border-left: none;
   box-shadow: 0 5px 5px rgba(0, 0, 0, .15);
 
@@ -14,27 +14,26 @@
 
     input[type="text"] {
       width: 100%;
-      background: $white;
-      border: 1px solid $grey-light;
-      border-radius: 4px;
       padding: 10px 50px;
       font-size: $p2-font-size;
       color: $grey-dark;
+      background: $white;
+      border: 1px solid $grey-light;
+      border-radius: 4px;
       outline: none;
     }
 
     button[type="submit"] {
       position: absolute;
-      border: none;
-      height: 32px;
-      left: 5px;
-      position: absolute;
       top: calc(50% - 16px);
+      left: 5px;
       width: 32px;
-      font-size: 20px;
+      height: 32px;
       padding: 0;
+      font-size: 20px;
       color: $brand-primary;
       background-color: $white;
+      border: none;
     }
   }
 
@@ -44,39 +43,39 @@
     margin-left: 70px;
 
     &-link {
-      border: 1px solid $grey-light;
-      color: $grey-dark;
-      width: 35px;
-      height: 35px;
-      font-size: 26px;
       display: flex;
       align-items: center;
       justify-content: center;
+      width: 35px;
+      height: 35px;
       margin-left: -1px;
+      font-size: 26px;
+      color: $grey-dark;
+      border: 1px solid $grey-light;
 
       &.active,
       &:hover {
-        border-color: $brand-primary;
-        background: $info-light;
-        color: $brand-primary;
         position: relative;
+        color: $brand-primary;
+        background: $info-light;
+        border-color: $brand-primary;
       }
     }
 
     &-compact {
-      border-bottom-left-radius: 4px;
       border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
     }
 
     &-expanded {
-      border-bottom-right-radius: 4px;
       border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
     }
   }
 
   &-sort {
-    font-size: 24px;
     margin: 0 30px;
+    font-size: 24px;
 
     .dropdown-menu {
       width: 280px;
@@ -97,8 +96,8 @@
 
       &.active {
         .dp-po-icon {
-          color: $white;
           display: block;
+          color: $white;
         }
       }
     }
@@ -107,14 +106,14 @@
 
   &-filter {
     &-link {
-      @include typo($s19, 400, 'head');
-      color: $grey-darkest;
+      @include typo($s19, 400, "head");
       display: flex;
       align-items: center;
+      color: $grey-darkest;
 
       &:hover {
-        text-decoration: none;
         color: $brand-primary;
+        text-decoration: none;
       }
 
       .dp-po-icon {
@@ -123,8 +122,8 @@
       }
 
       span {
-        color: $brand-primary;
         margin-left: 6px;
+        color: $brand-primary;
       }
     }
 
@@ -133,16 +132,16 @@
     }
 
     &-dropdown {
-      padding: 20px;
       min-width: 260px;
+      padding: 20px;
 
       &-title {
-        @include typo($s15, 500, 'head');
+        @include typo($s15, 500, "head");
       }
 
       &-list {
-        margin: 0;
         padding: 0;
+        margin: 0;
 
         .badge {
           min-width: 130px;
@@ -155,11 +154,11 @@
       }
 
       &-sublist {
-        margin: 0;
         padding: 0 0 0 30px;
+        margin: 0;
 
-        .dp-po-form-check label:after,
-        .dp-po-form-check label:before {
+        .dp-po-form-check label::after,
+        .dp-po-form-check label::before {
           top: 4px;
         }
       }
@@ -172,8 +171,6 @@
         .dp-po-icon {
           margin-right: 10px;
         }
-
-        &:hover {}
       }
 
       .dp-po-form-check .dp-po-icon {
@@ -190,7 +187,7 @@
   }
 
   &-notabs {
-    border: 1px solid $grey-light;
     padding: 10px 0;
+    border: 1px solid $grey-light;
   }
 }

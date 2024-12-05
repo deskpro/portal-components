@@ -4,22 +4,22 @@
   }
 
   &-content {
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    border: none;
     padding: 30px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .15);
   }
 
   &-header {
     padding: 0;
-    border-bottom: 2px solid $grey-light;
     margin: 0 0 20px;
+    border-bottom: 2px solid $grey-light;
   }
 
   &-title {
-    @include typo($s23, 400, 'head');
-    margin: 0 0 20px;
+    @include typo($s23, 400, "head");
     padding: 0;
+    margin: 0 0 20px;
   }
 
   &-body {
@@ -27,8 +27,8 @@
   }
 
   &-footer {
+    justify-content: flex-start;
     padding: 0;
     border: none;
-    justify-content: flex-start;
   }
 }

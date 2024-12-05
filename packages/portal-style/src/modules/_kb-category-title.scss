@@ -1,14 +1,14 @@
 .dp-po-category-title {
   &-icon {
-    background: $grey-lightest;
-    width: 58px;
-    height: 58px;
-    border-radius: 50%;
-    font-size: 26px;
+    display: flex;
     align-items: center;
     justify-content: center;
-    display: flex;
+    width: 58px;
+    height: 58px;
     margin: 0 20px 0 0;
+    font-size: 26px;
+    background: $grey-lightest;
+    border-radius: 50%;
     .dp-po-icon {
       height: 26px;
       img {
@@ -19,9 +19,9 @@
   }
 
   &-text {
-    @include typo($s23, 400, 'head');
-    color: $brand-primary;
+    @include typo($s23, 400, "head");
     margin: 0;
+    color: $brand-primary;
 
     span {
       font-size: $s19;

@@ -1,17 +1,17 @@
 .dp-po-community-view {
-  $self: '.dp-po-community-view';
+  $self: ".dp-po-community-view";
 
   &-item {
     display: flex;
-    border-top: 1px solid $grey-light;
-    padding: 17px 0;
     flex-wrap: wrap;
+    padding: 17px 0;
+    border-top: 1px solid $grey-light;
 
     &-head {
-      border: none;
       padding: 0;
-      @include typo($s17, 500, 'head');
       color: $grey-dark;
+      border: none;
+      @include typo($s17, 500, "head");
 
       #{$self}-activity {
         text-align: center;
@@ -29,42 +29,42 @@
   }
 
   &-title {
-    flex: 0 0 calc(100% - 530px);
-    overflow: hidden;
     display: flex;
+    flex: 0 0 calc(100% - 530px);
     flex-wrap: wrap;
     align-items: center;
+    overflow: hidden;
 
     .dp-po-avatar {
 
       &-image,
       &-name {
+        display: inline-block;
         width: 24px;
         height: 24px;
-        font-size: 12px;
         padding: 4px 0;
-        font-weight: normal;
-        display: inline-block;
+        font-size: 12px;
+        font-weight: 400;
       }
     }
   }
 
   &-link {
     display: block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
     flex: 0 0 100%;
     margin-bottom: 10px;
-    @include typo($s19, 400, 'head');
+    overflow: hidden;
     color: $grey-darkest;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    @include typo($s19, 400, "head");
   }
 
   &-time {
-    font-size: $s12;
-    margin-left: 10px;
     position: relative;
     top: 2px;
+    margin-left: 10px;
+    font-size: $s12;
   }
 
   &-status {
@@ -85,18 +85,18 @@
 
     &-list {
       display: flex;
-      margin: 0;
-      padding: 0;
       flex-direction: row-reverse;
+      padding: 0;
+      margin: 0;
     }
 
     &-item {
       display: block;
-      list-style: none;
+      flex: 0 0 34px;
       font-size: $s12;
 
       text-align: center;
-      flex: 0 0 34px;
+      list-style: none;
 
       &:first-child {
         margin-right: auto;
@@ -104,36 +104,36 @@
     }
 
     &-image {
-      border-radius: 50%;
+      display: inline-block;
       width: 40px;
       height: 40px;
       margin-bottom: 8px;
-      border: 5px solid $white;
-      display: inline-block;
       background-size: cover;
+      border: 5px solid $white;
+      border-radius: 50%;
     }
 
     &-name {
-      border-radius: 50%;
+      display: inline-block;
       width: 40px;
       height: 40px;
-      margin-bottom: 8px;
-      border: 5px solid $white;
-      display: inline-block;
-      background: var(--brand-primary-l-350);
-      color: $grey-darkest;
-      font-weight: normal;
       padding: 7px 0;
-      text-align: center;
+      margin-bottom: 8px;
       font-size: $s12;
+      font-weight: 400;
+      color: $grey-darkest;
+      text-align: center;
+      background: var(--brand-primary-l-350);
+      border: 5px solid $white;
+      border-radius: 50%;
     }
 
 
     &-link {
-      color: $grey-dark;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      color: $grey-dark;
 
       &:hover {
         text-decoration: none;
@@ -143,14 +143,14 @@
           position: relative;
           z-index: 10;
 
-          &:before {
-            content: " ";
+          &::before {
             position: absolute;
-            z-index: -1;
             top: -2px;
-            left: -2px;
             right: -2px;
             bottom: -2px;
+            left: -2px;
+            z-index: -1;
+            content: " ";
             border: 2px solid $brand-primary;
             border-radius: 50%;
           }
@@ -161,20 +161,20 @@
   }
 
   &-official {
-    flex: 0 0 calc(100% - 70px);
     position: relative;
+    flex: 0 0 calc(100% - 70px);
+    padding: 10px;
+    margin-top: 15px;
+    margin-left: 70px;
     background: $grey-lightest;
     border-radius: 4px;
-    padding: 10px;
-    margin-left: 70px;
-    margin-top: 15px;
 
     &-time {
       position: absolute;
-      right: 10px;
       top: 10px;
-      color: $grey-dark;
+      right: 10px;
       font-size: $s15;
+      color: $grey-dark;
     }
 
     &-wrap {
@@ -189,20 +189,20 @@
     }
 
     &-author {
-      border-radius: 50%;
       margin-top: 12px;
+      border-radius: 50%;
     }
 
     &-title {
       margin: 0;
-      @include typo($s17, 400, 'head');
+      @include typo($s17, 400, "head");
       color: $grey-dark;
     }
 
     &-response {
+      margin: 10px 0 0;
       font-size: $s15;
       line-height: 1.5;
-      margin: 10px 0 0;
 
     }
   }
@@ -225,9 +225,9 @@
     }
 
     #{$self}-office {
+      position: relative;
       flex: 0 0 49px;
       text-align: center;
-      position: relative;
 
       img {
         max-width: 25px;
@@ -235,53 +235,53 @@
 
       &-reply {
         position: absolute;
-        background: $white;
-        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
-        border-radius: 2px;
-        border: 1px solid $grey-lighter;
-        width: 500px;
         z-index: 1;
-        text-align: left;
+        width: 500px;
         padding: 15px;
+        text-align: left;
+        background: $white;
+        border: 1px solid $grey-lighter;
+        border-radius: 2px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, .15);
 
         &-title {
-          @include typo($s15, 500, 'head');
+          @include typo($s15, 500, "head");
         }
 
         &-desc {
+          margin: 0 0 10px;
           font-size: $s16;
           line-height: 1.5;
-          margin: 0 0 10px;
         }
 
         &-list {
-          margin: 0;
-          padding: 0;
           display: flex;
           align-items: center;
           justify-content: flex-end;
+          padding: 0;
+          margin: 0;
         }
 
         &-item {
-          list-style: none;
           position: relative;
-          font-size: $s16;
           margin: 0 0 0 20px;
+          font-size: $s16;
+          list-style: none;
 
-          &:after {
-            content: '';
+          &::after {
+            position: absolute;
+            top: 0;
+            right: -10px;
             width: 1px;
             height: 100%;
-            position: absolute;
+            content: "";
             background: $grey-light;
-            right: -10px;
-            top: 0;
           }
 
           &:last-child {
             color: $grey;
 
-            &:after {
+            &::after {
               display: none;
             }
           }
@@ -293,12 +293,10 @@
       margin: 0;
     }
 
-    #{$self}-comments {}
-
     #{$self}-author {
       flex: 0 0 70px;
-      text-align: center;
       height: 30px;
+      text-align: center;
 
       .dp-po-avatar {
         justify-content: center;
@@ -327,8 +325,6 @@
     #{$self}-activity {
       flex: 0 0 130px;
 
-      &-list {}
-
       &-item {
         flex: inherit;
 
@@ -348,8 +344,8 @@
 
   &-statuschange {
     #{$self}-title {
-      width: calc(100% - 620px);
       flex: 0 0 auto;
+      width: calc(100% - 620px);
     }
 
     #{$self}-status {
@@ -357,21 +353,21 @@
     }
 
     #{$self}-official {
-      margin-left: 0;
       flex: 0 0 100%;
+      margin-left: 0;
     }
   }
 
   .no-data {
-    text-align: center;
     display: block;
     width: 100%;
-    font-size: $s23;
-    border-top: 1px solid $grey-light;
     padding-top: 27px;
+    font-size: $s23;
+    text-align: center;
+    border-top: 1px solid $grey-light;
     .dp-po-icon {
-      color: $danger;
       margin-right: 6px;
+      color: $danger;
       vertical-align: -4px;
     }
   }
@@ -388,7 +384,7 @@
 }
 
 @media (max-width: 576px) {
-.community-flex-container {
-  flex-direction: column;
-}
+  .community-flex-container {
+    flex-direction: column;
+  }
 }

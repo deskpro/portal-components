@@ -1,12 +1,12 @@
 @include media-breakpoint-down(sm) {
   .dp-po-community-header-mobile {
-    border-top: 1px solid $grey-light;
-    border-bottom: 1px solid $grey-light;
     display: flex;
-    padding: 10px 0;
     align-items: center;
     justify-content: space-between;
+    padding: 10px 0;
     margin-bottom: 20px;
+    border-top: 1px solid $grey-light;
+    border-bottom: 1px solid $grey-light;
 
     &-left,
     &-right {

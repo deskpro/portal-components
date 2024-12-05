@@ -1,18 +1,18 @@
 @include media-breakpoint-down(sm) {
   .dp-po-search {
-    background: none;
     height: auto;
     padding: 15px 10px;
+    background: none;
     border-bottom: 1px solid $grey-lighter;
 
     &-form {
       position: relative;
 
       input[type="search"] {
-        border: 1px solid $grey;
-        background: $white;
         padding: 13px 5px 13px 41px;
         font-size: $s18;
+        background: $white;
+        border: 1px solid $grey;
       }
 
       button[type="submit"] {
@@ -20,9 +20,9 @@
       }
 
       label {
-        font-size: 22px;
-        width: 22px;
         left: 10px;
+        width: 22px;
+        font-size: 22px;
         svg {
           vertical-align: -7px;
         }
@@ -30,11 +30,11 @@
     }
 
     &-hint {
-      box-shadow: none;
+      width: auto;
+      padding: 10px 5px;
       border: none;
       border-radius: 0;
-      padding: 10px 5px;
-      width: auto;
+      box-shadow: none;
 
       &-header {
         display: none;

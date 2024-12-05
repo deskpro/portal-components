@@ -32,8 +32,6 @@
       margin-bottom: 50px;
     }
 
-    &-guides {}
-
     .dp-po-title {
       display: flex;
       border-bottom: 1px solid $grey-light;
@@ -50,18 +48,16 @@
   }
 
   .dp-po-community-channel-tags {
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    left: 15px;
+    z-index: 2;
+    display: none;
+    width: calc(100% - 30px);
+    padding: 15px;
+    background: $white;
     border: 1px solid $brand-primary;
     border-radius: 4px;
-    padding: 15px;
-    position: absolute;
-    z-index: 2;
-    width: calc(100% - 30px);
-    background: $white;
-    left: 15px;
-    display: none;
-
-    &-list {}
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .15);
 
     &-item {
       display: block;
@@ -73,36 +69,36 @@
     }
 
     &-link {
-      border-radius: 0;
-      background: none;
       padding: 0;
-      border: none;
       font-size: $s18;
+      background: none;
+      border: none;
+      border-radius: 0;
 
       &:hover {
-        background: none;
         color: $brand-primary;
         text-decoration: underline;
+        background: none;
       }
     }
 
     &-count {
-      color: $grey-darkest;
       font-size: $s15;
+      color: $grey-darkest;
     }
   }
 
   .dp-po-mobile-community-tags {
     position: absolute;
-    right: 15px;
     top: 8px;
+    right: 15px;
     display: block;
 
     &-link {
       display: inline-flex;
-      @include typo($s16, 700, 'body');
-      align-items: center;
       flex-wrap: nowrap;
+      align-items: center;
+      @include typo($s16, 700, "body");
 
       .dp-po-icon {
         margin-right: 5px;

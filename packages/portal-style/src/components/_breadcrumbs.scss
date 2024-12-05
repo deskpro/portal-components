@@ -3,61 +3,61 @@
 
   .container {
     height: 40px;
-    overflow: hidden;
     margin: -2px auto;
+    overflow: hidden;
   }
 }
 
 .breadcrumb {
-  padding: 0;
-  background: none;
   flex-wrap: nowrap;
   width: 100%;
+  padding: 0;
+  background: none;
 
   &-item {
-    color: $breadcrumb-inactive-color;
-    font-weight: bold;
-    font-size: $p1-font-size;
     position: relative;
     display: flex;
-    align-items: center;
-    margin: 0 15px;
-    min-width: 40px;
     flex-shrink: 2;
+    align-items: center;
+    min-width: 40px;
+    margin: 0 15px;
+    font-size: $p1-font-size;
+    font-weight: 700;
+    color: $breadcrumb-inactive-color;
 
     &:first-child {
       margin-left: 0;
     }
 
     a {
-      padding: 11px 0;
       display: inline-block;
-      text-decoration: none;
-      color: $breadcrumb-inactive-color;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+      padding: 11px 0;
       overflow: hidden;
       font-size: $s15;
+      color: $breadcrumb-inactive-color;
+      text-decoration: none;
+      text-overflow: ellipsis;
+      white-space: nowrap;
 
-      &:after {
-        content: '';
-        width: 100%;
-        height: 2px;
-        background: $brand-primary;
+      &::after {
         position: absolute;
         bottom: 0;
         left: 0;
+        width: 100%;
+        height: 2px;
+        content: "";
+        background: $brand-primary;
         opacity: 0;
       }
     }
 
     .dp-po-icon {
-      font-size: 25px;
-      margin: 0;
       position: absolute;
+      top: 5px;
       left: -20px;
       height: 32px;
-      top: 5px;
+      margin: 0;
+      font-size: 25px;
     }
 
   }
@@ -66,15 +66,15 @@
     color: $breadcrumb-hover-color;
 
     a {
-      color: $breadcrumb-hover-color;
       position: relative;
+      color: $breadcrumb-hover-color;
     }
 
     .dp-po-icon {
       color: $breadcrumb-inactive-color;
     }
 
-    &:before {
+    &::before {
       color: $brand-primary;
     }
   }
@@ -84,15 +84,15 @@
     color: $breadcrumb-active-color;
 
     a {
-      color: $breadcrumb-active-color;
       position: relative;
+      color: $breadcrumb-active-color;
     }
 
     .dp-po-icon {
       color: $brand-primary;
     }
 
-    :after {
+    ::after {
       opacity: 1;
     }
   }
@@ -109,15 +109,15 @@
       vertical-align: -7px;
     }
 
-    &:after {
+    &::after {
+      position: absolute;
+      top: -1px;
+      right: -1px;
+      display: block;
       width: 2px;
       height: 36px;
-      content: '';
+      content: "";
       background: $grey-light;
-      right: -1px;
-      top: -1px;
-      display: block;
-      position: absolute;
     }
   }
 }

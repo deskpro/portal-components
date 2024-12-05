@@ -2,15 +2,15 @@
   .dp-po-footer {
     &-copyright {
 
-      &:before,
-      &:after {
-        width: 70px;
+      &::before,
+      &::after {
         left: -80px;
+        width: 70px;
       }
 
-      &:after {
-        left: auto;
+      &::after {
         right: -80px;
+        left: auto;
       }
     }
   }

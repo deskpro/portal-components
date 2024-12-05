@@ -4,33 +4,33 @@
   border-top: 1.5px solid $grey-light;
 
   &-copyright {
+    position: relative;
     display: inline-flex;
+    align-items: center;
     justify-content: center;
     height: 40px;
-    align-items: center;
-    position: relative;
 
-    &:before,
-    &:after {
-      content: "";
-      width: 100px;
+    &::before,
+    &::after {
       position: absolute;
-      height: 2px;
-      background: $grey-light;
-      left: -120px;
       top: 19px;
+      left: -120px;
+      width: 100px;
+      height: 2px;
+      content: "";
+      background: $grey-light;
     }
 
-    &:after {
-      left: auto;
+    &::after {
       right: -120px;
+      left: auto;
     }
   }
 
   &-powered {
+    margin-right: 10px;
     font-size: 12px;
     color: $grey-dark;
-    margin-right: 10px;
   }
 
   &-deskpro {

@@ -1,15 +1,15 @@
 .dp-po-columnfilter {
-  $self: '.dp-po-columnfilter';
+  $self: ".dp-po-columnfilter";
 
   &-link {
-    font-size: 30px;
     display: inline-block;
-    text-align: center;
+    font-size: 30px;
     color: $grey-light;
+    text-align: center;
 
     &:hover {
-      text-decoration: none;
       color: $brand-primary;
+      text-decoration: none;
     }
   }
 
@@ -19,11 +19,9 @@
     }
   }
 
-  &-dropdown {}
-
   &-list {
-    margin: 0;
     padding: 10px 20px;
+    margin: 0;
   }
 
   &-item {

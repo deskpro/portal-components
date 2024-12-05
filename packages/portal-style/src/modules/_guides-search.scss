@@ -1,20 +1,20 @@
 .dp-po-guides-search {
-  $self: '.dp-po-guides-search';
+  $self: ".dp-po-guides-search";
   height: 100%;
 
   &-form {
-    margin-bottom: 20px;
     position: sticky;
     width: 100%;
+    margin-bottom: 20px;
 
     input[type="search"] {
       width: 100%;
-      background: $white;
-      border: 1px solid $grey-light;
-      border-radius: 4px;
       padding: 11px 10px 12px 48px;
       font-size: $s17;
       color: $grey-dark;
+      background: $white;
+      border: 1px solid $grey-light;
+      border-radius: 4px;
       outline: none;
 
       &:hover {
@@ -28,15 +28,15 @@
 
     button[type="submit"] {
       position: absolute;
-      border: none;
-      height: 32px;
-      left: 13px;
       top: calc(50% - 16px);
+      left: 13px;
       width: 32px;
-      font-size: 18px;
+      height: 32px;
       padding: 0;
+      font-size: 18px;
       color: $brand-primary;
       background-color: $white;
+      border: none;
 
       svg {
         vertical-align: -1px;
@@ -47,13 +47,13 @@
 
   &-block {
     padding: 0;
-    background: white;
+    background: #fff;
+    border: 1px solid #d3d6d7;
     border-radius: 4px;
-    border: 1px solid #D3D6D7;
   }
 
   &-main {
-    margin: 20px 20px;
+    margin: 20px;
     #{$self}-content-list {
       padding: 0;
     }
@@ -62,55 +62,55 @@
   &-content {
     margin: 0 20px;
     &-title {
-      color: $grey-darkest;
-      border-bottom: 1px solid $brand-primary;
-      text-transform: uppercase;
-      cursor: pointer;
       display: flex;
       flex-wrap: nowrap;
       align-items: center;
       justify-content: flex-start;
-
-      @include typo($s17, 500, 'head');
-      padding: 11px 10px 11px 0;
-      border-radius: 2px;
       max-width: 100%;
+      padding: 11px 10px 11px 0;
+      color: $grey-darkest;
+      text-transform: uppercase;
+      cursor: pointer;
+      border-bottom: 1px solid $brand-primary;
+      border-radius: 2px;
+
+      @include typo($s17, 500, "head");
       .title {
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
         display: inline-block;
         max-width: calc(100% - 14px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
 
       .guide-icon {
-        border-radius: 50%;
-        flex-shrink: 0;
-        width: 20px;
-        height: 20px;
-        color: white;
-        margin-bottom: 0;
         display: inline-flex;
+        flex-shrink: 0;
         align-items: center;
         justify-content: center;
+        width: 20px;
+        height: 20px;
         margin-right: 10px;
+        margin-bottom: 0;
         font-size: 12px;
+        color: #fff;
+        border-radius: 50%;
         svg {
           width: 12px;
           background: none !important;
         }
         img {
-          border-radius: 50%;
           width: 100%;
+          border-radius: 50%;
         }
       }
 
       .dp-po-icon.fa-angle-down {
-        color: $brand-primary;
+        margin-left: 12px;
         font-size: 20px;
         line-height: 0;
+        color: $brand-primary;
         transform: rotate(180deg);
-        margin-left: 12px;
       }
 
       &.collapsed {
@@ -119,7 +119,7 @@
           border-bottom-color: $grey-light;
 
           .guide-icon {
-            background-color: #A9B0B0 !important;
+            background-color: #a9b0b0 !important;
             svg.svg-inline--fa {
               background: none !important;
             }
@@ -132,24 +132,24 @@
       }
 
       &:hover {
-        text-decoration: none;
         color: $brand-primary;
+        text-decoration: none;
       }
     }
 
     &-list {
-      margin: 0;
       padding: 13px 0;
+      margin: 0;
 
       .dp-po-icon {
-        margin-bottom: 0;
         display: inline-block;
         padding-right: 3px;
+        margin-bottom: 0;
       }
       .fa-caret-down {
         margin-left: 10px;
-        opacity: 0;
         vertical-align: 1px;
+        opacity: 0;
       }
 
       a:hover {
@@ -164,8 +164,8 @@
       }
 
       .chapter {
+        font-weight: 700;
         text-transform: uppercase;
-        font-weight: bold;
         &:hover {
           color: var(--brand-primary);
         }
@@ -173,39 +173,39 @@
     }
 
     &-item {
-      list-style: none;
-      margin-top: 10px;
-      white-space: nowrap;
-      text-overflow: ellipsis;
       max-width: 100%;
+      margin-top: 10px;
       overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      list-style: none;
     }
 
     &-link {
-      @include typo($s15, 700, 'body');
+      @include typo($s15, 700, "body");
       color: $grey-darkest;
       text-transform: uppercase;
     }
 
     &-suplist {
-      margin: 0;
       padding: 0;
+      margin: 0;
     }
 
     &-supitem {
-      list-style: none;
-      margin-top: 10px;
-      white-space: nowrap;
-      text-overflow: ellipsis;
       max-width: 100%;
+      margin-top: 10px;
       overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      list-style: none;
       &:first-child {
         margin-top: 3px;
       }
     }
 
     &-suplink {
-      @include typo($s15, 400, 'body');
+      @include typo($s15, 400, "body");
       color: $grey-darkest;
 
       &.active {
@@ -214,31 +214,31 @@
     }
 
     &-sublist {
-      margin: 0;
-      padding: 0 0 0 20px;
       //padding: 0;
       position: relative;
+      padding: 0 0 0 20px;
+      margin: 0;
 
-      &:before {
-        content: '';
+      &::before {
+        position: absolute;
+        top: 2px;
+        left: 0;
         width: 2px;
         height: calc(100% - 4px);
-        position: absolute;
-        left: 0;
-        top: 2px;
+        content: "";
         background: $grey-light;
       }
     }
 
     &-subitem {
-      list-style: none;
       margin-top: 10px;
+      list-style: none;
     }
 
     &-sublink {
-      @include typo($s15, 400, 'body');
-      color: $grey-darkest;
+      @include typo($s15, 400, "body");
       position: relative;
+      color: $grey-darkest;
 
       &.active {
         color: $brand-primary;
@@ -246,45 +246,45 @@
     }
 
     &-underlist {
-      margin: 0;
-      padding: 0 0 0 20px;
       position: relative;
+      padding: 0 0 0 20px;
+      margin: 0;
 
-      &:before {
-        content: '';
+      &::before {
+        position: absolute;
+        top: 2px;
+        left: 0;
         width: 2px;
         height: calc(100% - 4px);
-        position: absolute;
-        left: 0;
-        top: 2px;
+        content: "";
         background: $grey-light;
       }
     }
 
     &-underitem {
-      list-style: none;
       margin-top: 10px;
+      list-style: none;
     }
 
     &-underlink {
-      @include typo($s15, 400, 'body');
-      color: $grey-darkest;
+      @include typo($s15, 400, "body");
       position: relative;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      max-width: 100%;
       display: block;
+      max-width: 100%;
+      color: $grey-darkest;
+      text-overflow: ellipsis;
+      white-space: nowrap;
 
       &.active {
         color: $brand-primary;
 
-        &:before {
-          content: '';
+        &::before {
+          position: absolute;
+          top: 2px;
+          left: -20px;
           width: 2px;
           height: calc(100% - 4px);
-          position: absolute;
-          left: -20px;
-          top: 2px;
+          content: "";
           background: $brand-primary;
         }
       }
@@ -297,33 +297,33 @@
     }
   }
   &-no-results {
-    color: $grey-darkest;
+    margin: 12px 20px;
     font-family: $font-family-sans-serif;
     font-size: 15px;
-    margin: 12px 20px;
+    color: $grey-darkest;
     span {
-      white-space: nowrap;
-      text-overflow: ellipsis;
       overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
     .fa-search {
-      color: $danger;
       width: 16px;
       margin-right: 10px;
+      color: $danger;
       vertical-align: -2px;
     }
   }
   mark.filter-highlight {
     padding: 0;
-    background-color: inherit;
     color: $brand-primary;
+    background-color: inherit;
   }
 }
 
 .dp-po-guide-topic-list-item {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  max-width: 100%;
   display: inline-block;
+  max-width: 100%;
   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

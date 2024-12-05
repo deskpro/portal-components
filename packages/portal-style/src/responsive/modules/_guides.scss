@@ -1,13 +1,13 @@
 @include media-breakpoint-down(sm) {
   .dp-po-guides {
-    $self: '.dp-po-guides';
+    $self: ".dp-po-guides";
     &-card {
       box-shadow: 0 5px 5px rgba(0, 0, 0, .15);
     }
 
     &-section {
       padding-top: 0;
-      background: white;
+      background: #fff;
     }
 
     &-link {
@@ -16,9 +16,9 @@
     }
 
     &-icon {
+      flex: 0 0 60px;
       width: 60px;
       height: 60px;
-      flex: 0 0 60px;
       margin-right: 20px;
 
       .dp-po-icon {
@@ -32,8 +32,8 @@
     }
 
     &-title {
-      margin: 0;
       flex: 0 0 calc(100% - 80px);
+      margin: 0;
       text-align: left;
     }
 
@@ -65,7 +65,7 @@
 
 
       #{$self}-meta {
-        & > span {
+        > span {
           display: block;
           font-size: 12px;
         }
@@ -82,10 +82,10 @@
 
     &-mobile-menu {
       width: 100%;
-      border-bottom: 1px solid $grey-light;
       padding: 18px 0;
       margin-bottom: 20px;
       color: $grey-dark;
+      border-bottom: 1px solid $grey-light;
       .menu {
         cursor: pointer;
       }
@@ -93,22 +93,22 @@
 
     .page-list {
       position: fixed;
-      top:0;
-      left: 14px;
+      top: 0;
       right: 0;
       bottom: 0;
+      left: 14px;
       z-index: 1000;
       width: calc(100vw - 14px);
-      background: white;
       padding: 86px 10px 10px;
-      box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.1);
+      background: #fff;
+      box-shadow: -5px 0 10px rgba(0, 0, 0, .1);
       .close-menu {
         position: absolute;
         top: 10px;
         right: 1px;
-        cursor: pointer;
-        font-size: 17px;
         padding: 20px;
+        font-size: 17px;
+        cursor: pointer;
       }
       &.mobile-visible {
         display: block !important;
@@ -117,8 +117,8 @@
         width: 100% !important;
 
         &-block {
-          border: none;
           padding: 0;
+          border: none;
         }
       }
     }
@@ -132,8 +132,8 @@
 
     &-subtopic {
       flex-basis: 100%;
-      background: $grey-lightest;
       margin: 0 0 10px;
+      background: $grey-lightest;
 
       &-dates {
         line-height: 180%;

@@ -1,22 +1,22 @@
 @include media-breakpoint-down(sm) {
   .dp-po-category-title {
     .dp-po-icon {
-      background: $grey-lighter;
-      margin-right: 10px;
       flex: 0 0 50px;
-      border-radius: 50px;
-      margin-bottom: 0;
       height: 50px;
+      margin-right: 10px;
+      margin-bottom: 0;
+      background: $grey-lighter;
+      border-radius: 50px;
       svg {
-        height: 24px;
         width: 24px;
+        height: 24px;
         margin: 13px;
       }
     }
 
     &-icon {
-      height: 50px;
       width: 50px;
+      height: 50px;
       margin-right: 8px;
     }
 
@@ -25,17 +25,17 @@
       color: $grey-darkest;
 
       span {
-        font-weight: 500;
         font-size: $s16;
+        font-weight: 500;
       }
     }
 
     &-link {
       display: flex;
+      padding-right: 60px;
+      margin: 15px 0 0;
       background: $grey-lightest;
       border-radius: 50px;
-      margin: 15px 0 0;
-      padding-right: 60px;
 
       &:hover {
         text-decoration: none;
@@ -48,8 +48,8 @@
 
     &-expand {
       position: absolute;
-      right: 15px;
       top: 0;
+      right: 15px;
       z-index: 1;
       display: block;
       width: 50px;
@@ -58,8 +58,8 @@
       vertical-align: bottom;
 
       .dp-po-icon {
-        margin: 0;
         width: 15px;
+        margin: 0;
         background: $grey-lightest;
       }
 

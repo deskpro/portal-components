@@ -1,22 +1,22 @@
 .dp-po-tooltip {
-  background: $info-light;
   position: relative;
   padding: 3px 5px;
+  background: $info-light;
 }
 
 &-tip {
-  background: $white;
-  border-radius: 4px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
-  padding: 10px;
+  z-index: 2;
+  display: inline-block;
   max-width: 250px;
-  border: 1px solid $grey-light;
+  padding: 10px;
   font-family: $font-family-sans-serif;
-  color: $text-color;
   font-size: 12px;
   line-height: 1.5;
-  display: inline-block;
-  z-index: 2;
+  color: $text-color;
+  background: $white;
+  border: 1px solid $grey-light;
+  border-radius: 4px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, .15);
 
   p {
     margin: 0 0 5px;

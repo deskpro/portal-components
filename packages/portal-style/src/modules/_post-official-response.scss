@@ -1,36 +1,36 @@
 .dp-po-post-official-response {
-  $self: '.dp-po-post-official-response';
+  $self: ".dp-po-post-official-response";
   margin-top: 10px;
 
-  & h3 {
-    color: #8B9293;
+  h3 {
     font-family: $headings-font-family;
     font-size: 19px;
-    font-weight: normal;
+    font-weight: 400;
     line-height: 140%;
+    color: #8b9293;
 
-    & .fa-flag-alt {
-      color: #9384BD;
-      vertical-align: -2px;
+    .fa-flag-alt {
       margin-right: 5px;
+      color: #9384bd;
+      vertical-align: -2px;
     }
   }
   &-block {
-    border: 1px solid #D3D6D7;
-    border-radius: 6px;
     padding: 12px;
+    border: 1px solid #d3d6d7;
+    border-radius: 6px;
 
     p {
       padding-left: 40px;
     }
   }
   &-avatar {
-    font-size: 18px;
     margin-bottom: 10px;
+    font-size: 18px;
 
     img {
-      height: 30px;
       width: 30px;
+      height: 30px;
     }
   }
 }

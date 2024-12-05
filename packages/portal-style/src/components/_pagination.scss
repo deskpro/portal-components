@@ -9,35 +9,35 @@
       margin: 0 2px;
 
       .page-link {
-        border-radius: 2px;
-        border: 1px solid $grey-light;
-        color: $text-color;
+        padding: 4px 8px;
         font-size: $p4-font-size;
         font-weight: 600;
-        padding: 4px 8px;
+        color: $text-color;
+        border: 1px solid $grey-light;
+        border-radius: 2px;
       }
 
       &.active {
-        border-radius: 2px;
-        color: $text-color;
+        padding: 4px 8px;
         font-size: $p4-font-size;
         font-weight: 600;
-        padding: 4px 8px;
-        background: $brand-primary;
+        color: $text-color;
         color: $white;
+        background: $brand-primary;
+        border-radius: 2px;
       }
 
       &:hover {
         .page-link {
-          border-color: $grey-light;
-          background: $grey-light;
           color: $white;
+          background: $grey-light;
+          border-color: $grey-light;
         }
 
         &.page-item-dots {
           .page-link {
-            background: none;
             color: $text-color;
+            background: none;
           }
         }
       }
@@ -48,9 +48,9 @@
 
       &.page-item-dots {
         .page-link {
+          cursor: default;
           background: none;
           border: none;
-          cursor: default;
 
         }
       }
@@ -75,14 +75,14 @@
         }
 
         .page-link {
-          background: none !important;
-          border: none !important;
+          display: flex;
+          align-items: center;
+          height: 24px;
           font-size: 20px;
           line-height: 0;
-          align-items: center;
-          display: flex;
-          height: 24px;
           color: $grey;
+          background: none !important;
+          border: none !important;
         }
       }
     }
@@ -92,32 +92,32 @@
     form {
       display: flex;
       align-items: center;
-      border-left: 1px solid $grey-light;
-      font-size: $p4-font-size;
       padding: 0 0 0 10px;
+      font-size: $p4-font-size;
+      border-left: 1px solid $grey-light;
     }
 
     &-text {
-      border: 1px solid $grey-light;
-      border-radius: 2px;
       width: 34px;
-      margin-left: 10px;
       padding: 2px 5px;
-      outline: none;
+      margin-left: 10px;
       font-size: $p4-font-size;
       text-align: center;
+      border: 1px solid $grey-light;
+      border-radius: 2px;
+      outline: none;
     }
 
     &-button {
+      width: 34px;
+      padding: 2px 5px;
+      margin-left: 10px;
+      color: $white;
+      text-align: center;
       background: $grey-light;
       border: none;
-      color: $white;
-      padding: 2px 5px;
-      width: 34px;
-      text-align: center;
       border: 1px solid $grey-light;
       border-radius: 2px;
-      margin-left: 10px;
 
       &:hover {
         background: $grey;

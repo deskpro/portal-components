@@ -1,17 +1,17 @@
 .dp-po-kb-featured {
-  $self: '.dp-po-kb-featured';
+  $self: ".dp-po-kb-featured";
   margin: 0 0 40px;
 
   &-title {
-    @include typo($s23, 400, 'head');
-    padding: 0 0 16px 0;
-    border-bottom: 1px solid $grey-light;
+    @include typo($s23, 400, "head");
+    padding: 0 0 16px;
     margin: 0;
+    border-bottom: 1px solid $grey-light;
   }
 
   &-list {
-    margin: 0;
     padding: 0;
+    margin: 0;
   }
 
   &-item {
@@ -21,12 +21,12 @@
 
   &-link {
     display: block;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    color: $text-color;
     margin-top: 30px;
-    @include typo($s19, 400, 'head');
+    overflow: hidden;
+    color: $text-color;
+    text-overflow: ellipsis;
     white-space: nowrap;
+    @include typo($s19, 400, "head");
 
     &:hover {
       color: $brand-primary;
@@ -39,14 +39,14 @@
 
   &-number {
     display: inline-block;
-    margin: 0 20px 0 0;
     width: 30px;
     height: 30px;
-    vertical-align: middle;
-    padding: 4px 0px;
-    text-align: center;
-    border-radius: 50%;
-    background: $info-light;
+    padding: 4px 0;
+    margin: 0 20px 0 0;
     color: $brand-primary;
+    text-align: center;
+    vertical-align: middle;
+    background: $info-light;
+    border-radius: 50%;
   }
 }

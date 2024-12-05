@@ -4,31 +4,30 @@
 
   input[type="text"] {
     width: 100%;
-    background: $white;
-    border: 1px solid $grey-light;
-    border-radius: 4px;
     padding: 10px 50px;
     font-size: $p2-font-size;
     color: $grey-dark;
+    background: $white;
+    border: 1px solid $grey-light;
+    border-radius: 4px;
     outline: none;
   }
 
   button[type="submit"] {
     position: absolute;
-    border: none;
-    height: 32px;
-    left: 5px;
-    position: absolute;
     top: calc(50% - 16px);
+    left: 5px;
     width: 32px;
-    font-size: 20px;
+    height: 32px;
     padding: 0;
+    font-size: 20px;
     color: $brand-primary;
+    border: none;
   }
 }
 
 .dp-po-table-member {
-  $self: '.dp-po-table';
+  $self: ".dp-po-table";
 
   #{$self}-cell {
     &-large {
@@ -42,8 +41,8 @@
 
   #{$self}-message {
     .dp-po-icon {
-      color: $grey-dark;
       font-size: 20px;
+      color: $grey-dark;
 
       &:hover {
         color: $brand-primary;

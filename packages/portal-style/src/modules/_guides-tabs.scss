@@ -1,39 +1,40 @@
 .dp-po-guides-tabs {
-  $self: '.dp-po-guides-tabs';
-  background: $grey-lightest;
+  $self: ".dp-po-guides-tabs";
   min-height: 10px;
+  background: $grey-lightest;
 
   &-list {
-    margin: 0 3px;
     display: flex;
-    flex-wrap: nowrap;
-    white-space: nowrap;
-    max-width: calc(78% - 26px);
     flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    max-width: calc(78% - 26px);
+    margin: 0 3px;
+    white-space: nowrap;
   }
 
   &-item {
-    border-radius:  4px 0 0 0;
-    border: 1px solid #d3d6d7;
-    border-right-color: #FFF !important;
-    border-bottom-width: 0;
-    background: #FBFBFB;
-    display: inline-block;
-    margin: 0 0 0 -3px;
-    max-width: 315px;
-    min-width: 178px;
     position: relative;
+    display: inline-block;
     flex-shrink: 1;
+    min-width: 178px;
+    max-width: 315px;
+    margin: 0 0 0 -3px;
+    background: #fbfbfb;
+    border: 1px solid #d3d6d7;
+    border-right-color: #fff !important;
+    border-bottom-width: 0;
+    border-radius: 4px 0 0;
     &:first-child {
       margin-right: auto;
     }
-    &::before, &::after {
+    &::before,
+    &::after {
       position: absolute;
       right: -26px;
-      border-right: 26px solid transparent;
-      content: '';
       width: 0;
       height: 0;
+      content: "";
+      border-right: 26px solid transparent;
     }
     &::before {
       top: -1px;
@@ -42,52 +43,52 @@
     }
     &::after {
       top: 1px;
-      border-bottom: 65px solid #FBFBFB;
+      border-bottom: 65px solid #fbfbfb;
     }
 
     &.active {
-      background-color: #FFF;
-      border-color: #A9B0B0;
-      color: #4C4F50;
       z-index: 1;
+      color: #4c4f50;
+      background-color: #fff;
+      border-color: #a9b0b0;
       &::after {
-        border-bottom-color: #FFF;
         z-index: 1;
+        border-bottom-color: #fff;
       }
       &::before {
-        border-bottom-color: #A9B0B0;
         z-index: 1;
+        border-bottom-color: #a9b0b0;
       }
       #{$self}-link {
-        color: #4C4F50 !important;
+        color: #4c4f50 !important;
       }
     }
   }
 
   &-link {
-    @include typo($s26, 400, 'head');
-    color: #8B9293;
+    @include typo($s26, 400, "head");
     display: block;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
     width: 100%;
-    font-size: $s19;
     padding: 10px 10px 10px 20px;
+    overflow: hidden;
+    font-size: $s19;
+    color: #8b9293;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 
     .dp-po-icon {
-      width: 30px;
-      height: 30px;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      display: inline-flex;
-      background: $warning;
-      color: $white;
-      border-radius: 50%;
+      width: 30px;
+      height: 30px;
       margin-right: 5px;
       margin-bottom: 0;
       font-size: 15px;
+      color: $white;
       vertical-align: middle;
+      background: $warning;
+      border-radius: 50%;
 
       img {
         width: 100%;
@@ -101,13 +102,13 @@
   }
 
   &-image {
+    width: 100%;
+    height: 126px;
+    margin: 0;
+    background-size: cover;
     border-bottom: 2px solid $grey-light;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
-    background-size: cover;
-    height: 126px;
-    width: 100%;
-    margin: 0;
   }
 
   &-content {
@@ -120,65 +121,65 @@
     position: relative;
 
     &-list {
-      margin: 0;
-      padding: 0 20px 0 0;
       display: flex;
       align-items: center;
+      padding: 0 20px 0 0;
+      margin: 0;
     }
 
     &-item {
-      list-style: none;
       margin-left: 10px;
+      list-style: none;
     }
 
     &-link {
-      border-radius: 50%;
-      border: 1px solid $grey-light;
-      color: $grey-dark;
-      width: 40px;
-      height: 40px;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      display: inline-flex;
+      width: 40px;
+      height: 40px;
+      color: $grey-dark;
+      border: 1px solid $grey-light;
+      border-radius: 50%;
 
       &:hover {
         border-color: $brand-primary;
       }
     }
 
-    &:before {
-      content: '';
+    &::before {
+      position: absolute;
+      top: 0;
+      left: -10px;
       width: 1px;
       height: 100%;
+      content: "";
       background: $grey-light;
-      position: absolute;
-      left: -10px;
-      top: 0;
     }
   }
 
   .slick-track {
-    margin: 0;
     display: flex;
     align-items: baseline;
+    margin: 0;
   }
 
   &-arrow {
     position: absolute;
-    background: $brand-primary;
+    top: 0;
+    bottom: 0;
+    left: -21px;
     z-index: 9;
     width: 52px;
     height: 52px;
-    border-radius: 50%;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
     font-size: 30px;
     color: $white;
-    left: -21px;
-    bottom: 0;
-    top: 0;
-    margin: auto;
-    opacity: 0.9;
+    background: $brand-primary;
     border: 2px solid $brand-primary;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    opacity: .9;
 
     .dp-po-icon {
       position: relative;
@@ -186,8 +187,8 @@
     }
 
     &-right {
-      left: auto;
       right: -21px;
+      left: auto;
 
       .dp-po-icon {
         right: -1px;
@@ -196,9 +197,9 @@
     }
 
     &:hover {
+      color: $brand-primary;
       cursor: pointer;
       background: $white;
-      color: $brand-primary;
       opacity: 1;
     }
 
@@ -210,9 +211,9 @@
   &.sticky {
     #{$self}-list {
       position: fixed;
-      width: calc(100% - 30px);
       top: 30px;
       left: 15px;
+      width: calc(100% - 30px);
     }
 
     #{$self}-image {
@@ -221,35 +222,35 @@
   }
 }
 .dp-po-guides-dropdown {
-  $self: '.dp-po-guides-dropdown';
+  $self: ".dp-po-guides-dropdown";
   position: relative;
   &-button {
-    border: 0;
-    font-family: $font-family-sans-serif;
-    color: #4C4F50;
-    background: none;
-    font-size: $s23;
-    margin-bottom: 6px;
-    white-space: nowrap;
     display: flex;
     max-width: 30%;
     padding: 8px 0 3px;
+    margin-bottom: 6px;
+    font-family: $font-family-sans-serif;
+    font-size: $s23;
+    color: #4c4f50;
+    white-space: nowrap;
+    background: none;
+    border: 0;
     &:hover {
       color: var(--brand-primary);
     }
     span {
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      overflow: hidden;
       display: inline-block;
-      margin-top: 4px;
       align-self: start;
+      margin-top: 4px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
 
     .fa-angle-down {
+      margin-top: 8px;
       margin-left: 10px;
       font-size: 25px;
-      margin-top: 8px;
     }
   }
   &.opened {
@@ -259,29 +260,29 @@
   }
   &-menu {
     position: absolute;
-    display: none;
-    background: #FFFFFF;
     top: 50px;
     left: 0;
-    border: 1px solid #A9B0B0;
-    box-sizing: border-box;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-    border-radius: 4px;
-    width: 270px;
     z-index: 10;
+    box-sizing: border-box;
+    display: none;
+    width: 270px;
+    background: #fff;
+    border: 1px solid #a9b0b0;
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, .25);
 
     ul {
-      list-style: none;
-      margin: 0;
       padding: 0;
+      margin: 0;
+      list-style: none;
       li {
         display: inline;
         text-indent: 0;
         a {
-          margin-block-start: 0;
           position: relative;
-          padding-left: 65px;
           max-width: none;
+          padding-left: 65px;
+          margin-block-start: 0;
           figure {
             position: absolute;
             left: 20px;
@@ -295,39 +296,39 @@
         padding: 11px 21px 16px;
       }
       figure.dp-po-icon {
-        color: $brand-primary;
         width: 18px;
+        color: $brand-primary;
         vertical-align: 2px;
       }
     }
   }
   &-link {
-    @include typo($s18, 400, 'head');
-    color: #4C4F50;
+    @include typo($s18, 400, "head");
     display: block;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
     width: 100%;
     max-width: 270px;
-    line-height: 150%;
     padding: 10px 20px;
+    overflow: hidden;
+    line-height: 150%;
+    color: #4c4f50;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   figure.dp-po-icon {
-    margin-right: 10px;
-    color: white;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    vertical-align: -3px;
-    margin-bottom: 0;
-    font-size: 15px;
-    background: var(--warning);
     display: inline-flex;
-    justify-content: center;
+    flex-shrink: 0;
     align-items: center;
     align-self: flex-end;
-    flex-shrink: 0;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    margin-bottom: 0;
+    font-size: 15px;
+    color: #fff;
+    vertical-align: -3px;
+    background: var(--warning);
+    border-radius: 50%;
     img {
       max-width: 20px;
       max-height: 20px;

@@ -1,15 +1,15 @@
 .dp-po-news-recent {
-  $self: '.dp-po-news-recent';
+  $self: ".dp-po-news-recent";
 
   &-list {
-    margin: 0 -20px;
     padding: 0;
+    margin: 0 -20px;
   }
 
   &-item {
     display: block;
-    list-style: none;
     margin-bottom: 7px;
+    list-style: none;
 
     &:last-child {
       margin-bottom: 0;
@@ -21,9 +21,9 @@
         color: $grey-light;
 
         &-date {
-          border-color: $grey-light;
-          background: $grey-lightest;
           color: $grey;
+          background: $grey-lightest;
+          border-color: $grey-light;
         }
       }
     }
@@ -33,8 +33,8 @@
         color: $text-color;
 
         &-date {
-          background: $white;
           color: $text-color;
+          background: $white;
         }
       }
     }
@@ -43,31 +43,31 @@
   &-link {
     display: block;
     align-items: center;
-    white-space: nowrap;
-    color: $grey;
-    overflow: hidden;
-    text-overflow: ellipsis;
     padding: 3px 20px;
+    overflow: hidden;
+    color: $grey;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     @include typo($s15, 700);
 
     &-date {
-      background: $grey-lighter;
-      border: 1px solid $grey-light;
-      margin: 0 10px 0 0;
-      border-radius: 4px;
-      padding: 3px;
-      color: $grey-dark;
       display: inline-block;
       width: 60px;
+      padding: 3px;
+      margin: 0 10px 0 0;
+      color: $grey-dark;
       text-align: center;
       text-transform: uppercase;
+      background: $grey-lighter;
+      border: 1px solid $grey-light;
+      border-radius: 4px;
       @include typo($s14, 600);
     }
 
     &:hover {
-      background: $info-light;
-      text-decoration: none;
       color: $grey-dark;
+      text-decoration: none;
+      background: $info-light;
     }
   }
 }

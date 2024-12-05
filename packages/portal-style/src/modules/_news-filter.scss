@@ -2,17 +2,17 @@
   position: relative;
 
   &-title {
-    @include typo($s17, 500, 'head');
-    color: $grey-dark;
+    @include typo($s17, 500, "head");
     margin: 0;
+    color: $grey-dark;
   }
 
   &-collapse {
     position: absolute;
-    right: 20px;
     top: 18px;
-    color: $brand-primary;
+    right: 20px;
     font-size: 24px;
+    color: $brand-primary;
 
     &.collapsed {
       transform: rotate(180deg);
@@ -21,21 +21,21 @@
 
   &-type {
     &-list {
-      margin: 0;
       padding: 0;
+      margin: 0;
     }
 
     &-item {
-      display: block;
       position: relative;
+      display: block;
       padding-left: 25px;
       margin-top: 15px;
 
       .dp-po-icon {
-        color: $brand-primary;
         position: absolute;
-        left: 0;
         top: 1px;
+        left: 0;
+        color: $brand-primary;
       }
     }
 
@@ -47,8 +47,8 @@
 
     &-link {
       position: relative;
-      color: $grey-dark;
       font-size: $s15;
+      color: $grey-dark;
 
       &.active {
         color: $brand-primary;
@@ -59,46 +59,46 @@
   &-date {
     &-option {
       display: flex;
-      padding: 15px 0 0;
       align-items: flex-start;
+      padding: 15px 0 0;
     }
 
     &-year {
       &-list {
-        margin: 0;
-        padding: 0;
+        position: relative;
         display: flex;
         flex: 0 0 30%;
-        position: relative;
         flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
 
 
-        &:after {
-          content: '';
+        &::after {
+          position: absolute;
+          top: 0;
+          right: 7px;
+          display: block;
           width: 1px;
           height: 100%;
+          content: "";
           background: $grey-light;
-          display: block;
-          position: absolute;
-          right: 7px;
-          top: 0;
         }
       }
 
       &-item {
         display: flex;
         flex: 0 0 100%;
-        padding: 5px 0;
         height: 30px;
+        padding: 5px 0;
       }
 
       &-link {
-        color: $grey-dark;
         font-size: $s15;
+        color: $grey-dark;
 
         &:hover {
-          color: $brand-primary;
           font-weight: 700;
+          color: $brand-primary;
         }
 
         &.active {
@@ -110,29 +110,29 @@
 
     &-month {
       &-list {
-        margin: 0;
-        padding: 0;
         display: flex;
         flex: 0 0 70%;
         flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
       }
 
       &-item {
         display: flex;
         flex: 0 0 50%;
         justify-content: space-around;
-        padding: 5px 0;
         height: 30px;
+        padding: 5px 0;
         text-transform: uppercase;
       }
 
       &-link {
-        color: $grey-dark;
         font-size: $s15;
+        color: $grey-dark;
 
         &:hover {
-          color: $brand-primary;
           font-weight: 700;
+          color: $brand-primary;
         }
 
         &.active {

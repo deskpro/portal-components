@@ -2,15 +2,15 @@
   .dp-po-header {
     .dp-po-homelink {
       .dp-po-logo {
-        &:after {
+        &::after {
           display: none;
         }
       }
       &.d-sm-block {
-        display: none!important;
+        display: none !important;
       }
       &.d-sm-none {
-        display: block!important;
+        display: block !important;
       }
     }
 
@@ -38,7 +38,7 @@
     .dp-po-user {
       margin: 0;
 
-      &:before {
+      &::before {
         display: none;
       }
     }

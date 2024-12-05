@@ -1,14 +1,14 @@
 .dp-po-message-bar {
   $self: ".dp-po-message-bar";
   align-items: center;
-  background: $success-light;
   padding: 10px 0;
+  background: $success-light;
   border-bottom: 1px solid $grey-light;
 
   &-wrap {
+    position: relative;
     display: flex;
     justify-content: center;
-    position: relative;
   }
 
   &-text {
@@ -16,14 +16,14 @@
   }
 
   &-icon {
-    color: $success;
     margin: 0 10px 0 0;
+    color: $success;
   }
 
   &-close {
     position: absolute;
-    right: 0;
     top: 0;
+    right: 0;
     color: $grey;
 
     &:hover {

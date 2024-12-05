@@ -1,30 +1,30 @@
 .dp-po-sidebar {
-  background: $white;
-  border: 1px solid $grey-light;
   box-sizing: border-box;
-  border-radius: 4px;
   padding: 20px;
   margin: 0 0 20px;
+  background: $white;
+  border: 1px solid $grey-light;
+  border-radius: 4px;
 
   &-title {
-    font-size: $h3-font-size;
-    color: $grey-dark;
     margin: 0 0 15px;
-    font-weight: 400;
     font-family: $font-family-heading;
+    font-size: $h3-font-size;
+    font-weight: 400;
+    color: $grey-dark;
   }
 
   &-subtitle {
-    font-size: $p2-font-size;
-    color: $grey-dark;
     margin: 0;
+    font-size: $p2-font-size;
     font-weight: 700;
+    color: $grey-dark;
   }
   &-edit {
-    font-size: 12px;
     position: absolute;
     top: 26px;
     right: 20px;
+    font-size: 12px;
     i {
       margin-left: 2px;
     }
@@ -32,16 +32,16 @@
 }
 
 @include media-breakpoint-up(sm) {
-.dp-po-sticky {
-  display: block;
-  position: sticky;
-  align-self: flex-start;
-  top: 10px;
-}
+  .dp-po-sticky {
+    position: sticky;
+    top: 10px;
+    display: block;
+    align-self: flex-start;
+  }
 }
 
 @include media-breakpoint-down(sm) {
   .dp-po-sticky {
     display: none;
   }
-  }
+}

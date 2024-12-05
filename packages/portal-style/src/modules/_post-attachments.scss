@@ -1,7 +1,7 @@
 .dp-po-post-attachments {
   &-list {
-    margin: 0;
     padding: 0;
+    margin: 0;
   }
 
   &-item {
@@ -14,32 +14,32 @@
   }
 
   &-link {
+    position: relative;
     display: block;
     align-items: center;
-    position: relative;
     padding: 0 100px 0 0;
-    text-overflow: ellipsis;
     overflow: hidden;
+    text-overflow: ellipsis;
     white-space: nowrap;
 
     .dp-po-icon {
       margin-right: 10px;
-      color: $grey-dark;
       font-size: 20px;
+      color: $grey-dark;
     }
 
     span {
       position: absolute;
-      right: 25px;
       top: 4px;
+      right: 25px;
       font-size: 14px;
     }
 
     .fa-arrow-to-bottom {
-      color: $brand-primary;
       position: absolute;
-      right: 0;
       top: 0;
+      right: 0;
+      color: $brand-primary;
     }
 
     &:hover {

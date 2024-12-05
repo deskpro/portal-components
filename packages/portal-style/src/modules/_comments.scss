@@ -1,5 +1,5 @@
 .dp-po-comments {
-  $self: '.dp-po-comments';
+  $self: ".dp-po-comments";
 
   &-add {
     position: relative;
@@ -11,8 +11,8 @@
 
     &-cancel {
       position: absolute;
-      right: 0;
       top: 0;
+      right: 0;
     }
   }
 
@@ -21,7 +21,7 @@
     border-bottom: 1px solid $grey-lighter;
 
     &:first-child {
-      &>#{$self}-item {
+      >#{$self}-item {
         padding-top: 0;
       }
     }
@@ -29,7 +29,7 @@
     &:last-child {
       border: none;
 
-      &>#{$self}-item {
+      >#{$self}-item {
         padding-bottom: 0;
       }
     }
@@ -40,8 +40,8 @@
   }
 
   &-reply {
-    margin: 0 0 0 70px;
     padding: 0;
+    margin: 0 0 0 70px;
     border-top: 1px solid $grey-lighter;
     ;
 
@@ -50,13 +50,13 @@
       padding: 20px 30px 20px 0;
       border-bottom: 1px solid $grey-lighter;
 
-      &:before {
-        content: '';
-        width: 2px;
-        height: calc(100% + 1px);
+      &::before {
         position: absolute;
         top: 0;
         left: -12px;
+        width: 2px;
+        height: calc(100% + 1px);
+        content: "";
         background: $grey;
       }
     }
@@ -76,10 +76,10 @@
     word-break: break-word;
 
     blockquote {
-      border-left: 2px solid var(--grey80);
       padding: 1px 0 1px 8px;
       margin: 16px 64px 16px 48px;
-      background: rgba(0, 0, 0, 0.02);
+      background: rgba(0, 0, 0, .02);
+      border-left: 2px solid var(--grey80);
     }
 
     img {
@@ -88,32 +88,32 @@
 
     /* table styles */
     table {
-      margin: 1rem 0;
       width: 100%;
-      border-collapse: collapse;
+      margin: 1rem 0;
       table-layout: fixed;
+      border-collapse: collapse;
     }
 
     table th,
     table td {
       position: relative;
-      padding: 0 0.5em;
-      border: 1px solid rgba(0,0,0,0.075);
-      font-weight: normal;
+      padding: 0 .5em;
+      font-weight: 400;
       text-align: left;
       word-wrap: break-word;
+      border: 1px solid rgba(0, 0, 0, .075);
     }
 
     table th {
       font-weight: 500;
-      background: rgba(0, 0, 0, 0.025);
+      background: rgba(0, 0, 0, .025);
     }
 
     table th.selectedCell,
     table td.selectedCell {
-      box-shadow: 0 0 0 1px #c0e3fc inset;
-      background: rgba(65, 150, 212, 0.125);
       z-index: 10;
+      background: rgba(65, 150, 212, .125);
+      box-shadow: 0 0 0 1px #c0e3fc inset;
     }
   }
 
@@ -122,22 +122,22 @@
     margin: 10px 0 0;
 
     .dp-po-icon svg {
-      border-radius: 50%;
-      border: 1px solid $grey-lighter;
       width: 24px;
       height: 24px;
+      margin: 0 10px 0 0;
       font-size: 22px;
       text-align: center;
-      margin: 0 10px 0 0;
+      border: 1px solid $grey-lighter;
+      border-radius: 50%;
     }
   }
 
   &-upvote {
     display: inline-flex;
     align-items: center;
-    color: $grey-dark;
-    font-size: 15px;
     margin: 0 20px 0 0;
+    font-size: 15px;
+    color: $grey-dark;
 
     .dp-po-icon {
       color: $success;
@@ -148,9 +148,9 @@
       text-decoration: none;
 
       .dp-po-icon svg {
+        color: $white;
         background: $success;
         border-color: $success;
-        color: $white;
       }
     }
   }
@@ -158,8 +158,8 @@
   &-downvote {
     display: inline-flex;
     align-items: center;
-    color: $grey-dark;
     font-size: 15px;
+    color: $grey-dark;
 
     .dp-po-icon {
       color: $danger;
@@ -170,9 +170,9 @@
       text-decoration: none;
 
       .dp-po-icon svg {
+        color: $white;
         background: $danger;
         border-color: $danger;
-        color: $white;
       }
     }
   }
@@ -190,45 +190,45 @@
     font-weight: 600;
 
     .dp-po-icon {
-      margin-right: 7px;
-      color: $brand-primary;
       position: relative;
       top: 1px;
+      margin-right: 7px;
+      color: $brand-primary;
     }
   }
 
   &-options {
     margin: 0 0 0 20px;
 
-    & [data-toggle="dropdown"] {
+    [data-toggle="dropdown"] {
       font-size: 28px;
       color: $grey;
     }
   }
 
   &-attachments {
-    background: $grey-lightest;
-    border-radius: 4px;
     padding: 20px;
     margin: 10px 0 0 40px;
+    background: $grey-lightest;
+    border-radius: 4px;
 
     &-title {
-      color: $grey-dark;
-      font-size: 15px;
       margin: 0 0 15px;
+      font-size: 15px;
+      color: $grey-dark;
     }
 
     &-list {
-      margin: 0;
       padding: 0;
+      margin: 0;
     }
 
     &-item {
-      list-style: none;
       margin-top: 12px;
+      list-style: none;
 
       label {
-      display: initial;
+        display: initial;
       }
     }
 
@@ -250,18 +250,18 @@
   }
 
   .dp-po-message-bar {
-    border: 1px solid $success;
-    border-radius: 4px;
     padding: 5px 10px;
     margin-bottom: 20px;
+    border: 1px solid $success;
+    border-radius: 4px;
   }
 
   .dp-po-message-bar-error {
-    border: 1px solid $danger;
-    border-radius: 4px;
     padding: 5px 10px;
     margin: 10px 0;
     color: $danger;
+    border: 1px solid $danger;
+    border-radius: 4px;
   }
 
   // Fix for red border in Firefox by default in Guides comments

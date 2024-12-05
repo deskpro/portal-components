@@ -1,24 +1,24 @@
 .dp-po-guides {
-  $self: '.dp-po-guides';
+  $self: ".dp-po-guides";
 
   &-search-block {
-    min-height: calc(100vh - 556px);
     height: 100%;
+    min-height: calc(100vh - 556px);
   }
 
   &-item {
-    margin-bottom: 30px;
     box-sizing: border-box;
     height: 260px;
+    margin-bottom: 30px;
     &:hover {
-      filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.1));
+      filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, .1));
     }
   }
 
   &-card {
     display: flex;
     color: $text-color;
-    border: 1px solid #D3D6D7;
+    border: 1px solid #d3d6d7;
     border-radius: 10px;
 
     &:hover {
@@ -37,49 +37,50 @@
   }
 
   &-left {
-    text-align: center;
-    height: 258px;
-    width: 162px;
-    flex-shrink: 0;
     position: relative;
+    flex-shrink: 0;
+    width: 162px;
+    height: 258px;
     overflow: hidden;
+    text-align: center;
+    background-color: #fbfbfb;
     border-radius: 9px 0 0 9px;
-    background-color: #FBFBFB;
 
     #{$self}-image {
-      height: 100%;
       width: 100%;
-      background-size: cover;
-      background-position: center;
+      height: 100%;
       margin: 0;
+      background-position: center;
+      background-size: cover;
     }
 
     #{$self}-icon-background {
       position: absolute;
       top: calc(50% - 109px);
       left: calc(50% - 110px);
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      filter: grayscale(1);
       display: flex;
       align-items: center;
       justify-content: center;
-      opacity: 0.1;
-      background: #f0f0f0;
-      color: white;
-      font-size: 150px;
+      width: 220px;
+      height: 220px;
       margin-bottom: 0;
-      img, svg {
+      font-size: 150px;
+      color: #fff;
+      background: #f0f0f0;
+      filter: grayscale(1);
+      border-radius: 50%;
+      opacity: .1;
+      img,
+      svg {
         width: 60%;
         height: auto;
+        color: #fff !important;
         vertical-align: -16px;
-        color: white !important;
       }
       span.dp-po-icon {
+        display: block;
         width: 100%;
         height: 100%;
-        display: block;
       }
     }
 
@@ -87,100 +88,102 @@
       position: absolute;
       top: calc(50% - 32px);
       left: calc(50% - 33px);
-      flex: 0 0 140px;
-      width: 66px;
-      height: 66px;
-      background: $info-light;
-      border-radius: 50%;
       display: flex;
+      flex: 0 0 140px;
       align-items: center;
       justify-content: center;
+      width: 66px;
+      height: 66px;
       margin: 0 auto;
       font-size: 40px;
-      color: white;
-      img, svg {
+      color: #fff;
+      background: $info-light;
+      border-radius: 50%;
+      img,
+      svg {
         width: 60%;
         height: auto;
+        color: #fff !important;
         vertical-align: -6px;
-        color: white !important;
       }
     }
   }
 
   &-right {
-    flex-grow: 1;
     display: flex;
+    flex-grow: 1;
     flex-wrap: wrap;
-    padding: 40px 40px 30px;
-    max-width: calc(100% - 162px);
-    background: #FFFFFF;
-    max-height: 258px;
-    border-radius: 0 9px 9px 0;
     justify-content: space-between;
+    max-width: calc(100% - 162px);
+    max-height: 258px;
+    padding: 40px 40px 30px;
+    background: #fff;
+    border-radius: 0 9px 9px 0;
 
     #{$self}-title {
       flex-grow: 0;
-      max-height: 35px;
-      height: 35px;
-      max-width: 100%;
       width: 100%;
-      a, span {
-        color: $grey-darkest;
-        max-width: 100%;
-        width: 100%;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
+      max-width: 100%;
+      height: 35px;
+      max-height: 35px;
+      a,
+      span {
         display: inline-block;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        color: $grey-darkest;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
     }
   }
 
   &-content {
-    flex-grow: 1;
-    line-height: 1.5;
-    width: 100%;
-    justify-content: flex-start;
-    height: calc(100% - 106px);
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
     position: relative;
+    display: -webkit-box;
+    flex-grow: 1;
+    justify-content: flex-start;
+    width: 100%;
+    height: calc(100% - 106px);
     overflow: hidden;
+    line-height: 1.5;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
   }
 
   &-btn {
     align-self: flex-end;
-    margin-bottom: 0;
     margin-top: auto;
-    color: #8B9293;
-    border: 1px solid #A9B0B0;
+    margin-bottom: 0;
+    color: #8b9293;
+    border: 1px solid #a9b0b0;
     transition: none;
     &:hover {
-      border-color: $brand-primary;
       color: $brand-primary;
       background: none;
+      border-color: $brand-primary;
     }
   }
 
   .fixed {
     #{$self}-carousel {
       position: fixed;
-      z-index:2;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 2;
       max-width: 100%;
       padding: 30px 0 0;
-      top: 0;
-      left: 0;
-      right: 0;
 
       .dp-po-carousel-shadow {
-        border-top: 2px solid $grey-light;
+        position: relative;
+        z-index: 3;
         width: 100%;
         height: 30px;
         margin-top: -5px;
-        z-index: 3;
-        position: relative;
         background-color: $grey-lightest;
+        border-top: 2px solid $grey-light;
       }
     }
     #{$self}-search {
@@ -188,8 +191,8 @@
       top: 28px;
     }
     #{$self}-search-block {
-      overflow-y: auto;
       max-height: calc(100vh - 157px);
+      overflow-y: auto;
     }
     #{$self}-image {
       display: none;
@@ -217,40 +220,40 @@
   }
 
   &-loading {
-    background: $white;
-    border: 1px solid $grey-light;
-    text-align: center;
-    z-index: 4;
     top: 0;
     bottom: 0;
-    border-radius: 4px 4px 0 0;
+    z-index: 4;
     width: 100%;
     padding: calc(50vh - 27px) calc(50% - 145px);
     margin-bottom: 40px;
+    text-align: center;
+    background: $white;
+    border: 1px solid $grey-light;
+    border-radius: 4px 4px 0 0;
   }
 
   &-landing {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-    border: 1px solid #D3D6D7;
     min-height: calc(100vh - 135px);
+    background-color: #fff;
+    border: 1px solid #d3d6d7;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .1);
     &-splash {
       display: block;
-      object-fit: cover;
-      height: 440px;
       width: 100%;
+      height: 440px;
+      object-fit: cover;
       border-radius: 9px 9px 0 0;
     }
     &-title {
       padding: 27px 30px;
       border-bottom: 1px solid #d3d6d7;
       h1 {
-        white-space: nowrap;
-        text-overflow: ellipsis;
         max-width: 100%;
-        overflow: hidden;
         margin-bottom: 18px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
     }
     &-splash + .dp-po-guides-landing-title {
