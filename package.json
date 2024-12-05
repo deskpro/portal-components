@@ -16,8 +16,5 @@
   "workspaces": [
     "packages/*"
   ],
-  "dependencies": {
-    "eslint-plugin-risxss": "^2.1.0",
-    "lint-staged": "13.2.3"
-  }
+  "dependencies": {}
 }

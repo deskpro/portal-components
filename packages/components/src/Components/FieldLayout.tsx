@@ -35,7 +35,7 @@ interface IProps {
   values:   object;
   fileUploadUrl: string;
   csrfToken: string;
-  resetForm: (arg: any) => void;
+  resetForm: (arg: any) => void; // eslint-disable-line @typescript-eslint/no-explicit-any
   name: string;
   url: string;
   onChange: (name: string, files: DpBlob[]) => void;

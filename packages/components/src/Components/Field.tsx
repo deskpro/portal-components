@@ -75,19 +75,19 @@ abstract class Field<
     return error;
   };
 
-  renderField(_form: any) {
+  renderField(_form: any) { // eslint-disable-line @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any
     const {
-      name, children, className, required, errorsName, label, fClassName, id, i18n, description, validate, ...rest
+      name, children, className, required, errorsName, label, fClassName, id, i18n, description, validate, ...rest // eslint-disable-line @typescript-eslint/no-unused-vars
     } = this.props;
 
     return (
       <FormikField
         id={this.id}
-        name={name}
         type={this.type}
+        {...rest}
         className={classNames('dp-pc_input', className)}
         required={required}
-        {...rest}
+        name={name}
       >
         {children}
       </FormikField>
@@ -120,7 +120,7 @@ abstract class Field<
         name={name}
         validate={this.validate}
       >
-        {(form: FormikFieldProps <any>) => {
+        {(form: FormikFieldProps <any>) => { // eslint-disable-line @typescript-eslint/no-explicit-any
           let error;
           let searchName = errorsName;
           if (errorsName) {

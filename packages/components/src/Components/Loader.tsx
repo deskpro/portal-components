@@ -57,7 +57,7 @@ const Loader = ({
   if (cssSize[0] === 'x') {
     cssSize = cssSize.substring(0, 2);
   } else {
-    cssSize = cssSize[0]; // eslint-disable-line prefer-destructuring
+    cssSize = cssSize[0];
   }
 
   return (

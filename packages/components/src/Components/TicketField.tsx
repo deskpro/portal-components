@@ -20,7 +20,7 @@ import * as Immutable from "immutable";
 import type { I18nType } from "../types/i18n";
 
 interface IProps {
-  field:          Immutable.Map<string, any>;
+  field:          Immutable.Map<string, any>; // eslint-disable-line @typescript-eslint/no-explicit-any
   fileUploadUrl:  string;
   csrfToken:      string;
   fileInputProps: object;

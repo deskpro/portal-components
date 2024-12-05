@@ -1,13 +1,12 @@
-import peerDepsExternal from 'rollup-plugin-peer-deps-external';
-import resolve from '@rollup/plugin-node-resolve';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
-import typescript from 'rollup-plugin-typescript2';
+import typescript from '@rollup/plugin-typescript';
 
 const packageJson = require('../package.json');
 
 export default {
   input:  'src/index.ts',
-  external: ['react', '@emotion/core'],
+  external: ['react', '@emotion/core', packageJson.peerDependencies],
   output: [
     {
       file:      packageJson.main,
@@ -21,11 +20,8 @@ export default {
     }
   ],
   plugins: [
-    peerDepsExternal(),
-    resolve(),
-    typescript({
-      useTsconfigDeclarationDir: true
-    }),
+    nodeResolve(),
+    typescript(),
     commonjs(),
   ]
 };

@@ -4,7 +4,7 @@ import { FormikProps, getIn } from 'formik';
 interface ErrorMessageProps {
   name: string;
   touchName?: string;
-  form: FormikProps<any>;
+  form: FormikProps<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
 }
 
 const ErrorMessage = ({ name, touchName = '', form }: ErrorMessageProps) => {
