@@ -272,11 +272,12 @@ export class DropDownInput extends React.Component<DropDownInputProps, DropDownI
     } = this.props;
     const { options } = this.state;
     if (Array.isArray(dataSource.getOptions)) {
+      const selectedValue = options.find(o => o.value === value);
       return (
         <ReactSelect
           styles={{ menuPortal: base => ({ ...base, position: 'relative' }) }}
           ref={this.select}
-          value={options.find(o => o.value === value) || null}
+          value={selectedValue || null}
           name={name}
           isClearable={isClearable}
           isSearchable={isSearchable}
@@ -294,7 +295,12 @@ export class DropDownInput extends React.Component<DropDownInputProps, DropDownI
           classNamePrefix="react-select"
           placeholder={this.i18n.select}
           {...props}
-          onFocus={this.onFocus}
+          onFocus={() => {
+            this.onFocus();
+            if (selectedValue) {
+              this.select.current?.setState({ focusedOption: selectedValue });
+            }
+          }}
           onBlur={this.onBlur}
           onChange={this.onChange}
         />
