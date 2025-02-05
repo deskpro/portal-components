@@ -1,14 +1,14 @@
-import * as React from 'react';
-import { getIn, isString } from 'formik';
-import ReactSelect, { components } from 'react-select';
-import AsyncSelect from 'react-select/async';
-import { deepMerge } from '@deskpro/js-utils/dist/objects';
-import classNames from 'classnames';
-import Field, { FieldProps } from '../Field';
+import * as React from "react";
+import { getIn, isString } from "formik";
+import ReactSelect, { components } from "react-select";
+import AsyncSelect from "react-select/async";
+import { deepMerge } from "@deskpro/js-utils/dist/objects";
+import classNames from "classnames";
+import Field, { FieldProps } from "../Field";
 import { OptionProps as ReactSelectOptionProps } from "react-select/dist/declarations/src/components/Option";
 import type { DataSource } from "../../types/dataSource";
 import { css } from "@emotion/css";
-import { DropdownIndicator, SelectContainer } from './DropDown';
+import { DropdownIndicator, SelectContainer } from "./DropDown";
 
 interface OptionProps extends ReactSelectOptionProps {
   data: {
@@ -27,7 +27,7 @@ const Option = (props: OptionProps) => {
     isDisabled,
     isFocused,
     isSelected,
-    innerProps
+    innerProps,
   } = props;
   if (data.children && data.children.length > 0) {
     return (
@@ -35,14 +35,15 @@ const Option = (props: OptionProps) => {
         ref={innerRef}
         className={classNames(
           cx(
-          {
-            option:                true,
-            'option--is-disabled': isDisabled,
-            'option--is-focused':  isFocused,
-            'option--is-selected': isSelected,
-          },
-          className),
-          css(getStyles('option', props))
+            {
+              option: true,
+              "option--is-disabled": isDisabled,
+              "option--is-focused": isFocused,
+              "option--is-selected": isSelected,
+            },
+            className
+          ),
+          css(getStyles("option", props))
         )}
         {...innerProps}
       >
@@ -55,10 +56,10 @@ const Option = (props: OptionProps) => {
 };
 
 const I18N = {
-  select: 'Select',
+  select: "Select",
 };
 
-interface CascadingDropDownInputProps extends FieldProps{
+interface CascadingDropDownInputProps extends FieldProps {
   dataSource: DataSource;
   onChange: (value: number | string) => void;
   onBlur: () => void;
@@ -78,7 +79,10 @@ interface CascadingDropDownInputState {
   options: string[];
 }
 
-export class CascadingDropDownInput extends React.Component<CascadingDropDownInputProps, CascadingDropDownInputState> {
+export class CascadingDropDownInput extends React.Component<
+  CascadingDropDownInputProps,
+  CascadingDropDownInputState
+> {
   static defaultProps = {
     i18n: {},
     onBlur() {},
@@ -95,7 +99,7 @@ export class CascadingDropDownInput extends React.Component<CascadingDropDownInp
     this.select = React.createRef();
     this.state = {
       menuIsOpen: false,
-      options:    props.dataSource.getOptions,
+      options: props.dataSource.getOptions,
     };
     this.childInput = React.createRef();
   }
@@ -111,14 +115,14 @@ export class CascadingDropDownInput extends React.Component<CascadingDropDownInp
   onBlur = () => {
     this.props.onBlur();
     this.setState({
-      menuIsOpen: false
+      menuIsOpen: false,
     });
   };
 
   onFocus = () => {
     this.props.onFocus();
     this.setState({
-      menuIsOpen: true
+      menuIsOpen: true,
     });
   };
 
@@ -130,7 +134,7 @@ export class CascadingDropDownInput extends React.Component<CascadingDropDownInp
       this.setState({
         value,
         menuIsOpen: false,
-        subChoice:  true
+        subChoice: true,
       });
       this.select.current.inputRef.blur();
       this.props.onChange(null);
@@ -139,7 +143,7 @@ export class CascadingDropDownInput extends React.Component<CascadingDropDownInp
     this.setState({
       value,
       menuIsOpen: false,
-      subChoice:  false
+      subChoice: false,
     });
     this.select.current.inputRef.blur();
     const newValue = value ? value.value : null;
@@ -149,7 +153,7 @@ export class CascadingDropDownInput extends React.Component<CascadingDropDownInp
 
   handleChildrenChange = (value) => {
     this.props.onChange(value);
-  }
+  };
 
   closeMenu = () => {
     this.select.current.inputRef.blur();
@@ -158,13 +162,13 @@ export class CascadingDropDownInput extends React.Component<CascadingDropDownInp
   loadOptions = (inputValue) => {
     const { dataSource } = this.props;
     const propValue = this.props.value;
-    if (Array.isArray(dataSource.getOptions)){
+    if (Array.isArray(dataSource.getOptions)) {
       return dataSource.getOptions;
     }
     return dataSource.getOptions(inputValue).then((options) => {
-      const value = options.find(o => o.value === propValue);
+      const value = options.find((o) => o.value === propValue);
       this.setState({
-        value
+        value,
       });
       return options;
     });
@@ -172,9 +176,9 @@ export class CascadingDropDownInput extends React.Component<CascadingDropDownInp
 
   clearValue = () => {
     this.setState({
-      value: null
+      value: null,
     });
-  }
+  };
 
   setStateValue = () => {
     const { value: stateValue, subChoice } = this.state;
@@ -183,15 +187,22 @@ export class CascadingDropDownInput extends React.Component<CascadingDropDownInp
       return;
     }
 
-    const findValue = opts => (Array.isArray(opts)
-      ? opts.find(o => o.value === propValue || !!findValue(o.children))
-      : null
-    );
+    const findValue = (opts) =>
+      Array.isArray(opts)
+        ? opts.find((o) => o.value === propValue || !!findValue(o.children))
+        : null;
     const newValue = findValue(dataSource.getOptions) || null;
 
-    if (Array.isArray(dataSource.getOptions)
-      && JSON.stringify(newValue) !== JSON.stringify(stateValue)
-      && !(stateValue && !isString(stateValue) && typeof stateValue !== 'number' && stateValue.children && stateValue.children.length)
+    if (
+      Array.isArray(dataSource.getOptions) &&
+      JSON.stringify(newValue) !== JSON.stringify(stateValue) &&
+      !(
+        stateValue &&
+        !isString(stateValue) &&
+        typeof stateValue !== "number" &&
+        stateValue.children &&
+        stateValue.children.length
+      )
     ) {
       this.setState({ value: newValue });
     }
@@ -199,7 +210,12 @@ export class CascadingDropDownInput extends React.Component<CascadingDropDownInp
 
   render() {
     const {
-      name, dataSource, isClearable, isSearchable, value: propValue, ...props
+      name,
+      dataSource,
+      isClearable,
+      isSearchable,
+      value: propValue,
+      ...props
     } = this.props;
     const { value: stateValue } = this.state;
 
@@ -214,7 +230,12 @@ export class CascadingDropDownInput extends React.Component<CascadingDropDownInp
             components={{
               SelectContainer,
               Option,
-              DropdownIndicator: dropdownProps => <DropdownIndicator closeMenu={this.closeMenu} {...dropdownProps} />
+              DropdownIndicator: (dropdownProps) => (
+                <DropdownIndicator
+                  closeMenu={this.closeMenu}
+                  {...dropdownProps}
+                />
+              ),
             }}
             menuIsOpen={this.state.menuIsOpen}
             options={dataSource.getOptions}
@@ -222,22 +243,27 @@ export class CascadingDropDownInput extends React.Component<CascadingDropDownInp
             placeholder={this.i18n.select}
             {...props}
             value={stateValue}
-            onFocus={this.onFocus}
+            onFocus={() => {
+              this.onFocus();
+              if (stateValue) {
+                this.select.current?.setState({ focusedOption: stateValue });
+              }
+            }}
             onBlur={this.onBlur}
             onChange={this.onChange}
           />
-          {stateValue && stateValue.children && stateValue.children.length > 0
-            ? (
-              <div className="children">
-                <CascadingDropDownInput
-                  value={propValue}
-                  dataSource={{ getOptions: stateValue.children }}
-                  onChange={this.handleChildrenChange}
-                  ref={this.childInput}
-                />
-              </div>
-            )
-            : null}
+          {stateValue &&
+          stateValue.children &&
+          stateValue.children.length > 0 ? (
+            <div className="children">
+              <CascadingDropDownInput
+                value={propValue}
+                dataSource={{ getOptions: stateValue.children }}
+                onChange={this.handleChildrenChange}
+                ref={this.childInput}
+              />
+            </div>
+          ) : null}
         </div>
       );
     }
@@ -253,9 +279,11 @@ export class CascadingDropDownInput extends React.Component<CascadingDropDownInp
         components={{
           SelectContainer,
           Option,
-          DropdownIndicator: dropdownProps => <DropdownIndicator closeMenu={this.closeMenu} {...dropdownProps} />
+          DropdownIndicator: (dropdownProps) => (
+            <DropdownIndicator closeMenu={this.closeMenu} {...dropdownProps} />
+          ),
         }}
-        loadOptions={inputValue => this.loadOptions(inputValue)}
+        loadOptions={(inputValue) => this.loadOptions(inputValue)}
         classNamePrefix="react-select"
         {...props}
         onChange={this.onChange}
@@ -277,7 +305,7 @@ class CascadingDropDown extends Field<CascadingDropDownProps> {
   static defaultProps = {
     ...Field.defaultProps,
     handleChange() {},
-    isClearable:  false,
+    isClearable: false,
     isSearchable: true,
     onBlur() {},
     onFocus() {},
@@ -293,18 +321,18 @@ class CascadingDropDown extends Field<CascadingDropDownProps> {
 
   onChange = (form, value) => {
     const { name, handleChange } = this.props;
-    const actualVale = typeof value === 'object' && value !== null ? value.value : value;
+    const actualVale =
+      typeof value === "object" && value !== null ? value.value : value;
     const newValue = actualVale || null;
     form.setFieldValue(name, newValue);
     handleChange(newValue);
   };
 
-
   renderField({ form }) {
     return (
       <CascadingDropDownInput
         onBlur={() => this.onBlur(form)}
-        onChange={value => this.onChange(form, value)}
+        onChange={(value) => this.onChange(form, value)}
         value={getIn(form.values, this.props.name)}
         {...this.props}
       />
