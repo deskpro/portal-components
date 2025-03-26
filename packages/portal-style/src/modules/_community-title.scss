@@ -65,7 +65,7 @@
 
   .dropdown-menu {
     border-color: $brand-primary;
-    width: 280px;
+    min-width: 280px;
   }
 
   &-button {
