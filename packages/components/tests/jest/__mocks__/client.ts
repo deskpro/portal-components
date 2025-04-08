@@ -1,4 +1,5 @@
 import { JSDOM } from "jsdom"
+
 const dom = new JSDOM()
 global["document"] = dom.window.document
 global["window"] = dom.window
@@ -12,6 +13,9 @@ global["navigator"] = {
   clipboard: undefined,
   locks: undefined,
   pdfViewerEnabled: undefined,
+  clearAppBadge(): Promise<void> {
+    return Promise.resolve(undefined);
+  },
   cookieEnabled: false,
   credentials: undefined,
   doNotTrack: "",
@@ -38,16 +42,24 @@ global["navigator"] = {
   productSub: "",
   registerProtocolHandler(_scheme: string, _url: string | URL): void {
   },
+  requestMIDIAccess(): Promise<MIDIAccess> {
+    return Promise.resolve(undefined);
+  },
   sendBeacon(_url: string | URL, _data: BodyInit | null | undefined): boolean {
     return false;
   },
   serviceWorker: undefined,
+  setAppBadge(_data: string | number): Promise<void> {
+    return Promise.resolve(undefined);
+  },
   share(_data: ShareData | undefined): Promise<void> {
     return Promise.resolve(undefined);
   },
   storage: undefined,
+  userActivation: undefined,
   vendor: "",
   vendorSub: "",
+  wakeLock: undefined,
   webdriver: false,
   requestMediaKeySystemAccess(_keySystem: string, _supportedConfigurations: MediaKeySystemConfiguration[] | Iterable<MediaKeySystemConfiguration>): Promise<MediaKeySystemAccess> {
     return Promise.resolve(undefined);
