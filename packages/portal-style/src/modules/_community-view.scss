@@ -12,6 +12,9 @@
     & th {
       font-weight: 500;
     }
+    & tr.dp-po-community-view-item {
+      display: flex;
+    }
   }
 
   &-item {
