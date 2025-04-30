@@ -9,7 +9,7 @@ import { OptionProps as ReactSelectOptionProps } from "react-select/dist/declara
 import type { DataSource } from "../../types/dataSource";
 import { css } from "@emotion/css";
 import { DropdownIndicator, SelectContainer } from "./DropDown";
-import { ar } from "date-fns/locale";
+import { v4 as uuidv4 } from 'uuid';
 
 interface OptionProps extends ReactSelectOptionProps {
   data: {
@@ -92,6 +92,7 @@ export class CascadingDropDownInput extends React.Component<
     onFocus() {},
   };
   private i18n: any;
+  private id: string;
   private readonly select: React.RefObject<any>;
   private readonly childInput: React.RefObject<CascadingDropDownInput>;
 
@@ -105,6 +106,7 @@ export class CascadingDropDownInput extends React.Component<
       options: props.dataSource.getOptions,
     };
     this.childInput = React.createRef();
+    this.id = uuidv4();
   }
 
   componentDidMount() {
@@ -225,39 +227,39 @@ export class CascadingDropDownInput extends React.Component<
     if (Array.isArray(dataSource.getOptions)) {
       return (
         <div className="dp-cascading-dropdown">
-          <label className="sr-only" htmlFor={name}>{props.label}
-            <ReactSelect
-              ref={this.select}
-              name={name}
-              isClearable={isClearable}
-              isSearchable={isSearchable}
-              components={{
-                SelectContainer,
-                Option,
-                DropdownIndicator: (dropdownProps) => (
-                  <DropdownIndicator
-                    closeMenu={this.closeMenu}
-                    {...dropdownProps}
-                  />
-                ),
-              }}
-              menuIsOpen={this.state.menuIsOpen}
-              options={dataSource.getOptions}
-              classNamePrefix="react-select"
-              placeholder={this.i18n.select}
-              {...props}
-              value={stateValue}
-              onFocus={() => {
-                this.onFocus();
-                if (stateValue) {
-                  this.select.current?.setState({ focusedOption: stateValue });
-                }
-              }}
-              aria-label={props.label}
-              onBlur={this.onBlur}
-              onChange={this.onChange}
-            />
-          </label>
+          <label className="sr-only" htmlFor={props.id || this.id}>{props.label}</label>
+          <ReactSelect
+            ref={this.select}
+            name={name}
+            isClearable={isClearable}
+            isSearchable={isSearchable}
+            components={{
+              SelectContainer,
+              Option,
+              DropdownIndicator: (dropdownProps) => (
+                <DropdownIndicator
+                  closeMenu={this.closeMenu}
+                  {...dropdownProps}
+                />
+              ),
+            }}
+            menuIsOpen={this.state.menuIsOpen}
+            options={dataSource.getOptions}
+            classNamePrefix="react-select"
+            placeholder={this.i18n.select}
+            id={this.id}
+            {...props}
+            value={stateValue}
+            onFocus={() => {
+              this.onFocus();
+              if (stateValue) {
+                this.select.current?.setState({ focusedOption: stateValue });
+              }
+            }}
+            aria-label={props.label}
+            onBlur={this.onBlur}
+            onChange={this.onChange}
+          />
           {stateValue &&
           stateValue.children &&
           stateValue.children.length > 0 ? (
