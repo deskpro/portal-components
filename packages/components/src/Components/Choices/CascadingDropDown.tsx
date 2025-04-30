@@ -225,38 +225,39 @@ export class CascadingDropDownInput extends React.Component<
     if (Array.isArray(dataSource.getOptions)) {
       return (
         <div className="dp-cascading-dropdown">
-          <label className="sr-only" htmlFor={name}>{props.label}</label>
-          <ReactSelect
-            ref={this.select}
-            name={name}
-            isClearable={isClearable}
-            isSearchable={isSearchable}
-            components={{
-              SelectContainer,
-              Option,
-              DropdownIndicator: (dropdownProps) => (
-                <DropdownIndicator
-                  closeMenu={this.closeMenu}
-                  {...dropdownProps}
-                />
-              ),
-            }}
-            menuIsOpen={this.state.menuIsOpen}
-            options={dataSource.getOptions}
-            classNamePrefix="react-select"
-            placeholder={this.i18n.select}
-            {...props}
-            value={stateValue}
-            onFocus={() => {
-              this.onFocus();
-              if (stateValue) {
-                this.select.current?.setState({ focusedOption: stateValue });
-              }
-            }}
-            aria-label={props.label}
-            onBlur={this.onBlur}
-            onChange={this.onChange}
-          />
+          <label className="sr-only" htmlFor={name}>{props.label}
+            <ReactSelect
+              ref={this.select}
+              name={name}
+              isClearable={isClearable}
+              isSearchable={isSearchable}
+              components={{
+                SelectContainer,
+                Option,
+                DropdownIndicator: (dropdownProps) => (
+                  <DropdownIndicator
+                    closeMenu={this.closeMenu}
+                    {...dropdownProps}
+                  />
+                ),
+              }}
+              menuIsOpen={this.state.menuIsOpen}
+              options={dataSource.getOptions}
+              classNamePrefix="react-select"
+              placeholder={this.i18n.select}
+              {...props}
+              value={stateValue}
+              onFocus={() => {
+                this.onFocus();
+                if (stateValue) {
+                  this.select.current?.setState({ focusedOption: stateValue });
+                }
+              }}
+              aria-label={props.label}
+              onBlur={this.onBlur}
+              onChange={this.onChange}
+            />
+          </label>
           {stateValue &&
           stateValue.children &&
           stateValue.children.length > 0 ? (
