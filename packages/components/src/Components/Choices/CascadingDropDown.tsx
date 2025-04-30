@@ -9,6 +9,7 @@ import { OptionProps as ReactSelectOptionProps } from "react-select/dist/declara
 import type { DataSource } from "../../types/dataSource";
 import { css } from "@emotion/css";
 import { DropdownIndicator, SelectContainer } from "./DropDown";
+import { ar } from "date-fns/locale";
 
 interface OptionProps extends ReactSelectOptionProps {
   data: {
@@ -223,6 +224,7 @@ export class CascadingDropDownInput extends React.Component<
     if (Array.isArray(dataSource.getOptions)) {
       return (
         <div className="dp-cascading-dropdown">
+          <label className="sr-only" htmlFor={name}>{props.label}</label>
           <ReactSelect
             ref={this.select}
             name={name}
@@ -258,6 +260,7 @@ export class CascadingDropDownInput extends React.Component<
           stateValue.children &&
           stateValue.children.length > 0 ? (
             <div className="children">
+              <label className="sr-only" htmlFor={name}>{props.label + " " + stateValue.value}</label>
               <CascadingDropDownInput
                 value={propValue}
                 dataSource={{ getOptions: stateValue.children }}
