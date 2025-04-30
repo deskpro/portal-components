@@ -75,6 +75,7 @@ interface CascadingDropDownInputState {
   menuIsOpen: boolean;
   value?: {
     value: string;
+    label?: string;
     children: string[];
   };
   subChoice?: boolean;
@@ -260,13 +261,12 @@ export class CascadingDropDownInput extends React.Component<
           stateValue.children &&
           stateValue.children.length > 0 ? (
             <div className="children">
-              <label className="sr-only" htmlFor={name}>{props.label + " " + stateValue.value}</label>
               <CascadingDropDownInput
                 value={propValue}
                 dataSource={{ getOptions: stateValue.children }}
                 onChange={this.handleChildrenChange}
                 ref={this.childInput}
-                aria-label={props.label + " " + stateValue.value}
+                label={props.label + " " + stateValue.value}
               />
             </div>
           ) : null}
