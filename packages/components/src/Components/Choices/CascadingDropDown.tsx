@@ -67,6 +67,7 @@ interface CascadingDropDownInputProps extends FieldProps {
   isClearable?: boolean;
   value: number | string;
   isSearchable?: boolean;
+  label?: string;
 }
 
 interface CascadingDropDownInputState {
@@ -249,6 +250,7 @@ export class CascadingDropDownInput extends React.Component<
                 this.select.current?.setState({ focusedOption: stateValue });
               }
             }}
+            aria-label={props.label}
             onBlur={this.onBlur}
             onChange={this.onChange}
           />
@@ -261,6 +263,7 @@ export class CascadingDropDownInput extends React.Component<
                 dataSource={{ getOptions: stateValue.children }}
                 onChange={this.handleChildrenChange}
                 ref={this.childInput}
+                aria-label={props.label + " " + stateValue.value}
               />
             </div>
           ) : null}
