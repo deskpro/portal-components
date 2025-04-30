@@ -266,7 +266,7 @@ export class CascadingDropDownInput extends React.Component<
                 dataSource={{ getOptions: stateValue.children }}
                 onChange={this.handleChildrenChange}
                 ref={this.childInput}
-                label={props.label + " " + stateValue.value}
+                label={props.label + " " + stateValue.label}
               />
             </div>
           ) : null}
@@ -278,6 +278,7 @@ export class CascadingDropDownInput extends React.Component<
         ref={this.select}
         value={this.state.value}
         name={name}
+        isClearable={isClearable}
         isClearable={isClearable}
         isSearchable={isSearchable}
         defaultOptions
