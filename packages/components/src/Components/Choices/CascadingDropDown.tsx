@@ -256,6 +256,7 @@ export class CascadingDropDownInput extends React.Component<
                 this.select.current?.setState({ focusedOption: stateValue });
               }
             }}
+            aria-live="polite"
             aria-label={props.label}
             onBlur={this.onBlur}
             onChange={this.onChange}
@@ -281,7 +282,6 @@ export class CascadingDropDownInput extends React.Component<
         ref={this.select}
         value={this.state.value}
         name={name}
-        isClearable={isClearable}
         isClearable={isClearable}
         isSearchable={isSearchable}
         defaultOptions

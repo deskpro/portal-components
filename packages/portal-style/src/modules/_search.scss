@@ -304,6 +304,12 @@
         background: $white;
       }
 
+      &:focus {
+          outline: 2px solid $brand-primary;
+          border-color: $brand-primary;
+          border-width: 2px;
+      }
+
       &.no-results {
         color: $grey-dark;
 
