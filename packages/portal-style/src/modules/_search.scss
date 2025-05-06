@@ -257,6 +257,7 @@
       color: $grey-darkest;
       font-size: $s15;
       justify-content: center;
+      border: none;
       border-right: 1px solid $grey-light;
       background: $grey-lightest;
       display: flex;
@@ -264,6 +265,7 @@
       height: 48px;
       align-items: center;
       position: relative;
+      width: 100%;
 
       span {
         font-family: $font-family-sans-serif;
