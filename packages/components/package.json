@@ -11,6 +11,7 @@
   ],
   "dependencies": {
     "@deskpro/js-utils": "1.0.13",
+    "@deskpro/react-datepicker-hijri": "1.5.2",
     "@emotion/css": "^11.7.1",
     "@emotion/react": "^11.8.2",
     "accessible-autocomplete": "3.0.1",
