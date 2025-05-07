@@ -11,22 +11,12 @@ export default {
     {
       file:      packageJson.main,
       format:    'cjs',
-      sourcemap: true,
-      globals: {
-        react: 'React',
-        '@emotion/core': '@emotion/core',
-        '@floating-ui/react': '@floating-ui/react'
-      }
+      sourcemap: true
     },
     {
       file:      packageJson.module,
       format:    'esm',
-      sourcemap: true,
-      globals: {
-        react: 'React',
-        '@emotion/core': '@emotion/core',
-        '@floating-ui/react': '@floating-ui/react'
-      }
+      sourcemap: true
     }
   ],
   plugins: [
