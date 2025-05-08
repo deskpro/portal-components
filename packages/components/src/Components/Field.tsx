@@ -22,7 +22,7 @@ export interface FieldProps {
   fClassName?:  string;
   required?:    boolean;
   i18n?:        I18nType;
-  disabled?:    string;
+  disabled?:    string | boolean;
   children?:    React.ReactElement;
   onBlur?:      () => void;
   onFocus?:     () => void;

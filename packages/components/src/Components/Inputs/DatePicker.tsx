@@ -1,6 +1,6 @@
 import * as React from 'react';
 import classNames from 'classnames';
-import ReactDatePicker, { registerLocale } from 'react-datepicker';
+import ReactDatePicker, { registerLocale, DatePickerProps as ReactDatePickerProps } from 'react-datepicker';
 import en from 'date-fns/locale/en-US';
 import { format as dateFormat, parse as dateParse } from 'date-fns';
 import { getIn } from 'formik';
@@ -10,9 +10,10 @@ import Field, { FieldProps, FieldState } from '../Field';
 
 registerLocale('en', en);
 
-interface DatePickerProps extends FieldProps {
+interface DatePickerProps extends Omit<FieldProps, 'disabled'> {
   calendar: string;
   format:   string;
+  disabled?: boolean;
 }
 
 interface DatePickerState extends FieldState {
@@ -46,11 +47,11 @@ class DatePicker extends Field<DatePickerProps, DatePickerState> {
     });
   };
 
-  handleChange(date, form) {
-    form.setFieldValue(this.props.name, dateFormat(date, this.props.format));
+  handleChange(date: Date[]|Date, form) {
+    form.setFieldValue(this.props.name, dateFormat(date[0], this.props.format));
   }
 
-  getProps = (form) => {
+  getProps = (form): ReactDatePickerProps => {
     const {
       format,
       name,
@@ -72,12 +73,14 @@ class DatePicker extends Field<DatePickerProps, DatePickerState> {
       className:          'dp-pc_date-picker_input',
       showMonthDropdown:  true,
       showYearDropdown:   true,
-      dropdownMode:       'select',
+      disabled:           false,
+      dropdownMode:       "select" as const,
       preventOpenOnFocus: true,
-      assumeNearbyYear:   true,
+      // assumeNearbyYear:   true,
       dateFormat:         format,
       locale:             'en',
-      ...props
+      ...props,
+      selectsMultiple:    false as never,
     };
   };
 

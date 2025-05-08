@@ -3,6 +3,7 @@ import DateTimeIcon from '../../tsx-assets/DateTime';
 import { parse as dateParse } from 'date-fns';
 import { getIn } from 'formik';
 import DatePicker from './DatePicker';
+import { DatePickerProps as ReactDatePickerProps } from 'react-datepicker';
 import Field from '../Field';
 
 class DateTimePicker extends DatePicker {
@@ -11,7 +12,7 @@ class DateTimePicker extends DatePicker {
     format: 'dd/MM/yyyy HH:mm'
   }
 
-  getProps = (form) => {
+  getProps = (form): ReactDatePickerProps => {
     const {
       format,
       name,
@@ -33,13 +34,13 @@ class DateTimePicker extends DatePicker {
       className:          'dp-pc_date-picker_input',
       showMonthDropdown:  true,
       showYearDropdown:   true,
-      dropdownMode:       'select',
+      dropdownMode:       'select' as const,
       showTimeSelect:     true,
+      selectsMultiple:    true,
       timeCaption:        'time',
       timeFormat:         'HH:mm',
       dateFormat:         format,
       preventOpenOnFocus: true,
-      assumeNearbyYear:   true,
       locale:             'en',
       ...props
     };
