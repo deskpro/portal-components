@@ -20,6 +20,17 @@ interface DatePickerState extends FieldState {
   focused: boolean;
 }
 
+export class DatePickerInput extends React.Component {
+  render() {
+    return (
+      <ReactDatePicker
+        dateFormat='dd/MM/yyyy'
+        {...this.props}
+      />
+    );
+  }
+}
+
 class DatePicker extends Field<DatePickerProps, DatePickerState> {
   static defaultProps = {
     ...Field.defaultProps,
@@ -47,7 +58,7 @@ class DatePicker extends Field<DatePickerProps, DatePickerState> {
     });
   };
 
-  handleChange(date: Date[]|Date, form) {
+  handleChange(date: Date| Date[], form) {
     form.setFieldValue(this.props.name, dateFormat(date[0], this.props.format));
   }
 
@@ -103,7 +114,7 @@ class DatePicker extends Field<DatePickerProps, DatePickerState> {
     return (
       <div className={classNames('dp-pc_date-picker', { focused: this.state.focused }, className)}>
         {this.renderIcon()}
-        <ReactDatePicker
+        <DatePickerInput
           {...this.getProps(form)}
         />
       </div>
