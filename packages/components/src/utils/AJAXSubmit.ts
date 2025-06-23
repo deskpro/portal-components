@@ -65,7 +65,7 @@ const AJAXSubmit = (function () {
     const formData = new FormData();
     for (let nFile = 0; nFile < config.files.length; nFile++) {
       const oFile = config.files[nFile];
-      formData.append(`file[${config.name}]`, oFile);
+      formData.append(`file[${config.name}][]`, oFile);
     }
     formData.append('file[_dp_csrf_token]', config.token);
     submitData(config, formData);
