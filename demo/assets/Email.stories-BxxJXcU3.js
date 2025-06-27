@@ -1,0 +1,15 @@
+import{F as o,a as s,b as l,S as u}from"./Submit-BnsufPd_.js";import{R as e}from"./index-DlAg5hdJ.js";import{E as n}from"./Email-C4jMeNs9.js";import"./v4-CtRu48qb.js";import"./index-CS2SCc-X.js";const S={title:"Input/Email",component:n,tags:["autodocs"]},t={args:{name:"email",label:"Email",required:!0},render:i=>e.createElement(o,{initialValues:{text:""},onSubmit:s("submit")},()=>e.createElement(l,null,e.createElement(n,{...i}),e.createElement(u,null,"Submit")))};var a,r,m;t.parameters={...t.parameters,docs:{...(a=t.parameters)==null?void 0:a.docs,source:{originalSource:`{
+  args: {
+    name: 'email',
+    label: 'Email',
+    required: true
+  },
+  render: args => <Formik initialValues={{
+    text: ''
+  }} onSubmit={action('submit')}>
+      {() => <Form>
+          <Email {...args} />
+          <Submit>Submit</Submit>
+        </Form>}
+    </Formik>
+}`,...(m=(r=t.parameters)==null?void 0:r.docs)==null?void 0:m.source}}};const F=["Input"];export{t as Input,F as __namedExportsOrder,S as default};
