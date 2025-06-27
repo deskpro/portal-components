@@ -9,6 +9,7 @@ import { OptionProps as ReactSelectOptionProps } from "react-select/dist/declara
 import type { DataSource } from "../../types/dataSource";
 import { css } from "@emotion/css";
 import { DropdownIndicator, SelectContainer } from "./DropDown";
+import { v4 as uuidv4 } from 'uuid';
 
 interface OptionProps extends ReactSelectOptionProps {
   data: {
@@ -67,12 +68,14 @@ interface CascadingDropDownInputProps extends FieldProps {
   isClearable?: boolean;
   value: number | string;
   isSearchable?: boolean;
+  label?: string;
 }
 
 interface CascadingDropDownInputState {
   menuIsOpen: boolean;
   value?: {
     value: string;
+    label?: string;
     children: string[];
   };
   subChoice?: boolean;
@@ -89,6 +92,7 @@ export class CascadingDropDownInput extends React.Component<
     onFocus() {},
   };
   private i18n: any;
+  private id: string;
   private readonly select: React.RefObject<any>;
   private readonly childInput: React.RefObject<CascadingDropDownInput>;
 
@@ -102,6 +106,7 @@ export class CascadingDropDownInput extends React.Component<
       options: props.dataSource.getOptions,
     };
     this.childInput = React.createRef();
+    this.id = uuidv4();
   }
 
   componentDidMount() {
@@ -222,6 +227,7 @@ export class CascadingDropDownInput extends React.Component<
     if (Array.isArray(dataSource.getOptions)) {
       return (
         <div className="dp-cascading-dropdown">
+          <label className="sr-only" htmlFor={props.id || this.id}>{props.label}</label>
           <ReactSelect
             ref={this.select}
             name={name}
@@ -241,6 +247,7 @@ export class CascadingDropDownInput extends React.Component<
             options={dataSource.getOptions}
             classNamePrefix="react-select"
             placeholder={this.i18n.select}
+            id={this.id}
             {...props}
             value={stateValue}
             onFocus={() => {
@@ -249,6 +256,8 @@ export class CascadingDropDownInput extends React.Component<
                 this.select.current?.setState({ focusedOption: stateValue });
               }
             }}
+            aria-live="polite"
+            aria-label={props.label}
             onBlur={this.onBlur}
             onChange={this.onChange}
           />
@@ -261,6 +270,7 @@ export class CascadingDropDownInput extends React.Component<
                 dataSource={{ getOptions: stateValue.children }}
                 onChange={this.handleChildrenChange}
                 ref={this.childInput}
+                label={props.label + " " + stateValue.label}
               />
             </div>
           ) : null}

@@ -1,6 +1,22 @@
 .dp-po-community-view {
   $self: '.dp-po-community-view';
 
+  &-list {
+    display: block;
+    & tbody,
+    & tr,
+    & td,
+    & th {
+      display: block;
+    }
+    & th {
+      font-weight: 500;
+    }
+    & tr.dp-po-community-view-item {
+      display: flex;
+    }
+  }
+
   &-item {
     display: flex;
     border-top: 1px solid $grey-light;
@@ -16,6 +32,10 @@
       #{$self}-activity {
         text-align: center;
       }
+    }
+    & td {
+      padding-left: 0;
+      padding-right: 0;
     }
 
     &:last-child {

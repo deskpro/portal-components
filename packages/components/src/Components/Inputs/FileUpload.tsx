@@ -285,16 +285,17 @@ export class FileUploadInput extends React.Component<FileUploadInputProps, FileU
               tabIndex={-1}
             >
               <input id={id} {...getInputProps()} />
-              <div
+              <label
                 className="choose"
                 tabIndex={0}
                 onKeyDown={this.handleKeyPress}
                 onFocus={this.handleFocus}
                 onBlur={this.handleBlur}
+                htmlFor={id}
               >
                 <FileIcon />
                 {multiple ? this.i18n.chooseFiles : this.i18n.chooseAFile}
-              </div>
+              </label>
               <div className="or">{this.i18n.or}</div>
               <div className="dnd">
                 <DndIcon />
@@ -305,7 +306,8 @@ export class FileUploadInput extends React.Component<FileUploadInputProps, FileU
           )}
         </DropZone>
         {this.state.error && <span className="dp-pc_file-upload__error">{this.state.error}</span>}
-        <ul className="dp-pc_file-upload__attached">
+        {this.state.files.length > 0 && (
+          <ul className="dp-pc_file-upload__attached">
           {Array.from(this.state.files).map(file => (<File
             onRemove={this.handleRemove}
             inputName={name}
@@ -318,6 +320,7 @@ export class FileUploadInput extends React.Component<FileUploadInputProps, FileU
             tooLargeError={this.i18n.tooLargeError}
           />))}
         </ul>
+        )}
       </div>
     );
   }

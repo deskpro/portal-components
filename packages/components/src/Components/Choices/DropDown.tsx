@@ -301,6 +301,7 @@ export class DropDownInput extends React.Component<DropDownInputProps, DropDownI
               this.select.current?.setState({ focusedOption: selectedValue });
             }
           }}
+          aria-live="polite"
           onBlur={this.onBlur}
           onChange={this.onChange}
         />

@@ -2,11 +2,12 @@
   $self: '.dp-po-post-official-response';
   margin-top: 10px;
 
+  & span,
   & h3 {
-    color: #8B9293;
+    color: var(--text-color-lighter);
     font-family: $headings-font-family;
-    font-size: 19px;
-    font-weight: normal;
+    font-size: 16px;
+    font-weight: 700;
     line-height: 140%;
 
     & .fa-flag-alt {

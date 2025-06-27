@@ -284,6 +284,13 @@
   &.form-error {
     border-color: $danger;
   }
+
+  input[type="date"],
+  input[type="datetime-local"] {
+    border: none;
+    width: 100%;
+    background-color: transparent;
+  }
 }
 
 select.form-control:not([multiple="multiple"]) {

@@ -299,6 +299,7 @@ export class MultipleDropDownInput extends React.Component<MultipleDropDownInput
             {...props}
             className="react-select-multi"
             value={stateValue}
+            aria-live="polite"
             onFocus={this.onFocus}
             onBlur={this.onBlur}
             onChange={this.onChange}
