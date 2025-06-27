@@ -176,7 +176,7 @@ export class FileUploadInput extends React.Component<FileUploadInputProps, FileU
     if (typeof response === 'string') {
       response = JSON.parse(response);
     }
-    const files = this.state.files.concat([response.blob]);
+    const files = this.state.files.concat(response.blobs || response.blob);
     this.setState({
       files,
       pendingFiles: [],
