@@ -41,14 +41,14 @@ function scssTask() {
 
 // style static assets
 function styleAssetsTask() {
-  return src(files.srcAssetsPath)
+  return src(files.srcAssetsPath, { encoding: false })
     .pipe(dest('.build/portal-components/portal-style/dist/assets'))
     .pipe(connect.reload());
 }
 
 // website static assets
 function websiteStaticImgTask() {
-  return src(files.websiteStaticImgPath)
+  return src(files.websiteStaticImgPath, { encoding: false })
     .pipe(dest('.build/portal-components/portal-style/dist/img'))
     .pipe(dest('dist/img'))
     .pipe(connect.reload());
