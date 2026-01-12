@@ -49,6 +49,10 @@
 
   #{$self}-row {
     &.with-vote-buttons {
+      .dp-po-approve-buttons {
+        text-overflow: visible !important;
+      }
+
       .dp-po-show-on-hover {
         display: none;
       }
