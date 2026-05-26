@@ -156,6 +156,7 @@
   }
   .dp-url-field-link {
     overflow: hidden;
+    white-space: nowrap;
     text-overflow: ellipsis;
     padding-left: 0.4em;
   }
