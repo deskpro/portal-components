@@ -146,4 +146,18 @@
       height: 25px;
     }
   }
+
+  .dp-url-field-dd {
+    display: flex;
+    align-items: center;
+  }
+  .dp-url-field-icon-link {
+    font-size: 0.8em;
+  }
+  .dp-url-field-link {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-left: 0.4em;
+  }
 }
