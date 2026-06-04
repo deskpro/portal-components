@@ -206,7 +206,7 @@ export class FileUploadInput extends React.Component<FileUploadInputProps, FileU
   };
 
   handleKeyPress = (e) => {
-    if (e.key === ' ') {
+    if (e.key === ' ' || e.key === 'Enter') {
       e.preventDefault();
       this.dropZone.open();
     }
@@ -287,11 +287,11 @@ export class FileUploadInput extends React.Component<FileUploadInputProps, FileU
               <input id={id} {...getInputProps()} />
               <label
                 className="choose"
+                role="button"
                 tabIndex={0}
                 onKeyDown={this.handleKeyPress}
                 onFocus={this.handleFocus}
                 onBlur={this.handleBlur}
-                htmlFor={id}
               >
                 <FileIcon />
                 {multiple ? this.i18n.chooseFiles : this.i18n.chooseAFile}
