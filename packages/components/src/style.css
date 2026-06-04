@@ -651,6 +651,10 @@
         border-radius: 4px;
         padding: 10px;
         display: inline-block;
+        background: none;
+        font: inherit;
+        color: inherit;
+        cursor: pointer;
       }
       & .or {
         display: inline-block;

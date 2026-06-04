@@ -205,13 +205,6 @@ export class FileUploadInput extends React.Component<FileUploadInputProps, FileU
     }
   };
 
-  handleKeyPress = (e) => {
-    if (e.key === ' ') {
-      e.preventDefault();
-      this.dropZone.open();
-    }
-  };
-
   handleBlur = () => {
     this.setState({
       focused: false
@@ -285,17 +278,15 @@ export class FileUploadInput extends React.Component<FileUploadInputProps, FileU
               tabIndex={-1}
             >
               <input id={id} {...getInputProps()} />
-              <label
+              <button
+                type="button"
                 className="choose"
-                tabIndex={0}
-                onKeyDown={this.handleKeyPress}
                 onFocus={this.handleFocus}
                 onBlur={this.handleBlur}
-                htmlFor={id}
               >
                 <FileIcon />
                 {multiple ? this.i18n.chooseFiles : this.i18n.chooseAFile}
-              </label>
+              </button>
               <div className="or">{this.i18n.or}</div>
               <div className="dnd">
                 <DndIcon />
