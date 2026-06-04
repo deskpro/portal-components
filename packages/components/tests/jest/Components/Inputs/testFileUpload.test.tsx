@@ -70,7 +70,7 @@ describe('FileUploadInput — rendering', () => {
 
   it('shows "Choose files" text when multiple=true', () => {
     const { container, unmount } = renderIntoDocument(<FileUploadInput {...baseProps} multiple={true} />)
-    const label = container.querySelector('label.choose')
+    const label = container.querySelector('button.choose')
     expect(label).not.toBeNull()
     expect(label!.textContent).toContain('Choose files')
     unmount()
@@ -78,7 +78,7 @@ describe('FileUploadInput — rendering', () => {
 
   it('shows "Choose a file" text when multiple=false', () => {
     const { container, unmount } = renderIntoDocument(<FileUploadInput {...baseProps} multiple={false} />)
-    const label = container.querySelector('label.choose')
+    const label = container.querySelector('button.choose')
     expect(label).not.toBeNull()
     expect(label!.textContent).toContain('Choose a file')
     unmount()
@@ -99,73 +99,40 @@ describe('FileUploadInput — rendering', () => {
 // ─────────────────────────────────────────────────────────────────────────────
 
 describe('FileUploadInput — double-open bug (sc-205285)', () => {
-  it('clicking the choose label opens the file dialog exactly once', () => {
+  it('clicking the choose button opens the file dialog exactly once', () => {
     const { container, unmount } = renderIntoDocument(<FileUploadInput {...baseProps} />)
 
     const tracker = countInputClicks(container)
-    const chooseLabel = container.querySelector<HTMLElement>('label.choose')
-    expect(chooseLabel).not.toBeNull()
+    const chooseButton = container.querySelector<HTMLElement>('button.choose')
+    expect(chooseButton).not.toBeNull()
 
     act(() => {
-      chooseLabel!.click()
+      chooseButton!.click()
     })
 
     tracker.cleanup()
     unmount()
 
-    // With the bug: htmlFor on the label causes native label→input activation (1)
+    // With the bug: htmlFor on the old label caused native label→input activation (1)
     // AND the click bubbles to the dropzone root which calls openFileDialog()→input.click() (2).
-    // After the fix: no htmlFor, only the dropzone onClick fires (1).
+    // After the fix: a real button with no input association — only the dropzone onClick fires (1).
     expect(tracker.count).toBe(1)
   })
 
-  it('pressing Space on the choose label opens the file dialog exactly once', () => {
+  it('renders choose as a native button so keyboard activation works (WCAG)', () => {
     const { container, unmount } = renderIntoDocument(<FileUploadInput {...baseProps} />)
 
-    const tracker = countInputClicks(container)
-    const chooseLabel = container.querySelector('label.choose')
-    expect(chooseLabel).not.toBeNull()
+    // A native <button type="button"> gets Enter/Space activation and focusability
+    // from the browser (jsdom does not synthesize click from keydown, so we assert
+    // the semantics rather than simulate the keyboard behaviour).
+    const chooseButton = container.querySelector('button.choose')
+    expect(chooseButton).not.toBeNull()
+    expect(chooseButton!.getAttribute('type')).toBe('button')
 
-    act(() => {
-      // KeyboardEvent is on window in the manual JSDOM setup
-      const event = new window.KeyboardEvent('keydown', {
-        key:      ' ',
-        bubbles:  true,
-        cancelable: true,
-      })
-      chooseLabel.dispatchEvent(event)
-    })
+    // It must NOT be a label tied to the input — that is what double-opened the picker.
+    expect(container.querySelector('label.choose')).toBeNull()
 
-    tracker.cleanup()
     unmount()
-
-    // handleKeyPress calls this.dropZone.open() which calls input.click() once.
-    expect(tracker.count).toBe(1)
-  })
-
-  it('pressing Enter on the choose label opens the file dialog exactly once', () => {
-    const { container, unmount } = renderIntoDocument(<FileUploadInput {...baseProps} />)
-
-    const tracker = countInputClicks(container)
-    const chooseLabel = container.querySelector('label.choose')
-    expect(chooseLabel).not.toBeNull()
-
-    act(() => {
-      // KeyboardEvent is on window in the manual JSDOM setup
-      const event = new window.KeyboardEvent('keydown', {
-        key:      'Enter',
-        bubbles:  true,
-        cancelable: true,
-      })
-      chooseLabel.dispatchEvent(event)
-    })
-
-    tracker.cleanup()
-    unmount()
-
-    // The label now has role="button"; Enter must open the dialog to match button parity.
-    // handleKeyPress calls this.dropZone.open() which calls input.click() once.
-    expect(tracker.count).toBe(1)
   })
 
 })
