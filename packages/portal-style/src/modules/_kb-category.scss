@@ -1,16 +1,20 @@
 .dp-po-kb-category {
   height: 100%;
-  padding-bottom: 1px;
+  display: flex;
+  flex-direction: column;
 
   .dp-po-category-title {
     &-link {
       margin: 0 0 20px;
-      height: 58px;
+      // min-height, not height: a long category name wraps and must grow the
+      // row, or it overflows and paints over the article titles below.
+      min-height: 58px;
     }
   }
 
   &-list {
-    margin: 0 0 62px;
+    // 26px reproduces the gap the old fixed 62px reserve left above the link.
+    margin: 0 0 26px;
     padding: 0;
   }
 
@@ -19,6 +23,12 @@
     margin-bottom: 15px;
     position: relative;
     padding-left: 23px;
+
+    // The list is a flex item now, so this margin no longer collapses out of
+    // it and would otherwise add 15px to every card.
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     &:before {
       content: "\25A0";
@@ -72,9 +82,8 @@
   }
 
   .dp-po-viewall {
-    position: absolute;
-    width: calc(100% - 30px);
-    left: 15px;
-    bottom: 0;
+    // In flow so a wrapped link grows the card; margin-top:auto keeps it
+    // bottom-aligned exactly where position:absolute;bottom:0 put it.
+    margin-top: auto;
   }
 }
